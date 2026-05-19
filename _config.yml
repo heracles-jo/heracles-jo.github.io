@@ -97,7 +97,7 @@ theme_mode: # [light | dark]
 cdn: "https://chirpy-img.netlify.app"
 
 # 사이드바에 표시되는 아바타. 로컬 또는 CORS 리소스를 지원한다.
-avatar: "/commons/avatar.jpg"
+avatar: "https://heracles-jo.github.io/assets/img/profile/avatar.png"
 
 # SEO `og:image` 메타 태그에 사용되는 사이트 전체 소셜 미리보기 이미지 URL
 # front matter의 `page.image`로 개별 페이지에서 덮어쓸 수 있다.
