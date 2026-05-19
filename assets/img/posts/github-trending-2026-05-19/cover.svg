@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.55" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#10233f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      .title{font:800 56px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#f0f6fc}
+      .sub{font:500 24px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#8b949e}
+      .repo{font:700 20px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#f0f6fc}
+      .num{font:700 18px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#c9d1d9}
+      .tag{font:700 18px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#0d1117}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1030" cy="90" r="190" fill="#238636" opacity="0.18" filter="url(#glow)"/>
+  <circle cx="104" cy="552" r="160" fill="#8957e5" opacity="0.20" filter="url(#glow)"/>
+  <text x="64" y="86" class="sub">GitHub Trending Daily · 2026-05-19</text>
+  <text x="64" y="154" class="title">Agent-native software is trending</text>
+  <text x="64" y="194" class="sub">AI agents, local inference, stealth automation, and on-device AI</text>
+  <rect x="64" y="222" width="770" height="352" rx="28" fill="#0d1117" opacity="0.72" stroke="#30363d"/>
+  <text x="72" y="268" class="repo">openhuman</text><rect x="245" y="250" width="430" height="22" rx="11" fill="#DEA584"/><text x="685" y="267" class="num">+3,941</text>
+<text x="72" y="310" class="repo">academic-research-skills</text><rect x="245" y="292" width="157" height="22" rx="11" fill="#3776AB"/><text x="412" y="309" class="num">+1,439</text>
+<text x="72" y="352" class="repo">CLI-Anything</text><rect x="245" y="334" width="114" height="22" rx="11" fill="#3776AB"/><text x="369" y="351" class="num">+1,049</text>
+<text x="72" y="394" class="repo">scientific-agent-skills</text><rect x="245" y="376" width="66" height="22" rx="11" fill="#3776AB"/><text x="321" y="393" class="num">+609</text>
+<text x="72" y="436" class="repo">supertonic</text><rect x="245" y="418" width="78" height="22" rx="11" fill="#F05138"/><text x="333" y="435" class="num">+715</text>
+<text x="72" y="478" class="repo">llama.cpp</text><rect x="245" y="460" width="23" height="22" rx="11" fill="#00599C"/><text x="278" y="477" class="num">+213</text>
+<text x="72" y="520" class="repo">RuView</text><rect x="245" y="502" width="76" height="22" rx="11" fill="#DEA584"/><text x="331" y="519" class="num">+700</text>
+<text x="72" y="562" class="repo">CloakBrowser</text><rect x="245" y="544" width="155" height="22" rx="11" fill="#3776AB"/><text x="410" y="561" class="num">+1,420</text>
+
+  <g transform="translate(890 250)">
+    <rect width="230" height="54" rx="27" fill="#2ea043"/><text x="31" y="35" class="tag">AI Agents</text>
+    <rect y="82" width="230" height="54" rx="27" fill="#58a6ff"/><text x="31" y="117" class="tag">Local AI</text>
+    <rect y="164" width="230" height="54" rx="27" fill="#f78166"/><text x="31" y="199" class="tag">Automation</text>
+  </g>
+</svg>
