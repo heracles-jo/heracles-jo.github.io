@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+<title id="title">AI 코딩 도구의 비용과 품질 병목</title>
+<desc id="desc">모델 호출 비용, 코드 맥락, 검증 자동화가 AI 코딩 도입의 핵심 병목으로 연결되는 흐름도</desc>
+<rect width="1000" height="520" rx="24" fill="#0f172a"/>
+<text x="60" y="72" fill="#f8fafc" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="800">AI 코딩 도입 후 새로 드러나는 병목</text>
+<g font-family="Arial, Apple SD Gothic Neo, sans-serif">
+  <g transform="translate(70 135)"><rect width="250" height="115" rx="22" fill="#1e293b" stroke="#38bdf8"/><text x="28" y="46" fill="#7dd3fc" font-size="24" font-weight="700">토큰 비용</text><text x="28" y="82" fill="#cbd5e1" font-size="18">반복 컨텍스트와 긴 로그</text></g>
+  <g transform="translate(375 135)"><rect width="250" height="115" rx="22" fill="#1e293b" stroke="#a78bfa"/><text x="28" y="46" fill="#c4b5fd" font-size="24" font-weight="700">코드 맥락</text><text x="28" y="82" fill="#cbd5e1" font-size="18">관련 파일 선별과 지식 그래프</text></g>
+  <g transform="translate(680 135)"><rect width="250" height="115" rx="22" fill="#1e293b" stroke="#34d399"/><text x="28" y="46" fill="#86efac" font-size="24" font-weight="700">품질 검증</text><text x="28" y="82" fill="#cbd5e1" font-size="18">타입·린트·프레임워크 분석</text></g>
+  <path d="M320 193 H375" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/><path d="M625 193 H680" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="190" y="335" width="620" height="92" rx="26" fill="#111827" stroke="#64748b"/>
+  <text x="236" y="374" fill="#f8fafc" font-size="25" font-weight="700">다음 경쟁력: 더 긴 프롬프트가 아니라 더 좋은 라우팅</text>
+  <text x="236" y="407" fill="#cbd5e1" font-size="18">codegraph · rtk · react-doctor · pyrefly가 같은 방향을 가리킨다</text>
+</g>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/></marker></defs>
+</svg>
