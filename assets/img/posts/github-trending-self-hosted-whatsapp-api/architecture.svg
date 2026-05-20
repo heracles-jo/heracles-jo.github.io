@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">Messaging API operation architecture</title><desc id="desc">A practical architecture for self-hosted messaging gateways</desc>
+<rect width="1100" height="560" rx="24" fill="#f8fafc"/>
+<g font-family="Arial, sans-serif">
+  <text x="55" y="65" font-size="30" font-weight="700" fill="#0f172a">메신저 API 게이트웨이 운영 아키텍처</text>
+  <g fill="#ffffff" stroke="#cbd5e1" stroke-width="2">
+    <rect x="65" y="125" width="210" height="110" rx="18"/>
+    <rect x="445" y="125" width="210" height="110" rx="18"/>
+    <rect x="825" y="125" width="210" height="110" rx="18"/>
+    <rect x="255" y="345" width="210" height="110" rx="18"/>
+    <rect x="635" y="345" width="210" height="110" rx="18"/>
+  </g>
+  <g fill="none" stroke="#22c55e" stroke-width="6" stroke-linecap="round">
+    <path d="M275 180h170"/><path d="M655 180h170"/><path d="M550 235v62c0 48-70 48-185 48"/><path d="M550 235v62c0 48 70 48 185 48"/>
+  </g>
+  <g fill="#0f172a" font-size="22" font-weight="700">
+    <text x="105" y="172">업무 시스템</text><text x="480" y="172">API Gateway</text><text x="855" y="172">WhatsApp</text><text x="292" y="392">정책/권한</text><text x="670" y="392">관측/감사</text>
+  </g>
+  <g fill="#475569" font-size="17">
+    <text x="94" y="207">CRM · 주문 · CS</text><text x="470" y="207">큐 · 라우팅 · 재시도</text><text x="855" y="207">고객 대화 채널</text><text x="285" y="427">템플릿 · 동의 · 제한</text><text x="662" y="427">로그 · 지표 · 알림</text>
+  </g>
+</g>
+</svg>
