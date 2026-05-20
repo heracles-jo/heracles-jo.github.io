@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+<title id="title">Adoption checklist for messaging automation</title><desc id="desc">Operational checklist before introducing self-hosted messaging APIs</desc>
+<rect width="1100" height="520" fill="#0f172a" rx="24"/>
+<text x="60" y="70" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#f8fafc">도입 전 체크리스트</text>
+<g font-family="Arial, sans-serif" font-size="24" fill="#e2e8f0">
+  <g transform="translate(70 125)"><circle r="18" fill="#22c55e"/><path d="M-8 0l6 7L10-9" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><text x="45" y="8">공식 API와 비공식 게이트웨이의 역할을 분리했는가?</text></g>
+  <g transform="translate(70 195)"><circle r="18" fill="#22c55e"/><path d="M-8 0l6 7L10-9" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><text x="45" y="8">동의, 수신거부, 템플릿, 빈도 제한 정책이 있는가?</text></g>
+  <g transform="translate(70 265)"><circle r="18" fill="#22c55e"/><path d="M-8 0l6 7L10-9" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><text x="45" y="8">큐, 재시도, 장애 격리, 수동 전환 경로가 준비됐는가?</text></g>
+  <g transform="translate(70 335)"><circle r="18" fill="#22c55e"/><path d="M-8 0l6 7L10-9" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><text x="45" y="8">민감정보 마스킹과 감사 로그 보존 기준이 명확한가?</text></g>
+  <g transform="translate(70 405)"><circle r="18" fill="#22c55e"/><path d="M-8 0l6 7L10-9" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><text x="45" y="8">채널 차단·약관 변경·번호 리스크에 대비했는가?</text></g>
+</g>
+</svg>
