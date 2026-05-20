@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">AI 코딩 시대의 토큰 절감형 개발 도구</title>
+<desc id="desc">코드 그래프, 토큰 프록시, 품질 검증 도구가 연결된 AI 개발 인프라를 표현한 커버 이미지</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="0.55" stop-color="#1e1b4b"/><stop offset="1" stop-color="#111827"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.26"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0.2"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.45"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1030" cy="92" r="170" fill="#38bdf8" opacity="0.14"/>
+<circle cx="120" cy="545" r="220" fill="#a78bfa" opacity="0.15"/>
+<g filter="url(#shadow)">
+  <rect x="80" y="78" width="1040" height="474" rx="34" fill="url(#card)" stroke="#64748b" stroke-opacity="0.35"/>
+  <text x="120" y="160" fill="#e2e8f0" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="700">GitHub Trending · 2026-05-20</text>
+  <text x="120" y="232" fill="#ffffff" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="58" font-weight="800">AI 코딩의 다음 병목</text>
+  <text x="120" y="300" fill="#bae6fd" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="42" font-weight="700">토큰 비용 · 코드 맥락 · 검증 자동화</text>
+  <g transform="translate(122 365)">
+    <rect width="245" height="92" rx="20" fill="#020617" opacity="0.58" stroke="#38bdf8"/>
+    <text x="24" y="38" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="22" font-weight="700">codegraph</text>
+    <text x="24" y="68" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18">로컬 코드 지식 그래프</text>
+  </g>
+  <g transform="translate(412 365)">
+    <rect width="245" height="92" rx="20" fill="#020617" opacity="0.58" stroke="#a78bfa"/>
+    <text x="24" y="38" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="22" font-weight="700">rtk</text>
+    <text x="24" y="68" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18">토큰 절감 CLI 프록시</text>
+  </g>
+  <g transform="translate(702 365)">
+    <rect width="305" height="92" rx="20" fill="#020617" opacity="0.58" stroke="#34d399"/>
+    <text x="24" y="38" fill="#86efac" font-family="Arial, sans-serif" font-size="22" font-weight="700">react-doctor · pyrefly</text>
+    <text x="24" y="68" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18">AI 생성 코드 품질 게이트</text>
+  </g>
+</g>
+</svg>
