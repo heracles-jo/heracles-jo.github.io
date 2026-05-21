@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">WiFi sensing adoption checklist</title>
+  <desc id="desc">A checklist for privacy, accuracy, operations, and fallback planning</desc>
+  <rect width="1000" height="560" rx="30" fill="#0f172a"/>
+  <circle cx="820" cy="110" r="210" fill="#164e63" opacity="0.5"/>
+  <circle cx="190" cy="470" r="180" fill="#1d4ed8" opacity="0.25"/>
+  <text x="70" y="75" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="#f8fafc">도입 전 체크리스트</text>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#e0f2fe">
+    <g transform="translate(85 135)"><circle r="16" fill="#22c55e"/><text x="-7" y="8" font-size="22" font-weight="900" fill="#052e16">✓</text><text x="40" y="8">공간 데이터 수집 동의와 안내 문구가 명확한가?</text></g>
+    <g transform="translate(85 205)"><circle r="16" fill="#22c55e"/><text x="-7" y="8" font-size="22" font-weight="900" fill="#052e16">✓</text><text x="40" y="8">카메라 대비 장점과 오탐 리스크를 함께 설명하는가?</text></g>
+    <g transform="translate(85 275)"><circle r="16" fill="#22c55e"/><text x="-7" y="8" font-size="22" font-weight="900" fill="#052e16">✓</text><text x="40" y="8">센서 장애·전파 간섭·펌웨어 변경을 모니터링하는가?</text></g>
+    <g transform="translate(85 345)"><circle r="16" fill="#22c55e"/><text x="-7" y="8" font-size="22" font-weight="900" fill="#052e16">✓</text><text x="40" y="8">생체 신호 추정값을 의료 판단으로 오해하지 않게 하는가?</text></g>
+    <g transform="translate(85 415)"><circle r="16" fill="#22c55e"/><text x="-7" y="8" font-size="22" font-weight="900" fill="#052e16">✓</text><text x="40" y="8">이벤트·원시 CSI 데이터 보관 기간과 접근 권한을 제한하는가?</text></g>
+  </g>
+  <text x="70" y="510" font-family="Arial, sans-serif" font-size="18" fill="#93c5fd">핵심: “카메라가 아니니 안전하다”가 아니라, 보이지 않는 센서일수록 설명 가능성과 통제가 중요하다.</text>
+</svg>
