@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub Trending: 프로덕션 프로파일링과 고해상도 트레이싱</title>
+  <desc id="desc">실행 중인 프로세스의 시간 흐름, CPU 코어, 함수 호출 스택을 시각화한 커버 이미지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101827"/>
+      <stop offset="55%" stop-color="#182b4f"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="110" r="180" fill="#22d3ee" opacity="0.12"/>
+  <circle cx="120" cy="540" r="230" fill="#facc15" opacity="0.10"/>
+  <g filter="url(#shadow)">
+    <rect x="82" y="80" width="1036" height="470" rx="28" fill="#0b1220" opacity="0.92" stroke="#334155"/>
+    <text x="120" y="145" fill="#93c5fd" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" font-size="28" font-weight="700">GitHub Trending Insight</text>
+    <text x="120" y="210" fill="#f8fafc" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" font-size="54" font-weight="800">프로덕션 프로파일링의 재부상</text>
+    <text x="120" y="265" fill="#cbd5e1" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" font-size="26">magic-trace · high-resolution tracing · 운영 성능 분석</text>
+    <g transform="translate(120 325)">
+      <rect x="0" y="0" width="900" height="150" rx="18" fill="#111827" stroke="#1f2937"/>
+      <line x1="36" y1="32" x2="36" y2="122" stroke="#475569"/>
+      <line x1="36" y1="122" x2="860" y2="122" stroke="#475569"/>
+      <text x="40" y="25" fill="#94a3b8" font-family="monospace" font-size="16">CPU timeline / function samples</text>
+      <g opacity="0.95">
+        <rect x="70" y="92" width="120" height="24" rx="5" fill="#38bdf8"/>
+        <rect x="202" y="70" width="92" height="46" rx="5" fill="#22c55e"/>
+        <rect x="304" y="48" width="138" height="68" rx="5" fill="#facc15"/>
+        <rect x="452" y="82" width="105" height="34" rx="5" fill="#38bdf8"/>
+        <rect x="568" y="28" width="162" height="88" rx="5" fill="url(#hot)"/>
+        <rect x="742" y="64" width="72" height="52" rx="5" fill="#a78bfa"/>
+      </g>
+      <path d="M70 86 C155 50, 230 100, 315 62 S505 36, 585 52 S750 18, 825 72" fill="none" stroke="#f8fafc" stroke-width="4" opacity="0.78"/>
+    </g>
+  </g>
+</svg>

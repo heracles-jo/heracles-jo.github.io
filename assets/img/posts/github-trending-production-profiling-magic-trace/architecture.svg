@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">프로덕션 트레이싱 운영 아키텍처</title>
+  <desc id="desc">서비스, 트레이서, 심볼 서버, 시각화, 장애 대응 루프로 이어지는 프로파일링 아키텍처</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#dbeafe"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+  </defs>
+  <rect width="1100" height="620" fill="url(#bg)"/>
+  <text x="70" y="75" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="36" font-weight="800" fill="#0f172a">고해상도 트레이싱 운영 루프</text>
+  <text x="70" y="112" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="18" fill="#475569">운영 환경에서는 샘플 수집보다 심볼, 권한, 비교 기준, 대응 절차가 더 중요하다</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="18" font-weight="700">
+    <rect x="75" y="185" width="190" height="95" rx="18" fill="#0f172a"/><text x="118" y="228" fill="#fff">서비스 프로세스</text><text x="116" y="257" fill="#93c5fd" font-size="15">API · batch · DB</text>
+    <rect x="330" y="185" width="190" height="95" rx="18" fill="#1d4ed8"/><text x="384" y="228" fill="#fff">트레이서</text><text x="362" y="257" fill="#bfdbfe" font-size="15">magic-trace / perf</text>
+    <rect x="585" y="185" width="190" height="95" rx="18" fill="#0f766e"/><text x="637" y="228" fill="#fff">심볼·빌드 정보</text><text x="626" y="257" fill="#ccfbf1" font-size="15">debug symbol · version</text>
+    <rect x="840" y="185" width="190" height="95" rx="18" fill="#7c2d12"/><text x="888" y="228" fill="#fff">시각화·리포트</text><text x="889" y="257" fill="#fed7aa" font-size="15">timeline · flame view</text>
+    <rect x="330" y="390" width="190" height="95" rx="18" fill="#6d28d9"/><text x="369" y="433" fill="#fff">기준선 비교</text><text x="365" y="462" fill="#ddd6fe" font-size="15">release · workload</text>
+    <rect x="585" y="390" width="190" height="95" rx="18" fill="#be123c"/><text x="631" y="433" fill="#fff">장애 대응</text><text x="622" y="462" fill="#ffe4e6" font-size="15">rollback · tuning</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M265 232 H322"/><path d="M520 232 H577"/><path d="M775 232 H832"/><path d="M935 280 C890 355,820 420,785 438"/><path d="M585 438 H528"/><path d="M425 390 C365 320,285 270,265 248"/>
+  </g>
+</svg>
