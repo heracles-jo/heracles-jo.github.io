@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">프로파일링 도입 체크리스트</title>
+  <desc id="desc">운영 프로파일링 도입 전 점검해야 할 권한, 오버헤드, 심볼, 데이터 보안, 기준선 항목</desc>
+  <rect width="1100" height="620" fill="#0b1220"/>
+  <circle cx="970" cy="80" r="170" fill="#2563eb" opacity="0.20"/>
+  <circle cx="130" cy="555" r="220" fill="#14b8a6" opacity="0.14"/>
+  <text x="70" y="80" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="38" font-weight="800" fill="#f8fafc">운영 프로파일링 도입 체크리스트</text>
+  <text x="70" y="118" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="18" fill="#94a3b8">성능 장애를 재현하지 못할 때, 관측 가능한 시간축이 필요하다</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="21" fill="#e5e7eb">
+    <g transform="translate(80 180)"><rect width="440" height="62" rx="16" fill="#111827" stroke="#334155"/><circle cx="34" cy="31" r="14" fill="#22c55e"/><path d="M27 31 l5 6 l10 -14" fill="none" stroke="#fff" stroke-width="3"/><text x="68" y="39">권한과 승인 경로 정의</text></g>
+    <g transform="translate(580 180)"><rect width="440" height="62" rx="16" fill="#111827" stroke="#334155"/><circle cx="34" cy="31" r="14" fill="#38bdf8"/><path d="M27 31 l5 6 l10 -14" fill="none" stroke="#fff" stroke-width="3"/><text x="68" y="39">샘플링 오버헤드 측정</text></g>
+    <g transform="translate(80 270)"><rect width="440" height="62" rx="16" fill="#111827" stroke="#334155"/><circle cx="34" cy="31" r="14" fill="#facc15"/><path d="M27 31 l5 6 l10 -14" fill="none" stroke="#111827" stroke-width="3"/><text x="68" y="39">디버그 심볼과 빌드 ID 보존</text></g>
+    <g transform="translate(580 270)"><rect width="440" height="62" rx="16" fill="#111827" stroke="#334155"/><circle cx="34" cy="31" r="14" fill="#fb7185"/><path d="M27 31 l5 6 l10 -14" fill="none" stroke="#fff" stroke-width="3"/><text x="68" y="39">민감 데이터 포함 여부 점검</text></g>
+    <g transform="translate(80 360)"><rect width="440" height="62" rx="16" fill="#111827" stroke="#334155"/><circle cx="34" cy="31" r="14" fill="#a78bfa"/><path d="M27 31 l5 6 l10 -14" fill="none" stroke="#fff" stroke-width="3"/><text x="68" y="39">릴리스별 성능 기준선 확보</text></g>
+    <g transform="translate(580 360)"><rect width="440" height="62" rx="16" fill="#111827" stroke="#334155"/><circle cx="34" cy="31" r="14" fill="#2dd4bf"/><path d="M27 31 l5 6 l10 -14" fill="none" stroke="#fff" stroke-width="3"/><text x="68" y="39">장애 대응·롤백 절차 연결</text></g>
+  </g>
+  <text x="80" y="535" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="22" font-weight="700" fill="#bfdbfe">핵심: 트레이스는 예쁜 그림이 아니라, 운영 의사결정의 증거여야 한다.</text>
+</svg>
