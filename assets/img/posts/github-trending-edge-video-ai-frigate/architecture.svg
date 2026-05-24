@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">Edge video AI reference architecture</title><desc id="desc">Reference pipeline for IP cameras, local NVR, detection accelerator, event bus, storage, monitoring and policy.</desc>
+<rect width="1100" height="560" fill="#f8fafc"/><style>.box{fill:#fff;stroke:#0f766e;stroke-width:3}.t{font-family:Arial,sans-serif;fill:#0f172a}.s{font-size:20px}.h{font-size:25px;font-weight:700}.arrow{stroke:#334155;stroke-width:4;marker-end:url(#m)}</style><defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect x="40" y="75" width="170" height="115" rx="18" class="box"/><text x="72" y="125" class="t h">IP Cameras</text><text x="70" y="157" class="t s">RTSP streams</text>
+<rect x="290" y="75" width="210" height="115" rx="18" class="box"/><text x="337" y="123" class="t h">Frigate NVR</text><text x="325" y="157" class="t s">record · detect · track</text>
+<rect x="585" y="75" width="210" height="115" rx="18" class="box"/><text x="623" y="123" class="t h">Accelerator</text><text x="632" y="157" class="t s">Coral/GPU/CPU</text>
+<rect x="875" y="75" width="175" height="115" rx="18" class="box"/><text x="923" y="123" class="t h">Events</text><text x="902" y="157" class="t s">MQTT/Webhooks</text>
+<path class="arrow" d="M210 132h70"/><path class="arrow" d="M500 132h75"/><path class="arrow" d="M795 132h70"/>
+<rect x="110" y="310" width="210" height="120" rx="18" class="box"/><text x="158" y="360" class="t h">Storage</text><text x="137" y="393" class="t s">retention · snapshots</text>
+<rect x="445" y="310" width="210" height="120" rx="18" class="box"/><text x="481" y="360" class="t h">Policy Layer</text><text x="472" y="393" class="t s">privacy · access · audit</text>
+<rect x="780" y="310" width="210" height="120" rx="18" class="box"/><text x="827" y="360" class="t h">Operations</text><text x="808" y="393" class="t s">SLO · alerts · backup</text>
+<path class="arrow" d="M395 190v65c0 45-180 10-180 45"/><path class="arrow" d="M395 190v105c0 25 155-5 155 45"/><path class="arrow" d="M690 190v50c0 58 195 25 195 65"/>
+<text x="40" y="510" class="t s">핵심: 객체 인식 모델보다 네트워크, 저장소, 권한, 보존 정책이 먼저 병목이 된다.</text>
+</svg>
