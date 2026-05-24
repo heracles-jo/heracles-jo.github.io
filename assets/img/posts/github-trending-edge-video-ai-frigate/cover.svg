@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Edge Video AI and Local NVR</title>
+<desc id="desc">Local camera streams, object detection, MQTT events, and operational controls for edge video AI.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#071629"/><stop offset="0.55" stop-color="#123a54"/><stop offset="1" stop-color="#0f766e"/></linearGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".35"/></filter></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<g opacity=".12" stroke="#e0f2fe" stroke-width="2"><path d="M0 105h1200M0 210h1200M0 315h1200M0 420h1200M0 525h1200M200 0v630M400 0v630M600 0v630M800 0v630M1000 0v630"/></g>
+<g filter="url(#shadow)"><rect x="92" y="110" width="440" height="300" rx="28" fill="#0b1220" stroke="#38bdf8" stroke-width="4"/><rect x="122" y="145" width="380" height="220" rx="18" fill="#111827"/><circle cx="258" cy="255" r="70" fill="none" stroke="#22d3ee" stroke-width="8"/><circle cx="258" cy="255" r="30" fill="#22d3ee" opacity=".9"/><path d="M398 187h56v136h-56z" fill="#164e63"/><path d="M398 187l56 136M454 187l-56 136" stroke="#67e8f9" stroke-width="4"/></g>
+<g filter="url(#shadow)"><rect x="664" y="118" width="380" height="280" rx="30" fill="#ecfeff" opacity=".97"/><text x="704" y="180" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#083344">Local NVR</text><text x="704" y="230" font-family="Arial, sans-serif" font-size="25" fill="#155e75">RTSP → Detection → Events</text><g fill="none" stroke="#0891b2" stroke-width="5"><path d="M715 285h260"/><path d="M715 335h190"/></g><circle cx="1010" cy="285" r="12" fill="#10b981"/><circle cx="945" cy="335" r="12" fill="#f59e0b"/></g>
+<text x="92" y="505" font-family="Arial, sans-serif" font-size="54" font-weight="800" fill="#ffffff">GitHub Trending: Frigate</text><text x="92" y="558" font-family="Arial, sans-serif" font-size="31" fill="#bae6fd">엣지 비디오 AI는 클라우드 분석보다 운영 설계가 먼저다</text>
+</svg>
