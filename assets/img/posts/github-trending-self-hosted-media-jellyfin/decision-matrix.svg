@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">Adoption decision matrix for self-hosted media</title>
+  <desc id="desc">A decision matrix comparing control, cost, operations and user experience for self-hosted media platforms.</desc>
+  <rect width="1100" height="520" rx="28" fill="#111827"/>
+  <style>.h{font-family:Inter,Arial,sans-serif;fill:#f8fafc;font-size:32px;font-weight:800}.t{font-family:Inter,Arial,sans-serif;fill:#e2e8f0;font-size:22px;font-weight:700}.s{font-family:Inter,Arial,sans-serif;fill:#cbd5e1;font-size:17px}.cell{fill:#1f2937;stroke:#475569;stroke-width:1.5}.good{fill:#065f46}.warn{fill:#78350f}.bad{fill:#7f1d1d}</style>
+  <text x="54" y="62" class="h">셀프호스팅 미디어 도입 판단 매트릭스</text>
+  <g transform="translate(54,100)">
+    <rect x="0" y="0" width="240" height="70" class="cell"/><rect x="240" y="0" width="260" height="70" class="cell"/><rect x="500" y="0" width="260" height="70" class="cell"/><rect x="760" y="0" width="260" height="70" class="cell"/>
+    <text x="28" y="43" class="t">판단 축</text><text x="278" y="43" class="t">Jellyfin</text><text x="535" y="43" class="t">Plex/상용 SaaS</text><text x="805" y="43" class="t">Kodi/파일 공유</text>
+    <rect x="0" y="70" width="240" height="80" class="cell"/><text x="28" y="118" class="t">통제권</text><rect x="240" y="70" width="260" height="80" class="good"/><text x="268" y="112" class="s">소스·데이터·배포 통제</text><rect x="500" y="70" width="260" height="80" class="warn"/><text x="528" y="112" class="s">계정·정책 의존</text><rect x="760" y="70" width="260" height="80" class="good"/><text x="788" y="112" class="s">로컬 중심</text>
+    <rect x="0" y="150" width="240" height="80" class="cell"/><text x="28" y="198" class="t">운영 난이도</text><rect x="240" y="150" width="260" height="80" class="warn"/><text x="268" y="192" class="s">업데이트·GPU·백업 필요</text><rect x="500" y="150" width="260" height="80" class="good"/><text x="528" y="192" class="s">관리형 경험 우세</text><rect x="760" y="150" width="260" height="80" class="warn"/><text x="788" y="192" class="s">장치별 관리</text>
+    <rect x="0" y="230" width="240" height="80" class="cell"/><text x="28" y="278" class="t">멀티 디바이스</text><rect x="240" y="230" width="260" height="80" class="good"/><text x="268" y="272" class="s">서버·API·공식 앱</text><rect x="500" y="230" width="260" height="80" class="good"/><text x="528" y="272" class="s">생태계 성숙</text><rect x="760" y="230" width="260" height="80" class="warn"/><text x="788" y="272" class="s">로컬 재생에 강점</text>
+    <rect x="0" y="310" width="240" height="80" class="cell"/><text x="28" y="358" class="t">비용 구조</text><rect x="240" y="310" width="260" height="80" class="good"/><text x="268" y="352" class="s">라이선스 비용 낮음</text><rect x="500" y="310" width="260" height="80" class="warn"/><text x="528" y="352" class="s">구독·프리미엄 기능</text><rect x="760" y="310" width="260" height="80" class="good"/><text x="788" y="352" class="s">단순 구성 가능</text>
+  </g>
+</svg>
