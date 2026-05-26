@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Jellyfin media server architecture</title>
+  <desc id="desc">Architecture diagram of storage, library scanner, metadata, transcoding, API and client applications.</desc>
+  <rect width="1100" height="620" rx="28" fill="#0b1120"/>
+  <style>
+    .box{fill:#111827;stroke:#38bdf8;stroke-width:2.5;rx:20}.box2{fill:#1e1b4b;stroke:#a78bfa;stroke-width:2.5;rx:20}.text{font-family:Inter,Arial,sans-serif;fill:#e5e7eb;font-size:26px;font-weight:700}.small{font-family:Inter,Arial,sans-serif;fill:#cbd5e1;font-size:18px}.arrow{stroke:#67e8f9;stroke-width:5;fill:none;marker-end:url(#m)}
+  </style>
+  <defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#67e8f9"/></marker></defs>
+  <text x="60" y="62" class="text" font-size="34px">Jellyfin 운영 아키텍처</text>
+  <rect x="60" y="110" width="220" height="120" class="box"/>
+  <text x="88" y="158" class="text">스토리지</text><text x="88" y="190" class="small">NAS · 파일 권한 · 백업</text>
+  <rect x="440" y="110" width="230" height="120" class="box2"/>
+  <text x="472" y="158" class="text">라이브러리 스캔</text><text x="472" y="190" class="small">메타데이터 · 인덱스</text>
+  <rect x="820" y="110" width="220" height="120" class="box"/>
+  <text x="854" y="158" class="text">클라이언트</text><text x="854" y="190" class="small">Web · TV · Mobile</text>
+  <rect x="250" y="360" width="240" height="130" class="box2"/>
+  <text x="286" y="410" class="text">트랜스코딩</text><text x="286" y="445" class="small">CPU/GPU · 코덱 · 캐시</text>
+  <rect x="610" y="360" width="250" height="130" class="box2"/>
+  <text x="646" y="410" class="text">운영 통제면</text><text x="646" y="445" class="small">계정 · TLS · 로그 · 업데이트</text>
+  <path d="M280 170 H430" class="arrow"/><path d="M670 170 H810" class="arrow"/>
+  <path d="M555 230 C550 310 450 325 405 358" class="arrow"/>
+  <path d="M670 230 C710 300 735 315 735 355" class="arrow"/>
+  <path d="M490 425 H600" class="arrow"/>
+</svg>
