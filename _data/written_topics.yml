@@ -1,0 +1,27 @@
+- date: 2026-05-28
+  title: "GitHub Trending으로 보는 오픈소스 TTS와 음성 AI 인프라의 부상"
+  github_repo: "https://github.com/OpenBMB/VoxCPM"
+  main_keyword: "오픈소스 TTS"
+  related_keywords:
+    - "VoxCPM"
+    - "음성 AI 인프라"
+  slug: "github-trending-open-source-tts-voxcpm"
+  summary: "VoxCPM을 중심으로 오픈소스 TTS, 다국어 음성 합성, 음성 복제 리스크, 로컬 음성 AI 운영 전략을 분석."
+- date: 2026-05-29
+  title: "GitHub Trending으로 보는 오픈소스 문서 파서 LiteParse와 RAG 데이터 파이프라인"
+  github_repo: "https://github.com/run-llama/liteparse"
+  main_keyword: "문서 파서"
+  related_keywords:
+    - "LiteParse"
+    - "RAG 데이터 파이프라인"
+  slug: "github-trending-document-parser-liteparse"
+  summary: "LiteParse를 중심으로 PDF 파싱, spatial text extraction, Markdown 변환, RAG 입력 품질 관리 전략을 분석."
+- date: 2026-05-30
+  title: "GitHub Trending으로 보는 Cursor Plugins와 에이전트형 개발 워크플로의 표준화"
+  github_repo: "https://github.com/cursor/plugins"
+  main_keyword: "Cursor Plugins"
+  related_keywords:
+    - "AI 코딩 에이전트"
+    - "agent workflow"
+  slug: "github-trending-cursor-plugins-agent-workflow"
+  summary: "cursor/plugins를 중심으로 AI IDE 플러그인, 팀 워크플로 표준화, 코드 리뷰·문서화 자동화의 실무 의미를 분석."
