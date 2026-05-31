@@ -25,3 +25,13 @@
     - "agent workflow"
   slug: "github-trending-cursor-plugins-agent-workflow"
   summary: "cursor/plugins를 중심으로 AI IDE 플러그인, 팀 워크플로 표준화, 코드 리뷰·문서화 자동화의 실무 의미를 분석."
+- date: 2026-05-31
+  title: "GitHub Trending으로 보는 오픈소스 CRM Twenty와 AI 시대 고객 데이터 플랫폼"
+  github_repo: "https://github.com/twentyhq/twenty"
+  main_keyword: "오픈소스 CRM"
+  related_keywords:
+    - "Twenty CRM"
+    - "고객 데이터 플랫폼"
+    - "셀프호스팅 CRM"
+  slug: "github-trending-open-source-crm-twenty"
+  summary: "Twenty를 중심으로 오픈소스 CRM, 코드 기반 고객 데이터 모델링, AI 에이전트 확장, 셀프호스팅 운영 리스크와 도입 기준을 분석."
