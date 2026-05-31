@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Scraping tool decision matrix</title>
+  <desc id="desc">Scrapling, Scrapy, Playwright, Crawl4AI를 실무 도입 기준으로 비교하는 의사결정 매트릭스</desc>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="70" y="72" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">웹 수집 도구 선택 매트릭스</text>
+  <text x="70" y="110" font-family="Arial, sans-serif" font-size="18" fill="#4b5563">프로젝트 목적에 따라 “빠른 파싱”, “대규모 크롤링”, “브라우저 자동화”, “LLM 친화 출력”의 우선순위가 달라진다.</text>
+  <g font-family="Arial, sans-serif" font-size="17">
+    <rect x="70" y="150" width="1060" height="520" rx="18" fill="#f9fafb" stroke="#d1d5db"/>
+    <rect x="70" y="150" width="1060" height="58" rx="18" fill="#111827"/>
+    <text x="104" y="187" fill="#f9fafb" font-weight="700">도구</text>
+    <text x="280" y="187" fill="#f9fafb" font-weight="700">강한 지점</text>
+    <text x="560" y="187" fill="#f9fafb" font-weight="700">주의할 지점</text>
+    <text x="865" y="187" fill="#f9fafb" font-weight="700">적합한 상황</text>
+    <line x1="240" y1="150" x2="240" y2="670" stroke="#d1d5db"/>
+    <line x1="520" y1="150" x2="520" y2="670" stroke="#d1d5db"/>
+    <line x1="830" y1="150" x2="830" y2="670" stroke="#d1d5db"/>
+    <line x1="70" y1="286" x2="1130" y2="286" stroke="#d1d5db"/>
+    <line x1="70" y1="410" x2="1130" y2="410" stroke="#d1d5db"/>
+    <line x1="70" y1="534" x2="1130" y2="534" stroke="#d1d5db"/>
+    <text x="104" y="248" fill="#0f172a" font-weight="700">Scrapling</text>
+    <text x="268" y="238" fill="#374151">적응형 selector, stealth fetcher,</text>
+    <text x="268" y="264" fill="#374151">spider와 parser 통합</text>
+    <text x="548" y="238" fill="#374151">우회 기능은 법무·정책 검토와</text>
+    <text x="548" y="264" fill="#374151">rate limit 설계가 필수</text>
+    <text x="858" y="238" fill="#374151">변경 잦은 웹 소스에서</text>
+    <text x="858" y="264" fill="#374151">데이터 파이프라인 구축</text>
+    <text x="104" y="370" fill="#0f172a" font-weight="700">Scrapy</text>
+    <text x="268" y="360" fill="#374151">성숙한 크롤링 프레임워크,</text>
+    <text x="268" y="386" fill="#374151">확장성과 생태계</text>
+    <text x="548" y="360" fill="#374151">동적 사이트와 안티봇 대응은</text>
+    <text x="548" y="386" fill="#374151">별도 구성 부담</text>
+    <text x="858" y="360" fill="#374151">명확한 URL 그래프와</text>
+    <text x="858" y="386" fill="#374151">대규모 배치 크롤링</text>
+    <text x="104" y="494" fill="#0f172a" font-weight="700">Playwright</text>
+    <text x="268" y="484" fill="#374151">브라우저 자동화와 E2E 테스트,</text>
+    <text x="268" y="510" fill="#374151">동적 렌더링 재현</text>
+    <text x="548" y="484" fill="#374151">수집 파이프라인 기능은</text>
+    <text x="548" y="510" fill="#374151">직접 만들어야 함</text>
+    <text x="858" y="484" fill="#374151">로그인·SPA·사용자 흐름</text>
+    <text x="858" y="510" fill="#374151">재현이 핵심일 때</text>
+    <text x="104" y="618" fill="#0f172a" font-weight="700">Crawl4AI</text>
+    <text x="268" y="608" fill="#374151">LLM 친화 크롤링과</text>
+    <text x="268" y="634" fill="#374151">Markdown 추출 흐름</text>
+    <text x="548" y="608" fill="#374151">일반 스크래핑 프레임워크와</text>
+    <text x="548" y="634" fill="#374151">목표가 다를 수 있음</text>
+    <text x="858" y="608" fill="#374151">RAG·검색·지식베이스용</text>
+    <text x="858" y="634" fill="#374151">웹 문서 수집</text>
+  </g>
+</svg>
