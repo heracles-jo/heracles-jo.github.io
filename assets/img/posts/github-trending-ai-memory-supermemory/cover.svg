@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI Memory Infrastructure with Supermemory</title>
+  <desc id="desc">Supermemory를 중심으로 대화, 파일, 커넥터, 메모리 그래프, 검색, 에이전트 컨텍스트가 연결되는 AI 메모리 인프라 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="0.5" stop-color="#312e81"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#a78bfa" stop-opacity="0.55"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.28" stroke="#c4b5fd"><path d="M95 120h1010M95 245h1010M95 370h1010M95 495h1010"/><path d="M210 70v500M410 70v500M610 70v500M810 70v500M1010 70v500"/></g>
+  <g filter="url(#shadow)">
+    <circle cx="610" cy="325" r="108" fill="#020617" stroke="#a78bfa" stroke-width="4"/>
+    <circle cx="610" cy="325" r="58" fill="#4f46e5" opacity="0.9"/>
+    <path d="M585 310c0-22 18-40 40-40s40 18 40 40c0 30-36 39-36 68h-36c0-28-8-38-8-68z" fill="#e0e7ff" opacity="0.95"/>
+    <circle cx="548" cy="178" r="48" fill="#06b6d4"/><circle cx="764" cy="216" r="48" fill="#34d399"/><circle cx="818" cy="420" r="48" fill="#f59e0b"/><circle cx="418" cy="420" r="48" fill="#f472b6"/><circle cx="396" cy="218" r="48" fill="#60a5fa"/>
+    <g stroke="#e0f2fe" stroke-width="5" opacity="0.85"><path d="M548 226l43 65"/><path d="M716 242l-70 55"/><path d="M774 388l-96-44"/><path d="M464 398l95-51"/><path d="M444 242l110 60"/></g>
+  </g>
+  <g font-family="Inter, Apple SD Gothic Neo, Noto Sans KR, sans-serif">
+    <text x="80" y="105" fill="#f8fafc" font-size="48" font-weight="800">AI Memory Infrastructure</text>
+    <text x="82" y="155" fill="#c4b5fd" font-size="32" font-weight="700">Supermemory on GitHub Trending</text>
+    <text x="80" y="555" fill="#ccfbf1" font-size="24">memory graph · hybrid search · connectors · governance</text>
+    <text x="680" y="555" fill="#e0f2fe" font-size="22">2026-06-02 snapshot</text>
+  </g>
+</svg>
