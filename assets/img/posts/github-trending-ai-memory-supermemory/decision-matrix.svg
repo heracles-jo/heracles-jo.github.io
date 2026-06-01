@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">AI Memory Tool Comparison</title>
+  <desc id="desc">Supermemory, Mem0, Zep, LangGraph persistence, 직접 구축 RAG의 비교 매트릭스</desc>
+  <rect width="1100" height="560" rx="28" fill="#111827"/>
+  <g font-family="Inter, Apple SD Gothic Neo, Noto Sans KR, sans-serif">
+    <text x="60" y="70" font-size="34" font-weight="800" fill="#f9fafb">AI 메모리 도구 선택 기준</text>
+    <text x="60" y="105" font-size="18" fill="#c4b5fd">장기 기억은 검색 정확도뿐 아니라 개인정보, 만료, 충돌 해결, 운영 비용을 함께 평가해야 한다.</text>
+    <g transform="translate(55 145)">
+      <rect width="990" height="335" rx="18" fill="#0f172a" stroke="#374151"/>
+      <g fill="#e5e7eb" font-size="16" font-weight="700"><text x="22" y="42">접근</text><text x="195" y="42">강점</text><text x="460" y="42">리스크</text><text x="735" y="42">검토 포인트</text></g>
+      <g stroke="#374151"><path d="M0 65h990M0 132h990M0 199h990M0 266h990"/><path d="M165 0v335M430 0v335M705 0v335"/></g>
+      <g fill="#cbd5e1" font-size="15">
+        <text x="22" y="104" font-weight="700" fill="#a78bfa">Supermemory</text><text x="195" y="92">API, 앱, 커넥터, 메모리 구조</text><text x="195" y="114">fact/profile/hybrid search 통합</text><text x="460" y="92">벤치마크 재현성·데이터 위탁</text><text x="460" y="114">개인정보 보존 정책 검증 필요</text><text x="735" y="92">제품 내 memory API 빠른 도입</text><text x="735" y="114">커넥터와 운영 SLA</text>
+        <text x="22" y="171" font-weight="700" fill="#67e8f9">Mem0</text><text x="195" y="159">AI agent memory 생태계와 SDK</text><text x="195" y="181">Python/Node 통합 사례 풍부</text><text x="460" y="159">기존 스택과 권한 모델 매핑</text><text x="735" y="159">오픈소스 기반 커스터마이즈</text><text x="735" y="181">agent framework 연계</text>
+        <text x="22" y="238" font-weight="700" fill="#86efac">Zep</text><text x="195" y="226">대화 메모리와 지식 그래프 지향</text><text x="195" y="248">agent 앱용 컨텍스트 관리</text><text x="460" y="226">호스팅·버전·제품 경계 확인</text><text x="735" y="226">knowledge graph 중심 설계</text><text x="735" y="248">대화 히스토리 요약</text>
+        <text x="22" y="305" font-weight="700" fill="#fbbf24">직접 구축</text><text x="195" y="293">권한·보관·모델 선택 완전 통제</text><text x="195" y="315">내부 데이터 정책 최적화</text><text x="460" y="293">검색 품질·평가·운영 부담 큼</text><text x="735" y="293">규제 산업, 민감 데이터</text><text x="735" y="315">플랫폼 팀 보유 조직</text>
+      </g>
+    </g>
+  </g>
+</svg>
