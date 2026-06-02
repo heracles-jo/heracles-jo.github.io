@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">OSINT graph investigation architecture</title>
+<desc id="desc">Architecture diagram showing sources, enrichers, graph database, analyst workspace, and governance layers in an OSINT investigation platform.</desc>
+<rect width="1200" height="720" fill="#0b1120"/>
+<defs><style>.box{fill:#111827;stroke:#38bdf8;stroke-width:2}.gov{fill:#1e1b4b;stroke:#a78bfa}.txt{fill:#e5e7eb;font-family:Arial,sans-serif}.small{font-size:22px}.title{font-size:32px;font-weight:700}.arrow{stroke:#93c5fd;stroke-width:4;marker-end:url(#m)}</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker></defs>
+<text x="60" y="70" class="txt title">Flowsint형 OSINT 그래프 조사 파이프라인</text>
+<g class="txt small" text-anchor="middle">
+<rect x="60" y="125" width="220" height="115" rx="18" class="box"/><text x="170" y="174">공개 소스</text><text x="170" y="205">Domain · IP · SNS</text>
+<rect x="390" y="125" width="240" height="115" rx="18" class="box"/><text x="510" y="174">Enricher 실행</text><text x="510" y="205">DNS · WHOIS · ASN</text>
+<rect x="760" y="125" width="250" height="115" rx="18" class="box"/><text x="885" y="174">그래프 저장소</text><text x="885" y="205">Neo4j · PostgreSQL</text>
+<rect x="760" y="340" width="250" height="115" rx="18" class="box"/><text x="885" y="389">분석가 워크스페이스</text><text x="885" y="420">시각화 · 검증 · 노트</text>
+<rect x="390" y="340" width="240" height="115" rx="18" class="box"/><text x="510" y="389">작업 큐와 캐시</text><text x="510" y="420">Redis · Celery</text>
+<rect x="60" y="340" width="220" height="115" rx="18" class="box"/><text x="170" y="389">API 계층</text><text x="170" y="420">권한 · 감사 · 검색</text>
+<rect x="210" y="560" width="780" height="80" rx="18" class="gov"/><text x="600" y="610">거버넌스: 합법성 검토 · 개인정보 최소화 · 증거 출처 기록 · 오남용 방지</text>
+</g>
+<line x1="280" y1="182" x2="390" y2="182" class="arrow"/><line x1="630" y1="182" x2="760" y2="182" class="arrow"/><line x1="885" y1="240" x2="885" y2="340" class="arrow"/><line x1="760" y1="398" x2="630" y2="398" class="arrow"/><line x1="390" y1="398" x2="280" y2="398" class="arrow"/><line x1="170" y1="340" x2="170" y2="240" class="arrow"/><line x1="600" y1="560" x2="600" y2="455" class="arrow"/>
+</svg>

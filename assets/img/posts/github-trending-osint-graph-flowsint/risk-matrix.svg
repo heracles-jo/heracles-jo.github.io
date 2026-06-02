@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">OSINT adoption risk matrix</title><desc id="desc">Risk matrix for adopting OSINT tools across legal, privacy, accuracy, operations and security dimensions.</desc>
+<rect width="1200" height="640" fill="#111827"/>
+<text x="70" y="70" fill="#f9fafb" font-family="Arial" font-size="34" font-weight="700">OSINT 그래프 도구 도입 리스크 매트릭스</text>
+<g font-family="Arial" font-size="21" fill="#e5e7eb">
+<rect x="90" y="120" width="220" height="120" rx="14" fill="#7f1d1d"/><text x="120" y="172">법적 범위</text><text x="120" y="205">권한 없는 수집 금지</text>
+<rect x="340" y="120" width="220" height="120" rx="14" fill="#92400e"/><text x="370" y="172">개인정보</text><text x="370" y="205">최소 수집·보존</text>
+<rect x="590" y="120" width="220" height="120" rx="14" fill="#14532d"/><text x="620" y="172">검증 가능성</text><text x="620" y="205">출처·시각 기록</text>
+<rect x="840" y="120" width="220" height="120" rx="14" fill="#1e3a8a"/><text x="870" y="172">운영 안정성</text><text x="870" y="205">큐·비용·백업</text>
+<rect x="215" y="320" width="270" height="130" rx="14" fill="#581c87"/><text x="250" y="375">보안 통제</text><text x="250" y="410">API 키·격리·감사</text>
+<rect x="515" y="320" width="270" height="130" rx="14" fill="#0f766e"/><text x="550" y="375">분석 품질</text><text x="550" y="410">오탐·추론 편향 관리</text>
+<rect x="815" y="320" width="270" height="130" rx="14" fill="#4b5563"/><text x="850" y="375">윤리 원칙</text><text x="850" y="410">목적 제한·피해 방지</text>
+</g>
+<path d="M160 520 H1040" stroke="#38bdf8" stroke-width="3"/><text x="160" y="560" fill="#bae6fd" font-family="Arial" font-size="24">핵심 판단: 기능보다 조사 목적, 증거 관리, 오남용 방지 체계를 먼저 설계해야 한다.</text>
+</svg>
