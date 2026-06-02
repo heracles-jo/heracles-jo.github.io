@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Flowsint OSINT graph investigation trend</title>
+<desc id="desc">A network graph connecting domains, IPs, organizations, social accounts, enrichers, and verification workflows for ethical OSINT operations.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="0.55" stop-color="#172554"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+  <radialGradient id="pulse" cx="50%" cy="50%" r="55%"><stop offset="0" stop-color="#38bdf8" stop-opacity="0.55"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="760" cy="320" r="260" fill="url(#pulse)"/>
+<g stroke="#67e8f9" stroke-width="3" opacity="0.72">
+  <line x1="610" y1="290" x2="745" y2="190"/><line x1="610" y1="290" x2="820" y2="330"/><line x1="610" y1="290" x2="710" y2="455"/>
+  <line x1="745" y1="190" x2="930" y2="220"/><line x1="820" y1="330" x2="990" y2="410"/><line x1="710" y1="455" x2="890" y2="520"/>
+  <line x1="820" y1="330" x2="930" y2="220"/><line x1="820" y1="330" x2="890" y2="520"/>
+</g>
+<g filter="url(#glow)">
+  <circle cx="610" cy="290" r="58" fill="#0ea5e9"/><circle cx="745" cy="190" r="42" fill="#22c55e"/><circle cx="820" cy="330" r="50" fill="#a78bfa"/>
+  <circle cx="710" cy="455" r="42" fill="#f97316"/><circle cx="930" cy="220" r="38" fill="#facc15"/><circle cx="990" cy="410" r="44" fill="#fb7185"/><circle cx="890" cy="520" r="34" fill="#14b8a6"/>
+</g>
+<g font-family="Inter, Arial, sans-serif" fill="#f8fafc" font-weight="700" text-anchor="middle">
+  <text x="610" y="296" font-size="24">Graph</text><text x="745" y="196" font-size="19">Domain</text><text x="820" y="336" font-size="20">IP / ASN</text>
+  <text x="710" y="461" font-size="18">Social</text><text x="930" y="226" font-size="17">WHOIS</text><text x="990" y="416" font-size="17">Enricher</text><text x="890" y="526" font-size="15">Verify</text>
+</g>
+<g font-family="Inter, Arial, sans-serif" fill="#e0f2fe">
+  <text x="72" y="120" font-size="28" font-weight="700" letter-spacing="2">GITHUB TRENDING ANALYSIS</text>
+  <text x="72" y="185" font-size="56" font-weight="800" fill="#ffffff">Flowsint와</text>
+  <text x="72" y="252" font-size="56" font-weight="800" fill="#ffffff">OSINT 그래프 조사</text>
+  <text x="72" y="322" font-size="27" fill="#bae6fd">윤리적 정찰, 위협 인텔리전스, 검증 가능한 조사 워크플로</text>
+  <rect x="72" y="385" width="410" height="66" rx="16" fill="#020617" opacity="0.55" stroke="#38bdf8"/>
+  <text x="96" y="427" font-size="25" font-weight="700" fill="#7dd3fc">Privacy-first · Local graph · Enrichers</text>
+</g>
+</svg>
