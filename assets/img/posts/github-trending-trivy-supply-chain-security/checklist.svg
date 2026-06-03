@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">Trivy 도입 판단 체크리스트</title>
+  <desc id="desc">Trivy를 실무에 도입할 때 확인해야 할 범위, 정책, 예외, 운영 지표를 체크리스트로 정리한 이미지</desc>
+  <rect width="1100" height="520" rx="24" fill="#0b1220"/>
+  <text x="60" y="72" font-family="Inter, Arial" font-size="34" font-weight="900" fill="#e2e8f0">PoC에서 운영 전환까지 확인할 질문</text>
+  <g font-family="Inter, Arial" font-size="22" fill="#e5e7eb">
+    <g transform="translate(70 125)"><circle cx="18" cy="18" r="18" fill="#22c55e"/><path d="M8 18l7 7 15-18" stroke="#052e16" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="26">어떤 대상까지 스캔할 것인가: 이미지, IaC, Git, Kubernetes</text></g>
+    <g transform="translate(70 190)"><circle cx="18" cy="18" r="18" fill="#38bdf8"/><path d="M8 18l7 7 15-18" stroke="#082f49" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="26">실패 기준은 무엇인가: Critical, Exploit 가능성, SLA, 예외 정책</text></g>
+    <g transform="translate(70 255)"><circle cx="18" cy="18" r="18" fill="#f59e0b"/><path d="M8 18l7 7 15-18" stroke="#451a03" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="26">개발자 피로도를 어떻게 줄일 것인가: 베이스라인, 캐시, 억제 파일</text></g>
+    <g transform="translate(70 320)"><circle cx="18" cy="18" r="18" fill="#a78bfa"/><path d="M8 18l7 7 15-18" stroke="#2e1065" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="26">SBOM과 감사 증적을 어디에 보관하고 누가 승인하는가</text></g>
+    <g transform="translate(70 385)"><circle cx="18" cy="18" r="18" fill="#fb7185"/><path d="M8 18l7 7 15-18" stroke="#4c0519" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="26">런타임 보안, 패치 자동화, 티켓 워크플로와 연결되는가</text></g>
+  </g>
+</svg>
