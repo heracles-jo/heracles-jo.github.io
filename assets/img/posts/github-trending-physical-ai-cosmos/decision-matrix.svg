@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">Physical AI 도입 의사결정 매트릭스</title>
+  <desc id="desc">규제 민감도와 물리 안전 리스크에 따라 PoC, 제한 운영, 본격 도입, 보류 영역을 구분한 매트릭스</desc>
+  <rect width="1100" height="560" rx="24" fill="#08111f"/>
+  <text x="56" y="62" fill="#f8fafc" font-size="30" font-family="Inter, Apple SD Gothic Neo, Arial" font-weight="800">Physical AI 도입 판단 매트릭스</text>
+  <g transform="translate(120 115)" font-family="Inter, Apple SD Gothic Neo, Arial">
+    <rect width="820" height="340" fill="#0f172a" stroke="#334155"/>
+    <line x1="410" y1="0" x2="410" y2="340" stroke="#475569" stroke-width="2"/>
+    <line x1="0" y1="170" x2="820" y2="170" stroke="#475569" stroke-width="2"/>
+    <rect x="0" y="0" width="410" height="170" fill="#064e3b" opacity="0.75"/>
+    <rect x="410" y="0" width="410" height="170" fill="#713f12" opacity="0.72"/>
+    <rect x="0" y="170" width="410" height="170" fill="#1e3a8a" opacity="0.72"/>
+    <rect x="410" y="170" width="410" height="170" fill="#7f1d1d" opacity="0.72"/>
+    <g fill="#f8fafc" font-size="24" font-weight="800">
+      <text x="32" y="58">PoC 우선</text><text x="452" y="58">제한 운영</text><text x="32" y="228">플랫폼화 검토</text><text x="452" y="228">보류 또는 샌드박스</text>
+    </g>
+    <g fill="#dbeafe" font-size="17">
+      <text x="32" y="92">물리 안전 영향이 낮고 데이터 품질 확인이 쉬운 업무</text>
+      <text x="452" y="92">현장 영향은 있으나 사람이 승인할 수 있는 업무</text>
+      <text x="32" y="262">데이터 루프와 시뮬레이션 역량이 이미 있는 조직</text>
+      <text x="452" y="262">안전 인증·책임 소재·운영 인력이 부족한 영역</text>
+    </g>
+    <text x="250" y="390" fill="#cbd5e1" font-size="18">규제/데이터 민감도 → 높음</text>
+    <text x="-80" y="190" fill="#cbd5e1" font-size="18" transform="rotate(-90 -80 190)">물리 안전 리스크 → 높음</text>
+  </g>
+</svg>
