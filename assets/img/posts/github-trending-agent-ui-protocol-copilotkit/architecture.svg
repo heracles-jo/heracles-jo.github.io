@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AG-UI event flow diagram</title>
+  <desc id="desc">Detailed event flow from user intent through product UI, AG-UI middleware, agent runtime, tools, state updates and human approval.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#eef2ff"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10 Z" fill="#4f46e5"/></marker>
+  </defs>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="70" y="70" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="34" font-weight="900" fill="#111827">AG-UI 기반 에이전트 사용자 경험 흐름</text>
+  <text x="70" y="112" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="19" fill="#475569">프로토콜의 가치는 채팅창 자체가 아니라 이벤트, 상태, 승인, UI 렌더링을 제품 경계 안에 묶는 데 있다.</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" filter="drop-shadow(0 8px 18px rgba(15,23,42,.12))">
+    <rect x="70" y="170" width="190" height="105" rx="20" fill="url(#panel)" stroke="#c7d2fe"/>
+    <text x="105" y="218" font-size="22" font-weight="800" fill="#1e1b4b">User Intent</text>
+    <text x="105" y="249" font-size="15" fill="#64748b">요청·선택·피드백</text>
+    <rect x="330" y="170" width="210" height="105" rx="20" fill="url(#panel)" stroke="#c7d2fe"/>
+    <text x="365" y="218" font-size="22" font-weight="800" fill="#1e1b4b">Product UI</text>
+    <text x="365" y="249" font-size="15" fill="#64748b">React/Angular 화면</text>
+    <rect x="610" y="170" width="220" height="105" rx="20" fill="#eef2ff" stroke="#818cf8"/>
+    <text x="645" y="218" font-size="22" font-weight="800" fill="#312e81">AG-UI Events</text>
+    <text x="645" y="249" font-size="15" fill="#6366f1">streaming · state · tool</text>
+    <rect x="900" y="170" width="230" height="105" rx="20" fill="url(#panel)" stroke="#c7d2fe"/>
+    <text x="935" y="218" font-size="22" font-weight="800" fill="#1e1b4b">Agent Runtime</text>
+    <text x="935" y="249" font-size="15" fill="#64748b">LangGraph · CrewAI 등</text>
+
+    <rect x="235" y="410" width="225" height="110" rx="20" fill="#ecfeff" stroke="#67e8f9"/>
+    <text x="270" y="458" font-size="22" font-weight="800" fill="#164e63">Shared State</text>
+    <text x="270" y="490" font-size="15" fill="#0e7490">문서·폼·캔버스 동기화</text>
+    <rect x="515" y="410" width="225" height="110" rx="20" fill="#fef3c7" stroke="#fbbf24"/>
+    <text x="548" y="458" font-size="22" font-weight="800" fill="#78350f">Human Approval</text>
+    <text x="548" y="490" font-size="15" fill="#92400e">확인·수정·중단 지점</text>
+    <rect x="795" y="410" width="225" height="110" rx="20" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="830" y="458" font-size="22" font-weight="800" fill="#14532d">Tools / APIs</text>
+    <text x="830" y="490" font-size="15" fill="#166534">업무 시스템 호출</text>
+  </g>
+  <g stroke="#4f46e5" stroke-width="5" fill="none" marker-end="url(#arrow)" opacity="0.9">
+    <path d="M260 222 H330"/>
+    <path d="M540 222 H610"/>
+    <path d="M830 222 H900"/>
+    <path d="M1015 275 C1015 340 908 350 908 410"/>
+    <path d="M795 465 H740"/>
+    <path d="M515 465 H460"/>
+    <path d="M348 410 C348 340 435 335 435 275"/>
+    <path d="M628 410 C628 340 720 340 720 275"/>
+  </g>
+  <text x="70" y="630" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="19" fill="#334155">운영 관점의 핵심 질문: 이벤트 스키마 버전 관리, 권한 검증, 상태 충돌 해결, 관측성, 실패 시 사용자 복구 경로를 어떻게 설계할 것인가?</text>
+</svg>
