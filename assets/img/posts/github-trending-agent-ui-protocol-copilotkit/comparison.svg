@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Agent UI technology comparison matrix</title>
+  <desc id="desc">A comparison matrix positioning CopilotKit AG-UI, Vercel AI SDK, assistant-ui, MCP and A2A by primary responsibility.</desc>
+  <rect width="1200" height="720" fill="#0f172a"/>
+  <text x="70" y="72" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="34" font-weight="900" fill="#ffffff">에이전트 UI 스택 비교 관점</text>
+  <text x="70" y="114" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="19" fill="#cbd5e1">도구 연결(MCP), 에이전트 간 통신(A2A), 모델 스트리밍, 화면 상태 동기화는 서로 다른 계층이다.</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial">
+    <rect x="70" y="170" width="1060" height="420" rx="24" fill="#111827" stroke="#334155"/>
+    <g fill="#94a3b8" font-size="16" font-weight="700">
+      <text x="105" y="220">기술/접근</text><text x="325" y="220">주 책임</text><text x="620" y="220">강점</text><text x="895" y="220">주의점</text>
+    </g>
+    <g stroke="#334155" stroke-width="1"><path d="M90 245 H1110"/><path d="M90 315 H1110"/><path d="M90 385 H1110"/><path d="M90 455 H1110"/><path d="M90 525 H1110"/></g>
+    <g font-size="18" fill="#e5e7eb">
+      <text x="105" y="288" font-weight="800" fill="#a5b4fc">CopilotKit / AG-UI</text><text x="325" y="288">제품 UI와 에이전트 이벤트 연결</text><text x="620" y="288">상태·승인·생성 UI</text><text x="895" y="288">프로토콜 거버넌스 필요</text>
+      <text x="105" y="358" font-weight="800" fill="#67e8f9">Vercel AI SDK</text><text x="325" y="358">모델 호출·스트리밍 추상화</text><text x="620" y="358">웹 개발 생산성</text><text x="895" y="358">업무 상태 모델은 별도 설계</text>
+      <text x="105" y="428" font-weight="800" fill="#fbbf24">assistant-ui</text><text x="325" y="428">채팅/어시스턴트 컴포넌트</text><text x="620" y="428">빠른 UI 구성</text><text x="895" y="428">복잡한 액션 흐름은 확장 필요</text>
+      <text x="105" y="498" font-weight="800" fill="#86efac">MCP</text><text x="325" y="498">에이전트의 도구 접근 표준화</text><text x="620" y="498">툴 생태계 연결</text><text x="895" y="498">사용자 화면 프로토콜은 아님</text>
+      <text x="105" y="568" font-weight="800" fill="#f0abfc">A2A</text><text x="325" y="568">에이전트 간 상호운용</text><text x="620" y="568">멀티 에이전트 협업</text><text x="895" y="568">최종 사용자 UX는 별도</text>
+    </g>
+  </g>
+  <text x="70" y="650" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="21" font-weight="700" fill="#dbeafe">실무 결론: CopilotKit의 가치는 LLM 호출 라이브러리가 아니라 “에이전트가 안전하게 제품 화면 안에서 일하게 하는 운영 계층”에 있다.</text>
+</svg>
