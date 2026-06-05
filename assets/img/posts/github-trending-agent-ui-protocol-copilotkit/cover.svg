@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">CopilotKit and AG-UI agent UI architecture</title>
+  <desc id="desc">A diagram showing AI agents, AG-UI event protocol, application state, generative UI and human approval loops.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="55%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <circle cx="1040" cy="95" r="150" fill="#22d3ee" opacity="0.13"/>
+  <circle cx="150" cy="540" r="220" fill="#a78bfa" opacity="0.12"/>
+  <text x="72" y="92" fill="#c4b5fd" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" font-size="26" font-weight="700">GitHub Trending Analysis</text>
+  <text x="72" y="152" fill="#ffffff" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" font-size="54" font-weight="800">Agent UI Protocol</text>
+  <text x="72" y="215" fill="#ffffff" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" font-size="54" font-weight="800">CopilotKit · AG-UI</text>
+  <text x="75" y="267" fill="#dbeafe" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" font-size="22">에이전트를 제품 화면과 운영 워크플로에 연결하는 프런트엔드 스택</text>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="342" width="230" height="120" rx="24" fill="#f8fafc" opacity="0.97"/>
+    <text x="116" y="392" fill="#0f172a" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="25" font-weight="800">Agent</text>
+    <text x="116" y="426" fill="#475569" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="17">LLM · tools · state</text>
+
+    <rect x="382" y="318" width="290" height="168" rx="30" fill="#eef2ff" opacity="0.98"/>
+    <text x="429" y="375" fill="#312e81" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="32" font-weight="900">AG-UI</text>
+    <text x="429" y="414" fill="#4338ca" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="19">event stream protocol</text>
+    <text x="429" y="447" fill="#64748b" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="16">streaming · context · HITL</text>
+
+    <rect x="750" y="342" width="360" height="120" rx="24" fill="#ecfeff" opacity="0.97"/>
+    <text x="796" y="392" fill="#164e63" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="25" font-weight="800">Product UI</text>
+    <text x="796" y="426" fill="#0e7490" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="17">Generative UI · approvals</text>
+  </g>
+  <path d="M306 402 C340 402 348 402 382 402" stroke="#bfdbfe" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M672 402 C708 402 716 402 750 402" stroke="#99f6e4" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M940 462 C920 540 230 540 190 462" stroke="#fde68a" stroke-width="5" fill="none" stroke-dasharray="14 14" opacity="0.9"/>
+  <text x="394" y="555" fill="#fef3c7" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="21" font-weight="700">human-in-the-loop feedback and shared state</text>
+</svg>
