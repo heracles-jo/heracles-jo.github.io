@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">NGINX 엣지 게이트웨이 요청 흐름</title>
+  <desc id="desc">클라이언트 요청이 TLS 종료, 라우팅, 캐시, 제한 정책, 업스트림 서비스로 이동하는 흐름</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0ea5e9"/></marker>
+  </defs>
+  <rect width="1100" height="520" rx="24" fill="#f8fafc"/>
+  <text x="50" y="54" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#0f172a">AI 서비스 앞단의 NGINX 요청 제어 흐름</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g fill="#ffffff" stroke="#cbd5e1" stroke-width="2">
+      <rect x="55" y="130" width="160" height="110" rx="16"/>
+      <rect x="290" y="130" width="170" height="110" rx="16"/>
+      <rect x="535" y="90" width="190" height="110" rx="16"/>
+      <rect x="535" y="250" width="190" height="110" rx="16"/>
+      <rect x="810" y="70" width="190" height="90" rx="16"/>
+      <rect x="810" y="205" width="190" height="90" rx="16"/>
+      <rect x="810" y="340" width="190" height="90" rx="16"/>
+    </g>
+    <g fill="#0f172a" font-size="20" font-weight="700" text-anchor="middle">
+      <text x="135" y="180">Client</text><text x="135" y="208" font-size="14" font-weight="400">Web · Mobile · Agent</text>
+      <text x="375" y="174">NGINX</text><text x="375" y="202" font-size="14" font-weight="400">TLS · HTTP/2 · HTTP/3</text>
+      <text x="630" y="134">Policy Layer</text><text x="630" y="162" font-size="14" font-weight="400">rate limit · auth · WAF</text>
+      <text x="630" y="294">Cache/Buffer</text><text x="630" y="322" font-size="14" font-weight="400">static · API · streaming</text>
+      <text x="905" y="123">LLM Gateway</text>
+      <text x="905" y="258">App API</text>
+      <text x="905" y="393">Observability</text>
+    </g>
+    <g stroke="#0ea5e9" stroke-width="4" fill="none" marker-end="url(#arrow)">
+      <path d="M215 185 H285"/>
+      <path d="M460 185 C500 185 500 145 535 145"/>
+      <path d="M460 185 C500 185 500 305 535 305"/>
+      <path d="M725 145 C760 145 765 115 810 115"/>
+      <path d="M725 305 C765 305 765 250 810 250"/>
+      <path d="M725 305 C765 305 765 385 810 385"/>
+    </g>
+  </g>
+  <text x="55" y="475" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#334155">핵심은 특정 모델이 아니라, 요청이 제품 경계에 들어오는 순간 정책·성능·관측성을 일관되게 적용하는 운영 계층이다.</text>
+</svg>
