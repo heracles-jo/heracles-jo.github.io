@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">NGINX, Caddy, Traefik, Envoy 비교 축</title>
+  <desc id="desc">주요 프록시와 게이트웨이 도구를 단순성, 클라우드 네이티브 자동화, 서비스 메시 연계, 고성능 범용성 축으로 비교</desc>
+  <rect width="1100" height="560" rx="24" fill="#0b1220"/>
+  <text x="60" y="62" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="#fff">게이트웨이 선택은 “최고 도구”가 아니라 운영 맥락의 문제</text>
+  <line x1="120" y1="445" x2="980" y2="445" stroke="#64748b" stroke-width="3"/>
+  <line x1="120" y1="445" x2="120" y2="115" stroke="#64748b" stroke-width="3"/>
+  <text x="980" y="487" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end" fill="#cbd5e1">동적 자동화·서비스 메시 연계</text>
+  <text x="95" y="126" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end" fill="#cbd5e1" transform="rotate(-90 95 126)">범용 성능·성숙한 운영 경험</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="800">
+    <circle cx="410" cy="210" r="70" fill="#00a86b" opacity="0.92"/>
+    <text x="410" y="217" font-size="26" text-anchor="middle" fill="#fff">NGINX</text>
+    <circle cx="315" cy="350" r="58" fill="#38bdf8" opacity="0.90"/>
+    <text x="315" y="357" font-size="23" text-anchor="middle" fill="#082f49">Caddy</text>
+    <circle cx="695" cy="325" r="62" fill="#f59e0b" opacity="0.90"/>
+    <text x="695" y="332" font-size="23" text-anchor="middle" fill="#111827">Traefik</text>
+    <circle cx="790" cy="190" r="64" fill="#a78bfa" opacity="0.92"/>
+    <text x="790" y="197" font-size="23" text-anchor="middle" fill="#fff">Envoy</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#e2e8f0">
+    <text x="225" y="525">Caddy: HTTPS 기본값과 단순 배포</text>
+    <text x="590" y="525">Traefik/Envoy: 동적 서비스 발견과 메시 친화성</text>
+    <text x="285" y="105">NGINX: 웹 서버·로드밸런서·캐시의 검증된 기준점</text>
+  </g>
+</svg>
