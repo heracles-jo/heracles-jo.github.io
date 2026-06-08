@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Postgres durable execution architecture</title>
+  <desc id="desc">A two phase architecture: SQL DSL builds a graph and a PostgreSQL background worker executes durable nodes with checkpointing.</desc>
+  <rect width="1100" height="620" rx="24" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="900" fill="#0f172a">pg_durable 실행 흐름</text>
+  <text x="60" y="104" font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">사용자 트랜잭션에서 SQL 그래프를 만들고, PostgreSQL 백그라운드 워커가 체크포인트 기반으로 실행한다.</text>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="70" y="165" width="260" height="330" rx="24" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="200" y="210" text-anchor="middle" font-size="24" font-weight="800" fill="#1e3a8a">Phase 1</text>
+    <text x="200" y="240" text-anchor="middle" font-size="18" font-weight="700" fill="#1e40af">Graph Construction</text>
+    <rect x="105" y="280" width="190" height="52" rx="14" fill="#ffffff" stroke="#60a5fa"/>
+    <text x="200" y="313" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">df.start()</text>
+    <rect x="105" y="354" width="190" height="52" rx="14" fill="#ffffff" stroke="#60a5fa"/>
+    <text x="200" y="387" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">~&gt; / |=&gt; DSL</text>
+    <rect x="105" y="428" width="190" height="52" rx="14" fill="#ffffff" stroke="#60a5fa"/>
+    <text x="200" y="461" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">nodes 저장</text>
+
+    <rect x="430" y="165" width="260" height="330" rx="24" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+    <text x="560" y="210" text-anchor="middle" font-size="24" font-weight="800" fill="#065f46">Durable Store</text>
+    <text x="560" y="240" text-anchor="middle" font-size="18" font-weight="700" fill="#047857">checkpoint + status</text>
+    <ellipse cx="560" cy="308" rx="94" ry="34" fill="#10b981" opacity="0.9"/>
+    <path d="M466 308v112c0 19 42 34 94 34s94-15 94-34V308" fill="#34d399" opacity="0.85"/>
+    <ellipse cx="560" cy="420" rx="94" ry="34" fill="#059669" opacity="0.95"/>
+    <text x="560" y="514" text-anchor="middle" font-size="16" fill="#064e3b">instance_id, node result, metrics</text>
+
+    <rect x="790" y="165" width="240" height="330" rx="24" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+    <text x="910" y="210" text-anchor="middle" font-size="24" font-weight="800" fill="#9a3412">Phase 2</text>
+    <text x="910" y="240" text-anchor="middle" font-size="18" font-weight="700" fill="#c2410c">Background Worker</text>
+    <rect x="824" y="280" width="172" height="52" rx="14" fill="#ffffff" stroke="#fb923c"/>
+    <text x="910" y="313" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">graph load</text>
+    <rect x="824" y="354" width="172" height="52" rx="14" fill="#ffffff" stroke="#fb923c"/>
+    <text x="910" y="387" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">node execute</text>
+    <rect x="824" y="428" width="172" height="52" rx="14" fill="#ffffff" stroke="#fb923c"/>
+    <text x="910" y="461" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">retry / resume</text>
+  </g>
+  <g stroke="#334155" stroke-width="5" fill="none" marker-end="url(#arrow)">
+    <path d="M330 330 H420"/>
+    <path d="M690 330 H780"/>
+    <path d="M910 495 C910 560 560 565 560 496"/>
+  </g>
+  <text x="550" y="585" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" fill="#475569">핵심 판단 기준: 데이터가 있는 곳에서 실행 상태까지 관리할 것인가, 아니면 별도 워크플로 플랫폼으로 분리할 것인가</text>
+</svg>
