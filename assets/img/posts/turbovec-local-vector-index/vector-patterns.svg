@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">Vector retrieval architecture comparison</title>
+  <desc id="desc">Comparison of managed vector database, FAISS library, and embedded compressed index patterns</desc>
+  <rect width="1000" height="520" rx="28" fill="#f8fafc"/>
+  <text x="50" y="66" font-family="Arial" font-size="30" font-weight="700" fill="#0f172a">벡터 검색 도입 패턴 비교</text>
+  <g font-family="Arial" font-size="19">
+    <g transform="translate(50 110)">
+      <rect width="270" height="330" rx="22" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+      <text x="24" y="44" font-size="24" font-weight="700" fill="#1d4ed8">Managed DB</text>
+      <text x="24" y="88" fill="#334155">Qdrant Cloud / Weaviate</text>
+      <text x="24" y="132" fill="#334155">클러스터, API, 운영 기능</text>
+      <text x="24" y="176" fill="#334155">확장성과 멀티테넌시 강점</text>
+      <text x="24" y="220" fill="#334155">네트워크·비용·데이터 반출</text>
+      <text x="24" y="264" fill="#334155">정책 검토 필요</text>
+    </g>
+    <g transform="translate(365 110)">
+      <rect width="270" height="330" rx="22" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+      <text x="24" y="44" font-size="24" font-weight="700" fill="#15803d">FAISS Library</text>
+      <text x="24" y="88" fill="#334155">C++/Python similarity search</text>
+      <text x="24" y="132" fill="#334155">GPU·대규모 알고리즘 생태계</text>
+      <text x="24" y="176" fill="#334155">튜닝 자유도와 검증 이력</text>
+      <text x="24" y="220" fill="#334155">인덱스 운영 기능은 직접 구현</text>
+      <text x="24" y="264" fill="#334155">필터·권한·갱신 설계 필요</text>
+    </g>
+    <g transform="translate(680 110)">
+      <rect width="270" height="330" rx="22" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+      <text x="24" y="44" font-size="24" font-weight="700" fill="#0e7490">TurboVec</text>
+      <text x="24" y="88" fill="#334155">Rust core + Python binding</text>
+      <text x="24" y="132" fill="#334155">압축·로컬·온라인 ingest</text>
+      <text x="24" y="176" fill="#334155">필터 내장 검색 지향</text>
+      <text x="24" y="220" fill="#334155">신규 프로젝트 성숙도 확인</text>
+      <text x="24" y="264" fill="#334155">백업·관측성은 별도 설계</text>
+    </g>
+  </g>
+  <path d="M320 275h45M635 275h45" stroke="#64748b" stroke-width="3" stroke-dasharray="8 8"/>
+  <text x="52" y="486" font-family="Arial" font-size="18" fill="#475569">핵심 판단: 벡터 검색은 모델 성능이 아니라 데이터 배치, 필터, 비용, 운영 책임의 문제로 이동하고 있다.</text>
+</svg>

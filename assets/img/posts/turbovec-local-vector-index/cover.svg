@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">TurboVec local vector index analysis</title>
+  <desc id="desc">Compressed local vector index connecting embeddings, filters, and RAG operations</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.48" stop-color="#17345c"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="55%">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.18" stroke="#c4f1ff" stroke-width="1">
+    <path d="M120 110h960M120 190h960M120 270h960M120 350h960M120 430h960M120 510h960"/>
+    <path d="M180 80v470M300 80v470M420 80v470M540 80v470M660 80v470M780 80v470M900 80v470M1020 80v470"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="110" y="94" width="420" height="442" rx="34" fill="#0f172a" opacity="0.92" stroke="#38bdf8" stroke-opacity="0.45"/>
+    <text x="150" y="158" fill="#e0f2fe" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">GitHub Trending</text>
+    <text x="150" y="205" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800">TurboVec</text>
+    <text x="150" y="248" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="24">compressed vector index</text>
+    <g transform="translate(150 300)">
+      <rect width="310" height="28" rx="14" fill="#164e63"/>
+      <rect width="238" height="28" rx="14" fill="#22d3ee"/>
+      <text x="0" y="68" fill="#e2e8f0" font-family="Arial" font-size="21">RAM footprint ↓</text>
+      <text x="0" y="105" fill="#e2e8f0" font-family="Arial" font-size="21">filtered retrieval →</text>
+      <text x="0" y="142" fill="#e2e8f0" font-family="Arial" font-size="21">local RAG data plane</text>
+    </g>
+  </g>
+  <g transform="translate(620 135)" filter="url(#shadow)">
+    <rect width="420" height="360" rx="38" fill="#f8fafc" opacity="0.96"/>
+    <g stroke="#0f766e" stroke-width="4" fill="none">
+      <path d="M70 95 C145 25, 260 60, 335 105"/>
+      <path d="M70 180 C160 112, 250 132, 345 178"/>
+      <path d="M75 260 C150 220, 260 225, 345 265"/>
+    </g>
+    <g fill="#0891b2">
+      <circle cx="70" cy="95" r="13"/><circle cx="190" cy="55" r="13"/><circle cx="335" cy="105" r="13"/>
+      <circle cx="70" cy="180" r="13"/><circle cx="205" cy="132" r="13"/><circle cx="345" cy="178" r="13"/>
+      <circle cx="75" cy="260" r="13"/><circle cx="218" cy="225" r="13"/><circle cx="345" cy="265" r="13"/>
+    </g>
+    <text x="70" y="330" fill="#0f172a" font-family="Arial" font-size="24" font-weight="700">Embeddings → Quantized index → Answers</text>
+  </g>
+  <text x="80" y="590" fill="#bae6fd" font-family="Arial" font-size="22">Korean IT expert analysis · Snapshot at 2026-06-09 KST</text>
+</svg>
