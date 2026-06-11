@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Mac 컨테이너 런타임 도입 체크리스트</title><desc id="desc">Apple container를 실무에서 검토할 때 확인해야 할 보안, 호환성, 성능, 개발자 경험 항목</desc>
+<rect width="1200" height="760" fill="#fff7ed"/>
+<text x="70" y="76" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="34" font-weight="800" fill="#431407">PoC 체크리스트: Docker 대체가 아니라 경계 재설계</text>
+<text x="70" y="114" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="19" fill="#7c2d12">Apple container를 도입하기 전 팀의 개발·CI·보안 운영 기준을 검증한다.</text>
+<g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="21">
+  <rect x="80" y="165" width="500" height="96" rx="18" fill="#ffffff" stroke="#fb923c" stroke-width="3"/>
+  <text x="120" y="205" font-weight="800" fill="#9a3412">1. 플랫폼 조건</text><text x="120" y="237" fill="#7c2d12">Apple silicon, macOS 26 의존성, 팀 장비 표준화</text>
+  <rect x="620" y="165" width="500" height="96" rx="18" fill="#ffffff" stroke="#14b8a6" stroke-width="3"/>
+  <text x="660" y="205" font-weight="800" fill="#0f766e">2. 이미지 호환성</text><text x="660" y="237" fill="#115e59">OCI pull/build/push, 기존 Dockerfile, registry 인증</text>
+  <rect x="80" y="305" width="500" height="96" rx="18" fill="#ffffff" stroke="#3b82f6" stroke-width="3"/>
+  <text x="120" y="345" font-weight="800" fill="#1d4ed8">3. 격리 모델</text><text x="120" y="377" fill="#1e40af">컨테이너별 VM, 볼륨 최소 노출, 네트워크 정책</text>
+  <rect x="620" y="305" width="500" height="96" rx="18" fill="#ffffff" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="660" y="345" font-weight="800" fill="#6d28d9">4. 성능 기준</text><text x="660" y="377" fill="#5b21b6">부팅 시간, 메모리 회수, 대형 빌드 CPU/RAM 제한</text>
+  <rect x="80" y="445" width="500" height="96" rx="18" fill="#ffffff" stroke="#ef4444" stroke-width="3"/>
+  <text x="120" y="485" font-weight="800" fill="#b91c1c">5. 운영 리스크</text><text x="120" y="517" fill="#991b1b">서비스 중단 절차, 로그 수집, 문제 재현, 버전 고정</text>
+  <rect x="620" y="445" width="500" height="96" rx="18" fill="#ffffff" stroke="#64748b" stroke-width="3"/>
+  <text x="660" y="485" font-weight="800" fill="#334155">6. 전환 범위</text><text x="660" y="517" fill="#475569">개인 개발 → 보안 민감 워크로드 → CI 후보 순서</text>
+  <rect x="180" y="610" width="840" height="68" rx="18" fill="#431407"/>
+  <text x="225" y="652" fill="#ffedd5" font-size="20" font-weight="700">판단 기준: 도구 이름이 아니라 “Mac에서 리눅스 컨테이너를 어떤 신뢰 경계로 실행할 것인가”를 먼저 정한다.</text>
+</g>
+</svg>
