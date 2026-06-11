@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Apple container 기능 구성도</title><desc id="desc">container CLI, apiserver, 이미지·네트워크 XPC helper, 컨테이너별 Linux runtime VM의 관계를 나타낸 다이어그램</desc>
+<rect width="1200" height="760" fill="#f8fafc"/>
+<text x="60" y="70" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="34" font-weight="800" fill="#0f172a">Apple container: 기능 구성과 실행 경계</text>
+<text x="60" y="108" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="19" fill="#475569">공개 문서 기준 요약: CLI가 launchd/XPC 기반 서비스와 통신하고, 각 컨테이너는 별도 경량 Linux VM으로 실행된다.</text>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker></defs>
+<g font-family="Inter, Apple SD Gothic Neo, Arial">
+  <rect x="80" y="170" width="230" height="96" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="115" y="214" font-size="24" font-weight="800" fill="#1e3a8a">container CLI</text>
+  <text x="115" y="244" font-size="16" fill="#1e40af">run · build · image · network</text>
+  <rect x="450" y="160" width="300" height="118" rx="20" fill="#ecfeff" stroke="#0891b2" stroke-width="3"/>
+  <text x="500" y="210" font-size="25" font-weight="800" fill="#164e63">container-apiserver</text>
+  <text x="500" y="242" font-size="16" fill="#155e75">launch agent · client API · orchestration</text>
+  <path d="M310 218 H444" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="170" y="365" width="240" height="112" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="205" y="410" font-size="22" font-weight="800" fill="#92400e">core-images</text>
+  <text x="205" y="441" font-size="16" fill="#92400e">OCI image store · registry</text>
+  <rect x="480" y="365" width="240" height="112" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="520" y="410" font-size="22" font-weight="800" fill="#14532d">network-vmnet</text>
+  <text x="520" y="441" font-size="16" fill="#166534">virtual network · IP</text>
+  <rect x="790" y="345" width="285" height="152" rx="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+  <text x="830" y="390" font-size="22" font-weight="800" fill="#4c1d95">container-runtime-linux</text>
+  <text x="830" y="421" font-size="16" fill="#5b21b6">per-container helper</text>
+  <rect x="845" y="444" width="175" height="33" rx="10" fill="#ffffff" stroke="#a78bfa"/>
+  <text x="875" y="467" font-size="15" fill="#4c1d95">lightweight Linux VM</text>
+  <path d="M560 278 L340 360" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M600 278 V357" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M715 278 L860 340" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="170" y="585" width="905" height="78" rx="16" fill="#0f172a"/>
+  <text x="205" y="620" font-size="21" font-weight="800" fill="#f8fafc">운영 해석</text>
+  <text x="205" y="650" font-size="17" fill="#cbd5e1">공유 VM 위의 프로세스 격리가 아니라 컨테이너별 VM 경계를 택하므로 보안·메모리·네트워크·디버깅 기준을 Docker Desktop과 다르게 잡아야 한다.</text>
+</g>
+</svg>
