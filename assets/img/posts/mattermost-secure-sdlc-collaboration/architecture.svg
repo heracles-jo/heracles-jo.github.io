@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">Secure SDLC collaboration architecture</title>
+  <desc id="desc">Mattermost-style architecture connecting users, channels, workflows, plugins, PostgreSQL, identity, and audit controls.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eff6ff"/><stop offset="1" stop-color="#ecfeff"/></linearGradient>
+  </defs>
+  <rect width="1100" height="560" rx="28" fill="#f8fafc"/>
+  <text x="56" y="64" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="30" font-weight="800" fill="#0f172a">협업 플랫폼을 SDLC 제어면으로 볼 때의 핵심 구성</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="18" font-weight="700">
+    <rect x="60" y="110" width="220" height="120" rx="20" fill="url(#panel)" stroke="#38bdf8" stroke-width="3"/>
+    <text x="170" y="158" text-anchor="middle" fill="#0f172a">개발·보안·운영 사용자</text>
+    <text x="170" y="190" text-anchor="middle" fill="#475569" font-size="15">Web · Desktop · Mobile</text>
+    <rect x="410" y="95" width="280" height="150" rx="24" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="550" y="150" text-anchor="middle" fill="#1e3a8a">Mattermost Core</text>
+    <text x="550" y="184" text-anchor="middle" fill="#334155" font-size="15">채널 · 플레이북 · 콜 · AI 통합</text>
+    <rect x="820" y="110" width="220" height="120" rx="20" fill="#ecfdf5" stroke="#10b981" stroke-width="3"/>
+    <text x="930" y="158" text-anchor="middle" fill="#064e3b">DevSecOps 도구</text>
+    <text x="930" y="190" text-anchor="middle" fill="#475569" font-size="15">Git · CI/CD · Ticket · SIEM</text>
+    <rect x="110" y="340" width="220" height="120" rx="20" fill="#fff7ed" stroke="#f97316" stroke-width="3"/>
+    <text x="220" y="388" text-anchor="middle" fill="#7c2d12">Identity / SSO</text>
+    <text x="220" y="420" text-anchor="middle" fill="#475569" font-size="15">권한 · 정책 · MFA</text>
+    <rect x="440" y="340" width="220" height="120" rx="20" fill="#f1f5f9" stroke="#64748b" stroke-width="3"/>
+    <text x="550" y="388" text-anchor="middle" fill="#0f172a">PostgreSQL / Files</text>
+    <text x="550" y="420" text-anchor="middle" fill="#475569" font-size="15">대화 · 감사 · 검색 데이터</text>
+    <rect x="770" y="340" width="220" height="120" rx="20" fill="#fef2f2" stroke="#ef4444" stroke-width="3"/>
+    <text x="880" y="388" text-anchor="middle" fill="#7f1d1d">감사·보안 운영</text>
+    <text x="880" y="420" text-anchor="middle" fill="#475569" font-size="15">로그 · 보존 · 취약점 패치</text>
+  </g>
+  <g stroke="#334155" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.72">
+    <path d="M280 170H410"/><path d="M690 170H820"/>
+    <path d="M500 245L265 340"/><path d="M550 245V340"/><path d="M625 245L835 340"/>
+  </g>
+</svg>
