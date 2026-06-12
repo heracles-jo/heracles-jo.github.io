@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">Mattermost adoption decision matrix</title>
+  <desc id="desc">Decision matrix comparing Mattermost, SaaS chat, Zulip, and Rocket.Chat across governance, operations, integrations, and async collaboration.</desc>
+  <rect width="1100" height="560" rx="28" fill="#0f172a"/>
+  <text x="58" y="66" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="31" font-weight="800" fill="#f8fafc">도입 판단 매트릭스: 협업 도구가 아니라 운영 통제면인가?</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="17">
+    <rect x="60" y="110" width="980" height="360" rx="22" fill="#f8fafc"/>
+    <g font-weight="800" fill="#0f172a">
+      <text x="95" y="160">평가 축</text><text x="360" y="160">Mattermost</text><text x="560" y="160">SaaS Chat</text><text x="735" y="160">Zulip</text><text x="895" y="160">Rocket.Chat</text>
+    </g>
+    <g stroke="#cbd5e1" stroke-width="2"><path d="M80 184H1020"/><path d="M320 125V455"/><path d="M520 125V455"/><path d="M700 125V455"/><path d="M850 125V455"/><path d="M80 244H1020"/><path d="M80 304H1020"/><path d="M80 364H1020"/><path d="M80 424H1020"/></g>
+    <g fill="#334155" font-weight="700">
+      <text x="95" y="222">데이터 주권·감사</text><text x="95" y="282">SDLC 통합</text><text x="95" y="342">운영 부담</text><text x="95" y="402">비동기 구조</text><text x="95" y="462">확장·플러그인</text>
+    </g>
+    <g font-weight="800" text-anchor="middle">
+      <text x="420" y="222" fill="#059669">강함</text><text x="610" y="222" fill="#d97706">계약 의존</text><text x="775" y="222" fill="#2563eb">강함</text><text x="945" y="222" fill="#059669">강함</text>
+      <text x="420" y="282" fill="#059669">강함</text><text x="610" y="282" fill="#2563eb">넓음</text><text x="775" y="282" fill="#2563eb">중간</text><text x="945" y="282" fill="#2563eb">넓음</text>
+      <text x="420" y="342" fill="#dc2626">있음</text><text x="610" y="342" fill="#059669">낮음</text><text x="775" y="342" fill="#dc2626">있음</text><text x="945" y="342" fill="#dc2626">있음</text>
+      <text x="420" y="402" fill="#2563eb">중간</text><text x="610" y="402" fill="#2563eb">중간</text><text x="775" y="402" fill="#059669">강함</text><text x="945" y="402" fill="#2563eb">중간</text>
+      <text x="420" y="462" fill="#059669">강함</text><text x="610" y="462" fill="#2563eb">강함</text><text x="775" y="462" fill="#2563eb">중간</text><text x="945" y="462" fill="#059669">강함</text>
+    </g>
+  </g>
+</svg>
