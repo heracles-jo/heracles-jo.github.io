@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Mattermost 운영 아키텍처</title>
+  <desc id="desc">사용자 클라이언트, Mattermost 애플리케이션, PostgreSQL, 파일 스토리지, 외부 자동화와 보안 시스템의 연결</desc>
+  <rect width="1100" height="620" fill="#f8fafc"/>
+  <text x="70" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#0f172a">자체 호스팅 협업 플랫폼의 기본 운영 구조</text>
+  <g font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    <rect x="70" y="145" width="210" height="92" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="175" y="185" fill="#1e3a8a">Web / Desktop / Mobile</text>
+    <text x="175" y="214" fill="#475569" font-size="15">사용자·운영자 접점</text>
+    <rect x="445" y="125" width="240" height="132" rx="22" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+    <text x="565" y="174" fill="#115e59">Mattermost Server</text>
+    <text x="565" y="204" fill="#475569" font-size="15">Go + React, API, Plugins</text>
+    <rect x="820" y="145" width="210" height="92" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="925" y="185" fill="#5b21b6">PostgreSQL</text>
+    <text x="925" y="214" fill="#475569" font-size="15">메시지·메타데이터</text>
+    <rect x="445" y="350" width="240" height="92" rx="18" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="565" y="389" fill="#991b1b">Object Storage</text>
+    <text x="565" y="418" fill="#475569" font-size="15">첨부·파일·백업 정책</text>
+    <rect x="70" y="350" width="210" height="92" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="175" y="389" fill="#92400e">CI/CD · Incident</text>
+    <text x="175" y="418" fill="#475569" font-size="15">웹훅·봇·런북</text>
+    <rect x="820" y="350" width="210" height="92" rx="18" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+    <text x="925" y="389" fill="#334155">Security / IAM</text>
+    <text x="925" y="418" fill="#475569" font-size="15">SSO·감사·권한</text>
+  </g>
+  <g stroke="#334155" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M280 191H445"/>
+    <path d="M685 191H820"/>
+    <path d="M565 257V350"/>
+    <path d="M280 396H445"/>
+    <path d="M685 396H820"/>
+    <path d="M175 350V237" stroke-dasharray="8 10"/>
+    <path d="M925 350V237" stroke-dasharray="8 10"/>
+  </g>
+  <text x="70" y="535" font-family="Arial, sans-serif" font-size="20" fill="#334155">핵심은 메신저 기능 자체가 아니라, 데이터 경계·권한·자동화·감사 로그를 개발 생명주기 안에 묶는 운영 모델이다.</text>
+</svg>
