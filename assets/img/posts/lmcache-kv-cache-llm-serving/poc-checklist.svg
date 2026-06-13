@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">LMCache PoC checklist</title>
+  <desc id="desc">A practical checklist for measuring cache hit rate, TTFT, throughput, memory pressure, storage cost and security controls before adopting LMCache.</desc>
+  <rect width="1100" height="620" rx="28" fill="#0b1120"/>
+  <text x="70" y="78" font-family="Inter, Arial" font-size="36" font-weight="800" fill="#f8fafc">LMCache PoC 체크리스트</text>
+  <text x="70" y="116" font-family="Inter, Arial" font-size="18" fill="#cbd5e1">LLM 서빙 캐시 계층은 성능 최적화이면서 운영 아키텍처 변경이다. 아래 항목을 수치로 검증한다.</text>
+  <g font-family="Inter, Arial" font-size="21" fill="#e2e8f0">
+    <g transform="translate(90 180)">
+      <circle cx="18" cy="18" r="18" fill="#22c55e"/><path d="M9 19 l6 6 l13 -16" stroke="#052e16" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="25">반복 프롬프트·RAG 청크 비율과 캐시 적중률 산정</text>
+    </g>
+    <g transform="translate(90 245)">
+      <circle cx="18" cy="18" r="18" fill="#38bdf8"/><path d="M9 19 l6 6 l13 -16" stroke="#082f49" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="25">TTFT, throughput, GPU utilization을 기준선과 비교</text>
+    </g>
+    <g transform="translate(90 310)">
+      <circle cx="18" cy="18" r="18" fill="#818cf8"/><path d="M9 19 l6 6 l13 -16" stroke="#1e1b4b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="25">GPU·CPU·NVMe·원격 저장소 병목과 비용 모델링</text>
+    </g>
+    <g transform="translate(90 375)">
+      <circle cx="18" cy="18" r="18" fill="#fbbf24"/><path d="M9 19 l6 6 l13 -16" stroke="#451a03" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="25">테넌트 격리, 만료 정책, 민감 컨텍스트 삭제 경로 확인</text>
+    </g>
+    <g transform="translate(90 440)">
+      <circle cx="18" cy="18" r="18" fill="#fb7185"/><path d="M9 19 l6 6 l13 -16" stroke="#4c0519" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="25">vLLM 버전, CUDA wheel, 롤백 전략, 관측성 대시보드 준비</text>
+    </g>
+  </g>
+  <rect x="720" y="175" width="290" height="330" rx="24" fill="#111827" stroke="#334155"/>
+  <text x="865" y="235" text-anchor="middle" font-family="Inter, Arial" font-size="25" font-weight="800" fill="#fff">의사결정 기준</text>
+  <text x="865" y="292" text-anchor="middle" font-family="Inter, Arial" font-size="19" fill="#bae6fd">반복 컨텍스트가 높고</text>
+  <text x="865" y="328" text-anchor="middle" font-family="Inter, Arial" font-size="19" fill="#bae6fd">TTFT가 병목이면 도입 검토</text>
+  <line x1="770" x2="960" y1="365" y2="365" stroke="#475569"/>
+  <text x="865" y="410" text-anchor="middle" font-family="Inter, Arial" font-size="19" fill="#fecdd3">프롬프트가 짧고</text>
+  <text x="865" y="446" text-anchor="middle" font-family="Inter, Arial" font-size="19" fill="#fecdd3">캐시 공유가 위험하면 보류</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">LMCache operational architecture</title>
+  <desc id="desc">Prompt prefill results are converted into KV chunks, offloaded from GPU to CPU, persisted to storage, and loaded back for cache hits.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="620" rx="26" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Inter, Arial" font-size="34" font-weight="800" fill="#0f172a">KV Cache 재사용 흐름</text>
+  <text x="60" y="106" font-family="Inter, Arial" font-size="18" fill="#475569">동일하거나 반복되는 컨텍스트를 매번 prefill하지 않고, 계층형 저장소에서 KV 블록을 재사용한다.</text>
+  <g font-family="Inter, Arial" font-size="18" font-weight="700">
+    <rect x="60" y="180" width="190" height="90" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="155" y="218" text-anchor="middle" fill="#1e3a8a">Prompt / RAG</text>
+    <text x="155" y="246" text-anchor="middle" fill="#1e40af" font-size="15">long context</text>
+
+    <rect x="330" y="180" width="190" height="90" rx="18" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+    <text x="425" y="218" text-anchor="middle" fill="#7f1d1d">Prefill</text>
+    <text x="425" y="246" text-anchor="middle" fill="#991b1b" font-size="15">GPU compute</text>
+
+    <rect x="600" y="180" width="190" height="90" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="695" y="218" text-anchor="middle" fill="#14532d">KV Chunk</text>
+    <text x="695" y="246" text-anchor="middle" fill="#166534" font-size="15">store / index</text>
+
+    <rect x="870" y="180" width="170" height="90" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="955" y="218" text-anchor="middle" fill="#4c1d95">Decode</text>
+    <text x="955" y="246" text-anchor="middle" fill="#5b21b6" font-size="15">TTFT 개선</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M250 225 H330"/>
+    <path d="M520 225 H600"/>
+    <path d="M790 225 H870"/>
+  </g>
+  <g font-family="Inter, Arial" font-size="17">
+    <rect x="160" y="380" width="190" height="80" rx="18" fill="#0f172a"/>
+    <text x="255" y="414" text-anchor="middle" fill="#fff" font-weight="800">GPU Memory</text>
+    <text x="255" y="442" text-anchor="middle" fill="#bfdbfe">active working set</text>
+
+    <rect x="455" y="380" width="190" height="80" rx="18" fill="#1e293b"/>
+    <text x="550" y="414" text-anchor="middle" fill="#fff" font-weight="800">CPU DRAM</text>
+    <text x="550" y="442" text-anchor="middle" fill="#c7d2fe">hot cache / pinned</text>
+
+    <rect x="750" y="380" width="190" height="80" rx="18" fill="#334155"/>
+    <text x="845" y="414" text-anchor="middle" fill="#fff" font-weight="800">Disk / Remote</text>
+    <text x="845" y="442" text-anchor="middle" fill="#ddd6fe">persistent tier</text>
+  </g>
+  <g stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M350 420 H455"/>
+    <path d="M645 420 H750"/>
+    <path d="M845 380 C845 330 695 315 695 270"/>
+    <path d="M550 380 C550 330 695 315 695 270"/>
+  </g>
+  <text x="550" y="540" text-anchor="middle" font-family="Inter, Arial" font-size="19" fill="#334155">핵심 판단: 캐시 적중률, 전송 지연, 저장 비용, 데이터 격리를 함께 측정해야 한다.</text>
+</svg>
