@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">TeslaMate vehicle data observability architecture</title>
+  <desc id="desc">A dashboard-style illustration showing a Tesla vehicle sending telemetry through TeslaMate to Postgres, MQTT, Grafana, and automation systems.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="52%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1020" cy="120" r="180" fill="#22d3ee" opacity="0.12"/>
+  <circle cx="150" cy="540" r="220" fill="#14b8a6" opacity="0.14"/>
+  <g fill="none" stroke="#5eead4" stroke-width="2" opacity="0.25">
+    <path d="M0 485 C190 440 330 525 510 475 S810 390 1200 445"/>
+    <path d="M0 535 C240 470 390 575 610 510 S900 450 1200 505"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="80" y="85" width="1040" height="460" rx="32" fill="#0b1220" opacity="0.88" stroke="#334155"/>
+    <text x="120" y="155" fill="#e5f3ff" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">TeslaMate와 차량 데이터 옵저버빌리티</text>
+    <text x="120" y="196" fill="#99f6e4" font-family="Inter, Arial, sans-serif" font-size="22">GitHub Trending으로 읽는 셀프호스팅 모빌리티 데이터 스택</text>
+    <g transform="translate(125 255)">
+      <rect x="0" y="35" width="190" height="72" rx="36" fill="#111827" stroke="#38bdf8" stroke-width="3"/>
+      <circle cx="45" cy="112" r="20" fill="#020617" stroke="#e2e8f0" stroke-width="5"/>
+      <circle cx="145" cy="112" r="20" fill="#020617" stroke="#e2e8f0" stroke-width="5"/>
+      <path d="M35 35 L70 0 H130 L166 35" fill="none" stroke="#38bdf8" stroke-width="3"/>
+      <text x="44" y="158" fill="#cbd5e1" font-family="Inter, Arial" font-size="18">Vehicle</text>
+    </g>
+    <g stroke="#67e8f9" stroke-width="3" fill="none" stroke-dasharray="9 9">
+      <path d="M330 330 H455"/><path d="M610 330 H735"/><path d="M890 330 H1010"/>
+    </g>
+    <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+      <rect x="455" y="270" width="155" height="120" rx="22" fill="#134e4a" stroke="#2dd4bf"/>
+      <text x="532" y="320" fill="#ecfeff" font-size="24" font-weight="700">TeslaMate</text>
+      <text x="532" y="350" fill="#ccfbf1" font-size="15">Elixir Logger</text>
+      <rect x="735" y="250" width="155" height="70" rx="18" fill="#1e293b" stroke="#94a3b8"/>
+      <text x="812" y="293" fill="#e2e8f0" font-size="22" font-weight="700">Postgres</text>
+      <rect x="735" y="342" width="155" height="70" rx="18" fill="#1e293b" stroke="#94a3b8"/>
+      <text x="812" y="385" fill="#e2e8f0" font-size="22" font-weight="700">MQTT</text>
+      <rect x="1010" y="250" width="70" height="162" rx="20" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="1045" y="330" fill="#fde68a" font-size="20" font-weight="700" transform="rotate(-90 1045 330)">Grafana / Automation</text>
+    </g>
+  </g>
+</svg>
