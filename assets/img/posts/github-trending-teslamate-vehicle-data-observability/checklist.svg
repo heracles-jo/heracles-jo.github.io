@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-labelledby="title desc">
+  <title id="title">TeslaMate adoption checklist</title>
+  <desc id="desc">A practical checklist for evaluating TeslaMate: scope, security, operations, data governance, and success metrics.</desc>
+  <rect width="1100" height="540" rx="30" fill="#0f172a"/>
+  <text x="60" y="70" font-family="Inter, Arial" font-size="34" font-weight="700" fill="#f8fafc">TeslaMate PoC 체크리스트</text>
+  <text x="60" y="108" font-family="Inter, Arial" font-size="18" fill="#cbd5e1">도입 전 2주 동안 확인할 운영·보안·데이터 거버넌스 기준</text>
+  <g font-family="Inter, Arial" font-size="19">
+    <g fill="#14b8a6"><circle cx="82" cy="165" r="14"/><circle cx="82" cy="230" r="14"/><circle cx="82" cy="295" r="14"/><circle cx="82" cy="360" r="14"/><circle cx="82" cy="425" r="14"/></g>
+    <g fill="none" stroke="#0f172a" stroke-width="4"><path d="M74 163 l6 7 l12 -16"/><path d="M74 228 l6 7 l12 -16"/><path d="M74 293 l6 7 l12 -16"/><path d="M74 358 l6 7 l12 -16"/><path d="M74 423 l6 7 l12 -16"/></g>
+    <text x="115" y="171" fill="#ecfeff" font-weight="700">범위 정의</text><text x="285" y="171" fill="#cbd5e1">개인 차량, 소규모 플릿, 에너지 관리 중 어떤 의사결정에 쓸지 먼저 고정한다.</text>
+    <text x="115" y="236" fill="#ecfeff" font-weight="700">보안 경계</text><text x="285" y="236" fill="#cbd5e1">공식 이미지, 토큰 암호화 키, VPN 또는 터널, 관리자 접근 로그를 확인한다.</text>
+    <text x="115" y="301" fill="#ecfeff" font-weight="700">운영 지속성</text><text x="285" y="301" fill="#cbd5e1">항상 켜진 노드, 2GB 이상 메모리, Docker Compose v2, 백업 복구 리허설을 준비한다.</text>
+    <text x="115" y="366" fill="#ecfeff" font-weight="700">데이터 품질</text><text x="285" y="366" fill="#cbd5e1">주행·충전·수면 이벤트의 누락률과 API 제한, 차량 배터리 영향 여부를 측정한다.</text>
+    <text x="115" y="431" fill="#ecfeff" font-weight="700">성공 지표</text><text x="285" y="431" fill="#cbd5e1">충전 비용 절감, 운행 리포트 자동화, 정비 알림, MQTT 자동화의 실제 활용률을 본다.</text>
+  </g>
+</svg>

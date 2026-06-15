@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">TeslaMate data flow</title>
+  <desc id="desc">TeslaMate data flow from Tesla API tokens to Elixir application, Postgres storage, Grafana dashboards, MQTT integration, backups and secure remote access.</desc>
+  <rect width="1100" height="620" rx="28" fill="#f8fafc"/>
+  <text x="50" y="70" font-family="Inter, Arial" font-size="34" font-weight="700" fill="#0f172a">TeslaMate 운영 아키텍처: 수집·저장·시각화·자동화</text>
+  <g font-family="Inter, Arial" font-size="18" text-anchor="middle">
+    <rect x="55" y="180" width="150" height="90" rx="18" fill="#e0f2fe" stroke="#0284c7"/>
+    <text x="130" y="215" font-weight="700" fill="#075985">Tesla API</text><text x="130" y="245" fill="#0369a1">OAuth Token</text>
+    <rect x="300" y="150" width="180" height="150" rx="22" fill="#ccfbf1" stroke="#0f766e"/>
+    <text x="390" y="205" font-weight="700" fill="#115e59">TeslaMate</text><text x="390" y="235" fill="#0f766e">Elixir / Scheduler</text><text x="390" y="265" fill="#0f766e">Sleep-aware polling</text>
+    <rect x="585" y="115" width="170" height="90" rx="18" fill="#ede9fe" stroke="#7c3aed"/>
+    <text x="670" y="153" font-weight="700" fill="#5b21b6">Postgres</text><text x="670" y="181" fill="#6d28d9">Trip & charge logs</text>
+    <rect x="585" y="245" width="170" height="90" rx="18" fill="#fef3c7" stroke="#d97706"/>
+    <text x="670" y="283" font-weight="700" fill="#92400e">MQTT Broker</text><text x="670" y="311" fill="#b45309">Home Assistant</text>
+    <rect x="860" y="115" width="170" height="90" rx="18" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="945" y="153" font-weight="700" fill="#991b1b">Grafana</text><text x="945" y="181" fill="#b91c1c">Dashboards</text>
+    <rect x="860" y="245" width="170" height="90" rx="18" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="945" y="283" font-weight="700" fill="#166534">Automation</text><text x="945" y="311" fill="#15803d">Energy / Fleet</text>
+    <rect x="300" y="415" width="180" height="86" rx="18" fill="#fff7ed" stroke="#ea580c"/>
+    <text x="390" y="450" font-weight="700" fill="#9a3412">Backup</text><text x="390" y="477" fill="#c2410c">pg_dump / restore drill</text>
+    <rect x="585" y="415" width="170" height="86" rx="18" fill="#f1f5f9" stroke="#475569"/>
+    <text x="670" y="450" font-weight="700" fill="#334155">Secure Access</text><text x="670" y="477" fill="#475569">VPN / Tunnel / TLS</text>
+  </g>
+  <g stroke="#334155" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+    <path d="M205 225 H300"/><path d="M480 205 L585 160"/><path d="M480 245 L585 290"/><path d="M755 160 H860"/><path d="M755 290 H860"/><path d="M390 300 V415"/><path d="M480 455 H585"/>
+  </g>
+  <text x="55" y="560" font-family="Inter, Arial" font-size="18" fill="#475569">핵심 판단: 차량 데이터는 개인 위치·생활 패턴을 담는 고위험 텔레메트리다. 수집 가치만큼 네트워크 노출, 토큰 관리, 백업 검증을 설계해야 한다.</text>
+</svg>
