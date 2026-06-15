@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Meshery adoption decision matrix</title>
+  <desc id="desc">Decision matrix comparing Meshery with Argo CD, Backstage, Rancher, and Grafana across design, GitOps, cluster operations, developer portal, and observability dimensions.</desc>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="70" y="70" fill="#0f172a" font-family="Inter, Arial" font-size="34" font-weight="800">도입 판단 매트릭스: Meshery는 무엇을 대체하고 무엇을 보완하는가</text>
+  <g font-family="Inter, Arial" font-size="18">
+    <rect x="70" y="125" width="1060" height="70" fill="#0f172a" rx="12"/>
+    <text x="120" y="168" fill="#f8fafc" font-weight="700">도구</text>
+    <text x="300" y="168" fill="#f8fafc" font-weight="700">강점</text>
+    <text x="610" y="168" fill="#f8fafc" font-weight="700">Meshery와의 관계</text>
+    <text x="920" y="168" fill="#f8fafc" font-weight="700">주의점</text>
+    <g fill="#f8fafc" stroke="#cbd5e1">
+      <rect x="70" y="210" width="1060" height="82"/>
+      <rect x="70" y="292" width="1060" height="82" fill="#f1f5f9"/>
+      <rect x="70" y="374" width="1060" height="82"/>
+      <rect x="70" y="456" width="1060" height="82" fill="#f1f5f9"/>
+      <rect x="70" y="538" width="1060" height="82"/>
+    </g>
+    <g fill="#0f172a">
+      <text x="115" y="258" font-weight="700">Meshery</text>
+      <text x="260" y="244">설계, 검증, 멀티 클러스터</text><text x="260" y="270">운영, 성능 루프</text>
+      <text x="590" y="244">운영 워크벤치와 협업 계층</text><text x="590" y="270">시각화와 정책을 연결</text>
+      <text x="910" y="244">권한·감사·GitOps 경계</text><text x="910" y="270">설계를 명확히 해야 함</text>
+      <text x="115" y="340" font-weight="700">Argo CD</text>
+      <text x="260" y="326">GitOps 배포 동기화</text><text x="260" y="352">드리프트 감지</text>
+      <text x="590" y="326">배포 엔진으로 보완 관계</text><text x="590" y="352">Meshery는 설계·검증 전단</text>
+      <text x="910" y="326">두 도구 모두 쓰면</text><text x="910" y="352">소유권 중복 위험</text>
+      <text x="115" y="422" font-weight="700">Backstage</text>
+      <text x="260" y="408">개발자 포털, 서비스 카탈로그</text><text x="260" y="434">템플릿과 문서</text>
+      <text x="590" y="408">포털과 인프라 설계</text><text x="590" y="434">워크벤치를 나눠 쓰기 좋음</text>
+      <text x="910" y="408">플러그인 운영 부담</text><text x="910" y="434">데이터 모델 정합성</text>
+      <text x="115" y="504" font-weight="700">Rancher</text>
+      <text x="260" y="490">클러스터 관리, 접근 제어</text><text x="260" y="516">운영 콘솔</text>
+      <text x="590" y="490">클러스터 운영과 설계 검증</text><text x="590" y="516">영역을 분리 가능</text>
+      <text x="910" y="490">콘솔 난립, RBAC</text><text x="910" y="516">표준화 필요</text>
+      <text x="115" y="586" font-weight="700">Grafana</text>
+      <text x="260" y="572">대시보드와 관측성</text><text x="260" y="598">운영 지표 분석</text>
+      <text x="590" y="572">Meshery 성능·관측 루프와</text><text x="590" y="598">연동 가능한 보완재</text>
+      <text x="910" y="572">지표만으로는 설계 품질</text><text x="910" y="598">판단이 어려움</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud native lifecycle through Meshery</title>
+  <desc id="desc">A practical lifecycle from catalog design to pull request snapshot, Kubernetes dry run, policy validation, deployment, and performance baseline.</desc>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="80" y="78" fill="#0f172a" font-family="Inter, Arial" font-size="36" font-weight="800">Meshery가 묶는 클라우드 네이티브 운영 루프</text>
+  <text x="80" y="116" fill="#475569" font-family="Inter, Arial" font-size="20">선언형 YAML을 화면으로 예쁘게 보여주는 것이 아니라, 설계·검증·배포·측정을 하나의 피드백 루프로 연결한다.</text>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <g font-family="Inter, Arial" font-size="20" text-anchor="middle">
+    <rect x="70" y="220" width="190" height="110" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="165" y="265" fill="#1e3a8a" font-weight="700">Catalog / Design</text>
+    <text x="165" y="295" fill="#1d4ed8" font-size="16">검증된 패턴</text>
+    <path d="M260 275 H370" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="380" y="220" width="190" height="110" rx="18" fill="#ccfbf1" stroke="#0f766e" stroke-width="3"/>
+    <text x="475" y="265" fill="#134e4a" font-weight="700">PR Snapshot</text>
+    <text x="475" y="295" fill="#0f766e" font-size="16">변경 영향 확인</text>
+    <path d="M570 275 H680" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="690" y="220" width="190" height="110" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+    <text x="785" y="265" fill="#92400e" font-weight="700">Dry-run</text>
+    <text x="785" y="295" fill="#b45309" font-size="16">API server 기준</text>
+    <path d="M880 275 H990" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="1000" y="220" width="130" height="110" rx="18" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="1065" y="265" fill="#991b1b" font-weight="700">Policy</text>
+    <text x="1065" y="295" fill="#b91c1c" font-size="16">Best practice</text>
+    <path d="M1065 330 V445 H890" stroke="#334155" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+    <rect x="690" y="430" width="200" height="120" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="790" y="478" fill="#4c1d95" font-weight="700">Deploy / Operate</text>
+    <text x="790" y="508" fill="#6d28d9" font-size="16">멀티 클러스터</text>
+    <path d="M690 490 H575" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="370" y="430" width="205" height="120" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <text x="472" y="478" fill="#075985" font-weight="700">Observe</text>
+    <text x="472" y="508" fill="#0369a1" font-size="16">Prometheus / Grafana</text>
+    <path d="M370 490 H260 V330" stroke="#334155" stroke-width="4" marker-end="url(#arrow)" fill="none"/>
+  </g>
+  <rect x="80" y="610" width="1040" height="58" rx="14" fill="#0f172a"/>
+  <text x="600" y="646" text-anchor="middle" fill="#e2e8f0" font-family="Inter, Arial" font-size="20">핵심 판단: 플랫폼 팀이 표준 경로를 만들고, 애플리케이션 팀은 안전한 셀프서비스 경로로 배포한다.</text>
+</svg>
