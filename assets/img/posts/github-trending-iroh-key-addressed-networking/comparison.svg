@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Networking alternatives comparison</title>
+  <desc id="desc">Comparison matrix between Iroh, libp2p, Tailscale, and Cloudflare Tunnel for application connectivity decisions.</desc>
+  <rect width="1200" height="720" rx="26" fill="#0f172a"/>
+  <text x="60" y="72" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800" fill="#e2e8f0">도입 판단 매트릭스: Iroh는 어디에 놓이는가</text>
+  <g font-family="Inter,Arial,sans-serif" font-size="20">
+    <rect x="60" y="120" width="1080" height="88" rx="16" fill="#1e293b"/>
+    <text x="90" y="172" font-weight="800" fill="#93c5fd">도구</text>
+    <text x="280" y="172" font-weight="800" fill="#93c5fd">주요 추상화</text>
+    <text x="555" y="172" font-weight="800" fill="#93c5fd">강점</text>
+    <text x="825" y="172" font-weight="800" fill="#93c5fd">주의할 점</text>
+
+    <g fill="#e2e8f0">
+      <rect x="60" y="220" width="1080" height="96" rx="16" fill="#172554" opacity="0.88"/>
+      <text x="90" y="258" font-weight="800">Iroh</text>
+      <text x="280" y="252">공개키 다이얼, QUIC, relay</text>
+      <text x="555" y="252">앱 내장 P2P, 모바일·NAT 친화</text>
+      <text x="825" y="252">관측성·relay 비용·Rust 중심</text>
+      <text x="280" y="284" fill="#bfdbfe">콘텐츠 주소·gossip 프로토콜 합성</text>
+
+      <rect x="60" y="330" width="1080" height="96" rx="16" fill="#064e3b" opacity="0.85"/>
+      <text x="90" y="368" font-weight="800">libp2p</text>
+      <text x="280" y="362">모듈형 P2P 네트워크 스택</text>
+      <text x="555" y="362">성숙한 생태계, 멀티 언어</text>
+      <text x="825" y="362">설계 자유도만큼 복잡도 증가</text>
+      <text x="280" y="394" fill="#bbf7d0">블록체인·분산 시스템 경험 축적</text>
+
+      <rect x="60" y="440" width="1080" height="96" rx="16" fill="#581c87" opacity="0.86"/>
+      <text x="90" y="478" font-weight="800">Tailscale</text>
+      <text x="280" y="472">WireGuard 기반 사설 오버레이</text>
+      <text x="555" y="472">운영 편의, ACL, 장비 접속</text>
+      <text x="825" y="472">앱 프로토콜 내장보다는 네트워크층</text>
+      <text x="280" y="504" fill="#ddd6fe">조직 내부망·관리형 접속에 적합</text>
+
+      <rect x="60" y="550" width="1080" height="96" rx="16" fill="#7c2d12" opacity="0.86"/>
+      <text x="90" y="588" font-weight="800">cloudflared</text>
+      <text x="280" y="582">Cloudflare Tunnel</text>
+      <text x="555" y="582">공개 노출 없는 서비스 프록시</text>
+      <text x="825" y="582">벤더 종속·엣지 정책 의존</text>
+      <text x="280" y="614" fill="#fed7aa">웹/API 서비스 게시와 Zero Trust에 강점</text>
+    </g>
+  </g>
+</svg>
