@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Kage offline web archive cover</title>
+  <desc id="desc">A headless browser snapshots a website, removes JavaScript, and packages static pages for offline use.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="100" r="160" fill="#38bdf8" opacity="0.18"/>
+  <circle cx="160" cy="560" r="220" fill="#14b8a6" opacity="0.15"/>
+  <g filter="url(#shadow)">
+    <rect x="95" y="110" width="470" height="330" rx="26" fill="#f8fafc" opacity="0.97"/>
+    <rect x="95" y="110" width="470" height="58" rx="26" fill="#e2e8f0"/>
+    <circle cx="135" cy="139" r="9" fill="#ef4444"/><circle cx="166" cy="139" r="9" fill="#f59e0b"/><circle cx="197" cy="139" r="9" fill="#22c55e"/>
+    <rect x="135" y="205" width="340" height="22" rx="11" fill="#334155" opacity="0.9"/>
+    <rect x="135" y="252" width="280" height="16" rx="8" fill="#64748b"/>
+    <rect x="135" y="286" width="355" height="16" rx="8" fill="#94a3b8"/>
+    <rect x="135" y="320" width="230" height="16" rx="8" fill="#94a3b8"/>
+    <rect x="135" y="370" width="140" height="36" rx="18" fill="#0f766e"/>
+    <text x="205" y="394" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" fill="#f8fafc">Live DOM</text>
+  </g>
+  <path d="M590 278 C650 278 690 278 750 278" stroke="#bfdbfe" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M735 250 L780 278 L735 306" fill="none" stroke="#bfdbfe" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <rect x="805" y="120" width="300" height="330" rx="28" fill="#ecfeff"/>
+    <rect x="842" y="164" width="226" height="44" rx="12" fill="#0f172a"/>
+    <text x="955" y="193" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="22" fill="#67e8f9">ZIM / HTML</text>
+    <rect x="842" y="242" width="226" height="18" rx="9" fill="#0f766e" opacity="0.8"/>
+    <rect x="842" y="282" width="190" height="18" rx="9" fill="#0f766e" opacity="0.58"/>
+    <rect x="842" y="322" width="226" height="18" rx="9" fill="#0f766e" opacity="0.36"/>
+    <g transform="translate(922 372)">
+      <circle r="34" fill="#dc2626"/>
+      <path d="M-17 -17 L17 17 M17 -17 L-17 17" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+    </g>
+  </g>
+  <text x="95" y="520" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="800" fill="#ffffff">GitHub Trending: kage</text>
+  <text x="95" y="570" font-family="Inter,Arial,sans-serif" font-size="27" fill="#c7d2fe">JavaScript를 제거한 오프라인 웹 아카이브의 실무적 의미</text>
+</svg>
