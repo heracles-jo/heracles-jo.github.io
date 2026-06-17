@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Iroh application networking architecture</title>
+  <desc id="desc">An application connects to a peer by public key through discovery, direct hole punching, QUIC streams, and relay fallback.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800" fill="#0f172a">Iroh 연결 흐름: 주소가 아니라 공개키를 다이얼한다</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="70" y="150" width="230" height="130" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="100" y="198" font-size="25" font-weight="800" fill="#1e3a8a">앱 / 서비스 A</text>
+    <text x="100" y="232" font-size="18" fill="#1e40af">EndpointId 보유</text>
+    <text x="100" y="258" font-size="18" fill="#1e40af">ALPN별 프로토콜 라우팅</text>
+
+    <rect x="480" y="130" width="250" height="160" rx="20" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+    <text x="515" y="176" font-size="25" font-weight="800" fill="#064e3b">Discovery</text>
+    <text x="515" y="212" font-size="18" fill="#065f46">DNS / Pkarr 주소 조회</text>
+    <text x="515" y="238" font-size="18" fill="#065f46">후보 경로와 relay URL</text>
+    <text x="515" y="264" font-size="18" fill="#065f46">네트워크 리포트</text>
+
+    <rect x="900" y="150" width="230" height="130" rx="20" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+    <text x="930" y="198" font-size="25" font-weight="800" fill="#78350f">피어 B</text>
+    <text x="930" y="232" font-size="18" fill="#92400e">공개키로 식별</text>
+    <text x="930" y="258" font-size="18" fill="#92400e">이동·NAT 변경 허용</text>
+
+    <rect x="230" y="440" width="310" height="130" rx="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="262" y="490" font-size="25" font-weight="800" fill="#4c1d95">직접 연결 우선</text>
+    <text x="262" y="524" font-size="18" fill="#5b21b6">hole punching + QUIC</text>
+    <text x="262" y="550" font-size="18" fill="#5b21b6">암호화, 스트림, datagram</text>
+
+    <rect x="660" y="440" width="310" height="130" rx="20" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="692" y="490" font-size="25" font-weight="800" fill="#7f1d1d">Relay fallback</text>
+    <text x="692" y="524" font-size="18" fill="#991b1b">직접 경로 실패 시 중계</text>
+    <text x="692" y="550" font-size="18" fill="#991b1b">자체 relay 운영 가능</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="5" fill="none" marker-end="url(#arrow)">
+    <path d="M300 210 C370 190 420 184 480 190"/>
+    <path d="M730 205 C790 202 842 206 900 216"/>
+    <path d="M205 282 C230 350 280 395 340 440"/>
+    <path d="M995 282 C956 352 905 402 850 440"/>
+    <path d="M540 508 C580 508 620 508 660 508" stroke-dasharray="12 10"/>
+  </g>
+  <text x="75" y="650" font-family="Inter,Arial,sans-serif" font-size="20" fill="#475569">핵심 판단: Iroh는 네트워크 장비를 대체하는 VPN이라기보다, 앱이 자체적으로 피어 발견·연결 유지·프로토콜 합성을 처리하도록 돕는 라이브러리 계층이다.</text>
+</svg>
