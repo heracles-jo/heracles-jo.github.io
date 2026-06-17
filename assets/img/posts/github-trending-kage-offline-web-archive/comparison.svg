@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Offline archiving tool comparison</title>
+  <desc id="desc">Comparison matrix for kage, ArchiveBox, Browsertrix, and Kiwix by operational intent.</desc>
+  <rect width="1200" height="560" fill="#0f172a"/>
+  <style>.h{font-family:Inter,Arial,sans-serif;fill:#fff;font-weight:800}.t{font-family:Inter,Arial,sans-serif;fill:#e2e8f0}.cell{fill:#1e293b;stroke:#334155}.accent{fill:#0f766e}.warn{fill:#92400e}.blue{fill:#1d4ed8}</style>
+  <text x="70" y="70" class="h" font-size="34">웹 보존 도구 선택은 ‘무엇을 남길 것인가’의 문제다</text>
+  <g transform="translate(70 120)">
+    <rect class="cell" x="0" y="0" width="250" height="72"/><rect class="cell" x="250" y="0" width="260" height="72"/><rect class="cell" x="510" y="0" width="260" height="72"/><rect class="cell" x="770" y="0" width="260" height="72"/>
+    <text x="28" y="45" class="h" font-size="24">도구</text><text x="280" y="45" class="h" font-size="24">강점</text><text x="540" y="45" class="h" font-size="24">주의점</text><text x="800" y="45" class="h" font-size="24">적합한 팀</text>
+    <g transform="translate(0 72)"><rect class="accent" width="250" height="86"/><rect class="cell" x="250" width="260" height="86"/><rect class="cell" x="510" width="260" height="86"/><rect class="cell" x="770" width="260" height="86"/>
+      <text x="28" y="52" class="h" font-size="25">kage</text><text x="280" y="36" class="t" font-size="18">렌더 후 JS 제거</text><text x="280" y="62" class="t" font-size="18">가벼운 HTML/ZIM</text><text x="540" y="36" class="t" font-size="18">상호작용 손실</text><text x="540" y="62" class="t" font-size="18">크롤 범위 설계 필요</text><text x="800" y="36" class="t" font-size="18">문서·교육·레퍼런스</text></g>
+    <g transform="translate(0 158)"><rect class="blue" width="250" height="86"/><rect class="cell" x="250" width="260" height="86"/><rect class="cell" x="510" width="260" height="86"/><rect class="cell" x="770" width="260" height="86"/>
+      <text x="28" y="52" class="h" font-size="25">ArchiveBox</text><text x="280" y="36" class="t" font-size="18">다양한 저장 포맷</text><text x="280" y="62" class="t" font-size="18">셀프호스팅 관리</text><text x="540" y="36" class="t" font-size="18">운영 컴포넌트 증가</text><text x="800" y="36" class="t" font-size="18">조직형 아카이브</text></g>
+    <g transform="translate(0 244)"><rect class="warn" width="250" height="86"/><rect class="cell" x="250" width="260" height="86"/><rect class="cell" x="510" width="260" height="86"/><rect class="cell" x="770" width="260" height="86"/>
+      <text x="28" y="52" class="h" font-size="25">Browsertrix</text><text x="280" y="36" class="t" font-size="18">고충실도 WACZ</text><text x="540" y="36" class="t" font-size="18">브라우저 기반 자원 비용</text><text x="800" y="36" class="t" font-size="18">웹 아카이빙 전문 조직</text></g>
+    <g transform="translate(0 330)"><rect fill="#334155" width="250" height="86"/><rect class="cell" x="250" width="260" height="86"/><rect class="cell" x="510" width="260" height="86"/><rect class="cell" x="770" width="260" height="86"/>
+      <text x="28" y="52" class="h" font-size="25">Kiwix/ZIM</text><text x="280" y="36" class="t" font-size="18">배포·검색 친화</text><text x="540" y="36" class="t" font-size="18">생성 파이프라인 별도</text><text x="800" y="36" class="t" font-size="18">오프라인 지식 배포</text></g>
+  </g>
+</svg>
