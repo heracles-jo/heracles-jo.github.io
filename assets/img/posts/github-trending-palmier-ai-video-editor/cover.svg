@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI native video editor workflow</title>
+  <desc id="desc">A timeline-based video editor connected to an AI agent and generative video models through an MCP interface.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101827"/>
+      <stop offset="0.48" stop-color="#172554"/>
+      <stop offset="1" stop-color="#581c87"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1030" cy="90" r="180" fill="#38bdf8" opacity="0.12"/>
+  <circle cx="180" cy="540" r="220" fill="#f472b6" opacity="0.12"/>
+  <g filter="url(#shadow)">
+    <rect x="96" y="112" width="1008" height="408" rx="34" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+    <rect x="126" y="150" width="330" height="220" rx="20" fill="#111827" stroke="#475569"/>
+    <rect x="150" y="174" width="282" height="158" rx="14" fill="#1e293b"/>
+    <path d="M240 300 L292 236 L336 286 L370 242 L420 318 H150 V174 H432 V332 H150 Z" fill="url(#accent)" opacity="0.82"/>
+    <circle cx="214" cy="218" r="24" fill="#fde68a" opacity="0.9"/>
+    <text x="150" y="356" fill="#cbd5e1" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="18">Generative clip preview</text>
+    <rect x="500" y="150" width="560" height="84" rx="20" fill="#111827" stroke="#475569"/>
+    <text x="530" y="184" fill="#e2e8f0" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="700">Palmier Pro + MCP Agent</text>
+    <text x="530" y="214" fill="#94a3b8" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="17">Timeline edits, prompt requests, export tasks</text>
+    <g transform="translate(500 270)">
+      <rect width="560" height="160" rx="18" fill="#020617" stroke="#334155"/>
+      <line x1="32" y1="36" x2="528" y2="36" stroke="#334155"/>
+      <line x1="32" y1="82" x2="528" y2="82" stroke="#334155"/>
+      <line x1="32" y1="128" x2="528" y2="128" stroke="#334155"/>
+      <rect x="46" y="18" width="160" height="36" rx="9" fill="#38bdf8"/>
+      <rect x="226" y="18" width="108" height="36" rx="9" fill="#818cf8"/>
+      <rect x="354" y="18" width="134" height="36" rx="9" fill="#f472b6"/>
+      <rect x="78" y="64" width="220" height="36" rx="9" fill="#22c55e" opacity="0.86"/>
+      <rect x="320" y="64" width="170" height="36" rx="9" fill="#f59e0b" opacity="0.9"/>
+      <rect x="126" y="110" width="300" height="36" rx="9" fill="#a78bfa" opacity="0.86"/>
+      <line x1="256" y1="8" x2="256" y2="152" stroke="#f8fafc" stroke-width="3"/>
+      <circle cx="256" cy="8" r="7" fill="#f8fafc"/>
+    </g>
+  </g>
+  <text x="96" y="580" fill="#e0f2fe" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="800">GitHub Trending Analysis</text>
+  <text x="510" y="580" fill="#ffffff" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="30" font-weight="800">AI 네이티브 영상 편집의 실무화</text>
+</svg>
