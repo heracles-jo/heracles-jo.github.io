@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">AI video tool comparison</title>
+  <desc id="desc">Comparison matrix of Palmier Pro, OpenMontage, LTX-2, and incumbent nonlinear editing tools.</desc>
+  <rect width="1100" height="650" rx="28" fill="#ffffff"/>
+  <text x="60" y="76" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="800" fill="#111827">AI 영상 제작 도구 선택 기준</text>
+  <text x="60" y="112" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="18" fill="#4b5563">모델 성능만이 아니라 편집 공간, 자동화 인터페이스, 운영 통제까지 비교해야 한다.</text>
+  <g font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="16">
+    <rect x="60" y="155" width="980" height="430" rx="22" fill="#f8fafc" stroke="#e5e7eb"/>
+    <rect x="60" y="155" width="980" height="64" rx="22" fill="#1e293b"/>
+    <text x="90" y="195" font-weight="800" fill="#f8fafc">도구</text>
+    <text x="275" y="195" font-weight="800" fill="#f8fafc">중심 인터페이스</text>
+    <text x="535" y="195" font-weight="800" fill="#f8fafc">강점</text>
+    <text x="805" y="195" font-weight="800" fill="#f8fafc">주의할 점</text>
+    <line x1="235" y1="155" x2="235" y2="585" stroke="#e5e7eb"/>
+    <line x1="495" y1="155" x2="495" y2="585" stroke="#e5e7eb"/>
+    <line x1="760" y1="155" x2="760" y2="585" stroke="#e5e7eb"/>
+    <line x1="60" y1="300" x2="1040" y2="300" stroke="#e5e7eb"/>
+    <line x1="60" y1="390" x2="1040" y2="390" stroke="#e5e7eb"/>
+    <line x1="60" y1="480" x2="1040" y2="480" stroke="#e5e7eb"/>
+
+    <text x="90" y="260" font-size="22" font-weight="800" fill="#2563eb">Palmier Pro</text>
+    <text x="275" y="250" fill="#374151">macOS 타임라인</text><text x="275" y="278" fill="#374151">MCP 에이전트</text>
+    <text x="535" y="250" fill="#374151">사람이 수정하는</text><text x="535" y="278" fill="#374151">편집 공간에 AI 통합</text>
+    <text x="805" y="250" fill="#374151">플랫폼 제한</text><text x="805" y="278" fill="#374151">상용 생성 백엔드</text>
+
+    <text x="90" y="350" font-size="22" font-weight="800" fill="#c2410c">OpenMontage</text>
+    <text x="275" y="340" fill="#374151">에이전트 파이프라인</text><text x="275" y="368" fill="#374151">제공자·스킬 조합</text>
+    <text x="535" y="340" fill="#374151">자동화 범위와</text><text x="535" y="368" fill="#374151">워크플로 실험</text>
+    <text x="805" y="340" fill="#374151">복잡도와</text><text x="805" y="368" fill="#374151">유지보수 부담</text>
+
+    <text x="90" y="440" font-size="22" font-weight="800" fill="#be185d">LTX-2</text>
+    <text x="275" y="430" fill="#374151">Python inference</text><text x="275" y="458" fill="#374151">LoRA training</text>
+    <text x="535" y="430" fill="#374151">생성 모델 실험과</text><text x="535" y="458" fill="#374151">fine-tuning 기반</text>
+    <text x="805" y="430" fill="#374151">편집·승인·배포는</text><text x="805" y="458" fill="#374151">별도 제품화 필요</text>
+
+    <text x="90" y="530" font-size="22" font-weight="800" fill="#047857">기존 NLE</text>
+    <text x="275" y="520" fill="#374151">성숙한 GUI</text><text x="275" y="548" fill="#374151">플러그인 생태계</text>
+    <text x="535" y="520" fill="#374151">호환성·안정성</text><text x="535" y="548" fill="#374151">전문 제작 표준</text>
+    <text x="805" y="520" fill="#374151">에이전트 자동화</text><text x="805" y="548" fill="#374151">유연성은 제한적</text>
+  </g>
+  <text x="60" y="620" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="18" fill="#64748b">결론: 도구 선택은 “완전 자동 생성”보다 반복 수정, 권리 검토, 프로젝트 호환성, 비용 통제를 기준으로 해야 한다.</text>
+</svg>
