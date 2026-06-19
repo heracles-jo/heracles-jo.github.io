@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 네이티브 비디오 편집 워크플로</title>
+  <desc id="desc">타임라인 편집기와 AI 에이전트, 생성형 비디오 API가 하나의 제작 파이프라인으로 연결되는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101828"/>
+      <stop offset="0.55" stop-color="#1d2b53"/>
+      <stop offset="1" stop-color="#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="170" fill="#8b5cf6" opacity="0.18"/>
+  <circle cx="150" cy="520" r="190" fill="#06b6d4" opacity="0.16"/>
+  <g filter="url(#shadow)">
+    <rect x="90" y="92" width="1020" height="410" rx="28" fill="#0b1220" stroke="#7dd3fc" stroke-opacity="0.35"/>
+    <rect x="130" y="132" width="460" height="230" rx="20" fill="#111827" stroke="#334155"/>
+    <polygon points="305,190 305,306 405,248" fill="url(#accent)" opacity="0.95"/>
+    <rect x="640" y="132" width="420" height="58" rx="16" fill="#172554"/>
+    <text x="665" y="169" fill="#dbeafe" font-family="Arial, sans-serif" font-size="24" font-weight="700">AI Agent plans scenes</text>
+    <rect x="640" y="210" width="360" height="44" rx="12" fill="#312e81"/>
+    <text x="665" y="239" fill="#e0e7ff" font-family="Arial, sans-serif" font-size="18">MCP controls timeline</text>
+    <rect x="640" y="272" width="390" height="44" rx="12" fill="#164e63"/>
+    <text x="665" y="301" fill="#cffafe" font-family="Arial, sans-serif" font-size="18">Generate · edit · render</text>
+    <rect x="130" y="390" width="930" height="72" rx="16" fill="#020617" stroke="#475569"/>
+    <rect x="156" y="412" width="170" height="28" rx="8" fill="#38bdf8"/>
+    <rect x="342" y="412" width="132" height="28" rx="8" fill="#a78bfa"/>
+    <rect x="490" y="412" width="230" height="28" rx="8" fill="#f472b6"/>
+    <rect x="736" y="412" width="290" height="28" rx="8" fill="#22c55e"/>
+  </g>
+  <text x="90" y="560" fill="#ffffff" font-family="Arial, sans-serif" font-size="44" font-weight="800">AI-native Video Production Stack</text>
+  <text x="92" y="596" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="22">Palmier Pro · OpenMontage · timeline automation · governance</text>
+</svg>
