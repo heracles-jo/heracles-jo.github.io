@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">AI 비디오 도입 체크리스트</title><desc id="desc">콘텐츠 팀이 AI 비디오 편집 도구를 도입하기 전에 확인해야 할 리스크와 운영 항목</desc>
+<rect width="1100" height="560" fill="#111827"/>
+<text x="55" y="62" fill="#fff" font-size="34" font-family="Arial" font-weight="800">PoC 전에 확인할 6가지 운영 기준</text>
+<g font-family="Arial" font-size="22" fill="#e5e7eb">
+<g transform="translate(70,115)"><rect width="450" height="75" rx="14" fill="#1f2937"/><circle cx="40" cy="38" r="20" fill="#22c55e"/><text x="34" y="46">1</text><text x="80" y="46">저작권·라이선스 출처 추적</text></g>
+<g transform="translate(580,115)"><rect width="450" height="75" rx="14" fill="#1f2937"/><circle cx="40" cy="38" r="20" fill="#38bdf8"/><text x="34" y="46">2</text><text x="80" y="46">타임라인 변경 이력과 승인권한</text></g>
+<g transform="translate(70,220)"><rect width="450" height="75" rx="14" fill="#1f2937"/><circle cx="40" cy="38" r="20" fill="#a78bfa"/><text x="34" y="46">3</text><text x="80" y="46">모델 비용·렌더링 시간 예산</text></g>
+<g transform="translate(580,220)"><rect width="450" height="75" rx="14" fill="#1f2937"/><circle cx="40" cy="38" r="20" fill="#f472b6"/><text x="34" y="46">4</text><text x="80" y="46">브랜드 톤·금칙어·사실 검증</text></g>
+<g transform="translate(70,325)"><rect width="450" height="75" rx="14" fill="#1f2937"/><circle cx="40" cy="38" r="20" fill="#fb923c"/><text x="34" y="46">5</text><text x="80" y="46">로컬 데이터와 외부 API 경계</text></g>
+<g transform="translate(580,325)"><rect width="450" height="75" rx="14" fill="#1f2937"/><circle cx="40" cy="38" r="20" fill="#facc15"/><text x="34" y="46">6</text><text x="80" y="46">편집자 개입 지점과 롤백</text></g>
+<text x="70" y="495" fill="#c7d2fe" font-size="24">도입 판단은 데모 품질보다 반복 생산성, 거버넌스, 검수 비용으로 내려야 한다.</text>
+</g></svg>
