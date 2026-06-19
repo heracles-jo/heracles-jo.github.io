@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">AI 비디오 편집 아키텍처</title><desc id="desc">프롬프트, 에이전트, MCP, 타임라인 편집기, 렌더러, 자산 저장소가 연결되는 구조도</desc>
+<rect width="1100" height="560" fill="#0f172a"/>
+<text x="50" y="60" fill="#f8fafc" font-size="34" font-family="Arial" font-weight="800">AI 비디오 제작 스택의 제어 흐름</text>
+<g font-family="Arial" font-size="18" fill="#e2e8f0">
+<rect x="60" y="110" width="210" height="90" rx="16" fill="#1e293b" stroke="#38bdf8"/><text x="88" y="145">Brief / Prompt</text><text x="88" y="174" fill="#93c5fd">목표·톤·길이</text>
+<rect x="330" y="110" width="210" height="90" rx="16" fill="#1e1b4b" stroke="#a78bfa"/><text x="360" y="145">Planning Agent</text><text x="360" y="174" fill="#c4b5fd">장면·스크립트·도구</text>
+<rect x="600" y="110" width="210" height="90" rx="16" fill="#164e63" stroke="#22d3ee"/><text x="635" y="145">MCP / API</text><text x="635" y="174" fill="#a5f3fc">타임라인 명령</text>
+<rect x="860" y="110" width="190" height="90" rx="16" fill="#431407" stroke="#fb923c"/><text x="890" y="145">Editor UI</text><text x="890" y="174" fill="#fed7aa">사람 검수</text>
+<path d="M270 155 H330" stroke="#64748b" stroke-width="4" marker-end="url(#a)"/><path d="M540 155 H600" stroke="#64748b" stroke-width="4"/><path d="M810 155 H860" stroke="#64748b" stroke-width="4"/>
+<rect x="95" y="290" width="220" height="100" rx="16" fill="#052e16" stroke="#22c55e"/><text x="126" y="327">Asset Sources</text><text x="126" y="356" fill="#bbf7d0">stock · archive · model</text>
+<rect x="440" y="290" width="220" height="100" rx="16" fill="#4a044e" stroke="#f472b6"/><text x="475" y="327">Timeline Graph</text><text x="475" y="356" fill="#fbcfe8">clips · captions · audio</text>
+<rect x="785" y="290" width="220" height="100" rx="16" fill="#172554" stroke="#60a5fa"/><text x="825" y="327">Render / Review</text><text x="825" y="356" fill="#bfdbfe">Remotion · AVFoundation</text>
+<path d="M315 340 H440" stroke="#64748b" stroke-width="4"/><path d="M660 340 H785" stroke="#64748b" stroke-width="4"/>
+<text x="80" y="485" fill="#cbd5e1" font-size="22">핵심은 모델이 영상을 ‘마법처럼’ 만드는 것이 아니라, 계획·자산·편집·검수를 반복 가능한 워크플로로 묶는 것이다.</text>
+</g></svg>
