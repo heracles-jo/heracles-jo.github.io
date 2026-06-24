@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="ok" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="warn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="80" y="95" fill="#e2e8f0" font-size="44" font-weight="800" font-family="Inter, Pretendard, Arial, sans-serif">adoption checklist</text>
+  <rect x="80" y="140" width="1440" height="710" rx="30" fill="#0f172a" stroke="#334155"/>
+  <g font-family="Inter, Pretendard, Arial, sans-serif">
+    <g transform="translate(120 205)">
+      <rect x="0" y="0" width="1280" height="108" rx="18" fill="#111827" stroke="#334155"/>
+      <circle cx="42" cy="54" r="18" fill="url(#ok)"/>
+      <text x="82" y="44" fill="#e5e7eb" font-size="28" font-weight="700">반복 구조 질문이 많은가?</text>
+      <text x="82" y="78" fill="#94a3b8" font-size="20">함수 정의, 호출 경로, 영향 범위, route 연결을 자주 묻는 팀에 적합하다.</text>
+    </g>
+    <g transform="translate(120 335)">
+      <rect x="0" y="0" width="1280" height="108" rx="18" fill="#111827" stroke="#334155"/>
+      <circle cx="42" cy="54" r="18" fill="url(#ok)"/>
+      <text x="82" y="44" fill="#e5e7eb" font-size="28" font-weight="700">로컬 우선과 설치 권한을 받아들일 수 있는가?</text>
+      <text x="82" y="78" fill="#94a3b8" font-size="20">단일 바이너리와 자동 설정은 편하지만, 에이전트 설정 변경에 대한 감사가 필요하다.</text>
+    </g>
+    <g transform="translate(120 465)">
+      <rect x="0" y="0" width="1280" height="108" rx="18" fill="#111827" stroke="#334155"/>
+      <circle cx="42" cy="54" r="18" fill="url(#warn)"/>
+      <text x="82" y="44" fill="#e5e7eb" font-size="28" font-weight="700">그래프 신선도를 운영할 수 있는가?</text>
+      <text x="82" y="78" fill="#94a3b8" font-size="20">브랜치별 namespace, incremental indexing, CI 갱신 흐름이 없으면 stale graph가 된다.</text>
+    </g>
+    <g transform="translate(120 595)">
+      <rect x="0" y="0" width="1280" height="108" rx="18" fill="#111827" stroke="#334155"/>
+      <circle cx="42" cy="54" r="18" fill="url(#warn)"/>
+      <text x="82" y="44" fill="#e5e7eb" font-size="28" font-weight="700">정적 그래프의 한계를 알고 있는가?</text>
+      <text x="82" y="78" fill="#94a3b8" font-size="20">dynamic import, reflection, runtime config, feature flag는 별도 관찰이 필요하다.</text>
+    </g>
+    <g transform="translate(120 725)">
+      <rect x="0" y="0" width="1280" height="108" rx="18" fill="#111827" stroke="#334155"/>
+      <circle cx="42" cy="54" r="18" fill="url(#warn)"/>
+      <text x="82" y="44" fill="#e5e7eb" font-size="28" font-weight="700">보안과 데이터 경계를 정의했는가?</text>
+      <text x="82" y="78" fill="#94a3b8" font-size="20">namespace, 권한, 로그 보관, 삭제 정책, 감사 경로를 먼저 정해야 한다.</text>
+    </g>
+  </g>
+</svg>
