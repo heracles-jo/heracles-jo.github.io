@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">SimpleX pairwise queue architecture</title><desc id="desc">Two users communicate through separate unidirectional queues and routers without a reusable account identifier.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#e6f7fb"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker></defs>
+<rect width="1100" height="560" rx="28" fill="url(#g)"/>
+<text x="48" y="62" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800" fill="#0f172a">SimpleX의 핵심: 계정 ID가 아니라 대화별 리소스 주소</text>
+<g font-family="Inter,Arial,sans-serif">
+<rect x="70" y="160" width="180" height="125" rx="22" fill="#dbeafe" stroke="#60a5fa"/><text x="160" y="214" text-anchor="middle" font-size="23" font-weight="800" fill="#1e3a8a">Alice 앱</text><text x="160" y="248" text-anchor="middle" font-size="15" fill="#334155">로컬 프로필·키</text>
+<rect x="850" y="160" width="180" height="125" rx="22" fill="#dcfce7" stroke="#22c55e"/><text x="940" y="214" text-anchor="middle" font-size="23" font-weight="800" fill="#14532d">Bob 앱</text><text x="940" y="248" text-anchor="middle" font-size="15" fill="#334155">로컬 프로필·키</text>
+<rect x="390" y="105" width="285" height="110" rx="22" fill="#fff7ed" stroke="#f97316"/><text x="532" y="153" text-anchor="middle" font-size="21" font-weight="800" fill="#7c2d12">SMP Router 1</text><text x="532" y="184" text-anchor="middle" font-size="15" fill="#334155">Alice→Bob 단방향 큐</text>
+<rect x="390" y="310" width="285" height="110" rx="22" fill="#f5f3ff" stroke="#8b5cf6"/><text x="532" y="358" text-anchor="middle" font-size="21" font-weight="800" fill="#4c1d95">SMP Router 2</text><text x="532" y="389" text-anchor="middle" font-size="15" fill="#334155">Bob→Alice 단방향 큐</text>
+<path d="M250 195 C310 150 330 145 390 154" stroke="#2563eb" stroke-width="5" fill="none" marker-end="url(#arrow)"/><path d="M675 154 C750 148 780 166 850 195" stroke="#2563eb" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+<path d="M850 245 C775 300 750 340 675 360" stroke="#7c3aed" stroke-width="5" fill="none" marker-end="url(#arrow)"/><path d="M390 360 C320 340 300 292 250 245" stroke="#7c3aed" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+<rect x="98" y="440" width="904" height="66" rx="18" fill="#0f172a" opacity="0.93"/><text x="550" y="482" text-anchor="middle" font-size="20" fill="#e2e8f0">관찰자는 전역 사용자명 대신 대화별 큐·라우터·트래픽 패턴을 보게 된다. 프라이버시는 강해지지만 운영·복구·푸시 알림 설계는 더 어려워진다.</text>
+</g></svg>
