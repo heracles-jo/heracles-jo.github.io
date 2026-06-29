@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Identity plane for SaaS and AI apps</title>
+  <desc id="desc">Applications, agents, and enterprise users route authentication and authorization through a shared identity plane.</desc>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#f7f5ff"/><stop offset="1" stop-color="#eef9ff"/></linearGradient></defs>
+  <rect width="1100" height="620" fill="url(#g)"/>
+  <text x="54" y="70" font-size="34" font-weight="800" font-family="Inter, Apple SD Gothic Neo, Arial" fill="#17132f">SaaS·AI 앱을 위한 ID 운영 평면</text>
+  <rect x="420" y="160" width="260" height="220" rx="32" fill="#5b3ff2"/>
+  <text x="505" y="245" font-size="38" font-weight="800" font-family="Inter, Arial" fill="#fff">Logto</text>
+  <text x="462" y="295" font-size="22" font-family="Inter, Apple SD Gothic Neo, Arial" fill="#e8e4ff">OIDC / OAuth 2.1</text>
+  <text x="477" y="328" font-size="22" font-family="Inter, Apple SD Gothic Neo, Arial" fill="#e8e4ff">SSO · RBAC · MFA</text>
+  <g stroke="#7a6cf0" stroke-width="4" fill="none"><path d="M280 195h140"/><path d="M280 315h140"/><path d="M680 195h140"/><path d="M680 315h140"/><path d="M550 380v96"/></g>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="22" font-weight="700">
+    <rect x="68" y="145" width="212" height="94" rx="22" fill="#fff" stroke="#d8d1ff"/><text x="105" y="200" fill="#17132f">B2B SaaS 앱</text>
+    <rect x="68" y="265" width="212" height="94" rx="22" fill="#fff" stroke="#d8d1ff"/><text x="94" y="320" fill="#17132f">AI 에이전트 앱</text>
+    <rect x="820" y="145" width="212" height="94" rx="22" fill="#fff" stroke="#d8d1ff"/><text x="858" y="200" fill="#17132f">기업 IdP / SSO</text>
+    <rect x="820" y="265" width="212" height="94" rx="22" fill="#fff" stroke="#d8d1ff"/><text x="858" y="320" fill="#17132f">API · 백오피스</text>
+    <rect x="390" y="476" width="320" height="86" rx="22" fill="#fff" stroke="#d8d1ff"/><text x="430" y="528" fill="#17132f">테넌트·역할·감사 정책</text>
+  </g>
+  <text x="78" y="438" font-size="20" font-family="Inter, Apple SD Gothic Neo, Arial" fill="#494267">앱마다 인증 코드를 복제하는 대신, 로그인·동의·권한·감사를 독립 계층으로 분리한다.</text>
+</svg>

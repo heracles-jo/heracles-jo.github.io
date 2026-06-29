@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Logto identity infrastructure architecture</title>
+  <desc id="desc">A SaaS and AI application identity plane with OIDC, OAuth 2.1, SSO, RBAC, and multi-tenancy around Logto.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#17132f"/><stop offset="0.55" stop-color="#26235a"/><stop offset="1" stop-color="#5b3ff2"/></linearGradient>
+    <linearGradient id="card" x1="0" x2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/><stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#05030f" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="80" r="210" fill="#8d7bff" opacity="0.18"/>
+  <circle cx="180" cy="540" r="240" fill="#00d4ff" opacity="0.12"/>
+  <text x="72" y="98" fill="#c7c2ff" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="28" font-weight="700">GitHub Trending Analysis</text>
+  <text x="72" y="168" fill="#fff" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="58" font-weight="800">Logto와 오픈소스</text>
+  <text x="72" y="238" fill="#fff" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="58" font-weight="800">ID 인프라의 재설계</text>
+  <text x="74" y="292" fill="#dedbff" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="25">SaaS · AI 앱 · 멀티테넌시 · OIDC/OAuth 2.1 · RBAC</text>
+  <g filter="url(#shadow)">
+    <rect x="690" y="118" width="360" height="360" rx="42" fill="url(#card)" stroke="#cfc9ff" stroke-opacity="0.34"/>
+    <circle cx="870" cy="298" r="82" fill="#ffffff" opacity="0.12" stroke="#ffffff" stroke-opacity="0.45" stroke-width="3"/>
+    <path d="M870 246c30 0 54 24 54 54s-24 54-54 54-54-24-54-54 24-54 54-54Z" fill="#7958ff" opacity="0.95"/>
+    <path d="M870 272v36" stroke="#fff" stroke-width="12" stroke-linecap="round"/><circle cx="870" cy="326" r="7" fill="#fff"/>
+    <g fill="none" stroke="#bfb8ff" stroke-width="4" opacity="0.9">
+      <path d="M870 216v-52M870 432v-52M738 298h-52M1054 298h-52"/>
+      <path d="M780 208l-42-42M960 388l42 42M780 388l-42 42M960 208l42-42"/>
+    </g>
+    <g fill="#fff" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="22" font-weight="700">
+      <text x="820" y="151">OIDC</text><text x="805" y="458">RBAC</text><text x="610" y="307">SSO</text><text x="1015" y="307">AI</text>
+      <text x="696" y="159">Tenant</text><text x="977" y="159">OAuth 2.1</text><text x="680" y="458">Audit</text><text x="982" y="458">SaaS</text>
+    </g>
+  </g>
+  <rect x="72" y="382" width="520" height="104" rx="24" fill="#ffffff" opacity="0.10" stroke="#ffffff" stroke-opacity="0.18"/>
+  <text x="104" y="425" fill="#fff" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="25" font-weight="700">핵심 질문</text>
+  <text x="104" y="462" fill="#dedbff" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="22">인증은 기능인가, 독립 운영 평면인가?</text>
+</svg>
