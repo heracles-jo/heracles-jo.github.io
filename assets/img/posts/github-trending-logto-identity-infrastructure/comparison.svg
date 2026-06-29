@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Identity platform comparison matrix</title>
+  <desc id="desc">A comparison of Logto, Keycloak, Authentik, and Ory Kratos across operating model dimensions.</desc>
+  <rect width="1100" height="620" fill="#111827"/>
+  <text x="54" y="72" fill="#fff" font-size="34" font-weight="800" font-family="Inter, Apple SD Gothic Neo, Arial">오픈소스 ID 플랫폼 선택 기준</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="20">
+    <rect x="60" y="120" width="980" height="390" rx="24" fill="#1f2937" stroke="#374151"/>
+    <g fill="#c7d2fe" font-weight="800"><text x="100" y="170">제품</text><text x="300" y="170">강점</text><text x="570" y="170">주의점</text><text x="820" y="170">적합한 팀</text></g>
+    <g stroke="#374151"><path d="M80 195h940"/><path d="M80 275h940"/><path d="M80 355h940"/><path d="M80 435h940"/><path d="M250 130v360"/><path d="M520 130v360"/><path d="M770 130v360"/></g>
+    <g fill="#f9fafb"><text x="100" y="238" font-weight="800">Logto</text><text x="292" y="225">SaaS/AI 앱 지향,</text><text x="292" y="253">멀티테넌시·RBAC</text><text x="550" y="225">상대적으로 젊은 생태계,</text><text x="550" y="253">MPL/클라우드 경계 검토</text><text x="806" y="238">제품 중심 스타트업</text>
+    <text x="100" y="318" font-weight="800">Keycloak</text><text x="292" y="305">성숙한 엔터프라이즈 IAM,</text><text x="292" y="333">표준·확장성</text><text x="550" y="305">운영 복잡도와 JVM 비용,</text><text x="550" y="333">전문 인력 필요</text><text x="806" y="318">대기업·플랫폼팀</text>
+    <text x="100" y="398" font-weight="800">Authentik</text><text x="292" y="385">홈랩~기업의 인증 접착제,</text><text x="292" y="413">프록시·SSO 편의</text><text x="550" y="385">라이선스·업그레이드 정책,</text><text x="550" y="413">운영 모델 확인</text><text x="806" y="398">내부 서비스 통합</text>
+    <text x="100" y="478" font-weight="800">Ory</text><text x="292" y="465">Headless API,</text><text x="292" y="493">클라우드 네이티브</text><text x="550" y="465">UI·흐름을 직접 조합,</text><text x="550" y="493">학습 곡선</text><text x="806" y="478">API 우선 조직</text></g>
+  </g>
+  <text x="62" y="565" fill="#d1d5db" font-size="21" font-family="Inter, Apple SD Gothic Neo, Arial">선택의 핵심은 기능 수가 아니라 테넌트 모델, 운영 책임, 표준 준수, 감사 가능성의 균형이다.</text>
+</svg>
