@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="260" cy="180" r="150" fill="#0ea5e9" opacity="0.16"/>
+  <circle cx="1360" cy="760" r="210" fill="#22c55e" opacity="0.18"/>
+  <rect x="120" y="120" width="1360" height="660" rx="28" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+  <rect x="160" y="160" width="520" height="580" rx="24" fill="#111827" stroke="#334155"/>
+  <text x="200" y="255" fill="#e2e8f0" font-size="58" font-weight="800" font-family="Inter, Pretendard, Arial, sans-serif">GitHub Trending으로 보는 SimpleX Chat과 식별자 없는 메시징의 설계 비용</text>
+  <text x="200" y="335" fill="#bfdbfe" font-size="28" font-weight="600" font-family="Inter, Pretendard, Arial, sans-serif">Messaging without user identifiers</text>
+  <text x="200" y="412" fill="#cbd5e1" font-size="22" font-family="Inter, Pretendard, Arial, sans-serif">GitHub Trending backfill</text>
+  <text x="200" y="452" fill="#cbd5e1" font-size="22" font-family="Inter, Pretendard, Arial, sans-serif">github-trending-simplex-chat-private-messaging</text>
+  <rect x="200" y="540" width="260" height="58" rx="16" fill="url(#accent)"/>
+  <text x="238" y="578" fill="#ffffff" font-size="24" font-weight="700" font-family="Inter, Pretendard, Arial, sans-serif">analysis / architecture</text>
+  <g transform="translate(760 210)" stroke="#94a3b8" stroke-width="4" fill="none" opacity="0.95">
+    <rect x="0" y="0" width="260" height="120" rx="20" fill="#1e293b"/>
+    <rect x="320" y="0" width="260" height="120" rx="20" fill="#1e293b"/>
+    <rect x="640" y="0" width="260" height="120" rx="20" fill="#1e293b"/>
+    <path d="M260 60H312"/>
+    <path d="M580 60H632"/>
+    <text x="40" y="72" fill="#e2e8f0" font-size="26" font-weight="700" font-family="Inter, Pretendard, Arial, sans-serif">signal</text>
+    <text x="354" y="72" fill="#e2e8f0" font-size="26" font-weight="700" font-family="Inter, Pretendard, Arial, sans-serif">architecture</text>
+    <text x="675" y="72" fill="#e2e8f0" font-size="26" font-weight="700" font-family="Inter, Pretendard, Arial, sans-serif">decision</text>
+  </g>
+  <text x="760" y="430" fill="#e5e7eb" font-size="34" font-weight="700" font-family="Inter, Pretendard, Arial, sans-serif">local-first · automation · operational trade-offs</text>
+  <text x="760" y="485" fill="#94a3b8" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">GitHub Trending으로 보는 SimpleX Chat과 식별자 없는 메시징의 설계 비용</text>
+</svg>
