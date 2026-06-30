@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="80" y="90" fill="#e2e8f0" font-size="42" font-weight="800" font-family="Inter, Pretendard, Arial, sans-serif">vision utility layer</text>
+  <g font-family="Inter, Pretendard, Arial, sans-serif" font-size="26" font-weight="700" fill="#e5e7eb">
+    <rect x="90" y="180" width="320" height="120" rx="22" fill="#1d4ed8"/>
+    <text x="140" y="232">detector output</text>
+    <rect x="460" y="180" width="320" height="120" rx="22" fill="#7c3aed"/>
+    <text x="510" y="232">post-processing</text>
+    <rect x="830" y="180" width="320" height="120" rx="22" fill="#0f766e"/>
+    <text x="890" y="232">analytics / export</text>
+    <path d="M410 240H452" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M780 240H822" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g font-family="Inter, Pretendard, Arial, sans-serif" fill="#e5e7eb">
+    <rect x="180" y="410" width="1240" height="240" rx="26" fill="#111827" stroke="#334155"/>
+    <text x="220" y="466" font-size="28" font-weight="700">operational notes</text>
+    <text x="220" y="520" font-size="22" fill="#cbd5e1">모델 다음 단계 표준화</text>
+    <text x="220" y="565" font-size="22" fill="#cbd5e1">좌표계 일관성이 중요</text>
+    <text x="220" y="610" font-size="22" fill="#cbd5e1">Notebook에서 코드로 이동</text>
+  </g>
+</svg>

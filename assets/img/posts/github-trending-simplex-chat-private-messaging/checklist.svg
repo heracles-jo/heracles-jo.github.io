@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="80" y="95" fill="#e2e8f0" font-size="42" font-weight="800" font-family="Inter, Pretendard, Arial, sans-serif">deployment checklist</text>
+  <rect x="80" y="145" width="1440" height="690" rx="30" fill="#0f172a" stroke="#334155"/>
+  <circle cx="140" cy="220" r="14" fill="#22c55e"/><text x="176" y="228" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">개인용인지, 팀용인지 사용 목적을 먼저 정한다.</text><circle cx="140" cy="332" r="14" fill="#22c55e"/><text x="176" y="340" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">위협 모델(누구로부터 무엇을 숨길지)을 정의한다.</text><circle cx="140" cy="444" r="14" fill="#22c55e"/><text x="176" y="452" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">기기 교체/백업/복구 시나리오를 미리 시험한다.</text><circle cx="140" cy="556" r="14" fill="#22c55e"/><text x="176" y="564" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">실사용자에게는 상대방 온보딩 비용까지 설명한다.</text><circle cx="140" cy="668" r="14" fill="#22c55e"/><text x="176" y="676" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">보안 기능보다 메타데이터 노출 범위를 함께 본다.</text>
+</svg>

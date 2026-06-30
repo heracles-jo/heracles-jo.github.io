@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="80" y="95" fill="#e2e8f0" font-size="42" font-weight="800" font-family="Inter, Pretendard, Arial, sans-serif">deployment checklist</text>
+  <rect x="80" y="145" width="1440" height="690" rx="30" fill="#0f172a" stroke="#334155"/>
+  <circle cx="140" cy="220" r="14" fill="#22c55e"/><text x="176" y="228" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">탐지 결과의 좌표계와 원본 해상도를 고정한다.</text><circle cx="140" cy="332" r="14" fill="#22c55e"/><text x="176" y="340" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">tracking과 annotation을 분리해서 검증한다.</text><circle cx="140" cy="444" r="14" fill="#22c55e"/><text x="176" y="452" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">샘플 단위 평가와 배치 단위 평가를 나눠 본다.</text><circle cx="140" cy="556" r="14" fill="#22c55e"/><text x="176" y="564" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">Notebook에서만 되지 말고 파이프라인 코드로 옮긴다.</text><circle cx="140" cy="668" r="14" fill="#22c55e"/><text x="176" y="676" fill="#e5e7eb" font-size="24" font-family="Inter, Pretendard, Arial, sans-serif">성공 사례보다 실패 사례를 시각화한다.</text>
+</svg>
