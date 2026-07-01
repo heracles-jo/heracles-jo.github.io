@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">CubeSandbox 아키텍처 개념도</title>
+  <desc id="desc">클라이언트와 E2B 호환 API에서 시작해 CubeMaster, Cubelet, RustVMM MicroVM, XFS reflink 스토리지, eBPF 네트워크, CubeEgress 보안 프록시로 이어지는 데이터 흐름</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/></marker></defs>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="70" y="72" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="800" fill="#0f172a">MicroVM 샌드박스 운영 평면</text>
+  <text x="70" y="112" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="19" fill="#475569">제어 평면은 상태 조율을, 데이터 평면은 격리·스토리지·네트워크 정책을 담당한다.</text>
+  <g font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="18">
+    <rect x="70" y="170" width="190" height="86" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="165" y="205" text-anchor="middle" font-weight="700" fill="#1e3a8a">Client / SDK</text><text x="165" y="232" text-anchor="middle" fill="#1e40af">E2B 호환 REST</text>
+    <rect x="330" y="170" width="190" height="86" rx="18" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+    <text x="425" y="205" text-anchor="middle" font-weight="700" fill="#115e59">CubeAPI</text><text x="425" y="232" text-anchor="middle" fill="#0f766e">API Gateway</text>
+    <rect x="590" y="170" width="190" height="86" rx="18" fill="#ecfccb" stroke="#65a30d" stroke-width="2"/>
+    <text x="685" y="205" text-anchor="middle" font-weight="700" fill="#365314">CubeMaster</text><text x="685" y="232" text-anchor="middle" fill="#4d7c0f">Scheduling</text>
+    <rect x="850" y="170" width="190" height="86" rx="18" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+    <text x="945" y="205" text-anchor="middle" font-weight="700" fill="#7f1d1d">Redis / MySQL</text><text x="945" y="232" text-anchor="middle" fill="#991b1b">상태·메타데이터</text>
+    <path d="M260 213H330" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M520 213H590" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M780 213H850" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="170" y="350" width="200" height="92" rx="18" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+    <text x="270" y="387" text-anchor="middle" font-weight="700" fill="#0f172a">Cubelet</text><text x="270" y="416" text-anchor="middle" fill="#475569">노드 로컬 런타임</text>
+    <rect x="500" y="350" width="220" height="92" rx="18" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="610" y="387" text-anchor="middle" font-weight="700" fill="#4c1d95">CubeHypervisor</text><text x="610" y="416" text-anchor="middle" fill="#5b21b6">RustVMM / KVM</text>
+    <rect x="850" y="350" width="200" height="92" rx="18" fill="#ffedd5" stroke="#f97316" stroke-width="2"/>
+    <text x="950" y="387" text-anchor="middle" font-weight="700" fill="#7c2d12">MicroVM</text><text x="950" y="416" text-anchor="middle" fill="#9a3412">전용 커널 격리</text>
+    <path d="M685 256C685 310 270 296 270 350" stroke="#0f766e" fill="none" stroke-width="3" marker-end="url(#arrow)"/><path d="M370 396H500" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M720 396H850" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="140" y="548" width="230" height="82" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="255" y="582" text-anchor="middle" font-weight="700" fill="#075985">CubeCoW</text><text x="255" y="610" text-anchor="middle" fill="#0369a1">XFS reflink 스냅샷</text>
+    <rect x="485" y="548" width="230" height="82" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="600" y="582" text-anchor="middle" font-weight="700" fill="#14532d">CubeVS / eBPF</text><text x="600" y="610" text-anchor="middle" fill="#166534">샌드박스 네트워크</text>
+    <rect x="830" y="548" width="230" height="82" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="945" y="582" text-anchor="middle" font-weight="700" fill="#78350f">CubeEgress</text><text x="945" y="610" text-anchor="middle" fill="#92400e">L7 정책·자격증명 주입</text>
+    <path d="M270 442V548" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M950 442C950 500 600 494 600 548" stroke="#0f766e" fill="none" stroke-width="3" marker-end="url(#arrow)"/><path d="M715 589H830" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+</svg>
