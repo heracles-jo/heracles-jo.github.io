@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">AI 샌드박스 도입 판단 매트릭스</title>
+  <desc id="desc">컨테이너, 관리형 코드 인터프리터, MicroVM 샌드박스를 격리 강도, 시작 시간, 운영 복잡도, 네트워크 통제, 비용 예측성 기준으로 비교한 매트릭스</desc>
+  <rect width="1200" height="680" fill="#0f172a"/>
+  <text x="70" y="76" fill="#f8fafc" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="800">AI 코드 실행 샌드박스 선택 기준</text>
+  <text x="70" y="116" fill="#cbd5e1" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="20">격리 강도만 볼 것이 아니라 시작 시간, 정책 통제, 운영 책임의 균형을 함께 봐야 한다.</text>
+  <g font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="18">
+    <rect x="70" y="165" width="1060" height="72" rx="18" fill="#1e293b"/>
+    <text x="180" y="209" fill="#bae6fd" font-weight="700">선택지</text><text x="390" y="209" fill="#bae6fd" font-weight="700">장점</text><text x="650" y="209" fill="#bae6fd" font-weight="700">주의점</text><text x="930" y="209" fill="#bae6fd" font-weight="700">적합한 상황</text>
+    <rect x="70" y="255" width="1060" height="110" rx="18" fill="#f8fafc"/>
+    <text x="180" y="300" fill="#0f172a" text-anchor="middle" font-weight="800">일반 컨테이너</text>
+    <text x="300" y="292" fill="#334155">빠른 실행, 생태계 성숙,</text><text x="300" y="322" fill="#334155">Kubernetes와 친숙</text>
+    <text x="595" y="292" fill="#334155">공유 커널 공격면,</text><text x="595" y="322" fill="#334155">강한 멀티테넌시에는 추가 방어 필요</text>
+    <text x="895" y="292" fill="#334155">신뢰된 코드, 내부 배치,</text><text x="895" y="322" fill="#334155">격리 요구가 낮은 워크로드</text>
+    <rect x="70" y="385" width="1060" height="110" rx="18" fill="#ecfeff"/>
+    <text x="180" y="430" fill="#0f172a" text-anchor="middle" font-weight="800">관리형 샌드박스</text>
+    <text x="300" y="422" fill="#334155">초기 운영 부담 낮음,</text><text x="300" y="452" fill="#334155">SDK와 API 경험 우수</text>
+    <text x="595" y="422" fill="#334155">비용·데이터 경계·벤더 종속,</text><text x="595" y="452" fill="#334155">세부 네트워크 정책 제약</text>
+    <text x="895" y="422" fill="#334155">빠른 PoC, 사용량 변동,</text><text x="895" y="452" fill="#334155">플랫폼팀이 작은 조직</text>
+    <rect x="70" y="515" width="1060" height="110" rx="18" fill="#dcfce7"/>
+    <text x="180" y="560" fill="#0f172a" text-anchor="middle" font-weight="800">MicroVM 샌드박스</text>
+    <text x="300" y="552" fill="#334155">전용 커널 격리, 빠른 복제,</text><text x="300" y="582" fill="#334155">egress·스냅샷 통제</text>
+    <text x="595" y="552" fill="#334155">KVM·스토리지·네트워크 운영,</text><text x="595" y="582" fill="#334155">관측성과 패치 체계 필요</text>
+    <text x="895" y="552" fill="#334155">비신뢰 코드, 대량 병렬 실행,</text><text x="895" y="582" fill="#334155">규제·데이터 통제가 중요한 팀</text>
+  </g>
+</svg>
