@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">LingBot-Map architecture flow</title>
+  <desc id="desc">Streaming camera frames pass through coordinate grounding, dense geometry cues, anchor context, trajectory memory and a paged KV cache to produce depth, pose and map outputs.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+    <linearGradient id="card" x1="0" x2="1"><stop offset="0" stop-color="#eff6ff"/><stop offset="1" stop-color="#ecfeff"/></linearGradient>
+  </defs>
+  <rect width="1100" height="620" fill="#f8fafc"/>
+  <text x="55" y="58" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="800" fill="#0f172a">Streaming 3D Reconstruction: 핵심 데이터 흐름</text>
+  <g font-family="Inter,Arial,sans-serif" font-size="18" fill="#0f172a">
+    <rect x="55" y="120" width="175" height="130" rx="18" fill="url(#card)" stroke="#93c5fd" stroke-width="2"/>
+    <text x="88" y="165" font-weight="700">1. Frame Stream</text><text x="83" y="199">RGB frames</text><text x="83" y="226">camera hints</text>
+    <rect x="300" y="105" width="205" height="160" rx="18" fill="url(#card)" stroke="#93c5fd" stroke-width="2"/>
+    <text x="333" y="150" font-weight="700">2. Grounding</text><text x="333" y="184">coordinate tokens</text><text x="333" y="211">dense geometric cues</text><text x="333" y="238">sky/mask handling</text>
+    <rect x="580" y="95" width="245" height="180" rx="18" fill="#eef2ff" stroke="#818cf8" stroke-width="2"/>
+    <text x="618" y="140" font-weight="800">3. GCT Core</text><text x="618" y="176">anchor context</text><text x="618" y="204">pose-reference window</text><text x="618" y="232">trajectory memory</text><text x="618" y="260">paged KV cache</text>
+    <rect x="890" y="120" width="160" height="130" rx="18" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+    <text x="925" y="165" font-weight="700">4. Output</text><text x="918" y="199">depth · pose</text><text x="918" y="226">point cloud/map</text>
+    <line x1="230" y1="185" x2="300" y2="185" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="505" y1="185" x2="580" y2="185" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="825" y1="185" x2="890" y2="185" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  </g>
+  <g transform="translate(80 350)" font-family="Inter,Arial,sans-serif">
+    <rect x="0" y="0" width="940" height="170" rx="22" fill="#0f172a"/>
+    <text x="35" y="50" fill="#bfdbfe" font-size="24" font-weight="800">운영 해석</text>
+    <text x="35" y="88" fill="#e2e8f0" font-size="19">반복 최적화로 장면을 다시 푸는 방식이 아니라, 긴 비디오 스트림을 상태ful inference로 처리한다.</text>
+    <text x="35" y="122" fill="#e2e8f0" font-size="19">따라서 PoC의 핵심은 모델 정확도뿐 아니라 KV cache, GPU 메모리, 윈도우 경계 누적 오차를 검증하는 것이다.</text>
+  </g>
+</svg>

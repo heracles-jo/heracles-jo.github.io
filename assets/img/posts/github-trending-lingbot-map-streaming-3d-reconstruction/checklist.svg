@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">Adoption checklist for LingBot-Map</title>
+  <desc id="desc">A practical checklist mapping proof of concept questions to production risks for streaming 3D reconstruction.</desc>
+  <rect width="1100" height="560" fill="#ffffff"/>
+  <text x="60" y="58" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="800" fill="#111827">PoC에서 운영 전환까지 확인할 지표</text>
+  <g font-family="Inter,Arial,sans-serif" font-size="18">
+    <rect x="60" y="100" width="310" height="340" rx="20" fill="#f0f9ff" stroke="#38bdf8" stroke-width="2"/>
+    <text x="92" y="145" font-size="24" font-weight="800" fill="#075985">Model Fit</text>
+    <text x="92" y="190" fill="#0f172a">□ 데이터셋 도메인 유사성</text>
+    <text x="92" y="230" fill="#0f172a">□ 깊이·pose 오차 허용치</text>
+    <text x="92" y="270" fill="#0f172a">□ 동적 객체/하늘/반사 처리</text>
+    <text x="92" y="310" fill="#0f172a">□ 실패 프레임 감지 로직</text>
+    <rect x="395" y="100" width="310" height="340" rx="20" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="427" y="145" font-size="24" font-weight="800" fill="#5b21b6">Runtime</text>
+    <text x="427" y="190" fill="#0f172a">□ 20 FPS 목표와 실제 GPU</text>
+    <text x="427" y="230" fill="#0f172a">□ FlashInfer/SDPA 백엔드</text>
+    <text x="427" y="270" fill="#0f172a">□ KV cache 메모리 증가</text>
+    <text x="427" y="310" fill="#0f172a">□ window overlap 튜닝</text>
+    <rect x="730" y="100" width="310" height="340" rx="20" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+    <text x="762" y="145" font-size="24" font-weight="800" fill="#065f46">Governance</text>
+    <text x="762" y="190" fill="#0f172a">□ Apache-2.0 적용 범위</text>
+    <text x="762" y="230" fill="#0f172a">□ 공개 모델 가중치 정책</text>
+    <text x="762" y="270" fill="#0f172a">□ 영상/공간 데이터 보안</text>
+    <text x="762" y="310" fill="#0f172a">□ 재현 가능한 벤치마크</text>
+  </g>
+  <path d="M150 490 H950" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="150" cy="490" r="13" fill="#38bdf8"/><circle cx="550" cy="490" r="13" fill="#8b5cf6"/><circle cx="950" cy="490" r="13" fill="#10b981"/>
+  <text x="118" y="525" font-family="Inter,Arial,sans-serif" font-size="16" fill="#475569">bench</text><text x="510" y="525" font-family="Inter,Arial,sans-serif" font-size="16" fill="#475569">pilot</text><text x="902" y="525" font-family="Inter,Arial,sans-serif" font-size="16" fill="#475569">operate</text>
+</svg>
