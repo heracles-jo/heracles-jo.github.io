@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">RomM adoption checklist</title>
+  <desc id="desc">A practical checklist for testing a self-hosted game library: legal content, metadata quality, access control, backup, remote access and license review.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#064e3b"/></linearGradient>
+    <style>.h{font-family:Inter,Apple SD Gothic Neo,Pretendard,Arial,sans-serif;font-weight:850;fill:#ffffff}.t{font-family:Inter,Apple SD Gothic Neo,Pretendard,Arial,sans-serif;fill:#d1fae5}.card{fill:#022c22;stroke:#34d399;stroke-opacity:.55;stroke-width:2}.tick{fill:#34d399}</style>
+  </defs>
+  <rect width="1200" height="560" fill="url(#bg)"/>
+  <circle cx="1020" cy="90" r="160" fill="#6ee7b7" opacity="0.11"/>
+  <text x="70" y="76" class="h" font-size="36">RomM PoC 체크리스트</text>
+  <text x="70" y="112" class="t" font-size="18">운영 서버로 올리기 전에 2주 안에 검증해야 할 핵심 항목</text>
+  <g transform="translate(70 158)">
+    <rect class="card" x="0" y="0" width="500" height="72" rx="20"/><circle class="tick" cx="34" cy="36" r="14"/><path d="M27 36 l5 6 11 -14" fill="none" stroke="#052e16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text class="h" x="64" y="32" font-size="20">합법적 샘플 콘텐츠</text><text class="t" x="64" y="55" font-size="15">보유 권리, 내부 사용 범위, 공유 금지 정책 확인</text>
+    <rect class="card" x="0" y="92" width="500" height="72" rx="20"/><circle class="tick" cx="34" cy="128" r="14"/><path d="M27 128 l5 6 11 -14" fill="none" stroke="#052e16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text class="h" x="64" y="124" font-size="20">스캔·메타데이터 품질</text><text class="t" x="64" y="147" font-size="15">오탐률, 수동 수정 시간, API 실패 재시도 측정</text>
+    <rect class="card" x="0" y="184" width="500" height="72" rx="20"/><circle class="tick" cx="34" cy="220" r="14"/><path d="M27 220 l5 6 11 -14" fill="none" stroke="#052e16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text class="h" x="64" y="216" font-size="20">접근제어와 원격 접속</text><text class="t" x="64" y="239" font-size="15">읽기 전용 계정, VPN/터널, 프록시 인증 우회 점검</text>
+  </g>
+  <g transform="translate(630 158)">
+    <rect class="card" x="0" y="0" width="500" height="72" rx="20"/><circle class="tick" cx="34" cy="36" r="14"/><path d="M27 36 l5 6 11 -14" fill="none" stroke="#052e16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text class="h" x="64" y="32" font-size="20">브라우저 실행 호환성</text><text class="t" x="64" y="55" font-size="15">EmulatorJS/Ruffle 지원 범위와 클라이언트 부하 확인</text>
+    <rect class="card" x="0" y="92" width="500" height="72" rx="20"/><circle class="tick" cx="34" cy="128" r="14"/><path d="M27 128 l5 6 11 -14" fill="none" stroke="#052e16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text class="h" x="64" y="124" font-size="20">백업·복원 리허설</text><text class="t" x="64" y="147" font-size="15">원본, DB, 커버 이미지, 설정, 세이브 데이터 분리 백업</text>
+    <rect class="card" x="0" y="184" width="500" height="72" rx="20"/><circle class="tick" cx="34" cy="220" r="14"/><path d="M27 220 l5 6 11 -14" fill="none" stroke="#052e16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text class="h" x="64" y="216" font-size="20">라이선스·보안 추적</text><text class="t" x="64" y="239" font-size="15">AGPL 의무, 릴리스 노트, 인증/업로드 취약점 모니터링</text>
+  </g>
+  <rect x="70" y="472" width="1060" height="48" rx="24" fill="#020617" opacity="0.5"/>
+  <text x="600" y="502" text-anchor="middle" class="t" font-size="17">성공 기준은 “보기 좋음”이 아니라 스캔 성공률, 복원 시간, 권한 우회 없음, API 장애 영향 제한이다.</text>
+</svg>
