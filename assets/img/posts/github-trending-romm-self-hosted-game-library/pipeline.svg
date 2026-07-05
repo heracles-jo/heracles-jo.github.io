@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Self-hosted game library pipeline</title>
+  <desc id="desc">A self-hosted game library pipeline connects storage, scanner, metadata providers, catalog database, web UI, browser emulator and client applications.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#172554"/></linearGradient>
+    <style>.label{font-family:Inter,Apple SD Gothic Neo,Pretendard,Arial,sans-serif;font-weight:800;fill:#f8fafc}.small{font-family:Inter,Apple SD Gothic Neo,Pretendard,Arial,sans-serif;fill:#cbd5e1}.box{fill:#111827;stroke:#60a5fa;stroke-width:2.2}.arrow{stroke:#93c5fd;stroke-width:5;stroke-linecap:round;marker-end:url(#m)}</style>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#93c5fd"/></marker>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="70" class="label" font-size="34">RomM형 셀프호스팅 게임 라이브러리 파이프라인</text>
+  <text x="60" y="105" class="small" font-size="18">파일 저장소를 검색 가능한 실행형 디지털 자산으로 전환하는 운영 흐름</text>
+  <g transform="translate(60 158)">
+    <rect class="box" x="0" y="0" width="160" height="110" rx="22"/>
+    <text class="label" x="80" y="44" font-size="22" text-anchor="middle">Storage</text>
+    <text class="small" x="80" y="74" font-size="15" text-anchor="middle">ROM · BIOS · Manual</text>
+    <path class="arrow" d="M172 55 H242"/>
+    <rect class="box" x="254" y="0" width="160" height="110" rx="22" stroke="#a78bfa"/>
+    <text class="label" x="334" y="44" font-size="22" text-anchor="middle">Scanner</text>
+    <text class="small" x="334" y="74" font-size="15" text-anchor="middle">Name · Hash · Tags</text>
+    <path class="arrow" d="M426 55 H496"/>
+    <rect class="box" x="508" y="0" width="170" height="110" rx="22" stroke="#34d399"/>
+    <text class="label" x="593" y="39" font-size="22" text-anchor="middle">Metadata</text>
+    <text class="small" x="593" y="68" font-size="15" text-anchor="middle">IGDB · Screenscraper</text>
+    <text class="small" x="593" y="90" font-size="15" text-anchor="middle">MobyGames · Art</text>
+    <path class="arrow" d="M690 55 H760"/>
+    <rect class="box" x="772" y="0" width="160" height="110" rx="22" stroke="#fbbf24"/>
+    <text class="label" x="852" y="44" font-size="22" text-anchor="middle">Catalog</text>
+    <text class="small" x="852" y="74" font-size="15" text-anchor="middle">Search · ACL · API</text>
+    <path class="arrow" d="M852 124 V194"/>
+    <rect class="box" x="670" y="206" width="170" height="110" rx="22" stroke="#fb7185"/>
+    <text class="label" x="755" y="250" font-size="22" text-anchor="middle">Web Play</text>
+    <text class="small" x="755" y="280" font-size="15" text-anchor="middle">EmulatorJS · Ruffle</text>
+    <rect class="box" x="865" y="206" width="170" height="110" rx="22" stroke="#22d3ee"/>
+    <text class="label" x="950" y="250" font-size="22" text-anchor="middle">Clients</text>
+    <text class="small" x="950" y="280" font-size="15" text-anchor="middle">Playnite · Mobile</text>
+    <path d="M864 252 H842" stroke="#93c5fd" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(60 440)">
+    <rect x="0" y="0" width="1080" height="42" rx="21" fill="#020617" opacity="0.55"/>
+    <text x="28" y="27" class="small" font-size="16">운영 포인트: API 키 관리 · 권한 분리 · 원격 접근 경계 · 백업 복원 · 저작권 검토 · 릴리스/취약점 추적</text>
+  </g>
+</svg>
