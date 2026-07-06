@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">AI prompt governance operating loop</title><desc id="desc">A governance operating loop for system prompts with inventory, classification, review, evaluation, monitoring, and incident response.</desc>
+<rect width="1100" height="560" rx="30" fill="#0b1220"/>
+<text x="55" y="68" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#e5e7eb">시스템 프롬프트 운영 루프</text>
+<text x="55" y="105" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">숨기는 것보다 중요한 것은 변경·평가·권한·사고대응을 운영 절차로 만드는 일이다.</text>
+<g font-family="Arial, sans-serif" font-size="18" font-weight="700">
+  <circle cx="210" cy="245" r="86" fill="#1d4ed8" opacity="0.95"/><text x="160" y="238" fill="white">1. 자산</text><text x="146" y="266" fill="white">인벤토리</text>
+  <circle cx="430" cy="245" r="86" fill="#7c3aed" opacity="0.95"/><text x="382" y="238" fill="white">2. 민감도</text><text x="386" y="266" fill="white">분류</text>
+  <circle cx="650" cy="245" r="86" fill="#be123c" opacity="0.95"/><text x="603" y="238" fill="white">3. 리뷰</text><text x="592" y="266" fill="white">승인 흐름</text>
+  <circle cx="870" cy="245" r="86" fill="#047857" opacity="0.95"/><text x="821" y="238" fill="white">4. 평가</text><text x="810" y="266" fill="white">회귀 테스트</text>
+</g>
+<path d="M296 245h48M516 245h48M736 245h48" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+<g font-family="Arial, sans-serif" font-size="18" fill="#e5e7eb">
+  <rect x="135" y="390" width="240" height="86" rx="18" fill="#111827" stroke="#38bdf8"/><text x="164" y="424" font-weight="700">운영 모니터링</text><text x="164" y="453" fill="#cbd5e1">로그·DLP·이상 질의 감지</text>
+  <rect x="430" y="390" width="240" height="86" rx="18" fill="#111827" stroke="#f59e0b"/><text x="459" y="424" font-weight="700">변경 관리</text><text x="459" y="453" fill="#cbd5e1">버전·릴리스·롤백 기준</text>
+  <rect x="725" y="390" width="240" height="86" rx="18" fill="#111827" stroke="#f87171"/><text x="754" y="424" font-weight="700">사고 대응</text><text x="754" y="453" fill="#cbd5e1">노출 범위·키 회전·재평가</text>
+</g>
+</svg>
