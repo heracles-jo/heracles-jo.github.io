@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">OfficeCLI pipeline</title>
+  <desc id="desc">Data, AI generation, OfficeCLI rendering, validation, and human approval form a repeatable document automation pipeline.</desc>
+  <rect width="1000" height="520" rx="28" fill="#f8fafc"/>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="52" y="64" fill="#0f172a" font-size="30" font-family="Arial" font-weight="800">OfficeCLI 기반 문서 자동화 파이프라인</text>
+  <g font-family="Arial" font-size="20" font-weight="700" text-anchor="middle">
+    <rect x="54" y="130" width="150" height="92" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="129" y="168" fill="#1e3a8a">업무 데이터</text>
+    <text x="129" y="196" fill="#1e3a8a" font-size="16">CRM · DB · CSV</text>
+    <rect x="254" y="130" width="150" height="92" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="329" y="168" fill="#5b21b6">AI 생성</text>
+    <text x="329" y="196" fill="#5b21b6" font-size="16">초안 · 구조 · 문체</text>
+    <rect x="454" y="130" width="150" height="92" rx="18" fill="#ecfeff" stroke="#0891b2" stroke-width="3"/>
+    <text x="529" y="168" fill="#155e75">OfficeCLI</text>
+    <text x="529" y="196" fill="#155e75" font-size="16">CLI · MCP · Batch</text>
+    <rect x="654" y="130" width="150" height="92" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="729" y="168" fill="#166534">렌더링 검증</text>
+    <text x="729" y="196" fill="#166534" font-size="16">HTML · PNG</text>
+    <rect x="804" y="316" width="150" height="92" rx="18" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+    <text x="879" y="354" fill="#9a3412">사람 승인</text>
+    <text x="879" y="382" fill="#9a3412" font-size="16">리뷰 · 배포</text>
+  </g>
+  <g stroke="#0f172a" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M204 176 H244"/>
+    <path d="M404 176 H444"/>
+    <path d="M604 176 H644"/>
+    <path d="M729 222 C729 278 650 304 574 282 C519 266 497 235 514 223"/>
+    <path d="M804 176 C884 180 910 230 882 306"/>
+  </g>
+  <g font-family="Arial" font-size="18" fill="#334155">
+    <text x="76" y="300">핵심 변화</text>
+    <text x="76" y="334">• 파일 생성이 아니라 렌더링 결과 기반의 반복 수정</text>
+    <text x="76" y="366">• Word, Excel, PowerPoint를 CI와 워크플로 엔진에 연결</text>
+    <text x="76" y="398">• 민감 문서 접근 권한과 감사 로그를 자동화 설계에 포함</text>
+  </g>
+</svg>

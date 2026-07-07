@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">OfficeCLI layers</title>
+  <desc id="desc">High-level views, element operations, and raw XML access provide three levels of document control.</desc>
+  <rect width="1000" height="520" rx="28" fill="#0f172a"/>
+  <text x="54" y="68" fill="#f8fafc" font-size="31" font-family="Arial" font-weight="800">OfficeCLI의 세 계층 문서 조작 모델</text>
+  <text x="54" y="108" fill="#bfdbfe" font-size="18" font-family="Arial">AI가 안전한 고수준 API부터 필요한 경우 저수준 XML까지 단계적으로 접근</text>
+  <g font-family="Arial">
+    <rect x="86" y="158" width="828" height="86" rx="20" fill="#dbeafe"/>
+    <text x="126" y="195" fill="#1e3a8a" font-size="26" font-weight="800">L1 · High-level views</text>
+    <text x="126" y="224" fill="#334155" font-size="18">문서 개요, 슬라이드 목록, 표 구조처럼 에이전트가 먼저 이해해야 하는 큰 그림</text>
+    <rect x="86" y="270" width="828" height="86" rx="20" fill="#ecfeff"/>
+    <text x="126" y="307" fill="#155e75" font-size="26" font-weight="800">L2 · Element operations</text>
+    <text x="126" y="336" fill="#334155" font-size="18">텍스트 박스, 셀, 표, 차트, 이미지 같은 업무 객체 단위의 안전한 수정</text>
+    <rect x="86" y="382" width="828" height="86" rx="20" fill="#ffedd5"/>
+    <text x="126" y="419" fill="#9a3412" font-size="26" font-weight="800">L3 · Raw XML escape hatch</text>
+    <text x="126" y="448" fill="#334155" font-size="18">고급 서식이나 특수 케이스를 처리하기 위한 저수준 Open XML 접근</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="3" fill="none">
+    <path d="M500 244 V270"/>
+    <path d="M500 356 V382"/>
+  </g>
+  <text x="86" y="500" fill="#cbd5e1" font-size="18" font-family="Arial">운영 판단: 기본은 L1/L2에 제한하고, L3는 승인·테스트·감사 로그와 함께 사용해야 한다.</text>
+</svg>

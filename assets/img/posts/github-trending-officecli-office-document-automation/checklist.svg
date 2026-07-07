@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">OfficeCLI PoC checklist</title>
+  <desc id="desc">Checklist for adopting OfficeCLI safely: samples, sandbox, workflow, quality gate, and operations metrics.</desc>
+  <rect width="1000" height="520" rx="28" fill="#f8fafc"/>
+  <text x="58" y="66" fill="#0f172a" font-size="31" font-family="Arial" font-weight="800">OfficeCLI PoC 체크리스트</text>
+  <g font-family="Arial" font-size="21" fill="#0f172a">
+    <g transform="translate(72 120)">
+      <circle cx="18" cy="18" r="18" fill="#2563eb"/><path d="M10 18 l6 7 l13 -16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="54" y="25" font-weight="700">실제 문서 샘플 10~30개로 호환성 검증</text>
+      <text x="54" y="53" fill="#475569" font-size="17">회사 폰트, 차트, 표 병합, 슬라이드 마스터를 포함</text>
+    </g>
+    <g transform="translate(72 198)">
+      <circle cx="18" cy="18" r="18" fill="#0891b2"/><path d="M10 18 l6 7 l13 -16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="54" y="25" font-weight="700">원본 읽기 전용, 결과물 별도 저장</text>
+      <text x="54" y="53" fill="#475569" font-size="17">에이전트가 고객 문서를 직접 덮어쓰지 않도록 경계 설정</text>
+    </g>
+    <g transform="translate(72 276)">
+      <circle cx="18" cy="18" r="18" fill="#16a34a"/><path d="M10 18 l6 7 l13 -16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="54" y="25" font-weight="700">렌더링 스냅샷과 구조 검사를 함께 수행</text>
+      <text x="54" y="53" fill="#475569" font-size="17">HTML/PNG 비교만으로 충분한지 최종 Office 뷰어와 대조</text>
+    </g>
+    <g transform="translate(72 354)">
+      <circle cx="18" cy="18" r="18" fill="#ea580c"/><path d="M10 18 l6 7 l13 -16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="54" y="25" font-weight="700">사람 승인, diff preview, 감사 로그 연결</text>
+      <text x="54" y="53" fill="#475569" font-size="17">민감정보가 프롬프트·로그·캐시에 남지 않도록 설계</text>
+    </g>
+    <g transform="translate(72 432)">
+      <circle cx="18" cy="18" r="18" fill="#7c3aed"/><path d="M10 18 l6 7 l13 -16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="54" y="25" font-weight="700">처리 시간, 실패율, 수동 수정 시간을 운영 지표화</text>
+    </g>
+  </g>
+</svg>
