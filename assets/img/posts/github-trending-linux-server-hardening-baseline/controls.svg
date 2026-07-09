@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">Linux hardening control lifecycle</title>
+  <desc id="desc">A Linux hardening lifecycle from baseline design to automation, audit, monitoring, and exception management.</desc>
+  <rect width="1100" height="520" rx="26" fill="#f8fafc"/>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif">
+    <text x="55" y="65" font-size="30" font-weight="800" fill="#0f172a">운영 가능한 Linux 서버 하드닝 제어 루프</text>
+    <text x="55" y="100" font-size="17" fill="#475569">체크리스트는 시작점이고, 실무 가치는 반복 가능한 검증과 예외 관리에서 나온다.</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <g stroke="#334155" stroke-width="3" marker-end="url(#arrow)" fill="none">
+    <path d="M225 210h110"/>
+    <path d="M480 210h110"/>
+    <path d="M735 210h110"/>
+    <path d="M905 270c-55 98-665 98-720 0"/>
+  </g>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="70" y="150" width="155" height="120" rx="18" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="147" y="190" font-size="21" font-weight="800" fill="#1e3a8a">Baseline</text>
+      <text x="147" y="222" font-size="15" fill="#1e40af">SSH · sudo · patch</text>
+      <text x="147" y="245" font-size="15" fill="#1e40af">위험 기준 정의</text>
+    </g>
+    <g>
+      <rect x="335" y="150" width="145" height="120" rx="18" fill="#dcfce7" stroke="#16a34a"/>
+      <text x="407" y="190" font-size="21" font-weight="800" fill="#14532d">Automate</text>
+      <text x="407" y="222" font-size="15" fill="#166534">Ansible</text>
+      <text x="407" y="245" font-size="15" fill="#166534">idempotency</text>
+    </g>
+    <g>
+      <rect x="590" y="150" width="145" height="120" rx="18" fill="#fef3c7" stroke="#d97706"/>
+      <text x="662" y="190" font-size="21" font-weight="800" fill="#78350f">Audit</text>
+      <text x="662" y="222" font-size="15" fill="#92400e">Lynis</text>
+      <text x="662" y="245" font-size="15" fill="#92400e">OpenSCAP</text>
+    </g>
+    <g>
+      <rect x="845" y="150" width="170" height="120" rx="18" fill="#fee2e2" stroke="#dc2626"/>
+      <text x="930" y="190" font-size="21" font-weight="800" fill="#7f1d1d">Observe</text>
+      <text x="930" y="222" font-size="15" fill="#991b1b">logs · FIM</text>
+      <text x="930" y="245" font-size="15" fill="#991b1b">alert routing</text>
+    </g>
+  </g>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif">
+    <rect x="105" y="370" width="890" height="85" rx="18" fill="#0f172a"/>
+    <text x="140" y="405" font-size="19" font-weight="700" fill="#e2e8f0">예외 관리:</text>
+    <text x="240" y="405" font-size="17" fill="#cbd5e1">서비스 중단 가능성이 있는 설정은 근거, 승인, 만료일, 롤백 절차와 함께 추적한다.</text>
+    <text x="140" y="435" font-size="17" fill="#93c5fd">운영 KPI = 패치 지연 시간 · SSH 실패율 · 기준선 드리프트 · 경보 처리 시간 · 감사 재현성</text>
+  </g>
+</svg>

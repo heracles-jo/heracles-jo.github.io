@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">Linux hardening tool comparison matrix</title>
+  <desc id="desc">A comparison matrix positioning guide documents, audit tools, compliance frameworks, and automation collections in a Linux server hardening program.</desc>
+  <rect width="1100" height="560" rx="26" fill="#020617"/>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif">
+    <text x="60" y="70" fill="#e0f2fe" font-size="30" font-weight="800">하드닝 도구는 서로 대체재가 아니라 역할 계층이다</text>
+    <text x="60" y="104" fill="#94a3b8" font-size="17">가이드 문서, 감사 스캐너, 규정 프로파일, 자동화 코드를 같은 파이프라인에 배치해야 한다.</text>
+  </g>
+  <g transform="translate(80 150)" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif">
+    <rect x="0" y="0" width="940" height="320" rx="20" fill="#0f172a" stroke="#334155"/>
+    <g fill="#38bdf8" font-size="17" font-weight="700">
+      <text x="30" y="45">계층</text><text x="275" y="45">대표 도구</text><text x="550" y="45">실무 목적</text><text x="780" y="45">주의점</text>
+    </g>
+    <g stroke="#334155"><path d="M0 68h940M0 132h940M0 196h940M0 260h940"/><path d="M235 0v320M510 0v320M745 0v320"/></g>
+    <g font-size="16" fill="#e2e8f0">
+      <text x="30" y="106">지식 기준선</text><text x="275" y="106">How-To-Secure-A-Linux-Server</text><text x="550" y="97">설정 의도와 순서 이해</text><text x="550" y="119">운영 표준 초안</text><text x="780" y="97">그대로 복붙 금지</text><text x="780" y="119">배포판 차이 확인</text>
+      <text x="30" y="170">감사 스캐너</text><text x="275" y="170">Lynis</text><text x="550" y="161">호스트 상태 점검</text><text x="550" y="183">개선 후보 발견</text><text x="780" y="161">점수 만능주의</text><text x="780" y="183">오탐·예외 관리</text>
+      <text x="30" y="234">규정 프로파일</text><text x="275" y="234">OpenSCAP / CIS / STIG</text><text x="550" y="225">감사 가능한 기준</text><text x="550" y="247">컴플라이언스 매핑</text><text x="780" y="225">업무 요구와 충돌</text><text x="780" y="247">프로파일 선별 필요</text>
+      <text x="30" y="298">자동화 코드</text><text x="275" y="298">dev-sec hardening / Ansible</text><text x="550" y="289">반복 배포와 드리프트 감소</text><text x="550" y="311">CI 검증 가능</text><text x="780" y="289">롤백·테스트 없이</text><text x="780" y="311">대량 적용 위험</text>
+    </g>
+  </g>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif">
+    <text x="80" y="515" fill="#bae6fd" font-size="18">권장 순서: 기준선 합의 → 제한된 PoC → 감사 결과 비교 → 자동화 → 예외와 지표 운영</text>
+  </g>
+</svg>
