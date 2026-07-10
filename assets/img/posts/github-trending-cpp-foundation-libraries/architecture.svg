@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Operational layers of a production C++ foundation stack</title>
+  <desc id="desc">A layered diagram connecting C++ foundation libraries to governance, build, testing, configuration, networking and runtime operations.</desc>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif">
+    <text x="70" y="72" font-size="34" font-weight="800" fill="#0f172a">프로덕션 C++ 기반 라이브러리 도입 구조</text>
+    <text x="70" y="110" font-size="19" fill="#475569">단일 라이브러리 선택보다 ABI, 빌드, 테스트, 설정, 네트워크 계층을 함께 관리해야 한다.</text>
+    <g transform="translate(90 160)">
+      <rect x="0" y="0" width="1020" height="92" rx="20" fill="#dbeafe" stroke="#2563eb"/>
+      <text x="34" y="38" font-size="25" font-weight="800" fill="#1e3a8a">거버넌스 계층</text>
+      <text x="34" y="68" font-size="17" fill="#1e40af">라이선스 · 릴리스 주기 · CVE 대응 · 내부 미러 · 표준 버전 정책</text>
+      <rect x="0" y="120" width="485" height="112" rx="20" fill="#ecfeff" stroke="#0891b2"/>
+      <text x="32" y="160" font-size="24" font-weight="800" fill="#155e75">빌드/패키징</text>
+      <text x="32" y="192" font-size="17" fill="#164e63">CMake · Bazel · vcpkg · Conan · 정적/동적 링크</text>
+      <rect x="535" y="120" width="485" height="112" rx="20" fill="#f0fdf4" stroke="#16a34a"/>
+      <text x="567" y="160" font-size="24" font-weight="800" fill="#166534">검증/품질</text>
+      <text x="567" y="192" font-size="17" fill="#166534">Catch2 · sanitizers · fuzzing · benchmark · CI matrix</text>
+      <rect x="0" y="260" width="312" height="125" rx="20" fill="#eef2ff" stroke="#4f46e5"/>
+      <text x="30" y="302" font-size="23" font-weight="800" fill="#3730a3">공통 유틸리티</text>
+      <text x="30" y="335" font-size="16" fill="#4338ca">Abseil: 시간, 문자열, 컨테이너, 로그, 호환성 유틸</text>
+      <rect x="354" y="260" width="312" height="125" rx="20" fill="#fff7ed" stroke="#ea580c"/>
+      <text x="384" y="302" font-size="23" font-weight="800" fill="#9a3412">설정/직렬화</text>
+      <text x="384" y="335" font-size="16" fill="#9a3412">yaml-cpp: 구성 파일 파싱, 스키마 검증은 별도 설계</text>
+      <rect x="708" y="260" width="312" height="125" rx="20" fill="#fdf2f8" stroke="#db2777"/>
+      <text x="738" y="302" font-size="23" font-weight="800" fill="#9d174d">비동기 I/O</text>
+      <text x="738" y="335" font-size="16" fill="#9d174d">Asio: 이벤트 루프, 코루틴, 타임아웃, 백프레셔</text>
+      <rect x="0" y="415" width="1020" height="92" rx="20" fill="#0f172a"/>
+      <text x="34" y="455" font-size="25" font-weight="800" fill="#f8fafc">운영 런타임</text>
+      <text x="34" y="486" font-size="17" fill="#cbd5e1">장기 지원 브랜치 · 장애 재현성 · 관측성 · 성능 회귀 감지 · 롤백 절차</text>
+    </g>
+  </g>
+</svg>
