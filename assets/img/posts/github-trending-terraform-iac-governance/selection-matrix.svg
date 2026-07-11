@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">IaC tool selection matrix</title>
+  <desc id="desc">Terraform, OpenTofu, Pulumi, Terragrunt를 라이선스, 언어, 생태계, 운영 복잡도 기준으로 비교한 매트릭스</desc>
+  <rect width="1100" height="560" rx="28" fill="#0f172a"/>
+  <text x="55" y="62" font-family="Arial" font-size="30" font-weight="800" fill="#f8fafc">IaC 도구 선택 매트릭스</text>
+  <text x="55" y="96" font-family="Arial" font-size="18" fill="#cbd5e1">확인 시점 공개 저장소와 문서 기준의 실무 의사결정 관점 비교</text>
+  <g font-family="Arial" font-size="18">
+    <rect x="55" y="135" width="990" height="350" rx="18" fill="#111827" stroke="#334155"/>
+    <g fill="#94a3b8" font-weight="700"><text x="85" y="180">도구</text><text x="245" y="180">강점</text><text x="505" y="180">주의점</text><text x="755" y="180">적합한 팀</text></g>
+    <line x1="75" y1="200" x2="1025" y2="200" stroke="#334155"/>
+    <g fill="#e5e7eb">
+      <text x="85" y="245" font-weight="800" fill="#c4b5fd">Terraform</text><text x="245" y="245">프로바이더·모듈 생태계</text><text x="505" y="245">라이선스·벤더 정책 검토</text><text x="755" y="245">표준화 우선 조직</text>
+      <line x1="75" y1="270" x2="1025" y2="270" stroke="#1f2937"/>
+      <text x="85" y="315" font-weight="800" fill="#99f6e4">OpenTofu</text><text x="245" y="315">MPL-2.0, 커뮤니티 거버넌스</text><text x="505" y="315">호환성·마이그레이션 검증</text><text x="755" y="315">OSS 정책 민감 조직</text>
+      <line x1="75" y1="340" x2="1025" y2="340" stroke="#1f2937"/>
+      <text x="85" y="385" font-weight="800" fill="#fdba74">Pulumi</text><text x="245" y="385">일반 언어·테스트 친화성</text><text x="505" y="385">런타임·SDK 학습 비용</text><text x="755" y="385">플랫폼 엔지니어링 팀</text>
+      <line x1="75" y1="410" x2="1025" y2="410" stroke="#1f2937"/>
+      <text x="85" y="455" font-weight="800" fill="#93c5fd">Terragrunt</text><text x="245" y="455">멀티 계정·스택 오케스트레이션</text><text x="505" y="455">추가 추상화와 디버깅 비용</text><text x="755" y="455">대규모 IaC 운영팀</text>
+    </g>
+  </g>
+</svg>

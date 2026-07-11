@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Terraform IaC governance trend analysis</title>
+  <desc id="desc">Terraform, OpenTofu, Pulumi, Terragrunt를 비교해 인프라 코드 거버넌스 흐름을 설명하는 커버 이미지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1f3b"/>
+      <stop offset="0.55" stop-color="#3d2c7d"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-opacity="0.25"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="110" r="160" fill="#ffffff" opacity="0.08"/>
+  <circle cx="120" cy="560" r="220" fill="#2dd4bf" opacity="0.11"/>
+  <g filter="url(#shadow)">
+    <rect x="90" y="110" width="1020" height="410" rx="34" fill="#0b1020" opacity="0.82"/>
+    <text x="130" y="185" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="28" font-weight="700">GitHub Trending Snapshot</text>
+    <text x="130" y="252" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="800">Terraform과 IaC 거버넌스</text>
+    <text x="130" y="306" fill="#d8e4ff" font-family="Arial, sans-serif" font-size="30">선언형 인프라, 오픈소스 분기, 운영 통제의 재평가</text>
+    <g transform="translate(130 365)">
+      <rect width="205" height="76" rx="18" fill="#7c3aed"/>
+      <text x="26" y="47" fill="#fff" font-family="Arial" font-size="25" font-weight="700">Terraform</text>
+      <rect x="245" width="205" height="76" rx="18" fill="#0f766e"/>
+      <text x="278" y="47" fill="#fff" font-family="Arial" font-size="25" font-weight="700">OpenTofu</text>
+      <rect x="490" width="170" height="76" rx="18" fill="#f97316"/>
+      <text x="525" y="47" fill="#fff" font-family="Arial" font-size="25" font-weight="700">Pulumi</text>
+      <rect x="700" width="200" height="76" rx="18" fill="#2563eb"/>
+      <text x="728" y="47" fill="#fff" font-family="Arial" font-size="25" font-weight="700">Terragrunt</text>
+    </g>
+  </g>
+</svg>
