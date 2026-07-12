@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Home Assistant local-first automation analysis</title>
+  <desc id="desc">Local-first home and edge automation platform centered on Home Assistant Core, privacy, integrations, and operational governance.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#0b3b5d"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="100" r="170" fill="#22d3ee" opacity="0.16"/>
+  <circle cx="150" cy="545" r="240" fill="#38bdf8" opacity="0.12"/>
+  <g transform="translate(115 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="970" height="440" rx="34" fill="#f8fafc" opacity="0.96"/>
+    <path d="M100 245 L240 130 L380 245 V365 H280 V285 H200 V365 H100 Z" fill="#0ea5e9"/>
+    <path d="M142 235 L240 156 L338 235" fill="none" stroke="#075985" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#0f172a" stroke-width="6" fill="none" stroke-linecap="round">
+      <path d="M430 160 H760"/>
+      <path d="M430 220 H835"/>
+      <path d="M430 280 H700"/>
+    </g>
+    <g transform="translate(820 132)">
+      <rect width="90" height="90" rx="20" fill="#ccfbf1" stroke="#0f766e" stroke-width="5"/>
+      <circle cx="45" cy="45" r="18" fill="#14b8a6"/>
+      <path d="M45 8 V24 M45 66 V82 M8 45 H24 M66 45 H82" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <text x="100" y="70" font-family="Inter, Arial, sans-serif" font-size="34" fill="#0f172a" font-weight="700">GitHub Trending Analysis</text>
+    <text x="430" y="360" font-family="Inter, Arial, sans-serif" font-size="43" fill="#0f172a" font-weight="800">Home Assistant</text>
+    <text x="430" y="405" font-family="Inter, Arial, sans-serif" font-size="27" fill="#334155">local control · privacy · edge automation</text>
+  </g>
+</svg>
