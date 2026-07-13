@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">에이전트형 금융 리서치 아키텍처</title>
+  <desc id="desc">사용자 질문이 라우팅, 시장 데이터 수집, 도구 실행, 백테스트 검증, 보고서와 승인 게이트를 거쳐 브로커 연결 또는 연구 저장소로 흘러가는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#ecfeff"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/></marker>
+    <style>.box{fill:#fff;stroke:#0f766e;stroke-width:2}.label{font-family:Inter,Apple SD Gothic Neo,Pretendard,Arial,sans-serif;fill:#0f172a}.small{font-size:15px;fill:#475569}.h{font-size:21px;font-weight:800}.mid{font-size:17px;font-weight:700}</style>
+  </defs>
+  <rect width="1100" height="560" rx="28" fill="url(#bg)"/>
+  <text x="55" y="58" class="label h">Vibe-Trading식 에이전트 금융 리서치 제어 흐름</text>
+  <text x="55" y="88" class="label small">핵심은 자동 매매가 아니라, 자연어 가설을 증거·검증·승인 가능한 연구 산출물로 바꾸는 통제면이다.</text>
+  <g transform="translate(50 130)">
+    <rect class="box" x="0" y="0" width="180" height="92" rx="18"/>
+    <text class="label mid" x="24" y="34">질문/가설</text><text class="label small" x="24" y="62">전략, 종목, 문서</text>
+    <line x1="190" y1="46" x2="255" y2="46" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect class="box" x="265" y="0" width="180" height="92" rx="18"/>
+    <text class="label mid" x="292" y="34">플래너/스킬</text><text class="label small" x="292" y="62">도구 선택과 라우팅</text>
+    <line x1="455" y1="46" x2="520" y2="46" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect class="box" x="530" y="0" width="210" height="92" rx="18"/>
+    <text class="label mid" x="558" y="34">시장 데이터 계층</text><text class="label small" x="558" y="62">19개 소스·fallback</text>
+    <line x1="750" y1="46" x2="815" y2="46" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect class="box" x="825" y="0" width="195" height="92" rx="18"/>
+    <text class="label mid" x="852" y="34">도구 실행</text><text class="label small" x="852" y="62">백테스트·팩터·문서</text>
+  </g>
+  <g transform="translate(50 290)">
+    <rect class="box" x="0" y="0" width="225" height="112" rx="18"/>
+    <text class="label mid" x="28" y="36">검증 산출물</text><text class="label small" x="28" y="66">run card, 지표, 경고</text><text class="label small" x="28" y="90">walk-forward, bootstrap</text>
+    <line x1="235" y1="56" x2="315" y2="56" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect class="box" x="325" y="0" width="225" height="112" rx="18"/>
+    <text class="label mid" x="353" y="36">사람 승인 게이트</text><text class="label small" x="353" y="66">TAP, 권한, 주문 한도</text><text class="label small" x="353" y="90">감사 로그와 중지 절차</text>
+    <line x1="560" y1="56" x2="640" y2="56" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect class="box" x="650" y="0" width="170" height="112" rx="18"/>
+    <text class="label mid" x="681" y="36">보고서/메모리</text><text class="label small" x="681" y="66">HTML/PDF</text><text class="label small" x="681" y="90">가설 저장소</text>
+    <line x1="830" y1="56" x2="905" y2="56" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="915" y="0" width="135" height="112" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text class="label mid" x="947" y="36">브로커</text><text class="label small" x="941" y="66">선택 연결</text><text class="label small" x="941" y="90">기본은 연구</text>
+  </g>
+  <path d="M970 222 C970 250 970 260 970 280" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="55" y="498" class="label small">운영 관점의 질문: 데이터 품질, look-ahead bias, 권한 분리, 주문 한도, 재현 가능한 로그가 준비됐는가?</text>
+</svg>
