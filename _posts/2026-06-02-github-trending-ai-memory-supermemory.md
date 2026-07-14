@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 AI 메모리 인프라의 부상"
+title: "AI 메모리 인프라의 부상"
 description: "2026년 6월 2일 GitHub Trending에서 Supermemory가 보여준 AI 장기 기억, 컨텍스트 엔진, 하이브리드 검색, 개인정보 거버넌스와 운영 리스크를 IT 전문가 관점에서 분석합니다."
 author: heracles-jo
 date: 2026-06-02 07:38:00 +0900

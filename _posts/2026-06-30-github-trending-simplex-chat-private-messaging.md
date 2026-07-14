@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 SimpleX Chat과 식별자 없는 메시징의 설계 비용"
+title: "SimpleX Chat과 식별자 없는 메시징의 설계 비용"
 description: "사용자 식별자 없이 동작하는 SimpleX Chat을 통해 프라이버시 중심 메시징이 얼마나 강력하고 또 얼마나 운영이 어려운지 살펴본다."
 author: heracles-jo
 date: 2026-06-30 07:31:00 +0900

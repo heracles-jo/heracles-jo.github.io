@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Terraform과 IaC 거버넌스의 재평가"
+title: "Terraform과 IaC 거버넌스의 재평가"
 description: "GitHub Trending에 다시 오른 Terraform을 OpenTofu, Pulumi, Terragrunt와 비교하며 선언형 인프라 코드, 상태 관리, 라이선스, 운영 리스크 관점에서 실무 도입 기준을 정리한다."
 author: heracles-jo
 date: 2026-07-12 07:39:00 +0900

@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 AI 네이티브 비디오 편집 워크플로의 부상"
+title: "AI 네이티브 비디오 편집 워크플로의 부상"
 description: "Palmier Pro와 OpenMontage가 GitHub Trending에 오른 배경을 통해 AI 비디오 편집, MCP 타임라인 제어, 생성형 미디어 운영 체계가 실무 콘텐츠 제작에 주는 의미를 분석한다."
 author: heracles-jo
 date: 2026-06-20 07:18:00 +0900

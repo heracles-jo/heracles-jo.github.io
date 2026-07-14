@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 SkillSpector와 AI Agent Skill 보안의 현실화"
+title: "SkillSpector와 AI Agent Skill 보안의 현실화"
 description: "GitHub Trending에 오른 NVIDIA SkillSpector를 중심으로 AI 에이전트 스킬, MCP 도구, 프롬프트 기반 자동화가 새로운 공급망 보안 영역으로 떠오르는 이유와 실무 통제 방안을 분석합니다."
 author: heracles-jo
 date: 2026-06-11 07:25:00 +0900

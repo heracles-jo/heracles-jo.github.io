@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Vibe-Trading과 에이전트형 금융 리서치 거버넌스"
+title: "Vibe-Trading과 에이전트형 금융 리서치 거버넌스"
 description: "GitHub Trending에 오른 Vibe-Trading을 중심으로 자연어 기반 금융 리서치 에이전트, 백테스트 자동화, MCP 도구화, 브로커 연결과 운영 리스크를 실무 의사결정 관점에서 분석한다."
 author: heracles-jo
 date: 2026-07-14 07:39:00 +0900

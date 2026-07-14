@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 문서 AI와 셀프호스팅 DMS의 재부상"
+title: "문서 AI와 셀프호스팅 DMS의 재부상"
 description: "2026년 5월 26일 GitHub Trending에서 paperless-ngx가 보여준 OCR, 검색, 워크플로, 셀프호스팅 문서관리 시스템의 실무적 의미를 IT 전문가 관점에서 분석합니다."
 author: heracles-jo
 date: 2026-05-26 07:05:00 +0900

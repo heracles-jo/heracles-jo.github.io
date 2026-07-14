@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Supervision과 컴퓨터 비전 도구 레이어의 표준화"
+title: "Supervision과 컴퓨터 비전 도구 레이어의 표준화"
 description: "Roboflow Supervision을 통해 탐지 모델 위에 얹는 후처리·주석·평가 레이어가 왜 별도 프로젝트가 되었는지 분석한다."
 author: heracles-jo
 date: 2026-06-29 07:26:00 +0900

@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 Linux 서버 하드닝 기준선의 재부상"
+title: "Linux 서버 하드닝 기준선의 재부상"
 description: "GitHub Trending에 오른 How-To-Secure-A-Linux-Server를 중심으로 SSH, 패치, 방화벽, 감사, 로깅을 하나의 운영 가능한 Linux 서버 하드닝 기준선으로 설계하는 방법과 Lynis·OpenSCAP·Ansible hardening과의 차이, 도입 체크리스트와 리스크를 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-10 07:24:00 +0900
 categories: [Security, Infrastructure]
 tags: [github-trending, linux-security, server-hardening, ssh, fail2ban, crowdsec, lynis, openscap, ansible, devsecops, compliance, operations]

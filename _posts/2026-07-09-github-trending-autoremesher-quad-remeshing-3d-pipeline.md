@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 AutoRemesher와 자동 쿼드 리메싱 파이프라인"
+title: "AutoRemesher와 자동 쿼드 리메싱 파이프라인"
 description: "GitHub Trending에 오른 huxingyi/autoremesher를 중심으로 고밀도 3D 메시를 실무 자산으로 바꾸는 자동 쿼드 리메싱의 기술 구조, Blender·Instant Meshes·Open3D와의 차이, 도입 체크리스트와 운영 리스크를 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-09 07:39:00 +0900
 categories: [3D Infrastructure, Developer Tools]
 tags: [github-trending, autoremesher, quad-remeshing, retopology, 3d-pipeline, mesh-processing, blender, instant-meshes, open3d, digital-twin, game-development]

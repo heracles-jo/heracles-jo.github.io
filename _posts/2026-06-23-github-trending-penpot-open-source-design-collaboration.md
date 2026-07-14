@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Penpot과 오픈소스 디자인 협업 플랫폼의 현실성"
+title: "Penpot과 오픈소스 디자인 협업 플랫폼의 현실성"
 description: "penpot/penpot이 GitHub Trending에 오른 흐름을 바탕으로, Figma 중심 디자인 협업의 대안으로서 오픈소스·셀프호스팅·웹 표준 기반 디자인 플랫폼이 갖는 실무 가치와 도입 리스크를 분석한다."
 author: heracles-jo
 date: 2026-06-23 07:32:00 +0900
