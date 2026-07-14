@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Endpoint baseline decision matrix</title>
+  <desc id="desc">A decision matrix comparing open-source Windows debloat scripts, Microsoft management tooling, commercial optimization tools, and one-off manual settings.</desc>
+  <rect width="1100" height="620" fill="#0f172a" rx="28"/>
+  <text x="58" y="70" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#f8fafc">Endpoint baseline decision matrix</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="18">
+    <rect x="55" y="110" width="990" height="420" rx="20" fill="#111827" stroke="#334155"/>
+    <g fill="#93c5fd" font-weight="800">
+      <text x="90" y="160">Approach</text><text x="350" y="160">Strength</text><text x="630" y="160">Risk</text><text x="850" y="160">Best fit</text>
+    </g>
+    <g stroke="#334155"><path d="M55 185h990"/><path d="M55 265h990"/><path d="M55 345h990"/><path d="M55 425h990"/><path d="M310 110v420"/><path d="M590 110v420"/><path d="M810 110v420"/></g>
+    <g fill="#e5e7eb">
+      <text x="90" y="225" font-weight="700">Win11Debloat</text><text x="350" y="215">빠른 표준화, 스크립트화</text><text x="350" y="240">커뮤니티 속도</text><text x="630" y="225">변경 범위 검증 필요</text><text x="850" y="225">랩·파일럿·개인 장비</text>
+      <text x="90" y="305" font-weight="700">Intune / GPO</text><text x="350" y="295">정책 지속성, 감사</text><text x="350" y="320">조직 통제</text><text x="630" y="305">초기 설계 비용</text><text x="850" y="305">기업 표준 운영</text>
+      <text x="90" y="385" font-weight="700">상용/유틸 도구</text><text x="350" y="375">UI·지원·번들 기능</text><text x="630" y="375">블랙박스·라이선스</text><text x="630" y="400">정책 충돌</text><text x="850" y="385">개인·소규모 지원</text>
+      <text x="90" y="465" font-weight="700">수동 설정</text><text x="350" y="455">세밀한 예외 처리</text><text x="630" y="455">재현성·감사 취약</text><text x="850" y="455">일회성 트러블슈팅</text>
+    </g>
+  </g>
+  <text x="58" y="575" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#bae6fd">핵심 판단: 제거 스크립트를 정책 관리의 대체재가 아니라 기준선 설계와 파일럿 검증의 입력으로 다뤄야 한다.</text>
+</svg>
