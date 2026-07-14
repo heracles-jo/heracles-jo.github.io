@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 RomM과 셀프호스팅 게임 라이브러리 운영의 부상"
+title: "RomM과 셀프호스팅 게임 라이브러리 운영의 부상"
 description: "GitHub Trending에 오른 rommapp/romm을 중심으로 ROM 관리, 브라우저 에뮬레이션, 메타데이터 통합, 권한 공유가 결합된 셀프호스팅 게임 라이브러리 스택의 아키텍처와 운영 리스크를 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-06 07:55:00 +0900
 categories: [Self Hosting, Media Infrastructure]
 tags: [github-trending, romm, self-hosting, game-library, emulation, rom-manager, emulatorjs, retroachievements, metadata, digital-preservation, homelab]

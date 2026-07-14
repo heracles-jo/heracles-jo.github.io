@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Flowsint와 OSINT 그래프 조사 플랫폼"
+title: "Flowsint와 OSINT 그래프 조사 플랫폼"
 description: "2026년 6월 3일 GitHub Trending에서 Flowsint가 보여준 오픈소스 OSINT 그래프 조사, 위협 인텔리전스, 윤리적 정찰 자동화와 운영 리스크를 IT 전문가 관점에서 분석합니다."
 author: heracles-jo
 date: 2026-06-03 07:25:00 +0900

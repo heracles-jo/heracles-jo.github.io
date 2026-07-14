@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 NVIDIA Cosmos와 Physical AI 인프라의 부상"
+title: "NVIDIA Cosmos와 Physical AI 인프라의 부상"
 description: "GitHub Trending에 오른 NVIDIA Cosmos를 중심으로 월드 모델, 합성 데이터, 로봇·자율시스템 개발 파이프라인이 왜 지금 Physical AI 인프라 경쟁으로 확장되는지 분석합니다."
 author: heracles-jo
 date: 2026-06-05 07:05:00 +0900

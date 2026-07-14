@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 LMCache와 LLM 서빙 KV Cache 계층의 부상"
+title: "LMCache와 LLM 서빙 KV Cache 계층의 부상"
 description: "GitHub Trending에 오른 LMCache를 중심으로 LLM 추론 비용의 핵심 병목인 prefill, KV cache 재사용, vLLM 기반 서빙 최적화, 운영 리스크와 PoC 기준을 실무 관점에서 분석한다."
 author: heracles-jo
 date: 2026-06-14 07:05:00 +0900

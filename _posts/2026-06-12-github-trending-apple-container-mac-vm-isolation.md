@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Apple container와 Mac 컨테이너 격리의 재설계"
+title: "Apple container와 Mac 컨테이너 격리의 재설계"
 description: "GitHub Trending에 오른 apple/container를 중심으로 Apple silicon Mac에서 OCI 컨테이너를 컨테이너별 경량 VM으로 실행하는 흐름, Docker Desktop과의 차이, 보안·운영 리스크와 도입 기준을 분석합니다."
 author: heracles-jo
 date: 2026-06-12 07:12:00 +0900

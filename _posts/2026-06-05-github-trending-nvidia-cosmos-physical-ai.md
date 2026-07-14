@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 NVIDIA Cosmos와 Physical AI 월드 모델의 현실적 의미"
+title: "NVIDIA Cosmos와 Physical AI 월드 모델의 현실적 의미"
 description: "NVIDIA Cosmos 3가 GitHub Trending에 오른 배경을 바탕으로 Physical AI, 월드 모델, 로봇 시뮬레이션, 액션 모델링이 실무 AI 인프라 의사결정에 주는 의미를 분석한다."
 author: heracles-jo
 date: 2026-06-05 07:45:00 +0900

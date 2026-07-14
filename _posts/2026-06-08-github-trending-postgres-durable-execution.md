@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 pg_durable과 Postgres 내장형 Durable Execution"
+title: "pg_durable과 Postgres 내장형 Durable Execution"
 description: "GitHub Trending에 오른 Microsoft pg_durable을 중심으로 워크플로 엔진, 큐, 배치 작업을 PostgreSQL 내부로 끌어들이는 durable execution 흐름과 실무 도입 기준을 분석합니다."
 author: heracles-jo
 date: 2026-06-08 09:45:00 +0900

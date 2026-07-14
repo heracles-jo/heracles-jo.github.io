@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 셀프호스팅 메시징 API의 부상"
+title: "셀프호스팅 메시징 API의 부상"
 description: "2026년 5월 21일 GitHub Trending에서 OpenWA가 보여준 셀프호스팅 WhatsApp API 게이트웨이 흐름을 고객 커뮤니케이션 자동화, 운영 리스크, 보안 관점에서 분석합니다."
-author: heracles.jo
+author: heracles-jo
 date: 2026-05-21 08:35:00 +0900
 categories: [Messaging, Open Source]
 tags: [github-trending, whatsapp-api, self-hosting, automation, customer-engagement]

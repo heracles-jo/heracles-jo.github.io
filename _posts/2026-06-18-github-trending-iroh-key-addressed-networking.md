@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Iroh와 키 기반 애플리케이션 네트워킹"
+title: "Iroh와 키 기반 애플리케이션 네트워킹"
 description: "GitHub Trending에 오른 n0-computer/iroh를 중심으로 IP 주소 대신 공개키로 피어를 연결하는 QUIC 기반 P2P 애플리케이션 네트워킹, relay 운영, libp2p·Tailscale·Cloudflare Tunnel과의 차이, 실무 도입 리스크를 분석한다."
 author: heracles-jo
 date: 2026-06-18 07:10:00 +0900

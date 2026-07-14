@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 Logto와 오픈소스 ID 인프라의 재설계"
+title: "Logto와 오픈소스 ID 인프라의 재설계"
 description: "GitHub Trending에 오른 Logto를 중심으로 SaaS와 AI 앱 시대의 인증·인가 인프라, OIDC/OAuth 2.1, 멀티테넌시, SSO, RBAC, Keycloak·Authentik·Ory와의 차이, 실무 도입 리스크를 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-06-30 06:58:00 +0900
 categories: [Security, Platform Engineering]
 tags: [github-trending, logto, identity-infrastructure, iam, oidc, oauth-2-1, sso, rbac, multi-tenancy, saas, ai-apps, keycloak, authentik, ory]

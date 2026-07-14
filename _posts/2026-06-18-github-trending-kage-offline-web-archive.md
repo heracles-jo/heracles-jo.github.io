@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 kage와 JavaScript 제거형 오프라인 웹 아카이브"
+title: "kage와 JavaScript 제거형 오프라인 웹 아카이브"
 description: "GitHub Trending에 오른 kage를 중심으로, 동적 웹을 렌더링한 뒤 JavaScript를 제거해 오프라인 보존 가능한 정적 문서로 만드는 흐름의 실무 가치와 한계를 분석한다."
 author: heracles-jo
 date: 2026-06-18 07:12:00 +0900

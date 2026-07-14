@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 AI 코딩 시대의 토큰 절감형 개발 도구"
+title: "AI 코딩 시대의 토큰 절감형 개발 도구"
 description: "2026년 5월 20일 GitHub Trending에서 codegraph, rtk, react-doctor, pyrefly가 보여준 AI 코딩 인프라의 다음 경쟁력을 분석합니다."
-author: heracles.jo
+author: heracles-jo
 date: 2026-05-20 11:40:00 +0900
 categories: [Developer Tools, Open Source]
 tags: [github-trending, developer-tools, ai-coding, code-indexing, token-optimization]

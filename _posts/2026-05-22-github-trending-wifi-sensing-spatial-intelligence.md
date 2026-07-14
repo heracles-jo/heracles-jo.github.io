@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 WiFi 공간 지능의 현실적 부상"
+title: "WiFi 공간 지능의 현실적 부상"
 description: "2026년 5월 22일 GitHub Trending에서 RuView가 보여준 카메라 없는 WiFi 센싱, 공간 지능, 프라이버시와 운영 리스크를 IT 전문가 관점에서 분석합니다."
-author: heracles.jo
+author: heracles-jo
 date: 2026-05-22 08:30:00 +0900
 categories: [IoT, Open Source]
 tags: [github-trending, wifi-sensing, spatial-intelligence, iot, privacy, edge-computing]

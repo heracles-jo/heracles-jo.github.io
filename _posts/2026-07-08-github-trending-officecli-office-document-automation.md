@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 OfficeCLI와 AI 시대 오피스 문서 자동화 인프라"
+title: "OfficeCLI와 AI 시대 오피스 문서 자동화 인프라"
 description: "GitHub Trending에 오른 iOfficeAI/OfficeCLI를 중심으로 Word, Excel, PowerPoint 자동화가 왜 다시 인프라 문제가 되었는지, 기존 LibreOffice·Pandoc·Open XML SDK 방식과 비교해 실무 도입 기준과 리스크를 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-08 07:18:00 +0900
 categories: [Enterprise Automation, Developer Tools]
 tags: [github-trending, officecli, office-automation, document-automation, word, excel, powerpoint, mcp, openxml, enterprise-ai, libreoffice, pandoc]

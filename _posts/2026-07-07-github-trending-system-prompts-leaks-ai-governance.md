@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 System Prompts Leaks와 AI 제품 거버넌스 리스크"
+title: "System Prompts Leaks와 AI 제품 거버넌스 리스크"
 description: "GitHub Trending에 오른 system_prompts_leaks를 중심으로 시스템 프롬프트 유출이 AI 제품 보안, 정책 자산 관리, 프롬프트 거버넌스, 운영 리스크에 주는 의미를 실무 관점에서 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-07 07:12:00 +0900
 categories: [AI Governance, Security]
 tags: [github-trending, system-prompts-leaks, prompt-security, ai-governance, llm-security, prompt-injection, red-team, policy-as-code, ai-product, security-operations]

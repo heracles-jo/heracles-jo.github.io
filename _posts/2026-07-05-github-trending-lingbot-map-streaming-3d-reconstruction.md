@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 LingBot-Map과 스트리밍 3D 재구성의 실무 의미"
+title: "LingBot-Map과 스트리밍 3D 재구성의 실무 의미"
 description: "GitHub Trending에 오른 LingBot-Map을 중심으로 feed-forward 3D foundation model, Geometric Context Transformer, 긴 비디오 기반 3D 재구성의 아키텍처와 도입 리스크를 분석한다."
 author: heracles-jo
 date: 2026-07-05 07:20:00 +0900

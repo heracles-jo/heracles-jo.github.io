@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 gstack과 GPU 개발 환경 운영의 현실 문제"
+title: "gstack과 GPU 개발 환경 운영의 현실 문제"
 description: "garrytan/gstack을 중심으로 로컬·클라우드·팀 공유 GPU 개발 환경을 어떻게 구성하고 통제할지, AI 개발 인프라 관점에서 분석한다."
 author: heracles-jo
 date: 2026-06-22 07:25:00 +0900

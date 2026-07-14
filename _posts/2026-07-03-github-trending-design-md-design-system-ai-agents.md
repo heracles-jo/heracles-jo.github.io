@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 DESIGN.md와 AI 코딩 시대의 디자인 시스템 운영"
+title: "DESIGN.md와 AI 코딩 시대의 디자인 시스템 운영"
 description: "google-labs-code/design.md가 GitHub Trending에 오른 배경을 바탕으로, AI 코딩 도구가 일관된 UI를 만들기 위해 필요한 디자인 토큰, 문서화, lint/diff 기반 운영 모델을 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-03 07:34:00 +0900
 categories: [Engineering, Frontend]
 tags: [github-trending, design-md, design-system, design-tokens, frontend, ai-coding, ux-engineering, ci]
