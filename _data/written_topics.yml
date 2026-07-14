@@ -35,3 +35,13 @@
     - "셀프호스팅 CRM"
   slug: "github-trending-open-source-crm-twenty"
   summary: "Twenty를 중심으로 오픈소스 CRM, 코드 기반 고객 데이터 모델링, AI 에이전트 확장, 셀프호스팅 운영 리스크와 도입 기준을 분석."
+- date: 2026-07-15
+  title: "AI 에이전트 위험 명령 차단: dcg 도입 기준"
+  github_repo: "https://github.com/Dicklesworthstone/destructive_command_guard"
+  main_keyword: "AI 에이전트 위험 명령 차단"
+  related_keywords:
+    - "destructive command guard"
+    - "AI 코딩 에이전트 보안"
+    - "셸 명령 차단"
+  slug: "ai-agent-destructive-command-guard"
+  summary: "dcg의 사전 실행 훅, 규칙 팩, fail-open 경계, 오탐·우회 운영 비용, 수정된 MIT 라이선스를 검토하고 도입 기준을 제시."
