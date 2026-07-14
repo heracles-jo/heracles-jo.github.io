@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">dcg 도입 의사결정 매트릭스</title><desc id="desc">실수 가능성과 권한 영향에 따라 훅, 샌드박스, IAM 통제를 선택하는 표</desc>
+  <rect width="1200" height="720" rx="24" fill="#0b1322"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif">
+    <text x="60" y="70" fill="#f8fafc" font-size="38" font-weight="800">위험 명령 차단 도입 매트릭스</text>
+    <text x="60" y="108" fill="#94a3b8" font-size="20">에이전트의 의도보다 권한과 복구 가능성을 기준으로 통제를 고른다</text>
+    <g transform="translate(180 165)">
+      <rect width="850" height="440" rx="16" fill="#111c30" stroke="#334155" stroke-width="2"/>
+      <line x1="425" y1="0" x2="425" y2="440" stroke="#64748b" stroke-width="2"/><line x1="0" y1="220" x2="850" y2="220" stroke="#64748b" stroke-width="2"/>
+      <rect x="8" y="8" width="409" height="204" rx="12" fill="#123047"/><rect x="433" y="8" width="409" height="204" rx="12" fill="#3b1c28"/>
+      <rect x="8" y="228" width="409" height="204" rx="12" fill="#162d29"/><rect x="433" y="228" width="409" height="204" rx="12" fill="#3a2d18"/>
+      <text x="40" y="53" fill="#7dd3fc" font-size="23" font-weight="800">로컬 개발 · 복구 가능</text>
+      <text x="40" y="91" fill="#dbeafe" font-size="19">기본 Git/파일 팩 + 정확한 allowlist</text><text x="40" y="124" fill="#cbd5e1" font-size="17">오탐 시간과 훅 유지 여부 측정</text>
+      <text x="465" y="53" fill="#fca5a5" font-size="23" font-weight="800">운영 권한 · 복구 어려움</text>
+      <text x="465" y="91" fill="#fee2e2" font-size="19">IAM 축소 + 사람 승인 + 별도 계정</text><text x="465" y="124" fill="#cbd5e1" font-size="17">dcg는 보조선, 단독 통제 금지</text>
+      <text x="40" y="273" fill="#86efac" font-size="23" font-weight="800">적대적 입력 · 낮은 권한</text>
+      <text x="40" y="311" fill="#dcfce7" font-size="19">샌드박스 + egress 제한</text><text x="40" y="344" fill="#cbd5e1" font-size="17">패턴 차단보다 실행 격리 우선</text>
+      <text x="465" y="273" fill="#fcd34d" font-size="23" font-weight="800">적대적 입력 · 높은 권한</text>
+      <text x="465" y="311" fill="#fef3c7" font-size="19">권한 재설계 전 자동화 중단</text><text x="465" y="344" fill="#cbd5e1" font-size="17">무인 에이전트에 관리자 권한 금지</text>
+    </g>
+    <text x="605" y="640" text-anchor="middle" fill="#94a3b8" font-size="18">낮은 영향  ←  실행 결과의 영향과 복구 비용  →  높은 영향</text>
+    <text x="75" y="390" text-anchor="middle" fill="#94a3b8" font-size="18" transform="rotate(-90 75 390)">우발적 실수  ←  입력의 적대성  →  공격·인젝션</text>
+    <rect x="180" y="660" width="850" height="4" rx="2" fill="#38bdf8"/>
+  </g>
+</svg>
