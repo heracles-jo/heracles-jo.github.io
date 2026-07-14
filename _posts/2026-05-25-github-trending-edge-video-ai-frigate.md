@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 엣지 비디오 AI의 현실적 부상"
+title: "엣지 비디오 AI의 현실적 부상"
 description: "2026년 5월 25일 GitHub Trending에서 Frigate가 보여준 로컬 NVR, 실시간 객체 탐지, 프라이버시 중심 엣지 비디오 AI의 운영 전략을 IT 전문가 관점에서 분석합니다."
 author: heracles-jo
 date: 2026-05-25 07:00:00 +0900

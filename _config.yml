@@ -6,7 +6,7 @@ theme: jekyll-theme-chirpy
 # 웹페이지 언어 › http://www.lingoes.net/en/translator/langcode.htm
 # `_data/locales` 폴더의 파일명과 동일하면 레이아웃 언어도 함께 변경된다.
 # 일치하는 파일이 없으면 레이아웃 언어는 기본값인 'en'을 사용한다.
-lang: en
+lang: ko-KR
 
 # 시간대 변경 › https://zones.arilyn.cc
 timezone: Asia/Seoul
@@ -16,10 +16,10 @@ timezone: Asia/Seoul
 
 title: Heracles.jo # 사이트의 기본 제목
 
-tagline: Notes on Technology, Innovation, and What Comes Next # 부제목으로 표시된다
+tagline: 기술을 넘어 운영과 선택의 기준을 기록합니다 # 부제목으로 표시된다
 
 description: >- # SEO 메타 태그와 Atom 피드에 사용된다
-  A personal technology blog exploring IT trends, emerging technologies, developer tools, and ideas shaping the digital future.
+  오픈소스, AI, 클라우드 인프라, 보안, 개발자 도구를 아키텍처와 운영 관점에서 분석하고 실무 도입 기준을 제시하는 기술 블로그입니다.
 
 # 사이트의 프로토콜과 호스트명을 입력한다.
 # 예: 'https://username.github.io', 끝에 '/'를 붙이지 않는다.

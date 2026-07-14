@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 오픈소스 문서 파서 LiteParse와 RAG 데이터 파이프라인"
+title: "오픈소스 문서 파서 LiteParse와 RAG 데이터 파이프라인"
 description: "2026년 5월 29일 GitHub Trending에서 LiteParse가 보여준 PDF 파싱, 문서 처리, RAG 데이터 준비, 로컬 문서 AI 파이프라인의 실무 가치를 분석합니다."
 author: heracles-jo
 date: 2026-05-29 08:34:00 +0900

@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 오픈소스 TTS와 음성 AI 인프라의 부상"
+title: "오픈소스 TTS와 음성 AI 인프라의 부상"
 description: "2026년 5월 28일 GitHub Trending에서 VoxCPM이 보여준 오픈소스 TTS, 다국어 음성 합성, 로컬 음성 AI 인프라의 실무 적용 가능성을 분석합니다."
 author: heracles-jo
 date: 2026-05-28 08:17:00 +0900

@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Mattermost와 보안형 개발 협업 플랫폼의 재부상"
+title: "Mattermost와 보안형 개발 협업 플랫폼의 재부상"
 description: "GitHub Trending에 오른 Mattermost를 중심으로 자체 호스팅 협업, ChatOps, 인시던트 대응, 보안 게이트, 데이터 주권을 하나의 개발 생명주기 플랫폼으로 묶는 흐름을 실무 관점에서 분석한다."
 author: heracles-jo
 date: 2026-06-13 06:58:00 +0900

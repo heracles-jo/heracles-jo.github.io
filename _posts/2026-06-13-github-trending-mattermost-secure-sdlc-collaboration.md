@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Mattermost와 보안 중심 SDLC 협업 플랫폼의 재부상"
+title: "Mattermost와 보안 중심 SDLC 협업 플랫폼의 재부상"
 description: "GitHub Trending에 오른 Mattermost를 중심으로 오픈소스 협업 플랫폼이 왜 다시 보안, 감사, DevSecOps, 온프레미스 운영의 핵심 제어면으로 주목받는지 분석한다."
 author: heracles-jo
 date: 2026-06-13 07:35:00 +0900

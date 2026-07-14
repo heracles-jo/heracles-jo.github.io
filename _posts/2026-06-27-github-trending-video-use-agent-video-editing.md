@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 video-use와 에이전트 기반 영상 편집의 현실성"
+title: "video-use와 에이전트 기반 영상 편집의 현실성"
 description: "Claude Code로 영상을 편집하는 video-use를 통해, 영상 제작이 코드 실행과 에이전트 오케스트레이션의 문제로 바뀌는 흐름을 살펴본다."
 author: heracles-jo
 date: 2026-06-27 07:34:00 +0900

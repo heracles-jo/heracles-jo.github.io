@@ -50,6 +50,10 @@
 
   {{ seo_tags }}
 
+  {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+  {% endif %}
+
   {%- if site.social.fediverse_handle %}
     <!-- Fediverse handle/creator -->
     <meta name="fediverse:creator" content="{{ site.social.fediverse_handle }}">

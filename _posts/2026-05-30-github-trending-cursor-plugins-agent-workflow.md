@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Cursor Plugins와 에이전트형 개발 워크플로의 표준화"
+title: "Cursor Plugins와 에이전트형 개발 워크플로의 표준화"
 description: "2026년 5월 30일 GitHub Trending에서 cursor/plugins가 보여준 AI 코딩 플러그인, 팀 워크플로 자동화, 에이전트 확장 생태계의 실무 의미를 분석합니다."
 author: heracles-jo
 date: 2026-05-30 08:46:00 +0900

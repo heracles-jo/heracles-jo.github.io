@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Trivy와 클라우드 네이티브 공급망 보안의 표준화"
+title: "Trivy와 클라우드 네이티브 공급망 보안의 표준화"
 description: "GitHub Trending에 다시 오른 Trivy를 중심으로 컨테이너, Kubernetes, IaC, SBOM, 시크릿 스캔이 하나의 DevSecOps 운영 체계로 수렴하는 흐름을 분석한다."
 author: heracles-jo
 date: 2026-06-04 07:50:00 +0900

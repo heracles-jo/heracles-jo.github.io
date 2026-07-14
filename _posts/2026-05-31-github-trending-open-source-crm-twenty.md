@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 오픈소스 CRM Twenty와 AI 시대 고객 데이터 플랫폼"
+title: "오픈소스 CRM Twenty와 AI 시대 고객 데이터 플랫폼"
 description: "GitHub Trending에 오른 Twenty를 중심으로 오픈소스 CRM, AI 에이전트 확장, 셀프호스팅 운영 리스크와 도입 판단 기준을 분석합니다."
 author: heracles-jo
 date: 2026-05-31 09:21:11 +0900

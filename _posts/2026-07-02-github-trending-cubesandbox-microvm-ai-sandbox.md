@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 CubeSandbox와 AI 코드 실행 샌드박스의 인프라화"
+title: "CubeSandbox와 AI 코드 실행 샌드박스의 인프라화"
 description: "GitHub Trending에 오른 TencentCloud/CubeSandbox를 중심으로 KVM MicroVM, RustVMM, eBPF, L7 egress, Copy-on-Write 스냅샷 기반 AI 코드 실행 샌드박스가 왜 플랫폼 인프라 의제가 되었는지 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-02 07:09:00 +0900
 categories: [Cloud Infrastructure, Platform Engineering]
 tags: [github-trending, cubesandbox, microvm, ai-sandbox, kvm, rustvmm, ebpf, egress-control, copy-on-write, platform-engineering, secure-code-execution, e2b, daytona]

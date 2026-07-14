@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 TeslaMate와 차량 데이터 옵저버빌리티의 현실화"
+title: "TeslaMate와 차량 데이터 옵저버빌리티의 현실화"
 description: "GitHub Trending에 오른 TeslaMate를 중심으로 셀프호스팅 차량 데이터 로거, Postgres·Grafana·MQTT 기반 모빌리티 옵저버빌리티, 보안·운영 리스크와 PoC 기준을 실무 관점에서 분석한다."
 author: heracles-jo
 date: 2026-06-16 07:41:00 +0900

@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 SimpleX와 식별자 없는 프라이버시 메시징"
+title: "SimpleX와 식별자 없는 프라이버시 메시징"
 description: "GitHub Trending에 오른 SimpleX를 중심으로 전역 사용자 ID 없는 메시징 네트워크의 구조, Signal·Matrix·Session과의 차이, 보안·운영 리스크와 실무 도입 기준을 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-06-29 07:31:00 +0900
 categories: [Security, Open Source]
 tags: [github-trending, simplex, private-messaging, metadata-privacy, e2ee, smp, xftp, signal, matrix, session, zero-identifier]

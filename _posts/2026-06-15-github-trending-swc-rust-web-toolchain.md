@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 SWC와 Rust 웹 툴체인 재편"
+title: "SWC와 Rust 웹 툴체인 재편"
 description: "GitHub Trending에 오른 swc-project/swc를 중심으로 Rust 기반 TypeScript·JavaScript 컴파일러가 프런트엔드 빌드, CI 비용, 프레임워크 아키텍처, 운영 리스크를 어떻게 바꾸는지 실무 관점에서 분석한다."
 author: heracles-jo
 date: 2026-06-15 07:20:00 +0900

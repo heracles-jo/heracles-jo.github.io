@@ -1,7 +1,7 @@
 ---
 title: "GitHub Trending으로 읽는 에이전트 네이티브 소프트웨어의 부상"
 description: "2026년 5월 19일 GitHub Trending을 기준으로 AI 에이전트, 로컬 AI, 자동화 도구가 왜 동시에 주목받고 있는지 정리합니다."
-author: heracles.jo
+author: heracles-jo
 date: 2026-05-19 15:00:00 +0900
 categories: [Tech, Open Source]
 tags: [github-trending, ai-agent, open-source, local-ai]

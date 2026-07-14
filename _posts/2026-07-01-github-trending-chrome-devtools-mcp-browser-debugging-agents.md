@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Chrome DevTools MCP와 코딩 에이전트 디버깅의 다음 단계"
+title: "Chrome DevTools MCP와 코딩 에이전트 디버깅의 다음 단계"
 description: "ChromeDevTools/chrome-devtools-mcp가 GitHub Trending에 오른 흐름을 바탕으로, 코딩 에이전트가 실제 브라우저를 검사하고 성능·네트워크·콘솔 문제를 다루는 MCP 기반 디버깅 아키텍처를 분석한다."
 author: heracles-jo
 date: 2026-07-01 07:33:00 +0900

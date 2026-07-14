@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Scrapling과 적응형 웹 스크래핑 인프라"
+title: "Scrapling과 적응형 웹 스크래핑 인프라"
 description: "GitHub Trending에 오른 Scrapling을 중심으로 적응형 웹 스크래핑, 안티봇 대응, 데이터 파이프라인 운영 리스크와 도입 기준을 분석합니다."
 author: heracles-jo
 date: 2026-06-01 07:42:00 +0900
