@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 프로덕션 프로파일링의 재부상"
+title: "프로덕션 프로파일링의 재부상"
 description: "2026년 5월 24일 GitHub Trending에서 magic-trace가 보여준 고해상도 실행 트레이싱, 성능 장애 분석, 운영 관측성 전략을 IT 전문가 관점에서 분석합니다."
-author: heracles.jo
+author: heracles-jo
 date: 2026-05-24 07:45:00 +0900
 categories: [Observability, Open Source]
 tags: [github-trending, observability, profiling, tracing, performance, operations]

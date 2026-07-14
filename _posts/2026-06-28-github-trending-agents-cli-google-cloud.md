@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 agents-cli와 엔터프라이즈 에이전트 운영 계층"
+title: "agents-cli와 엔터프라이즈 에이전트 운영 계층"
 description: "Google의 agents-cli를 중심으로 코딩 어시스턴트를 클라우드 에이전트 운영 도구로 바꾸는 흐름과 실무 도입 조건을 분석한다."
 author: heracles-jo
 date: 2026-06-28 07:28:00 +0900

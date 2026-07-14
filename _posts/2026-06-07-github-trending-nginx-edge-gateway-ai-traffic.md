@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 NGINX와 AI 트래픽 시대의 엣지 게이트웨이"
+title: "NGINX와 AI 트래픽 시대의 엣지 게이트웨이"
 description: "GitHub Trending에 다시 오른 NGINX를 중심으로 AI 서비스, API 게이트웨이, 리버스 프록시, 캐시, 로드밸런싱, 운영 보안이 왜 여전히 핵심 인프라인지 분석합니다."
 author: heracles-jo
 date: 2026-06-07 07:40:00 +0900

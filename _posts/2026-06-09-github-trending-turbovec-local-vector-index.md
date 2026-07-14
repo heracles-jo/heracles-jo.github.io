@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 TurboVec와 로컬 벡터 인덱스의 실무적 의미"
+title: "TurboVec와 로컬 벡터 인덱스의 실무적 의미"
 description: "GitHub Trending에 오른 TurboVec를 중심으로 압축 벡터 검색, 로컬 RAG 인프라, FAISS·Qdrant·LanceDB와의 차이, 도입 리스크와 PoC 체크리스트를 IT 전문가 관점에서 분석한다."
 author: heracles-jo
 date: 2026-06-09 07:00:00 +0900

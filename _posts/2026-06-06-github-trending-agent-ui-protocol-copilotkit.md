@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 CopilotKit과 에이전트 UI 프로토콜의 부상"
+title: "CopilotKit과 에이전트 UI 프로토콜의 부상"
 description: "GitHub Trending에 오른 CopilotKit과 AG-UI Protocol을 중심으로 AI 에이전트가 제품 화면, 상태, 승인 워크플로와 결합하는 프런트엔드 스택의 실무 의미를 분석합니다."
 author: heracles-jo
 date: 2026-06-06 07:08:00 +0900

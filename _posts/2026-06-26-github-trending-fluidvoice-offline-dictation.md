@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 FluidVoice와 로컬 음성 입력의 재가치화"
+title: "FluidVoice와 로컬 음성 입력의 재가치화"
 description: "macOS 오프라인 받아쓰기 앱 FluidVoice를 통해 음성 입력이 다시 로컬 우선 소프트웨어의 경쟁력이 되는 이유를 분석한다."
 author: heracles-jo
 date: 2026-06-26 07:32:00 +0900

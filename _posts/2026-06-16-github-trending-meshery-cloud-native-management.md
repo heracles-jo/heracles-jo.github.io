@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Meshery와 클라우드 네이티브 운영 평면의 재편"
+title: "Meshery와 클라우드 네이티브 운영 평면의 재편"
 description: "GitHub Trending에 오른 meshery/meshery를 중심으로 Kubernetes 운영이 단순 배포 자동화에서 설계, 정책 검증, 멀티 클러스터 협업, 성능 피드백을 묶는 클라우드 네이티브 관리 평면으로 이동하는 흐름을 분석한다."
 author: heracles-jo
 date: 2026-06-16 07:15:00 +0900

@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 셀프호스팅 미디어 서버의 재부상"
+title: "셀프호스팅 미디어 서버의 재부상"
 description: "2026년 5월 27일 GitHub Trending에서 Jellyfin이 보여준 셀프호스팅 미디어 서버, 개인 데이터 주권, 홈랩 운영, 스트리밍 비용 구조 변화를 IT 전문가 관점에서 분석합니다."
 author: heracles-jo
 date: 2026-05-27 07:20:00 +0900

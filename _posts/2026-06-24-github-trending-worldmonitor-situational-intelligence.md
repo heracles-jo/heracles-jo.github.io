@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 WorldMonitor와 실시간 상황 인텔리전스 대시보드"
+title: "WorldMonitor와 실시간 상황 인텔리전스 대시보드"
 description: "GitHub Trending에 오른 koala73/worldmonitor를 중심으로 공개 데이터, AI 요약, 지도 시각화, 위험 점수, 캐시와 검증 절차가 결합된 실시간 상황 인텔리전스 대시보드의 아키텍처와 도입 리스크를 분석한다."
 author: heracles-jo
 date: 2026-06-24 07:10:00 +0900

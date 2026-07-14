@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Home Assistant와 로컬 우선 자동화 플랫폼"
+title: "Home Assistant와 로컬 우선 자동화 플랫폼"
 description: "GitHub Trending에 오른 Home Assistant Core를 중심으로 로컬 우선 홈·엣지 자동화, 프라이버시, 통합 아키텍처, 운영 리스크와 실무 도입 기준을 분석한다."
 author: heracles-jo
 date: 2026-07-13 07:35:00 +0900

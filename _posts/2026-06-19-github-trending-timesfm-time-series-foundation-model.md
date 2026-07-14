@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 TimesFM과 시계열 Foundation Model의 실무화"
+title: "TimesFM과 시계열 Foundation Model의 실무화"
 description: "GitHub Trending에 오른 google-research/timesfm을 중심으로 시계열 foundation model이 수요예측, 용량계획, IoT·금융 지표 예측 운영을 어떻게 바꾸는지 Prophet·Chronos·전통 ML과 비교해 분석한다."
 author: heracles-jo
 date: 2026-06-19 07:20:00 +0900

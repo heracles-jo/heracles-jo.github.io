@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 LMCache와 LLM KV 캐시 인프라의 부상"
+title: "LMCache와 LLM KV 캐시 인프라의 부상"
 description: "GitHub Trending에 오른 LMCache를 중심으로 LLM 추론 비용, KV 캐시 재사용, vLLM·SGLang 통합, 운영 리스크와 PoC 체크리스트를 IT 전문가 관점에서 분석합니다."
 author: heracles-jo
 date: 2026-06-14 07:10:00 +0900

@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 오픈소스 금융 터미널의 재부상"
+title: "오픈소스 금융 터미널의 재부상"
 description: "2026년 5월 23일 GitHub Trending에서 FinceptTerminal이 보여준 오픈소스 금융 분석 터미널, 투자 리서치 자동화, 데이터 거버넌스와 운영 리스크를 IT 전문가 관점에서 분석합니다."
-author: heracles.jo
+author: heracles-jo
 date: 2026-05-23 06:55:00 +0900
 categories: [FinTech, Open Source]
 tags: [github-trending, fintech, finance-terminal, market-data, data-analytics, open-source]

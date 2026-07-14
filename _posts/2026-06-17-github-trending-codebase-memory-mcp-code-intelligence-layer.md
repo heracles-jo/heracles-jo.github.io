@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 codebase-memory-mcp와 코드베이스 기억 계층의 부상"
+title: "codebase-memory-mcp와 코드베이스 기억 계층의 부상"
 description: "코드베이스를 영속 지식 그래프로 인덱싱하는 codebase-memory-mcp를 중심으로 AI 코딩 에이전트의 코드 이해, 토큰 절감, 로컬 우선 아키텍처를 분석한다."
 author: heracles-jo
 date: 2026-06-17 07:25:00 +0900

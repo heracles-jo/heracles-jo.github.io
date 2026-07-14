@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Palmier Pro와 AI 네이티브 영상 편집의 실무화"
+title: "Palmier Pro와 AI 네이티브 영상 편집의 실무화"
 description: "GitHub Trending에 오른 palmier-io/palmier-pro를 중심으로 MCP, 타임라인 편집, 생성형 영상 모델이 결합된 AI 네이티브 영상 편집 도구의 구조와 도입 판단 기준을 분석한다."
 author: heracles-jo
 date: 2026-06-20 07:58:00 +0900

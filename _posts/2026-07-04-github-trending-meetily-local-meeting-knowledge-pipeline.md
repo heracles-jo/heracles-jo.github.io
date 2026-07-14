@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Meetily와 로컬 회의 지식 파이프라인의 현실성"
+title: "Meetily와 로컬 회의 지식 파이프라인의 현실성"
 description: "GitHub Trending에 오른 Zackriya-Solutions/meetily를 중심으로 로컬 회의 녹음, 전사, 요약, 지식 보존 워크플로우의 실무 가치와 도입 리스크를 분석한다."
 author: heracles-jo
 date: 2026-07-04 07:30:00 +0900

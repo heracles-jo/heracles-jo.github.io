@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 DeerFlow와 장기 실행 에이전트 워크플로의 조건"
+title: "DeerFlow와 장기 실행 에이전트 워크플로의 조건"
 description: "bytedance/deer-flow를 중심으로 리서치·계획·실행·검증이 결합된 long-horizon agent workflow가 실무 자동화에서 어떤 의미와 리스크를 갖는지 분석한다."
 author: heracles-jo
 date: 2026-06-21 07:35:00 +0900

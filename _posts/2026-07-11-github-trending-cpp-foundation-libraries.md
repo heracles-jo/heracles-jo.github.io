@@ -1,7 +1,7 @@
 ---
-title: "GitHub Trending으로 보는 C++ 기반 라이브러리 스택의 재부상"
+title: "C++ 기반 라이브러리 스택의 재부상"
 description: "Abseil, Catch2, yaml-cpp, Asio가 GitHub Trending에 함께 오른 흐름을 바탕으로 프로덕션 C++ 기반 라이브러리의 아키텍처, 도입 판단, 운영 리스크를 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-11 07:12:00 +0900
 categories: [Software Engineering, Infrastructure]
 tags: [github-trending, cpp, abseil, catch2, yaml-cpp, asio, cmake, conan, vcpkg, testing, reliability, systems-programming]

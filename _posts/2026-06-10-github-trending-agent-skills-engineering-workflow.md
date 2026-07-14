@@ -1,5 +1,5 @@
 ---
-title: "GitHub Trending으로 보는 Agent Skills와 AI 코딩 워크플로의 절차화"
+title: "Agent Skills와 AI 코딩 워크플로의 절차화"
 description: "GitHub Trending에 오른 addyosmani/agent-skills를 중심으로 AI 코딩 에이전트 시대에 명세, 계획, 구현, 검증, 리뷰, 배포 절차를 어떻게 재사용 가능한 운영 지식으로 만들 수 있는지 분석합니다."
 author: heracles-jo
 date: 2026-06-10 07:40:00 +0900
