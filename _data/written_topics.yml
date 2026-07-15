@@ -45,3 +45,14 @@
     - "셸 명령 차단"
   slug: "ai-agent-destructive-command-guard"
   summary: "dcg의 사전 실행 훅, 규칙 팩, fail-open 경계, 오탐·우회 운영 비용, 수정된 MIT 라이선스를 검토하고 도입 기준을 제시."
+- date: 2026-07-16
+  title: "병렬 AI 코딩 에이전트 운영: Orca와 Git worktree 설계"
+  github_repo: "https://github.com/stablyai/orca"
+  main_keyword: "병렬 AI 코딩 에이전트"
+  related_keywords:
+    - "Orca"
+    - "Git worktree"
+    - "멀티 에이전트 개발"
+    - "AI 코드 리뷰"
+  slug: "orca-parallel-ai-coding-agents"
+  summary: "Orca의 Git worktree 기반 격리와 병렬 실행을 중심으로 결과 비교, 충돌, 보안 경계, 리뷰 비용과 PoC 측정 기준을 정리."
