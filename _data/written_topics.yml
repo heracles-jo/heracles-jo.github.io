@@ -78,3 +78,14 @@
     - "session replay"
   slug: "posthog-unified-product-observability"
   summary: "PostHog의 분석·리플레이·기능 플래그·LLM trace 결합을 중심으로 조사 속도, 개인정보 경계, 셀프호스팅 비용과 PoC 기준을 정리."
+- date: 2026-07-19
+  title: "저VRAM LLM 추론: AirLLM의 레이어 스트리밍이 맞는 경우"
+  github_repo: "https://github.com/lyogavin/airllm"
+  main_keyword: "저VRAM LLM 추론"
+  related_keywords:
+    - "AirLLM"
+    - "레이어 스트리밍"
+    - "GPU 메모리"
+    - "로컬 LLM"
+  slug: "airllm-low-vram-layer-streaming"
+  summary: "AirLLM의 레이어별 가중치 스트리밍을 중심으로 VRAM 절감과 디스크 I/O·처리량·공급망 보안의 교환관계 및 PoC 기준을 정리."

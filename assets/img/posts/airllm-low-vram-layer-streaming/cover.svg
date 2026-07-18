@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">저VRAM LLM 추론과 AirLLM</title><desc id="desc">디스크의 모델 레이어가 작은 GPU 메모리를 순차 통과하는 모습</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081426"/><stop offset="1" stop-color="#183b5b"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/><circle cx="1010" cy="90" r="180" fill="#38bdf8" opacity=".08"/><circle cx="140" cy="570" r="220" fill="#22c55e" opacity=".07"/>
+  <text x="72" y="104" fill="#7dd3fc" font-family="Arial,sans-serif" font-size="24" font-weight="700">AIRLLM · LAYER STREAMING</text>
+  <text x="72" y="174" fill="#fff" font-family="Arial,sans-serif" font-size="48" font-weight="800">저VRAM LLM 추론</text><text x="72" y="230" fill="#dbeafe" font-family="Arial,sans-serif" font-size="31">메모리를 줄이면 I/O가 비용이 된다</text>
+  <g transform="translate(78 318)"><rect width="315" height="190" rx="22" fill="#0f253e" stroke="#60a5fa" stroke-width="2"/><text x="26" y="39" fill="#bfdbfe" font-family="Arial" font-size="20" font-weight="700">NVMe · MODEL SHARDS</text>
+    <g fill="#2563eb"><rect x="26" y="61" width="263" height="18" rx="5"/><rect x="26" y="91" width="263" height="18" rx="5" opacity=".8"/><rect x="26" y="121" width="263" height="18" rx="5" opacity=".6"/><rect x="26" y="151" width="263" height="18" rx="5" opacity=".4"/></g></g>
+  <path d="M410 413 H590" stroke="#7dd3fc" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/><path d="m565 390 34 23-34 23" fill="none" stroke="#7dd3fc" stroke-width="8"/>
+  <g transform="translate(618 318)"><rect width="220" height="190" rx="24" fill="#12382f" stroke="#4ade80" stroke-width="3"/><text x="110" y="47" text-anchor="middle" fill="#bbf7d0" font-family="Arial" font-size="20" font-weight="700">4GB GPU</text><rect x="40" y="73" width="140" height="73" rx="12" fill="#22c55e" opacity=".8"/><text x="110" y="117" text-anchor="middle" fill="#052e16" font-family="Arial" font-size="22" font-weight="800">ONE LAYER</text><text x="110" y="174" text-anchor="middle" fill="#86efac" font-family="Arial" font-size="16">load → compute → evict</text></g>
+  <path d="M855 413 H1032" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/><path d="m1007 390 34 23-34 23" fill="none" stroke="#fbbf24" stroke-width="8"/>
+  <g transform="translate(1060 365)" fill="none" stroke="#fde68a" stroke-width="5"><circle r="48"/><path d="M-16 0 0 16 27-19"/></g><text x="1058" y="489" text-anchor="middle" fill="#fef3c7" font-family="Arial" font-size="17">OUTPUT</text>
+  <text x="72" y="580" fill="#94a3b8" font-family="Arial" font-size="18">VRAM capacity ↓  ·  disk traffic and latency ↑  ·  measure useful throughput</text>
+</svg>
