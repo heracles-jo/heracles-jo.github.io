@@ -56,3 +56,25 @@
     - "AI 코드 리뷰"
   slug: "orca-parallel-ai-coding-agents"
   summary: "Orca의 Git worktree 기반 격리와 병렬 실행을 중심으로 결과 비교, 충돌, 보안 경계, 리뷰 비용과 PoC 측정 기준을 정리."
+- date: 2026-07-17
+  title: "시맨틱 계층 표준화: Apache Ossie로 BI와 AI 지표 불일치 줄이기"
+  github_repo: "https://github.com/apache/ossie"
+  main_keyword: "시맨틱 계층 표준화"
+  related_keywords:
+    - "Apache Ossie"
+    - "semantic layer"
+    - "BI 지표 표준화"
+    - "AI 에이전트 데이터 거버넌스"
+  slug: "apache-ossie-semantic-model-interchange"
+  summary: "Apache Ossie의 벤더 중립 시맨틱 모델과 왕복 변환 검증을 중심으로 BI·AI 지표 의미를 안전하게 교환하는 도입 기준을 정리."
+- date: 2026-07-18
+  title: "PostHog 통합 제품 관측성: 분석·리플레이·LLM 추적을 한곳에 둘 때의 대가"
+  github_repo: "https://github.com/PostHog/posthog"
+  main_keyword: "통합 제품 관측성"
+  related_keywords:
+    - "PostHog"
+    - "product analytics"
+    - "LLM observability"
+    - "session replay"
+  slug: "posthog-unified-product-observability"
+  summary: "PostHog의 분석·리플레이·기능 플래그·LLM trace 결합을 중심으로 조사 속도, 개인정보 경계, 셀프호스팅 비용과 PoC 기준을 정리."
