@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">OpenSEO 운영 아키텍처</title>
+  <desc id="desc">사용자, OpenSEO 애플리케이션, Cloudflare 리소스, DataForSEO API, MCP 기반 AI 에이전트가 연결되는 구조</desc>
+  <defs>
+    <style>
+      .box{fill:#fff;stroke:#cbd5e1;stroke-width:2}.head{font:700 24px Inter,Arial,sans-serif;fill:#0f172a}.txt{font:16px Inter,Arial,sans-serif;fill:#334155}.small{font:14px Inter,Arial,sans-serif;fill:#475569}.arrow{stroke:#0284c7;stroke-width:4;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0284c7"/></marker>
+  </defs>
+  <rect width="1100" height="620" fill="#f8fafc"/>
+  <text x="60" y="62" class="head">OpenSEO의 실무 데이터 흐름</text>
+  <text x="60" y="92" class="txt">SEO SaaS의 폐쇄형 워크플로를 API 비용·캐시·권한·에이전트 인터페이스로 분해한다.</text>
+  <rect x="55" y="150" width="210" height="120" rx="18" class="box"/>
+  <text x="88" y="192" class="head" font-size="22">마케터/SEO 팀</text>
+  <text x="88" y="226" class="txt">키워드 리서치</text><text x="88" y="252" class="txt">순위 추적·사이트 감사</text>
+  <rect x="360" y="135" width="300" height="150" rx="22" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+  <text x="400" y="181" class="head">OpenSEO App</text>
+  <text x="400" y="215" class="txt">TanStack React Start</text>
+  <text x="400" y="243" class="txt">MCP 서버·에이전트 스킬</text>
+  <rect x="765" y="150" width="250" height="120" rx="18" class="box"/>
+  <text x="805" y="192" class="head">AI Agent</text>
+  <text x="805" y="226" class="txt">Claude Code, Hermes</text><text x="805" y="252" class="txt">보고서·작업 자동화</text>
+  <path d="M265 210 H360" class="arrow"/><path d="M660 210 H765" class="arrow"/>
+  <rect x="110" y="380" width="210" height="118" rx="18" class="box"/>
+  <text x="145" y="420" class="head" font-size="22">Cloudflare</text><text x="145" y="452" class="txt">Worker / D1 / R2</text><text x="145" y="478" class="txt">Access / Cron</text>
+  <rect x="455" y="380" width="210" height="118" rx="18" class="box"/>
+  <text x="490" y="420" class="head" font-size="22">Cache & DB</text><text x="490" y="452" class="txt">요청 비용 제어</text><text x="490" y="478" class="txt">프로젝트별 이력</text>
+  <rect x="800" y="380" width="210" height="118" rx="18" class="box"/>
+  <text x="835" y="420" class="head" font-size="22">DataForSEO</text><text x="835" y="452" class="txt">검색·백링크 API</text><text x="835" y="478" class="txt">종량제 외부 의존성</text>
+  <path d="M510 285 V340 H215 V380" class="arrow"/><path d="M510 285 V380" class="arrow"/><path d="M560 380 V340 H905 V380" class="arrow"/>
+  <text x="80" y="560" class="small">도입 판단의 핵심은 기능 수가 아니라 데이터 소스 비용, 캐시 정책, 권한 경계, 에이전트 호출 감사 가능성이다.</text>
+</svg>
