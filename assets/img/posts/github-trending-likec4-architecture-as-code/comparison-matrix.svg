@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">Architecture diagram tool comparison</title>
+  <desc id="desc">Mermaid, PlantUML C4, Structurizr, LikeC4를 실무 관점에서 비교한 매트릭스</desc>
+  <rect width="1100" height="560" fill="#0f172a" rx="28"/>
+  <style>.title{font:800 30px Inter,Arial,sans-serif;fill:#f8fafc}.h{font:700 20px Inter,Arial,sans-serif;fill:#e0f2fe}.c{font:500 18px Inter,Arial,sans-serif;fill:#cbd5e1}.good{fill:#22c55e}.mid{fill:#f59e0b}.base{fill:#64748b}</style>
+  <text x="550" y="58" text-anchor="middle" class="title">문서형 다이어그램에서 모델형 아키텍처로 이동</text>
+  <g transform="translate(70 105)">
+    <rect width="960" height="360" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="40" y="54" class="h">도구</text><text x="250" y="54" class="h">강점</text><text x="555" y="54" class="h">주의점</text><text x="820" y="54" class="h">모델성</text>
+    <path d="M20 82H940M20 154H940M20 226H940M20 298H940" stroke="#334155"/>
+    <text x="40" y="126" class="c">Mermaid</text><text x="250" y="126" class="c">Markdown 친화, 범용</text><text x="555" y="126" class="c">아키텍처 의미론은 약함</text><circle cx="845" cy="118" r="11" class="mid"/>
+    <text x="40" y="198" class="c">C4-PlantUML</text><text x="250" y="198" class="c">C4 표현력과 생태계</text><text x="555" y="198" class="c">렌더링/스타일 관리 부담</text><circle cx="845" cy="190" r="11" class="mid"/>
+    <text x="40" y="270" class="c">Structurizr</text><text x="250" y="270" class="c">C4 모델 중심 접근</text><text x="555" y="270" class="c">도입 방식·라이선스 검토 필요</text><circle cx="845" cy="262" r="11" class="good"/>
+    <text x="40" y="342" class="c">LikeC4</text><text x="250" y="342" class="c">유연한 DSL, IDE/CLI 경험</text><text x="555" y="342" class="c">모델 거버넌스 없으면 드리프트</text><circle cx="845" cy="334" r="11" class="good"/>
+  </g>
+  <text x="550" y="515" text-anchor="middle" class="c">실무 선택 기준은 ‘예쁜 그림’보다 변경 검토, ownership, CI 연동 가능성이다.</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">LikeC4 model to live architecture views</title>
+  <desc id="desc">LikeC4 모델 파일이 여러 관점의 아키텍처 다이어그램과 문서 포털로 변환되는 파이프라인</desc>
+  <rect width="1100" height="520" rx="28" fill="#f8fafc"/>
+  <style>.h{font:700 28px Inter,Arial,sans-serif;fill:#0f172a}.t{font:400 19px Inter,Arial,sans-serif;fill:#334155}.s{font:600 18px Inter,Arial,sans-serif;fill:#475569}.box{fill:white;stroke:#cbd5e1;stroke-width:2}.arrow{stroke:#2563eb;stroke-width:5;fill:none;stroke-linecap:round;marker-end:url(#m)}</style>
+  <defs><marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0l10 5-10 5z" fill="#2563eb"/></marker></defs>
+  <text x="550" y="58" text-anchor="middle" class="h">코드 가까이에 둔 아키텍처 모델의 운영 흐름</text>
+  <rect x="70" y="130" width="250" height="230" rx="22" class="box"/>
+  <text x="195" y="180" text-anchor="middle" class="h">Model</text>
+  <text x="195" y="224" text-anchor="middle" class="t">elements</text>
+  <text x="195" y="258" text-anchor="middle" class="t">relations</text>
+  <text x="195" y="292" text-anchor="middle" class="t">views</text>
+  <text x="195" y="326" text-anchor="middle" class="t">styles</text>
+  <path d="M325 245H438" class="arrow"/>
+  <rect x="445" y="108" width="250" height="274" rx="22" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="570" y="160" text-anchor="middle" class="h">LikeC4 Tooling</text>
+  <text x="570" y="206" text-anchor="middle" class="t">CLI preview</text>
+  <text x="570" y="240" text-anchor="middle" class="t">VS Code extension</text>
+  <text x="570" y="274" text-anchor="middle" class="t">static export</text>
+  <text x="570" y="308" text-anchor="middle" class="t">CI validation</text>
+  <path d="M700 245H813" class="arrow"/>
+  <rect x="820" y="130" width="220" height="230" rx="22" class="box"/>
+  <text x="930" y="180" text-anchor="middle" class="h">Views</text>
+  <text x="930" y="224" text-anchor="middle" class="t">system context</text>
+  <text x="930" y="258" text-anchor="middle" class="t">containers</text>
+  <text x="930" y="292" text-anchor="middle" class="t">components</text>
+  <text x="930" y="326" text-anchor="middle" class="t">ADRs / docs</text>
+  <text x="550" y="445" text-anchor="middle" class="s">핵심은 그림 파일을 관리하는 것이 아니라, 관계 모델을 변경 검토의 대상으로 올리는 것이다.</text>
+</svg>
