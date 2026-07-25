@@ -1,7 +1,7 @@
 ---
 title: "OpenSEO와 에이전트형 SEO 운영: Semrush 대안 이상의 의미"
 description: "GitHub Trending에 오른 OpenSEO를 통해 오픈소스 SEO 도구, DataForSEO 기반 종량제 모델, MCP 에이전트 워크플로, 셀프호스팅 운영 리스크를 실무 관점에서 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-07-22 07:20:28 +0900
 categories: [DevOps, MarTech]
 tags: [github-trending, openseo, seo, mcp, ai-agent, dataforseo, cloudflare, self-hosting, martech]
