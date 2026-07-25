@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+expected_name='heracles.jo'
+expected_email='heracles.jo@gmail.com'
+
+actual_name=$(git var GIT_AUTHOR_IDENT | sed -E 's/ <.*$//')
+actual_email=$(git var GIT_AUTHOR_IDENT | sed -E 's/^[^<]*<([^>]*)>.*/\1/')
+committer_name=$(git var GIT_COMMITTER_IDENT | sed -E 's/ <.*$//')
+committer_email=$(git var GIT_COMMITTER_IDENT | sed -E 's/^[^<]*<([^>]*)>.*/\1/')
+
+if [ "$actual_name" != "$expected_name" ] || [ "$actual_email" != "$expected_email" ] || \
+   [ "$committer_name" != "$expected_name" ] || [ "$committer_email" != "$expected_email" ]; then
+  printf >&2 'BLOCKED: invalid Git identity\n  author: %s <%s>\n  committer: %s <%s>\n  expected: %s <%s>\n' \
+    "$actual_name" "$actual_email" "$committer_name" "$committer_email" "$expected_name" "$expected_email"
+  exit 1
+fi

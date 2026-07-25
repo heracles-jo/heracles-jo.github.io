@@ -34,7 +34,7 @@ twitter:
 social:
   # 전체 이름으로 변경한다.
   # Footer에서 기본 작성자 및 저작권자로 표시된다.
-  name: heracles-jo
+  name: heracles.jo
   email: heracles.jo@gmail.com # 이메일 주소로 변경
   fediverse_handle: # Fediverse 핸들을 입력한다. 예: "@username@domain.com"
   links:

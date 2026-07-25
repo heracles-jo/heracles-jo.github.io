@@ -1,0 +1,51 @@
+name: Verify Blog Commit Identity
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  identity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Require heracles.jo for blog content commits
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          expected='heracles.jo <heracles.jo@gmail.com> | heracles.jo <heracles.jo@gmail.com>'
+          zero='0000000000000000000000000000000000000000'
+
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            range="$BASE_SHA..$HEAD_SHA"
+          elif [[ "$BEFORE_SHA" == "$zero" ]]; then
+            range="$AFTER_SHA"
+          else
+            range="$BEFORE_SHA..$AFTER_SHA"
+          fi
+
+          for commit in $(git rev-list "$range"); do
+            if ! git diff-tree --root --no-commit-id --name-only -r "$commit" | \
+              grep -Eq '^(_posts/|assets/img/posts/|_data/written_topics\.yml$|_config\.yml$|_data/authors\.yml$)'; then
+              continue
+            fi
+
+            actual=$(git show -s --format='%an <%ae> | %cn <%ce>' "$commit")
+            if [[ "$actual" != "$expected" ]]; then
+              echo "::error::Commit $commit has invalid identity: $actual"
+              exit 1
+            fi
+          done
