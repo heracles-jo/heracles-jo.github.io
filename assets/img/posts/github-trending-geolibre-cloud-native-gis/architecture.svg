@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">GeoLibre runtime layers</title>
+  <desc id="desc">A layered diagram showing GeoLibre user interfaces, rendering engine, local analytical storage and distribution targets.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#dffcf4"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+  </defs>
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <text x="70" y="78" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#0f172a">GeoLibre 핵심 계층</text>
+  <text x="70" y="116" font-family="Inter, Arial, sans-serif" font-size="20" fill="#475569">동일한 GIS 작업 공간을 여러 배포 표면과 로컬 분석 엔진에 연결한다.</text>
+  <g font-family="Inter, Arial, sans-serif" filter="drop-shadow(0 12px 12px rgba(15,23,42,.14))">
+    <rect x="70" y="165" width="230" height="110" rx="20" fill="#ffffff" stroke="#14b8a6" stroke-width="3"/>
+    <text x="105" y="210" font-size="24" font-weight="800" fill="#0f766e">Web App</text>
+    <text x="105" y="244" font-size="17" fill="#334155">브라우저 즉시 실행</text>
+    <rect x="350" y="165" width="230" height="110" rx="20" fill="#ffffff" stroke="#0ea5e9" stroke-width="3"/>
+    <text x="385" y="210" font-size="24" font-weight="800" fill="#0369a1">Tauri Desktop</text>
+    <text x="385" y="244" font-size="17" fill="#334155">Windows/macOS/Linux</text>
+    <rect x="630" y="165" width="230" height="110" rx="20" fill="#ffffff" stroke="#22c55e" stroke-width="3"/>
+    <text x="665" y="210" font-size="24" font-weight="800" fill="#15803d">Mobile</text>
+    <text x="665" y="244" font-size="17" fill="#334155">Android·iOS 경로</text>
+    <rect x="910" y="165" width="220" height="110" rx="20" fill="#ffffff" stroke="#f59e0b" stroke-width="3"/>
+    <text x="945" y="210" font-size="24" font-weight="800" fill="#b45309">Jupyter</text>
+    <text x="945" y="244" font-size="17" fill="#334155">Notebook 연계</text>
+    <rect x="170" y="355" width="860" height="92" rx="24" fill="#0f766e"/>
+    <text x="252" y="410" font-size="28" font-weight="800" fill="#ffffff">React · TypeScript · MapLibre GL JS · deck.gl</text>
+    <rect x="220" y="500" width="340" height="70" rx="20" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+    <text x="252" y="544" font-size="22" font-weight="800" fill="#075985">Vector/Raster/3D Tiles</text>
+    <rect x="640" y="500" width="340" height="70" rx="20" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <text x="672" y="544" font-size="22" font-weight="800" fill="#166534">DuckDB-WASM Spatial</text>
+  </g>
+  <g stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)" fill="none" opacity="0.9">
+    <path d="M185 276 C245 320 350 330 470 355"/>
+    <path d="M465 276 C500 318 540 330 570 355"/>
+    <path d="M745 276 C720 315 680 333 635 355"/>
+    <path d="M1015 276 C945 325 825 338 730 355"/>
+    <path d="M500 447 C460 475 430 486 390 500"/>
+    <path d="M700 447 C745 474 780 486 810 500"/>
+  </g>
+</svg>

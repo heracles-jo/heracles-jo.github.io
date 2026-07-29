@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">GeoLibre cloud-native GIS architecture</title>
+  <desc id="desc">Cloud-native GIS platform combining browser, desktop, mobile and Jupyter workflows with local-first geospatial analysis.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="48%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="62%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#a7f3d0" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.22" stroke="#d1fae5" stroke-width="1">
+    <path d="M0 450 C190 390 270 500 430 430 S730 310 930 380 1090 480 1200 430" fill="none"/>
+    <path d="M0 330 C180 280 330 360 500 300 S760 190 950 260 1080 330 1200 300" fill="none"/>
+    <path d="M80 630 L390 80 M270 630 L610 70 M490 630 L870 80 M760 630 L1100 110"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="92" y="92" width="1016" height="446" rx="34" fill="#f8fafc" opacity="0.96"/>
+    <rect x="132" y="136" width="500" height="324" rx="22" fill="#ecfeff" stroke="#0f766e" stroke-width="3"/>
+    <path d="M170 380 C230 290 278 320 338 242 C390 176 466 202 596 162" fill="none" stroke="#0f766e" stroke-width="18" stroke-linecap="round" opacity="0.22"/>
+    <path d="M168 405 C268 356 350 425 448 350 C520 296 556 300 604 274" fill="none" stroke="#0284c7" stroke-width="12" stroke-linecap="round" opacity="0.32"/>
+    <circle cx="284" cy="279" r="18" fill="#10b981"/>
+    <circle cx="471" cy="211" r="18" fill="#06b6d4"/>
+    <circle cx="536" cy="346" r="18" fill="#f59e0b"/>
+    <g stroke="#0369a1" stroke-width="2" opacity="0.34">
+      <path d="M160 168 H606 M160 220 H606 M160 272 H606 M160 324 H606 M160 376 H606 M160 428 H606"/>
+      <path d="M190 154 V444 M250 154 V444 M310 154 V444 M370 154 V444 M430 154 V444 M490 154 V444 M550 154 V444"/>
+    </g>
+    <text x="682" y="178" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800">GeoLibre</text>
+    <text x="682" y="228" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">cloud-native GIS의 재구성</text>
+    <text x="682" y="286" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="24">Browser · Desktop · Mobile · Jupyter</text>
+    <text x="682" y="326" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="24">MapLibre GL JS · DuckDB-WASM Spatial</text>
+    <text x="682" y="366" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="24">Local-first geospatial analysis</text>
+    <rect x="682" y="405" width="346" height="50" rx="25" fill="#0f766e"/>
+    <text x="712" y="438" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">GitHub Trending 분석</text>
+  </g>
+</svg>

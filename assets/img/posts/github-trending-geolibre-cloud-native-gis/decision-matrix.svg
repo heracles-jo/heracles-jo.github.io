@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">GIS adoption decision matrix</title>
+  <desc id="desc">Decision matrix comparing lightweight local-first GIS, desktop GIS, server GIS and SaaS geospatial platforms across control, scale and collaboration.</desc>
+  <rect width="1200" height="650" fill="#f8fafc"/>
+  <text x="70" y="74" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#0f172a">GIS 도입 판단 매트릭스</text>
+  <text x="70" y="112" font-family="Inter, Arial, sans-serif" font-size="20" fill="#475569">GeoLibre는 ‘가벼운 로컬 우선 분석’과 ‘웹 기반 배포성’의 교차점에 위치한다.</text>
+  <line x1="150" y1="530" x2="1050" y2="530" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="150" y1="530" x2="150" y2="150" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker></defs>
+  <text x="760" y="585" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#334155">중앙 운영·협업·대규모 배포 요구 ↑</text>
+  <text x="42" y="180" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#334155" transform="rotate(-90 42 180)">로컬 통제·개인 분석 민첩성 ↑</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="230" y="210" width="280" height="122" rx="22" fill="#ccfbf1" stroke="#0f766e" stroke-width="3"/>
+    <text x="262" y="255" font-size="27" font-weight="800" fill="#0f766e">GeoLibre</text>
+    <text x="262" y="292" font-size="18" fill="#334155">브라우저·데스크톱·노트북에서</text>
+    <text x="262" y="318" font-size="18" fill="#334155">로컬 데이터 중심 탐색</text>
+    <rect x="226" y="386" width="260" height="98" rx="20" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+    <text x="256" y="426" font-size="23" font-weight="800" fill="#075985">QGIS</text>
+    <text x="256" y="458" font-size="17" fill="#334155">성숙한 데스크톱 GIS</text>
+    <rect x="616" y="362" width="270" height="108" rx="20" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <text x="646" y="405" font-size="23" font-weight="800" fill="#92400e">PostGIS/GeoServer</text>
+    <text x="646" y="438" font-size="17" fill="#334155">중앙 DB·서비스 운영</text>
+    <rect x="720" y="190" width="300" height="112" rx="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="752" y="233" font-size="23" font-weight="800" fill="#6d28d9">ArcGIS Online·Mapbox</text>
+    <text x="752" y="266" font-size="17" fill="#334155">관리형 플랫폼·협업·SLA</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-dasharray="8 10" stroke-width="2">
+    <line x1="150" x2="1050" y1="340" y2="340"/>
+    <line x1="540" x2="540" y1="150" y2="530"/>
+  </g>
+</svg>
