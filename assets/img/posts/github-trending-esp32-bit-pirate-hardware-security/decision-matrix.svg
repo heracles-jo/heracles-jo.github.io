@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">하드웨어 해킹 도구 도입 판단 매트릭스</title>
+  <desc id="desc">ESP32 Bit Pirate, Bus Pirate, Flipper Zero, GreatFET을 학습 곡선, 프로토콜 폭, 휴대성, 운영 통제 관점에서 비교하는 매트릭스</desc>
+  <defs><style>.h{font:800 28px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#f8fafc}.t{font:600 19px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#e2e8f0}.s{font:500 16px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#94a3b8}.line{stroke:#334155;stroke-width:2}.good{fill:#14b8a6}.mid{fill:#f59e0b}.low{fill:#64748b}</style></defs>
+  <rect width="1100" height="620" fill="#08111f"/>
+  <text x="55" y="60" class="h">도구 선택은 “많은 기능”보다 통제 가능한 실험 범위가 핵심이다</text>
+  <line x1="260" y1="110" x2="260" y2="555" class="line"/><line x1="55" y1="170" x2="1045" y2="170" class="line"/><line x1="55" y1="260" x2="1045" y2="260" class="line"/><line x1="55" y1="350" x2="1045" y2="350" class="line"/><line x1="55" y1="440" x2="1045" y2="440" class="line"/><line x1="55" y1="530" x2="1045" y2="530" class="line"/>
+  <text x="75" y="145" class="t">평가 항목</text><text x="310" y="145" class="t">ESP32 Bit Pirate</text><text x="525" y="145" class="t">Bus Pirate</text><text x="695" y="145" class="t">Flipper Zero</text><text x="890" y="145" class="t">GreatFET</text>
+  <text x="75" y="215" class="t">프로토콜 폭</text><circle cx="360" cy="210" r="22" class="good"/><circle cx="580" cy="210" r="17" class="mid"/><circle cx="760" cy="210" r="20" class="good"/><circle cx="940" cy="210" r="17" class="mid"/>
+  <text x="75" y="305" class="t">웹 접근성</text><circle cx="360" cy="300" r="22" class="good"/><circle cx="580" cy="300" r="13" class="low"/><circle cx="760" cy="300" r="15" class="mid"/><circle cx="940" cy="300" r="13" class="low"/>
+  <text x="75" y="395" class="t">전문 확장성</text><circle cx="360" cy="390" r="17" class="mid"/><circle cx="580" cy="390" r="16" class="mid"/><circle cx="760" cy="390" r="17" class="mid"/><circle cx="940" cy="390" r="22" class="good"/>
+  <text x="75" y="485" class="t">교육/PoC 속도</text><circle cx="360" cy="480" r="22" class="good"/><circle cx="580" cy="480" r="18" class="mid"/><circle cx="760" cy="480" r="22" class="good"/><circle cx="940" cy="480" r="16" class="mid"/>
+  <text x="300" y="570" class="s">큰 원은 상대적 강점, 작은 원은 별도 도구·절차 보완이 필요한 영역을 의미</text>
+</svg>

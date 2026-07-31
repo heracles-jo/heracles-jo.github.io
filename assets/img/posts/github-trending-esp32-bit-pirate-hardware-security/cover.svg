@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32 Bit Pirate와 웹 기반 하드웨어 프로토콜 분석</title>
+  <desc id="desc">ESP32 보드, 웹 CLI, I2C SPI UART CAN RFID Sub-GHz 프로토콜이 보안 검증 워크벤치로 연결되는 모습</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="0.52" stop-color="#12345a"/>
+      <stop offset="1" stop-color="#0e6f6b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title{font:700 58px/1.15 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#f5fbff}
+      .sub{font:500 25px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#c7f9f0}
+      .chip{fill:#122238;stroke:#7dd3fc;stroke-width:3}
+      .pin{fill:#fbbf24}.wire{fill:none;stroke:#67e8f9;stroke-width:5;stroke-linecap:round;stroke-dasharray:12 14}.label{font:700 22px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#e0f2fe}.small{font:600 17px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#bae6fd}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="110" r="155" fill="#22d3ee" opacity="0.10"/>
+  <circle cx="130" cy="560" r="210" fill="#34d399" opacity="0.10"/>
+  <text x="70" y="92" class="small">GitHub Trending Hardware Security Snapshot</text>
+  <text x="70" y="170" class="title">ESP32 Bit Pirate</text>
+  <text x="70" y="236" class="sub">저가 MCU 보드가 웹 기반 하드웨어 보안 워크벤치가 될 때</text>
+  <g filter="url(#shadow)">
+    <rect x="710" y="125" width="315" height="265" rx="28" class="chip"/>
+    <rect x="780" y="190" width="175" height="120" rx="18" fill="#0f172a" stroke="#34d399" stroke-width="3"/>
+    <text x="817" y="242" class="label">ESP32</text>
+    <text x="792" y="278" class="small">Bit Pirate Firmware</text>
+    <g>
+      <circle cx="732" cy="158" r="8" class="pin"/><circle cx="732" cy="198" r="8" class="pin"/><circle cx="732" cy="238" r="8" class="pin"/><circle cx="732" cy="278" r="8" class="pin"/><circle cx="732" cy="318" r="8" class="pin"/><circle cx="1003" cy="158" r="8" class="pin"/><circle cx="1003" cy="198" r="8" class="pin"/><circle cx="1003" cy="238" r="8" class="pin"/><circle cx="1003" cy="278" r="8" class="pin"/><circle cx="1003" cy="318" r="8" class="pin"/>
+    </g>
+  </g>
+  <path d="M710 210 C575 190 520 270 425 270" class="wire"/>
+  <path d="M1025 230 C1090 240 1095 360 1025 405" class="wire"/>
+  <path d="M835 390 C830 485 720 510 620 500" class="wire"/>
+  <g>
+    <rect x="255" y="230" width="185" height="80" rx="20" fill="#0f172a" stroke="#93c5fd" stroke-width="2"/><text x="305" y="262" class="label">Web CLI</text><text x="292" y="292" class="small">USB Serial · Wi‑Fi</text>
+    <rect x="850" y="405" width="230" height="82" rx="20" fill="#0f172a" stroke="#93c5fd" stroke-width="2"/><text x="902" y="438" class="label">Protocols</text><text x="875" y="468" class="small">I2C · SPI · UART · CAN</text>
+    <rect x="420" y="460" width="230" height="82" rx="20" fill="#0f172a" stroke="#93c5fd" stroke-width="2"/><text x="466" y="493" class="label">Risk Control</text><text x="446" y="523" class="small">랩 격리 · 권한 · 로그</text>
+  </g>
+</svg>
