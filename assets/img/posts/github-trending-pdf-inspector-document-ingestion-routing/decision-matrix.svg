@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<title id="title">PDF ingestion decision matrix</title><desc id="desc">Decision matrix comparing local PDF inspection, OCR, and LLM document parsing by cost, latency, accuracy, and risk.</desc>
+<rect width="1200" height="620" fill="#0f172a"/>
+<text x="70" y="72" font-family="Arial" font-size="34" font-weight="800" fill="#f8fafc">문서 처리 방식 선택 매트릭스</text>
+<g font-family="Arial" font-size="20">
+ <rect x="80" y="120" width="1040" height="360" rx="20" fill="#111827" stroke="#334155"/>
+ <g fill="#93c5fd" font-weight="700"><text x="130" y="172">방식</text><text x="370" y="172">비용/지연</text><text x="590" y="172">정확도 포인트</text><text x="850" y="172">운영 리스크</text></g>
+ <g stroke="#334155"><line x1="100" y1="205" x2="1100" y2="205"/><line x1="100" y1="285" x2="1100" y2="285"/><line x1="100" y1="365" x2="1100" y2="365"/><line x1="320" y1="135" x2="320" y2="460"/><line x1="540" y1="135" x2="540" y2="460"/><line x1="810" y1="135" x2="810" y2="460"/></g>
+ <g fill="#e5e7eb"><text x="125" y="250">구조 기반 추출</text><text x="365" y="250">낮음</text><text x="575" y="250">텍스트 PDF·표 구조</text><text x="840" y="250">깨진 인코딩·레이아웃</text>
+ <text x="125" y="330">OCR</text><text x="365" y="330">중간~높음</text><text x="575" y="330">스캔·이미지 문서</text><text x="840" y="330">비용·개인정보·품질편차</text>
+ <text x="125" y="410">LLM 파서</text><text x="365" y="410">높음</text><text x="575" y="410">의미 해석·요약</text><text x="840" y="410">환각·감사·데이터 경계</text></g>
+</g>
+<text x="90" y="540" font-family="Arial" font-size="24" fill="#cbd5e1">핵심: 모든 PDF를 같은 고가 파이프라인으로 보내지 말고, 분류 결과와 신뢰도에 따라 경로를 나눈다.</text>
+</svg>
