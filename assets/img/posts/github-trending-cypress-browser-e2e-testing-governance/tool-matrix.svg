@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">E2E 테스트 도구 선택 매트릭스</title>
+  <desc id="desc">Cypress, Playwright, Selenium, WebdriverIO를 도입 판단 기준별로 비교하는 매트릭스</desc>
+  <rect width="1200" height="760" fill="#0f172a"/>
+  <style>.h{font:700 24px Arial;fill:#e2e8f0}.c{font:18px Arial;fill:#cbd5e1}.b{fill:#1e293b;stroke:#334155;stroke-width:2}.ok{fill:#10b981}.mid{fill:#f59e0b}.low{fill:#64748b}</style>
+  <text x="70" y="65" class="h">브라우저 테스트 도구 비교: 기능보다 팀 운영 조건을 먼저 본다</text>
+  <g transform="translate(70 110)">
+    <rect width="1060" height="560" rx="24" fill="#111827" stroke="#334155"/>
+    <g class="h"><text x="35" y="55">도구</text><text x="255" y="55">강점</text><text x="545" y="55">주의점</text><text x="835" y="55">적합한 팀</text></g>
+    <line x1="30" y1="80" x2="1030" y2="80" stroke="#334155"/>
+    <g transform="translate(0 105)">
+      <rect x="25" y="0" width="1010" height="88" rx="16" class="b"/><circle cx="70" cy="44" r="15" class="ok"/><text x="100" y="38" class="h">Cypress</text><text x="255" y="34" class="c">개발자 경험, 앱 내부 관찰,</text><text x="255" y="62" class="c">컴포넌트+E2E 루프</text><text x="545" y="34" class="c">대규모 멀티브라우저 전략은</text><text x="545" y="62" class="c">플레이크 정책이 필수</text><text x="835" y="48" class="c">프런트엔드 중심 SaaS</text>
+    </g>
+    <g transform="translate(0 205)">
+      <rect x="25" y="0" width="1010" height="88" rx="16" class="b"/><circle cx="70" cy="44" r="15" class="ok"/><text x="100" y="38" class="h">Playwright</text><text x="255" y="34" class="c">크로스브라우저·병렬 실행,</text><text x="255" y="62" class="c">자동 대기와 격리 모델</text><text x="545" y="34" class="c">기존 Cypress 자산 이전 시</text><text x="545" y="62" class="c">테스트 설계 재검토 필요</text><text x="835" y="48" class="c">브라우저 호환성 중시</text>
+    </g>
+    <g transform="translate(0 305)">
+      <rect x="25" y="0" width="1010" height="88" rx="16" class="b"/><circle cx="70" cy="44" r="15" class="mid"/><text x="100" y="38" class="h">Selenium</text><text x="255" y="34" class="c">표준성, 언어 생태계,</text><text x="255" y="62" class="c">레거시 브라우저 자동화</text><text x="545" y="34" class="c">현대 프런트엔드 DX는</text><text x="545" y="62" class="c">추가 프레임워크 의존</text><text x="835" y="48" class="c">엔터프라이즈 장기 자산</text>
+    </g>
+    <g transform="translate(0 405)">
+      <rect x="25" y="0" width="1010" height="88" rx="16" class="b"/><circle cx="70" cy="44" r="15" class="low"/><text x="100" y="38" class="h">WebdriverIO</text><text x="255" y="34" class="c">WebDriver 기반 확장성과</text><text x="255" y="62" class="c">서비스 통합</text><text x="545" y="34" class="c">도구 조합이 많아질수록</text><text x="545" y="62" class="c">표준 운영 규칙 필요</text><text x="835" y="48" class="c">모바일·웹 혼합 QA</text>
+    </g>
+  </g>
+</svg>

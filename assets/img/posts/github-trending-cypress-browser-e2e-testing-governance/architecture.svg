@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">브라우저 E2E 테스트 운영 아키텍처</title>
+  <desc id="desc">제품 변경이 Cypress 테스트 러너와 실제 브라우저를 거쳐 CI 게이트, 리포팅, 플레이크 분석으로 이어지는 흐름</desc>
+  <rect width="1200" height="700" fill="#f8fafc"/>
+  <style>.box{fill:#fff;stroke:#cbd5e1;stroke-width:2}.head{font:700 26px Arial;fill:#0f172a}.txt{font:18px Arial;fill:#334155}.small{font:15px Arial;fill:#475569}.arrow{stroke:#0f766e;stroke-width:5;fill:none;marker-end:url(#m)}</style>
+  <defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/></marker></defs>
+  <rect x="55" y="105" width="250" height="160" rx="22" class="box"/>
+  <text x="85" y="155" class="head">제품 변경</text><text x="85" y="195" class="txt">프런트엔드 코드</text><text x="85" y="225" class="txt">API 계약·상태</text>
+  <rect x="365" y="85" width="300" height="200" rx="22" fill="#ecfeff" stroke="#14b8a6" stroke-width="3"/>
+  <text x="400" y="135" class="head">Cypress Test Runner</text><text x="400" y="178" class="txt">Spec, Fixture, Intercept</text><text x="400" y="208" class="txt">Component + E2E</text><text x="400" y="238" class="small">로컬 디버깅과 CI 실행을 연결</text>
+  <rect x="725" y="105" width="250" height="160" rx="22" class="box"/>
+  <text x="760" y="155" class="head">실제 브라우저</text><text x="760" y="195" class="txt">Chrome / Firefox</text><text x="760" y="225" class="txt">Electron / WebKit 계열</text>
+  <rect x="130" y="405" width="270" height="165" rx="22" class="box"/>
+  <text x="165" y="455" class="head">CI 게이트</text><text x="165" y="496" class="txt">병렬화·재시도</text><text x="165" y="526" class="txt">릴리스 차단 기준</text>
+  <rect x="465" y="405" width="270" height="165" rx="22" fill="#f0fdf4" stroke="#22c55e" stroke-width="3"/>
+  <text x="500" y="455" class="head">관측성</text><text x="500" y="496" class="txt">스크린샷·비디오</text><text x="500" y="526" class="txt">실패 로그·대시보드</text>
+  <rect x="800" y="405" width="270" height="165" rx="22" fill="#fff7ed" stroke="#f97316" stroke-width="3"/>
+  <text x="835" y="455" class="head">플레이크 관리</text><text x="835" y="496" class="txt">선택자·네트워크</text><text x="835" y="526" class="txt">격리·쿼런틴 정책</text>
+  <path d="M305 185 H360" class="arrow"/><path d="M665 185 H720" class="arrow"/><path d="M850 265 C850 340 275 340 275 400" class="arrow"/><path d="M400 488 H460" class="arrow"/><path d="M735 488 H795" class="arrow"/>
+  <text x="55" y="55" class="head">E2E 테스트는 도구 선택보다 운영 루프 설계가 핵심이다</text>
+</svg>
