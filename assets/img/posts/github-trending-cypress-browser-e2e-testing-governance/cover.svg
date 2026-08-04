@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Cypress 기반 브라우저 E2E 테스트 거버넌스</title>
+  <desc id="desc">브라우저, 테스트 러너, CI 파이프라인, 신뢰성 지표가 연결된 E2E 테스트 운영 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071b2d"/>
+      <stop offset="58%" stop-color="#0f3a47"/>
+      <stop offset="100%" stop-color="#0e6f5c"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="100" r="190" fill="#22d3a6" opacity="0.12"/>
+  <circle cx="120" cy="560" r="180" fill="#76e4f7" opacity="0.10"/>
+  <g filter="url(#shadow)">
+    <rect x="120" y="105" width="960" height="420" rx="30" fill="#ffffff" opacity="0.96"/>
+    <rect x="160" y="150" width="410" height="300" rx="22" fill="#f1f5f9"/>
+    <rect x="190" y="185" width="350" height="42" rx="10" fill="#0f766e"/>
+    <rect x="190" y="255" width="120" height="22" rx="7" fill="#14b8a6"/>
+    <rect x="190" y="295" width="300" height="18" rx="7" fill="#94a3b8"/>
+    <rect x="190" y="328" width="260" height="18" rx="7" fill="#cbd5e1"/>
+    <rect x="190" y="380" width="72" height="46" rx="12" fill="#10b981"/>
+    <rect x="280" y="380" width="72" height="46" rx="12" fill="#f59e0b"/>
+    <rect x="370" y="380" width="72" height="46" rx="12" fill="#ef4444"/>
+    <path d="M640 180h300c38 0 70 31 70 70v105c0 39-32 70-70 70H640c-39 0-70-31-70-70V250c0-39 31-70 70-70z" fill="#082f49"/>
+    <path d="M630 240h200" stroke="#5eead4" stroke-width="16" stroke-linecap="round"/>
+    <path d="M630 295h300" stroke="#bae6fd" stroke-width="16" stroke-linecap="round" opacity="0.85"/>
+    <path d="M630 350h245" stroke="#facc15" stroke-width="16" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="940" cy="240" r="24" fill="#10b981"/>
+    <path d="M930 240l8 9 16-20" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="120" y="575" fill="#ecfeff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">GitHub Trending · Cypress · Browser E2E Governance</text>
+</svg>
