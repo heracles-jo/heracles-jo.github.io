@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">mise 아키텍처 계층</title>
+  <desc id="desc">개발자 셸과 CI가 mise 설정을 통해 도구 설치, 환경 변수 로딩, 태스크 실행, 검증 로그로 이어지는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2ff"/></linearGradient>
+    <style>.h{font:700 24px Inter,Pretendard,Arial}.t{font:500 18px Inter,Pretendard,Arial}.s{font:600 16px Inter,Pretendard,Arial}.box{fill:#fff;stroke:#cbd5e1;stroke-width:2}.blue{fill:#dbeafe;stroke:#60a5fa}.violet{fill:#ede9fe;stroke:#8b5cf6}.green{fill:#dcfce7;stroke:#22c55e}.amber{fill:#fef3c7;stroke:#f59e0b}</style>
+  </defs>
+  <rect width="1100" height="620" fill="url(#bg)"/>
+  <text x="54" y="62" class="h" fill="#0f172a">mise를 개발 환경 컨트롤 플레인으로 볼 때의 실행 흐름</text>
+  <rect x="62" y="116" width="210" height="116" rx="20" class="box blue"/><text x="96" y="162" class="h" fill="#1e3a8a">개발자/CI</text><text x="92" y="196" class="t" fill="#334155">shell, checkout, runner</text>
+  <rect x="362" y="100" width="250" height="148" rx="22" class="box violet"/><text x="416" y="148" class="h" fill="#4c1d95">mise.toml</text><text x="392" y="184" class="t" fill="#475569">[tools] [env] [tasks]</text><text x="392" y="216" class="t" fill="#475569">lock · hierarchy · safe mode</text>
+  <rect x="710" y="86" width="310" height="76" rx="18" class="box"/><text x="742" y="132" class="s" fill="#0f172a">런타임 설치/전환: node, python, terraform...</text>
+  <rect x="710" y="196" width="310" height="76" rx="18" class="box"/><text x="742" y="242" class="s" fill="#0f172a">환경 변수 로딩: .env, default, unset, templates</text>
+  <rect x="710" y="306" width="310" height="76" rx="18" class="box"/><text x="742" y="352" class="s" fill="#0f172a">태스크 실행: build/test/lint/deploy + dependencies</text>
+  <rect x="710" y="416" width="310" height="76" rx="18" class="box amber"/><text x="742" y="462" class="s" fill="#78350f">보안 검증: signatures, provenance, safe mode</text>
+  <rect x="362" y="330" width="250" height="126" rx="22" class="box green"/><text x="414" y="378" class="h" fill="#14532d">운영 산출물</text><text x="392" y="412" class="t" fill="#334155">재현 가능한 온보딩</text><text x="392" y="438" class="t" fill="#334155">감사 가능한 변경 이력</text>
+  <path d="M272 174H362" stroke="#475569" stroke-width="3" marker-end="url(#m)"/><path d="M612 174H710" stroke="#475569" stroke-width="3"/><path d="M612 174C660 174 660 234 710 234" stroke="#475569" stroke-width="3" fill="none"/><path d="M612 174C660 174 660 344 710 344" stroke="#475569" stroke-width="3" fill="none"/><path d="M612 174C660 174 660 454 710 454" stroke="#475569" stroke-width="3" fill="none"/><path d="M487 248V330" stroke="#16a34a" stroke-width="4"/>
+</svg>

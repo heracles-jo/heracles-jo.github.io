@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">mise, asdf, direnv, Make 비교</title>
+  <desc id="desc">mise가 여러 개발 환경 도구의 기능을 단일 프로젝트 정책 계층으로 통합하는 비교 도표</desc>
+  <rect width="1100" height="560" fill="#0f172a"/>
+  <text x="58" y="62" fill="#fff" font-family="Inter,Pretendard,Arial" font-size="28" font-weight="800">개발 환경 도구의 관심사 비교</text>
+  <g font-family="Inter,Pretendard,Arial" font-size="18">
+    <rect x="60" y="104" width="980" height="70" rx="18" fill="#1e293b"/><text x="92" y="148" fill="#93c5fd" font-weight="700">asdf</text><text x="250" y="148" fill="#e2e8f0">런타임 버전 관리에 강점. 환경 변수·태스크·공급망 정책은 다른 도구와 조합 필요.</text>
+    <rect x="60" y="196" width="980" height="70" rx="18" fill="#1e293b"/><text x="92" y="240" fill="#86efac" font-weight="700">direnv</text><text x="250" y="240" fill="#e2e8f0">디렉터리별 환경 변수 로딩에 강점. 도구 설치와 태스크 의존성은 별도 설계.</text>
+    <rect x="60" y="288" width="980" height="70" rx="18" fill="#1e293b"/><text x="92" y="332" fill="#fcd34d" font-weight="700">Make/Task</text><text x="250" y="332" fill="#e2e8f0">명령 표준화에 강점. 런타임 버전과 비밀/검증 정책은 외부 계층에 의존.</text>
+    <rect x="60" y="380" width="980" height="94" rx="22" fill="#312e81" stroke="#a78bfa" stroke-width="2"/><text x="92" y="428" fill="#ddd6fe" font-weight="800">mise</text><text x="250" y="420" fill="#fff">도구 버전, 환경 변수, 태스크, lock/safe mode를 하나의 mise.toml로 묶어</text><text x="250" y="452" fill="#fff">로컬과 CI의 개발 환경 정책 차이를 줄이는 통합형 접근.</text>
+  </g>
+</svg>
