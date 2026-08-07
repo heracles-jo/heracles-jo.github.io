@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Kaneo 운영 아키텍처</title>
+  <desc id="desc">사용자, 웹 앱, API, PostgreSQL, 선택적 Redis, 알림 및 GitHub 연동으로 구성된 Kaneo 셀프호스팅 운영 구조</desc>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="70" y="78" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#0f172a">Kaneo self-hosted 운영 아키텍처</text>
+  <text x="70" y="116" font-family="Inter, Arial, sans-serif" font-size="20" fill="#475569">단순한 칸반 보드가 아니라 인증, 데이터, 확장, 알림 경계를 명확히 해야 하는 업무 시스템</text>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="70" y="210" width="220" height="115" rx="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="105" y="258" font-size="26" font-weight="700" fill="#1e3a8a">사용자/팀</text>
+    <text x="105" y="292" font-size="17" fill="#334155">브라우저, CLI, MCP</text>
+    <rect x="385" y="185" width="230" height="165" rx="24" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text x="425" y="245" font-size="27" font-weight="700" fill="#155e75">Web + API</text>
+    <text x="425" y="283" font-size="17" fill="#334155">Next/TypeScript 앱</text>
+    <text x="425" y="312" font-size="17" fill="#334155">인증·워크스페이스·업무 흐름</text>
+    <rect x="725" y="185" width="220" height="165" rx="24" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="768" y="245" font-size="27" font-weight="700" fill="#14532d">PostgreSQL</text>
+    <text x="770" y="283" font-size="17" fill="#334155">업무 데이터 원장</text>
+    <text x="770" y="312" font-size="17" fill="#334155">백업·복구 핵심</text>
+    <rect x="725" y="430" width="220" height="120" rx="24" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="785" y="480" font-size="27" font-weight="700" fill="#92400e">Redis</text>
+    <text x="758" y="516" font-size="17" fill="#334155">선택적 Pub/Sub·수평 확장</text>
+    <rect x="385" y="430" width="230" height="120" rx="24" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+    <text x="440" y="480" font-size="27" font-weight="700" fill="#9d174d">Integrations</text>
+    <text x="420" y="516" font-size="17" fill="#334155">GitHub App, SMTP, Webhook</text>
+    <line x1="290" y1="267" x2="385" y2="267" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow)"/>
+    <line x1="615" y1="267" x2="725" y2="267" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow)"/>
+    <line x1="615" y1="330" x2="725" y2="450" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow)"/>
+    <line x1="500" y1="430" x2="500" y2="350" stroke="#2563eb" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="70" y="585" width="1030" height="70" rx="18" fill="#0f172a"/>
+    <text x="105" y="628" font-size="22" fill="#e2e8f0">운영 판단 기준: 데이터 소유권, SSO/OIDC, 백업 RPO, 업그레이드 빈도, 알림 목적지 SSRF 통제, GitHub 연동 권한</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">프로젝트 관리 도구 도입 의사결정 매트릭스</title>
+  <desc id="desc">Kaneo, Jira, Linear, Plane을 데이터 통제와 워크플로 복잡도 축으로 비교하는 의사결정 매트릭스</desc>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="70" y="80" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#0f172a">프로젝트 관리 도구 선택의 두 축</text>
+  <text x="70" y="120" font-family="Inter, Arial, sans-serif" font-size="20" fill="#475569">도구의 기능 수보다 팀의 의사결정 속도와 운영 책임을 함께 평가해야 한다.</text>
+  <line x1="170" y1="610" x2="1040" y2="610" stroke="#334155" stroke-width="4"/>
+  <line x1="170" y1="610" x2="170" y2="170" stroke="#334155" stroke-width="4"/>
+  <polygon points="1040,610 1018,598 1018,622" fill="#334155"/>
+  <polygon points="170,170 158,192 182,192" fill="#334155"/>
+  <text x="760" y="665" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#334155">워크플로 복잡도·엔터프라이즈 기능</text>
+  <text x="35" y="325" transform="rotate(-90 35 325)" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#334155">데이터 통제·셀프호스팅 책임</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="20">
+    <rect x="275" y="285" width="190" height="92" rx="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="330" y="325" font-size="26" font-weight="800" fill="#14532d">Kaneo</text>
+    <text x="303" y="354" font-size="17" fill="#334155">간결함·자체 운영</text>
+    <rect x="345" y="430" width="190" height="92" rx="22" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <text x="405" y="470" font-size="26" font-weight="800" fill="#075985">Plane</text>
+    <text x="374" y="499" font-size="17" fill="#334155">오픈소스 ALM 지향</text>
+    <rect x="615" y="455" width="190" height="92" rx="22" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="675" y="495" font-size="26" font-weight="800" fill="#5b21b6">Linear</text>
+    <text x="647" y="524" font-size="17" fill="#334155">속도·SaaS 경험</text>
+    <rect x="795" y="250" width="190" height="92" rx="22" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="850" y="290" font-size="26" font-weight="800" fill="#991b1b">Jira</text>
+    <text x="828" y="319" font-size="17" fill="#334155">복잡한 거버넌스</text>
+  </g>
+  <rect x="170" y="170" width="870" height="440" fill="none" stroke="#cbd5e1" stroke-dasharray="8 10"/>
+  <text x="205" y="215" font-family="Inter, Arial, sans-serif" font-size="18" fill="#64748b">높은 자체 통제 / 낮은 기능 과밀</text>
+  <text x="760" y="590" font-family="Inter, Arial, sans-serif" font-size="18" fill="#64748b">높은 SaaS 의존 / 높은 프로세스 모델링</text>
+  <text x="70" y="720" font-family="Inter, Arial, sans-serif" font-size="20" fill="#475569">※ 위치는 실무 평가를 위한 개념도이며, 조직의 배포 방식·계약·플러그인 사용에 따라 달라질 수 있다.</text>
+</svg>
