@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">celld runtime flow</title>
+  <desc id="desc">Requests enter an ingress, are routed to the owning cell, and cell SQLite state is replicated to an object storage bucket.</desc>
+  <rect width="1100" height="620" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Inter, Arial" font-size="34" font-weight="800" fill="#0f172a">celld 동작 흐름: 요청, 소유권, 복제</text>
+  <g font-family="Inter, Arial" font-size="20" fill="#0f172a">
+    <rect x="70" y="140" width="180" height="90" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="115" y="178" font-weight="700">Ingress</text><text x="95" y="207" font-size="16">TLS/Auth 앞단</text>
+    <rect x="355" y="120" width="220" height="130" rx="20" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text x="410" y="162" font-weight="700">Owner Node</text><text x="392" y="194" font-size="16">V8 Worker isolate</text><text x="392" y="221" font-size="16">Cell owns request</text>
+    <rect x="420" y="320" width="120" height="92" rx="16" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="449" y="357" font-weight="700">Cell</text><text x="438" y="385" font-size="16">SQLite DB</text>
+    <rect x="760" y="145" width="250" height="120" rx="24" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="810" y="187" font-weight="700">S3-compatible bucket</text><text x="805" y="218" font-size="16">leases / replicas / deploy</text>
+    <rect x="760" y="360" width="250" height="92" rx="20" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="805" y="398" font-weight="700">운영 경계</text><text x="795" y="426" font-size="16">bucket credential = admin</text>
+  </g>
+  <g fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)">
+    <path d="M252 184 H350"/><path d="M465 252 V318"/><path d="M545 365 C650 360 710 310 760 240"/><path d="M760 205 H582"/>
+  </g>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker></defs>
+  <text x="70" y="535" font-family="Inter, Arial" font-size="20" fill="#475569">핵심: 각 cell은 작은 상태 단위이고, object storage가 중앙 제어판 없이 소유권과 내구성을 제공한다.</text>
+</svg>
