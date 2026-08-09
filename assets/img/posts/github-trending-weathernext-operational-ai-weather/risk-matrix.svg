@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">AI 기상 예측 도입 리스크 매트릭스</title>
+  <desc id="desc">모델 정확도, 데이터 라이선스, 운영 지연, 공식 경보 의존성, 감사 가능성을 도입 전 점검하는 매트릭스</desc>
+  <rect width="1100" height="560" rx="24" fill="#0f172a"/>
+  <text x="60" y="70" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="32" font-weight="800" fill="#f8fafc">도입 전 리스크 매트릭스</text>
+  <g transform="translate(100 120)" font-family="Inter, Apple SD Gothic Neo, Arial">
+    <line x1="0" y1="360" x2="820" y2="360" stroke="#64748b" stroke-width="3"/>
+    <line x1="0" y1="360" x2="0" y2="20" stroke="#64748b" stroke-width="3"/>
+    <text x="690" y="405" fill="#cbd5e1" font-size="18">업무 영향도 높음</text>
+    <text x="-42" y="36" fill="#cbd5e1" font-size="18" transform="rotate(-90 -42 36)">검증 난이도 높음</text>
+    <g font-size="18" font-weight="700">
+      <circle cx="230" cy="120" r="48" fill="#f97316" opacity="0.9"/><text x="177" y="126" fill="#111827">극한기상</text>
+      <circle cx="520" cy="105" r="52" fill="#ef4444" opacity="0.92"/><text x="466" y="111" fill="#fff">공식 경보</text>
+      <circle cx="660" cy="245" r="50" fill="#f59e0b" opacity="0.92"/><text x="606" y="251" fill="#111827">데이터 SLA</text>
+      <circle cx="390" cy="255" r="46" fill="#38bdf8" opacity="0.9"/><text x="339" y="261" fill="#082f49">라이선스</text>
+      <circle cx="170" cy="290" r="42" fill="#22c55e" opacity="0.9"/><text x="132" y="296" fill="#052e16">PoC</text>
+    </g>
+    <rect x="850" y="55" width="110" height="280" rx="16" fill="#1e293b"/>
+    <text x="875" y="100" fill="#f8fafc" font-size="17" font-weight="800">원칙</text>
+    <text x="875" y="145" fill="#cbd5e1" font-size="15">1. 병렬 검증</text>
+    <text x="875" y="180" fill="#cbd5e1" font-size="15">2. 대체 경로</text>
+    <text x="875" y="215" fill="#cbd5e1" font-size="15">3. 감사 로그</text>
+    <text x="875" y="250" fill="#cbd5e1" font-size="15">4. 휴먼 승인</text>
+    <text x="875" y="285" fill="#cbd5e1" font-size="15">5. 경보 우선</text>
+  </g>
+</svg>

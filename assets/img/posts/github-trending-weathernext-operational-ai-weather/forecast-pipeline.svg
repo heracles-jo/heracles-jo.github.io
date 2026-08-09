@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">WeatherNext 운영 파이프라인</title>
+  <desc id="desc">초기 조건, ML 예보 모델, 확률 앙상블, BigQuery·Earth Engine·GCS 배포, 업무 의사결정으로 이어지는 파이프라인</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#e0f2fe"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#0369a1"/></marker>
+  </defs>
+  <rect width="1100" height="520" rx="24" fill="url(#bg)"/>
+  <text x="50" y="62" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="30" font-weight="800" fill="#0f172a">WeatherNext를 제품에 넣을 때의 데이터 흐름</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="20" font-weight="700">
+    <rect x="55" y="130" width="200" height="110" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="86" y="176" fill="#1e3a8a">초기 조건</text><text x="86" y="207" fill="#1e40af" font-size="16">HRES / ERA5 / 관측</text>
+    <rect x="325" y="130" width="205" height="110" rx="18" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
+    <text x="357" y="176" fill="#164e63">ML 예보 모델</text><text x="357" y="207" fill="#155e75" font-size="16">FGN · GraphCast · GenCast</text>
+    <rect x="600" y="130" width="210" height="110" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="632" y="176" fill="#14532d">확률·앙상블</text><text x="632" y="207" fill="#166534" font-size="16">0~15일, 격자 변수</text>
+    <rect x="875" y="130" width="170" height="110" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="914" y="176" fill="#78350f">데이터 피드</text><text x="904" y="207" fill="#92400e" font-size="16">BQ · EE · GCS</text>
+  </g>
+  <g stroke="#0369a1" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M255 185 H315"/><path d="M530 185 H590"/><path d="M810 185 H865"/>
+    <path d="M960 240 C960 325 865 350 760 350"/>
+  </g>
+  <rect x="265" y="318" width="500" height="130" rx="22" fill="#0f172a" opacity="0.92"/>
+  <text x="305" y="366" fill="#e0f2fe" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="24" font-weight="800">업무 의사결정 계층</text>
+  <text x="305" y="404" fill="#cbd5e1" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="18">물류 ETA · 전력 수요 · 보험 리스크 · 농업·방재 운영</text>
+  <text x="305" y="432" fill="#94a3b8" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="16">검증, SLA, 휴먼 승인, 공식 경보와의 관계 설정이 핵심</text>
+</svg>
