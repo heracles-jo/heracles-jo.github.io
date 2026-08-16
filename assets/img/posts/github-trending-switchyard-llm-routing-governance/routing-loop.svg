@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Switchyard routing loop</title>
+  <desc id="desc">사용자 요청, API 변환, 라우팅 알고리즘, 모델 호출, 메트릭 수집, 피드백 루프로 이어지는 LLM 게이트웨이 운영 흐름</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+  </defs>
+  <rect width="1100" height="620" rx="28" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Inter, Arial" font-size="34" font-weight="800" fill="#0f172a">LLM 라우팅 운영 루프</text>
+  <text x="60" y="110" font-family="Inter, Arial" font-size="18" fill="#475569">프로토콜 호환성, 라우팅 판단, 장애 대체, 계측을 하나의 제어면으로 묶는다.</text>
+  <g font-family="Inter, Arial" font-size="18" font-weight="700">
+    <rect x="70" y="210" width="190" height="92" rx="18" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="112" y="252" fill="#1e3a8a">애플리케이션</text><text x="102" y="280" fill="#1e40af" font-size="15">agent · RAG · 업무앱</text>
+    <rect x="340" y="190" width="210" height="132" rx="18" fill="#ecfeff" stroke="#0891b2"/>
+    <text x="382" y="238" fill="#155e75">API 변환</text><text x="371" y="268" fill="#0e7490" font-size="15">OpenAI Chat</text><text x="364" y="294" fill="#0e7490" font-size="15">Anthropic Messages</text>
+    <rect x="640" y="160" width="230" height="190" rx="18" fill="#ecfdf5" stroke="#059669"/>
+    <text x="690" y="210" fill="#065f46">라우팅 알고리즘</text><text x="682" y="242" fill="#047857" font-size="15">random · classifier</text><text x="682" y="268" fill="#047857" font-size="15">stage-router</text><text x="682" y="294" fill="#047857" font-size="15">context fallback</text>
+    <rect x="910" y="145" width="150" height="64" rx="14" fill="#eff6ff" stroke="#3b82f6"/><text x="938" y="184" fill="#1d4ed8">강한 모델</text>
+    <rect x="910" y="255" width="150" height="64" rx="14" fill="#f0fdf4" stroke="#22c55e"/><text x="938" y="294" fill="#15803d">저비용 모델</text>
+    <rect x="910" y="365" width="150" height="64" rx="14" fill="#fefce8" stroke="#eab308"/><text x="936" y="404" fill="#a16207">대체 공급자</text>
+    <rect x="350" y="440" width="520" height="92" rx="18" fill="#fff7ed" stroke="#f97316"/>
+    <text x="430" y="482" fill="#9a3412">Prometheus 지표 · 라우팅 로그 · 비용/지연/오류 분석</text>
+    <text x="468" y="510" fill="#c2410c" font-size="15">운영 정책은 계측 데이터로 계속 보정되어야 한다</text>
+  </g>
+  <g fill="none" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M260 256 H340"/><path d="M550 256 H640"/><path d="M870 230 C900 190 900 178 910 177"/><path d="M870 270 H910"/><path d="M870 310 C900 350 900 395 910 397"/><path d="M985 429 C970 530 870 566 740 532"/><path d="M610 440 C570 385 620 360 690 340"/>
+  </g>
+</svg>
