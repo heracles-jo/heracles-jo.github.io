@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">LLM routing adoption matrix</title>
+  <desc id="desc">LLM 라우팅 게이트웨이를 도입할 때 품질 리스크와 운영 복잡도에 따라 적합한 적용 범위를 나누는 의사결정 매트릭스</desc>
+  <rect width="1100" height="620" rx="28" fill="#0f172a"/>
+  <text x="70" y="76" fill="#f8fafc" font-family="Inter, Arial" font-size="34" font-weight="800">도입 판단 매트릭스</text>
+  <text x="70" y="114" fill="#cbd5e1" font-family="Inter, Arial" font-size="18">품질 리스크가 큰 업무일수록 라우팅 자동화보다 관찰·승인·fallback 설계가 먼저다.</text>
+  <line x1="180" y1="500" x2="980" y2="500" stroke="#64748b" stroke-width="3"/>
+  <line x1="180" y1="500" x2="180" y2="170" stroke="#64748b" stroke-width="3"/>
+  <path d="M980 500 l-14 -8 v16z" fill="#64748b"/><path d="M180 170 l-8 14 h16z" fill="#64748b"/>
+  <text x="440" y="555" fill="#e2e8f0" font-family="Inter, Arial" font-size="22" font-weight="700">운영 복잡도 / 트래픽 규모</text>
+  <text x="28" y="328" fill="#e2e8f0" font-family="Inter, Arial" font-size="22" font-weight="700" transform="rotate(-90 28 328)">품질·보안 리스크</text>
+  <rect x="240" y="350" width="260" height="100" rx="18" fill="#064e3b" stroke="#34d399"/>
+  <text x="275" y="390" fill="#d1fae5" font-family="Inter, Arial" font-size="22" font-weight="800">PoC 적합</text>
+  <text x="275" y="422" fill="#a7f3d0" font-family="Inter, Arial" font-size="16">반복형 사내 질의, 개발 보조</text>
+  <rect x="600" y="335" width="300" height="120" rx="18" fill="#1e3a8a" stroke="#60a5fa"/>
+  <text x="636" y="378" fill="#dbeafe" font-family="Inter, Arial" font-size="22" font-weight="800">게이트웨이 가치 큼</text>
+  <text x="636" y="410" fill="#bfdbfe" font-family="Inter, Arial" font-size="16">다중 공급자, 비용 상한, A/B 필요</text>
+  <rect x="240" y="205" width="270" height="100" rx="18" fill="#78350f" stroke="#fbbf24"/>
+  <text x="275" y="245" fill="#fef3c7" font-family="Inter, Arial" font-size="22" font-weight="800">자동 라우팅 보류</text>
+  <text x="275" y="277" fill="#fde68a" font-family="Inter, Arial" font-size="16">규정·감사·데이터 경계 먼저</text>
+  <rect x="620" y="190" width="290" height="120" rx="18" fill="#7f1d1d" stroke="#f87171"/>
+  <text x="654" y="233" fill="#fee2e2" font-family="Inter, Arial" font-size="22" font-weight="800">엄격한 운영 통제</text>
+  <text x="654" y="265" fill="#fecaca" font-family="Inter, Arial" font-size="16">승인, canary, SLO, 감사 로그 필수</text>
+  <circle cx="570" cy="325" r="9" fill="#f8fafc"/><text x="590" y="331" fill="#f8fafc" font-family="Inter, Arial" font-size="17">Switchyard 검토 지점</text>
+</svg>
