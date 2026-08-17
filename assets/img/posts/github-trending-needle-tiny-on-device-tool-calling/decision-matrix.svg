@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">초소형 AI 모델 도입 판단 매트릭스</title><desc id="desc">온디바이스 모델을 도입할 때 지연 시간, 개인정보, 정확도, 운영 난이도를 함께 평가해야 함을 보여주는 매트릭스</desc>
+<rect width="1100" height="560" rx="28" fill="#f8fafc"/>
+<text x="70" y="70" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="#0f172a">도입 판단: 엣지에서 처리할 것인가, 클라우드로 보낼 것인가</text>
+<g font-family="Arial, Helvetica, sans-serif" font-size="20">
+<rect x="70" y="120" width="230" height="85" rx="18" fill="#ccfbf1"/><text x="96" y="154" font-weight="700" fill="#134e4a">로컬 우선</text><text x="96" y="183" fill="#115e59">저지연·오프라인·민감 데이터</text>
+<rect x="330" y="120" width="230" height="85" rx="18" fill="#dbeafe"/><text x="356" y="154" font-weight="700" fill="#1e3a8a">하이브리드</text><text x="356" y="183" fill="#1d4ed8">신뢰도 기반 에스컬레이션</text>
+<rect x="590" y="120" width="230" height="85" rx="18" fill="#fee2e2"/><text x="616" y="154" font-weight="700" fill="#7f1d1d">클라우드 우선</text><text x="616" y="183" fill="#991b1b">복잡한 추론·긴 컨텍스트</text>
+<rect x="70" y="255" width="960" height="230" rx="24" fill="#e2e8f0"/>
+<line x1="310" y1="255" x2="310" y2="485" stroke="#94a3b8" stroke-width="2"/><line x1="550" y1="255" x2="550" y2="485" stroke="#94a3b8" stroke-width="2"/><line x1="790" y1="255" x2="790" y2="485" stroke="#94a3b8" stroke-width="2"/>
+<line x1="70" y1="330" x2="1030" y2="330" stroke="#94a3b8" stroke-width="2"/><line x1="70" y1="405" x2="1030" y2="405" stroke="#94a3b8" stroke-width="2"/>
+<text x="110" y="302" font-weight="700" fill="#0f172a">평가 항목</text><text x="350" y="302" font-weight="700" fill="#0f172a">좋은 신호</text><text x="590" y="302" font-weight="700" fill="#0f172a">주의 신호</text><text x="830" y="302" font-weight="700" fill="#0f172a">운영 기준</text>
+<text x="110" y="377" fill="#334155">정확도</text><text x="350" y="377" fill="#334155">반복 작업·명확한 스키마</text><text x="590" y="377" fill="#334155">규정·고위험 판단</text><text x="830" y="377" fill="#334155">golden set + fallback</text>
+<text x="110" y="452" fill="#334155">성능/보안</text><text x="350" y="452" fill="#334155">RAM·배터리 예산 적합</text><text x="590" y="452" fill="#334155">공급망·모델 업데이트 불명확</text><text x="830" y="452" fill="#334155">서명·관측·릴리스 게이트</text>
+</g>
+</svg>
