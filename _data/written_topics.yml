@@ -89,3 +89,14 @@
     - "로컬 LLM"
   slug: "airllm-low-vram-layer-streaming"
   summary: "AirLLM의 레이어별 가중치 스트리밍을 중심으로 VRAM 절감과 디스크 I/O·처리량·공급망 보안의 교환관계 및 PoC 기준을 정리."
+- date: 2026-08-19
+  title: "Apple Silicon LLM 서버: OMLX 연속 배칭·SSD 캐시 도입 기준"
+  github_repo: "https://github.com/jundot/omlx"
+  main_keyword: "Apple Silicon LLM 서버"
+  related_keywords:
+    - "OMLX"
+    - "연속 배칭"
+    - "SSD KV 캐시"
+    - "MLX 모델 서빙"
+  slug: "github-trending-omlx-apple-silicon-llm-server"
+  summary: "OMLX의 MLX 기반 연속 배칭, 다중 모델 풀, RAM·SSD 계층형 KV 캐시를 중심으로 Mac 로컬 추론 서버의 운영 경계와 PoC 기준을 정리."

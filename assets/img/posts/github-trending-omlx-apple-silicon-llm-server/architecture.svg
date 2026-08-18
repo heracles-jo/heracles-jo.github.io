@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">OMLX 요청과 캐시 아키텍처</title><desc id="desc">클라이언트 요청이 API, 스케줄러, 엔진 풀을 거쳐 MLX와 RAM 및 SSD KV 캐시로 전달되는 구조</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f9ff"/><stop offset="1" stop-color="#e7f4f4"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#2b6480"/></marker></defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <text x="600" y="58" text-anchor="middle" fill="#102a43" font-family="Arial, sans-serif" font-size="34" font-weight="800">OMLX: 요청 수명주기와 메모리 계층</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g fill="#fff" stroke="#3b82a0" stroke-width="3"><rect x="60" y="120" width="210" height="82" rx="18"/><rect x="60" y="260" width="210" height="82" rx="18"/><rect x="60" y="400" width="210" height="82" rx="18"/></g>
+    <g fill="#173b52" font-size="22" font-weight="700"><text x="165" y="156">코딩 에이전트</text><text x="165" y="184">긴 컨텍스트</text><text x="165" y="296">채팅 UI</text><text x="165" y="324">짧은 대화</text><text x="165" y="436">자동화·임베딩</text><text x="165" y="464">배치 요청</text></g>
+    <rect x="365" y="180" width="260" height="240" rx="24" fill="#123650"/>
+    <text x="495" y="230" fill="#fff" font-size="26" font-weight="800">호환 API</text><text x="495" y="268" fill="#bfe9f6" font-size="19">OpenAI · Anthropic</text><rect x="405" y="305" width="180" height="70" rx="16" fill="#2b6f8d"/><text x="495" y="337" fill="#fff" font-size="20" font-weight="700">Scheduler</text><text x="495" y="361" fill="#dff7ff" font-size="16">FCFS · 동시성 제한</text>
+    <rect x="710" y="120" width="420" height="360" rx="26" fill="#fff" stroke="#5973bb" stroke-width="3"/>
+    <text x="920" y="166" fill="#243b78" font-size="27" font-weight="800">EnginePool</text>
+    <g fill="#edf0ff" stroke="#788ad1" stroke-width="2"><rect x="755" y="205" width="150" height="82" rx="15"/><rect x="935" y="205" width="150" height="82" rx="15"/><rect x="755" y="326" width="150" height="82" rx="15"/><rect x="935" y="326" width="150" height="82" rx="15"/></g>
+    <g fill="#293d75" font-size="19" font-weight="700"><text x="830" y="240">Batched LLM</text><text x="830" y="266">연속 배칭</text><text x="1010" y="240">VLM</text><text x="1010" y="266">이미지·도구</text><text x="830" y="361">Embedding</text><text x="830" y="387">벡터 생성</text><text x="1010" y="361">Reranker</text><text x="1010" y="387">문서 재정렬</text></g>
+    <rect x="160" y="575" width="285" height="110" rx="22" fill="#dff8ef" stroke="#2fa37b" stroke-width="3"/><rect x="485" y="575" width="285" height="110" rx="22" fill="#e9e6ff" stroke="#7462d5" stroke-width="3"/><rect x="810" y="575" width="285" height="110" rx="22" fill="#fff1dc" stroke="#d48a29" stroke-width="3"/>
+    <text x="302" y="620" fill="#17694f" font-size="24" font-weight="800">통합 메모리</text><text x="302" y="654" fill="#256c59" font-size="18">모델 + Hot KV Cache</text><text x="627" y="620" fill="#4c3daa" font-size="24" font-weight="800">로컬 SSD</text><text x="627" y="654" fill="#5d52a8" font-size="18">Cold KV · 재시작 복원</text><text x="952" y="620" fill="#9a5b14" font-size="24" font-weight="800">메모리 가드</text><text x="952" y="654" fill="#8e621f" font-size="18">LRU · TTL · Pinning</text>
+  </g>
+  <g fill="none" stroke="#2b6480" stroke-width="4" marker-end="url(#arrow)"><path d="M270 161H350"/><path d="M270 301H350"/><path d="M270 441H350"/><path d="M625 300H690"/><path d="M835 480L330 560"/><path d="M920 480L645 560"/><path d="M1000 480L970 560"/></g>
+</svg>
