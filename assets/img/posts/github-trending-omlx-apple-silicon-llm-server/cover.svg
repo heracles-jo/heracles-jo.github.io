@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Apple Silicon LLM 서버와 OMLX</title>
+  <desc id="desc">여러 로컬 AI 클라이언트의 요청을 연속 배칭하고 RAM과 SSD KV 캐시로 처리하는 Apple Silicon 서버</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081426"/><stop offset="1" stop-color="#163d58"/></linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#41d1ff"/><stop offset="1" stop-color="#7c5cff"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-opacity=".32"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1050" cy="90" r="190" fill="#36d399" opacity=".08"/>
+  <circle cx="120" cy="590" r="250" fill="#7c5cff" opacity=".10"/>
+  <g fill="none" stroke="#72d9ff" stroke-width="4" opacity=".7">
+    <path d="M120 150H330L410 235"/><path d="M120 245H310L410 280"/><path d="M120 340H320L410 325"/>
+  </g>
+  <g fill="#dff8ff" font-family="Arial, sans-serif" font-size="24" font-weight="700">
+    <text x="105" y="142">CODE AGENT</text><text x="105" y="237">CHAT UI</text><text x="105" y="332">AUTOMATION</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="405" y="150" width="390" height="330" rx="34" fill="#0d2138" stroke="#6fdcff" stroke-width="3"/>
+    <rect x="445" y="190" width="310" height="120" rx="24" fill="url(#chip)"/>
+    <text x="600" y="245" text-anchor="middle" fill="#071321" font-family="Arial, sans-serif" font-size="54" font-weight="800">oMLX</text>
+    <text x="600" y="282" text-anchor="middle" fill="#071321" font-family="Arial, sans-serif" font-size="21" font-weight="700">CONTINUOUS BATCHING</text>
+    <rect x="445" y="340" width="140" height="88" rx="18" fill="#133f4c" stroke="#46e5c2" stroke-width="2"/>
+    <rect x="615" y="340" width="140" height="88" rx="18" fill="#2b2850" stroke="#a495ff" stroke-width="2"/>
+    <text x="515" y="378" text-anchor="middle" fill="#8ff4dc" font-family="Arial, sans-serif" font-size="23" font-weight="700">RAM</text>
+    <text x="515" y="406" text-anchor="middle" fill="#d9fff5" font-family="Arial, sans-serif" font-size="16">HOT KV</text>
+    <text x="685" y="378" text-anchor="middle" fill="#c6bcff" font-family="Arial, sans-serif" font-size="23" font-weight="700">SSD</text>
+    <text x="685" y="406" text-anchor="middle" fill="#eeebff" font-family="Arial, sans-serif" font-size="16">COLD KV</text>
+  </g>
+  <path d="M800 315H1040" stroke="#70e1ff" stroke-width="5" stroke-dasharray="12 10"/>
+  <path d="M1025 299l28 16-28 16" fill="#70e1ff"/>
+  <g fill="#eefbff" font-family="Arial, sans-serif">
+    <text x="835" y="275" font-size="25" font-weight="700">OPENAI / ANTHROPIC API</text>
+    <text x="835" y="355" font-size="21">LOCAL · PRIVATE · MEASURABLE</text>
+  </g>
+  <text x="74" y="560" fill="#fff" font-family="Arial, sans-serif" font-size="45" font-weight="800">APPLE SILICON LLM SERVER</text>
+  <text x="76" y="598" fill="#9edff1" font-family="Arial, sans-serif" font-size="22">연속 배칭 · 다중 모델 · RAM/SSD 계층형 KV 캐시</text>
+</svg>
