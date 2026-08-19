@@ -1,132 +1,116 @@
 ---
-title: "AI 메모리 인프라의 부상"
-description: "2026년 6월 2일 GitHub Trending에서 Supermemory가 보여준 AI 장기 기억, 컨텍스트 엔진, 하이브리드 검색, 개인정보 거버넌스와 운영 리스크를 IT 전문가 관점에서 분석합니다."
+title: "AI 에이전트 메모리 설계: Supermemory와 OpenViking 비교"
+description: "Supermemory와 OpenViking의 메모리 모델, 검색 경로, 권한·삭제·라이선스 경계를 비교해 AI 에이전트 컨텍스트 계층의 실무 도입 기준을 제시합니다."
 author: heracles-jo
 date: 2026-06-02 07:38:00 +0900
 categories: [AI Infrastructure, Open Source]
-tags: [github-trending, supermemory, ai-memory, rag, context-engine, agent-memory, data-governance, privacy]
+tags: [supermemory, openviking, agent-memory, context-engine, rag, data-governance]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-ai-memory-supermemory/cover.svg
-  alt: Supermemory를 중심으로 대화, 문서, 커넥터, 메모리 그래프, 하이브리드 검색, 정책 계층이 연결되는 AI 메모리 인프라 흐름을 설명하는 커버 이미지
+  alt: Supermemory와 OpenViking을 비교해 AI 에이전트 메모리 계층의 저장·검색·정책 흐름을 설명하는 이미지
 ---
 
-## 오늘의 GitHub Trending 신호: AI의 다음 병목은 “기억”이다
+AI 에이전트가 이전 대화를 기억하지 못할 때 흔히 “벡터 데이터베이스를 붙이면 된다”고 생각한다. 그러나 운영 환경에서 필요한 것은 문서 유사도 검색만이 아니다. 어떤 대화에서 사실을 추출할지, 변경된 선호를 어떻게 덮어쓸지, 사용자가 삭제를 요청하면 파생 요약까지 지울지, 에이전트가 어떤 경로로 컨텍스트를 골랐는지 설명할 수 있어야 한다. **에이전트 메모리는 검색 기능이 아니라 데이터 수명주기와 실행 정책을 함께 관리하는 컨텍스트 계층**이다.
 
-2026년 6월 2일 오전 KST 기준으로 GitHub Trending daily와 weekly를 확인하면 AI 도구와 데이터 인프라가 동시에 강하게 나타난다. daily 후보에는 [microsoft/markitdown](https://github.com/microsoft/markitdown), [supermemoryai/supermemory](https://github.com/supermemoryai/supermemory), [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling), [pbakaus/impeccable](https://github.com/pbakaus/impeccable), [revfactory/harness](https://github.com/revfactory/harness), [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) 등이 보였다. weekly에서도 AI 콘텐츠 생성, 문서 변환, 에이전트 워크플로, 코드 이해 도구가 계속 노출되었다. 이미 이 블로그에서는 에이전트 네이티브 소프트웨어, 토큰 절감형 개발 도구, 문서 AI, 적응형 웹 스크래핑 등 인접 주제를 다루었기 때문에 오늘은 다른 층을 선택했다.
+이 글은 2026년 6월 처음 분석한 [Supermemory](https://github.com/supermemoryai/supermemory)를 2026년 8월 20일 KST 기준 공개 자료로 다시 검토하고, 같은 검색 의도를 가진 [OpenViking](https://github.com/volcengine/OpenViking)과 비교해 보강한 글이다. Search Console과 Analytics의 쿼리·CTR 데이터에는 이번 실행 환경에서 접근할 수 없었다. 따라서 실제 유입 데이터를 봤다고 가정하지 않고, 기존 글의 제목·설명·본문과 GitHub Trending daily·weekly, 공식 README·문서·릴리스·커밋을 대조했다.
 
-오늘의 논지는 **AI 제품의 경쟁력이 모델 호출 능력에서 개인·조직별 장기 기억을 안전하게 다루는 컨텍스트 인프라로 이동하고 있다**는 것이다. 그 신호를 잘 보여준 저장소가 [Supermemory](https://github.com/supermemoryai/supermemory)다. Supermemory는 README에서 자신을 “memory and context layer for AI”라고 설명하고, LongMemEval, LoCoMo, ConvoMem 같은 AI memory benchmark에서의 성과를 강조한다. 또한 대화에서 사실을 추출하고, 사용자 프로필을 유지하며, 지식 업데이트와 모순을 처리하고, 만료된 정보를 잊고, 필요한 시점에 적절한 컨텍스트를 제공한다고 설명한다.
+## 새 글 대신 기존 글을 보강한 이유
 
-GitHub API 확인 시점 기준으로 `supermemoryai/supermemory`는 약 23,924개의 star, 2,141개의 fork, 25개의 open issue를 가진 TypeScript 프로젝트로 확인되었다. 저장소 설명은 “Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.”이며, topics에는 `agent-memory`, `ai-memory`, `cloudflare-kv`, `cloudflare-workers`, `postgres`, `remix`, `typescript`, `vite` 등이 포함되어 있었다. 최신 릴리스 목록에는 2026년 5월 31일 공개된 `supermemory-server 0.0.1-rc.4`, `rc.3`, `rc.2`가 보였다. 이 수치와 Trending 노출은 확인 시점의 스냅샷이며, GitHub 집계 방식과 시간대에 따라 달라질 수 있다.
+8월 20일 daily Trending에서는 MoneyPrinterTurbo, OpenViking, munder-difflin, Anthropic-Cybersecurity-Skills, NautilusTrader가 강한 신호를 보였다. 하지만 순위가 높다는 이유만으로 새 URL을 만들면 이미 쌓인 검색 의도와 내부 링크를 나누게 된다.
 
-왜 이 흐름이 중요한가. 지난 2년 동안 많은 팀은 “어떤 LLM을 쓸 것인가”에 집중했다. 그러나 실무 AI 제품을 운영해 보면 모델보다 더 자주 문제가 되는 것은 컨텍스트다. 사용자의 선호, 프로젝트 상태, 조직 정책, 과거 의사결정, 문서 버전, 취소된 요구사항, 새로 바뀐 사실을 모델이 언제 어떻게 알아야 하는가가 품질을 좌우한다. 단순히 대화 로그를 길게 붙이거나 벡터 DB에 문서를 넣는 것만으로는 부족하다. 기억은 검색뿐 아니라 추출, 정규화, 충돌 해결, 만료, 권한, 감사, 삭제 요청 대응까지 포함하는 운영 계층이다.
+| 후보 | 확인 시점 공개 신호 | 검색 의도와 판단 |
+|---|---:|---|
+| [OpenViking](https://github.com/volcengine/OpenViking) | daily 803 stars today, weekly 985 stars this week, GitHub API 약 3.0만 stars, v0.4.15 | 에이전트 메모리·RAG·스킬을 통합하는 주제로 기존 Supermemory 글과 의도가 같다. 새 글보다 비교 보강이 낫다. |
+| [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | daily 2,221 stars today, API 약 11만 stars, MIT, v1.3.4 | 자동 영상 생성은 기존 영상 편집·콘텐츠 자동화 클러스터와 겹친다. |
+| [munder-difflin](https://github.com/chaitanyagiri/munder-difflin) | daily 797 stars today, API 약 2.6천 stars, v0.4.4 | 로컬 멀티 에이전트 하네스는 [Orca의 병렬 에이전트 운영](/posts/orca-parallel-ai-coding-agents/)과 검색 의도가 가깝다. |
+| [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | daily 767 stars today, API 약 3.0만 stars, Apache-2.0 | 보안 스킬 카탈로그는 [SkillSpector 공급망 분석](/posts/github-trending-skillspector-agent-skill-security/)과 에이전트 스킬 거버넌스 클러스터에 이미 자리가 있다. |
+| [NautilusTrader](https://github.com/nautechsystems/nautilus_trader) | daily 79 stars today, API 약 2.6만 stars, LGPL-3.0, v1.231.0 | 결정론적 트레이딩 엔진은 장기 가치가 있지만 [에이전트형 금융 리서치 거버넌스](/posts/github-trending-vibe-trading-agentic-finance-governance/)와 별개로 깊은 도메인 검증이 필요하다. |
+
+수치는 모두 확인 시점의 스냅샷이며 이후 달라진다. OpenViking의 최근 커밋에는 세션 간 메모리 갱신·부분 삭제 신뢰성, 엔터티 URI 대소문자 정규화, URI 검증 수정이 포함됐다. 공개 이슈에는 임베딩 차원 절단 누락과 대량 리소스의 배치·스트리밍 가져오기 요청이 보였다. 이는 “컨텍스트 데이터베이스”가 데모를 넘어가면 데이터 정규화, 삭제 일관성, 대량 수집이 핵심 운영 문제가 된다는 신호다.
+
+## 먼저 구분할 것: 상태, 기억, 지식은 같은 데이터가 아니다
+
+에이전트가 다루는 컨텍스트를 한 저장소에 넣더라도 의미는 세 종류로 나눠야 한다.
+
+1. **실행 상태(state)**는 현재 작업 단계, 재시도 횟수, 도구 호출 결과처럼 워크플로를 재개하는 데 필요한 값이다. 정확한 체크포인트와 동시성 제어가 우선이다.
+2. **장기 기억(memory)**은 사용자의 선호, 이전 결정, 반복되는 작업 습관처럼 다음 세션에 재사용할 정보다. 추출 근거, 신뢰도, 만료와 수정이 중요하다.
+3. **외부 지식(knowledge)**은 문서, 코드, 티켓, 이메일처럼 원본 시스템에 권한과 버전이 있는 자료다. 원본 ACL 동기화와 출처 추적이 필요하다.
+
+이 구분을 하지 않으면 “지난 배포에서 실패했다”는 일시적 사건이 영구 선호처럼 저장되거나, 사용 권한을 잃은 문서의 요약이 장기 기억에 남는다. 장기 실행 에이전트의 체크포인트와 재개 문제는 [DeerFlow 운영 분석](/posts/github-trending-deer-flow-long-horizon-agent-workflow/)의 영역이고, 코드 구조를 지속적으로 색인하는 문제는 [코드베이스 기억 계층](/posts/github-trending-codebase-memory-mcp-code-intelligence-layer/)의 영역이다. 제품 메모리 계층은 이들과 연결되지만 책임까지 섞어서는 안 된다.
 
 ![AI 메모리 계층의 기준 아키텍처](https://heracles-jo.github.io/assets/img/posts/github-trending-ai-memory-supermemory/architecture.svg)
 
-## Supermemory가 겨냥하는 문제: RAG 이후의 컨텍스트 운영
+## Supermemory: 제품 API와 사용자 프로필 중심
 
-RAG는 AI 애플리케이션에서 사실성을 보강하는 대표 패턴이 되었다. 문서를 chunk로 나누고 embedding을 만들고 vector search로 관련 문서를 찾은 뒤 프롬프트에 붙인다. 이 방식은 정적 지식 베이스에는 유용하지만, 사용자별 장기 기억에는 몇 가지 한계가 있다. 첫째, “홍길동은 Python을 선호한다” 같은 사실과 “지난주 회의록 12페이지”는 같은 검색 단위가 아니다. 둘째, 사용자의 선호는 변한다. 셋째, 과거 기억이 현재 사실과 충돌할 수 있다. 넷째, 개인정보와 업무 기밀은 사용 목적과 보존 기간에 따라 다르게 다뤄야 한다.
+Supermemory의 공식 README는 대화에서 사실을 추출하고, 안정적 사실과 최근 활동으로 사용자 프로필을 만들며, RAG와 기억을 한 질의에서 검색하는 흐름을 전면에 둔다. Google Drive·Gmail·Notion·OneDrive·GitHub 커넥터와 PDF·이미지 OCR·영상 전사·코드 AST 인식 처리를 하나의 API 경험으로 묶는 것도 특징이다. 제품 팀 입장에서는 벡터 DB, 임베딩 파이프라인, 청킹 전략을 각각 조립하지 않고 빠르게 가설을 시험할 수 있다.
 
-Supermemory README는 이를 “Full RAG, connectors, file processing — the entire context stack, one system”이라고 표현한다. 주요 기능으로는 대화에서 사실을 추출하는 memory, 자동 유지되는 user profile, RAG와 memory를 결합한 hybrid search, Google Drive·Gmail·Notion·OneDrive·GitHub connector, PDF·이미지 OCR·비디오 transcription·코드 AST-aware chunking 같은 multi-modal extractor를 제시한다. 이 설명을 실무 언어로 바꾸면, Supermemory는 단순 vector DB가 아니라 “AI 제품이 사용자와 조직의 맥락을 장기적으로 기억하고 검색하는 제품화된 계층”을 지향한다.
+2026년 8월 20일 GitHub API 스냅샷에서 저장소는 약 2.9만 stars, 2.5천 forks, 182개의 열린 이슈·PR, MIT 라이선스로 확인됐다. 최신 공개 릴리스는 8월 17일의 `server-v0.0.8`이고, 최근 커밋에는 MCP 응답 정리와 API 키 Bearer 인증 지원이 포함됐다. 6월 글에 적었던 초기 release candidate 상태에서 서버 릴리스가 진행됐으므로, 이전 수치를 그대로 유지하지 않았다.
 
-이 계층은 세 가지 데이터 유형을 구분해야 한다. 첫째는 안정적 사실이다. 사용자의 직무, 선호 언어, 담당 프로젝트, 자주 쓰는 도구처럼 비교적 오래 유지되는 정보다. 둘째는 최근 활동이다. 이번 주에 진행 중인 태스크, 마지막 회의에서 결정된 내용, 방금 업로드한 파일처럼 시간 민감도가 높은 정보다. 셋째는 외부 지식이다. 문서, 코드, 이메일, 티켓, 위키처럼 사용자와 조직의 작업 환경에 존재하는 지식이다. 이 세 유형을 한 프롬프트에 무작정 넣으면 비용이 커지고, 잘못된 우선순위 때문에 응답 품질이 떨어진다.
+Supermemory가 잘 맞는 검색 의도는 명확하다. **앱에 사용자별 장기 기억과 커넥터를 빠르게 붙이고 싶은 팀**이다. `containerTag`로 프로젝트·고객·사용자 범위를 나누고, 프로필과 관련 기억을 함께 가져오는 API는 제품 통합이 단순하다. 반면 간단한 API 뒤에 숨은 추출·모순 해결·삭제 동작을 조직의 정책과 일치시키는 검증은 별도로 해야 한다. README의 벤치마크와 지연 시간 주장은 공급자가 제시한 결과이므로 자사 대화와 권한 모델로 재현해야 한다.
 
-Supermemory가 “one call, ~50ms” 사용자 프로필을 강조하는 것도 이 맥락에서 이해할 수 있다. AI 제품은 매 요청마다 모든 대화와 문서를 검색할 수 없다. 빠르게 필요한 사용자 상태를 가져오고, 별도의 hybrid search로 관련 문서를 보강하며, 오래되거나 모순된 정보는 정책적으로 제외해야 한다. 결국 memory layer는 latency budget, token budget, privacy budget을 동시에 관리하는 인프라가 된다.
+## OpenViking: 탐색 가능한 가상 파일시스템 중심
 
-## 왜 지금 GitHub Trending에 올랐나: 개인화 AI와 엔터프라이즈 컨텍스트의 충돌
+OpenViking은 메모리, 리소스, 스킬을 `viking://` URI 아래의 가상 파일시스템으로 표현한다. 에이전트는 불투명한 벡터 검색 API만 호출하는 대신 `ls`, `tree`, `find`처럼 디렉터리를 탐색한다. 각 항목은 L0 한 문장 요약, L1 개요, L2 원문 세 계층으로 처리되고 작업에 필요한 깊이만 로드된다. 검색은 높은 점수의 디렉터리를 먼저 찾고 하위 경로로 내려가며, 어떤 경로를 거쳤는지 trajectory를 남긴다.
 
-Supermemory가 Trending에 오른 배경은 개인화 AI 수요와 엔터프라이즈 통제 요구가 동시에 커졌기 때문이다. 사용자는 AI가 매번 같은 설명을 반복하지 않기를 원한다. “나는 한국어 답변을 선호한다”, “우리 팀은 Kubernetes보다 ECS를 쓴다”, “이 프로젝트에서는 Conventional Commit을 지켜야 한다” 같은 정보를 기억하면 AI 경험은 확실히 좋아진다. 반면 조직은 AI가 개인정보와 기밀을 과도하게 저장하거나, 퇴사자·권한 변경·프로젝트 종료 이후에도 기억을 유지하는 상황을 원하지 않는다.
+이 구조의 장점은 **검색 실패를 관찰 가능한 탐색 실패로 바꾸는 것**이다. 잘못된 답이 나왔을 때 “벡터 검색이 이상했다”에서 끝나지 않고, 어느 디렉터리를 선택했고 어떤 요약 단계에서 관련 자료를 제외했는지 조사할 단서가 생긴다. 세션 commit 이후 사용자 선호와 에이전트 경험을 비동기로 추출하는 방식도 실행 로그와 장기 기억 사이의 경계를 명시한다.
 
-이 긴장은 소비자용 챗봇보다 업무용 AI에서 더 크다. 업무용 AI는 이메일, 드라이브, 코드 저장소, 이슈 트래커, 회의록, 고객 기록과 연결된다. Supermemory가 connector와 file processing을 강조하는 이유도 여기에 있다. 하지만 connector가 많아질수록 권한 모델은 복잡해진다. Google Drive에서 볼 수 있었던 문서가 GitHub issue와 결합될 때 새로운 민감 정보가 추론될 수 있고, 한 사용자의 대화 기억이 다른 사용자에게 노출되면 심각한 사고가 된다.
+다만 계층형 요약은 공짜가 아니다. 쓰기 시점에 L0·L1을 생성하는 모델 비용이 들고, 원문이 바뀌면 상위 요약을 다시 만들고 일관성을 유지해야 한다. 디렉터리 구조가 실제 업무 경계를 잘못 반영하면 탐색 경로 자체가 편향된다. 최근 URI 정규화와 부분 삭제 수정이 중요한 이유도 여기에 있다. 파일처럼 보이는 추상화가 편리해도 내부 데이터베이스의 참조 무결성, 비동기 작업, 임베딩 차원, 재색인 문제는 사라지지 않는다.
 
-또 하나의 배경은 agentic workflow의 확산이다. 에이전트가 한 번의 질문에 답하는 수준을 넘어 며칠 동안 태스크를 추적하고, 여러 도구를 호출하고, 중간 결정을 기억하려면 state 관리가 필요하다. LangGraph 같은 프레임워크는 agent graph와 persistence를 제공하지만, 제품 수준의 사용자 기억, 사실 추출, 권한, connector, 검색 품질 평가까지 모두 해결해 주지는 않는다. Supermemory, Mem0, Zep 같은 도구가 주목받는 이유는 바로 이 빈 공간 때문이다.
+OpenViking 저장소는 AGPL-3.0이다. README는 오픈소스 판을 기능 제한 없이 자체 운영할 수 있다고 설명하지만, 네트워크로 서비스를 제공하거나 수정본을 조직 제품에 통합할 때의 의무는 MIT인 Supermemory와 다르다. 법무 검토 없이 “둘 다 오픈소스”로 묶어서는 안 된다. 관리형 SaaS, 자체 VPC, 폐쇄망 상용판의 운영·지원 경계도 기술 선택과 별도로 확인해야 한다.
 
-## 기존 접근과의 비교: 벡터 DB, Mem0, Zep, 직접 구축의 장단점
-
-AI memory를 도입할 때 가장 흔한 오해는 “벡터 DB를 붙이면 기억이 생긴다”는 것이다. 벡터 DB는 유사도 검색에 강하지만, 기억의 전체 수명주기를 관리하지 않는다. 누가 언제 어떤 근거로 저장했는지, 언제 만료해야 하는지, 사용자가 삭제를 요청하면 어디까지 지워야 하는지, 새로운 사실이 기존 사실과 충돌할 때 어떻게 처리할지, 민감 정보가 포함되면 어떻게 마스킹할지는 별도 계층의 책임이다.
-
-[Mem0](https://github.com/mem0ai/mem0)는 “Universal memory layer for AI Agents”를 표방하며 Python과 Node 생태계, agent framework 통합, 장기 기억 관리에서 강한 인지도를 갖고 있다. GitHub API 확인 시점 기준으로 약 57,321개의 star, 6,546개의 fork를 가진 프로젝트였다. [Zep](https://github.com/getzep/zep)은 대화 메모리와 지식 그래프, agent context 관리 쪽에서 알려져 있고, [LangGraph](https://github.com/langchain-ai/langgraph)는 resilient agent를 만들기 위한 graph와 persistence 프레임워크로 널리 쓰인다. Supermemory는 이들과 비교해 앱, API, connector, user profile, hybrid search, multi-modal extractor를 하나의 제품 경험으로 묶는 쪽을 강조한다.
+## 두 도구를 기능표가 아니라 통제면으로 비교하기
 
 ![AI 메모리 도구 선택 기준](https://heracles-jo.github.io/assets/img/posts/github-trending-ai-memory-supermemory/decision-matrix.svg)
 
-| 접근 | 강점 | 주의점 | 적합한 상황 |
+| 비교 기준 | Supermemory | OpenViking | 직접 구축 시 확인할 것 |
 |---|---|---|---|
-| Supermemory | memory API, 앱, connector, profile, hybrid search를 통합 경험으로 제공 | 벤치마크 재현성, 데이터 위탁, 보존·삭제 정책 검증 필요 | 빠르게 제품에 장기 기억과 connector를 붙이고 싶은 팀 |
-| Mem0 | agent memory 생태계, SDK, 오픈소스 인지도 | 조직 권한 모델과 privacy policy를 직접 맞춰야 함 | agent framework와 결합한 커스터마이즈형 memory |
-| Zep | 대화 메모리, knowledge graph, agent context 관리 | 제품·호스팅 경계와 버전 정책 확인 필요 | 대화형 AI의 히스토리 요약과 context retrieval |
-| 직접 구축 RAG | 권한·보관·모델·인프라를 완전 통제 | 평가, 운영, 충돌 해결, 삭제 대응을 모두 직접 구현 | 규제 산업, 민감 데이터, 플랫폼 팀이 있는 조직 |
+| 중심 추상화 | 사용자 프로필, memory/RAG API, 커넥터 | `viking://` 파일시스템, L0/L1/L2, 탐색 trajectory | 데이터 유형별 스키마와 provenance |
+| 검색 설명 가능성 | 검색 결과와 프로필을 제품 API로 소비 | 디렉터리 탐색 경로를 관찰·디버그 | query log, reranker 근거, 평가 세트 |
+| 통합 속도 | SDK·MCP·플러그인과 단일 API가 강점 | CLI·MCP·에이전트 통합과 자체 서버가 강점 | 인증, 재시도, 백필, 마이그레이션 비용 |
+| 권한 경계 | container/project 범위와 커넥터 ACL 검증 필요 | URI·사용자 디렉터리·리소스별 정책 검증 필요 | 원본 ACL의 질의 시점 재검사 |
+| 라이선스 | MIT | AGPL-3.0 | 배포 형태와 수정·소스 제공 의무 |
+| 주요 실패 모드 | 잘못 추출한 프로필, 커넥터 권한 지연, 삭제 누락 | 오래된 계층 요약, 잘못된 디렉터리 경로, URI 불일치 | 파생 데이터 고아화와 재색인 실패 |
 
-도구 선택의 핵심은 기능 목록이 아니라 통제 수준이다. SaaS형 memory API는 빠르게 제품화할 수 있지만 데이터 위탁과 보존 정책을 검토해야 한다. 오픈소스 자체 호스팅은 통제가 높지만 운영 부담이 커진다. 직접 구축은 가장 유연하지만 평가 체계와 정책 계층을 소홀히 하면 검색 품질은 낮고 리스크는 높은 시스템이 된다.
+선택 기준은 “기능이 더 많은가”가 아니다. 사용자 프로필과 커넥터를 제품에 빨리 붙이는 것이 목적이면 Supermemory의 API 중심 모델이 자연스럽다. 에이전트가 컨텍스트를 단계적으로 탐색하고 그 경로를 조사하는 것이 중요하면 OpenViking의 파일시스템 모델이 매력적이다. 규제 데이터나 복잡한 사내 권한이 핵심이면 두 제품을 바로 고르기 전에 원본 ACL, 삭제 증명, 리전, 감사 로그를 만족하는지부터 확인해야 한다.
 
-## 실무 도입 시 장점: 사용자 경험, 비용, 제품 속도의 개선
+## 실패 모드: 기억이 많을수록 답이 좋아진다는 착각
 
-잘 설계된 AI memory layer는 사용자 경험을 크게 바꾼다. 사용자는 매번 자신의 맥락을 설명하지 않아도 되고, AI는 이전 결정과 현재 요구를 연결할 수 있다. 예를 들어 고객 지원 AI는 고객의 과거 이슈와 제품 사용 환경을 기억해 반복 질문을 줄일 수 있다. 개발자 도구는 프로젝트의 lint 규칙, 배포 환경, 선호하는 테스트 명령을 기억해 더 정확한 제안을 할 수 있다. 내부 지식 비서는 팀의 용어, 담당자, 최근 문서 변경을 반영해 답변할 수 있다.
+### 잘못된 사실이 장기 프로필로 승격된다
 
-비용 측면에서도 memory layer는 중요하다. 모든 과거 대화를 프롬프트에 붙이면 token 비용과 latency가 증가한다. 반대로 너무 적은 컨텍스트만 주면 모델이 잘못 추론한다. memory layer는 “항상 필요한 안정적 사실”과 “질문에 따라 검색할 지식”을 분리해 token budget을 최적화한다. Supermemory가 user profile과 hybrid search를 구분하는 방향은 이런 비용 구조와 맞다.
+사용자의 농담, 일회성 요청, 모델의 추론이 안정적 사실로 저장될 수 있다. “이번 작업에서는 Python을 쓰자”가 “이 사용자는 항상 Python을 선호한다”로 바뀌면 이후 제안이 편향된다. 자동 추출 기억에는 원문 링크, 생성 시각, 추출기 버전, 신뢰도, 확인 주체와 만료 정책이 필요하다. 사용자가 보고 수정할 수 없는 기억은 개인화 기능이 아니라 숨은 정책이 된다.
 
-제품 개발 속도도 빨라질 수 있다. connector, file processing, OCR, transcription, code chunking, profile extraction을 모두 직접 만들면 상당한 시간이 든다. Supermemory 같은 계층을 쓰면 초기 제품은 빠르게 memory 기능을 검증할 수 있다. 특히 스타트업이나 작은 플랫폼 팀은 “사용자가 기억 기능에 실제 가치를 느끼는가”를 먼저 확인하고, 이후 데이터 민감도와 규모에 따라 자체 호스팅이나 하이브리드 구조로 전환할 수 있다.
+### 권한을 잃어도 파생 기억이 남는다
 
-## 한계와 리스크: 기억은 편리하지만 잘못 저장되면 부채가 된다
+Drive 문서 접근 권한을 회수해도 그 문서에서 추출한 요약, 엔터티, 사용자 프로필이 남을 수 있다. 검색 시 원본 권한을 다시 확인하고, 삭제·권한 회수 이벤트가 chunk뿐 아니라 embedding, 요약, 캐시, 백업, 평가 데이터까지 전파되는지 시험해야 한다. “원문을 지웠다”와 “모델에 제공될 모든 파생 데이터를 지웠다”는 다른 주장이다.
 
-AI memory의 가장 큰 리스크는 잘못된 기억이다. 모델이 대화에서 사실을 추출할 때 오해하거나, 사용자의 농담을 선호로 저장하거나, 임시 요구사항을 장기 정책처럼 기억할 수 있다. 더 심각한 경우, 과거에는 맞았지만 지금은 틀린 사실을 계속 유지한다. 예를 들어 “이 고객은 무료 플랜이다”라는 기억이 유료 전환 후에도 남아 있으면 고객 대응이 틀어진다. “이 프로젝트는 AWS를 쓰지 않는다”는 기억이 마이그레이션 이후에도 남아 있으면 개발 제안이 잘못된다.
+### 컨텍스트 오염이 도구 실행으로 이어진다
 
-따라서 memory layer에는 충돌 해결과 시간 개념이 필요하다. 언제 저장된 사실인지, 어떤 출처에서 왔는지, 사용자가 직접 확인한 것인지, 자동 추출된 것인지, 얼마나 신뢰할 수 있는지, 언제 만료할 것인지가 metadata로 남아야 한다. Supermemory README가 knowledge updates, contradictions, automatic forgetting을 언급하는 것은 적절한 방향이다. 다만 실제 제품 도입 시에는 이 기능이 어떤 정책과 API로 제공되는지, 관리자가 얼마나 통제할 수 있는지를 검증해야 한다.
+외부 문서의 프롬프트 인젝션이 기억으로 승격되면 한 번의 검색 오류가 여러 세션에 반복될 수 있다. 특히 스킬과 기억을 같은 네임스페이스에서 다룰 때 설명 데이터와 실행 지침을 구분해야 한다. [시스템 프롬프트 유출과 권한 경계](/posts/github-trending-system-prompts-leaks-ai-governance/)에서 다룬 것처럼 자연어 정책은 IAM, 샌드박스, 승인 게이트를 대체하지 못한다. 기억은 도구 선택의 힌트가 될 수 있지만 고위험 실행의 최종 권한 근거가 되어서는 안 된다.
 
-개인정보와 보안 리스크도 크다. 메모리 계층은 사용자가 반복적으로 제공한 민감 정보를 축적한다. 이름, 이메일, 직무, 고객명, 프로젝트 코드명, 내부 URL, 건강·재무·법률 정보가 섞일 수 있다. connector를 통해 Gmail, Drive, Notion, GitHub까지 연결하면 데이터 범위는 더 넓어진다. 조직은 data processing agreement, region, encryption, access control, audit log, deletion API, retention policy, incident response를 확인해야 한다.
+### 비용이 저장에서 평가로 이동한다
 
-성능 리스크도 있다. memory retrieval이 느리면 전체 AI 응답 latency가 증가한다. 반대로 빠르지만 부정확하면 모델이 잘못된 컨텍스트를 사용한다. 사용자 프로필을 너무 공격적으로 주입하면 프롬프트가 편향되고, 너무 보수적으로 주입하면 개인화 효과가 사라진다. 결국 memory layer는 검색 정확도, freshness, latency, token cost, privacy exposure 사이의 균형 문제다.
+계층 요약, 프로필 추출, 임베딩, 재색인, reranking에는 지속 비용이 든다. 더 큰 비용은 품질 평가다. 최신 정보를 놓친 비율, 오래된 기억을 사용한 비율, 권한 밖 자료가 검색된 비율은 일반적인 API uptime으로 알 수 없다. 메모리 계층을 도입하면 토큰을 줄일 수 있지만, 데이터 품질과 삭제 검증을 운영할 사람이 필요하다.
 
-## PoC 체크리스트: memory 기능을 “멋진 데모”에서 운영 기능으로 바꾸기
+## 2주 PoC: recall 점수 하나로 결정하지 않는다
 
-AI memory 도입은 작은 데모에서는 매우 인상적이다. 그러나 운영 기능으로 만들려면 아래 기준을 통과해야 한다.
+PoC는 실제 사용 사례 3개 정도로 좁힌다. 예를 들어 고객 지원의 환경 기억, 개발 도구의 프로젝트 규칙, 내부 비서의 문서 검색을 섞지 말고 하나를 고른다. 동일한 대화·문서·권한 변경 시나리오를 stateless RAG, 후보 메모리 도구, 필요하면 직접 구축 baseline에 반복 적용한다.
 
-### 1단계: 사용 사례와 저장 범위 정의
+측정 항목은 다음과 같이 구성할 수 있다.
 
-- 어떤 정보를 장기 기억으로 저장할지 명확히 정한다. 선호, 프로젝트 상태, 고객 환경, 정책 중 무엇이 대상인가?
-- 저장하지 않을 정보를 명시한다. 비밀번호, 토큰, 결제 정보, 민감 개인정보, 법적 제한 데이터는 기본적으로 제외한다.
-- 사용자에게 memory on/off, 항목 보기, 수정, 삭제 기능을 제공할지 결정한다.
-- 개인 memory와 조직 knowledge base를 분리한다.
+- **정확성**: 필요한 사실을 찾은 recall뿐 아니라 잘못된 기억이 답에 사용된 오염률을 측정한다.
+- **신선도**: 사실 변경 후 이전 값이 검색에서 사라질 때까지 걸리는 시간을 잰다.
+- **삭제 완결성**: 사용자 삭제와 원본 ACL 회수 후 원문·요약·embedding·프로필·캐시를 다시 검색한다.
+- **격리**: 사용자, 프로젝트, 고객 tenant를 바꿔 교차 검색과 추론 누출을 시험한다.
+- **추적 가능성**: 답변에 사용한 원본과 검색·탐색 경로를 운영자가 재구성할 수 있는지 확인한다.
+- **성능과 비용**: p50/p95 검색 지연, 요청당 입력 토큰, 쓰기 시 요약 비용, 백필·재색인 시간을 함께 본다.
+- **복구성**: 임베딩 공급자 장애, 비동기 추출 실패, 중복 이벤트, 부분 삭제 중단 후 일관성을 회복하는지 검증한다.
 
-### 2단계: 품질 평가 설계
+성공 기준도 먼저 정해야 한다. 예를 들어 권한 밖 검색은 0건이어야 하고, 삭제 요청 후 정해진 시간 안에 모든 온라인 파생 데이터가 검색되지 않아야 하며, 오래된 사실 사용률은 허용 임계치 아래여야 한다. 평균 recall이 높아도 이 안전 기준을 넘지 못하면 운영 전환을 보류한다.
 
-- memory extraction 정확도, 잘못 저장된 사실 비율, 만료된 기억 비율을 측정한다.
-- 동일 질문에 memory 사용 전후 답변 품질을 비교한다.
-- 잘못된 기억이 들어갔을 때 모델이 얼마나 취약한지 red team 테스트를 수행한다.
-- benchmark 주장만 믿지 말고 자사 데이터와 질문 세트로 재현한다.
+## 도입 결론: 메모리 엔진보다 기억 정책을 먼저 고른다
 
-### 3단계: 권한과 보안 검증
+Supermemory와 OpenViking은 같은 문제를 서로 다른 추상화로 푼다. Supermemory는 사용자 프로필, 커넥터, RAG를 제품 API로 빠르게 통합하는 데 초점을 둔다. OpenViking은 기억·리소스·스킬을 탐색 가능한 파일시스템으로 묶고 계층형 로딩과 검색 trajectory를 강조한다. 하나가 보편적으로 우월한 것이 아니라 제품 통합 속도와 탐색 통제 중 어느 쪽이 병목인지에 따라 선택이 달라진다.
 
-- connector별 OAuth scope와 최소 권한 원칙을 확인한다.
-- 사용자가 접근 권한을 잃은 문서가 memory retrieval에 남지 않는지 테스트한다.
-- audit log, 관리자 조회 권한, 삭제 API, retention policy를 검증한다.
-- 외부 memory API를 쓴다면 데이터 처리 위치와 계약 조건을 확인한다.
+더 중요한 것은 도구 밖의 질문이다. 무엇을 기억하지 않을 것인가, 누가 기억을 고칠 수 있는가, 원본 권한이 사라지면 파생 기억을 어떻게 제거할 것인가, 검색 결과가 도구 실행 권한으로 승격되지 않게 어떻게 막을 것인가. 이 질문에 답하지 못한 채 메모리 엔진부터 연결하면 컨텍스트는 자산보다 부채가 되기 쉽다.
 
-### 4단계: 운영 지표 설정
-
-- retrieval latency, hit rate, token overhead, memory update frequency를 측정한다.
-- 삭제 요청 처리 시간, connector sync 실패율, 권한 오류율을 모니터링한다.
-- memory로 인해 답변이 개선된 케이스와 악화된 케이스를 분리해 리뷰한다.
-- rollback 전략을 마련한다. memory 계층 장애 시 기본 RAG 또는 stateless 응답으로 degrade할 수 있어야 한다.
-
-## 어떤 팀에 적합하고, 어떤 경우 피해야 하나
-
-Supermemory 같은 AI memory 계층은 사용자별 맥락이 제품 가치의 핵심인 팀에 적합하다. 개인 생산성 AI, 고객 지원, 세일즈 어시스턴트, 개발자 도구, 내부 지식 비서, 연구 보조 도구처럼 “사용자가 누구인지”와 “이전에 무엇을 했는지”가 답변 품질을 바꾸는 제품이 대표적이다. 또한 connector를 빠르게 붙여 시장 검증을 해야 하는 스타트업이나, memory API를 통해 제품 가설을 빠르게 실험하려는 팀에도 유용하다.
-
-반대로 규제 산업에서 민감 데이터를 다루거나, 데이터 국외 이전이 제한되거나, 자체 감사·삭제·보존 정책을 강하게 요구하는 조직은 신중해야 한다. 이 경우 외부 memory API를 바로 쓰기보다 자체 호스팅 가능성, 데이터 암호화, 권한 동기화, 법무 검토를 먼저 확인해야 한다. memory가 없어도 충분한 단순 Q&A 제품이라면 굳이 복잡한 장기 기억 계층을 추가하지 않는 편이 낫다. 복잡성은 곧 장애와 책임으로 돌아온다.
-
-또한 memory를 제품 차별화가 아니라 “AI가 더 똑똑해 보이게 하는 장식”으로만 쓰려는 경우도 피해야 한다. 사용자가 기억 항목을 이해하거나 제어할 수 없고, 잘못된 기억을 수정할 수 없으며, 삭제 요청도 어렵다면 신뢰를 잃는다. 좋은 memory UX는 자동 저장보다 투명성과 통제가 우선이다.
-
-## 향후 관찰해야 할 지표와 전망
-
-Supermemory를 계속 관찰한다면 star 증가보다 API 안정성, server 릴리스의 성숙도, connector 권한 모델, deletion workflow, self-hosting 전략, benchmark 재현성을 봐야 한다. 최근 릴리스가 `server-v0.0.1-rc.*` 형태라는 점은 서버 컴포넌트가 빠르게 움직이고 있음을 시사한다. 빠른 변화는 긍정적이지만, 운영 도입 팀에는 breaking change와 migration 정책 확인이 필요하다.
-
-또 하나의 관찰 지표는 memory evaluation이다. AI memory는 일반 RAG보다 평가가 어렵다. 정답 문서 하나를 찾는 문제가 아니라, 어떤 사실을 저장해야 하는지, 어떤 사실은 잊어야 하는지, 오래된 사실과 새 사실 중 무엇을 우선해야 하는지, 개인정보를 언제 제외해야 하는지를 평가해야 한다. LongMemEval, LoCoMo, ConvoMem 같은 benchmark는 방향을 제시하지만, 기업은 자사 업무 플로우에 맞는 평가 세트를 별도로 만들어야 한다.
-
-전망을 정리하면, AI memory 계층은 앞으로 세 방향으로 발전할 가능성이 높다. 첫째, 단순 vector search에서 typed memory와 knowledge graph, temporal reasoning으로 이동한다. 둘째, privacy-preserving memory가 중요해진다. 사용자가 memory를 볼 수 있고, 편집하고, 삭제하고, export할 수 있는 기능이 신뢰의 기준이 된다. 셋째, agent framework와 memory API가 더 강하게 결합된다. 에이전트가 도구를 호출하고 결정을 내릴수록 state와 memory의 경계가 제품 품질을 좌우하기 때문이다.
-
-## 결론: 모델보다 오래 남는 것은 컨텍스트 운영 능력이다
-
-Supermemory가 GitHub Trending에 오른 것은 AI 제품 시장의 관심이 모델 호출에서 컨텍스트 운영으로 이동하고 있다는 신호다. 좋은 memory layer는 사용자의 반복 설명을 줄이고, 제품의 개인화 품질을 높이며, token 비용을 줄이고, 에이전트가 장기 태스크를 이어갈 수 있게 한다. 그러나 동시에 잘못된 기억, 개인정보 축적, 권한 누수, 삭제 실패, 오래된 사실의 재사용이라는 새로운 위험을 만든다.
-
-따라서 실무 의사결정자는 Supermemory를 “AI가 기억하게 해주는 편리한 API”로만 보지 말아야 한다. 이것은 데이터 인프라, 보안, 개인정보, 제품 UX가 만나는 계층이다. PoC에서는 빠르게 가치를 확인하되, 운영 전환 전에는 저장 범위, 삭제권, 권한 동기화, 평가 지표, fallback 전략을 반드시 검증해야 한다. AI가 더 많은 일을 대신할수록, 무엇을 기억하고 무엇을 잊을지 결정하는 시스템이 제품의 신뢰를 결정한다.
-
-오늘의 기술 흐름은 분명하다. AI의 다음 병목은 더 긴 프롬프트가 아니라 더 좋은 기억 관리다. Supermemory는 그 변화가 오픈소스와 개발자 생태계에서 어떻게 구체화되고 있는지 보여주는 중요한 스냅샷이다.
+AI 에이전트 메모리의 실무 도입 기준은 “얼마나 오래 기억하는가”가 아니다. **필요한 정보만 최신 권한 안에서 불러오고, 잘못된 기억을 설명·수정·삭제하며, 장애 시 기억 없이도 안전하게 축소 운영할 수 있는가**다. 그 통제면을 먼저 설계한 팀에게만 Supermemory나 OpenViking의 편의성이 장기적인 제품 품질로 이어진다.
