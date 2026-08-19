@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Self-hosted photo platform decision checklist</title>
+  <desc id="desc">A decision matrix for adopting Immich including backup, identity, storage, mobile backup, machine learning and upgrade validation.</desc>
+  <rect width="1200" height="680" fill="#0f172a"/>
+  <text x="70" y="70" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="800" fill="#f8fafc">Immich PoC 체크리스트</text>
+  <text x="70" y="112" font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="20" fill="#cbd5e1">Google Photos 대체 여부보다 먼저 운영 지속 가능성을 검증한다</text>
+  <g font-family="Inter, Apple SD Gothic Neo, sans-serif" font-size="20">
+    <g transform="translate(70 160)">
+      <rect width="500" height="88" rx="18" fill="#1e293b" stroke="#38bdf8"/><text x="30" y="36" fill="#7dd3fc" font-weight="800">1. 백업</text><text x="30" y="66" fill="#e2e8f0">DB와 원본 파일을 같은 복구 시점으로 되돌릴 수 있는가</text>
+      <rect y="112" width="500" height="88" rx="18" fill="#1e293b" stroke="#34d399"/><text x="30" y="148" fill="#86efac" font-weight="800">2. 스토리지</text><text x="30" y="178" fill="#e2e8f0">NAS, 객체 저장소, 썸네일 캐시 용량 증가를 예측했는가</text>
+      <rect y="224" width="500" height="88" rx="18" fill="#1e293b" stroke="#fbbf24"/><text x="30" y="260" fill="#fde68a" font-weight="800">3. 모바일 백업</text><text x="30" y="290" fill="#e2e8f0">iOS/Android 백그라운드 제약과 중복 업로드를 시험했는가</text>
+      <rect y="336" width="500" height="88" rx="18" fill="#1e293b" stroke="#c084fc"/><text x="30" y="372" fill="#ddd6fe" font-weight="800">4. ML 검색</text><text x="30" y="402" fill="#e2e8f0">얼굴 인식·OCR·CLIP 작업이 CPU/GPU 예산에 맞는가</text>
+    </g>
+    <g transform="translate(630 160)">
+      <rect width="500" height="88" rx="18" fill="#1e293b" stroke="#fb7185"/><text x="30" y="36" fill="#fecdd3" font-weight="800">5. 인증과 공유</text><text x="30" y="66" fill="#e2e8f0">OIDC, 세션 무효화, 공개 링크 만료 정책을 정했는가</text>
+      <rect y="112" width="500" height="88" rx="18" fill="#1e293b" stroke="#60a5fa"/><text x="30" y="148" fill="#bfdbfe" font-weight="800">6. 업그레이드</text><text x="30" y="178" fill="#e2e8f0">릴리스 노트와 compose 파일 버전을 분리 검증하는가</text>
+      <rect y="224" width="500" height="88" rx="18" fill="#1e293b" stroke="#2dd4bf"/><text x="30" y="260" fill="#99f6e4" font-weight="800">7. 관측성</text><text x="30" y="290" fill="#e2e8f0">작업 큐, 실패 업로드, DB 크기, 백업 성공률을 본다</text>
+      <rect y="336" width="500" height="88" rx="18" fill="#1e293b" stroke="#a3e635"/><text x="30" y="372" fill="#d9f99d" font-weight="800">8. 라이선스</text><text x="30" y="402" fill="#e2e8f0">AGPL-3.0과 사내 배포/서비스 제공 모델을 검토한다</text>
+    </g>
+  </g>
+</svg>
