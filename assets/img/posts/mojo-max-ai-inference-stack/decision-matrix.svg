@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Mojo와 MAX 도입 의사결정 매트릭스</title><desc id="desc">스택 경계 비용과 기존 CUDA 자산을 기준으로 PoC와 유지 결정을 나누는 매트릭스</desc>
+  <rect width="1200" height="720" rx="24" fill="#101827"/>
+  <text x="62" y="68" fill="#fff" font-family="system-ui,sans-serif" font-size="34" font-weight="800">도입 기준: 신기술 선호가 아니라 경계 비용</text>
+  <line x1="150" y1="590" x2="1100" y2="590" stroke="#cbd5e1" stroke-width="4"/><line x1="150" y1="590" x2="150" y2="125" stroke="#cbd5e1" stroke-width="4"/>
+  <text x="620" y="665" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="24" text-anchor="middle">기존 CUDA·PyTorch 자산과 운영 성숙도 →</text>
+  <text x="42" y="360" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="24" text-anchor="middle" transform="rotate(-90 42 360)">모델·커널·서빙 경계 비용 →</text>
+  <g font-family="system-ui,sans-serif">
+    <rect x="180" y="150" width="420" height="190" rx="22" fill="#065f46"/><text x="215" y="205" fill="#a7f3d0" font-size="27" font-weight="800">제한된 PoC 우선</text><text x="215" y="250" fill="#d1fae5" font-size="21">커스텀 커널이 많고</text><text x="215" y="282" fill="#d1fae5" font-size="21">경계 횡단이 병목인 팀</text>
+    <rect x="650" y="150" width="420" height="190" rx="22" fill="#92400e"/><text x="685" y="205" fill="#fde68a" font-size="27" font-weight="800">병렬 평가</text><text x="685" y="250" fill="#fef3c7" font-size="21">자산은 크지만 multi-backend와</text><text x="685" y="282" fill="#fef3c7" font-size="21">통합 이득이 필요한 팀</text>
+    <rect x="180" y="370" width="420" height="180" rx="22" fill="#1e3a8a"/><text x="215" y="425" fill="#bfdbfe" font-size="27" font-weight="800">학습용 sandbox</text><text x="215" y="470" fill="#dbeafe" font-size="21">명확한 병목이 없다면</text><text x="215" y="502" fill="#dbeafe" font-size="21">제품 이전보다 역량 탐색</text>
+    <rect x="650" y="370" width="420" height="180" rx="22" fill="#7f1d1d"/><text x="685" y="425" fill="#fecaca" font-size="27" font-weight="800">현행 스택 유지</text><text x="685" y="470" fill="#fee2e2" font-size="21">SLO와 ecosystem이 안정적이면</text><text x="685" y="502" fill="#fee2e2" font-size="21">전환 비용이 이득보다 큼</text>
+  </g>
+</svg>

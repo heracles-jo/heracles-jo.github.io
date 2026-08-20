@@ -100,3 +100,14 @@
     - "MLX 모델 서빙"
   slug: "github-trending-omlx-apple-silicon-llm-server"
   summary: "OMLX의 MLX 기반 연속 배칭, 다중 모델 풀, RAM·SSD 계층형 KV 캐시를 중심으로 Mac 로컬 추론 서버의 운영 경계와 PoC 기준을 정리."
+- date: 2026-08-21
+  title: "Mojo 1.0과 MAX: CUDA·Python AI 스택 대체 기준"
+  github_repo: "https://github.com/modular/modular"
+  main_keyword: "Mojo 1.0 MAX"
+  related_keywords:
+    - "Modular MAX"
+    - "AI 추론 스택"
+    - "GPU 프로그래밍"
+    - "CUDA 대체"
+  slug: "mojo-max-ai-inference-stack"
+  summary: "Mojo 언어와 MAX의 Python 모델 그래프·CPU/GPU 커널·OpenAI 호환 서빙 통합 구조를 살펴보고 CUDA 중심 스택 대비 라이선스, 운영 경계와 PoC 기준을 정리."
