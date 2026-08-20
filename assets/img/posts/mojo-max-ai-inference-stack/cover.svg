@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Mojo 1.0과 MAX AI 실행 스택</title>
+  <desc id="desc">Python 모델 그래프, Mojo 커널, CPU와 GPU, MAX 추론 서버가 연결된 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#3b1022"/></linearGradient>
+    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ff7a18"/><stop offset="1" stop-color="#ff3d81"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <text x="76" y="108" fill="#ff9c5a" font-family="system-ui,sans-serif" font-size="28" font-weight="700">AI INFERENCE STACK</text>
+  <text x="76" y="180" fill="#fff" font-family="system-ui,sans-serif" font-size="56" font-weight="800">Mojo 1.0 + MAX</text>
+  <text x="76" y="230" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="27">CUDA·Python 경계를 줄일 수 있는가</text>
+  <g font-family="system-ui,sans-serif" text-anchor="middle">
+    <rect x="78" y="320" width="235" height="118" rx="20" fill="#1e293b" stroke="#60a5fa" stroke-width="3"/>
+    <text x="195" y="369" fill="#93c5fd" font-size="23" font-weight="700">Python Model</text><text x="195" y="405" fill="#dbeafe" font-size="19">Graph · Pipeline</text>
+    <path d="M313 379H392" stroke="#f8fafc" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="397" y="292" width="280" height="174" rx="20" fill="url(#hot)"/>
+    <text x="537" y="360" fill="#fff" font-size="29" font-weight="800">Mojo Kernel</text><text x="537" y="401" fill="#fff7ed" font-size="20">Compile · Specialize</text>
+    <path d="M677 379H756" stroke="#f8fafc" stroke-width="5"/>
+    <rect x="761" y="320" width="178" height="118" rx="20" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+    <text x="850" y="369" fill="#c4b5fd" font-size="24" font-weight="700">CPU · GPU</text><text x="850" y="405" fill="#ede9fe" font-size="18">Accelerator</text>
+    <rect x="965" y="320" width="160" height="118" rx="20" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+    <text x="1045" y="367" fill="#6ee7b7" font-size="23" font-weight="700">MAX</text><text x="1045" y="403" fill="#d1fae5" font-size="18">OpenAI API</text>
+  </g>
+  <text x="76" y="550" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="21">언어보다 중요한 것: 모델·커널·서빙 사이에서 실제로 제거되는 경계</text>
+</svg>

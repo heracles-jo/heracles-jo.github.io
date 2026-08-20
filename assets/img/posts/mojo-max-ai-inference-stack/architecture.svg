@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Mojo와 MAX의 AI 실행 계층</title><desc id="desc">클라이언트부터 MAX 서버, Python 모델 그래프, Mojo 연산자와 CPU GPU 하드웨어까지의 흐름</desc>
+  <rect width="1200" height="720" rx="24" fill="#0f172a"/>
+  <text x="60" y="70" fill="#fff" font-family="system-ui,sans-serif" font-size="34" font-weight="800">Mojo + MAX 실행 계층과 책임 경계</text>
+  <g font-family="system-ui,sans-serif">
+    <rect x="70" y="120" width="1060" height="90" rx="18" fill="#172554" stroke="#60a5fa" stroke-width="2"/><text x="105" y="175" fill="#bfdbfe" font-size="25" font-weight="700">애플리케이션</text><text x="370" y="175" fill="#dbeafe" font-size="22">OpenAI 호환 클라이언트 · 업무 요청 · 인증 정책</text>
+    <path d="M600 210V248" stroke="#e2e8f0" stroke-width="5"/>
+    <rect x="70" y="250" width="1060" height="90" rx="18" fill="#064e3b" stroke="#34d399" stroke-width="2"/><text x="105" y="305" fill="#6ee7b7" font-size="25" font-weight="700">MAX Serve</text><text x="370" y="305" fill="#d1fae5" font-size="22">요청 수명주기 · 스케줄링 · 모델 로드 · 관측성</text>
+    <path d="M600 340V378" stroke="#e2e8f0" stroke-width="5"/>
+    <rect x="70" y="380" width="505" height="105" rx="18" fill="#1e3a8a" stroke="#93c5fd" stroke-width="2"/><text x="105" y="426" fill="#bfdbfe" font-size="24" font-weight="700">Python Model Pipeline</text><text x="105" y="460" fill="#dbeafe" font-size="20">Graph · Model architecture · High-level ops</text>
+    <rect x="625" y="380" width="505" height="105" rx="18" fill="#7c2d12" stroke="#fb923c" stroke-width="2"/><text x="660" y="426" fill="#fed7aa" font-size="24" font-weight="700">Mojo Accelerator Library</text><text x="660" y="460" fill="#ffedd5" font-size="20">Kernel · 타입 · 메모리 · 하드웨어 특화</text>
+    <path d="M322 485V540M878 485V540" stroke="#e2e8f0" stroke-width="5"/>
+    <rect x="70" y="545" width="505" height="105" rx="18" fill="#312e81" stroke="#a78bfa" stroke-width="2"/><text x="105" y="594" fill="#ddd6fe" font-size="25" font-weight="700">Compiler / KGEN</text><text x="105" y="628" fill="#ede9fe" font-size="20">Compile · specialize · artifact lifecycle</text>
+    <rect x="625" y="545" width="505" height="105" rx="18" fill="#3f3f46" stroke="#f8fafc" stroke-width="2"/><text x="660" y="594" fill="#fff" font-size="25" font-weight="700">CPU · GPU · Accelerator</text><text x="660" y="628" fill="#e4e4e7" font-size="20">Driver · memory · backend 성숙도</text>
+  </g>
+</svg>
