@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">OpenLogi 도입 의사결정 매트릭스</title>
+  <desc id="desc">개인 생산성, 개발자 워크스테이션, 규제 산업 단말에서 OpenLogi 도입 적합성을 판단하는 체크리스트</desc>
+  <rect width="1200" height="620" fill="#0f172a"/>
+  <text x="70" y="70" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#e0f2fe">도입 판단: 편의 기능이 아니라 엔드포인트 정책</text>
+  <g font-family="Arial,sans-serif" font-size="21" fill="#dbeafe">
+    <rect x="70" y="120" width="330" height="390" rx="24" fill="#12324a" stroke="#38bdf8" stroke-opacity=".45"/>
+    <text x="100" y="170" font-size="25" font-weight="700" fill="#7dd3fc">적합한 경우</text>
+    <text x="100" y="220">• Linux/macOS/Windows 혼합 팀</text>
+    <text x="100" y="260">• 계정·텔레메트리 최소화 요구</text>
+    <text x="100" y="300">• 장비 설정을 코드처럼 관리</text>
+    <text x="100" y="340">• 개발자·영상회의 장비 표준화</text>
+    <text x="100" y="380">• CLI 기반 자동화 필요</text>
+    <rect x="435" y="120" width="330" height="390" rx="24" fill="#2a2742" stroke="#a78bfa" stroke-opacity=".45"/>
+    <text x="465" y="170" font-size="25" font-weight="700" fill="#c4b5fd">PoC에서 볼 것</text>
+    <text x="465" y="220">• 장치 모델별 HID++ 기능 차이</text>
+    <text x="465" y="260">• Logi Options+와 충돌 여부</text>
+    <text x="465" y="300">• 접근성·입력 감시 권한</text>
+    <text x="465" y="340">• TOML 변경 이력과 롤백</text>
+    <text x="465" y="380">• 릴리스 채널·서명 검증</text>
+    <rect x="800" y="120" width="330" height="390" rx="24" fill="#3b1d2c" stroke="#fb7185" stroke-opacity=".45"/>
+    <text x="830" y="170" font-size="25" font-weight="700" fill="#fda4af">피해야 할 경우</text>
+    <text x="830" y="220">• 벤더 공식 지원이 필수</text>
+    <text x="830" y="260">• 미지원 장치가 핵심 업무 장비</text>
+    <text x="830" y="300">• 입력 훅 권한을 허용할 수 없음</text>
+    <text x="830" y="340">• 규정상 승인 앱만 사용 가능</text>
+    <text x="830" y="380">• 운영 소유자가 불명확함</text>
+  </g>
+</svg>

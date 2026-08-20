@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">OpenLogi 동작 계층</title>
+  <desc id="desc">Logitech 장치에서 HID++와 UVC로 신호를 읽고 로컬 정책, TOML 구성, GUI와 CLI로 운영하는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#dff7fb"/></linearGradient>
+    <style>.h{font:700 28px Arial,sans-serif;fill:#0f172a}.t{font:20px Arial,sans-serif;fill:#334155}.s{font:700 18px Arial,sans-serif;fill:#036873}.box{fill:#fff;stroke:#36b7c8;stroke-width:2}.arrow{stroke:#0891b2;stroke-width:5;fill:none;marker-end:url(#m)}</style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0891b2"/></marker>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <text x="70" y="70" class="h">로컬 퍼스트 주변기기 제어의 계층</text>
+  <text x="70" y="104" class="t">계정 기반 벤더 앱을 대체하려면 UI보다 권한, 충돌, 구성 형상관리, 장치 호환성 검증이 먼저다.</text>
+  <g transform="translate(70 150)">
+    <rect class="box" x="0" y="0" width="250" height="150" rx="20"/>
+    <text x="26" y="44" class="s">장치 계층</text>
+    <text x="26" y="82" class="t">마우스 · 키보드 · 웹캠</text>
+    <text x="26" y="116" class="t">Bolt / Unifying / Bluetooth</text>
+    <path class="arrow" d="M260 75 H340"/>
+    <rect class="box" x="350" y="0" width="250" height="150" rx="20"/>
+    <text x="376" y="44" class="s">프로토콜 계층</text>
+    <text x="376" y="82" class="t">HID++ 메시지</text>
+    <text x="376" y="116" class="t">UVC 카메라 제어</text>
+    <path class="arrow" d="M610 75 H690"/>
+    <rect class="box" x="700" y="0" width="250" height="150" rx="20"/>
+    <text x="726" y="44" class="s">로컬 런타임</text>
+    <text x="726" y="82" class="t">Rust + GPUI</text>
+    <text x="726" y="116" class="t">OS input hook</text>
+  </g>
+  <g transform="translate(70 390)">
+    <rect class="box" x="0" y="0" width="250" height="150" rx="20"/>
+    <text x="26" y="44" class="s">정책/구성</text>
+    <text x="26" y="82" class="t">TOML, 앱별 프로필</text>
+    <text x="26" y="116" class="t">백업·동기화·검토</text>
+    <path class="arrow" d="M260 75 H340"/>
+    <rect class="box" x="350" y="0" width="250" height="150" rx="20"/>
+    <text x="376" y="44" class="s">운영 표면</text>
+    <text x="376" y="82" class="t">GUI + CLI</text>
+    <text x="376" y="116" class="t">스크립트와 자동화</text>
+    <path class="arrow" d="M610 75 H690"/>
+    <rect class="box" x="700" y="0" width="250" height="150" rx="20"/>
+    <text x="726" y="44" class="s">거버넌스</text>
+    <text x="726" y="82" class="t">권한, 충돌 방지</text>
+    <text x="726" y="116" class="t">보안·감사·롤백</text>
+  </g>
+</svg>
