@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OpenLogi와 로컬 퍼스트 주변기기 제어</title>
+  <desc id="desc">클라우드 계정과 텔레메트리에 의존하지 않고 마우스, 키보드, 웹캠 설정을 로컬 정책과 TOML 구성으로 관리하는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102033"/>
+      <stop offset="55%" stop-color="#172f45"/>
+      <stop offset="100%" stop-color="#0c4a5d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f6f7a" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#283f63" stop-opacity="0.94"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="92" r="210" fill="#2dd4bf" opacity="0.11"/>
+  <circle cx="180" cy="565" r="260" fill="#38bdf8" opacity="0.10"/>
+  <g filter="url(#shadow)">
+    <rect x="92" y="82" width="1016" height="466" rx="34" fill="url(#panel)" stroke="#76e4f7" stroke-opacity="0.24"/>
+    <rect x="132" y="126" width="392" height="348" rx="26" fill="#071927" opacity="0.76"/>
+    <path d="M318 165c-70 0-118 53-118 135v61c0 70 51 116 118 116s118-46 118-116v-61c0-82-48-135-118-135z" fill="#d7f7ff" opacity="0.92"/>
+    <path d="M318 174v102" stroke="#102033" stroke-width="10" stroke-linecap="round"/>
+    <path d="M263 232c-30 28-43 65-43 116" stroke="#102033" stroke-opacity="0.38" stroke-width="12" stroke-linecap="round"/>
+    <path d="M373 232c30 28 43 65 43 116" stroke="#102033" stroke-opacity="0.38" stroke-width="12" stroke-linecap="round"/>
+    <rect x="570" y="138" width="450" height="70" rx="18" fill="#0b1826" opacity="0.85"/>
+    <text x="594" y="182" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#e6fbff">OpenLogi: local-first peripheral control</text>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#d6f7ff">
+      <rect x="570" y="238" width="450" height="62" rx="16" fill="#0b1826" opacity="0.62"/>
+      <text x="596" y="278">HID++ · UVC · OS input hook</text>
+      <rect x="570" y="318" width="450" height="62" rx="16" fill="#0b1826" opacity="0.62"/>
+      <text x="596" y="358">TOML config · CLI · profiles</text>
+      <rect x="570" y="398" width="450" height="62" rx="16" fill="#0b1826" opacity="0.62"/>
+      <text x="596" y="438">No account · no telemetry · cross-platform</text>
+    </g>
+    <path d="M520 315h42" stroke="#83e9f5" stroke-width="6" stroke-linecap="round"/>
+    <path d="M540 293l22 22-22 22" fill="none" stroke="#83e9f5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
