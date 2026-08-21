@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">에이전트 감사 로그 도입 판단표</title><desc id="desc">실행 복구와 감사 요구, 운영 복잡도에 따라 이벤트 기반 에이전트 런타임 도입을 판단하는 표</desc>
+  <rect width="1200" height="760" rx="28" fill="#0f172a"/>
+  <text x="70" y="72" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">이벤트 원장이 필요한가?</text>
+  <text x="70" y="112" fill="#94a3b8" font-family="Arial, sans-serif" font-size="21">로그의 목적은 통제 대체가 아니라 실행 사실의 검증이다</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="70" y="160" width="500" height="240" rx="22" fill="#064e3b" stroke="#34d399" stroke-width="3"/><text x="105" y="205" fill="#6ee7b7" font-size="25" font-weight="700">도입 가치가 큰 조건</text><g fill="#ecfdf5" font-size="20"><text x="110" y="255">• 도구가 외부 상태를 변경한다</text><text x="110" y="300">• 장기 세션과 장애 복구가 필요하다</text><text x="110" y="345">• 권한 결정의 증거를 설명해야 한다</text><text x="110" y="390">• projection을 다시 만들 필요가 있다</text></g>
+    <rect x="630" y="160" width="500" height="240" rx="22" fill="#7f1d1d" stroke="#fb7185" stroke-width="3"/><text x="665" y="205" fill="#fda4af" font-size="25" font-weight="700">먼저 멈춰야 할 조건</text><g fill="#fff1f2" font-size="20"><text x="670" y="255">• OS 권한과 egress가 무제한이다</text><text x="670" y="300">• schema migration 계획이 없다</text><text x="670" y="345">• retention·삭제 정책이 없다</text><text x="670" y="390">• 미확정 부작용을 자동 재시도한다</text></g>
+    <rect x="70" y="455" width="1060" height="225" rx="22" fill="#1e293b" stroke="#64748b" stroke-width="3"/><text x="105" y="502" fill="#7dd3fc" font-size="25" font-weight="700">PoC 합격선</text><g fill="#e2e8f0" font-size="20"><text x="110" y="550">1. tool call/result/permission/terminal fact가 안정적 ID로 연결된다</text><text x="110" y="590">2. crash 주입 후 중복 부작용 없이 확정·미확정 상태가 구분된다</text><text x="110" y="630">3. 원장만으로 session projection을 재구축하고 백업을 복원한다</text><text x="110" y="670">4. 민감정보 위치와 event class별 보존·삭제 비용을 측정한다</text></g>
+  </g>
+</svg>

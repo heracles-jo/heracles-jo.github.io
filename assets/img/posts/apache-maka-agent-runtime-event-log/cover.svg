@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Apache Maka 런타임 이벤트 로그</title>
+  <desc id="desc">정렬된 에이전트 실행 사실에서 컨텍스트, 화면, 복구 상태가 투영되는 모습을 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="110" r="180" fill="#7c3aed" opacity=".14"/><circle cx="120" cy="560" r="220" fill="#0891b2" opacity=".12"/>
+  <text x="84" y="125" fill="#67e8f9" font-family="Arial, sans-serif" font-size="27" font-weight="700">APACHE MAKA · LOG-FIRST AGENT RUNTIME</text>
+  <text x="84" y="205" fill="#f8fafc" font-family="Arial, sans-serif" font-size="55" font-weight="800">AI 에이전트 감사 로그 설계</text>
+  <text x="84" y="260" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="29">컨텍스트가 줄어도 실행 사실은 남아야 한다</text>
+  <path d="M110 410 H1090" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+  <g font-family="Arial, sans-serif" font-size="20" text-anchor="middle">
+    <g transform="translate(170 410)"><circle r="32" fill="#06b6d4"/><text y="7" fill="#082f49" font-weight="700">01</text><text y="68" fill="#e2e8f0">MESSAGE</text></g>
+    <g transform="translate(385 410)"><circle r="32" fill="#22d3ee"/><text y="7" fill="#083344" font-weight="700">02</text><text y="68" fill="#e2e8f0">TOOL CALL</text></g>
+    <g transform="translate(600 410)"><circle r="32" fill="#60a5fa"/><text y="7" fill="#172554" font-weight="700">03</text><text y="68" fill="#e2e8f0">PERMISSION</text></g>
+    <g transform="translate(815 410)"><circle r="32" fill="#a78bfa"/><text y="7" fill="#2e1065" font-weight="700">04</text><text y="68" fill="#e2e8f0">RESULT</text></g>
+    <g transform="translate(1030 410)"><circle r="32" fill="#c4b5fd"/><text y="7" fill="#2e1065" font-weight="700">05</text><text y="68" fill="#e2e8f0">TERMINAL</text></g>
+  </g>
+  <text x="600" y="570" fill="#94a3b8" font-family="Arial, sans-serif" font-size="23" text-anchor="middle">CANONICAL EVENTS → CONTEXT · UI · RECOVERY PROJECTIONS</text>
+</svg>
