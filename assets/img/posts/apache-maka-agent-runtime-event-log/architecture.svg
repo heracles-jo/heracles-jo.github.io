@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Maka 이벤트 원장과 투영 아키텍처</title><desc id="desc">클라이언트 요청이 Runtime Host와 AgentRun을 거쳐 이벤트 원장에 기록되고 모델 컨텍스트, 세션 UI, 복구 상태로 투영되는 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#38bdf8"/></marker><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2ff"/></linearGradient></defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <text x="60" y="66" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#0f172a">실행 사실은 하나, 소비 뷰는 여러 개</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g fill="#0f172a"><rect x="70" y="150" width="220" height="92" rx="16"/><text x="180" y="190" fill="white" font-size="22" font-weight="700">Desktop · TUI · CLI</text><text x="180" y="219" fill="#bae6fd" font-size="17">execution clients</text></g>
+    <g fill="#1d4ed8"><rect x="390" y="150" width="220" height="92" rx="16"/><text x="500" y="190" fill="white" font-size="23" font-weight="700">Runtime Host</text><text x="500" y="219" fill="#dbeafe" font-size="17">single authority</text></g>
+    <g fill="#6d28d9"><rect x="710" y="150" width="220" height="92" rx="16"/><text x="820" y="190" fill="white" font-size="23" font-weight="700">AgentRun</text><text x="820" y="219" fill="#ede9fe" font-size="17">lifecycle envelope</text></g>
+    <path d="M290 196H390M610 196H710" stroke="#38bdf8" stroke-width="5" marker-end="url(#a)"/>
+    <path d="M820 242V325" stroke="#38bdf8" stroke-width="5" marker-end="url(#a)"/>
+    <rect x="260" y="335" width="680" height="118" rx="20" fill="#0f766e"/><text x="600" y="378" fill="white" font-size="27" font-weight="700">Runtime Event Log · canonical ordered facts</text><text x="600" y="416" fill="#ccfbf1" font-size="19">message · tool call/result · permission · usage · terminal status</text>
+    <g font-size="19" font-weight="700"><rect x="80" y="570" width="260" height="80" rx="15" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/><text x="210" y="618" fill="#0c4a6e">모델 컨텍스트</text><rect x="470" y="570" width="260" height="80" rx="15" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="600" y="618" fill="#4c1d95">세션 UI · 검색</text><rect x="860" y="570" width="260" height="80" rx="15" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="990" y="618" fill="#14532d">복구 · 감사</text></g>
+    <path d="M460 453L210 570M600 453V570M740 453L990 570" stroke="#64748b" stroke-width="4" stroke-dasharray="8 8" marker-end="url(#a)"/>
+    <text x="600" y="510" fill="#475569" font-size="18">rebuildable projections</text>
+  </g>
+</svg>

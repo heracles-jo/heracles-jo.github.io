@@ -100,3 +100,14 @@
     - "MLX 모델 서빙"
   slug: "github-trending-omlx-apple-silicon-llm-server"
   summary: "OMLX의 MLX 기반 연속 배칭, 다중 모델 풀, RAM·SSD 계층형 KV 캐시를 중심으로 Mac 로컬 추론 서버의 운영 경계와 PoC 기준을 정리."
+- date: 2026-08-22
+  title: "AI 에이전트 감사 로그 설계: Apache Maka 런타임 이벤트 모델"
+  github_repo: "https://github.com/apache/maka"
+  main_keyword: "AI 에이전트 감사 로그"
+  related_keywords:
+    - "Apache Maka"
+    - "런타임 이벤트 로그"
+    - "에이전트 장애 복구"
+    - "event sourcing"
+  slug: "apache-maka-agent-runtime-event-log"
+  summary: "Maka의 append-only Runtime Event Log와 손실 있는 context projection을 중심으로 감사, 압축, 장애 복구, 보안 경계와 PoC 기준을 정리."
