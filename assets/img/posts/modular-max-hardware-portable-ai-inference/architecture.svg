@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">MAX 이기종 추론 아키텍처</title><desc id="desc">OpenAI 호환 API에서 Python 모델 파이프라인, 컴파일 실행 계층, Mojo 커널을 거쳐 세 하드웨어 계열로 연결되는 구조와 검증 경계</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#2563eb"/></marker><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2ff"/></linearGradient></defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/><text x="60" y="62" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#0f172a">하나의 API 아래에도 검증해야 할 네 계층이 있다</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="345" y="105" width="510" height="78" rx="18" fill="#0f172a"/><text x="600" y="153" fill="white" font-size="24" font-weight="700">OpenAI-compatible inference endpoint</text>
+    <rect x="345" y="225" width="510" height="78" rx="18" fill="#1d4ed8"/><text x="600" y="273" fill="white" font-size="24" font-weight="700">Python model pipelines · graph</text>
+    <rect x="345" y="345" width="510" height="78" rx="18" fill="#6d28d9"/><text x="600" y="393" fill="white" font-size="24" font-weight="700">compile · schedule · execute</text>
+    <rect x="345" y="465" width="510" height="78" rx="18" fill="#0f766e"/><text x="600" y="513" fill="white" font-size="24" font-weight="700">MAX accelerator library · Mojo kernels</text>
+    <path d="M600 183V225M600 303V345M600 423V465M600 543V592" stroke="#2563eb" stroke-width="5" marker-end="url(#a)"/>
+    <g font-size="21" font-weight="700"><rect x="90" y="610" width="290" height="82" rx="16" fill="#cffafe" stroke="#0891b2" stroke-width="3"/><text x="235" y="659" fill="#164e63">NVIDIA · CUDA 세대</text><rect x="455" y="610" width="290" height="82" rx="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="600" y="659" fill="#4c1d95">AMD · ROCm 세대</text><rect x="820" y="610" width="290" height="82" rx="16" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/><text x="965" y="659" fill="#881337">Apple · M 시리즈</text></g>
+    <path d="M600 592L235 610M600 592V610M600 592L965 610" stroke="#2563eb" stroke-width="4" marker-end="url(#a)"/>
+    <text x="930" y="266" fill="#475569" font-size="18">모델·기능 계약</text><text x="930" y="386" fill="#475569" font-size="18">compiler 회귀</text><text x="930" y="506" fill="#475569" font-size="18">dtype·커널 성숙도</text>
+  </g>
+</svg>

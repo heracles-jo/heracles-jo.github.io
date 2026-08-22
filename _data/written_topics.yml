@@ -111,3 +111,14 @@
     - "event sourcing"
   slug: "apache-maka-agent-runtime-event-log"
   summary: "Maka의 append-only Runtime Event Log와 손실 있는 context projection을 중심으로 감사, 압축, 장애 복구, 보안 경계와 PoC 기준을 정리."
+- date: 2026-08-23
+  title: "MAX 이기종 AI 추론: CUDA 종속성을 줄일 때의 비용"
+  github_repo: "https://github.com/modular/modular"
+  main_keyword: "MAX 이기종 AI 추론"
+  related_keywords:
+    - "Modular MAX"
+    - "Mojo 1.0"
+    - "하드웨어 이식성"
+    - "GPU 추론 플랫폼"
+  slug: "modular-max-hardware-portable-ai-inference"
+  summary: "MAX와 Mojo의 통합 추론 스택을 중심으로 NVIDIA·AMD·Apple 이식성, 성능 검증, 운영 전환과 라이선스 경계를 정리."
