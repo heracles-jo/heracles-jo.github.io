@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Vaultwarden 신뢰 경계 아키텍처</title>
+  <desc id="desc">클라이언트 암호화에서 역방향 프록시, Vaultwarden, 데이터와 독립 백업까지의 보안 경계</desc>
+  <rect width="1200" height="720" rx="24" fill="#f4f8fb"/>
+  <text x="60" y="70" fill="#102a43" font-family="system-ui,sans-serif" font-size="34" font-weight="800">금고 데이터 흐름과 세 개의 신뢰 경계</text>
+  <g font-family="system-ui,sans-serif">
+    <rect x="55" y="130" width="245" height="310" rx="22" fill="#e2f3fb" stroke="#1687ad" stroke-width="3"/>
+    <text x="178" y="178" text-anchor="middle" fill="#075985" font-size="24" font-weight="750">1. 클라이언트</text>
+    <rect x="90" y="220" width="175" height="72" rx="14" fill="#fff"/><text x="178" y="265" text-anchor="middle" fill="#243b53" font-size="20">모바일 · 데스크톱</text>
+    <rect x="90" y="315" width="175" height="72" rx="14" fill="#fff"/><text x="178" y="360" text-anchor="middle" fill="#243b53" font-size="20">암호화 · 복호화</text>
+    <rect x="375" y="130" width="450" height="430" rx="22" fill="#e9f7f2" stroke="#169873" stroke-width="3"/>
+    <text x="600" y="178" text-anchor="middle" fill="#08715a" font-size="24" font-weight="750">2. 서비스 경계</text>
+    <rect x="425" y="220" width="350" height="70" rx="14" fill="#fff" stroke="#8ccfb9"/><text x="600" y="264" text-anchor="middle" fill="#243b53" font-size="20">TLS · Reverse Proxy · Rate Limit</text>
+    <path d="M600 292v42" stroke="#169873" stroke-width="4"/>
+    <rect x="425" y="335" width="350" height="82" rx="14" fill="#0f766e"/><text x="600" y="385" text-anchor="middle" fill="#fff" font-size="25" font-weight="750">Vaultwarden</text>
+    <path d="M600 419v42" stroke="#169873" stroke-width="4"/>
+    <rect x="425" y="462" width="165" height="64" rx="12" fill="#fff"/><text x="508" y="501" text-anchor="middle" fill="#243b53" font-size="18">DB · 첨부</text>
+    <rect x="610" y="462" width="165" height="64" rx="12" fill="#fff"/><text x="693" y="501" text-anchor="middle" fill="#243b53" font-size="18">로그 · 설정</text>
+    <rect x="900" y="130" width="245" height="310" rx="22" fill="#fff2df" stroke="#d97706" stroke-width="3"/>
+    <text x="1023" y="178" text-anchor="middle" fill="#a94f05" font-size="24" font-weight="750">3. 복구 경계</text>
+    <rect x="935" y="220" width="175" height="72" rx="14" fill="#fff"/><text x="1023" y="265" text-anchor="middle" fill="#243b53" font-size="20">오프사이트 백업</text>
+    <rect x="935" y="315" width="175" height="72" rx="14" fill="#fff"/><text x="1023" y="348" text-anchor="middle" fill="#243b53" font-size="18">2FA 복구 코드</text><text x="1023" y="373" text-anchor="middle" fill="#526d82" font-size="15">별도 보관</text>
+    <path d="M305 285h55" stroke="#1687ad" stroke-width="5"/><path d="m347 273 15 12-15 12" fill="none" stroke="#1687ad" stroke-width="5"/>
+    <path d="M830 285h55" stroke="#d97706" stroke-width="5"/><path d="m872 273 15 12-15 12" fill="none" stroke="#d97706" stroke-width="5"/>
+    <rect x="80" y="610" width="1040" height="70" rx="16" fill="#102a43"/>
+    <text x="600" y="653" text-anchor="middle" fill="#fff" font-size="22" font-weight="650">암호화된 금고 ≠ 안전한 운영 · 클라이언트 무결성, 패치, 복원 훈련을 함께 검증</text>
+  </g>
+</svg>

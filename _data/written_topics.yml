@@ -122,3 +122,14 @@
     - "GPU 추론 플랫폼"
   slug: "modular-max-hardware-portable-ai-inference"
   summary: "MAX와 Mojo의 통합 추론 스택을 중심으로 NVIDIA·AMD·Apple 이식성, 성능 검증, 운영 전환과 라이선스 경계를 정리."
+- date: 2026-08-24
+  title: "Vaultwarden 셀프호스팅 비밀번호 관리: 운영 책임과 도입 기준"
+  github_repo: "https://github.com/dani-garcia/vaultwarden"
+  main_keyword: "Vaultwarden 셀프호스팅 비밀번호 관리"
+  related_keywords:
+    - "Vaultwarden"
+    - "비밀번호 관리자"
+    - "Bitwarden 셀프호스팅"
+    - "자격 증명 보안"
+  slug: "vaultwarden-self-hosted-password-manager"
+  summary: "Vaultwarden의 클라이언트 암호화 경계, 비공식 API 호환성, 보안 공지, 백업·복구와 대안 비교를 통해 도입 기준을 정리."
