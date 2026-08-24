@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">MAX와 Mojo 기반 AI 런타임 아키텍처</title>
+  <desc id="desc">애플리케이션 계층, MAX 모델 파이프라인, Mojo 커널과 가속기 라이브러리, 하드웨어 백엔드로 나뉜 아키텍처 다이어그램</desc>
+  <rect width="1200" height="620" fill="#f8fafc"/>
+  <text x="60" y="70" font-size="34" font-weight="800" fill="#0f172a" font-family="Inter, Apple SD Gothic Neo, Arial">MAX · Mojo AI Runtime Stack</text>
+  <text x="60" y="108" font-size="18" fill="#475569" font-family="Inter, Apple SD Gothic Neo, Arial">모델 서빙과 커널 최적화를 분리하되, 하나의 플랫폼 안에서 배포·벤치마크·프로파일링 루프를 만든다.</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial" font-size="18">
+    <rect x="80" y="155" width="1040" height="72" rx="18" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="110" y="199" fill="#1e3a8a" font-weight="700">Application / API</text>
+    <text x="340" y="199" fill="#1e40af">OpenAI-compatible endpoint · Python API · 기존 ML 서비스와 연동</text>
+    <rect x="80" y="255" width="1040" height="82" rx="18" fill="#ede9fe" stroke="#a78bfa"/>
+    <text x="110" y="303" fill="#4c1d95" font-weight="700">MAX Framework</text>
+    <text x="340" y="291" fill="#5b21b6">model pipelines · graph execution · serving · evaluation</text>
+    <text x="340" y="317" fill="#5b21b6">배포 단위와 운영 도구를 모델 아키텍처와 함께 관리</text>
+    <rect x="80" y="365" width="1040" height="82" rx="18" fill="#ccfbf1" stroke="#2dd4bf"/>
+    <text x="110" y="413" fill="#134e4a" font-weight="700">Mojo / MAX accelerator library</text>
+    <text x="450" y="400" fill="#0f766e">stable stdlib APIs · GPU programming APIs · AI kernels</text>
+    <text x="450" y="426" fill="#0f766e">성능 민감 경로를 Python 밖에서 타입·메모리 모델과 함께 최적화</text>
+    <rect x="80" y="475" width="312" height="76" rx="18" fill="#111827"/>
+    <text x="236" y="506" text-anchor="middle" fill="#bfdbfe" font-weight="700">NVIDIA GPU</text>
+    <text x="236" y="532" text-anchor="middle" fill="#93c5fd" font-size="15">CUDA 생태계와 고성능 커널</text>
+    <rect x="444" y="475" width="312" height="76" rx="18" fill="#111827"/>
+    <text x="600" y="506" text-anchor="middle" fill="#fed7aa" font-weight="700">AMD GPU</text>
+    <text x="600" y="532" text-anchor="middle" fill="#fdba74" font-size="15">벤더 다변화와 비용 협상력</text>
+    <rect x="808" y="475" width="312" height="76" rx="18" fill="#111827"/>
+    <text x="964" y="506" text-anchor="middle" fill="#ddd6fe" font-weight="700">Apple Silicon</text>
+    <text x="964" y="532" text-anchor="middle" fill="#c4b5fd" font-size="15">로컬·엣지 개발과 배포 실험</text>
+  </g>
+  <g stroke="#64748b" stroke-width="3" stroke-linecap="round">
+    <path d="M600 227v28"/><path d="M600 337v28"/><path d="M600 447v28"/>
+  </g>
+</svg>

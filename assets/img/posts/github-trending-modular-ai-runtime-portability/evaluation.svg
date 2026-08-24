@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">AI 런타임 도입 평가 매트릭스</title>
+  <desc id="desc">성능, 하드웨어 이식성, 운영 성숙도, 라이선스, 팀 역량을 축으로 MAX와 대체 도구를 평가하는 체크리스트형 이미지</desc>
+  <rect width="1200" height="620" fill="#0f172a"/>
+  <text x="70" y="78" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="34" font-weight="800" fill="#ffffff">PoC 평가 축: 빠른 벤치마크보다 운영 지속성</text>
+  <text x="70" y="116" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="18" fill="#cbd5e1">MAX·Mojo 같은 새 AI 런타임은 단일 데모 속도가 아니라 팀의 변경 비용과 장애 대응 능력으로 판단해야 한다.</text>
+  <g font-family="Inter, Apple SD Gothic Neo, Arial">
+    <g transform="translate(80 165)">
+      <rect width="320" height="320" rx="26" fill="#1e293b" stroke="#38bdf8"/>
+      <text x="30" y="50" font-size="24" font-weight="800" fill="#e0f2fe">기술 적합성</text>
+      <text x="30" y="95" font-size="17" fill="#bae6fd">• 대상 모델/토크나이저 지원</text>
+      <text x="30" y="130" font-size="17" fill="#bae6fd">• TTFT, throughput, 메모리</text>
+      <text x="30" y="165" font-size="17" fill="#bae6fd">• GPU별 커널 품질</text>
+      <text x="30" y="200" font-size="17" fill="#bae6fd">• Python interop와 디버깅</text>
+      <text x="30" y="250" font-size="15" fill="#7dd3fc">질문: 기존 vLLM/llama.cpp보다</text>
+      <text x="30" y="275" font-size="15" fill="#7dd3fc">어떤 병목을 실제로 줄이는가?</text>
+    </g>
+    <g transform="translate(440 165)">
+      <rect width="320" height="320" rx="26" fill="#1e293b" stroke="#a78bfa"/>
+      <text x="30" y="50" font-size="24" font-weight="800" fill="#ede9fe">운영 적합성</text>
+      <text x="30" y="95" font-size="17" fill="#ddd6fe">• 릴리스·마이그레이션 주기</text>
+      <text x="30" y="130" font-size="17" fill="#ddd6fe">• 관측성·프로파일링 도구</text>
+      <text x="30" y="165" font-size="17" fill="#ddd6fe">• 컨테이너/CI 재현성</text>
+      <text x="30" y="200" font-size="17" fill="#ddd6fe">• 장애 시 롤백 경로</text>
+      <text x="30" y="250" font-size="15" fill="#c4b5fd">질문: 새 런타임을 운영할</text>
+      <text x="30" y="275" font-size="15" fill="#c4b5fd">소유 팀과 SLO가 있는가?</text>
+    </g>
+    <g transform="translate(800 165)">
+      <rect width="320" height="320" rx="26" fill="#1e293b" stroke="#2dd4bf"/>
+      <text x="30" y="50" font-size="24" font-weight="800" fill="#ccfbf1">거버넌스</text>
+      <text x="30" y="95" font-size="17" fill="#99f6e4">• Apache v2 + LLVM 예외</text>
+      <text x="30" y="130" font-size="17" fill="#99f6e4">• Community License 범위</text>
+      <text x="30" y="165" font-size="17" fill="#99f6e4">• 모델/데이터 라이선스</text>
+      <text x="30" y="200" font-size="17" fill="#99f6e4">• 벤더 종속성 관리</text>
+      <text x="30" y="250" font-size="15" fill="#5eead4">질문: 하드웨어 전환권을</text>
+      <text x="30" y="275" font-size="15" fill="#5eead4">정말 확보했는가?</text>
+    </g>
+  </g>
+  <rect x="80" y="522" width="1040" height="46" rx="23" fill="#f97316" opacity="0.92"/>
+  <text x="600" y="552" text-anchor="middle" font-family="Inter, Apple SD Gothic Neo, Arial" font-size="19" font-weight="800" fill="#111827">권장 결론: 프로덕션 전면 교체보다, 병목 모델 1개와 보조 하드웨어 1종으로 제한된 PoC를 먼저 수행</text>
+</svg>
