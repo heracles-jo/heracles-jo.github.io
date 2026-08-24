@@ -1,10 +1,10 @@
 ---
-title: "Kaneo와 오픈소스 프로젝트 관리: Jira 피로감 이후의 실무 거버넌스"
-description: "GitHub Trending에 오른 usekaneo/kaneo를 중심으로 셀프호스팅 프로젝트 관리 도구가 데이터 소유권, 간결한 업무 흐름, 운영 책임의 균형을 어떻게 바꾸는지 분석한다."
+title: "Kaneo vs Plane: 셀프호스팅 Jira 대안 선택 기준"
+description: "Kaneo와 Plane을 기능 폭, 라이선스, 배포 복잡도, 데이터 통제, 보안 운영 책임으로 비교해 우리 팀에 맞는 셀프호스팅 Jira 대안을 고르는 기준을 제시한다."
 author: heracles-jo
 date: 2026-08-08 07:37:00 +0900
 categories: [Collaboration, Engineering Management]
-tags: [github-trending, kaneo, project-management, self-hosted, open-source, jira-alternative, linear, plane, governance]
+tags: [kaneo, plane, project-management, self-hosting, jira-alternative, collaboration]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-kaneo-open-source-project-management-governance/cover.svg
   alt: "Kaneo가 오픈소스 프로젝트 관리에서 간결한 업무 흐름과 데이터 소유권, 운영 거버넌스를 연결하는 흐름"
@@ -12,23 +12,25 @@ image:
 
 GitHub Trending에서 [usekaneo/kaneo](https://github.com/usekaneo/kaneo)가 주간 상위권에 올라왔다. 2026년 8월 8일 07:35 KST 전후 확인한 공개 스냅샷 기준으로 Kaneo 저장소는 약 7.6k stars, 609 forks, 45 open issues를 보였고, 전날인 2026년 8월 7일 [v2.14.0 릴리스](https://github.com/usekaneo/kaneo/releases/tag/v2.14.0)와 최근 push가 확인됐다. 같은 시간대 daily/weekly Trending에는 `PrimeIntellect-ai/prime-agent`, `addyosmani/agent-skills`, `cloudflare/computer`, `goauthentik/authentik`, `TencentCloud/TencentDB-Agent-Memory`, `different-ai/openwork`처럼 AI 에이전트, 인증, 협업 자동화 계열 저장소가 함께 보였다. 이 글의 수치와 순위는 확인 시점의 스냅샷이며, GitHub Trending 알고리즘과 저장소 상태는 언제든 바뀔 수 있다.
 
+> **2026년 8월 25일 업데이트:** daily Trending에 [makeplane/plane](https://github.com/makeplane/plane)이 다시 등장해 검색 의도를 “Kaneo 소개”에서 **Kaneo와 Plane 중 어떤 셀프호스팅 Jira 대안을 고를 것인가**로 좁혔다. 08월 25일 07시대 KST 공개 스냅샷에서 Plane은 daily **268 stars today**, GitHub API 기준 **57,884 stars**, 최신 릴리스 **v1.4.2**, AGPL-3.0 라이선스였다. 같은 시점 Kaneo는 **8,505 stars**, **708 forks**, 최신 릴리스 **v2.22.0**, MIT 라이선스였으며 두 저장소 모두 8월 24일에도 push가 있었다. 수치는 인기 우열이 아니라 유지보수 활동을 확인하는 시점 자료다.
+
 오늘의 기술 흐름을 하나로 요약하면 이렇다. **프로젝트 관리 도구 선택이 “기능이 많은 SaaS를 살 것인가”에서 “업무 흐름을 얼마나 단순하게 유지하면서 데이터와 운영 책임을 어디까지 소유할 것인가”로 이동하고 있다.** Kaneo가 흥미로운 이유는 단순히 “Jira 대안”이라는 흔한 구호 때문이 아니다. README가 강조하는 “All you need. Nothing you don't.”라는 메시지, MIT 라이선스, Docker와 Helm 배포, PostgreSQL 기반 저장, SSO·GitHub App·SMTP·Webhook 같은 운영 기능, 그리고 빠른 릴리스 흐름이 한 방향을 가리킨다. 협업 도구도 이제는 문서 작성 도구나 채팅 앱처럼 팀의 지식 자산과 운영 리스크를 품는 내부 시스템으로 취급해야 한다는 신호다.
 
 ![Kaneo self-hosted 운영 아키텍처](https://heracles-jo.github.io/assets/img/posts/github-trending-kaneo-open-source-project-management-governance/architecture.svg)
 
-## 오늘의 GitHub Trending 후보와 선택 이유
+## 8월 25일 후보 비교: 새 글보다 기존 비교를 보강한 이유
 
-이번 조사에서는 daily/weekly Trending에서 3~5개 후보를 비교했다. 최근 블로그에서 이미 AI 에이전트 스킬, 로컬 AI 추론, 개발 환경 컨트롤 플레인, 브라우저 E2E 테스트, 주권형 협업 릴레이를 다뤘기 때문에, 오늘은 같은 AI 도구 소개로 반복되지 않는 주제를 우선했다.
+daily와 weekly Trending의 후보 다섯 개를 다시 비교했다. 별 증가가 큰 저장소를 곧바로 새 글로 만들지 않고, 기존 제목·태그·본문과 저장소 URL뿐 아니라 독자가 해결하려는 질문과 중심 논지까지 대조했다.
 
-| 후보 저장소 | 확인 시점 신호 | 매력 | 이번 글의 판단 |
-|---|---:|---|---|
-| [usekaneo/kaneo](https://github.com/usekaneo/kaneo) | 약 7.6k stars, v2.14.0, 최근 push | 간결한 오픈소스 프로젝트 관리, Docker/Helm, 자체 데이터 통제 | 오늘의 핵심 주제로 선택 |
-| [PrimeIntellect-ai/prime-agent](https://github.com/PrimeIntellect-ai/prime-agent) | 약 6.3k stars, v0.7.1 | 장시간 자율 코딩 에이전트와 self-improving workflow | 기존 AI 코딩 에이전트·스킬 각도와 중복 가능성이 큼 |
-| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | daily Trending 상위권 | 프로덕션 엔지니어링 스킬 묶음 | 최근 agent skills 주제를 여러 차례 다뤄 보조 신호로만 봄 |
-| [goauthentik/authentik](https://github.com/goauthentik/authentik) | 약 23.5k stars, 2026.5.6 릴리스 | 셀프호스팅 IAM과 SSO | Logto 기반 identity infrastructure 글과 각도가 가까움 |
-| [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 약 17.5k stars, v2.0.0 | 팀 단위 에이전트 메모리 허브 | AI 메모리·코드그래프 주제와 중복 가능성이 큼 |
+| 후보 저장소 | 확인 시점 Trending·저장소 신호 | 검색 의도와 중복 판단 |
+|---|---:|---|
+| [makeplane/plane](https://github.com/makeplane/plane) | daily 268 stars today, 57,884 stars, v1.4.2, AGPL-3.0 | 프로젝트 관리·Jira 대안 의도가 이 글과 정확히 겹친다. 별도 글 대신 Plane 비교를 보강했다. |
+| [openai/codex](https://github.com/openai/codex) | daily 1,990 stars today, 116,976 stars, Apache-2.0 | 코딩 에이전트 운영·안전·병렬 개발 글이 이미 있어 중심 의도가 중복된다. |
+| [anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community) | daily 490 stars today, 1,323 stars, Apache-2.0 | 플러그인 공급망은 기존 에이전트 스킬 엔지니어링·보안 클러스터와 가깝다. |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | daily 899 stars today, 235,743 stars, MIT | 에이전트 하네스·메모리·스킬이라는 기존 검색 의도를 반복한다. |
+| [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) | daily 515 stars today, 37,214 stars, GPL-3.0 | 개인 AI·로컬 메모리는 이미 별도 글에서 다룬 장기 기억·개인 데이터 주권과 겹친다. |
 
-Kaneo를 선택한 이유는 프로젝트 관리가 많은 조직에서 “이미 해결된 문제”처럼 보이지만 실제로는 계속 실패하는 영역이기 때문이다. Jira, Azure DevOps, Asana, Linear, Notion, GitHub Projects, spreadsheet가 공존하는 팀을 어렵지 않게 볼 수 있다. 도구가 부족해서가 아니라, 도구가 업무 방식을 과도하게 규정하거나 반대로 의사결정 흔적을 제대로 남기지 못하기 때문이다. Kaneo의 GitHub Trending 등장은 “작고 빠른 업무 보드”에 대한 수요와 “우리 업무 데이터는 우리가 운영하고 싶다”는 요구가 다시 만나는 지점으로 읽힌다.
+Plane의 현재 Trending 신호만으로 새 글을 만들면 이 글과 “오픈소스 Jira 대안의 데이터 소유권과 운영 책임”이라는 답이 중복된다. 대신 이 글을 **Kaneo의 최소주의와 Plane의 넓은 제품 관리 기능을 비교하는 선택 가이드**로 바꿨다. 프로젝트 관리가 이미 해결된 문제처럼 보여도 Jira, Azure DevOps, Asana, Linear, Notion, GitHub Projects, spreadsheet가 한 팀에 공존하는 일은 흔하다. 도구가 부족해서가 아니라 도구가 실제 업무보다 복잡하거나, 반대로 의사결정 흔적을 충분히 남기지 못하기 때문이다.
 
 ## Kaneo는 무엇인가: 가벼운 칸반 앱이 아니라 업무 원장 후보
 
@@ -38,7 +40,7 @@ Kaneo를 선택한 이유는 프로젝트 관리가 많은 조직에서 “이�
 
 둘째, 환경 설정 문서는 인증과 통합을 중요한 운영 경계로 다룬다. [ENVIRONMENT_SETUP.md](https://github.com/usekaneo/kaneo/blob/main/ENVIRONMENT_SETUP.md)에 따르면 필수 변수에는 `KANEO_CLIENT_URL`, `KANEO_API_URL`, `AUTH_SECRET`, `DATABASE_URL`, PostgreSQL 계정 정보가 포함된다. 선택 설정으로 GitHub OAuth, Google, Discord, Custom OAuth/OIDC, GitHub App, SMTP, 접근 제어, CORS, Redis, private network notification receiver가 언급된다. 특히 private webhook destination은 SSRF 위험 때문에 기본 비활성화되어 있고 `KANEO_ALLOW_PRIVATE_WEBHOOK_DESTINATIONS=true`로 명시적으로 켜야 한다는 설명이 있다. 이는 단순한 취미 프로젝트가 아니라 운영자가 위협 모델을 고려해야 하는 시스템이라는 뜻이다.
 
-셋째, 릴리스 활동이 활발하다. `CHANGELOG.md`의 v2.14.0에는 Helm의 PostgreSQL Deployment update strategy 조정, 다국어 번역 보강, pt-BR locale 추가가 보였다. 바로 앞 v2.13.1에는 Sentry session replay와 API tracing, dependency advisory 대응, MCP OAuth pending authorization request 제한, completed task의 due date 경고 수정 등이 포함되어 있었다. 기능 확장과 운영 안정화가 동시에 진행되고 있다는 점은 긍정적 신호지만, 동시에 self-hosted 운영자는 업그레이드 주기와 변경 영향을 꾸준히 추적해야 한다.
+셋째, 릴리스 활동이 활발하다. `CHANGELOG.md`의 v2.14.0에는 Helm의 PostgreSQL Deployment update strategy 조정, 다국어 번역 보강, pt-BR locale 추가가 보였다. 이후 8월 21일 공개된 [v2.22.0](https://github.com/usekaneo/kaneo/releases/tag/v2.22.0)은 존재하지 않는 label 요청의 404 처리와 release chart 권한 수정 등을 담았다. 8월 24일 최신 커밋에서는 Zod 정의로 OpenAPI 명세를 생성하도록 API 구조를 바꾸는 작업도 확인됐다. 기능 확장과 운영 안정화가 동시에 진행되는 것은 긍정적이지만, self-hosted 운영자는 API 계약과 업그레이드 영향을 꾸준히 추적해야 한다.
 
 ## 왜 지금 오픈소스 프로젝트 관리인가
 
@@ -86,6 +88,8 @@ Kaneo를 실무 관점에서 보면 네 계층으로 나눌 수 있다.
 
 Kaneo를 평가할 때 “Jira보다 좋은가”라는 질문은 너무 거칠다. 더 나은 질문은 “우리 팀의 복잡도와 운영 성숙도에 맞는가”다.
 
+Plane의 공식 README는 work item뿐 아니라 cycle, module, 저장 가능한 view, 문서형 Pages, analytics를 핵심 기능으로 내세운다. Docker와 Kubernetes self-hosting을 모두 문서화하고 Cloud도 제공한다. 즉, Plane은 단순 보드를 넘어 로드맵·제품 문서·분석까지 한곳에 모으려는 쪽이다. Kaneo는 공식 README에서 오히려 “기능이 너무 많은 도구”를 문제로 정의하고, 빠른 보드와 self-hosting, 내장 HTTP MCP endpoint에 초점을 맞춘다. 둘 다 PostgreSQL과 컨테이너만 확인하고 같은 범주로 묶으면 제품 철학의 차이를 놓치게 된다.
+
 ![프로젝트 관리 도구 선택 매트릭스](https://heracles-jo.github.io/assets/img/posts/github-trending-kaneo-open-source-project-management-governance/decision-matrix.svg)
 
 | 도구 | 강점 | 약점/주의점 | 적합한 상황 |
@@ -93,9 +97,19 @@ Kaneo를 평가할 때 “Jira보다 좋은가”라는 질문은 너무 거칠�
 | [Kaneo](https://github.com/usekaneo/kaneo) | 간결한 UI, self-hosted, MIT, Docker/Helm, PostgreSQL 기반 통제 | 생태계와 엔터프라이즈 기능은 성숙 도구보다 제한될 수 있음, 운영 책임 필요 | 작고 빠른 제품팀, 내부 데이터 통제 요구, Jira 과밀을 줄이고 싶은 팀 |
 | [Jira](https://www.atlassian.com/software/jira) | 강력한 워크플로, 권한, 보고, 플러그인 생태계 | 복잡도와 관리 비용이 높고 팀별 최적화가 과도해질 수 있음 | 대규모 엔터프라이즈, 감사·승인·포트폴리오 관리가 필요한 조직 |
 | [Linear](https://linear.app/) | 빠른 SaaS UX, 개발팀 친화적 issue workflow, integration 품질 | SaaS 의존, 데이터·배포 통제 제한 | 성장 단계 스타트업, 운영 부담보다 속도와 사용성을 우선하는 팀 |
-| [Plane](https://github.com/makeplane/plane) | 오픈소스 프로젝트/제품 관리, 더 넓은 ALM 지향 | 기능 범위가 넓어질수록 운영·학습 비용 증가 | 오픈소스 기반이면서 Jira에 가까운 기능 폭을 원하는 팀 |
+| [Plane](https://github.com/makeplane/plane) | cycle·module·page·analytics를 묶은 넓은 제품 관리 범위, Cloud와 self-hosting | 기능·배포 표면이 넓고 AGPL-3.0 의무를 배포·수정 방식에 맞춰 검토해야 함 | 오픈소스 기반이면서 Jira에 가까운 기능 폭과 로드맵·문서를 함께 원하는 팀 |
 
 이 비교에서 Kaneo의 포지션은 명확하다. 모든 기능을 갖춘 ALM 플랫폼이 아니라, 팀이 실제로 자주 쓰는 프로젝트 관리 흐름을 소유 가능한 형태로 제공하려는 도구다. 따라서 “Jira를 완전히 대체하겠다”보다 “Jira가 과한 팀이나 특정 제품 조직의 업무 보드를 분리하겠다”는 접근이 현실적이다. 반대로 규정 준수 보고, 다층 승인, 복잡한 dependency management, ITSM ticketing, 자산 관리까지 한 도구에 묶어야 한다면 Kaneo 단독 도입은 성급할 수 있다.
+
+### Kaneo와 Plane을 가르는 네 가지 결정 질문
+
+첫째, **업무 모델의 폭**이다. 팀이 카드, 상태, 담당자, 댓글로 핵심 결정을 충분히 남길 수 있다면 Kaneo의 제약이 장점이 된다. 반대로 cycle별 burn-down, module, roadmap, 제품 문서, 저장된 view와 analytics를 같은 시스템에서 요구한다면 Plane이 더 직접적인 후보가 된다. “나중에 필요할지도 모르는 기능”이 아니라 현재 두 번 이상 수작업으로 보완하는 기능을 기준으로 고른다.
+
+둘째, **라이선스와 수정 배포 경로**다. Kaneo는 MIT, Plane 저장소는 AGPL-3.0이다. AGPL 소프트웨어를 수정해 네트워크 서비스로 제공할 때의 소스 제공 의무는 사내 전용인지, 고객·파트너에게 제공하는지, 플러그인과 별도 서비스가 어떻게 결합되는지에 따라 검토 범위가 달라진다. 이는 Plane을 피해야 한다는 뜻이 아니라 PoC 전에 법무·오픈소스 프로그램 오피스가 배포 구조를 확인해야 한다는 뜻이다. 자체 포크를 제품 기능과 깊게 결합할 계획이라면 이 차이는 UI 선호보다 먼저 봐야 한다.
+
+셋째, **운영 가능한 복잡도**다. 두 프로젝트 모두 “self-host 가능”하지만 self-hosted는 하나의 기능 체크박스가 아니다. 데이터베이스 migration, object storage와 첨부, 메일, background job, ingress, SSO, 관측성, backup restore를 합친 실제 서비스다. 2주 PoC에서는 설치 성공 시간이 아니라 깨끗한 환경의 재배포 시간, 버전 업그레이드 중단 시간, 백업 복구 성공률, 운영자가 처리한 경보 수를 측정해야 한다.
+
+넷째, **통합 권한 경계**다. Kaneo의 MCP endpoint나 두 제품의 GitHub·webhook 연동이 편리해도 업무 원장을 에이전트와 자동화에 개방하는 순간 쓰기 권한과 감사 로그가 핵심이 된다. [Logto로 인증을 애플리케이션 밖의 운영 평면으로 분리하는 기준](/posts/github-trending-logto-identity-infrastructure/)처럼 SSO와 계정 회수부터 설계하고, [Mattermost의 보안 중심 협업 운영](/posts/github-trending-mattermost-secure-sdlc-collaboration/)에서 다룬 사고 대응·감사 요구를 티켓 권한에 연결해야 한다. 자동 생성 업무가 늘어난다면 [Apache Maka의 append-only 에이전트 감사 로그](/posts/apache-maka-agent-runtime-event-log/)처럼 “누가 어떤 근거로 상태를 바꿨는가”를 재현할 수 있어야 한다. 이벤트 기반 통합을 더 넓게 검토하는 팀은 [Block Buzz의 signed event log와 협업 릴레이](/posts/github-trending-buzz-sovereign-collaboration-relay/)도 함께 비교할 수 있다.
 
 ## 실무 도입 장점
 
