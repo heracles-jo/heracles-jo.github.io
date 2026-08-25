@@ -133,3 +133,14 @@
     - "자격 증명 보안"
   slug: "vaultwarden-self-hosted-password-manager"
   summary: "Vaultwarden의 클라이언트 암호화 경계, 비공식 API 호환성, 보안 공지, 백업·복구와 대안 비교를 통해 도입 기준을 정리."
+- date: 2026-08-26
+  title: "오픈 모델 학습 재현성: Marin 도입 판단과 실패 비용"
+  github_repo: "https://github.com/marin-community/marin"
+  main_keyword: "오픈 모델 학습 재현성"
+  related_keywords:
+    - "Marin"
+    - "파운데이션 모델 학습"
+    - "실험 재현성"
+    - "MLOps 데이터 계보"
+  slug: "marin-open-model-training-reproducibility"
+  summary: "Marin의 lazy artifact DAG와 공개 학습 회고를 중심으로 데이터 계보, 실패 복구, 오염·보안·비용 경계와 PoC 도입 기준을 정리."

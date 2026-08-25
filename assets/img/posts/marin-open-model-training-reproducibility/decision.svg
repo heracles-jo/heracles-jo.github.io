@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Marin 도입 의사결정 매트릭스</title>
+  <desc id="desc">재현성과 연구 가치가 높고 운영 역량이 충분한지를 기준으로 도입 방식을 결정하는 사분면</desc>
+  <rect width="1200" height="720" rx="28" fill="#0a1724"/>
+  <text x="70" y="72" fill="#fff" font-family="Arial, sans-serif" font-size="40" font-weight="700">Marin 도입 판단: 모델 크기보다 운영 준비도를 먼저 본다</text>
+  <line x1="600" y1="135" x2="600" y2="625" stroke="#70899a" stroke-width="3"/>
+  <line x1="145" y1="380" x2="1060" y2="380" stroke="#70899a" stroke-width="3"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="165" y="155" width="405" height="195" rx="20" fill="#17303f"/><rect x="630" y="155" width="405" height="195" rx="20" fill="#124b45"/>
+    <rect x="165" y="410" width="405" height="195" rx="20" fill="#3b2c34"/><rect x="630" y="410" width="405" height="195" rx="20" fill="#1c354a"/>
+    <text x="195" y="205" fill="#fff" font-size="28" font-weight="700">개념만 채택</text><text x="195" y="246" fill="#c6dce7" font-size="20">artifact 규약·회고 방식 적용</text><text x="195" y="278" fill="#c6dce7" font-size="20">기존 ML 플랫폼 유지</text>
+    <text x="660" y="205" fill="#fff" font-size="28" font-weight="700">제한된 PoC 후 도입</text><text x="660" y="246" fill="#bdf6e9" font-size="20">학습 방법이 핵심 연구 자산</text><text x="660" y="278" fill="#bdf6e9" font-size="20">lineage·보안·복구 역량 보유</text>
+    <text x="195" y="460" fill="#fff" font-size="28" font-weight="700">노트북 실험 유지</text><text x="195" y="501" fill="#ead3dc" font-size="20">폐기 가능한 작은 가설</text><text x="195" y="533" fill="#ead3dc" font-size="20">공유·장기 재현 요구가 낮음</text>
+    <text x="660" y="460" fill="#fff" font-size="28" font-weight="700">관리형 플랫폼 우선</text><text x="660" y="501" fill="#cee7f7" font-size="20">재현성 요구는 높지만</text><text x="660" y="533" fill="#cee7f7" font-size="20">클러스터 운영 인력이 부족</text>
+    <text x="600" y="685" fill="#9fb9c8" font-size="22" text-anchor="middle">운영 역량 낮음  ←  IAM · 스토리지 · 관측성 · 복구 · upstream 관리  →  높음</text>
+    <text transform="translate(55 390) rotate(-90)" fill="#9fb9c8" font-size="22" text-anchor="middle">연구 재현성·외부 검증 가치</text>
+  </g>
+</svg>
