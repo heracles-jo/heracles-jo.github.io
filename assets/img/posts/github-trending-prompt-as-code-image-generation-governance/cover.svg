@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt as Code for image generation governance</title>
+  <desc id="desc">A governance diagram connecting image prompt templates, brand policy, review gates and generated visual assets.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.52" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#020617" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1020" cy="130" r="170" fill="#22d3ee" opacity="0.16"/>
+  <circle cx="130" cy="520" r="190" fill="#a78bfa" opacity="0.18"/>
+  <g filter="url(#shadow)">
+    <rect x="96" y="118" width="430" height="338" rx="28" fill="#f8fafc" opacity="0.96"/>
+    <rect x="128" y="154" width="180" height="18" rx="9" fill="#2563eb"/>
+    <rect x="128" y="198" width="344" height="16" rx="8" fill="#94a3b8"/>
+    <rect x="128" y="232" width="300" height="16" rx="8" fill="#cbd5e1"/>
+    <rect x="128" y="266" width="330" height="16" rx="8" fill="#cbd5e1"/>
+    <rect x="128" y="322" width="120" height="44" rx="14" fill="#dbeafe"/>
+    <text x="151" y="351" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1d4ed8">STYLE</text>
+    <rect x="270" y="322" width="132" height="44" rx="14" fill="#ede9fe"/>
+    <text x="292" y="351" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">POLICY</text>
+    <rect x="128" y="390" width="266" height="16" rx="8" fill="#94a3b8"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="694" y="112" width="330" height="330" rx="34" fill="#111827" opacity="0.92"/>
+    <rect x="734" y="152" width="250" height="210" rx="20" fill="#38bdf8" opacity="0.18"/>
+    <path d="M766 330 L835 245 L889 300 L922 262 L980 330 Z" fill="#67e8f9" opacity="0.82"/>
+    <circle cx="920" cy="202" r="34" fill="#fde68a"/>
+    <rect x="734" y="386" width="250" height="18" rx="9" fill="#a78bfa" opacity="0.7"/>
+  </g>
+  <path d="M548 290 C606 260 628 260 676 278" stroke="#e0f2fe" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M652 246 L690 281 L644 302" stroke="#e0f2fe" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="545" font-family="Arial, sans-serif" font-size="48" font-weight="800" fill="#ffffff">Prompt as Code</text>
+  <text x="96" y="588" font-family="Arial, sans-serif" font-size="26" font-weight="600" fill="#bfdbfe">이미지 생성 자동화의 품질·브랜드·보안 거버넌스</text>
+</svg>

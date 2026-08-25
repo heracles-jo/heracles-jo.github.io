@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt pipeline architecture</title>
+  <desc id="desc">A three stage pipeline from prompt library to policy review to image generation and asset repository.</desc>
+  <rect width="1200" height="520" fill="#f8fafc"/>
+  <text x="72" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#0f172a">이미지 생성 Prompt as Code 운영 파이프라인</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="72" y="130" width="260" height="210" rx="24" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="112" y="184" font-size="24" font-weight="800" fill="#1e40af">1. 템플릿 저장소</text>
+    <text x="112" y="226" font-size="18" fill="#1e3a8a">스타일·카메라·레이아웃</text>
+    <text x="112" y="258" font-size="18" fill="#1e3a8a">브랜드 토큰·금지어</text>
+    <text x="112" y="290" font-size="18" fill="#1e3a8a">예제와 실패 케이스</text>
+    <rect x="470" y="130" width="260" height="210" rx="24" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="510" y="184" font-size="24" font-weight="800" fill="#5b21b6">2. 검토 게이트</text>
+    <text x="510" y="226" font-size="18" fill="#4c1d95">저작권·상표·초상권</text>
+    <text x="510" y="258" font-size="18" fill="#4c1d95">PII·정책 위반 탐지</text>
+    <text x="510" y="290" font-size="18" fill="#4c1d95">승인·감사 로그</text>
+    <rect x="868" y="130" width="260" height="210" rx="24" fill="#ccfbf1" stroke="#0f766e" stroke-width="3"/>
+    <text x="908" y="184" font-size="24" font-weight="800" fill="#115e59">3. 생성·배포</text>
+    <text x="908" y="226" font-size="18" fill="#134e4a">모델별 파라미터</text>
+    <text x="908" y="258" font-size="18" fill="#134e4a">A/B 결과 비교</text>
+    <text x="908" y="290" font-size="18" fill="#134e4a">DAM·CMS 연동</text>
+    <path d="M350 235 H448" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <path d="M424 210 L456 235 L424 260" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M748 235 H846" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <path d="M822 210 L854 235 L822 260" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="142" y="392" width="916" height="60" rx="18" fill="#0f172a"/>
+    <text x="176" y="430" font-size="20" font-weight="700" fill="#e2e8f0">핵심: 프롬프트도 소스코드처럼 버전 관리하고, 생성 결과와 승인 근거를 추적해야 한다.</text>
+  </g>
+</svg>
