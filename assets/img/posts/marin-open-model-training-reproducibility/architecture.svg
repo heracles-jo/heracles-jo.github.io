@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Marin lazy artifact 실행 아키텍처</title>
+  <desc id="desc">원천 데이터가 정제, 토큰화, 학습, 체크포인트와 평가를 거쳐 회고 기록으로 연결되는 의존성 그래프</desc>
+  <rect width="1200" height="700" rx="28" fill="#0b1826"/>
+  <text x="70" y="80" fill="#fff" font-family="Arial, sans-serif" font-size="38" font-weight="700">Lazy Artifact DAG: 결정은 코드에, 재실행은 필요한 단계만</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#75ddc5"/></marker></defs>
+  <g fill="#132f40" stroke="#75ddc5" stroke-width="3">
+    <rect x="55" y="180" width="180" height="105" rx="16"/><rect x="285" y="180" width="180" height="105" rx="16"/><rect x="515" y="180" width="180" height="105" rx="16"/><rect x="745" y="180" width="180" height="105" rx="16"/><rect x="975" y="180" width="170" height="105" rx="16"/>
+    <rect x="515" y="420" width="180" height="105" rx="16"/><rect x="745" y="420" width="180" height="105" rx="16"/><rect x="975" y="420" width="170" height="105" rx="16"/>
+  </g>
+  <g stroke="#75ddc5" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M235 232 H278"/><path d="M465 232 H508"/><path d="M695 232 H738"/><path d="M925 232 H968"/><path d="M605 290 V410"/><path d="M695 472 H738"/><path d="M925 472 H968"/>
+  </g>
+  <g fill="#e8fbff" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="145" y="224" font-size="25">원천 데이터</text><text x="145" y="256" font-size="18">snapshot · license</text>
+    <text x="375" y="224" font-size="25">정제·중복 제거</text><text x="375" y="256" font-size="18">filter · transform</text>
+    <text x="605" y="224" font-size="25">토큰화</text><text x="605" y="256" font-size="18">cached artifact</text>
+    <text x="835" y="224" font-size="25">학습</text><text x="835" y="256" font-size="18">config · resources</text>
+    <text x="1060" y="224" font-size="25">체크포인트</text><text x="1060" y="256" font-size="18">versioned output</text>
+    <text x="605" y="464" font-size="25">검증 데이터</text><text x="605" y="496" font-size="18">held-out split</text>
+    <text x="835" y="464" font-size="25">평가</text><text x="835" y="496" font-size="18">harness · metrics</text>
+    <text x="1060" y="464" font-size="25">회고·의사결정</text><text x="1060" y="496" font-size="18">success + failure</text>
+  </g>
+  <rect x="70" y="595" width="1060" height="58" rx="14" fill="#102c3b"/>
+  <text x="600" y="633" fill="#9cebd9" font-family="Arial, sans-serif" font-size="23" text-anchor="middle">Fingerprint로 변경 영향 식별 · 성공한 step 캐시 재사용 · 실패 지점부터 복구</text>
+</svg>
