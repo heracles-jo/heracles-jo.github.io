@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Adoption decision matrix</title>
+  <desc id="desc">A matrix comparing prompt libraries, node workflows, hosted image APIs and self-hosted diffusion stacks.</desc>
+  <rect width="1200" height="560" fill="#0b1120"/>
+  <text x="70" y="72" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">도입 판단 매트릭스</text>
+  <g font-family="Arial, sans-serif" font-size="18">
+    <rect x="70" y="120" width="1060" height="360" rx="22" fill="#111827" stroke="#334155"/>
+    <line x1="70" y1="210" x2="1130" y2="210" stroke="#334155"/>
+    <line x1="70" y1="300" x2="1130" y2="300" stroke="#334155"/>
+    <line x1="70" y1="390" x2="1130" y2="390" stroke="#334155"/>
+    <line x1="330" y1="120" x2="330" y2="480" stroke="#334155"/>
+    <line x1="595" y1="120" x2="595" y2="480" stroke="#334155"/>
+    <line x1="860" y1="120" x2="860" y2="480" stroke="#334155"/>
+    <text x="108" y="172" font-weight="800" fill="#93c5fd">Prompt Library</text>
+    <text x="368" y="172" font-weight="800" fill="#c4b5fd">Node Workflow</text>
+    <text x="633" y="172" font-weight="800" fill="#5eead4">Hosted API</text>
+    <text x="898" y="172" font-weight="800" fill="#fcd34d">Self-hosted Stack</text>
+    <text x="108" y="252" fill="#dbeafe">빠른 표준화</text>
+    <text x="368" y="252" fill="#ede9fe">반복 제작 공정</text>
+    <text x="633" y="252" fill="#ccfbf1">확장성과 SLA</text>
+    <text x="898" y="252" fill="#fef3c7">데이터 통제</text>
+    <text x="108" y="342" fill="#dbeafe">검토 체계 필요</text>
+    <text x="368" y="342" fill="#ede9fe">그래프 복잡도</text>
+    <text x="633" y="342" fill="#ccfbf1">벤더 의존</text>
+    <text x="898" y="342" fill="#fef3c7">GPU 운영 부담</text>
+    <text x="108" y="432" fill="#dbeafe">브랜드·마케팅</text>
+    <text x="368" y="432" fill="#ede9fe">영상·대량 생성</text>
+    <text x="633" y="432" fill="#ccfbf1">제품 내 기능</text>
+    <text x="898" y="432" fill="#fef3c7">민감 데이터</text>
+  </g>
+</svg>
