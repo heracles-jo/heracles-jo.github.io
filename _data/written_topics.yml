@@ -144,3 +144,14 @@
     - "MLOps 데이터 계보"
   slug: "marin-open-model-training-reproducibility"
   summary: "Marin의 lazy artifact DAG와 공개 학습 회고를 중심으로 데이터 계보, 실패 복구, 오염·보안·비용 경계와 PoC 도입 기준을 정리."
+- date: 2026-08-27
+  title: "AI 코딩 에이전트 과잉 구현 줄이기: Ponytail 검증 기준"
+  github_repo: "https://github.com/DietrichGebert/ponytail"
+  main_keyword: "AI 코딩 에이전트 과잉 구현"
+  related_keywords:
+    - "Ponytail"
+    - "YAGNI"
+    - "AI 코딩 품질"
+    - "최소 변경"
+  slug: "ai-coding-agent-overengineering-ponytail"
+  summary: "Ponytail의 최소 구현 사다리와 공개 벤치마크를 검토해 과잉 구현 절감, 안전 경계, 공급망 리스크와 팀 PoC 기준을 정리."
