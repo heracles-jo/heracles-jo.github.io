@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500" role="img" aria-labelledby="title desc">
+  <title id="title">도입 판단 매트릭스</title>
+  <desc id="desc">Marin 같은 오픈 파운데이션 모델 개발 프레임워크를 도입할 때 데이터 통제력, 재현성, 비용, 운영 역량을 비교하는 판단 매트릭스</desc>
+  <rect width="1100" height="500" rx="28" fill="#ecfeff"/>
+  <text x="56" y="66" fill="#0f172a" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif" font-size="30" font-weight="800">도입 판단: 모델을 쓰는 팀인가, 모델을 만드는 팀인가</text>
+  <g transform="translate(78 125)" font-family="Inter, Apple SD Gothic Neo, Arial, sans-serif">
+    <rect x="0" y="0" width="944" height="300" rx="24" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
+    <line x1="472" y1="0" x2="472" y2="300" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="0" y1="150" x2="944" y2="150" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="236" y="-20" text-anchor="middle" fill="#0369a1" font-size="18" font-weight="800">낮은 모델 개발 역량</text>
+    <text x="708" y="-20" text-anchor="middle" fill="#0369a1" font-size="18" font-weight="800">높은 모델 개발 역량</text>
+    <text x="-12" y="78" text-anchor="end" fill="#0369a1" font-size="18" font-weight="800">높은 통제 필요</text>
+    <text x="-12" y="228" text-anchor="end" fill="#0369a1" font-size="18" font-weight="800">낮은 통제 필요</text>
+    <g fill="#0f172a" font-size="18" font-weight="800">
+      <text x="32" y="54">관리형 API + 강한 평가 게이트</text>
+      <text x="504" y="54">Marin류 오픈 개발 파이프라인 PoC</text>
+      <text x="32" y="204">상용 모델·RAG 우선</text>
+      <text x="504" y="204">연구 목적의 레시피 재사용</text>
+    </g>
+    <g fill="#475569" font-size="15">
+      <text x="32" y="88">개인정보·규제 요구는 높지만</text>
+      <text x="32" y="112">학습 클러스터 운영은 준비되지 않은 상태</text>
+      <text x="504" y="88">데이터·체크포인트·실험 이력을</text>
+      <text x="504" y="112">팀 자산으로 축적해야 하는 상태</text>
+      <text x="32" y="238">차별화가 앱·업무 흐름에 있고</text>
+      <text x="32" y="262">모델 자체는 범용 성능이면 충분</text>
+      <text x="504" y="238">논문·벤치마크 재현, 소규모 스케일링</text>
+      <text x="504" y="262">실험에는 유용하나 제품화 범위 제한</text>
+    </g>
+  </g>
+</svg>
