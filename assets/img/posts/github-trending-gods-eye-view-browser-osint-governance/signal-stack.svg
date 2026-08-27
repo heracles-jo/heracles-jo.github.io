@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">Public signal stack for browser OSINT</title>
+<desc id="desc">Public feeds such as ADS-B, AIS, satellites, earthquakes, CCTV and maps flow through freshness, normalization, visualization and governance checks before becoming an operational dashboard.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#172554"/></linearGradient></defs>
+<rect width="1100" height="560" rx="28" fill="url(#g)"/>
+<text x="54" y="64" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="30" font-weight="800">브라우저 OSINT 신호 스택</text>
+<text x="54" y="96" fill="#94a3b8" font-family="Arial, sans-serif" font-size="17">공개 피드는 시각화보다 먼저 출처·신선도·비용·법적 경계를 통과해야 한다</text>
+<g font-family="Arial, sans-serif">
+  <g transform="translate(55 150)">
+    <rect width="210" height="260" rx="20" fill="#082f49" stroke="#38bdf8"/>
+    <text x="24" y="44" fill="#bae6fd" font-size="22" font-weight="700">1. Public Feeds</text>
+    <text x="24" y="84" fill="#e0f2fe" font-size="18">ADS-B / OpenSky</text>
+    <text x="24" y="116" fill="#e0f2fe" font-size="18">AIS / AISStream</text>
+    <text x="24" y="148" fill="#e0f2fe" font-size="18">CelesTrak TLE</text>
+    <text x="24" y="180" fill="#e0f2fe" font-size="18">USGS / NASA FIRMS</text>
+    <text x="24" y="212" fill="#e0f2fe" font-size="18">CCTV / GBFS / OSM</text>
+  </g>
+  <g transform="translate(315 150)">
+    <rect width="210" height="260" rx="20" fill="#1e1b4b" stroke="#a78bfa"/>
+    <text x="24" y="44" fill="#ddd6fe" font-size="22" font-weight="700">2. Normalization</text>
+    <text x="24" y="88" fill="#ede9fe" font-size="18">좌표계·시간 변환</text>
+    <text x="24" y="124" fill="#ede9fe" font-size="18">지연·부분 데이터 표시</text>
+    <text x="24" y="160" fill="#ede9fe" font-size="18">중복·품질 필터</text>
+    <text x="24" y="196" fill="#ede9fe" font-size="18">API 키와 캐시 정책</text>
+  </g>
+  <g transform="translate(575 150)">
+    <rect width="210" height="260" rx="20" fill="#052e2b" stroke="#2dd4bf"/>
+    <text x="24" y="44" fill="#99f6e4" font-size="22" font-weight="700">3. 3D Interface</text>
+    <text x="24" y="88" fill="#ccfbf1" font-size="18">Cesium 기반 지구본</text>
+    <text x="24" y="124" fill="#ccfbf1" font-size="18">항공기·선박·위성 궤적</text>
+    <text x="24" y="160" fill="#ccfbf1" font-size="18">카메라·센서풍 오버레이</text>
+    <text x="24" y="196" fill="#ccfbf1" font-size="18">공유 URL과 분석 장면</text>
+  </g>
+  <g transform="translate(835 150)">
+    <rect width="210" height="260" rx="20" fill="#451a03" stroke="#f59e0b"/>
+    <text x="24" y="44" fill="#fde68a" font-size="22" font-weight="700">4. Governance</text>
+    <text x="24" y="88" fill="#ffedd5" font-size="18">출처와 Freshness 라벨</text>
+    <text x="24" y="124" fill="#ffedd5" font-size="18">오탐·시뮬레이션 구분</text>
+    <text x="24" y="160" fill="#ffedd5" font-size="18">비용·쿼터·키 제한</text>
+    <text x="24" y="196" fill="#ffedd5" font-size="18">민감 정보와 악용 방지</text>
+  </g>
+</g>
+<g stroke="#e2e8f0" stroke-width="4" stroke-linecap="round" opacity="0.8"><path d="M270 280h36"/><path d="M530 280h36"/><path d="M790 280h36"/></g>
+<text x="54" y="500" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="20">핵심: 지도 UI가 멋질수록 운영자는 ‘이 점이 실제인가, 지연인가, 추정인가’를 더 명확히 보여줘야 한다.</text>
+</svg>
