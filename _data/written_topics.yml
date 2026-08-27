@@ -155,3 +155,14 @@
     - "최소 변경"
   slug: "ai-coding-agent-overengineering-ponytail"
   summary: "Ponytail의 최소 구현 사다리와 공개 벤치마크를 검토해 과잉 구현 절감, 안전 경계, 공급망 리스크와 팀 PoC 기준을 정리."
+- date: 2026-08-28
+  title: "Nitter 셀프호스팅: X 비공식 프런트엔드의 운영 한계"
+  github_repo: "https://github.com/zedeus/nitter"
+  main_keyword: "Nitter 셀프호스팅"
+  related_keywords:
+    - "X 프라이버시 프런트엔드"
+    - "비공식 API 운영"
+    - "프라이버시 프록시"
+    - "웹 아카이빙"
+  slug: "nitter-self-hosted-x-frontend"
+  summary: "Nitter의 프록시 구조와 세션·Cloudflare 차단·법적 압력 실패 모드를 검토해 셀프호스팅 가능 조건, 신뢰 경계와 대안을 정리."
