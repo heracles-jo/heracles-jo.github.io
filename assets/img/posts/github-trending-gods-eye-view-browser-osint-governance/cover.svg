@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Browser OSINT governance with a live 3D globe</title>
+  <desc id="desc">A browser-based spatial intelligence console connects public aircraft, ship, satellite, earthquake and camera feeds to a governed OSINT operating layer.</desc>
+  <defs>
+    <radialGradient id="earth" cx="50%" cy="48%" r="52%">
+      <stop offset="0%" stop-color="#4bd7ff"/>
+      <stop offset="42%" stop-color="#1f7dd6"/>
+      <stop offset="74%" stop-color="#0b275c"/>
+      <stop offset="100%" stop-color="#020817"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06121f"/>
+      <stop offset="54%" stop-color="#0a1e38"/>
+      <stop offset="100%" stop-color="#120f2c"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.22" stroke="#7dd3fc" stroke-width="1">
+    <path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200"/>
+    <path d="M90 0V630M210 0V630M330 0V630M450 0V630M570 0V630M690 0V630M810 0V630M930 0V630M1050 0V630"/>
+  </g>
+  <circle cx="610" cy="315" r="218" fill="url(#earth)" stroke="#8be9ff" stroke-width="2" filter="url(#glow)"/>
+  <path d="M465 244c42-33 92-45 154-38 71 8 130 39 178 92-55-19-106-17-152 4-61 29-114 27-180-58z" fill="#20c997" opacity="0.42"/>
+  <path d="M500 386c72 18 141 8 209-30 37-21 76-28 117-19-31 67-91 117-169 132-72 14-130-12-157-83z" fill="#7ee787" opacity="0.34"/>
+  <g fill="none" stroke="#e0f2fe" stroke-width="1.5" opacity="0.65">
+    <ellipse cx="610" cy="315" rx="310" ry="92" transform="rotate(-16 610 315)"/>
+    <ellipse cx="610" cy="315" rx="275" ry="70" transform="rotate(28 610 315)"/>
+    <ellipse cx="610" cy="315" rx="228" ry="218" transform="rotate(74 610 315)"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="460" cy="250" r="7" fill="#fbbf24"/><circle cx="754" cy="342" r="7" fill="#fb7185"/><circle cx="632" cy="149" r="6" fill="#a78bfa"/><circle cx="694" cy="465" r="6" fill="#34d399"/>
+    <path d="M420 170l30 10-25 18z" fill="#e5f9ff" transform="rotate(18 420 170)"/>
+    <path d="M808 192l36 0-18 27z" fill="#e5f9ff" transform="rotate(62 826 205)"/>
+    <path d="M330 422c42-16 82-12 120 12" stroke="#fbbf24" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M810 455c54-19 103-14 148 15" stroke="#34d399" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+  <rect x="62" y="67" width="330" height="178" rx="24" fill="#071827" stroke="#38bdf8" opacity="0.94"/>
+  <text x="91" y="115" fill="#bae6fd" font-family="Arial, sans-serif" font-size="24" font-weight="700">GitHub Trending Snapshot</text>
+  <text x="91" y="154" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="38" font-weight="800">God's Eye View</text>
+  <text x="91" y="194" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="20">Browser-native OSINT console</text>
+  <text x="91" y="224" fill="#94a3b8" font-family="Arial, sans-serif" font-size="17">public feeds · 3D globe · governance</text>
+  <rect x="818" y="72" width="314" height="230" rx="22" fill="#071827" stroke="#a78bfa" opacity="0.92"/>
+  <text x="846" y="118" fill="#ddd6fe" font-family="Arial, sans-serif" font-size="22" font-weight="700">Operational question</text>
+  <text x="846" y="160" fill="#f8fafc" font-family="Arial, sans-serif" font-size="25" font-weight="800">Can public signals</text>
+  <text x="846" y="194" fill="#f8fafc" font-family="Arial, sans-serif" font-size="25" font-weight="800">become a reliable</text>
+  <text x="846" y="228" fill="#f8fafc" font-family="Arial, sans-serif" font-size="25" font-weight="800">decision layer?</text>
+  <text x="846" y="266" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="17">Freshness, licensing, cost, safety</text>
+  <text x="64" y="570" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="30" font-weight="800">공개 신호를 3D 지도로 묶는 브라우저 OSINT의 기회와 운영 리스크</text>
+</svg>

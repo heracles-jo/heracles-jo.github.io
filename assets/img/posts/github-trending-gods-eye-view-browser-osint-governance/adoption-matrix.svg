@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+<title id="title">OSINT adoption decision matrix</title>
+<desc id="desc">A decision matrix shows when a browser OSINT globe is suitable for education, monitoring and demos, and when legal, safety, reliability and cost concerns make it unsuitable.</desc>
+<rect width="1100" height="560" rx="28" fill="#0b1120"/>
+<text x="54" y="66" fill="#f8fafc" font-family="Arial, sans-serif" font-size="31" font-weight="800">도입 판단 매트릭스</text>
+<text x="54" y="100" fill="#94a3b8" font-family="Arial, sans-serif" font-size="17">God's Eye View 같은 브라우저 OSINT 콘솔은 ‘보여주기’보다 검증 가능한 운영 경계가 중요하다</text>
+<line x1="550" y1="145" x2="550" y2="500" stroke="#334155" stroke-width="3"/>
+<line x1="100" y1="322" x2="1000" y2="322" stroke="#334155" stroke-width="3"/>
+<text x="440" y="530" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">운영 통제력 낮음</text>
+<text x="730" y="530" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">운영 통제력 높음</text>
+<text x="22" y="220" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18" transform="rotate(-90 22 220)">의사결정 영향 높음</text>
+<text x="22" y="480" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18" transform="rotate(-90 22 480)">의사결정 영향 낮음</text>
+<g font-family="Arial, sans-serif">
+  <rect x="590" y="165" width="360" height="120" rx="18" fill="#064e3b" stroke="#34d399"/>
+  <text x="620" y="205" fill="#d1fae5" font-size="24" font-weight="800">적합</text>
+  <text x="620" y="238" fill="#ecfdf5" font-size="18">상황실 PoC, 물류·재난 모니터링 보조,</text>
+  <text x="620" y="267" fill="#ecfdf5" font-size="18">교육·데모, 공개 데이터 품질 검증</text>
+  <rect x="150" y="165" width="350" height="120" rx="18" fill="#7f1d1d" stroke="#f87171"/>
+  <text x="180" y="205" fill="#fee2e2" font-size="24" font-weight="800">피해야 함</text>
+  <text x="180" y="238" fill="#fff1f2" font-size="18">출처 검증 없이 보안·군사·금융 의사결정,</text>
+  <text x="180" y="267" fill="#fff1f2" font-size="18">실시간 정확도를 보장해야 하는 현장 지휘</text>
+  <rect x="590" y="360" width="360" height="110" rx="18" fill="#1e3a8a" stroke="#60a5fa"/>
+  <text x="620" y="400" fill="#dbeafe" font-size="24" font-weight="800">점진 도입</text>
+  <text x="620" y="433" fill="#eff6ff" font-size="18">키 제한, 캐시, 관측성, 감사 로그를 붙여</text>
+  <text x="620" y="462" fill="#eff6ff" font-size="18">내부 데이터와 분리된 샌드박스로 운영</text>
+  <rect x="150" y="360" width="350" height="110" rx="18" fill="#422006" stroke="#f59e0b"/>
+  <text x="180" y="400" fill="#fef3c7" font-size="24" font-weight="800">데모 한정</text>
+  <text x="180" y="433" fill="#fff7ed" font-size="18">시각적 설득력은 높지만 SLA·법무·비용</text>
+  <text x="180" y="462" fill="#fff7ed" font-size="18">검증 전에는 운영 시스템으로 보지 않는다</text>
+</g>
+</svg>
