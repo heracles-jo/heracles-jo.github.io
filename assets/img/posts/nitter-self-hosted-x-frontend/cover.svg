@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Nitter 셀프호스팅 운영 경계</title><desc id="desc">프라이버시 프록시와 업스트림 차단, 세션, 법적 압력을 함께 보여준다.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b2b"/><stop offset="1" stop-color="#173f46"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity=".3"/></filter></defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/><circle cx="1050" cy="95" r="170" fill="#46d6b2" opacity=".09"/>
+  <text x="72" y="104" fill="#62e8c8" font-family="Arial,sans-serif" font-size="24" font-weight="700">SELF-HOSTED PRIVACY FRONTEND</text>
+  <text x="72" y="177" fill="#fff" font-family="Arial,sans-serif" font-size="54" font-weight="800">Nitter 셀프호스팅</text>
+  <text x="72" y="229" fill="#b9d8dc" font-family="Arial,sans-serif" font-size="30">프라이버시 이점과 운영 한계</text>
+  <g filter="url(#s)" font-family="Arial,sans-serif"><rect x="72" y="300" width="250" height="150" rx="22" fill="#123847" stroke="#62e8c8" stroke-width="3"/><text x="197" y="360" fill="#fff" font-size="25" text-anchor="middle" font-weight="700">사용자 보호</text><text x="197" y="400" fill="#b9d8dc" font-size="20" text-anchor="middle">직접 추적 감소</text>
+  <path d="M335 375h120" stroke="#62e8c8" stroke-width="5"/><path d="m448 362 22 13-22 13" fill="none" stroke="#62e8c8" stroke-width="5"/>
+  <rect x="475" y="280" width="250" height="190" rx="22" fill="#164f52" stroke="#62e8c8" stroke-width="4"/><text x="600" y="350" fill="#fff" font-size="34" text-anchor="middle" font-weight="800">Nitter</text><text x="600" y="395" fill="#d5f5ed" font-size="20" text-anchor="middle">Nim · Valkey · Proxy</text>
+  <path d="M740 375h115" stroke="#f5b85a" stroke-width="5" stroke-dasharray="12 9"/><path d="m848 362 22 13-22 13" fill="none" stroke="#f5b85a" stroke-width="5"/>
+  <rect x="875" y="300" width="250" height="150" rx="22" fill="#442c32" stroke="#f5b85a" stroke-width="3"/><text x="1000" y="352" fill="#fff" font-size="25" text-anchor="middle" font-weight="700">업스트림 X</text><text x="1000" y="393" fill="#ffd69a" font-size="19" text-anchor="middle">차단 · 세션 · 정책</text></g>
+  <text x="72" y="548" fill="#d8e8ea" font-family="Arial,sans-serif" font-size="23">통제권 없는 의존성을 가용성으로 착각하지 않는다</text>
+</svg>
