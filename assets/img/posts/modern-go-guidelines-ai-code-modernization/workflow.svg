@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Modern Go Guidelines 적용 워크플로</title><desc id="desc">수정 파일, Go 버전 탐지, 규칙 조회, 코드 생성, 공식 도구와 테스트 검증 순서</desc>
+  <rect width="1200" height="700" rx="28" fill="#f0f9ff"/><text x="60" y="70" fill="#0c4a6e" font-family="Arial,sans-serif" font-size="34" font-weight="800">버전별 지식은 생성 전에, 증거는 생성 후에</text>
+  <g font-family="Arial,sans-serif">
+    <g transform="translate(60 130)"><rect width="200" height="132" rx="18" fill="#0ea5e9"/><text x="100" y="51" text-anchor="middle" fill="white" font-size="20" font-weight="700">수정 대상 파일</text><text x="100" y="87" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="17">pkg/api.go</text></g>
+    <g transform="translate(310 130)"><rect width="200" height="132" rx="18" fill="#0284c7"/><text x="100" y="47" text-anchor="middle" fill="white" font-size="20" font-weight="700">버전 해석</text><text x="100" y="80" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="15">go.mod / go.work</text><text x="100" y="108" text-anchor="middle" fill="#bae6fd" font-size="15">toolchain과 구분</text></g>
+    <g transform="translate(560 130)"><rect width="260" height="132" rx="18" fill="#0369a1"/><text x="130" y="45" text-anchor="middle" fill="white" font-size="20" font-weight="700">규칙을 좁혀 조회</text><text x="130" y="78" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="15">list --file-path</text><text x="130" y="108" text-anchor="middle" fill="#bae6fd" font-family="monospace" font-size="15">explain &lt;id&gt;</text></g>
+    <g transform="translate(870 130)"><rect width="270" height="132" rx="18" fill="#075985"/><text x="135" y="48" text-anchor="middle" fill="white" font-size="20" font-weight="700">작은 변경 생성</text><text x="135" y="82" text-anchor="middle" fill="#e0f2fe" font-size="16">해당 규칙만 적용</text><text x="135" y="109" text-anchor="middle" fill="#bae6fd" font-size="15">불필요한 현대화 금지</text></g>
+  </g>
+  <g stroke="#38bdf8" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M260 196h50m-14-13 14 13-14 13M510 196h50m-14-13 14 13-14 13M820 196h50m-14-13 14 13-14 13"/></g>
+  <path d="M1005 262v72H600" fill="none" stroke="#0c4a6e" stroke-width="5" stroke-linecap="round"/><path d="m616 321-16 13 16 13" fill="none" stroke="#0c4a6e" stroke-width="5"/>
+  <g font-family="Arial,sans-serif">
+    <rect x="60" y="370" width="1080" height="240" rx="24" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="3"/>
+    <text x="100" y="420" fill="#0c4a6e" font-size="24" font-weight="800">검증 순서</text>
+    <circle cx="160" cy="500" r="47" fill="#fff" stroke="#0284c7" stroke-width="4"/><text x="160" y="508" text-anchor="middle" fill="#075985" font-size="22" font-weight="700">1</text><text x="160" y="575" text-anchor="middle" fill="#0c4a6e" font-size="17">go fix -diff</text>
+    <circle cx="380" cy="500" r="47" fill="#fff" stroke="#0284c7" stroke-width="4"/><text x="380" y="508" text-anchor="middle" fill="#075985" font-size="22" font-weight="700">2</text><text x="380" y="575" text-anchor="middle" fill="#0c4a6e" font-size="17">go test</text>
+    <circle cx="600" cy="500" r="47" fill="#fff" stroke="#0284c7" stroke-width="4"/><text x="600" y="508" text-anchor="middle" fill="#075985" font-size="22" font-weight="700">3</text><text x="600" y="575" text-anchor="middle" fill="#0c4a6e" font-size="17">race / static</text>
+    <circle cx="820" cy="500" r="47" fill="#fff" stroke="#0284c7" stroke-width="4"/><text x="820" y="508" text-anchor="middle" fill="#075985" font-size="22" font-weight="700">4</text><text x="820" y="575" text-anchor="middle" fill="#0c4a6e" font-size="17">benchmark</text>
+    <circle cx="1040" cy="500" r="47" fill="#fff" stroke="#0f766e" stroke-width="4"/><text x="1040" y="508" text-anchor="middle" fill="#115e59" font-size="22" font-weight="700">✓</text><text x="1040" y="575" text-anchor="middle" fill="#115e59" font-size="17">사람 리뷰</text>
+  </g>
+  <g stroke="#7dd3fc" stroke-width="4"><path d="M207 500h126M427 500h126M647 500h126M867 500h126"/></g>
+  <text x="60" y="660" fill="#475569" font-family="Arial,sans-serif" font-size="18">파일 경로를 생략한 bare list와 테스트 없는 자동 치환은 허용하지 않는다.</text>
+</svg>

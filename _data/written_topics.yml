@@ -166,3 +166,14 @@
     - "웹 아카이빙"
   slug: "nitter-self-hosted-x-frontend"
   summary: "Nitter의 프록시 구조와 세션·Cloudflare 차단·법적 압력 실패 모드를 검토해 셀프호스팅 가능 조건, 신뢰 경계와 대안을 정리."
+- date: 2026-08-29
+  title: "AI가 최신 Go 코드를 쓰게 하는 법: Modern Go Guidelines 검증 기준"
+  github_repo: "https://github.com/JetBrains/go-modern-guidelines"
+  main_keyword: "AI 최신 Go 코드"
+  related_keywords:
+    - "Modern Go Guidelines"
+    - "Go 코드 현대화"
+    - "go fix"
+    - "AI 코딩 에이전트"
+  slug: "modern-go-guidelines-ai-code-modernization"
+  summary: "Go 버전별 지침을 에이전트에 공급하는 구조와 의미 변경·버전 탐지·설치 공급망 위험을 검토하고 go fix·테스트 기반 도입 기준을 정리."

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI가 최신 Go 코드를 안전하게 쓰는 검증 구조</title>
+  <desc id="desc">Go 버전, 에이전트 규칙, go fix, 테스트 게이트를 연결한 표지</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b2a"/><stop offset="1" stop-color="#073b4c"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".25"/></filter></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1070" cy="90" r="170" fill="#00add8" opacity=".13"/><circle cx="110" cy="580" r="220" fill="#5eead4" opacity=".08"/>
+  <text x="72" y="92" fill="#67e8f9" font-family="Arial,sans-serif" font-size="24" font-weight="700">GO × AI CODING</text>
+  <text x="72" y="166" fill="#f8fafc" font-family="Arial,sans-serif" font-size="50" font-weight="800">최신 Go 코드 생성</text>
+  <text x="72" y="222" fill="#d5f5fb" font-family="Arial,sans-serif" font-size="29">규칙보다 중요한 것은 버전과 의미 검증</text>
+  <g filter="url(#s)">
+    <rect x="72" y="292" width="246" height="150" rx="20" fill="#0e7490"/><text x="195" y="344" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="21" font-weight="700">go.mod</text><text x="195" y="384" text-anchor="middle" fill="#cffafe" font-family="monospace" font-size="24">go 1.26</text><text x="195" y="416" text-anchor="middle" fill="#a5f3fc" font-family="Arial,sans-serif" font-size="16">대상 버전 탐지</text>
+    <rect x="382" y="292" width="336" height="150" rx="20" fill="#155e75"/><text x="550" y="344" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="21" font-weight="700">Modern Go Guidelines</text><text x="550" y="384" text-anchor="middle" fill="#cffafe" font-family="monospace" font-size="20">list → explain</text><text x="550" y="416" text-anchor="middle" fill="#a5f3fc" font-family="Arial,sans-serif" font-size="16">생성 시점 지식 보완</text>
+    <rect x="782" y="292" width="346" height="150" rx="20" fill="#134e4a"/><text x="955" y="344" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="21" font-weight="700">검증 게이트</text><text x="955" y="384" text-anchor="middle" fill="#ccfbf1" font-family="monospace" font-size="20">go fix · test · bench</text><text x="955" y="416" text-anchor="middle" fill="#99f6e4" font-family="Arial,sans-serif" font-size="16">동작 보존 증명</text>
+  </g>
+  <path d="M318 367h64M718 367h64" stroke="#67e8f9" stroke-width="6" stroke-linecap="round"/><path d="m370 355 12 12-12 12m400-24 12 12-12 12" fill="none" stroke="#67e8f9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="72" y="538" fill="#e2e8f0" font-family="Arial,sans-serif" font-size="22">버전 일치 ≠ 의미 보존 · 자동 적용 전 경계 테스트</text>
+  <text x="1128" y="586" text-anchor="end" fill="#94a3b8" font-family="Arial,sans-serif" font-size="18">heracles.jo</text>
+</svg>
