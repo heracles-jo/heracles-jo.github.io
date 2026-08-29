@@ -177,3 +177,14 @@
     - "AI 코딩 에이전트"
   slug: "modern-go-guidelines-ai-code-modernization"
   summary: "Go 버전별 지침을 에이전트에 공급하는 구조와 의미 변경·버전 탐지·설치 공급망 위험을 검토하고 go fix·테스트 기반 도입 기준을 정리."
+- date: 2026-08-30
+  title: "Tailcat 제어 평면 없는 WireGuard 터널: netcat 대체 기준"
+  github_repo: "https://github.com/tailscale/tailcat"
+  main_keyword: "Tailcat WireGuard 터널"
+  related_keywords:
+    - "제어 평면 없는 터널"
+    - "Tailscale 데이터 평면"
+    - "DERP NAT traversal"
+    - "netcat 대체"
+  slug: "tailcat-control-plane-free-wireguard-tunnel"
+  summary: "Tailcat의 연결 토큰·DERP·WireGuard 직접 경로를 분석하고 ephemeral key, client allowlist, relay SLA와 지속 운영의 제어 평면 경계를 정리."
