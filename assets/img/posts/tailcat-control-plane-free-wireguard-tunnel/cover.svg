@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Tailcat 제어 평면 없는 WireGuard 터널</title>
+  <desc id="desc">연결 토큰으로 DERP에서 부트스트랩하고 직접 WireGuard 경로로 전환하는 Tailcat</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071827"/><stop offset="1" stop-color="#123c4a"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/><circle cx="1030" cy="110" r="190" fill="#22d3ee" opacity=".08"/><circle cx="120" cy="580" r="240" fill="#34d399" opacity=".07"/>
+  <text x="70" y="105" fill="#67e8f9" font-family="Arial,sans-serif" font-size="24" font-weight="700">TAILCAT · WIREGUARD · DERP</text>
+  <text x="70" y="185" fill="#f8fafc" font-family="Arial,sans-serif" font-size="52" font-weight="800">제어 평면 없는</text><text x="70" y="250" fill="#f8fafc" font-family="Arial,sans-serif" font-size="52" font-weight="800">일회성 암호화 터널</text>
+  <text x="72" y="305" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="25">netcat보다 안전하게, VPN보다 가볍게?</text>
+  <g transform="translate(90 390)"><rect width="230" height="110" rx="20" fill="#0f2738" stroke="#34d399" stroke-width="3"/><text x="115" y="48" text-anchor="middle" fill="#ecfdf5" font-family="Arial" font-size="24" font-weight="700">SERVER</text><text x="115" y="80" text-anchor="middle" fill="#6ee7b7" font-family="Arial" font-size="18">ephemeral key</text></g>
+  <g transform="translate(480 370)"><path d="M35 0h210l35 35v90l-35 35H35L0 125V35z" fill="#102f42" stroke="#67e8f9" stroke-width="3" filter="url(#glow)"/><text x="140" y="70" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="22" font-weight="700">tc... TOKEN</text><text x="140" y="105" text-anchor="middle" fill="#a5f3fc" font-family="Arial" font-size="17">public key + DERP</text></g>
+  <g transform="translate(870 390)"><rect width="230" height="110" rx="20" fill="#0f2738" stroke="#34d399" stroke-width="3"/><text x="115" y="48" text-anchor="middle" fill="#ecfdf5" font-family="Arial" font-size="24" font-weight="700">CLIENT</text><text x="115" y="80" text-anchor="middle" fill="#6ee7b7" font-family="Arial" font-size="18">direct or relay</text></g>
+  <path d="M320 445H470M760 445h100" stroke="#fbbf24" stroke-width="5" stroke-dasharray="12 10"/><path d="M320 535C500 600 700 600 870 535" fill="none" stroke="#34d399" stroke-width="5"/><text x="595" y="590" text-anchor="middle" fill="#6ee7b7" font-family="Arial" font-size="20">WireGuard encrypted data path</text>
+</svg>
