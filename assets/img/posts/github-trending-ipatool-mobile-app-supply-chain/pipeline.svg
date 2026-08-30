@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">IPA 수집에서 분석까지의 운영 파이프라인</title>
+  <desc id="desc">검색, 라이선스 확보, 버전 선택, 암호화된 IPA 다운로드, 저장소 보존, 정적 분석과 회귀 검증으로 이어지는 모바일 앱 공급망 파이프라인</desc>
+  <rect width="1100" height="520" fill="#f8fafc"/>
+  <g font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="60" y="70" font-size="34" font-weight="800" fill="#0f172a">모바일 앱 공급망 파이프라인</text>
+    <text x="60" y="108" font-size="19" fill="#475569">ipatool은 ‘다운로드 명령’보다 계정·라이선스·버전·증적 보존 경계를 명확히 하는 자동화 지점으로 봐야 한다.</text>
+    <g transform="translate(60 170)">
+      <g>
+        <rect width="150" height="92" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+        <text x="28" y="40" font-size="19" font-weight="700" fill="#1e3a8a">Search</text>
+        <text x="20" y="68" font-size="14" fill="#1e40af">앱 ID·번들 식별</text>
+      </g>
+      <path d="M160 46H220" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+      <g transform="translate(230 0)">
+        <rect width="150" height="92" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+        <text x="22" y="40" font-size="19" font-weight="700" fill="#14532d">Purchase</text>
+        <text x="19" y="68" font-size="14" fill="#166534">합법적 라이선스</text>
+      </g>
+      <path d="M390 46H450" stroke="#64748b" stroke-width="3"/>
+      <g transform="translate(460 0)">
+        <rect width="150" height="92" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+        <text x="20" y="40" font-size="19" font-weight="700" fill="#78350f">Versions</text>
+        <text x="15" y="68" font-size="14" fill="#92400e">외부 버전 ID</text>
+      </g>
+      <path d="M620 46H680" stroke="#64748b" stroke-width="3"/>
+      <g transform="translate(690 0)">
+        <rect width="160" height="92" rx="18" fill="#fae8ff" stroke="#a21caf" stroke-width="2"/>
+        <text x="28" y="40" font-size="19" font-weight="700" fill="#701a75">Download</text>
+        <text x="16" y="68" font-size="14" fill="#86198f">암호화 IPA</text>
+      </g>
+    </g>
+    <g transform="translate(140 330)">
+      <rect width="820" height="120" rx="26" fill="#0f172a"/>
+      <text x="36" y="44" font-size="22" font-weight="800" fill="#e2e8f0">운영 계층</text>
+      <text x="36" y="78" font-size="17" fill="#cbd5e1">해시·메타데이터·SBOM 후보·서명 정보·정적 분석 결과·승인 로그·보존 정책을 함께 저장</text>
+      <text x="36" y="104" font-size="17" fill="#93c5fd">목표: 배포 전 회귀 검증, 사고 조사 증적, 규제 대응, 모바일 앱 변경 감시</text>
+    </g>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+</svg>
