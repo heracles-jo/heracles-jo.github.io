@@ -188,3 +188,14 @@
     - "netcat 대체"
   slug: "tailcat-control-plane-free-wireguard-tunnel"
   summary: "Tailcat의 연결 토큰·DERP·WireGuard 직접 경로를 분석하고 ephemeral key, client allowlist, relay SLA와 지속 운영의 제어 평면 경계를 정리."
+- date: 2026-08-31
+  title: "vphone-cli 가상 iPhone: 모바일 테스트 격리의 보안 경계"
+  github_repo: "https://github.com/Lakr233/vphone-cli"
+  main_keyword: "vphone-cli 가상 iPhone"
+  related_keywords:
+    - "iOS 가상화"
+    - "모바일 E2E 테스트"
+    - "Apple Silicon 보안 연구"
+    - "SIP AMFI 완화"
+  slug: "vphone-cli-virtual-iphone-security-boundary"
+  summary: "vphone-cli의 펌웨어·VM·제어 소켓 구조를 분석하고 연구 전용 호스트 격리, Simulator·실기기 팜 비교와 PoC 기준을 정리."
