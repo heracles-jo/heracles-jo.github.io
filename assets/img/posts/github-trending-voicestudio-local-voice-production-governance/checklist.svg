@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">VoiceStudio 도입 체크리스트</title>
+  <desc id="desc">데이터 동의, 라이선스, GPU 용량, 네트워크 격리, 품질 측정, 배포 운영을 점검하는 체크리스트</desc>
+  <rect width="1100" height="620" rx="28" fill="#f8fafc"/>
+  <text x="64" y="72" fill="#0f172a" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="36" font-weight="800">PoC 전에 확인할 운영 체크리스트</text>
+  <text x="64" y="112" fill="#475569" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="18">로컬 음성 제작 도구는 데모보다 동의, 라이선스, 실패 복구, 품질 기준이 먼저다.</text>
+  <g font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="20">
+    <g transform="translate(74 162)">
+      <rect width="450" height="74" rx="16" fill="#ecfeff" stroke="#06b6d4"/>
+      <text x="28" y="45" fill="#0891b2" font-size="28" font-weight="800">01</text><text x="82" y="45" fill="#164e63" font-weight="700">음성 샘플 동의와 보관 기간</text>
+    </g>
+    <g transform="translate(574 162)">
+      <rect width="450" height="74" rx="16" fill="#f0fdf4" stroke="#22c55e"/>
+      <text x="28" y="45" fill="#16a34a" font-size="28" font-weight="800">02</text><text x="82" y="45" fill="#14532d" font-weight="700">모델별 라이선스와 AGPL 영향</text>
+    </g>
+    <g transform="translate(74 262)">
+      <rect width="450" height="74" rx="16" fill="#eff6ff" stroke="#3b82f6"/>
+      <text x="28" y="45" fill="#2563eb" font-size="28" font-weight="800">03</text><text x="82" y="45" fill="#1e3a8a" font-weight="700">GPU·디스크·캐시 용량 산정</text>
+    </g>
+    <g transform="translate(574 262)">
+      <rect width="450" height="74" rx="16" fill="#fff7ed" stroke="#f97316"/>
+      <text x="28" y="45" fill="#ea580c" font-size="28" font-weight="800">04</text><text x="82" y="45" fill="#7c2d12" font-weight="700">API 키, 루프백, 네트워크 격리</text>
+    </g>
+    <g transform="translate(74 362)">
+      <rect width="450" height="74" rx="16" fill="#faf5ff" stroke="#a855f7"/>
+      <text x="28" y="45" fill="#9333ea" font-size="28" font-weight="800">05</text><text x="82" y="45" fill="#581c87" font-weight="700">언어·화자·소음별 품질 평가</text>
+    </g>
+    <g transform="translate(574 362)">
+      <rect width="450" height="74" rx="16" fill="#fef2f2" stroke="#ef4444"/>
+      <text x="28" y="45" fill="#dc2626" font-size="28" font-weight="800">06</text><text x="82" y="45" fill="#7f1d1d" font-weight="700">작업 실패·재시도·삭제 절차</text>
+    </g>
+  </g>
+  <rect x="74" y="500" width="950" height="60" rx="16" fill="#0f172a"/>
+  <text x="94" y="538" fill="#e2e8f0" font-family="Arial, Apple SD Gothic Neo, sans-serif" font-size="18">의사결정 기준: 클라우드 비용 절감보다 ‘민감 음성 데이터의 통제 가능성’과 ‘운영 가능한 품질’이 먼저다.</text>
+</svg>
