@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">Zero-signup tool selection flow</title>
+  <desc id="desc">A governance flow for evaluating no-signup browser tools from discovery through security review, allowlisting, monitoring, and replacement.</desc>
+  <rect width="1100" height="520" rx="28" fill="#0f172a"/>
+  <text x="60" y="72" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="#f8fafc">제로 회원가입 도구 도입 흐름</text>
+  <text x="60" y="108" font-family="Inter, Arial, sans-serif" font-size="17" fill="#94a3b8">검색으로 발견한 무료 웹 도구를 업무 환경에 들여오기 전 필요한 최소 통제</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#38bdf8"/></marker>
+  </defs>
+  <g font-family="Inter, Arial, sans-serif">
+    <g transform="translate(60 170)">
+      <rect width="180" height="150" rx="22" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+      <text x="24" y="42" font-size="22" font-weight="700" fill="#e0f2fe">1. 발견</text>
+      <text x="24" y="76" font-size="15" fill="#cbd5e1">Trending·커뮤니티·</text>
+      <text x="24" y="100" font-size="15" fill="#cbd5e1">검색 유입 후보 수집</text>
+    </g>
+    <path d="M250 245 H335" stroke="#38bdf8" stroke-width="4" marker-end="url(#arrow)"/>
+    <g transform="translate(350 170)">
+      <rect width="180" height="150" rx="22" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
+      <text x="24" y="42" font-size="22" font-weight="700" fill="#ccfbf1">2. 검증</text>
+      <text x="24" y="76" font-size="15" fill="#cbd5e1">클라이언트 처리·</text>
+      <text x="24" y="100" font-size="15" fill="#cbd5e1">네트워크 호출 확인</text>
+    </g>
+    <path d="M540 245 H625" stroke="#38bdf8" stroke-width="4" marker-end="url(#arrow)"/>
+    <g transform="translate(640 170)">
+      <rect width="180" height="150" rx="22" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+      <text x="24" y="42" font-size="22" font-weight="700" fill="#fef3c7">3. 허용</text>
+      <text x="24" y="76" font-size="15" fill="#cbd5e1">업무 데이터 등급별</text>
+      <text x="24" y="100" font-size="15" fill="#cbd5e1">allowlist·교육</text>
+    </g>
+    <path d="M830 245 H915" stroke="#38bdf8" stroke-width="4" marker-end="url(#arrow)"/>
+    <g transform="translate(930 170)">
+      <rect width="130" height="150" rx="22" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+      <text x="22" y="42" font-size="22" font-weight="700" fill="#ede9fe">4. 관찰</text>
+      <text x="22" y="76" font-size="15" fill="#cbd5e1">소유권·</text>
+      <text x="22" y="100" font-size="15" fill="#cbd5e1">라이선스·</text>
+      <text x="22" y="124" font-size="15" fill="#cbd5e1">대체 경로</text>
+    </g>
+    <rect x="60" y="382" width="1000" height="78" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="88" y="416" font-size="18" font-weight="700" fill="#f8fafc">핵심 판단 기준</text>
+    <text x="88" y="446" font-size="16" fill="#cbd5e1">민감 데이터 처리 여부 · 오프라인 동작 가능성 · 오픈소스 라이선스 · 유지보수 주기 · 광고/추적 스크립트 · 내부 대체재 존재</text>
+  </g>
+</svg>
