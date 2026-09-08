@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">문서 변환에서 RAG까지의 통제 지점</title>
+  <desc id="desc">원본 수집, 샌드박스 변환, 품질 평가, 청킹, 색인, 관찰성으로 이어지는 문서 인입 통제 지점</desc>
+  <rect width="1100" height="620" rx="28" fill="#0f172a"/>
+  <text x="54" y="72" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="34" font-weight="800">문서 인입 파이프라인의 통제 지점</text>
+  <text x="54" y="110" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">MarkItDown은 변환기이고, 운영 품질은 앞뒤의 검증 계층에서 결정된다.</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(54 170)">
+      <rect width="150" height="98" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+      <text x="26" y="40" fill="#e0f2fe" font-size="21" font-weight="700">수집</text>
+      <text x="22" y="70" fill="#94a3b8" font-size="15">출처·권한·해시</text>
+    </g>
+    <g transform="translate(244 170)">
+      <rect width="150" height="98" rx="16" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
+      <text x="24" y="40" fill="#ccfbf1" font-size="21" font-weight="700">샌드박스</text>
+      <text x="22" y="70" fill="#94a3b8" font-size="15">네트워크·파일 격리</text>
+    </g>
+    <g transform="translate(434 170)">
+      <rect width="150" height="98" rx="16" fill="#1e293b" stroke="#a7f3d0" stroke-width="2"/>
+      <text x="24" y="40" fill="#dcfce7" font-size="21" font-weight="700">변환</text>
+      <text x="22" y="70" fill="#94a3b8" font-size="15">Markdown 구조화</text>
+    </g>
+    <g transform="translate(624 170)">
+      <rect width="150" height="98" rx="16" fill="#1e293b" stroke="#facc15" stroke-width="2"/>
+      <text x="24" y="40" fill="#fef9c3" font-size="21" font-weight="700">품질 평가</text>
+      <text x="22" y="70" fill="#94a3b8" font-size="15">누락·표·언어</text>
+    </g>
+    <g transform="translate(814 170)">
+      <rect width="150" height="98" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="2"/>
+      <text x="24" y="40" fill="#f3e8ff" font-size="21" font-weight="700">색인</text>
+      <text x="22" y="70" fill="#94a3b8" font-size="15">chunk·metadata</text>
+    </g>
+    <path d="M205 219 H238 M395 219 H428 M585 219 H618 M775 219 H808" stroke="#64748b" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(80 340)" font-family="Arial, sans-serif">
+    <rect width="940" height="190" rx="22" fill="#111827" stroke="#334155"/>
+    <text x="28" y="48" fill="#e2e8f0" font-size="24" font-weight="800">운영 의사결정자가 확인할 질문</text>
+    <text x="36" y="92" fill="#bfdbfe" font-size="19">1. 민감 문서가 변환 프로세스의 권한으로 어디까지 접근할 수 있는가?</text>
+    <text x="36" y="125" fill="#bbf7d0" font-size="19">2. 표·이미지·각주가 사라졌을 때 검색 품질 저하를 어떻게 감지하는가?</text>
+    <text x="36" y="158" fill="#fde68a" font-size="19">3. 원본 해시, 변환 버전, 모델 버전, 청킹 규칙이 감사 로그로 남는가?</text>
+  </g>
+</svg>
