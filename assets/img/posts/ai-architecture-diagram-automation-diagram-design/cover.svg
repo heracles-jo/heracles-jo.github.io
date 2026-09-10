@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 아키텍처 다이어그램 자동화 검증 기준</title>
+  <desc id="desc">시스템 근거가 에이전트 생성, 의미 검증, 안전한 SVG 산출물로 이어지는 과정을 표현한다.</desc>
+  <rect width="1200" height="630" fill="#101827"/>
+  <circle cx="1040" cy="95" r="190" fill="#21304a" opacity=".8"/>
+  <circle cx="1120" cy="580" r="250" fill="#152d37" opacity=".9"/>
+  <text x="82" y="112" fill="#38bdf8" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">AI ENGINEERING · DOCUMENTATION</text>
+  <text x="82" y="190" fill="#f8fafc" font-family="Arial, sans-serif" font-size="54" font-weight="800">AI 아키텍처 다이어그램</text>
+  <text x="82" y="258" fill="#f8fafc" font-family="Arial, sans-serif" font-size="54" font-weight="800">자동화의 검증 기준</text>
+  <text x="84" y="309" fill="#a9b7ca" font-family="Arial, sans-serif" font-size="25">Diagram Design · 의미 근거 · 접근성 · 보안 경계</text>
+  <g font-family="Arial, sans-serif" font-size="20" text-anchor="middle">
+    <rect x="85" y="390" width="245" height="106" rx="12" fill="#17243a" stroke="#60a5fa" stroke-width="2"/>
+    <text x="207" y="433" fill="#e2e8f0" font-weight="700">SYSTEM EVIDENCE</text><text x="207" y="467" fill="#94a3b8">코드 · IaC · ADR</text>
+    <rect x="475" y="390" width="245" height="106" rx="12" fill="#17243a" stroke="#f59e0b" stroke-width="2"/>
+    <text x="597" y="433" fill="#e2e8f0" font-weight="700">SEMANTIC REVIEW</text><text x="597" y="467" fill="#94a3b8">노드 · 연결 · 생략</text>
+    <rect x="865" y="390" width="245" height="106" rx="12" fill="#17243a" stroke="#34d399" stroke-width="2"/>
+    <text x="987" y="433" fill="#e2e8f0" font-weight="700">SAFE ARTIFACT</text><text x="987" y="467" fill="#94a3b8">HTML · SVG · 접근성</text>
+  </g>
+  <g stroke="#64748b" stroke-width="4" fill="none"><path d="M330 443h125"/><path d="M720 443h125"/></g>
+  <g fill="#64748b"><path d="M455 443l-15-10v20z"/><path d="M845 443l-15-10v20z"/></g>
+  <text x="84" y="574" fill="#64748b" font-family="Arial, sans-serif" font-size="18">heracles-jo.github.io</text>
+</svg>

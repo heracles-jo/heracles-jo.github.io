@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">AI 다이어그램 산출물의 위험 경계</title>
+  <desc id="desc">외부 입력, 에이전트 생성, 내부 리뷰, 공개 배포 단계에서 각각 통제할 위험을 보여준다.</desc>
+  <rect width="1200" height="680" fill="#fffdf7"/>
+  <text x="70" y="74" fill="#172033" font-family="Arial, sans-serif" font-size="34" font-weight="800">HTML/SVG도 공급망 산출물이다</text>
+  <text x="70" y="112" fill="#667085" font-family="Arial, sans-serif" font-size="19">입력 파일부터 공개 문서까지 신뢰 경계를 단계별로 닫는다</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="70" y="175" width="240" height="330" rx="16" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+    <text x="98" y="219" fill="#991b1b" font-size="21" font-weight="700">비신뢰 입력</text><text x="98" y="265" fill="#374151" font-size="18">draw.io / Mermaid</text><text x="98" y="298" fill="#374151" font-size="18">Excalidraw / URL</text><text x="98" y="354" fill="#991b1b" font-size="16" font-weight="700">통제</text><text x="98" y="388" fill="#374151" font-size="17">크기·압축 제한</text><text x="98" y="419" fill="#374151" font-size="17">sandbox · egress 차단</text><text x="98" y="450" fill="#374151" font-size="17">scheme allowlist</text>
+    <rect x="350" y="175" width="240" height="330" rx="16" fill="#ffedd5" stroke="#f97316" stroke-width="2"/>
+    <text x="378" y="219" fill="#9a3412" font-size="21" font-weight="700">에이전트 생성</text><text x="378" y="265" fill="#374151" font-size="18">HTML + inline SVG</text><text x="378" y="298" fill="#374151" font-size="18">선택적 motion</text><text x="378" y="354" fill="#9a3412" font-size="16" font-weight="700">통제</text><text x="378" y="388" fill="#374151" font-size="17">script·onload 거부</text><text x="378" y="419" fill="#374151" font-size="17">template digest 고정</text><text x="378" y="450" fill="#374151" font-size="17">외부 asset 검사</text>
+    <rect x="630" y="175" width="240" height="330" rx="16" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <text x="658" y="219" fill="#3730a3" font-size="21" font-weight="700">내부 검증</text><text x="658" y="265" fill="#374151" font-size="18">semantic + visual</text><text x="658" y="298" fill="#374151" font-size="18">accessibility lint</text><text x="658" y="354" fill="#3730a3" font-size="16" font-weight="700">통제</text><text x="658" y="388" fill="#374151" font-size="17">근거 링크 확인</text><text x="658" y="419" fill="#374151" font-size="17">누락·추론 ledger</text><text x="658" y="450" fill="#374151" font-size="17">render diff</text>
+    <rect x="910" y="175" width="220" height="330" rx="16" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+    <text x="938" y="219" fill="#166534" font-size="21" font-weight="700">공개 배포</text><text x="938" y="265" fill="#374151" font-size="18">웹 · 문서 · 슬라이드</text><text x="938" y="298" fill="#374151" font-size="18">검색·공유</text><text x="938" y="354" fill="#166534" font-size="16" font-weight="700">통제</text><text x="938" y="388" fill="#374151" font-size="17">민감 정보 검토</text><text x="938" y="419" fill="#374151" font-size="17">CSP · cache 정책</text><text x="938" y="450" fill="#374151" font-size="17">소유자·갱신일</text>
+  </g>
+  <g fill="#475569"><path d="M340 340l-20-13v26z"/><path d="M620 340l-20-13v26z"/><path d="M900 340l-20-13v26z"/></g>
+  <rect x="70" y="550" width="1060" height="70" rx="12" fill="#172033"/>
+  <text x="600" y="593" text-anchor="middle" fill="#f8fafc" font-family="Arial, sans-serif" font-size="21" font-weight="700">브라우저에서 열린다 ≠ 기술적으로 정확하다 ≠ 외부 공개에 안전하다</text>
+</svg>

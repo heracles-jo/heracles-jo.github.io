@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">AI 다이어그램 생성과 검증 워크플로</title>
+  <desc id="desc">코드와 운영 근거를 수집해 의미 모델을 만들고 시각 렌더링과 두 단계 리뷰를 거쳐 게시하는 흐름이다.</desc>
+  <rect width="1200" height="680" fill="#f8fafc"/>
+  <text x="70" y="75" fill="#0f172a" font-family="Arial, sans-serif" font-size="34" font-weight="800">생성 속도보다 중요한 검증 가능한 흐름</text>
+  <text x="70" y="112" fill="#64748b" font-family="Arial, sans-serif" font-size="19">시스템 사실과 시각 문법을 분리하고, 게시 전에 다시 합친다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(70 180)"><rect width="190" height="150" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><text x="22" y="40" fill="#0369a1" font-size="17" font-weight="700">01 근거 수집</text><text x="22" y="78" fill="#334155" font-size="18">코드 · IaC</text><text x="22" y="108" fill="#334155" font-size="18">ADR · 운영 상태</text></g>
+    <g transform="translate(305 180)"><rect width="190" height="150" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="22" y="40" fill="#6d28d9" font-size="17" font-weight="700">02 의미 모델</text><text x="22" y="78" fill="#334155" font-size="18">노드 · 연결</text><text x="22" y="108" fill="#334155" font-size="18">경계 · 근거 링크</text></g>
+    <g transform="translate(540 180)"><rect width="190" height="150" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/><text x="22" y="40" fill="#c2410c" font-size="17" font-weight="700">03 시각 렌더링</text><text x="22" y="78" fill="#334155" font-size="18">유형 · 밀도</text><text x="22" y="108" fill="#334155" font-size="18">브랜드 · 접근성</text></g>
+    <g transform="translate(775 180)"><rect width="190" height="150" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/><text x="22" y="40" fill="#b91c1c" font-size="17" font-weight="700">04 이중 리뷰</text><text x="22" y="78" fill="#334155" font-size="18">사실성 검토</text><text x="22" y="108" fill="#334155" font-size="18">가독성 검토</text></g>
+    <g transform="translate(1010 180)"><rect width="120" height="150" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="2"/><text x="18" y="40" fill="#047857" font-size="17" font-weight="700">05 게시</text><text x="18" y="78" fill="#334155" font-size="17">HTML</text><text x="18" y="106" fill="#334155" font-size="17">SVG/PNG</text></g>
+  </g>
+  <g stroke="#94a3b8" stroke-width="3" fill="#94a3b8"><path d="M260 255h40"/><path d="M495 255h40"/><path d="M730 255h40"/><path d="M965 255h40"/><path d="M300 255l-12-8v16z"/><path d="M535 255l-12-8v16z"/><path d="M770 255l-12-8v16z"/><path d="M1005 255l-12-8v16z"/></g>
+  <rect x="70" y="400" width="1060" height="195" rx="16" fill="#0f172a"/>
+  <text x="105" y="447" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="700">리뷰에서 남겨야 할 증거</text>
+  <g font-family="Arial, sans-serif" font-size="18"><text x="105" y="493" fill="#7dd3fc">OBSERVED</text><text x="245" y="493" fill="#cbd5e1">코드·trace·설정에서 직접 확인</text><text x="105" y="530" fill="#c4b5fd">INFERRED</text><text x="245" y="530" fill="#cbd5e1">맥락으로 추론했으며 추가 확인 필요</text><text x="105" y="567" fill="#fdba74">OMITTED</text><text x="245" y="567" fill="#cbd5e1">밀도·대상 독자 때문에 합치거나 제외</text></g>
+  <text x="720" y="500" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="700">실패 조건</text><text x="720" y="538" fill="#fca5a5" font-family="Arial, sans-serif" font-size="18">근거 없는 edge · 빠진 trust boundary</text><text x="720" y="570" fill="#fca5a5" font-family="Arial, sans-serif" font-size="18">실행 markup · 외부 요청 · 민감 정보</text>
+</svg>
