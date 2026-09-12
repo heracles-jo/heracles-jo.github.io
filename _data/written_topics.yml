@@ -221,3 +221,14 @@
     - "코드 현대화"
   slug: "cpp-std-format-fmt-migration"
   summary: "printf·iostream·fmt 혼용 코드에서 std::format으로 옮길 범위와 출력 호환성, 런타임 문자열, 성능 회귀 검증 기준을 정리."
+- date: 2026-09-13
+  title: "ArmorPaint PBR 텍스처 파이프라인: Substance 대안 도입 기준"
+  github_repo: "https://github.com/armory3d/armorpaint"
+  main_keyword: "ArmorPaint PBR 텍스처 파이프라인"
+  related_keywords:
+    - "ArmorPaint"
+    - "PBR 텍스처 페인팅"
+    - "Substance Painter 대안"
+    - "3D 자산 파이프라인"
+  slug: "armorpaint-pbr-texture-pipeline"
+  summary: "ArmorPaint 1.0의 메시·UV 입력, 베이킹, 채널 패킹, 엔진 왕복 검증과 플러그인·AI 모델 공급망을 바탕으로 도입 기준을 정리."
