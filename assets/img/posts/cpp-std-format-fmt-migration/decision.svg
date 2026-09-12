@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">fmt와 std::format 선택 의사결정</title>
+  <desc id="desc">컴파일러 기준선과 fmt 확장 의존성을 확인해 fmt 유지, 어댑터 병행, std 전환을 선택하는 결정 트리</desc>
+  <rect width="1200" height="760" rx="24" fill="#0f172a"/>
+  <text x="600" y="66" text-anchor="middle" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">백엔드 선택은 컴파일러와 API 계약이 결정한다</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="390" y="105" width="420" height="86" rx="18" fill="#1e40af"/><text x="600" y="158" fill="white" font-size="25" font-weight="700">모든 타깃이 필요한 std 기능을 지원하는가?</text>
+    <path d="M480 191v90M720 191v90" stroke="#94a3b8" stroke-width="4"/>
+    <text x="450" y="235" fill="#93c5fd" font-size="20">아니오</text><text x="750" y="235" fill="#86efac" font-size="20">예</text>
+    <rect x="180" y="280" width="360" height="90" rx="18" fill="#164e63" stroke="#22d3ee" stroke-width="3"/><text x="360" y="318" fill="white" font-size="24" font-weight="700">{fmt} 유지</text><text x="360" y="348" fill="#cffafe" font-size="18">버전 고정 + 패키지 검증</text>
+    <rect x="660" y="280" width="360" height="90" rx="18" fill="#14532d" stroke="#4ade80" stroke-width="3"/><text x="840" y="318" fill="white" font-size="24" font-weight="700">fmt 전용 확장을 쓰는가?</text><text x="840" y="348" fill="#dcfce7" font-size="18">ranges · color · os · compile 등</text>
+    <path d="M760 370v100M920 370v100" stroke="#94a3b8" stroke-width="4"/>
+    <text x="725" y="420" fill="#fbbf24" font-size="20">예</text><text x="952" y="420" fill="#86efac" font-size="20">아니오</text>
+    <rect x="560" y="470" width="320" height="90" rx="18" fill="#713f12" stroke="#fbbf24" stroke-width="3"/><text x="720" y="508" fill="white" font-size="24" font-weight="700">어댑터 병행</text><text x="720" y="538" fill="#fef3c7" font-size="18">확장 격리 후 단계 전환</text>
+    <rect x="900" y="470" width="250" height="90" rx="18" fill="#166534" stroke="#4ade80" stroke-width="3"/><text x="1025" y="508" fill="white" font-size="24" font-weight="700">std 전환</text><text x="1025" y="538" fill="#dcfce7" font-size="18">golden test 후 제거</text>
+    <rect x="125" y="625" width="950" height="75" rx="16" fill="#1e293b" stroke="#64748b"/><text x="600" y="658" fill="#e2e8f0" font-size="21" font-weight="700">공통 중단 조건</text><text x="600" y="685" fill="#cbd5e1" font-size="18">출력 차이 미해결 · 런타임 문자열 예외 누락 · 성능/빌드 기준선 악화 · 지원 플랫폼 누락</text>
+  </g>
+</svg>

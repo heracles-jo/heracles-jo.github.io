@@ -210,3 +210,14 @@
     - "에이전트 스킬"
   slug: "ai-architecture-diagram-automation-diagram-design"
   summary: "Diagram Design의 에이전트 규약과 HTML/SVG 생성 구조를 바탕으로 의미 정확성, 접근성, 실행 보안, 원본 추적성과 PoC 도입 기준을 정리."
+- date: 2026-09-12
+  title: "C++ std::format 전환: {fmt} 호환성과 마이그레이션 기준"
+  github_repo: "https://github.com/fmtlib/fmt"
+  main_keyword: "C++ std::format 전환"
+  related_keywords:
+    - "fmt"
+    - "std::format"
+    - "C++ 포맷팅"
+    - "코드 현대화"
+  slug: "cpp-std-format-fmt-migration"
+  summary: "printf·iostream·fmt 혼용 코드에서 std::format으로 옮길 범위와 출력 호환성, 런타임 문자열, 성능 회귀 검증 기준을 정리."

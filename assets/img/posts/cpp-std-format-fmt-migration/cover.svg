@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">C++ std::format 전환과 fmt 호환성</title>
+  <desc id="desc">printf와 iostream에서 fmt 어댑터를 거쳐 std::format으로 전환하는 경계를 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101827"/><stop offset="1" stop-color="#172554"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <path d="M80 118h230M80 138h150" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <text x="80" y="220" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="34" font-weight="700">C++ FORMAT MIGRATION</text>
+  <text x="80" y="304" fill="white" font-family="Arial, sans-serif" font-size="62" font-weight="800">std::format 전환</text>
+  <text x="80" y="374" fill="url(#accent)" font-family="Arial, sans-serif" font-size="48" font-weight="700">{fmt} 호환성과 경계 설계</text>
+  <g transform="translate(80 450)" font-family="Arial, sans-serif" font-size="24" font-weight="700">
+    <rect width="220" height="70" rx="16" fill="#1e293b" stroke="#64748b"/><text x="110" y="44" text-anchor="middle" fill="#cbd5e1">printf / iostream</text>
+    <path d="M240 35h70" stroke="#38bdf8" stroke-width="6"/><path d="m300 24 18 11-18 11" fill="none" stroke="#38bdf8" stroke-width="6"/>
+    <rect x="330" width="200" height="70" rx="16" fill="#0c4a6e" stroke="#38bdf8"/><text x="430" y="44" text-anchor="middle" fill="white">format adapter</text>
+    <path d="M550 35h70" stroke="#a78bfa" stroke-width="6"/><path d="m610 24 18 11-18 11" fill="none" stroke="#a78bfa" stroke-width="6"/>
+    <rect x="640" width="210" height="70" rx="16" fill="#4c1d95" stroke="#a78bfa"/><text x="745" y="44" text-anchor="middle" fill="white">fmt / std</text>
+  </g>
+  <text x="1120" y="565" text-anchor="end" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">heracles.jo</text>
+</svg>
