@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI 코드 리뷰 품질 의사결정 게이트</title>
+  <desc id="desc">그림자 실행부터 코멘트 제안, 제한적 차단, 정식 품질 게이트로 승격하는 조건</desc>
+  <rect width="1200" height="720" rx="24" fill="#fffaf5"/>
+  <text x="64" y="70" font-family="system-ui,sans-serif" font-size="30" font-weight="700" fill="#292524">AI 리뷰를 merge gate로 올리는 순서</text>
+  <text x="64" y="108" font-family="system-ui,sans-serif" font-size="18" fill="#78716c">코멘트 수가 아니라 커버리지·탐지 품질·데이터 경계를 통과한다</text>
+  <g font-family="system-ui,sans-serif">
+    <path d="M160 184H1040" stroke="#d6d3d1" stroke-width="8" stroke-linecap="round"/>
+    <g>
+      <circle cx="175" cy="184" r="34" fill="#0284c7"/><text x="175" y="193" text-anchor="middle" font-size="24" font-weight="700" fill="white">1</text>
+      <circle cx="455" cy="184" r="34" fill="#7c3aed"/><text x="455" y="193" text-anchor="middle" font-size="24" font-weight="700" fill="white">2</text>
+      <circle cx="745" cy="184" r="34" fill="#ea580c"/><text x="745" y="193" text-anchor="middle" font-size="24" font-weight="700" fill="white">3</text>
+      <circle cx="1025" cy="184" r="34" fill="#16a34a"/><text x="1025" y="193" text-anchor="middle" font-size="24" font-weight="700" fill="white">4</text>
+    </g>
+    <g font-size="20" font-weight="700" fill="#292524"><text x="175" y="245" text-anchor="middle">Shadow</text><text x="455" y="245" text-anchor="middle">제안</text><text x="745" y="245" text-anchor="middle">제한적 차단</text><text x="1025" y="245" text-anchor="middle">정식 게이트</text></g>
+    <g font-size="16" fill="#57534e"><text x="175" y="273" text-anchor="middle">게시 없이 측정</text><text x="455" y="273" text-anchor="middle">사람이 선별</text><text x="745" y="273" text-anchor="middle">결정론 항목부터</text><text x="1025" y="273" text-anchor="middle">fallback 포함</text></g>
+    <rect x="64" y="328" width="1072" height="310" rx="20" fill="#292524"/>
+    <text x="96" y="373" font-size="22" font-weight="700" fill="#fafaf9">승격 전 네 개의 질문</text>
+    <g>
+      <rect x="96" y="406" width="230" height="180" rx="15" fill="#44403c" stroke="#38bdf8"/><text x="116" y="445" font-size="19" font-weight="700" fill="#7dd3fc">커버리지</text><text x="116" y="479" font-size="16" fill="#e7e5e4">대상 파일 100%인가</text><text x="116" y="508" font-size="16" fill="#e7e5e4">제외 이유가 남는가</text><text x="116" y="537" font-size="16" fill="#e7e5e4">실패 그룹을 막는가</text>
+      <rect x="354" y="406" width="230" height="180" rx="15" fill="#44403c" stroke="#c084fc"/><text x="374" y="445" font-size="19" font-weight="700" fill="#d8b4fe">탐지 품질</text><text x="374" y="479" font-size="16" fill="#e7e5e4">등급별 recall은</text><text x="374" y="508" font-size="16" fill="#e7e5e4">오탐 분류 비용은</text><text x="374" y="537" font-size="16" fill="#e7e5e4">순증가 결함은</text>
+      <rect x="612" y="406" width="230" height="180" rx="15" fill="#44403c" stroke="#fb923c"/><text x="632" y="445" font-size="19" font-weight="700" fill="#fdba74">운영 안정성</text><text x="632" y="479" font-size="16" fill="#e7e5e4">대상 SHA가 맞는가</text><text x="632" y="508" font-size="16" fill="#e7e5e4">p95 지연·비용은</text><text x="632" y="537" font-size="16" fill="#e7e5e4">재시도·축소 운영은</text>
+      <rect x="870" y="406" width="234" height="180" rx="15" fill="#44403c" stroke="#4ade80"/><text x="890" y="445" font-size="19" font-weight="700" fill="#86efac">보안 경계</text><text x="890" y="479" font-size="16" fill="#e7e5e4">소스 전송·보존은</text><text x="890" y="508" font-size="16" fill="#e7e5e4">로그·MCP 권한은</text><text x="890" y="537" font-size="16" fill="#e7e5e4">fork PR secret은</text>
+    </g>
+  </g>
+</svg>

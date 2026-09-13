@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">하이브리드 AI 코드 리뷰 아키텍처</title>
+  <desc id="desc">Git diff를 결정론적으로 선택하고 의미 그룹별 LLM 리뷰를 거쳐 위치와 품질을 검증하는 흐름</desc>
+  <rect width="1200" height="720" rx="24" fill="#f8fafc"/>
+  <text x="64" y="66" font-family="system-ui,sans-serif" font-size="30" font-weight="700" fill="#0f172a">하이브리드 AI 코드 리뷰 아키텍처</text>
+  <text x="64" y="103" font-family="system-ui,sans-serif" font-size="18" fill="#475569">확률적 판단을 외곽의 결정론적 계약으로 감싼다</text>
+  <g font-family="system-ui,sans-serif">
+    <rect x="64" y="150" width="215" height="160" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="171" y="193" text-anchor="middle" font-size="22" font-weight="700" fill="#075985">Git 변경 집합</text>
+    <text x="88" y="232" font-size="17" fill="#334155">• workspace / commit</text><text x="88" y="263" font-size="17" fill="#334155">• merge-base range</text><text x="88" y="294" font-size="17" fill="#334155">• base / head SHA</text>
+    <rect x="350" y="150" width="250" height="160" rx="18" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text x="475" y="193" text-anchor="middle" font-size="22" font-weight="700" fill="#155e75">결정론적 선택</text>
+    <text x="374" y="232" font-size="17" fill="#334155">• include / exclude</text><text x="374" y="263" font-size="17" fill="#334155">• 규칙 우선순위</text><text x="374" y="294" font-size="17" fill="#334155">• 크기·토큰 상한</text>
+    <rect x="671" y="150" width="250" height="160" rx="18" fill="#f3e8ff" stroke="#9333ea" stroke-width="2"/>
+    <text x="796" y="193" text-anchor="middle" font-size="22" font-weight="700" fill="#6b21a8">LLM 서브 에이전트</text>
+    <text x="695" y="232" font-size="17" fill="#334155">• 의미 그룹화</text><text x="695" y="263" font-size="17" fill="#334155">• 주변 코드 탐색</text><text x="695" y="294" font-size="17" fill="#334155">• 결함 후보·설명</text>
+    <rect x="986" y="150" width="150" height="160" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="1061" y="193" text-anchor="middle" font-size="22" font-weight="700" fill="#166534">후처리</text>
+    <text x="1008" y="232" font-size="16" fill="#334155">위치 계산</text><text x="1008" y="263" font-size="16" fill="#334155">오탐 필터</text><text x="1008" y="294" font-size="16" fill="#334155">JSON 출력</text>
+    <g stroke="#64748b" stroke-width="3" fill="none"><path d="M279 230H350"/><path d="m338 220 12 10-12 10"/><path d="M600 230H671"/><path d="m659 220 12 10-12 10"/><path d="M921 230H986"/><path d="m974 220 12 10-12 10"/></g>
+    <rect x="64" y="376" width="1072" height="260" rx="20" fill="#0f172a"/>
+    <text x="96" y="421" font-size="22" font-weight="700" fill="#f8fafc">승인 계층: 리뷰 실행 성공과 merge 허용을 분리</text>
+    <g font-size="18">
+      <rect x="96" y="458" width="220" height="120" rx="14" fill="#1e293b" stroke="#38bdf8"/><text x="206" y="497" text-anchor="middle" fill="#7dd3fc" font-weight="700">Coverage receipt</text><text x="116" y="533" fill="#cbd5e1">파일·제외·실패 그룹</text><text x="116" y="560" fill="#cbd5e1">anchor·대상 SHA</text>
+      <rect x="354" y="458" width="220" height="120" rx="14" fill="#1e293b" stroke="#f59e0b"/><text x="464" y="497" text-anchor="middle" fill="#fcd34d" font-weight="700">기존 CI</text><text x="374" y="533" fill="#cbd5e1">test·lint·type</text><text x="374" y="560" fill="#cbd5e1">SAST·policy</text>
+      <rect x="612" y="458" width="220" height="120" rx="14" fill="#1e293b" stroke="#c084fc"/><text x="722" y="497" text-anchor="middle" fill="#d8b4fe" font-weight="700">AI 품질 지표</text><text x="632" y="533" fill="#cbd5e1">precision·recall</text><text x="632" y="560" fill="#cbd5e1">수용률·순증가 결함</text>
+      <rect x="870" y="458" width="234" height="120" rx="14" fill="#1e293b" stroke="#4ade80"/><text x="987" y="497" text-anchor="middle" fill="#86efac" font-weight="700">Human approval</text><text x="890" y="533" fill="#cbd5e1">고위험 의미 결함</text><text x="890" y="560" fill="#cbd5e1">예외·최종 책임</text>
+    </g>
+  </g>
+</svg>

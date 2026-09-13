@@ -232,3 +232,14 @@
     - "3D 자산 파이프라인"
   slug: "armorpaint-pbr-texture-pipeline"
   summary: "ArmorPaint 1.0의 메시·UV 입력, 베이킹, 채널 패킹, 엔진 왕복 검증과 플러그인·AI 모델 공급망을 바탕으로 도입 기준을 정리."
+- date: 2026-09-14
+  title: "AI 코드 리뷰 정확도: Open Code Review 하이브리드 설계"
+  github_repo: "https://github.com/alibaba/open-code-review"
+  main_keyword: "AI 코드 리뷰 정확도"
+  related_keywords:
+    - "Open Code Review"
+    - "하이브리드 코드 리뷰"
+    - "정적 분석 LLM"
+    - "코드 리뷰 오탐"
+  slug: "open-code-review-hybrid-ai-code-review"
+  summary: "결정론적 파일 선택·규칙·커버리지와 LLM 결함 탐지를 분리해 오탐, 누락, 비용, 데이터 경계를 관리하는 도입 기준을 정리."
