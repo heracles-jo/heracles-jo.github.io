@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Project NOMAD 오프라인 지식 서비스 아키텍처</title>
+  <desc id="desc">정비 구간에서 검증한 콘텐츠를 로컬 저장소에 넣고 Command Center가 Kiwix, Kolibri, 지도, RAG 서비스를 운영하는 구조</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#4f7ca3"/></marker><style>text{font-family:system-ui,-apple-system,'Noto Sans KR',sans-serif}.h{font-weight:750;fill:#102a43}.t{fill:#334e68}.box{fill:#f4f9fc;stroke:#5b87a8;stroke-width:2}.core{fill:#e6fffa;stroke:#319795;stroke-width:2}.warn{fill:#fff7ed;stroke:#d97706;stroke-width:2}</style></defs>
+  <rect width="1200" height="720" rx="24" fill="#eef5f9"/>
+  <text x="60" y="65" class="h" font-size="32">연결 구간에서 준비하고, 단절 구간에서 서비스한다</text>
+  <rect x="55" y="105" width="235" height="500" rx="20" class="warn"/>
+  <text x="173" y="145" text-anchor="middle" class="h" font-size="23">정비·반입 구간</text>
+  <text x="85" y="195" class="t" font-size="19">• image / release</text><text x="85" y="232" class="t" font-size="19">• ZIM / 지도 / 강좌</text><text x="85" y="269" class="t" font-size="19">• 모델 / 문서</text>
+  <rect x="83" y="315" width="180" height="160" rx="15" fill="#fff" stroke="#d97706"/>
+  <text x="173" y="352" text-anchor="middle" class="h" font-size="20">반입 게이트</text>
+  <text x="105" y="390" class="t" font-size="17">digest · 서명</text><text x="105" y="422" class="t" font-size="17">라이선스 · 악성 검사</text><text x="105" y="454" class="t" font-size="17">판본 · 검토일</text>
+  <path d="M290 355H388" stroke="#4f7ca3" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="400" y="105" width="745" height="500" rx="20" fill="#fff" stroke="#7aa7c2" stroke-width="2"/>
+  <text x="772" y="145" text-anchor="middle" class="h" font-size="23">현장 오프라인 서버</text>
+  <rect x="450" y="180" width="645" height="92" rx="16" class="core"/>
+  <text x="772" y="216" text-anchor="middle" class="h" font-size="22">Command Center · API</text>
+  <text x="772" y="247" text-anchor="middle" class="t" font-size="18">Docker 앱 설치 · 상태 · 업데이트 · 다운로드 관리</text>
+  <g>
+    <rect x="450" y="315" width="145" height="105" rx="14" class="box"/><text x="522" y="354" text-anchor="middle" class="h" font-size="19">Kiwix</text><text x="522" y="386" text-anchor="middle" class="t" font-size="16">ZIM 검색</text>
+    <rect x="617" y="315" width="145" height="105" rx="14" class="box"/><text x="689" y="354" text-anchor="middle" class="h" font-size="19">Kolibri</text><text x="689" y="386" text-anchor="middle" class="t" font-size="16">교육·진도</text>
+    <rect x="784" y="315" width="145" height="105" rx="14" class="box"/><text x="856" y="354" text-anchor="middle" class="h" font-size="19">ProtoMaps</text><text x="856" y="386" text-anchor="middle" class="t" font-size="16">지역 지도</text>
+    <rect x="951" y="315" width="145" height="105" rx="14" class="box"/><text x="1023" y="354" text-anchor="middle" class="h" font-size="19">Ollama</text><text x="1023" y="386" text-anchor="middle" class="t" font-size="16">로컬 추론</text>
+  </g>
+  <rect x="450" y="468" width="645" height="92" rx="16" class="box"/>
+  <text x="772" y="505" text-anchor="middle" class="h" font-size="21">로컬 상태·콘텐츠 저장소</text>
+  <text x="772" y="536" text-anchor="middle" class="t" font-size="17">MySQL · Qdrant · ZIM · maps · documents · models · notes</text>
+  <path d="M772 272V300" stroke="#4f7ca3" stroke-width="3" marker-end="url(#arrow)"/><path d="M772 420V458" stroke="#4f7ca3" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="400" y="635" width="745" height="48" rx="12" fill="#163f55"/><text x="772" y="666" text-anchor="middle" fill="#fff" font-size="19">핵심 계약: WAN 차단 뒤에도 원문 검색 · 재부팅 · 복구가 가능해야 한다</text>
+</svg>

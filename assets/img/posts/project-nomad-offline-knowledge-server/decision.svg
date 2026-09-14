@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Project NOMAD 도입 의사결정 게이트</title>
+  <desc id="desc">콘텐츠, 보안, 단절, 복구 조건을 순서대로 검증해 도입 또는 보류를 결정하는 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#50748d"/></marker><style>text{font-family:system-ui,-apple-system,'Noto Sans KR',sans-serif}.h{fill:#102a43;font-weight:750}.t{fill:#334e68}.g{fill:#ecfdf5;stroke:#059669;stroke-width:2}.b{fill:#eff6ff;stroke:#3b82f6;stroke-width:2}.o{fill:#fff7ed;stroke:#ea580c;stroke-width:2}</style></defs>
+  <rect width="1200" height="700" rx="24" fill="#f3f7fa"/>
+  <text x="60" y="68" class="h" font-size="32">72시간 단절 훈련으로 도입을 결정한다</text>
+  <g transform="translate(70 125)">
+    <rect width="215" height="150" rx="18" class="b"/><text x="108" y="42" text-anchor="middle" class="h" font-size="21">1. 콘텐츠</text><text x="108" y="78" text-anchor="middle" class="t" font-size="17">필수 manifest</text><text x="108" y="106" text-anchor="middle" class="t" font-size="17">출처 · 판본 · 검토일</text>
+    <path d="M215 75H280" stroke="#50748d" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="295" width="215" height="150" rx="18" class="b"/><text x="403" y="42" text-anchor="middle" class="h" font-size="21">2. 보안</text><text x="403" y="78" text-anchor="middle" class="t" font-size="17">관리망 분리</text><text x="403" y="106" text-anchor="middle" class="t" font-size="17">공급망 · 열린 포트</text>
+    <path d="M510 75H575" stroke="#50748d" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="590" width="215" height="150" rx="18" class="b"/><text x="698" y="42" text-anchor="middle" class="h" font-size="21">3. 단절</text><text x="698" y="78" text-anchor="middle" class="t" font-size="17">WAN · DNS 차단</text><text x="698" y="106" text-anchor="middle" class="t" font-size="17">검색 · 재부팅 · 부하</text>
+    <path d="M805 75H870" stroke="#50748d" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="885" width="215" height="150" rx="18" class="b"/><text x="993" y="42" text-anchor="middle" class="h" font-size="21">4. 복구</text><text x="993" y="78" text-anchor="middle" class="t" font-size="17">빈 장비 · 로컬 백업</text><text x="993" y="106" text-anchor="middle" class="t" font-size="17">RTO · RPO · 재색인</text>
+  </g>
+  <path d="M600 285V355" stroke="#50748d" stroke-width="4" marker-end="url(#a)"/>
+  <rect x="375" y="370" width="450" height="100" rx="20" fill="#fff" stroke="#64748b" stroke-width="2"/>
+  <text x="600" y="409" text-anchor="middle" class="h" font-size="22">모든 중단 조건을 통과했는가?</text><text x="600" y="442" text-anchor="middle" class="t" font-size="17">기능 성공이 아니라 실패 후 증거와 복구 시간을 확인</text>
+  <path d="M475 470V535" stroke="#059669" stroke-width="4" marker-end="url(#a)"/><path d="M725 470V535" stroke="#ea580c" stroke-width="4" marker-end="url(#a)"/>
+  <rect x="245" y="550" width="365" height="100" rx="18" class="g"/><text x="428" y="591" text-anchor="middle" class="h" font-size="23">제한된 현장에 도입</text><text x="428" y="623" text-anchor="middle" class="t" font-size="17">정비 창 · 책임자 · 세대 보존</text>
+  <rect x="640" y="550" width="365" height="100" rx="18" class="o"/><text x="823" y="591" text-anchor="middle" class="h" font-size="23">보류하고 경계 재설계</text><text x="823" y="623" text-anchor="middle" class="t" font-size="17">인증 · 백업 · 판본 · 공급망부터 수정</text>
+</svg>

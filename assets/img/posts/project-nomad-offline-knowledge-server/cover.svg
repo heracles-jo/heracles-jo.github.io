@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Project NOMAD 오프라인 지식 서버</title>
+  <desc id="desc">인터넷 단절에도 지식, 교육, 지도와 로컬 AI를 제공하는 서버를 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a2b"/><stop offset="1" stop-color="#153d52"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#163f55"/><stop offset="1" stop-color="#0c2738"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1030" cy="100" r="190" fill="#2dd4bf" opacity=".09"/><circle cx="95" cy="570" r="230" fill="#60a5fa" opacity=".08"/>
+  <g transform="translate(745 115)">
+    <rect width="330" height="400" rx="28" fill="url(#card)" stroke="#5eead4" stroke-width="2"/>
+    <rect x="52" y="55" width="226" height="58" rx="12" fill="#071a2b" stroke="#60a5fa"/>
+    <circle cx="83" cy="84" r="8" fill="#5eead4"/><rect x="105" y="76" width="130" height="16" rx="8" fill="#8db6ca"/>
+    <rect x="52" y="142" width="226" height="58" rx="12" fill="#071a2b" stroke="#60a5fa"/>
+    <circle cx="83" cy="171" r="8" fill="#5eead4"/><rect x="105" y="163" width="105" height="16" rx="8" fill="#8db6ca"/>
+    <rect x="52" y="229" width="226" height="58" rx="12" fill="#071a2b" stroke="#60a5fa"/>
+    <circle cx="83" cy="258" r="8" fill="#5eead4"/><rect x="105" y="250" width="145" height="16" rx="8" fill="#8db6ca"/>
+    <path d="M165 320v34m-52 0h104" stroke="#5eead4" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g fill="#e6f6ff" font-family="system-ui,-apple-system,'Noto Sans KR',sans-serif">
+    <text x="90" y="155" font-size="30" font-weight="650" fill="#5eead4">OFFLINE-FIRST INFRASTRUCTURE</text>
+    <text x="90" y="240" font-size="58" font-weight="800">오프라인 지식 서버</text>
+    <text x="90" y="315" font-size="47" font-weight="750">설계와 운영 경계</text>
+    <text x="90" y="395" font-size="27" fill="#b8d5e3">Kiwix · Kolibri · Maps · Local RAG</text>
+    <text x="90" y="454" font-size="25" fill="#8db6ca">Project NOMAD 도입 기준</text>
+  </g>
+  <g transform="translate(90 505)" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="650">
+    <rect width="160" height="44" rx="22" fill="#2dd4bf"/><text x="80" y="29" text-anchor="middle" fill="#062333">DISCONNECTED</text>
+    <rect x="178" width="138" height="44" rx="22" fill="#1d4f68" stroke="#60a5fa"/><text x="247" y="29" text-anchor="middle" fill="#dff7ff">VERIFIED</text>
+  </g>
+</svg>
