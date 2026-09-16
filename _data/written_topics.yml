@@ -265,3 +265,14 @@
     - "소프트웨어 공급망"
   slug: "brewui-homebrew-gui-package-management"
   summary: "BrewUI의 JSON API·brew CLI 분리와 격리 셸, 변경 직렬화를 분석하고 개인 Mac과 관리형 개발 장비의 도입·검증 기준을 정리."
+- date: 2026-09-17
+  title: "AI 보안 감사 자동화: Cloudflare Security Audit Skill 검증 구조"
+  github_repo: "https://github.com/cloudflare/security-audit-skill"
+  main_keyword: "AI 보안 감사 자동화"
+  related_keywords:
+    - "Cloudflare Security Audit Skill"
+    - "취약점 검증 파이프라인"
+    - "보안 감사 커버리지"
+    - "에이전트 샌드박스"
+  slug: "cloudflare-security-audit-skill-validation-pipeline"
+  summary: "Cloudflare Security Audit Skill의 정찰·커버리지 원장·독립 반증·구조화된 증거 흐름을 분석하고 AI 보안 감사의 도입 기준을 정리."

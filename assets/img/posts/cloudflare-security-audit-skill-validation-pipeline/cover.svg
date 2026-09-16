@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 보안 감사의 독립 검증 파이프라인</title>
+  <desc id="desc">탐색 후보가 커버리지 원장과 독립 검증을 거쳐 확인된 증거로 좁혀지는 모습</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152f"/><stop offset="1" stop-color="#112d4e"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="85" r="210" fill="#0ea5e9" opacity=".08"/><circle cx="120" cy="590" r="240" fill="#f59e0b" opacity=".07"/>
+  <text x="72" y="105" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="22" font-weight="700">CLOUDFLARE SECURITY AUDIT SKILL</text>
+  <text x="72" y="174" fill="#f8fafc" font-family="Arial, sans-serif" font-size="48" font-weight="800">AI 보안 감사 자동화</text>
+  <text x="72" y="226" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="27">발견량보다 독립 검증과 증거 계약</text>
+  <g transform="translate(80 310)">
+    <path d="M40 100 H990" stroke="url(#beam)" stroke-width="8" stroke-linecap="round" opacity=".7" filter="url(#glow)"/>
+    <g font-family="Arial, sans-serif" text-anchor="middle">
+      <g transform="translate(80)"><circle cy="100" r="46" fill="#f59e0b"/><text y="93" fill="#0f172a" font-size="17" font-weight="800">RECON</text><text y="117" fill="#0f172a" font-size="14">경계 지도</text></g>
+      <g transform="translate(300)"><circle cy="100" r="46" fill="#fb923c"/><text y="93" fill="#0f172a" font-size="17" font-weight="800">HUNT</text><text y="117" fill="#0f172a" font-size="14">후보 탐색</text></g>
+      <g transform="translate(520)"><circle cy="100" r="54" fill="#e2e8f0" stroke="#38bdf8" stroke-width="7"/><text y="93" fill="#0f172a" font-size="16" font-weight="800">VERIFY</text><text y="117" fill="#0f172a" font-size="14">독립 반증</text></g>
+      <g transform="translate(750)"><circle cy="100" r="46" fill="#38bdf8"/><text y="93" fill="#082f49" font-size="16" font-weight="800">EVIDENCE</text><text y="117" fill="#082f49" font-size="14">구조화 기록</text></g>
+      <g transform="translate(970)"><path d="M0 42 L52 65 V103 C52 142 27 164 0 178 C-27 164-52 142-52 103 V65 Z" fill="#22c55e"/><path d="M-19 104 l13 13 28-34" fill="none" stroke="#052e16" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><text y="208" fill="#bbf7d0" font-size="16" font-weight="700">CONFIRMED</text></g>
+    </g>
+  </g>
+  <rect x="72" y="556" width="700" height="2" fill="#334155"/><text x="72" y="592" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">coverage ledger · sandbox · adversarial validation</text>
+</svg>
