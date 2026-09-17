@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Cilium 단계별 전환 의사결정 게이트</title><desc id="desc">기준선부터 CNI, kube-proxy 대체, 고급 기능까지 단계마다 중단 조건을 확인하는 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#60a5fa"/></marker></defs>
+  <rect width="1200" height="720" rx="28" fill="#0b1625"/>
+  <text x="60" y="66" fill="#f8fafc" font-family="Arial,sans-serif" font-size="30" font-weight="700">기능이 아니라 패킷 경로의 변화량으로 나눈다</text>
+  <g font-family="Arial,sans-serif">
+    <g stroke-width="2">
+      <rect x="58" y="122" width="250" height="160" rx="20" fill="#102f46" stroke="#38bdf8"/><rect x="340" y="122" width="250" height="160" rx="20" fill="#123c3c" stroke="#2dd4bf"/><rect x="622" y="122" width="250" height="160" rx="20" fill="#193762" stroke="#60a5fa"/><rect x="904" y="122" width="238" height="160" rx="20" fill="#3a2858" stroke="#a78bfa"/>
+    </g>
+    <g fill="white" text-anchor="middle"><text x="183" y="162" font-size="20" font-weight="700">1. 기준선</text><text x="183" y="198" font-size="16">현재 연결·지연·drop</text><text x="183" y="226" font-size="16">MTU·DNS·장기 TCP</text><text x="465" y="162" font-size="20" font-weight="700">2. CNI + L3/L4</text><text x="465" y="198" font-size="16">IPAM·policy 수렴</text><text x="465" y="226" font-size="16">node 장애·Hubble</text><text x="747" y="162" font-size="20" font-weight="700">3. kube-proxy canary</text><text x="747" y="198" font-size="16">Service·NodePort</text><text x="747" y="226" font-size="16">BPF map·failover</text><text x="1023" y="162" font-size="20" font-weight="700">4. 고급 기능 분리</text><text x="1023" y="198" font-size="16">L7·Gateway·Mesh</text><text x="1023" y="226" font-size="16">각각 별도 SLO</text></g>
+    <g stroke="#60a5fa" stroke-width="4" marker-end="url(#a)"><path d="M308 202H332"/><path d="M590 202H614"/><path d="M872 202H896"/></g>
+    <g>
+      <rect x="58" y="347" width="1084" height="234" rx="24" fill="#111f31" stroke="#334155" stroke-width="2"/>
+      <text x="92" y="392" fill="#fca5a5" font-size="22" font-weight="700">중단 게이트</text>
+      <g fill="#cbd5e1" font-size="18"><circle cx="105" cy="436" r="7" fill="#ef4444"/><text x="126" y="443">정상 경로에서 간헐적 reset, source IP 의미 변경 또는 MTU blackhole이 재현된다.</text><circle cx="105" cy="478" r="7" fill="#ef4444"/><text x="126" y="485">정책 변경 뒤 허용 범위가 넓어지거나 revision 수렴 시간을 설명할 수 없다.</text><circle cx="105" cy="520" r="7" fill="#ef4444"/><text x="126" y="527">on-call이 Kubernetes 객체에서 BPF map과 flow verdict까지 제한 시간 안에 추적하지 못한다.</text><circle cx="105" cy="562" r="7" fill="#ef4444"/><text x="126" y="569">CRD·Gateway API·deprecated 설정의 사전 검사와 검증된 rollback이 없다.</text></g>
+    </g>
+    <rect x="300" y="625" width="600" height="48" rx="24" fill="#164e63"/><text x="600" y="657" fill="#cffafe" text-anchor="middle" font-size="19">게이트를 통과하지 못하면 다음 기능을 켜지 않고 현재 단계에서 복구한다</text>
+  </g>
+</svg>

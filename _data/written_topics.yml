@@ -276,3 +276,14 @@
     - "에이전트 샌드박스"
   slug: "cloudflare-security-audit-skill-validation-pipeline"
   summary: "Cloudflare Security Audit Skill의 정찰·커버리지 원장·독립 반증·구조화된 증거 흐름을 분석하고 AI 보안 감사의 도입 기준을 정리."
+- date: 2026-09-18
+  title: "Cilium eBPF 네트워킹 전환: kube-proxy 대체와 업그레이드 기준"
+  github_repo: "https://github.com/cilium/cilium"
+  main_keyword: "Cilium eBPF 네트워킹 전환"
+  related_keywords:
+    - "kube-proxy 대체"
+    - "Kubernetes NetworkPolicy"
+    - "eBPF 데이터패스"
+    - "Cilium 업그레이드"
+  slug: "cilium-ebpf-networking-migration"
+  summary: "Cilium의 eBPF 데이터패스와 identity 기반 정책을 분석하고 kube-proxy 대체, 장애 진단, 단계별 업그레이드와 PoC 기준을 정리."
