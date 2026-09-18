@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">iLoader 사이드로딩 신뢰 아키텍처</title>
+  <desc id="desc">Apple 개발 서비스, iLoader 호스트, 페어링 채널, iPhone과 SideStore 사이의 자산 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L8 3L0 6Z" fill="#6366f1"/></marker></defs>
+  <rect width="1200" height="700" rx="24" fill="#f8fafc"/>
+  <g font-family="Arial,sans-serif">
+    <text x="60" y="68" font-size="32" font-weight="700" fill="#172554">사이드로딩은 네 신뢰 계층을 통과한다</text>
+    <text x="60" y="104" font-size="17" fill="#475569">오류가 같아 보여도 계정, 서명, 페어링, 기기 실행의 책임은 다르다</text>
+    <g text-anchor="middle">
+      <rect x="65" y="165" width="235" height="180" rx="22" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+      <text x="182" y="210" font-size="22" font-weight="700" fill="#312e81">Apple 서비스</text>
+      <text x="182" y="250" font-size="17" fill="#4338ca">계정 세션 · 2FA</text><text x="182" y="280" font-size="17" fill="#4338ca">App ID · 인증서</text><text x="182" y="310" font-size="17" fill="#4338ca">provisioning profile</text>
+      <rect x="350" y="165" width="235" height="180" rx="22" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+      <text x="467" y="210" font-size="22" font-weight="700" fill="#4c1d95">iLoader 호스트</text>
+      <text x="467" y="250" font-size="17" fill="#6d28d9">IPA 재서명 · 설치</text><text x="467" y="280" font-size="17" fill="#6d28d9">인증서/App ID 관리</text><text x="467" y="310" font-size="17" fill="#6d28d9">민감 로그</text>
+      <rect x="635" y="165" width="235" height="180" rx="22" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+      <text x="752" y="210" font-size="22" font-weight="700" fill="#155e75">페어링 채널</text>
+      <text x="752" y="250" font-size="17" fill="#0e7490">USB · usbmuxd</text><text x="752" y="280" font-size="17" fill="#0e7490">lockdown record</text><text x="752" y="310" font-size="17" fill="#0e7490">rppairing file</text>
+      <rect x="920" y="165" width="215" height="180" rx="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+      <text x="1027" y="210" font-size="22" font-weight="700" fill="#166534">iPhone</text>
+      <text x="1027" y="250" font-size="17" fill="#15803d">Developer Mode</text><text x="1027" y="280" font-size="17" fill="#15803d">SideStore 갱신</text><text x="1027" y="310" font-size="17" fill="#15803d">서명 검증 · 실행</text>
+    </g>
+    <g stroke="#6366f1" stroke-width="4" fill="none" marker-end="url(#a)"><path d="M300 255H338"/><path d="M585 255H623"/><path d="M870 255H908"/></g>
+    <g transform="translate(65 420)">
+      <rect width="1070" height="190" rx="24" fill="#fff" stroke="#cbd5e1"/>
+      <text x="34" y="45" font-size="21" font-weight="700" fill="#0f172a">운영자가 보존할 증거</text>
+      <g font-size="17" fill="#334155">
+        <circle cx="45" cy="87" r="8" fill="#6366f1"/><text x="65" y="93">공식 릴리스 URL · 버전 · 파일 해시</text>
+        <circle cx="45" cy="128" r="8" fill="#7c3aed"/><text x="65" y="134">활성 인증서 · App ID · 영향받는 기기 목록</text>
+        <circle cx="570" cy="87" r="8" fill="#0891b2"/><text x="590" y="93">pairing 파일 생성·전달·삭제 기록</text>
+        <circle cx="570" cy="128" r="8" fill="#16a34a"/><text x="590" y="134">설치·실행·만료·복구 결과와 민감정보 제거 로그</text>
+      </g>
+      <text x="34" y="170" font-size="15" fill="#64748b">한 계층의 성공 메시지는 다음 계층의 실행을 보증하지 않는다.</text>
+    </g>
+  </g>
+</svg>

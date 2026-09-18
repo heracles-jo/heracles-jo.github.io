@@ -287,3 +287,14 @@
     - "Cilium 업그레이드"
   slug: "cilium-ebpf-networking-migration"
   summary: "Cilium의 eBPF 데이터패스와 identity 기반 정책을 분석하고 kube-proxy 대체, 장애 진단, 단계별 업그레이드와 PoC 기준을 정리."
+- date: 2026-09-19
+  title: "iOS 사이드로딩 운영: iLoader 인증서·페어링 보안 기준"
+  github_repo: "https://github.com/nab138/iloader"
+  main_keyword: "iOS 사이드로딩 운영"
+  related_keywords:
+    - "iLoader"
+    - "SideStore"
+    - "Apple 개발 인증서"
+    - "기기 페어링 보안"
+  slug: "iloader-ios-sideloading-security"
+  summary: "iLoader의 SideStore·IPA 설치 경로를 바탕으로 Apple 계정, 개발 인증서, provisioning profile, pairing 파일의 보안 경계와 PoC 기준을 정리."
