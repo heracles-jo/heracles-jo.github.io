@@ -298,3 +298,14 @@
     - "기기 페어링 보안"
   slug: "iloader-ios-sideloading-security"
   summary: "iLoader의 SideStore·IPA 설치 경로를 바탕으로 Apple 계정, 개발 인증서, provisioning profile, pairing 파일의 보안 경계와 PoC 기준을 정리."
+- date: 2026-09-20
+  title: "HTTP/3 전환: quiche로 검증하는 UDP·폴백·관측성"
+  github_repo: "https://github.com/cloudflare/quiche"
+  main_keyword: "HTTP/3 전환"
+  related_keywords:
+    - "quiche"
+    - "QUIC"
+    - "HTTP/2 폴백"
+    - "qlog 관측성"
+  slug: "quiche-http3-rollout"
+  summary: "quiche의 QUIC·HTTP/3 구조를 바탕으로 UDP 차단, HTTP/2 폴백, 0-RTT 보안, qlog 관측성과 단계적 배포 기준을 정리."

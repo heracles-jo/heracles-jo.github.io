@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">HTTP/3 전환과 안전한 폴백</title>
+  <desc id="desc">클라이언트 요청이 UDP QUIC 기반 HTTP/3 또는 TCP 기반 HTTP/2 폴백으로 엣지에 도달하는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#153b50"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="90" r="190" fill="#21d4a7" opacity=".08"/>
+  <circle cx="110" cy="590" r="250" fill="#55a7ff" opacity=".08"/>
+  <text x="74" y="105" fill="#8fd9ff" font-family="Arial, sans-serif" font-size="26" font-weight="700">QUIC · HTTP/3 · OPERATIONS</text>
+  <text x="74" y="175" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="800">HTTP/3 전환</text>
+  <text x="74" y="225" fill="#d7e8f3" font-family="Arial, sans-serif" font-size="28">UDP 경로 · HTTP/2 폴백 · qlog 관측성</text>
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="76" y="310" width="230" height="120" rx="20" fill="#102d44" stroke="#6bbdff" stroke-width="3"/>
+    <text x="191" y="358" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">Client</text>
+    <text x="191" y="394" text-anchor="middle" fill="#a9c7d9" font-size="19">Browser · App</text>
+    <path d="M306 350 H480" stroke="#2ee6b7" stroke-width="8" fill="none"/>
+    <polygon points="480,350 455,337 455,363" fill="#2ee6b7"/>
+    <text x="394" y="333" text-anchor="middle" fill="#7ff5d7" font-size="19">UDP 443 / h3</text>
+    <path d="M306 405 C370 465 420 470 480 430" stroke="#ffbf69" stroke-width="6" fill="none" stroke-dasharray="13 9"/>
+    <polygon points="480,430 453,425 465,449" fill="#ffbf69"/>
+    <text x="389" y="482" text-anchor="middle" fill="#ffd59b" font-size="18">TCP 443 / h2 fallback</text>
+    <rect x="485" y="310" width="260" height="160" rx="24" fill="#124a52" stroke="#2ee6b7" stroke-width="3"/>
+    <text x="615" y="365" text-anchor="middle" fill="#fff" font-size="26" font-weight="700">Edge</text>
+    <text x="615" y="402" text-anchor="middle" fill="#a9f2df" font-size="19">QUIC + TLS + Policy</text>
+    <text x="615" y="435" text-anchor="middle" fill="#a9f2df" font-size="19">Metrics + qlog sample</text>
+    <path d="M745 390 H890" stroke="#8fd9ff" stroke-width="8"/>
+    <polygon points="890,390 865,377 865,403" fill="#8fd9ff"/>
+    <rect x="895" y="330" width="230" height="120" rx="20" fill="#102d44" stroke="#6bbdff" stroke-width="3"/>
+    <text x="1010" y="378" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">Origin</text>
+    <text x="1010" y="414" text-anchor="middle" fill="#a9c7d9" font-size="19">HTTP/2 · HTTP/1.1</text>
+  </g>
+  <text x="74" y="570" fill="#b8cfdd" font-family="Arial, sans-serif" font-size="22">빠른 경로보다 설명 가능한 실패와 안전한 폴백이 먼저다</text>
+</svg>

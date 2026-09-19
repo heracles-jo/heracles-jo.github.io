@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">HTTP/3 단계적 배포 의사결정</title>
+  <desc id="desc">기준선, 제한 배포, 네트워크별 검증, 확대 또는 중단과 롤백을 단계별 게이트로 표현한다</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#526d82"/></marker></defs>
+  <rect width="1200" height="700" rx="28" fill="#0b1728"/>
+  <text x="60" y="72" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#fff">HTTP/3 전환 게이트: 비율이 아니라 사용자 결과로 결정</text>
+  <g font-family="Arial, sans-serif">
+    <g fill="#122c46" stroke="#62b6ff" stroke-width="3">
+      <rect x="55" y="135" width="230" height="150" rx="18"/><rect x="350" y="135" width="230" height="150" rx="18"/><rect x="645" y="135" width="230" height="150" rx="18"/><rect x="940" y="135" width="205" height="150" rx="18"/>
+    </g>
+    <g fill="#fff" font-size="22" font-weight="700" text-anchor="middle">
+      <text x="170" y="180">1. h2 기준선</text><text x="465" y="180">2. Edge canary</text><text x="760" y="180">3. 경로 확대</text><text x="1042" y="180">4. 구현 선택</text>
+    </g>
+    <g fill="#b9d4e8" font-size="17" text-anchor="middle">
+      <text x="170" y="220">TTFB · p99 · 성공률</text><text x="170" y="250">네트워크별 분포</text>
+      <text x="465" y="220">짧은 Alt-Svc ma</text><text x="465" y="250">h3 시도·폴백 기록</text>
+      <text x="760" y="220">모바일 · IPv6 · 기업망</text><text x="760" y="250">손실 · handoff · idle</text>
+      <text x="1042" y="220">관리형 edge 또는</text><text x="1042" y="250">quiche 직접 통합</text>
+    </g>
+    <path d="M285 210 H335" stroke="#526d82" stroke-width="5" marker-end="url(#a)"/><path d="M580 210 H630" stroke="#526d82" stroke-width="5" marker-end="url(#a)"/><path d="M875 210 H925" stroke="#526d82" stroke-width="5" marker-end="url(#a)"/>
+    <rect x="350" y="360" width="525" height="125" rx="20" fill="#123d34" stroke="#35d0a2" stroke-width="3"/>
+    <text x="612" y="405" text-anchor="middle" fill="#8ff0d2" font-size="23" font-weight="700">확대 조건</text>
+    <text x="612" y="440" text-anchor="middle" fill="#d8fff3" font-size="18">최종 성공률 유지 · tail latency 개선 · 비용과 보안 경계 설명 가능</text>
+    <rect x="350" y="530" width="525" height="125" rx="20" fill="#47242a" stroke="#ff7676" stroke-width="3"/>
+    <text x="612" y="575" text-anchor="middle" fill="#ffaaaa" font-size="23" font-weight="700">중단·롤백 조건</text>
+    <text x="612" y="610" text-anchor="middle" fill="#ffe3e3" font-size="18">네트워크별 실패 편향 · 폴백 p99 악화 · memory growth · replay 위험</text>
+    <path d="M760 285 V345" stroke="#35d0a2" stroke-width="5" marker-end="url(#a)"/>
+    <path d="M465 285 C300 330 285 560 335 585" stroke="#ff7676" stroke-width="5" fill="none" stroke-dasharray="12 8" marker-end="url(#a)"/>
+    <text x="93" y="405" fill="#ffb1b1" font-size="18">실패는 숨기지 않고</text><text x="93" y="432" fill="#ffb1b1" font-size="18">h2 정상 경로로 복귀</text>
+  </g>
+</svg>
