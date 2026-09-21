@@ -309,3 +309,14 @@
     - "qlog 관측성"
   slug: "quiche-http3-rollout"
   summary: "quiche의 QUIC·HTTP/3 구조를 바탕으로 UDP 차단, HTTP/2 폴백, 0-RTT 보안, qlog 관측성과 단계적 배포 기준을 정리."
+- date: 2026-09-21
+  title: "컴퓨터 사용 에이전트 평가: Cua Bench 운영 기준"
+  github_repo: "https://github.com/trycua/cua"
+  main_keyword: "컴퓨터 사용 에이전트 평가"
+  related_keywords:
+    - "Cua Bench"
+    - "computer-use agent"
+    - "GUI 에이전트 벤치마크"
+    - "격리 데스크톱"
+  slug: "cua-computer-use-agent-evaluation"
+  summary: "Cua의 태스크·평가기·격리 데스크톱·trajectory 구조를 바탕으로 GUI 에이전트의 재현성, 실패 분류, 보안 경계와 PoC 기준을 정리."
