@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">MVT 감염 판정 의사결정 게이트</title>
+  <desc id="desc">동의, 수집 완전성, 분석 재현성, IOC 문맥, 독립 반증을 통과해야 최종 판정으로 승격하는 체크리스트</desc>
+  <rect width="1200" height="760" rx="28" fill="#081b2a"/>
+  <text x="600" y="62" text-anchor="middle" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="32" font-weight="800" fill="#f4fbff">MVT 결과를 감염 판정으로 승격하는 다섯 게이트</text>
+  <g font-family="Pretendard, Noto Sans KR, sans-serif">
+    <g transform="translate(70 110)">
+      <rect width="1060" height="92" rx="18" fill="#12354a" stroke="#62d6a7" stroke-width="3"/>
+      <circle cx="54" cy="46" r="27" fill="#62d6a7"/><text x="54" y="55" text-anchor="middle" font-size="25" font-weight="800" fill="#06271d">1</text>
+      <text x="105" y="38" font-size="23" font-weight="800" fill="#ffffff">동의와 권한이 명시됐는가?</text>
+      <text x="105" y="69" font-size="18" fill="#c9dde7">데이터 소유자, 목적, 프라이버시 영향, 보존·폐기 정책을 문서화</text>
+      <rect x="850" y="25" width="170" height="42" rx="21" fill="#ff6b7a"/><text x="935" y="53" text-anchor="middle" font-size="17" font-weight="800" fill="#2c070c">아니오 → 중단</text>
+    </g>
+    <g transform="translate(70 220)">
+      <rect width="1060" height="92" rx="18" fill="#12354a" stroke="#6eb7ff" stroke-width="3"/>
+      <circle cx="54" cy="46" r="27" fill="#6eb7ff"/><text x="54" y="55" text-anchor="middle" font-size="25" font-weight="800" fill="#071c30">2</text>
+      <text x="105" y="38" font-size="23" font-weight="800" fill="#ffffff">수집 범위와 원본 무결성을 설명할 수 있는가?</text>
+      <text x="105" y="69" font-size="18" fill="#c9dde7">acquisition manifest, 원본 hash, 작업 복제본, 누락 자료와 시간 범위 확인</text>
+      <rect x="850" y="25" width="170" height="42" rx="21" fill="#f8c95c"/><text x="935" y="53" text-anchor="middle" font-size="17" font-weight="800" fill="#2c2105">아니오 → 재수집</text>
+    </g>
+    <g transform="translate(70 330)">
+      <rect width="1060" height="92" rx="18" fill="#12354a" stroke="#c59cff" stroke-width="3"/>
+      <circle cx="54" cy="46" r="27" fill="#c59cff"/><text x="54" y="55" text-anchor="middle" font-size="25" font-weight="800" fill="#201035">3</text>
+      <text x="105" y="38" font-size="23" font-weight="800" fill="#ffffff">분석 실행이 재현되고 모든 module 상태가 남았는가?</text>
+      <text x="105" y="69" font-size="18" fill="#c9dde7">MVT·IOC·plugin version, network 정책, skipped·failed·warning을 보존</text>
+      <rect x="850" y="25" width="170" height="42" rx="21" fill="#f8c95c"/><text x="935" y="53" text-anchor="middle" font-size="17" font-weight="800" fill="#2c2105">아니오 → 재분석</text>
+    </g>
+    <g transform="translate(70 440)">
+      <rect width="1060" height="92" rx="18" fill="#12354a" stroke="#ffad67" stroke-width="3"/>
+      <circle cx="54" cy="46" r="27" fill="#ffad67"/><text x="54" y="55" text-anchor="middle" font-size="25" font-weight="800" fill="#311702">4</text>
+      <text x="105" y="38" font-size="23" font-weight="800" fill="#ffffff">IOC가 시간·행위·원본 기록과 함께 설명되는가?</text>
+      <text x="105" y="69" font-size="18" fill="#c9dde7">단일 match를 판결로 쓰지 않고 정상 가능성과 공개 IOC 공백을 함께 평가</text>
+      <rect x="850" y="25" width="170" height="42" rx="21" fill="#90a6b3"/><text x="935" y="53" text-anchor="middle" font-size="17" font-weight="800" fill="#0b1c25">아니오 → 미확정</text>
+    </g>
+    <g transform="translate(70 550)">
+      <rect width="1060" height="92" rx="18" fill="#12354a" stroke="#ff7e8b" stroke-width="3"/>
+      <circle cx="54" cy="46" r="27" fill="#ff7e8b"/><text x="54" y="55" text-anchor="middle" font-size="25" font-weight="800" fill="#32080d">5</text>
+      <text x="105" y="38" font-size="23" font-weight="800" fill="#ffffff">독립 분석자가 깨끗한 복제본에서 반증을 시도했는가?</text>
+      <text x="105" y="69" font-size="18" fill="#c9dde7">동일 결과 재현, 대체 설명 제거, 판정 범위와 신뢰도 기록</text>
+      <rect x="850" y="25" width="170" height="42" rx="21" fill="#62d6a7"/><text x="935" y="53" text-anchor="middle" font-size="17" font-weight="800" fill="#06271d">예 → 보고 승격</text>
+    </g>
+    <text x="600" y="705" text-anchor="middle" font-size="22" font-weight="700" fill="#c9dde7">최종 상태: confirmed · contextual · inconclusive · collection/analysis failed</text>
+  </g>
+</svg>

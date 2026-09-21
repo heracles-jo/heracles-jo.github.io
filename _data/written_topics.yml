@@ -320,3 +320,14 @@
     - "격리 데스크톱"
   slug: "cua-computer-use-agent-evaluation"
   summary: "Cua의 태스크·평가기·격리 데스크톱·trajectory 구조를 바탕으로 GUI 에이전트의 재현성, 실패 분류, 보안 경계와 PoC 기준을 정리."
+- date: 2026-09-22
+  title: "모바일 스파이웨어 포렌식: MVT 증거 수집·판정 기준"
+  github_repo: "https://github.com/mvt-project/mvt"
+  main_keyword: "모바일 스파이웨어 포렌식"
+  related_keywords:
+    - "Mobile Verification Toolkit"
+    - "MVT"
+    - "모바일 포렌식"
+    - "STIX IOC"
+  slug: "mvt-mobile-spyware-forensics"
+  summary: "MVT의 iOS 백업·AndroidQF·STIX IOC 분석을 중심으로 증거 보존, 오탐·미탐, 네트워크·동의 경계와 판정 기준을 정리."

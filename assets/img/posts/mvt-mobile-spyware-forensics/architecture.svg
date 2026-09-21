@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">MVT 모바일 포렌식 증거 아키텍처</title>
+  <desc id="desc">동의와 범위 설정부터 기기 수집, 원본 보존, MVT 분석, 전문가 판정까지 분리한 계층도</desc>
+  <rect width="1200" height="720" rx="28" fill="#f6fafc"/>
+  <text x="600" y="64" text-anchor="middle" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="32" font-weight="800" fill="#123047">원본 기기에서 판정까지 책임을 분리한다</text>
+  <g font-family="Pretendard, Noto Sans KR, sans-serif">
+    <g transform="translate(55 120)">
+      <rect width="190" height="170" rx="20" fill="#e7f7f0" stroke="#15966d" stroke-width="3"/>
+      <text x="95" y="48" text-anchor="middle" font-size="24" font-weight="800" fill="#0d6d50">1. 승인·범위</text>
+      <text x="95" y="88" text-anchor="middle" font-size="18" fill="#24475a">데이터 소유자 동의</text>
+      <text x="95" y="119" text-anchor="middle" font-size="18" fill="#24475a">목적·기간·반출</text>
+      <text x="95" y="150" text-anchor="middle" font-size="18" fill="#24475a">중단 조건</text>
+    </g>
+    <path d="M255 205h55" stroke="#517386" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(320 120)">
+      <rect width="190" height="170" rx="20" fill="#e8f2ff" stroke="#3b82f6" stroke-width="3"/>
+      <text x="95" y="48" text-anchor="middle" font-size="24" font-weight="800" fill="#1d5fb7">2. 수집</text>
+      <text x="95" y="88" text-anchor="middle" font-size="18" fill="#24475a">iOS backup·dump</text>
+      <text x="95" y="119" text-anchor="middle" font-size="18" fill="#24475a">sysdiagnose</text>
+      <text x="95" y="150" text-anchor="middle" font-size="18" fill="#24475a">AndroidQF</text>
+    </g>
+    <path d="M520 205h55" stroke="#517386" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(585 120)">
+      <rect width="190" height="170" rx="20" fill="#fff7df" stroke="#d99a12" stroke-width="3"/>
+      <text x="95" y="48" text-anchor="middle" font-size="24" font-weight="800" fill="#9a6600">3. 보존</text>
+      <text x="95" y="88" text-anchor="middle" font-size="18" fill="#24475a">원본 read-only</text>
+      <text x="95" y="119" text-anchor="middle" font-size="18" fill="#24475a">hash·시각·담당자</text>
+      <text x="95" y="150" text-anchor="middle" font-size="18" fill="#24475a">작업 복제본</text>
+    </g>
+    <path d="M785 205h55" stroke="#517386" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(850 120)">
+      <rect width="295" height="170" rx="20" fill="#f0eaff" stroke="#805ad5" stroke-width="3"/>
+      <text x="148" y="48" text-anchor="middle" font-size="24" font-weight="800" fill="#6341b0">4. 분석</text>
+      <text x="148" y="88" text-anchor="middle" font-size="18" fill="#24475a">MVT modules + STIX IOC</text>
+      <text x="148" y="119" text-anchor="middle" font-size="18" fill="#24475a">version·network 고정</text>
+      <text x="148" y="150" text-anchor="middle" font-size="18" fill="#24475a">JSON·warning·log 보존</text>
+    </g>
+    <path d="M997 300v72" stroke="#517386" stroke-width="5" marker-end="url(#arrow)"/>
+    <g transform="translate(760 390)">
+      <rect width="385" height="175" rx="22" fill="#ffecee" stroke="#dc5263" stroke-width="3"/>
+      <text x="192" y="50" text-anchor="middle" font-size="25" font-weight="800" fill="#b32d42">5. 판정과 반증</text>
+      <text x="192" y="91" text-anchor="middle" font-size="18" fill="#24475a">IOC 일치 + 타임라인 + 행위 흔적</text>
+      <text x="192" y="123" text-anchor="middle" font-size="18" fill="#24475a">독립 분석자 재현</text>
+      <text x="192" y="154" text-anchor="middle" font-size="18" fill="#24475a">확정·정황·공백을 분리</text>
+    </g>
+    <g transform="translate(55 390)">
+      <rect width="620" height="175" rx="22" fill="#ffffff" stroke="#9eb4c0" stroke-width="3" stroke-dasharray="10 8"/>
+      <text x="310" y="45" text-anchor="middle" font-size="24" font-weight="800" fill="#123047">모든 단계에 남겨야 할 evidence manifest</text>
+      <text x="310" y="88" text-anchor="middle" font-size="19" fill="#24475a">source device · acquisition method · tool/container version</text>
+      <text x="310" y="122" text-anchor="middle" font-size="19" fill="#24475a">IOC source/commit · module status · input/output hash</text>
+      <text x="310" y="154" text-anchor="middle" font-size="19" fill="#24475a">access history · external lookup · retention/deletion</text>
+    </g>
+    <text x="600" y="645" text-anchor="middle" font-size="22" font-weight="700" fill="#b32d42">경고 0건 ≠ 감염 없음 · exit 0 ≠ 분석 완전성</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0l12 6-12 6z" fill="#517386"/></marker></defs>
+</svg>
