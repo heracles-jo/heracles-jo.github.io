@@ -331,3 +331,14 @@
     - "STIX IOC"
   slug: "mvt-mobile-spyware-forensics"
   summary: "MVT의 iOS 백업·AndroidQF·STIX IOC 분석을 중심으로 증거 보존, 오탐·미탐, 네트워크·동의 경계와 판정 기준을 정리."
+- date: 2026-09-23
+  title: "AI 에이전트 오케스트레이션: Google AX 운영 경계"
+  github_repo: "https://github.com/google/ax"
+  main_keyword: "AI 에이전트 오케스트레이션"
+  related_keywords:
+    - "Google AX"
+    - "Agent Substrate"
+    - "Kubernetes 에이전트 런타임"
+    - "에이전트 suspend resume"
+  slug: "google-ax-agent-orchestration"
+  summary: "Google AX의 Task·Workspace·Gateway와 Agent Substrate 계층을 바탕으로 장기 실행 에이전트의 격리, 재개, 용량 부족, 관측성과 업그레이드 기준을 정리."

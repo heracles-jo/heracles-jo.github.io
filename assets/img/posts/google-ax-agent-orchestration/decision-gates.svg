@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Google AX 도입 의사결정 게이트</title>
+  <desc id="desc">기능 데모를 격리, 상태 정확성, 용량, 관측성, 업그레이드 검증을 거쳐 운영 후보로 승격하는 흐름</desc>
+  <rect width="1200" height="720" rx="24" fill="#0b1220"/>
+  <text x="600" y="65" text-anchor="middle" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">데모에서 운영 후보로 가는 다섯 개 게이트</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(70 125)">
+      <rect width="190" height="180" rx="20" fill="#13233a" stroke="#38bdf8" stroke-width="3"/>
+      <circle cx="95" cy="48" r="25" fill="#0ea5e9"/><text x="95" y="57" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">1</text>
+      <text x="95" y="98" text-anchor="middle" fill="#e0f2fe" font-size="23" font-weight="700">격리</text>
+      <text x="95" y="132" text-anchor="middle" fill="#94a3b8" font-size="16">default deny</text>
+      <text x="95" y="155" text-anchor="middle" fill="#94a3b8" font-size="16">actor 간 차단</text>
+    </g>
+    <g transform="translate(285 125)">
+      <rect width="190" height="180" rx="20" fill="#13233a" stroke="#a78bfa" stroke-width="3"/>
+      <circle cx="95" cy="48" r="25" fill="#8b5cf6"/><text x="95" y="57" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">2</text>
+      <text x="95" y="98" text-anchor="middle" fill="#ede9fe" font-size="23" font-weight="700">상태 정확성</text>
+      <text x="95" y="132" text-anchor="middle" fill="#94a3b8" font-size="16">checkpoint</text>
+      <text x="95" y="155" text-anchor="middle" fill="#94a3b8" font-size="16">중복 부작용 0</text>
+    </g>
+    <g transform="translate(500 125)">
+      <rect width="190" height="180" rx="20" fill="#13233a" stroke="#fbbf24" stroke-width="3"/>
+      <circle cx="95" cy="48" r="25" fill="#f59e0b"/><text x="95" y="57" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">3</text>
+      <text x="95" y="98" text-anchor="middle" fill="#fef3c7" font-size="23" font-weight="700">용량</text>
+      <text x="95" y="132" text-anchor="middle" fill="#94a3b8" font-size="16">no-capacity</text>
+      <text x="95" y="155" text-anchor="middle" fill="#94a3b8" font-size="16">backoff · quota</text>
+    </g>
+    <g transform="translate(715 125)">
+      <rect width="190" height="180" rx="20" fill="#13233a" stroke="#34d399" stroke-width="3"/>
+      <circle cx="95" cy="48" r="25" fill="#10b981"/><text x="95" y="57" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">4</text>
+      <text x="95" y="98" text-anchor="middle" fill="#d1fae5" font-size="23" font-weight="700">관측성</text>
+      <text x="95" y="132" text-anchor="middle" fill="#94a3b8" font-size="16">actor UID</text>
+      <text x="95" y="155" text-anchor="middle" fill="#94a3b8" font-size="16">failure domain</text>
+    </g>
+    <g transform="translate(930 125)">
+      <rect width="190" height="180" rx="20" fill="#13233a" stroke="#fb7185" stroke-width="3"/>
+      <circle cx="95" cy="48" r="25" fill="#f43f5e"/><text x="95" y="57" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">5</text>
+      <text x="95" y="98" text-anchor="middle" fill="#ffe4e6" font-size="23" font-weight="700">업그레이드</text>
+      <text x="95" y="132" text-anchor="middle" fill="#94a3b8" font-size="16">drain · resume</text>
+      <text x="95" y="155" text-anchor="middle" fill="#94a3b8" font-size="16">rollback</text>
+    </g>
+    <g stroke="#64748b" stroke-width="4" fill="none">
+      <path d="M260 215h25M475 215h25M690 215h25M905 215h25"/>
+    </g>
+    <g fill="#64748b"><path d="M285 215l-12-8v16z"/><path d="M500 215l-12-8v16z"/><path d="M715 215l-12-8v16z"/><path d="M930 215l-12-8v16z"/></g>
+    <rect x="130" y="390" width="410" height="190" rx="24" fill="#172033" stroke="#ef4444" stroke-width="2"/>
+    <text x="335" y="435" text-anchor="middle" fill="#fecaca" font-size="27" font-weight="700">중단</text>
+    <text x="170" y="478" fill="#cbd5e1" font-size="19">• 다른 actor·control plane 접근</text>
+    <text x="170" y="512" fill="#cbd5e1" font-size="19">• resume 후 부작용 중복</text>
+    <text x="170" y="546" fill="#cbd5e1" font-size="19">• terminal crash와 상태 손실</text>
+    <rect x="660" y="390" width="410" height="190" rx="24" fill="#172033" stroke="#22c55e" stroke-width="2"/>
+    <text x="865" y="435" text-anchor="middle" fill="#bbf7d0" font-size="27" font-weight="700">제한된 운영 후보</text>
+    <text x="700" y="478" fill="#cbd5e1" font-size="19">• 실패 영역과 비용을 설명</text>
+    <text x="700" y="512" fill="#cbd5e1" font-size="19">• snapshot·secret 경계 검증</text>
+    <text x="700" y="546" fill="#cbd5e1" font-size="19">• node별 rollback 재현</text>
+    <path d="M540 485H650" stroke="#94a3b8" stroke-width="5"/><path d="M650 485l-16-10v20z" fill="#94a3b8"/>
+  </g>
+  <text x="600" y="650" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">통과 기준은 YAML 적용 성공이 아니라 안전하게 멈추고 다시 설명할 수 있는가다</text>
+</svg>
