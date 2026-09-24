@@ -353,3 +353,14 @@
     - "SfM 메시 파이프라인"
   slug: "spirula-studio-gaussian-splatting-pipeline"
   summary: "Spirula Studio의 영상·사진 입력, native SfM, 3DGS 학습, 메시 변환을 중심으로 backend 동등성, VRAM, 라이선스와 PoC 기준을 정리."
+- date: 2026-09-25
+  title: "LLM 양자화 배포: NVIDIA Model Optimizer 검증 기준"
+  github_repo: "https://github.com/NVIDIA/Model-Optimizer"
+  main_keyword: "LLM 양자화 배포"
+  related_keywords:
+    - "NVIDIA Model Optimizer"
+    - "PTQ QAT QAD"
+    - "양자화 체크포인트"
+    - "LLM 추론 최적화"
+  slug: "nvidia-modelopt-llm-quantization-pipeline"
+  summary: "ModelOpt의 calibration, PTQ·QAT·QAD, export와 runtime 검증을 연결해 정확도 회귀, artifact 완전성, 재현성과 PoC 중단 기준을 정리."
