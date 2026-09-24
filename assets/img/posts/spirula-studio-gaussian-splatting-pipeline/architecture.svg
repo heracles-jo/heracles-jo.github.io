@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Spirula Studio 아키텍처</title>
+  <desc id="desc">공통 TrainerCore와 engine 계층이 CUDA 및 Vulkan backend로 분기되는 구조</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L10 3 0 6z" fill="#5dd6ff"/></marker><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#081827"/><stop offset="1" stop-color="#122f4a"/></linearGradient></defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <text x="600" y="58" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="800" text-anchor="middle">입력 계보와 GPU backend를 분리하는 구조</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(90 105)"><rect width="440" height="95" rx="18" fill="#153b58" stroke="#5dd6ff" stroke-width="2"/><text x="220" y="40" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">CLI · ImGui GUI · Batch</text><text x="220" y="70" fill="#a9c7dc" font-size="17" text-anchor="middle">같은 config와 실행 driver 공유</text></g>
+    <g transform="translate(670 105)"><rect width="440" height="95" rx="18" fill="#153b58" stroke="#5dd6ff" stroke-width="2"/><text x="220" y="40" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">COLMAP · Nerfstudio · Metashape</text><text x="220" y="70" fill="#a9c7dc" font-size="17" text-anchor="middle">native dataset parser</text></g>
+    <path d="M310 205V260" stroke="#5dd6ff" stroke-width="4" marker-end="url(#arrow)"/><path d="M890 205V235Q890 260 865 260H735" fill="none" stroke="#5dd6ff" stroke-width="4" marker-end="url(#arrow)"/>
+    <g transform="translate(255 275)"><rect width="690" height="115" rx="20" fill="#1c4865" stroke="#7ee8c5" stroke-width="3"/><text x="345" y="43" fill="#fff" font-size="28" font-weight="800" text-anchor="middle">TrainerCore + DataManager + Engine</text><text x="345" y="76" fill="#b7d9e8" font-size="18" text-anchor="middle">dataset → seeding → training step → checkpoint → viewer</text><text x="345" y="100" fill="#ffcf87" font-size="16" text-anchor="middle">process-global state: 장면 전환 시 reset·격리 검증 필요</text></g>
+    <path d="M600 395V455" stroke="#5dd6ff" stroke-width="4" marker-end="url(#arrow)"/>
+    <g transform="translate(375 465)"><rect width="450" height="85" rx="18" fill="#122f4a" stroke="#9b8cff" stroke-width="2"/><text x="225" y="36" fill="#fff" font-size="24" font-weight="700" text-anchor="middle">Backend API Seam</text><text x="225" y="64" fill="#b7c2e8" font-size="17" text-anchor="middle">launch · memory · event 계약</text></g>
+    <path d="M490 555V610" stroke="#5dd6ff" stroke-width="4" marker-end="url(#arrow)"/><path d="M710 555V610" stroke="#5dd6ff" stroke-width="4" marker-end="url(#arrow)"/>
+    <g transform="translate(180 620)"><rect width="420" height="95" rx="18" fill="#26365f" stroke="#9b8cff" stroke-width="2"/><text x="210" y="39" fill="#fff" font-size="26" font-weight="800" text-anchor="middle">CUDA</text><text x="210" y="69" fill="#c3cbed" font-size="17" text-anchor="middle">kernel · CUB · template instantiation</text></g>
+    <g transform="translate(600 620)"><rect width="420" height="95" rx="18" fill="#253d59" stroke="#7ee8c5" stroke-width="2"/><text x="210" y="39" fill="#fff" font-size="26" font-weight="800" text-anchor="middle">Vulkan</text><text x="210" y="69" fill="#c3e8df" font-size="17" text-anchor="middle">Slang · SPIR-V · capability variant</text></g>
+  </g>
+</svg>

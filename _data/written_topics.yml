@@ -342,3 +342,14 @@
     - "에이전트 suspend resume"
   slug: "google-ax-agent-orchestration"
   summary: "Google AX의 Task·Workspace·Gateway와 Agent Substrate 계층을 바탕으로 장기 실행 에이전트의 격리, 재개, 용량 부족, 관측성과 업그레이드 기준을 정리."
+- date: 2026-09-24
+  title: "3D Gaussian Splatting 파이프라인: Spirula Studio 도입 기준"
+  github_repo: "https://github.com/harry7557558/spirula-studio"
+  main_keyword: "3D Gaussian Splatting 파이프라인"
+  related_keywords:
+    - "Spirula Studio"
+    - "Vulkan 3DGS"
+    - "GPU 이식성"
+    - "SfM 메시 파이프라인"
+  slug: "spirula-studio-gaussian-splatting-pipeline"
+  summary: "Spirula Studio의 영상·사진 입력, native SfM, 3DGS 학습, 메시 변환을 중심으로 backend 동등성, VRAM, 라이선스와 PoC 기준을 정리."

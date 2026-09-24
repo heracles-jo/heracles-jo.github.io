@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Spirula Studio 3D Gaussian Splatting 파이프라인</title>
+  <desc id="desc">사진과 영상에서 SfM, Gaussian 학습, 메시 변환으로 이어지는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071525"/><stop offset="1" stop-color="#18365a"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#53d7ff"/><stop offset="1" stop-color="#9b7cff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#8fdcff"><path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200"/><path d="M180 0V630M420 0V630M660 0V630M900 0V630"/></g>
+  <text x="72" y="105" fill="#9fe7ff" font-family="Arial, sans-serif" font-size="24" font-weight="700">CROSS-VENDOR 3D PIPELINE</text>
+  <text x="72" y="174" fill="#fff" font-family="Arial, sans-serif" font-size="52" font-weight="800">3D Gaussian Splatting</text>
+  <text x="72" y="232" fill="#dbeaff" font-family="Arial, sans-serif" font-size="38" font-weight="700">Spirula Studio 도입 기준</text>
+  <g transform="translate(75 320)" font-family="Arial, sans-serif" font-size="21" font-weight="700">
+    <g><rect width="205" height="116" rx="20" fill="#102b47" stroke="#53d7ff" stroke-width="2"/><text x="102" y="52" fill="#fff" text-anchor="middle">사진 · 영상</text><text x="102" y="82" fill="#91aeca" text-anchor="middle" font-size="16">frame · mask</text></g>
+    <path d="M220 58H278" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/><path d="m270 44 18 14-18 14" fill="none" stroke="#8fdcff" stroke-width="6"/>
+    <g transform="translate(300)"><rect width="205" height="116" rx="20" fill="#102b47" stroke="#53d7ff" stroke-width="2"/><text x="102" y="52" fill="#fff" text-anchor="middle">Native SfM</text><text x="102" y="82" fill="#91aeca" text-anchor="middle" font-size="16">pose · point cloud</text></g>
+    <path d="M520 58H578" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/><path d="m570 44 18 14-18 14" fill="none" stroke="#8fdcff" stroke-width="6"/>
+    <g transform="translate(600)"><rect width="205" height="116" rx="20" fill="#102b47" stroke="#9b7cff" stroke-width="2"/><text x="102" y="48" fill="#fff" text-anchor="middle">Gaussian 학습</text><text x="102" y="78" fill="#91aeca" text-anchor="middle" font-size="16">Vulkan · CUDA</text></g>
+    <path d="M820 58H878" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/><path d="m870 44 18 14-18 14" fill="none" stroke="#b49cff" stroke-width="6"/>
+    <g transform="translate(900)"><rect width="205" height="116" rx="20" fill="#102b47" stroke="#9b7cff" stroke-width="2"/><text x="102" y="48" fill="#fff" text-anchor="middle">Splat · Mesh</text><text x="102" y="78" fill="#91aeca" text-anchor="middle" font-size="16">viewer · export</text></g>
+  </g>
+  <g filter="url(#glow)" fill="#7fe5ff" opacity=".8"><circle cx="825" cy="154" r="8"/><circle cx="863" cy="127" r="5"/><circle cx="896" cy="169" r="7"/><circle cx="929" cy="132" r="4"/><circle cx="964" cy="179" r="9"/><circle cx="1001" cy="143" r="6"/><circle cx="1042" cy="183" r="5"/></g>
+  <text x="75" y="540" fill="#b9cde2" font-family="Arial, sans-serif" font-size="22">입력 계보 · backend parity · VRAM · 라이선스 · downstream 품질</text>
+  <text x="1125" y="585" fill="#7595b5" font-family="Arial, sans-serif" font-size="18" text-anchor="end">heracles.jo</text>
+</svg>
