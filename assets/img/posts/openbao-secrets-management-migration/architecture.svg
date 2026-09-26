@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">OpenBao 시크릿 관리 아키텍처</title>
+  <desc id="desc">사용자와 워크로드가 인증과 정책을 거쳐 KV, 동적 시크릿, PKI, Transit을 사용하고 암호화된 저장소와 감사 로그로 연결되는 구조</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6z" fill="#38bdf8"/></marker></defs>
+  <rect width="1200" height="720" rx="28" fill="#071526"/>
+  <text x="60" y="66" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="34" font-weight="800">인증에서 폐기까지: OpenBao의 신뢰 경계</text>
+  <g font-family="system-ui,sans-serif">
+    <rect x="55" y="130" width="210" height="180" rx="22" fill="#10283c" stroke="#64748b" stroke-width="2"/>
+    <text x="89" y="174" fill="#bae6fd" font-size="25" font-weight="700">요청 주체</text>
+    <text x="89" y="218" fill="#e2e8f0" font-size="21">사용자 · CI</text><text x="89" y="254" fill="#e2e8f0" font-size="21">Kubernetes</text><text x="89" y="290" fill="#e2e8f0" font-size="21">애플리케이션</text>
+
+    <rect x="335" y="130" width="235" height="180" rx="22" fill="#0f3a46" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="373" y="174" fill="#99f6e4" font-size="25" font-weight="700">인증 · 토큰</text>
+    <text x="373" y="218" fill="#e2e8f0" font-size="21">OIDC · AppRole</text><text x="373" y="254" fill="#e2e8f0" font-size="21">Kubernetes auth</text><text x="373" y="290" fill="#e2e8f0" font-size="21">TTL · renewal</text>
+
+    <rect x="640" y="130" width="220" height="180" rx="22" fill="#11314a" stroke="#38bdf8" stroke-width="3"/>
+    <text x="680" y="174" fill="#bae6fd" font-size="25" font-weight="700">정책 · ACL</text>
+    <text x="680" y="218" fill="#e2e8f0" font-size="21">default deny</text><text x="680" y="254" fill="#e2e8f0" font-size="21">path capability</text><text x="680" y="290" fill="#e2e8f0" font-size="21">control group</text>
+
+    <rect x="925" y="105" width="220" height="230" rx="22" fill="#27214a" stroke="#a78bfa" stroke-width="3"/>
+    <text x="963" y="150" fill="#ddd6fe" font-size="25" font-weight="700">Secret engines</text>
+    <text x="963" y="194" fill="#ede9fe" font-size="21">KV 저장</text><text x="963" y="230" fill="#ede9fe" font-size="21">동적 DB 계정</text><text x="963" y="266" fill="#ede9fe" font-size="21">PKI 인증서</text><text x="963" y="302" fill="#ede9fe" font-size="21">Transit 암호화</text>
+
+    <path d="M265 220h62M570 220h62M860 220h57" stroke="#38bdf8" stroke-width="5" marker-end="url(#arrow)"/>
+
+    <rect x="250" y="425" width="320" height="170" rx="24" fill="#10283c" stroke="#f59e0b" stroke-width="3"/>
+    <text x="292" y="470" fill="#fde68a" font-size="25" font-weight="700">암호화된 저장 계층</text>
+    <text x="292" y="514" fill="#e2e8f0" font-size="21">Raft · PostgreSQL</text><text x="292" y="550" fill="#e2e8f0" font-size="21">snapshot · quorum · 복구</text>
+
+    <rect x="650" y="425" width="300" height="170" rx="24" fill="#10283c" stroke="#fb7185" stroke-width="3"/>
+    <text x="695" y="470" fill="#fecdd3" font-size="25" font-weight="700">감사 · 관측 계층</text>
+    <text x="695" y="514" fill="#e2e8f0" font-size="21">audit device · metrics</text><text x="695" y="550" fill="#e2e8f0" font-size="21">누락·지연·민감 정보 검증</text>
+
+    <path d="M1035 335v76H570" stroke="#f59e0b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M1035 335v76H950" stroke="#fb7185" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <text x="60" y="665" fill="#94a3b8" font-size="20">핵심 판단: 암호화 저장만 보지 말고 인증·정책·lease·감사·복구를 하나의 운영 계약으로 검증한다.</text>
+  </g>
+</svg>

@@ -364,3 +364,14 @@
     - "LLM 추론 최적화"
   slug: "nvidia-modelopt-llm-quantization-pipeline"
   summary: "ModelOpt의 calibration, PTQ·QAT·QAD, export와 runtime 검증을 연결해 정확도 회귀, artifact 완전성, 재현성과 PoC 중단 기준을 정리."
+- date: 2026-09-27
+  title: "OpenBao 시크릿 관리 전환: Vault 호환성보다 중요한 운영 기준"
+  github_repo: "https://github.com/openbao/openbao"
+  main_keyword: "OpenBao 시크릿 관리 전환"
+  related_keywords:
+    - "동적 시크릿"
+    - "Vault 호환성"
+    - "Raft 고가용성"
+    - "PKI Transit"
+  slug: "openbao-secrets-management-migration"
+  summary: "OpenBao의 동적 시크릿·PKI·Transit과 Raft HA를 바탕으로 정책, 호환성, 장애 복구, 감사와 전환 PoC 기준을 정리."

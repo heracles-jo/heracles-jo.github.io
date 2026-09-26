@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OpenBao 시크릿 관리 전환</title>
+  <desc id="desc">시크릿 발급과 정책, 감사, 복구를 연결한 운영 기준</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#123c4a"/></linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5eead4"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#7dd3fc" fill="none"><path d="M0 100h1200M0 210h1200M0 320h1200M0 430h1200M0 540h1200"/><path d="M160 0v630M360 0v630M560 0v630M760 0v630M960 0v630"/></g>
+  <g transform="translate(770 120)" filter="url(#glow)">
+    <rect x="0" y="70" width="270" height="280" rx="34" fill="#0b2131" stroke="#5eead4" stroke-width="5"/>
+    <path d="M72 70V35c0-105 126-105 126 0v35" fill="none" stroke="#5eead4" stroke-width="28" stroke-linecap="round"/>
+    <circle cx="135" cy="195" r="35" fill="url(#key)"/><path d="M135 225v70" stroke="#7dd3fc" stroke-width="20" stroke-linecap="round"/>
+  </g>
+  <text x="86" y="190" fill="#99f6e4" font-family="system-ui,sans-serif" font-size="28" font-weight="700">SECURITY · PLATFORM ENGINEERING</text>
+  <text x="82" y="276" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="58" font-weight="800">OpenBao 시크릿 관리 전환</text>
+  <text x="86" y="345" fill="#bae6fd" font-family="system-ui,sans-serif" font-size="34" font-weight="650">Vault 호환성보다 중요한 운영 기준</text>
+  <g font-family="system-ui,sans-serif" font-size="24" font-weight="650">
+    <rect x="86" y="410" width="160" height="48" rx="24" fill="#134e4a"/><text x="121" y="442" fill="#ccfbf1">동적 발급</text>
+    <rect x="264" y="410" width="136" height="48" rx="24" fill="#164e63"/><text x="302" y="442" fill="#cffafe">정책</text>
+    <rect x="418" y="410" width="136" height="48" rx="24" fill="#1e3a5f"/><text x="456" y="442" fill="#dbeafe">감사</text>
+    <rect x="572" y="410" width="136" height="48" rx="24" fill="#3b305c"/><text x="610" y="442" fill="#ede9fe">복구</text>
+  </g>
+  <text x="86" y="535" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="24">heracles.jo · 2026.09.27</text>
+</svg>
