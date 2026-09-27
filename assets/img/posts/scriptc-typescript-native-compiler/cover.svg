@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">TypeScript 네이티브 컴파일과 scriptc</title>
+  <desc id="desc">TypeScript가 typed IR과 LLVM을 거쳐 엔진 없는 네이티브 실행 파일로 변환되는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08111f"/><stop offset="1" stop-color="#1c2554"/></linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset=".55" stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6z" fill="#7dd3fc"/></marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".16" stroke="#93c5fd"><path d="M0 105h1200M0 210h1200M0 315h1200M0 420h1200M0 525h1200"/><path d="M150 0v630M350 0v630M550 0v630M750 0v630M950 0v630"/></g>
+  <text x="78" y="154" fill="#7dd3fc" font-family="system-ui,sans-serif" font-size="27" font-weight="750">DEVELOPER TOOLS · SOFTWARE ENGINEERING</text>
+  <text x="76" y="244" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="57" font-weight="850">TypeScript 네이티브 컴파일</text>
+  <text x="80" y="315" fill="#ddd6fe" font-family="system-ui,sans-serif" font-size="35" font-weight="700">scriptc 도입 경계와 검증 기준</text>
+  <g transform="translate(690 142)" font-family="ui-monospace,monospace" text-anchor="middle" filter="url(#glow)">
+    <rect x="0" y="0" width="170" height="72" rx="18" fill="#0c4a6e" stroke="#38bdf8" stroke-width="3"/><text x="85" y="45" fill="#e0f2fe" font-size="24" font-weight="800">TypeScript</text>
+    <path d="M170 36h58" stroke="#7dd3fc" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="238" y="0" width="150" height="72" rx="18" fill="#312e81" stroke="#818cf8" stroke-width="3"/><text x="313" y="45" fill="#e0e7ff" font-size="24" font-weight="800">Typed IR</text>
+    <path d="M313 72v66" stroke="#a5b4fc" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="228" y="148" width="170" height="72" rx="18" fill="#581c87" stroke="#c084fc" stroke-width="3"/><text x="313" y="193" fill="#f3e8ff" font-size="24" font-weight="800">LLVM / C</text>
+    <path d="M313 220v66" stroke="#d8b4fe" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="188" y="296" width="250" height="78" rx="20" fill="#172554" stroke="url(#flow)" stroke-width="4"/><text x="313" y="343" fill="#f8fafc" font-size="23" font-weight="800">Native Executable</text>
+  </g>
+  <g font-family="system-ui,sans-serif" font-size="22" font-weight="700">
+    <rect x="80" y="392" width="170" height="46" rx="23" fill="#0c4a6e"/><text x="117" y="422" fill="#bae6fd">정적 coverage</text>
+    <rect x="268" y="392" width="170" height="46" rx="23" fill="#312e81"/><text x="310" y="422" fill="#c7d2fe">Node 동등성</text>
+    <rect x="456" y="392" width="170" height="46" rx="23" fill="#581c87"/><text x="499" y="422" fill="#e9d5ff">artifact 검증</text>
+  </g>
+  <text x="80" y="535" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="24">heracles.jo · 2026.09.28</text>
+</svg>

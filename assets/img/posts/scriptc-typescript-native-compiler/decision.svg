@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">scriptc 도입 의사결정 게이트</title>
+  <desc id="desc">정적 coverage, Node 동등성, artifact 재현성, 운영 가능성을 검증해 도입 또는 대안을 선택하는 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6z" fill="#67e8f9"/></marker></defs>
+  <rect width="1200" height="760" rx="28" fill="#071321"/>
+  <text x="58" y="68" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="36" font-weight="850">파일 하나가 아니라 네 개의 배포 계약을 검증한다</text>
+  <g font-family="system-ui,sans-serif">
+    <g transform="translate(55 125)"><rect width="245" height="205" rx="24" fill="#123248" stroke="#38bdf8" stroke-width="3"/><circle cx="43" cy="43" r="22" fill="#0369a1"/><text x="36" y="52" fill="#fff" font-size="24" font-weight="850">1</text><text x="80" y="53" fill="#bae6fd" font-size="24" font-weight="800">정적 적합성</text><text x="28" y="101" fill="#e2e8f0" font-size="19">coverage · diagnostic</text><text x="28" y="135" fill="#e2e8f0" font-size="19">dynamic island 비율</text><text x="28" y="174" fill="#94a3b8" font-size="18">핵심 경로가 정적인가</text></g>
+    <g transform="translate(337 125)"><rect width="245" height="205" rx="24" fill="#1e2f54" stroke="#818cf8" stroke-width="3"/><circle cx="43" cy="43" r="22" fill="#4338ca"/><text x="36" y="52" fill="#fff" font-size="24" font-weight="850">2</text><text x="80" y="53" fill="#c7d2fe" font-size="24" font-weight="800">의미 동등성</text><text x="28" y="101" fill="#e2e8f0" font-size="19">출력 · 예외 · async</text><text x="28" y="135" fill="#e2e8f0" font-size="19">protocol · filesystem</text><text x="28" y="174" fill="#94a3b8" font-size="18">Node 기준과 같은가</text></g>
+    <g transform="translate(619 125)"><rect width="245" height="205" rx="24" fill="#3b2752" stroke="#c084fc" stroke-width="3"/><circle cx="43" cy="43" r="22" fill="#7e22ce"/><text x="36" y="52" fill="#fff" font-size="24" font-weight="850">3</text><text x="80" y="53" fill="#e9d5ff" font-size="24" font-weight="800">Artifact</text><text x="28" y="101" fill="#e2e8f0" font-size="19">target · digest · SBOM</text><text x="28" y="135" fill="#e2e8f0" font-size="19">signing · symbols · rollback</text><text x="28" y="174" fill="#94a3b8" font-size="18">다시 만들 수 있는가</text></g>
+    <g transform="translate(901 125)"><rect width="245" height="205" rx="24" fill="#472830" stroke="#fb7185" stroke-width="3"/><circle cx="43" cy="43" r="22" fill="#be123c"/><text x="36" y="52" fill="#fff" font-size="24" font-weight="850">4</text><text x="80" y="53" fill="#fecdd3" font-size="24" font-weight="800">운영 가능성</text><text x="28" y="101" fill="#e2e8f0" font-size="19">debug · crash · upgrade</text><text x="28" y="135" fill="#e2e8f0" font-size="19">platform matrix · owner</text><text x="28" y="174" fill="#94a3b8" font-size="18">on-call이 설명 가능한가</text></g>
+    <path d="M300 228h29M582 228h29M864 228h29" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+
+    <rect x="105" y="450" width="430" height="170" rx="28" fill="#103b32" stroke="#4ade80" stroke-width="4"/>
+    <text x="154" y="503" fill="#bbf7d0" font-size="30" font-weight="850">scriptc 도입 진행</text>
+    <text x="154" y="546" fill="#dcfce7" font-size="21">작은 typed CLI부터 시작하고</text><text x="154" y="580" fill="#dcfce7" font-size="21">target별 artifact gate를 유지한다.</text>
+
+    <rect x="665" y="450" width="430" height="170" rx="28" fill="#44301d" stroke="#f59e0b" stroke-width="4"/>
+    <text x="714" y="503" fill="#fde68a" font-size="30" font-weight="850">runtime 포함 대안</text>
+    <text x="714" y="546" fill="#fef3c7" font-size="21">Bun · Deno · Node SEA로</text><text x="714" y="580" fill="#fef3c7" font-size="21">호환성과 운영 단순성을 우선한다.</text>
+
+    <path d="M1023 330v66H320v46" fill="none" stroke="#4ade80" stroke-width="5" marker-end="url(#a)"/>
+    <path d="M1023 330v112H880" fill="none" stroke="#f59e0b" stroke-width="5" marker-end="url(#a)"/>
+    <text x="58" y="700" fill="#94a3b8" font-size="20">중단 조건: 핵심 경로의 높은 dynamic 의존, Node 의미 차이, 재현 불가능한 target build, 디버깅·업그레이드 소유자 부재</text>
+  </g>
+</svg>
