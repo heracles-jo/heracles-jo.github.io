@@ -386,3 +386,14 @@
     - "Node 없는 실행 파일"
   slug: "scriptc-typescript-native-compiler"
   summary: "scriptc의 tsc·typed IR·LLVM 파이프라인과 정적·동적 실행 경계를 분석하고 Node 동등성, artifact, 공급망, PoC 검증 기준을 정리."
+- date: 2026-09-29
+  title: "오픈소스 위상배열 레이더: PLFM 하드웨어 검증 기준"
+  github_repo: "https://github.com/NawfalMotii79/PLFM_RADAR"
+  main_keyword: "오픈소스 위상배열 레이더"
+  related_keywords:
+    - "PLFM RADAR"
+    - "위상배열 레이더"
+    - "RF 하드웨어 검증"
+    - "FPGA 신호 처리"
+  slug: "plfm-radar-open-hardware-validation"
+  summary: "AERIS-10의 RF·전원·FPGA·호스트 경계를 따라 시뮬레이션과 실측의 간극, 배열 보정, 안전, 라이선스와 PoC 중단 기준을 정리."

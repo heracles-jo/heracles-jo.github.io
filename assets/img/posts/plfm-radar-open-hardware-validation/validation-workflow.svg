@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">PLFM 레이더 단계별 검증 워크플로</title>
+  <desc id="desc">설계 동결에서 저위험 전원, 디지털 체인, 수신과 배열 보정, 제한적 송신, 탐지 평가로 진행하는 안전 검증 절차</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6z" fill="#67e8f9"/></marker></defs>
+  <rect width="1200" height="820" rx="28" fill="#071712"/>
+  <text x="58" y="66" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="36" font-weight="850">에너지는 늦게 켜고, 증거는 단계마다 남긴다</text>
+  <g font-family="system-ui,sans-serif">
+    <path d="M153 185H1035V635H153Z" fill="none" stroke="#1e5660" stroke-width="5" stroke-dasharray="10 10"/>
+    <g transform="translate(58 120)"><rect width="240" height="135" rx="23" fill="#153d36" stroke="#5eead4" stroke-width="3"/><circle cx="40" cy="39" r="22" fill="#0f766e"/><text x="33" y="48" fill="#fff" font-size="24" font-weight="850">1</text><text x="78" y="48" fill="#ccfbf1" font-size="24" font-weight="850">설계 동결</text><text x="25" y="90" fill="#e2e8f0" font-size="18">revision · BOM · license</text><text x="25" y="116" fill="#99f6e4" font-size="17">제조 기준선 확정</text></g>
+    <path d="M298 188h60" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(368 120)"><rect width="240" height="135" rx="23" fill="#18394a" stroke="#38bdf8" stroke-width="3"/><circle cx="40" cy="39" r="22" fill="#0369a1"/><text x="33" y="48" fill="#fff" font-size="24" font-weight="850">2</text><text x="78" y="48" fill="#e0f2fe" font-size="24" font-weight="850">무전원 검사</text><text x="25" y="90" fill="#e2e8f0" font-size="18">short · polarity · continuity</text><text x="25" y="116" fill="#bae6fd" font-size="17">조립 결함 격리</text></g>
+    <path d="M608 188h60" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(678 120)"><rect width="240" height="135" rx="23" fill="#20334f" stroke="#60a5fa" stroke-width="3"/><circle cx="40" cy="39" r="22" fill="#1d4ed8"/><text x="33" y="48" fill="#fff" font-size="24" font-weight="850">3</text><text x="78" y="48" fill="#dbeafe" font-size="24" font-weight="850">저위험 전원</text><text x="25" y="90" fill="#e2e8f0" font-size="18">rail · clock · reset · thermal</text><text x="25" y="116" fill="#bfdbfe" font-size="17">RF 송신은 비활성</text></g>
+    <path d="M918 188h60" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(988 120)"><rect width="154" height="135" rx="23" fill="#2c3154" stroke="#818cf8" stroke-width="3"/><circle cx="34" cy="38" r="21" fill="#4338ca"/><text x="27" y="47" fill="#fff" font-size="23" font-weight="850">4</text><text x="67" y="46" fill="#e0e7ff" font-size="21" font-weight="850">디지털</text><text x="18" y="88" fill="#e2e8f0" font-size="17">golden vector</text><text x="18" y="115" fill="#c7d2fe" font-size="16">USB readback</text></g>
+
+    <path d="M1065 255v105" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(902 375)"><rect width="240" height="135" rx="23" fill="#3b3047" stroke="#c084fc" stroke-width="3"/><circle cx="40" cy="39" r="22" fill="#7e22ce"/><text x="33" y="48" fill="#fff" font-size="24" font-weight="850">5</text><text x="78" y="48" fill="#f3e8ff" font-size="24" font-weight="850">수신 · 유선 RF</text><text x="25" y="90" fill="#e2e8f0" font-size="18">gain · noise · linearity</text><text x="25" y="116" fill="#e9d5ff" font-size="17">calibrated input</text></g>
+    <path d="M902 443h-60" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(592 375)"><rect width="240" height="135" rx="23" fill="#44313c" stroke="#f472b6" stroke-width="3"/><circle cx="40" cy="39" r="22" fill="#be185d"/><text x="33" y="48" fill="#fff" font-size="24" font-weight="850">6</text><text x="78" y="48" fill="#fce7f3" font-size="24" font-weight="850">배열 보정</text><text x="25" y="90" fill="#e2e8f0" font-size="18">phase · gain · pattern</text><text x="25" y="116" fill="#fbcfe8" font-size="17">온도별 반복 측정</text></g>
+    <path d="M592 443h-60" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(282 375)"><rect width="240" height="135" rx="23" fill="#49372b" stroke="#f59e0b" stroke-width="3"/><circle cx="40" cy="39" r="22" fill="#b45309"/><text x="33" y="48" fill="#fff" font-size="24" font-weight="850">7</text><text x="78" y="48" fill="#fef3c7" font-size="24" font-weight="850">제한적 송신</text><text x="25" y="90" fill="#e2e8f0" font-size="18">승인 · interlock · log</text><text x="25" y="116" fill="#fde68a" font-size="17">최소 출력부터</text></g>
+    <path d="M282 443h-60" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(58 375)"><rect width="154" height="135" rx="23" fill="#3d3324" stroke="#facc15" stroke-width="3"/><circle cx="34" cy="38" r="21" fill="#a16207"/><text x="27" y="47" fill="#fff" font-size="23" font-weight="850">8</text><text x="67" y="46" fill="#fef9c3" font-size="21" font-weight="850">탐지</text><text x="18" y="88" fill="#e2e8f0" font-size="17">Pd/Pfa · 오차</text><text x="18" y="115" fill="#fde68a" font-size="16">환경 반복</text></g>
+
+    <rect x="100" y="610" width="1000" height="130" rx="27" fill="#3b2026" stroke="#fb7185" stroke-width="3"/>
+    <text x="142" y="657" fill="#fecdd3" font-size="27" font-weight="850">즉시 중단 게이트</text>
+    <text x="142" y="697" fill="#f8fafc" font-size="20">비정상 전류·발열 · clock/LO lock 불일치 · readback 실패 · 보정 비수렴 · framing 손실 · 규제·안전 승인 부재</text>
+    <text x="142" y="723" fill="#fda4af" font-size="17">다음 단계의 일정이 잡혀 있어도 실패 원인이 닫히기 전에는 에너지를 높이지 않는다.</text>
+  </g>
+</svg>

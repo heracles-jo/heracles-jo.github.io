@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
+  <title id="title">PLFM 위상배열 레이더 검증 아키텍처</title>
+  <desc id="desc">파형과 RF 프런트엔드, 전원 안전 제어, FPGA 신호 처리, 호스트 운영의 네 검증 계약</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6z" fill="#67e8f9"/></marker></defs>
+  <rect width="1200" height="790" rx="28" fill="#071712"/>
+  <text x="58" y="66" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="36" font-weight="850">레이더는 네 개의 계약이 동시에 맞아야 동작한다</text>
+  <g font-family="system-ui,sans-serif">
+    <g transform="translate(55 125)">
+      <rect width="250" height="210" rx="24" fill="#143b36" stroke="#5eead4" stroke-width="3"/>
+      <text x="125" y="49" text-anchor="middle" fill="#ccfbf1" font-size="25" font-weight="850">파형 · RF</text>
+      <text x="28" y="94" fill="#e2e8f0" font-size="19">LFM chirp · mixer · LO</text><text x="28" y="128" fill="#e2e8f0" font-size="19">phase shifter · antenna</text><text x="28" y="169" fill="#99f6e4" font-size="18">측정: 출력·손실·pattern</text>
+    </g>
+    <path d="M305 230h52" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(367 125)">
+      <rect width="250" height="210" rx="24" fill="#17384a" stroke="#38bdf8" stroke-width="3"/>
+      <text x="125" y="49" text-anchor="middle" fill="#e0f2fe" font-size="25" font-weight="850">전원 · 안전 제어</text>
+      <text x="28" y="94" fill="#e2e8f0" font-size="19">sequencing · PA bias</text><text x="28" y="128" fill="#e2e8f0" font-size="19">thermal · interlock</text><text x="28" y="169" fill="#bae6fd" font-size="18">증거: current·lock·readback</text>
+    </g>
+    <path d="M617 230h52" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(679 125)">
+      <rect width="250" height="210" rx="24" fill="#1e3157" stroke="#818cf8" stroke-width="3"/>
+      <text x="125" y="49" text-anchor="middle" fill="#e0e7ff" font-size="25" font-weight="850">FPGA 처리</text>
+      <text x="28" y="94" fill="#e2e8f0" font-size="19">DDC · matched filter</text><text x="28" y="128" fill="#e2e8f0" font-size="19">Doppler · MTI · CFAR</text><text x="28" y="169" fill="#c7d2fe" font-size="18">증거: RTL·golden co-sim</text>
+    </g>
+    <path d="M929 230h52" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(991 125)">
+      <rect width="154" height="210" rx="24" fill="#38284b" stroke="#c084fc" stroke-width="3"/>
+      <text x="77" y="49" text-anchor="middle" fill="#f3e8ff" font-size="23" font-weight="850">호스트</text>
+      <text x="20" y="94" fill="#e2e8f0" font-size="18">USB framing</text><text x="20" y="128" fill="#e2e8f0" font-size="18">GUI · GPS/IMU</text><text x="20" y="169" fill="#e9d5ff" font-size="17">로그·재현성</text>
+    </g>
+
+    <rect x="55" y="410" width="1090" height="292" rx="28" fill="#10241f" stroke="#475569" stroke-width="3" stroke-dasharray="10 8"/>
+    <text x="88" y="458" fill="#f8fafc" font-size="27" font-weight="850">증거의 적용 범위</text>
+    <g transform="translate(87 500)"><rect width="230" height="135" rx="20" fill="#173f36"/><text x="115" y="43" text-anchor="middle" fill="#99f6e4" font-size="23" font-weight="800">Simulation</text><text x="115" y="82" text-anchor="middle" fill="#e2e8f0" font-size="18">모델과 알고리즘</text><text x="115" y="110" text-anchor="middle" fill="#94a3b8" font-size="17">가정 안의 정합성</text></g>
+    <path d="M317 568h52" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(379 500)"><rect width="230" height="135" rx="20" fill="#173849"/><text x="115" y="43" text-anchor="middle" fill="#bae6fd" font-size="23" font-weight="800">Bench</text><text x="115" y="82" text-anchor="middle" fill="#e2e8f0" font-size="18">rail · clock · loopback</text><text x="115" y="110" text-anchor="middle" fill="#94a3b8" font-size="17">채널별 실측</text></g>
+    <path d="M609 568h52" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(671 500)"><rect width="230" height="135" rx="20" fill="#253052"/><text x="115" y="43" text-anchor="middle" fill="#c7d2fe" font-size="23" font-weight="800">Controlled Field</text><text x="115" y="82" text-anchor="middle" fill="#e2e8f0" font-size="18">pattern · clutter · target</text><text x="115" y="110" text-anchor="middle" fill="#94a3b8" font-size="17">Pd/Pfa와 오차</text></g>
+    <path d="M901 568h52" stroke="#67e8f9" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(963 500)"><rect width="150" height="135" rx="20" fill="#3b2b42"/><text x="75" y="43" text-anchor="middle" fill="#e9d5ff" font-size="22" font-weight="800">Operation</text><text x="75" y="82" text-anchor="middle" fill="#e2e8f0" font-size="17">규제·안전</text><text x="75" y="110" text-anchor="middle" fill="#94a3b8" font-size="16">반복 가능성</text></g>
+    <text x="87" y="675" fill="#94a3b8" font-size="18">앞 단계의 PASS는 다음 단계의 가정을 줄일 뿐, 물리 성능을 대신 증명하지 않는다.</text>
+  </g>
+</svg>
