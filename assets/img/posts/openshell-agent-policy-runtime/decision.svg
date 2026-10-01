@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">OpenShell 도입 의사결정표</title>
+  <desc id="desc">에이전트 권한 위험과 플랫폼 운영 준비도에 따라 OpenShell 도입 방식을 고르는 매트릭스</desc>
+  <rect width="1200" height="760" rx="24" fill="#f7f9fb"/>
+  <text x="60" y="68" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="#132f3c">격리 요구가 높아도 운영 준비가 없으면 도입을 늦춰야 한다</text>
+  <text x="60" y="104" font-family="Arial, sans-serif" font-size="18" fill="#5a707b">권한 위험과 플랫폼 준비도를 함께 보는 OpenShell 의사결정 매트릭스</text>
+
+  <g transform="translate(155 150)">
+    <rect width="860" height="500" rx="22" fill="#fff" stroke="#b7c6cd" stroke-width="2"/>
+    <rect x="0" y="250" width="430" height="250" fill="#fff1d7"/>
+    <rect x="430" y="250" width="430" height="250" fill="#dff4e8"/>
+    <rect x="0" y="0" width="430" height="250" fill="#f7dedb"/>
+    <rect x="430" y="0" width="430" height="250" fill="#e4f2d1"/>
+    <line x1="430" y1="0" x2="430" y2="500" stroke="#98aeb7" stroke-width="3"/>
+    <line x1="0" y1="250" x2="860" y2="250" stroke="#98aeb7" stroke-width="3"/>
+
+    <text x="215" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#922f27">먼저 기반부터 보강</text>
+    <text x="40" y="94" font-family="Arial, sans-serif" font-size="17" fill="#5b4745">• 외부 입력 기반 자율 실행</text>
+    <text x="40" y="126" font-family="Arial, sans-serif" font-size="17" fill="#5b4745">• production credential 필요</text>
+    <text x="40" y="158" font-family="Arial, sans-serif" font-size="17" fill="#5b4745">• 전담 owner·on-call 부재</text>
+    <text x="40" y="204" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#922f27">→ IAM·CNI·관측·업그레이드 체계 선행</text>
+
+    <text x="645" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#3b6507">제한된 production 후보</text>
+    <text x="470" y="94" font-family="Arial, sans-serif" font-size="17" fill="#40553d">• tenant별 agent fleet</text>
+    <text x="470" y="126" font-family="Arial, sans-serif" font-size="17" fill="#40553d">• L7 egress와 credential broker 필요</text>
+    <text x="470" y="158" font-family="Arial, sans-serif" font-size="17" fill="#40553d">• policy review·장애 대응 가능</text>
+    <text x="470" y="204" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#3b6507">→ manual approval로 단계적 확대</text>
+
+    <text x="215" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#8a5a00">기존 runner 유지</text>
+    <text x="40" y="344" font-family="Arial, sans-serif" font-size="17" fill="#665838">• 신뢰된 내부 script</text>
+    <text x="40" y="376" font-family="Arial, sans-serif" font-size="17" fill="#665838">• 외부 API·secret 접근이 적음</text>
+    <text x="40" y="408" font-family="Arial, sans-serif" font-size="17" fill="#665838">• 낮은 동시성과 단일 팀</text>
+    <text x="40" y="454" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#8a5a00">→ ephemeral CI + IAM이면 충분할 수 있음</text>
+
+    <text x="645" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#126a5c">PoC로 경계 검증</text>
+    <text x="470" y="344" font-family="Arial, sans-serif" font-size="17" fill="#405b55">• 코드 수정·보안 감사 agent</text>
+    <text x="470" y="376" font-family="Arial, sans-serif" font-size="17" fill="#405b55">• 합성 credential과 전용 repo</text>
+    <text x="470" y="408" font-family="Arial, sans-serif" font-size="17" fill="#405b55">• denial canary와 failure injection</text>
+    <text x="470" y="454" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#126a5c">→ 우회·freeze·rollback을 먼저 측정</text>
+  </g>
+
+  <text x="585" y="700" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#334f5b">플랫폼 운영 준비도 →</text>
+  <g transform="translate(70 525) rotate(-90)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#334f5b">에이전트 권한·데이터 위험 →</text>
+  </g>
+  <text x="155" y="682" font-family="Arial, sans-serif" font-size="15" fill="#637984">낮음</text>
+  <text x="980" y="682" font-family="Arial, sans-serif" font-size="15" fill="#637984">높음</text>
+  <text x="118" y="642" font-family="Arial, sans-serif" font-size="15" fill="#637984">낮음</text>
+  <text x="118" y="174" font-family="Arial, sans-serif" font-size="15" fill="#637984">높음</text>
+</svg>

@@ -397,3 +397,14 @@
     - "FPGA 신호 처리"
   slug: "plfm-radar-open-hardware-validation"
   summary: "AERIS-10의 RF·전원·FPGA·호스트 경계를 따라 시뮬레이션과 실측의 간극, 배열 보정, 안전, 라이선스와 PoC 중단 기준을 정리."
+- date: 2026-10-02
+  title: "AI 에이전트 정책 런타임: OpenShell 격리·자격증명 기준"
+  github_repo: "https://github.com/NVIDIA/OpenShell"
+  main_keyword: "AI 에이전트 정책 런타임"
+  related_keywords:
+    - "OpenShell"
+    - "AI 에이전트 샌드박스"
+    - "자격증명 브로커"
+    - "네트워크 egress 정책"
+  slug: "openshell-agent-policy-runtime"
+  summary: "OpenShell의 커널 격리, L7 네트워크 정책, 목적지 제한 자격증명 주입, policy prover를 연결해 자율 에이전트의 최소 권한 운영과 PoC 기준을 정리."
