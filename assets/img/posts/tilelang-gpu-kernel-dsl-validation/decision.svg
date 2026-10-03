@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">TileLang PoC 의사결정 게이트</title>
+  <desc id="desc">실제 병목, 정확성, 성능, 이식성, 운영 역량을 순서대로 확인하는 결정 흐름</desc>
+  <rect width="1200" height="720" fill="#0b1020"/>
+  <text x="70" y="70" fill="#f8fafc" font-family="Arial, sans-serif" font-size="38" font-weight="800">TileLang 도입은 최고 성능보다 검증 가능성으로 결정한다</text>
+  <text x="70" y="108" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">각 게이트에서 아니오가 나오면 더 단순한 대안으로 되돌아간다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(70 165)">
+      <rect width="205" height="118" rx="18" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2"/>
+      <text x="102" y="38" text-anchor="middle" fill="#e0f2fe" font-size="20" font-weight="700">1. 실제 병목인가</text>
+      <text x="102" y="70" text-anchor="middle" fill="#bae6fd" font-size="16">profile과 trace로</text>
+      <text x="102" y="94" text-anchor="middle" fill="#bae6fd" font-size="16">custom op 가설 확인</text>
+    </g>
+    <g transform="translate(315 165)">
+      <rect width="205" height="118" rx="18" fill="#4c1d95" stroke="#a78bfa" stroke-width="2"/>
+      <text x="102" y="38" text-anchor="middle" fill="#f3e8ff" font-size="20" font-weight="700">2. 정확한가</text>
+      <text x="102" y="70" text-anchor="middle" fill="#ddd6fe" font-size="16">shape · dtype · NaN</text>
+      <text x="102" y="94" text-anchor="middle" fill="#ddd6fe" font-size="16">reference와 task metric</text>
+    </g>
+    <g transform="translate(560 165)">
+      <rect width="205" height="118" rx="18" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+      <text x="102" y="38" text-anchor="middle" fill="#dcfce7" font-size="20" font-weight="700">3. 실제로 빠른가</text>
+      <text x="102" y="70" text-anchor="middle" fill="#bbf7d0" font-size="16">실제 shape p95</text>
+      <text x="102" y="94" text-anchor="middle" fill="#bbf7d0" font-size="16">cold compile 포함</text>
+    </g>
+    <g transform="translate(805 165)">
+      <rect width="205" height="118" rx="18" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+      <text x="102" y="38" text-anchor="middle" fill="#fef3c7" font-size="20" font-weight="700">4. 옮길 수 있는가</text>
+      <text x="102" y="70" text-anchor="middle" fill="#fde68a" font-size="16">두 번째 target의</text>
+      <text x="102" y="94" text-anchor="middle" fill="#fde68a" font-size="16">fallback과 source diff</text>
+    </g>
+    <path d="M275 224H303M520 224H548M765 224H793" stroke="#64748b" stroke-width="5"/>
+    <path d="M295 214l14 10-14 10M540 214l14 10-14 10M785 214l14 10-14 10" fill="none" stroke="#64748b" stroke-width="5"/>
+
+    <rect x="295" y="370" width="610" height="118" rx="22" fill="#1e293b" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="600" y="410" text-anchor="middle" fill="#f8fafc" font-size="25" font-weight="700">5. 팀이 compiler와 kernel을 운영할 수 있는가</text>
+    <text x="600" y="447" text-anchor="middle" fill="#cbd5e1" font-size="18">회귀 gate · artifact manifest · profiler · reviewer · rollback</text>
+    <path d="M907 283V342H600V358" fill="none" stroke="#64748b" stroke-width="5"/>
+    <path d="M590 350l10 14 10-14" fill="none" stroke="#64748b" stroke-width="5"/>
+
+    <rect x="110" y="570" width="390" height="86" rx="18" fill="#450a0a" stroke="#f87171" stroke-width="2"/>
+    <text x="305" y="605" text-anchor="middle" fill="#fee2e2" font-size="24" font-weight="700">중단 / 단순화</text>
+    <text x="305" y="635" text-anchor="middle" fill="#fecaca" font-size="17">vendor library · framework compiler · 기존 kernel</text>
+    <rect x="700" y="570" width="390" height="86" rx="18" fill="#052e16" stroke="#4ade80" stroke-width="2"/>
+    <text x="895" y="605" text-anchor="middle" fill="#dcfce7" font-size="24" font-weight="700">제한적 도입</text>
+    <text x="895" y="635" text-anchor="middle" fill="#bbf7d0" font-size="17">한 operator · 고정 target · 자동 회귀 gate</text>
+    <path d="M600 488V535H305V558M600 535H895V558" fill="none" stroke="#64748b" stroke-width="5"/>
+    <text x="400" y="526" fill="#fca5a5" font-size="17" font-weight="700">아니오</text>
+    <text x="785" y="526" fill="#86efac" font-size="17" font-weight="700">예</text>
+  </g>
+</svg>

@@ -408,3 +408,14 @@
     - "네트워크 egress 정책"
   slug: "openshell-agent-policy-runtime"
   summary: "OpenShell의 커널 격리, L7 네트워크 정책, 목적지 제한 자격증명 주입, policy prover를 연결해 자율 에이전트의 최소 권한 운영과 PoC 기준을 정리."
+- date: 2026-10-03
+  title: "TileLang GPU 커널 DSL: Triton 대안 검증 기준"
+  github_repo: "https://github.com/tile-ai/tilelang"
+  main_keyword: "TileLang GPU 커널 DSL"
+  related_keywords:
+    - "Triton 대안"
+    - "GPU 커널 컴파일러"
+    - "TVM"
+    - "멀티 백엔드 커널"
+  slug: "tilelang-gpu-kernel-dsl-validation"
+  summary: "TileLang의 tile DSL과 TVM compiler, target dialect를 바탕으로 정확성·성능·이식성·artifact 회귀를 검증하는 도입 기준을 정리."

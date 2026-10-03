@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">TileLang GPU 커널 DSL 검증</title>
+  <desc id="desc">Python DSL에서 여러 가속기 백엔드로 이어지는 커널 컴파일 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="90" r="190" fill="#2563eb" opacity="0.14"/>
+  <circle cx="1030" cy="540" r="230" fill="#7c3aed" opacity="0.12"/>
+  <text x="78" y="112" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="28" font-weight="700">AI INFRASTRUCTURE · GPU COMPILER</text>
+  <text x="78" y="205" fill="#f8fafc" font-family="Arial, sans-serif" font-size="62" font-weight="800">TileLang GPU 커널 DSL</text>
+  <text x="78" y="275" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="34">Triton 대안 검증 기준</text>
+  <rect x="78" y="325" width="250" height="72" rx="18" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="203" y="370" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="24" font-weight="700">Python Tile DSL</text>
+  <path d="M338 361H430" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M418 349l18 12-18 12" fill="none" stroke="#a78bfa" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="446" y="325" width="240" height="72" rx="18" fill="#111827" stroke="#a78bfa" stroke-width="2"/>
+  <text x="566" y="356" text-anchor="middle" fill="#ede9fe" font-family="Arial, sans-serif" font-size="22" font-weight="700">TVM Compiler</text>
+  <text x="566" y="383" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="17">layout · lowering · JIT</text>
+  <path d="M696 361H788" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M776 349l18 12-18 12" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle">
+    <rect x="808" y="302" width="132" height="50" rx="14" fill="#082f49" stroke="#38bdf8"/><text x="874" y="334" fill="#e0f2fe">CUDA</text>
+    <rect x="958" y="302" width="132" height="50" rx="14" fill="#3b0764" stroke="#c084fc"/><text x="1024" y="334" fill="#f3e8ff">ROCm</text>
+    <rect x="808" y="370" width="132" height="50" rx="14" fill="#052e16" stroke="#4ade80"/><text x="874" y="402" fill="#dcfce7">Metal</text>
+    <rect x="958" y="370" width="132" height="50" rx="14" fill="#422006" stroke="#fbbf24"/><text x="1024" y="402" fill="#fef3c7">Ascend</text>
+  </g>
+  <rect x="78" y="475" width="1012" height="76" rx="20" fill="#0f172a" stroke="#334155"/>
+  <text x="108" y="510" fill="#f8fafc" font-family="Arial, sans-serif" font-size="23" font-weight="700">검증 축</text>
+  <text x="220" y="510" fill="#94a3b8" font-family="Arial, sans-serif" font-size="21">정확성 · 실제 shape 성능 · target fallback · compiler 회귀 · artifact 공급망</text>
+  <rect x="78" y="579" width="420" height="5" rx="2.5" fill="url(#accent)"/>
+</svg>
