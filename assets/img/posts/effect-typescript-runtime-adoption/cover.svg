@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Effect TypeScript runtime adoption</title>
+  <desc id="desc">Typed errors, fibers, scopes and layers connected as a production runtime</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1030" cy="90" r="180" fill="#7c3aed" opacity=".16"/>
+  <circle cx="110" cy="560" r="210" fill="#0891b2" opacity=".14"/>
+  <text x="78" y="112" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="26" font-weight="700">TYPESCRIPT PRODUCTION RUNTIME</text>
+  <text x="78" y="190" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="800">Effect 도입 판단</text>
+  <text x="78" y="246" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="30">오류 · 동시성 · 자원 · 의존성의 실행 계약</text>
+  <g filter="url(#shadow)">
+    <rect x="78" y="318" width="220" height="116" rx="20" fill="#1f2937" stroke="#a78bfa" stroke-width="2"/>
+    <text x="188" y="365" text-anchor="middle" fill="#ddd6fe" font-family="Arial, sans-serif" font-size="25" font-weight="700">Typed Errors</text>
+    <text x="188" y="402" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">Effect&lt;A, E, R&gt;</text>
+    <rect x="330" y="318" width="220" height="116" rx="20" fill="#1f2937" stroke="#38bdf8" stroke-width="2"/>
+    <text x="440" y="365" text-anchor="middle" fill="#bae6fd" font-family="Arial, sans-serif" font-size="25" font-weight="700">Fibers</text>
+    <text x="440" y="402" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">cancel · bound</text>
+    <rect x="582" y="318" width="220" height="116" rx="20" fill="#1f2937" stroke="#34d399" stroke-width="2"/>
+    <text x="692" y="365" text-anchor="middle" fill="#bbf7d0" font-family="Arial, sans-serif" font-size="25" font-weight="700">Scopes</text>
+    <text x="692" y="402" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">acquire · release</text>
+    <rect x="834" y="318" width="220" height="116" rx="20" fill="#1f2937" stroke="#fbbf24" stroke-width="2"/>
+    <text x="944" y="365" text-anchor="middle" fill="#fde68a" font-family="Arial, sans-serif" font-size="25" font-weight="700">Layers</text>
+    <text x="944" y="402" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">service graph</text>
+  </g>
+  <path d="M188 466 H944" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <text x="566" y="520" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="24">운영 복잡도가 줄어드는 경계만 채택한다</text>
+  <text x="78" y="584" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">heracles.jo · architecture and adoption criteria</text>
+</svg>

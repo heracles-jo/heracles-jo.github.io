@@ -419,3 +419,14 @@
     - "멀티 백엔드 커널"
   slug: "tilelang-gpu-kernel-dsl-validation"
   summary: "TileLang의 tile DSL과 TVM compiler, target dialect를 바탕으로 정확성·성능·이식성·artifact 회귀를 검증하는 도입 기준을 정리."
+- date: 2026-10-04
+  title: "Effect TypeScript 도입: 예외·동시성·의존성 관리 기준"
+  github_repo: "https://github.com/Effect-TS/effect"
+  main_keyword: "Effect TypeScript 도입"
+  related_keywords:
+    - "타입 오류 처리"
+    - "구조적 동시성"
+    - "Effect Layer"
+    - "TypeScript 자원 관리"
+  slug: "effect-typescript-runtime-adoption"
+  summary: "Effect 4의 오류 채널, Fiber, Scope, Layer와 관측성 통합을 Promise 기반 TypeScript와 비교해 점진적 도입·중단 기준을 정리."
