@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Caddy automatic HTTPS operations</title>
+  <desc id="desc">Certificate automation and atomic configuration reload around a Caddy edge server</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#081426"/><stop offset="1" stop-color="#123b55"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#67e8f9"/></marker>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1000" cy="110" r="165" fill="#06b6d4" opacity="0.12"/>
+  <circle cx="1050" cy="520" r="220" fill="#22c55e" opacity="0.10"/>
+  <text x="72" y="105" fill="#67e8f9" font-family="Arial, sans-serif" font-size="24" font-weight="700">WEB INFRASTRUCTURE · TLS OPERATIONS</text>
+  <text x="72" y="180" fill="#f8fafc" font-family="Arial, sans-serif" font-size="52" font-weight="800">Caddy 자동 HTTPS 운영</text>
+  <text x="72" y="235" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="29">인증서 · 원자적 리로드 · 스트리밍 회귀 검증</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="330" width="250" height="120" rx="18" fill="#164e63" stroke="#22d3ee" stroke-width="2"/>
+    <text x="205" y="378" text-anchor="middle" fill="#cffafe" font-size="25" font-weight="700">ACME / DNS</text>
+    <text x="205" y="414" text-anchor="middle" fill="#a5f3fc" font-size="19">발급 · 갱신 · fallback</text>
+    <rect x="475" y="300" width="250" height="180" rx="24" fill="#0e7490" stroke="#67e8f9" stroke-width="3"/>
+    <text x="600" y="370" text-anchor="middle" fill="#ecfeff" font-size="36" font-weight="800">CADDY</text>
+    <text x="600" y="410" text-anchor="middle" fill="#cffafe" font-size="20">atomic config lifecycle</text>
+    <rect x="870" y="330" width="250" height="120" rx="18" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+    <text x="995" y="378" text-anchor="middle" fill="#dcfce7" font-size="25" font-weight="700">UPSTREAM</text>
+    <text x="995" y="414" text-anchor="middle" fill="#bbf7d0" font-size="19">SSE · WebSocket · gRPC</text>
+  </g>
+  <path d="M330 390 H455" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M725 390 H850" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="72" y="565" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">검증 기준: 자동화가 실패해도 상태를 보존하고 설명할 수 있는가</text>
+</svg>

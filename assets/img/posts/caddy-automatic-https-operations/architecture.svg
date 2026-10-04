@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Caddy automatic HTTPS architecture</title>
+  <desc id="desc">DNS and ACME certificate flow, shared storage, admin API and upstream traffic around Caddy instances</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="760" rx="24" fill="#f8fafc"/>
+  <text x="60" y="66" fill="#0f172a" font-family="Arial, sans-serif" font-size="34" font-weight="700">Caddy 자동 HTTPS의 데이터·제어·트래픽 경계</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="120" width="250" height="115" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="185" y="164" text-anchor="middle" fill="#075985" font-size="25" font-weight="700">DNS / ACME CA</text>
+    <text x="185" y="201" text-anchor="middle" fill="#0369a1" font-size="19">A·AAAA · challenge · issuer</text>
+    <rect x="475" y="105" width="250" height="145" rx="22" fill="#cffafe" stroke="#0891b2" stroke-width="3"/>
+    <text x="600" y="160" text-anchor="middle" fill="#164e63" font-size="31" font-weight="800">Caddy Edge</text>
+    <text x="600" y="198" text-anchor="middle" fill="#0e7490" font-size="20">TLS · HTTP/1.1/2/3 · proxy</text>
+    <rect x="890" y="120" width="250" height="115" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="1015" y="164" text-anchor="middle" fill="#166534" font-size="25" font-weight="700">Upstream Pool</text>
+    <text x="1015" y="201" text-anchor="middle" fill="#15803d" font-size="19">health · stream · retry</text>
+    <rect x="90" y="430" width="285" height="145" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="232" y="478" text-anchor="middle" fill="#92400e" font-size="25" font-weight="700">Persistent Storage</text>
+    <text x="232" y="516" text-anchor="middle" fill="#b45309" font-size="19">certificate · key · lock</text>
+    <text x="232" y="548" text-anchor="middle" fill="#475569" font-size="18">instance 간 상태 공유와 복구</text>
+    <rect x="458" y="405" width="285" height="190" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="600" y="455" text-anchor="middle" fill="#4c1d95" font-size="25" font-weight="700">Admin API / Config</text>
+    <text x="600" y="493" text-anchor="middle" fill="#6d28d9" font-size="19">adapt → provision → validate</text>
+    <text x="600" y="525" text-anchor="middle" fill="#6d28d9" font-size="19">atomic load · rollback</text>
+    <text x="600" y="558" text-anchor="middle" fill="#475569" font-size="18">ETag · Unix socket · desired state</text>
+    <rect x="825" y="430" width="285" height="145" rx="18" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="968" y="478" text-anchor="middle" fill="#991b1b" font-size="25" font-weight="700">On-Demand Guard</text>
+    <text x="968" y="516" text-anchor="middle" fill="#b91c1c" font-size="19">tenant ownership · deny default</text>
+    <text x="968" y="548" text-anchor="middle" fill="#475569" font-size="18">임의 SNI와 quota abuse 차단</text>
+  </g>
+  <path d="M310 177 H455" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M725 177 H870" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M540 250 L310 410" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 250 V385" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M660 250 L890 410" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="80" y="650" width="1040" height="62" rx="16" fill="#0f172a"/>
+  <text x="600" y="690" text-anchor="middle" fill="#f8fafc" font-family="Arial, sans-serif" font-size="21">장애 반경: TLS 상태 · config control plane · long-lived connection을 함께 시험한다</text>
+</svg>

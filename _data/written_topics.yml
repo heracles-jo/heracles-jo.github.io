@@ -430,3 +430,14 @@
     - "TypeScript 자원 관리"
   slug: "effect-typescript-runtime-adoption"
   summary: "Effect 4의 오류 채널, Fiber, Scope, Layer와 관측성 통합을 Promise 기반 TypeScript와 비교해 점진적 도입·중단 기준을 정리."
+- date: 2026-10-05
+  title: "Caddy 자동 HTTPS 운영: 인증서·무중단 리로드 검증"
+  github_repo: "https://github.com/caddyserver/caddy"
+  main_keyword: "Caddy 자동 HTTPS 운영"
+  related_keywords:
+    - "ACME 인증서 자동화"
+    - "Caddy 무중단 리로드"
+    - "리버스 프록시 스트리밍"
+    - "On-Demand TLS"
+  slug: "caddy-automatic-https-operations"
+  summary: "Caddy의 ACME 인증서 수명주기, 공유 storage, 원자적 config reload와 스트리밍 회귀를 중심으로 운영·PoC 기준을 정리."
