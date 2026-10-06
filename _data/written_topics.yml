@@ -441,3 +441,14 @@
     - "On-Demand TLS"
   slug: "caddy-automatic-https-operations"
   summary: "Caddy의 ACME 인증서 수명주기, 공유 storage, 원자적 config reload와 스트리밍 회귀를 중심으로 운영·PoC 기준을 정리."
+- date: 2026-10-07
+  title: "AI CAD 자동화: text-to-cad 형상 검증과 제조 경계"
+  github_repo: "https://github.com/earthtojake/text-to-cad"
+  main_keyword: "AI CAD 자동화"
+  related_keywords:
+    - "text-to-cad"
+    - "CAD 형상 검증"
+    - "설계 제조 가능성"
+    - "STEP STL 변환"
+  slug: "text-to-cad-ai-cad-validation"
+  summary: "text-to-cad의 자연어 요구사항, 정확 형상 커널, 메시 변환과 공정별 DFM을 분리해 재현성·보안·제조 승인 기준을 정리."
