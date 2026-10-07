@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">RAD Debugger 도입 의사결정 게이트</title>
+  <desc id="desc">기호 정확성, 호출 스택, 프로세스 제어, 안정성, 보안 검증을 통과한 경우에만 사용 범위를 확대하는 절차</desc>
+  <rect width="1200" height="760" fill="#f8fafc"/>
+  <text x="60" y="64" fill="#0f172a" font-family="Arial, sans-serif" font-size="34" font-weight="800">빠른 화면보다 먼저 통과해야 할 다섯 개 게이트</text>
+  <text x="60" y="101" fill="#475569" font-family="Arial, sans-serif" font-size="20">그럴듯한 오답을 찾지 못하면 production 진단 경로로 확대하지 않는다</text>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <g font-family="Arial, sans-serif">
+    <rect x="55" y="150" width="200" height="190" rx="22" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <circle cx="92" cy="190" r="22" fill="#0284c7"/><text x="92" y="198" text-anchor="middle" fill="white" font-size="21" font-weight="800">1</text>
+    <text x="155" y="198" text-anchor="middle" fill="#075985" font-size="24" font-weight="800">기호 정확성</text>
+    <text x="155" y="239" text-anchor="middle" fill="#334155" font-size="17">라인·타입·배열·TLS</text>
+    <text x="155" y="270" text-anchor="middle" fill="#334155" font-size="17">PDB / DWARF → RDI</text>
+    <text x="155" y="312" text-anchor="middle" fill="#0369a1" font-size="16" font-weight="700">기준 도구와 대조</text>
+
+    <rect x="278" y="150" width="200" height="190" rx="22" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <circle cx="315" cy="190" r="22" fill="#7c3aed"/><text x="315" y="198" text-anchor="middle" fill="white" font-size="21" font-weight="800">2</text>
+    <text x="378" y="198" text-anchor="middle" fill="#5b21b6" font-size="24" font-weight="800">Stack</text>
+    <text x="378" y="239" text-anchor="middle" fill="#334155" font-size="17">최적화·예외·signal</text>
+    <text x="378" y="270" text-anchor="middle" fill="#334155" font-size="17">deep recursion·inline</text>
+    <text x="378" y="312" text-anchor="middle" fill="#6d28d9" font-size="16" font-weight="700">frame 누락 차단</text>
+
+    <rect x="501" y="150" width="200" height="190" rx="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <circle cx="538" cy="190" r="22" fill="#16a34a"/><text x="538" y="198" text-anchor="middle" fill="white" font-size="21" font-weight="800">3</text>
+    <text x="601" y="198" text-anchor="middle" fill="#166534" font-size="24" font-weight="800">Process</text>
+    <text x="601" y="239" text-anchor="middle" fill="#334155" font-size="17">attach·detach·child</text>
+    <text x="601" y="270" text-anchor="middle" fill="#334155" font-size="17">freeze·resume·restart</text>
+    <text x="601" y="312" text-anchor="middle" fill="#15803d" font-size="16" font-weight="700">상태 일관성 확인</text>
+
+    <rect x="724" y="150" width="200" height="190" rx="22" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+    <circle cx="761" cy="190" r="22" fill="#ea580c"/><text x="761" y="198" text-anchor="middle" fill="white" font-size="21" font-weight="800">4</text>
+    <text x="824" y="198" text-anchor="middle" fill="#9a3412" font-size="24" font-weight="800">안정성</text>
+    <text x="824" y="239" text-anchor="middle" fill="#334155" font-size="17">대형 symbol·memory</text>
+    <text x="824" y="270" text-anchor="middle" fill="#334155" font-size="17">freeze·cache 무효화</text>
+    <text x="824" y="312" text-anchor="middle" fill="#c2410c" font-size="16" font-weight="700">자원 상한 강제</text>
+
+    <rect x="947" y="150" width="200" height="190" rx="22" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <circle cx="984" cy="190" r="22" fill="#dc2626"/><text x="984" y="198" text-anchor="middle" fill="white" font-size="21" font-weight="800">5</text>
+    <text x="1047" y="198" text-anchor="middle" fill="#991b1b" font-size="24" font-weight="800">보안</text>
+    <text x="1047" y="239" text-anchor="middle" fill="#334155" font-size="17">IPC port·dump 접근</text>
+    <text x="1047" y="270" text-anchor="middle" fill="#334155" font-size="17">권한·network·감사</text>
+    <text x="1047" y="312" text-anchor="middle" fill="#b91c1c" font-size="16" font-weight="700">loopback 기본</text>
+
+    <path d="M255 245h23M478 245h23M701 245h23M924 245h23" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+
+    <rect x="80" y="430" width="310" height="185" rx="24" fill="#ecfdf5" stroke="#16a34a" stroke-width="3"/>
+    <text x="235" y="477" text-anchor="middle" fill="#166534" font-size="28" font-weight="800">확대</text>
+    <text x="235" y="518" text-anchor="middle" fill="#334155" font-size="18">Windows 일부 팀의 보조 debugger</text>
+    <text x="235" y="548" text-anchor="middle" fill="#334155" font-size="18">승인된 toolchain matrix</text>
+    <text x="235" y="578" text-anchor="middle" fill="#166534" font-size="16" font-weight="700">production dump는 이중 판독 유지</text>
+
+    <rect x="445" y="430" width="310" height="185" rx="24" fill="#fff7ed" stroke="#f97316" stroke-width="3"/>
+    <text x="600" y="477" text-anchor="middle" fill="#9a3412" font-size="28" font-weight="800">보류</text>
+    <text x="600" y="518" text-anchor="middle" fill="#334155" font-size="18">Linux·MinGW 제한 실험</text>
+    <text x="600" y="548" text-anchor="middle" fill="#334155" font-size="18">재현 corpus와 upstream issue</text>
+    <text x="600" y="578" text-anchor="middle" fill="#c2410c" font-size="16" font-weight="700">기준 도구로 즉시 fallback</text>
+
+    <rect x="810" y="430" width="310" height="185" rx="24" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+    <text x="965" y="477" text-anchor="middle" fill="#991b1b" font-size="28" font-weight="800">중단</text>
+    <text x="965" y="518" text-anchor="middle" fill="#334155" font-size="18">무경고 오해석·stale symbol</text>
+    <text x="965" y="548" text-anchor="middle" fill="#334155" font-size="18">freeze·메모리 폭주·외부 IPC</text>
+    <text x="965" y="578" text-anchor="middle" fill="#b91c1c" font-size="16" font-weight="700">진단 증거 신뢰를 훼손</text>
+
+    <path d="M600 340v55M600 395H235v35M600 395v35M600 395h365v35" fill="none" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+  </g>
+  <rect x="80" y="664" width="1040" height="48" rx="12" fill="#0f172a"/>
+  <text x="600" y="696" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18" font-weight="700">승인 질문: 같은 binary와 dump를 기준 debugger로 열었을 때 핵심 판단이 반복해서 일치하는가?</text>
+</svg>

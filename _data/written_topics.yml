@@ -452,3 +452,14 @@
     - "STEP STL 변환"
   slug: "text-to-cad-ai-cad-validation"
   summary: "text-to-cad의 자연어 요구사항, 정확 형상 커널, 메시 변환과 공정별 DFM을 분리해 재현성·보안·제조 승인 기준을 정리."
+- date: 2026-10-08
+  title: "RAD Debugger 네이티브 디버깅: PDB·DWARF 검증 기준"
+  github_repo: "https://github.com/EpicGames/raddebugger"
+  main_keyword: "RAD Debugger 네이티브 디버깅"
+  related_keywords:
+    - "PDB DWARF 디버깅"
+    - "RDI 디버그 정보"
+    - "C++ 크래시 덤프"
+    - "Linux 네이티브 디버거"
+  slug: "rad-debugger-native-debugging"
+  summary: "RAD Debugger의 RDI 변환, 멀티프로세스 제어, Linux·Minidump 지원을 바탕으로 기호 정확성·안정성·IPC 보안과 도입 기준을 정리."
