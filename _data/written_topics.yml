@@ -463,3 +463,14 @@
     - "Linux 네이티브 디버거"
   slug: "rad-debugger-native-debugging"
   summary: "RAD Debugger의 RDI 변환, 멀티프로세스 제어, Linux·Minidump 지원을 바탕으로 기호 정확성·안정성·IPC 보안과 도입 기준을 정리."
+- date: 2026-10-09
+  title: "Claude Code 메모리 플러그인: claude-mem 운영 기준"
+  github_repo: "https://github.com/thedotmack/claude-mem"
+  main_keyword: "Claude Code 메모리 플러그인"
+  related_keywords:
+    - "claude-mem"
+    - "AI 에이전트 세션 메모리"
+    - "컨텍스트 엔지니어링"
+    - "MCP 메모리 검색"
+  slug: "claude-mem-agent-session-memory"
+  summary: "claude-mem의 hook 캡처, 모델 요약, SQLite·Chroma 검색과 컨텍스트 주입을 분해해 기억 유실·오염·비밀 노출·비용의 운영 검증 기준을 정리."

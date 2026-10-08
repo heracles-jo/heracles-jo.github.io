@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">claude-mem 도입 의사결정 게이트</title>
+  <desc id="desc">캡처 완전성, 기억 정확성, 격리, 비밀정보, 복구와 비용을 기준으로 확대 보류 중단을 결정하는 표</desc>
+  <rect width="1200" height="720" rx="28" fill="#111827"/>
+  <text x="60" y="72" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#fff">세션 메모리 도입은 여섯 개의 게이트를 통과해야 한다</text>
+  <text x="60" y="108" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af">기억이 편리하다는 인상보다 누락·오염·누출을 먼저 측정한다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(60 155)"><rect width="330" height="130" rx="18" fill="#172554" stroke="#60a5fa" stroke-width="3"/><text x="24" y="40" font-size="22" font-weight="700" fill="#bfdbfe">1. 캡처 완전성</text><text x="24" y="76" font-size="18" fill="#e5e7eb">hook → queue → index 손실을 센다</text><text x="24" y="105" font-size="18" fill="#93c5fd">조용한 0건을 실패로 탐지</text></g>
+    <g transform="translate(435 155)"><rect width="330" height="130" rx="18" fill="#3b1d0f" stroke="#fb923c" stroke-width="3"/><text x="24" y="40" font-size="22" font-weight="700" fill="#fed7aa">2. 기억 정확성</text><text x="24" y="76" font-size="18" fill="#e5e7eb">요약을 원문·commit과 대조한다</text><text x="24" y="105" font-size="18" fill="#fdba74">stale·추론·사실을 구분</text></g>
+    <g transform="translate(810 155)"><rect width="330" height="130" rx="18" fill="#2e1065" stroke="#a78bfa" stroke-width="3"/><text x="24" y="40" font-size="22" font-weight="700" fill="#ddd6fe">3. 범위 격리</text><text x="24" y="76" font-size="18" fill="#e5e7eb">project·branch·user를 분리한다</text><text x="24" y="105" font-size="18" fill="#c4b5fd">교차 검색은 0건</text></g>
+    <g transform="translate(60 325)"><rect width="330" height="130" rx="18" fill="#4c0519" stroke="#fb7185" stroke-width="3"/><text x="24" y="40" font-size="22" font-weight="700" fill="#fecdd3">4. 비밀정보 경계</text><text x="24" y="76" font-size="18" fill="#e5e7eb">provider·DB·log에서 canary 추적</text><text x="24" y="105" font-size="18" fill="#fda4af">privacy tag만 믿지 않는다</text></g>
+    <g transform="translate(435 325)"><rect width="330" height="130" rx="18" fill="#052e16" stroke="#4ade80" stroke-width="3"/><text x="24" y="40" font-size="22" font-weight="700" fill="#bbf7d0">5. 장애 복구</text><text x="24" y="76" font-size="18" fill="#e5e7eb">kill·429·DB lock을 주입한다</text><text x="24" y="105" font-size="18" fill="#86efac">stateless 축소 운영 보장</text></g>
+    <g transform="translate(810 325)"><rect width="330" height="130" rx="18" fill="#422006" stroke="#facc15" stroke-width="3"/><text x="24" y="40" font-size="22" font-weight="700" fill="#fef08a">6. 비용 효과</text><text x="24" y="76" font-size="18" fill="#e5e7eb">요약·검색·주입·cache를 합산</text><text x="24" y="105" font-size="18" fill="#fde047">재설명 절감과 함께 비교</text></g>
+    <path d="M225 490V535H975V490" fill="none" stroke="#6b7280" stroke-width="4" stroke-dasharray="10 8"/>
+    <rect x="60" y="555" width="330" height="105" rx="18" fill="#064e3b"/><text x="225" y="595" text-anchor="middle" font-size="25" font-weight="800" fill="#d1fae5">확대</text><text x="225" y="630" text-anchor="middle" font-size="18" fill="#a7f3d0">누출 0 · 손실 탐지 · 효과 확인</text>
+    <rect x="435" y="555" width="330" height="105" rx="18" fill="#78350f"/><text x="600" y="595" text-anchor="middle" font-size="25" font-weight="800" fill="#fef3c7">보류</text><text x="600" y="630" text-anchor="middle" font-size="18" fill="#fde68a">stale·비용·복구 기준 미달</text>
+    <rect x="810" y="555" width="330" height="105" rx="18" fill="#7f1d1d"/><text x="975" y="595" text-anchor="middle" font-size="25" font-weight="800" fill="#fee2e2">중단</text><text x="975" y="630" text-anchor="middle" font-size="18" fill="#fecaca">교차 누출 · 비밀 전송 · 조용한 유실</text>
+  </g>
+</svg>

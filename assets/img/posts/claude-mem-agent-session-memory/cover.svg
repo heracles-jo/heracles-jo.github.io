@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Code 세션 메모리 운영 기준</title>
+  <desc id="desc">세션 활동이 캡처, 압축, 검색, 컨텍스트 주입으로 순환하는 메모리 파이프라인</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fb923c"/><stop offset="1" stop-color="#facc15"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="110" r="180" fill="#7c3aed" opacity=".18"/><circle cx="120" cy="560" r="230" fill="#0ea5e9" opacity=".12"/>
+  <text x="72" y="105" fill="#a5b4fc" font-family="Arial, sans-serif" font-size="25" font-weight="700">AI AGENT MEMORY OPERATIONS</text>
+  <text x="72" y="178" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="800">Claude Code 메모리 플러그인</text>
+  <text x="72" y="232" fill="#d1d5db" font-family="Arial, sans-serif" font-size="30">claude-mem의 캡처·압축·검색·주입을 검증한다</text>
+  <g transform="translate(72 315)" font-family="Arial, sans-serif">
+    <rect x="0" y="0" width="210" height="108" rx="20" fill="#1f2937" stroke="#60a5fa" stroke-width="3"/><text x="105" y="49" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">SESSION</text><text x="105" y="79" text-anchor="middle" fill="#93c5fd" font-size="18">prompt · tool</text>
+    <path d="M220 54H280" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/><path d="M270 40l20 14-20 14" fill="none" stroke="#facc15" stroke-width="6"/>
+    <rect x="300" y="0" width="210" height="108" rx="20" fill="#1f2937" stroke="#fb923c" stroke-width="3"/><text x="405" y="49" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">OBSERVE</text><text x="405" y="79" text-anchor="middle" fill="#fdba74" font-size="18">summary · store</text>
+    <path d="M520 54H580" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/><path d="M570 40l20 14-20 14" fill="none" stroke="#facc15" stroke-width="6"/>
+    <rect x="600" y="0" width="210" height="108" rx="20" fill="#1f2937" stroke="#a78bfa" stroke-width="3"/><text x="705" y="49" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">RECALL</text><text x="705" y="79" text-anchor="middle" fill="#c4b5fd" font-size="18">search · inject</text>
+    <path d="M820 54H880" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/><path d="M870 40l20 14-20 14" fill="none" stroke="#facc15" stroke-width="6"/>
+    <rect x="900" y="0" width="210" height="108" rx="20" fill="#1f2937" stroke="#34d399" stroke-width="3"/><text x="1005" y="49" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">VERIFY</text><text x="1005" y="79" text-anchor="middle" fill="#6ee7b7" font-size="18">loss · leak · cost</text>
+  </g>
+  <rect x="72" y="493" width="1056" height="3" fill="url(#accent)"/>
+  <text x="72" y="550" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="24">기억의 양보다 provenance, 격리, 삭제, degraded mode가 먼저다</text>
+  <text x="1128" y="590" text-anchor="end" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">heracles.jo</text>
+</svg>
