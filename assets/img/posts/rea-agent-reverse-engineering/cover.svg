@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 역공학 에이전트 권한과 증거 검증</title>
+  <desc id="desc">승인된 분석 대상이 격리된 로컬 도구와 MCP를 거쳐 근거가 연결된 결과가 되는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#16213e"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#a3e635"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="110" r="190" fill="#06b6d4" opacity=".13"/><circle cx="160" cy="600" r="250" fill="#84cc16" opacity=".09"/>
+  <text x="72" y="100" fill="#67e8f9" font-family="Arial, sans-serif" font-size="24" font-weight="700">AGENTIC REVERSE ENGINEERING</text>
+  <text x="72" y="174" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="800">AI 역공학 에이전트</text>
+  <text x="72" y="228" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="30">REA의 권한·격리·증거·재현성을 검증한다</text>
+  <g transform="translate(72 318)" font-family="Arial, sans-serif">
+    <rect width="220" height="112" rx="20" fill="#172554" stroke="#38bdf8" stroke-width="3"/><text x="110" y="48" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">AUTHORIZE</text><text x="110" y="80" text-anchor="middle" fill="#7dd3fc" font-size="18">target · scope</text>
+    <path d="M232 56H282" stroke="url(#line)" stroke-width="7"/><path d="M274 43l18 13-18 13" fill="none" stroke="#a3e635" stroke-width="5"/>
+    <rect x="302" width="220" height="112" rx="20" fill="#083344" stroke="#22d3ee" stroke-width="3"/><text x="412" y="48" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">ISOLATE</text><text x="412" y="80" text-anchor="middle" fill="#67e8f9" font-size="18">file · process · net</text>
+    <path d="M534 56H584" stroke="url(#line)" stroke-width="7"/><path d="M576 43l18 13-18 13" fill="none" stroke="#a3e635" stroke-width="5"/>
+    <rect x="604" width="220" height="112" rx="20" fill="#365314" stroke="#84cc16" stroke-width="3"/><text x="714" y="48" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">EVIDENCE</text><text x="714" y="80" text-anchor="middle" fill="#bef264" font-size="18">bytes · calls · traces</text>
+    <path d="M836 56H886" stroke="url(#line)" stroke-width="7"/><path d="M878 43l18 13-18 13" fill="none" stroke="#a3e635" stroke-width="5"/>
+    <rect x="906" width="220" height="112" rx="20" fill="#3f3f46" stroke="#e4e4e7" stroke-width="3"/><text x="1016" y="48" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">REPRODUCE</text><text x="1016" y="80" text-anchor="middle" fill="#e4e4e7" font-size="18">version · hash</text>
+  </g>
+  <rect x="72" y="498" width="1056" height="3" fill="url(#line)"/>
+  <text x="72" y="553" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="24">분석 속도보다 승인 범위와 evidence chain이 먼저다</text>
+  <text x="1128" y="592" text-anchor="end" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">heracles.jo</text>
+</svg>

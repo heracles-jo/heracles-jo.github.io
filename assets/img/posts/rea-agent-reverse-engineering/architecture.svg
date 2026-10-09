@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">REA 역공학 조사 아키텍처</title>
+  <desc id="desc">승인 manifest, MCP 조사 계층, 정적 및 런타임 provider, evidence bundle이 연결되는 구조</desc>
+  <rect width="1200" height="760" rx="28" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#0f172a">하나의 MCP, 서로 다른 실행 위험</text>
+  <text x="60" y="108" font-family="Arial, sans-serif" font-size="20" fill="#475569">정적 읽기와 런타임 관찰을 같은 권한으로 열지 않는다</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="160" width="230" height="190" rx="22" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="175" y="204" text-anchor="middle" font-size="24" font-weight="700" fill="#1e3a8a">Authorization</text>
+    <text x="86" y="246" font-size="18" fill="#1e40af">target hash</text><text x="86" y="278" font-size="18" fill="#1e40af">purpose · owner</text><text x="86" y="310" font-size="18" fill="#1e40af">allowed techniques</text>
+    <rect x="350" y="160" width="230" height="190" rx="22" fill="#cffafe" stroke="#0891b2" stroke-width="3"/>
+    <text x="465" y="204" text-anchor="middle" font-size="24" font-weight="700" fill="#155e75">REA MCP / CLI</text>
+    <text x="376" y="246" font-size="18" fill="#155e75">session · workflow</text><text x="376" y="278" font-size="18" fill="#155e75">tool contracts</text><text x="376" y="310" font-size="18" fill="#155e75">evidence context</text>
+    <rect x="640" y="135" width="235" height="105" rx="20" fill="#ecfccb" stroke="#65a30d" stroke-width="3"/>
+    <text x="757" y="177" text-anchor="middle" font-size="23" font-weight="700" fill="#3f6212">Static Providers</text><text x="757" y="209" text-anchor="middle" font-size="17" fill="#4d7c0f">JS · .NET · metadata</text>
+    <rect x="640" y="270" width="235" height="105" rx="20" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+    <text x="757" y="312" text-anchor="middle" font-size="23" font-weight="700" fill="#9a3412">Runtime Providers</text><text x="757" y="344" text-anchor="middle" font-size="17" fill="#c2410c">process · browser · IPC</text>
+    <rect x="935" y="160" width="205" height="190" rx="22" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="1037" y="204" text-anchor="middle" font-size="24" font-weight="700" fill="#5b21b6">Evidence Bundle</text>
+    <text x="960" y="246" font-size="18" fill="#6d28d9">bytes · symbols</text><text x="960" y="278" font-size="18" fill="#6d28d9">requests · traces</text><text x="960" y="310" font-size="18" fill="#6d28d9">unknown · limits</text>
+    <g stroke="#64748b" stroke-width="5" fill="none"><path d="M295 255H340"/><path d="M585 225H630"/><path d="M585 290H630"/><path d="M880 188H925"/><path d="M880 322H925"/></g>
+    <g fill="#64748b"><path d="M340 255l-15-10v20z"/><path d="M630 225l-15-10v20z"/><path d="M630 290l-15-10v20z"/><path d="M925 188l-15-10v20z"/><path d="M925 322l-15-10v20z"/></g>
+    <rect x="60" y="430" width="1080" height="235" rx="24" fill="#0f172a"/>
+    <text x="92" y="478" font-size="24" font-weight="700" fill="#fff">강제해야 할 운영 경계</text>
+    <text x="92" y="528" font-size="19" fill="#7dd3fc">정적 읽기</text><text x="225" y="528" font-size="19" fill="#e2e8f0">read-only copy · hash pinning · parser budget</text>
+    <text x="92" y="572" font-size="19" fill="#fdba74">런타임</text><text x="225" y="572" font-size="19" fill="#e2e8f0">disposable VM · blocked egress · empty credentials</text>
+    <text x="92" y="616" font-size="19" fill="#c4b5fd">결과</text><text x="225" y="616" font-size="19" fill="#e2e8f0">locator · provider version · verified / inferred / unknown</text>
+    <text x="720" y="528" font-size="19" fill="#bef264">범위</text><text x="800" y="528" font-size="19" fill="#e2e8f0">child target 발견 시 중단</text>
+    <text x="720" y="572" font-size="19" fill="#fda4af">데이터</text><text x="800" y="572" font-size="19" fill="#e2e8f0">synthetic account · no secrets</text>
+    <text x="720" y="616" font-size="19" fill="#fde68a">정리</text><text x="800" y="616" font-size="19" fill="#e2e8f0">cache · HAR · snapshot 삭제 검증</text>
+  </g>
+</svg>

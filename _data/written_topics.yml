@@ -474,3 +474,14 @@
     - "MCP 메모리 검색"
   slug: "claude-mem-agent-session-memory"
   summary: "claude-mem의 hook 캡처, 모델 요약, SQLite·Chroma 검색과 컨텍스트 주입을 분해해 기억 유실·오염·비밀 노출·비용의 운영 검증 기준을 정리."
+- date: 2026-10-10
+  title: "AI 역공학 에이전트: REA 권한·증거 검증 기준"
+  github_repo: "https://github.com/morluto/rea"
+  main_keyword: "AI 역공학 에이전트"
+  related_keywords:
+    - "REA"
+    - "MCP 역공학"
+    - "바이너리 분석"
+    - "역공학 증거 체인"
+  slug: "rea-agent-reverse-engineering"
+  summary: "REA의 MCP 기반 바이너리·웹·앱 분석 구조를 바탕으로 승인 범위, 실행 격리, evidence chain, 재현성과 합법적 운영 기준을 정리."

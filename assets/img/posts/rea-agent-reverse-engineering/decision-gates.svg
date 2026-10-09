@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI 역공학 도입 의사결정 게이트</title>
+  <desc id="desc">승인, 격리, 증거, 재현성 네 단계에서 확대, 보류, 중단을 결정하는 체크 흐름</desc>
+  <rect width="1200" height="720" rx="28" fill="#fff7ed"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#431407">빠른 분석보다 먼저 통과할 네 개의 게이트</text>
+  <text x="60" y="108" font-family="Arial, sans-serif" font-size="20" fill="#7c2d12">각 단계의 실패는 다음 단계 자동 진행이 아니라 보류 또는 중단 신호다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(60 165)"><circle cx="85" cy="85" r="78" fill="#dbeafe" stroke="#2563eb" stroke-width="5"/><text x="85" y="76" text-anchor="middle" font-size="24" font-weight="800" fill="#1e3a8a">1. 승인</text><text x="85" y="108" text-anchor="middle" font-size="17" fill="#1e40af">owner · purpose</text></g>
+    <path d="M235 250H305" stroke="#64748b" stroke-width="6"/><path d="M295 237l18 13-18 13" fill="none" stroke="#64748b" stroke-width="5"/>
+    <g transform="translate(325 165)"><circle cx="85" cy="85" r="78" fill="#cffafe" stroke="#0891b2" stroke-width="5"/><text x="85" y="76" text-anchor="middle" font-size="24" font-weight="800" fill="#155e75">2. 격리</text><text x="85" y="108" text-anchor="middle" font-size="17" fill="#0e7490">file · proc · net</text></g>
+    <path d="M500 250H570" stroke="#64748b" stroke-width="6"/><path d="M560 237l18 13-18 13" fill="none" stroke="#64748b" stroke-width="5"/>
+    <g transform="translate(590 165)"><circle cx="85" cy="85" r="78" fill="#ecfccb" stroke="#65a30d" stroke-width="5"/><text x="85" y="76" text-anchor="middle" font-size="24" font-weight="800" fill="#3f6212">3. 증거</text><text x="85" y="108" text-anchor="middle" font-size="17" fill="#4d7c0f">locator · unknown</text></g>
+    <path d="M765 250H835" stroke="#64748b" stroke-width="6"/><path d="M825 237l18 13-18 13" fill="none" stroke="#64748b" stroke-width="5"/>
+    <g transform="translate(855 165)"><circle cx="85" cy="85" r="78" fill="#ede9fe" stroke="#7c3aed" stroke-width="5"/><text x="85" y="76" text-anchor="middle" font-size="24" font-weight="800" fill="#5b21b6">4. 재현</text><text x="85" y="108" text-anchor="middle" font-size="17" fill="#6d28d9">hash · version</text></g>
+    <rect x="60" y="385" width="330" height="225" rx="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="88" y="430" font-size="25" font-weight="800" fill="#166534">확대</text>
+    <text x="88" y="472" font-size="18" fill="#166534">• 승인 target만 처리</text><text x="88" y="507" font-size="18" fill="#166534">• 경계 밖 접근 0건</text><text x="88" y="542" font-size="18" fill="#166534">• 핵심 결론 재현 가능</text><text x="88" y="577" font-size="18" fill="#166534">• unknown을 보존</text>
+    <rect x="435" y="385" width="330" height="225" rx="22" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+    <text x="463" y="430" font-size="25" font-weight="800" fill="#92400e">보류</text>
+    <text x="463" y="472" font-size="18" fill="#92400e">• release와 main 불일치</text><text x="463" y="507" font-size="18" fill="#92400e">• locator 없는 추론</text><text x="463" y="542" font-size="18" fill="#92400e">• parser timeout·truncation</text><text x="463" y="577" font-size="18" fill="#92400e">• scope 추가 승인 필요</text>
+    <rect x="810" y="385" width="330" height="225" rx="22" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="838" y="430" font-size="25" font-weight="800" fill="#991b1b">중단</text>
+    <text x="838" y="472" font-size="18" fill="#991b1b">• 소유·권한 불명확</text><text x="838" y="507" font-size="18" fill="#991b1b">• credential·고객 데이터 노출</text><text x="838" y="542" font-size="18" fill="#991b1b">• 승인 밖 process·domain 접근</text><text x="838" y="577" font-size="18" fill="#991b1b">• 보호 우회가 전제</text>
+  </g>
+</svg>
