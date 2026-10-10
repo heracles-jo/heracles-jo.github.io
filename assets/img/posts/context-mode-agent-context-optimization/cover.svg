@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 코딩 에이전트 컨텍스트 최적화</title>
+  <desc id="desc">큰 도구 출력을 실행과 검색 계층에서 처리해 작은 근거만 모델에 전달하는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071525"/><stop offset="1" stop-color="#18224a"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4ee1c1"/><stop offset="1" stop-color="#7aa7ff"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1060" cy="80" r="210" fill="#304fa8" opacity=".16"/>
+  <circle cx="100" cy="610" r="250" fill="#1ab99b" opacity=".12"/>
+  <text x="74" y="104" fill="#8ea5c8" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">CONTEXT ENGINEERING · MCP</text>
+  <text x="74" y="180" fill="#ffffff" font-family="Arial, sans-serif" font-size="51" font-weight="700">AI 코딩 에이전트</text>
+  <text x="74" y="244" fill="url(#accent)" font-family="Arial, sans-serif" font-size="51" font-weight="700">컨텍스트 최적화</text>
+  <text x="76" y="293" fill="#afbdd3" font-family="Arial, sans-serif" font-size="25">Context Mode의 정보 예산·실행 경계·복구 검증</text>
+  <g transform="translate(74 350)">
+    <rect width="278" height="154" rx="18" fill="#111f35" stroke="#41617e" stroke-width="2"/>
+    <text x="26" y="40" fill="#dce8f8" font-family="Arial, sans-serif" font-size="20" font-weight="700">RAW TOOL OUTPUT</text>
+    <rect x="26" y="62" width="218" height="12" rx="6" fill="#465773"/><rect x="26" y="86" width="190" height="12" rx="6" fill="#465773"/><rect x="26" y="110" width="232" height="12" rx="6" fill="#465773"/>
+    <text x="26" y="144" fill="#91a6c2" font-family="Arial, sans-serif" font-size="15">logs · snapshots · issues</text>
+  </g>
+  <path d="M372 427 H470" stroke="#4ee1c1" stroke-width="5" stroke-linecap="round"/><path d="M455 412 L472 427 L455 442" fill="none" stroke="#4ee1c1" stroke-width="5"/>
+  <g transform="translate(492 350)">
+    <rect width="255" height="154" rx="18" fill="#132842" stroke="#4ee1c1" stroke-width="2"/>
+    <text x="28" y="44" fill="#4ee1c1" font-family="Arial, sans-serif" font-size="21" font-weight="700">EXECUTE · INDEX</text>
+    <text x="28" y="82" fill="#dce8f8" font-family="Arial, sans-serif" font-size="18">집계 · FTS5 · BM25</text>
+    <text x="28" y="114" fill="#dce8f8" font-family="Arial, sans-serif" font-size="18">session snapshot</text>
+    <text x="28" y="143" fill="#91a6c2" font-family="Arial, sans-serif" font-size="15">local control plane</text>
+  </g>
+  <path d="M768 427 H866" stroke="#7aa7ff" stroke-width="5" stroke-linecap="round"/><path d="M851 412 L868 427 L851 442" fill="none" stroke="#7aa7ff" stroke-width="5"/>
+  <g transform="translate(888 350)" filter="url(#glow)">
+    <rect width="238" height="154" rx="18" fill="#182e55" stroke="#7aa7ff" stroke-width="2"/>
+    <text x="28" y="44" fill="#9dbdff" font-family="Arial, sans-serif" font-size="21" font-weight="700">USEFUL EVIDENCE</text>
+    <text x="28" y="84" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">small ≠ blind</text>
+    <text x="28" y="122" fill="#c4d0e5" font-family="Arial, sans-serif" font-size="17">필요한 근거만 모델로</text>
+  </g>
+  <text x="74" y="577" fill="#7f93b2" font-family="Arial, sans-serif" font-size="18">heracles-jo.github.io</text>
+</svg>

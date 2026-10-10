@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Context Mode 도구 출력 처리 아키텍처</title>
+  <desc id="desc">호스트 도구 결과를 실행 집계 또는 FTS5 색인으로 보내고 필요한 결과와 세션 상태만 모델 컨텍스트로 반환한다</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#5e78a6"/></marker><style>.box{fill:#fff;stroke:#385681;stroke-width:2}.t{font:700 22px Arial,sans-serif;fill:#16243a}.s{font:16px Arial,sans-serif;fill:#455a78}.line{stroke:#5e78a6;stroke-width:3;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect width="1200" height="720" fill="#f4f7fb"/>
+  <text x="60" y="64" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#14233b">원문을 모두 읽지 않고도 근거를 잃지 않는 경로</text>
+  <rect class="box" x="60" y="130" width="250" height="160" rx="18"/>
+  <text class="t" x="88" y="174">에이전트 호스트</text><text class="s" x="88" y="210">browser · shell · GitHub</text><text class="s" x="88" y="238">file read · test · build</text><text class="s" x="88" y="266">raw output 발생</text>
+  <path class="line" d="M310 210 H410"/>
+  <rect class="box" x="430" y="105" width="320" height="210" rx="18"/>
+  <text class="t" x="462" y="150">MCP 라우팅 계층</text><text class="s" x="462" y="187">hook: 큰 출력 경로를 전환</text><text class="s" x="462" y="217">permission: allow · deny · ask</text><text class="s" x="462" y="247">project / worktree attribution</text><text class="s" x="462" y="277">fail-open 상태 관측 필요</text>
+  <path class="line" d="M590 315 V380 H310 V425"/><path class="line" d="M590 315 V380 H870 V425"/>
+  <rect class="box" x="120" y="430" width="380" height="170" rx="18"/>
+  <text class="t" x="150" y="475">계산 경로</text><text class="s" x="150" y="510">ctx_execute · ctx_execute_file</text><text class="s" x="150" y="540">count · group · filter · parse</text><text class="s" x="150" y="570">짧은 집계와 오류 근거 반환</text>
+  <rect class="box" x="700" y="430" width="380" height="170" rx="18"/>
+  <text class="t" x="730" y="475">검색 경로</text><text class="s" x="730" y="510">ctx_index · ctx_search</text><text class="s" x="730" y="540">SQLite FTS5 · BM25 · chunk</text><text class="s" x="730" y="570">정확한 원문 조각을 필요할 때 반환</text>
+  <path class="line" d="M310 600 V650 H570"/><path class="line" d="M890 600 V650 H630"/>
+  <rect x="500" y="620" width="200" height="66" rx="16" fill="#173d69"/>
+  <text x="533" y="648" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">MODEL CONTEXT</text><text x="540" y="673" font-family="Arial,sans-serif" font-size="15" fill="#cce0f7">작은 결과 + 근거 pointer</text>
+  <rect x="810" y="100" width="310" height="210" rx="18" fill="#e9f8f4" stroke="#35a98a" stroke-width="2"/>
+  <text x="840" y="145" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#17654f">세션 연속성</text><text class="s" x="840" y="182">file · task · git · error event</text><text class="s" x="840" y="212">SQLite session DB</text><text class="s" x="840" y="242">PreCompact snapshot</text><text class="s" x="840" y="272">SessionStart 복구 + FTS5 검색</text>
+  <path d="M750 205 H810" stroke="#35a98a" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+</svg>
