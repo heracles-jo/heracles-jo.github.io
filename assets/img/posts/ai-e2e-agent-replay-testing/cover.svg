@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI E2E 테스트와 재생 캐시</title>
+  <desc id="desc">자연어 목표, 에이전트 행동, 결정론적 검증, 재생 캐시가 연결된 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1020"/><stop offset="1" stop-color="#172554"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1060" cy="90" r="180" fill="#38bdf8" opacity=".08"/><circle cx="90" cy="600" r="220" fill="#a78bfa" opacity=".08"/>
+  <text x="72" y="105" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="25" font-weight="700">SOFTWARE ENGINEERING · TESTING</text>
+  <text x="72" y="190" fill="#f8fafc" font-family="Arial, sans-serif" font-size="58" font-weight="800">AI E2E 테스트</text>
+  <text x="72" y="250" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="34">자연어 행동을 검증된 재생 자산으로</text>
+  <g filter="url(#shadow)">
+    <rect x="72" y="330" width="230" height="116" rx="20" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+    <text x="187" y="376" text-anchor="middle" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="21" font-weight="700">NATURAL GOAL</text>
+    <text x="187" y="410" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="20">agent.act</text>
+    <path d="M302 388h72" stroke="url(#accent)" stroke-width="6"/><path d="m364 376 18 12-18 12" fill="#a78bfa"/>
+    <rect x="382" y="330" width="230" height="116" rx="20" fill="#111827" stroke="#a78bfa" stroke-width="2"/>
+    <text x="497" y="376" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="21" font-weight="700">AGENT ACTION</text>
+    <text x="497" y="410" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="20">bounded tools</text>
+    <path d="M612 388h72" stroke="url(#accent)" stroke-width="6"/><path d="m674 376 18 12-18 12" fill="#38bdf8"/>
+    <rect x="692" y="330" width="230" height="116" rx="20" fill="#111827" stroke="#22c55e" stroke-width="2"/>
+    <text x="807" y="376" text-anchor="middle" fill="#86efac" font-family="Arial, sans-serif" font-size="21" font-weight="700">VERIFY</text>
+    <text x="807" y="410" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="20">expect · assertion</text>
+    <path d="M922 388h72" stroke="url(#accent)" stroke-width="6"/><path d="m984 376 18 12-18 12" fill="#a78bfa"/>
+    <rect x="1002" y="330" width="130" height="116" rx="20" fill="#111827" stroke="#f59e0b" stroke-width="2"/>
+    <text x="1067" y="376" text-anchor="middle" fill="#fcd34d" font-family="Arial, sans-serif" font-size="19" font-weight="700">REPLAY</text>
+    <text x="1067" y="410" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18">no model</text>
+  </g>
+  <rect x="72" y="510" width="1060" height="2" fill="url(#accent)" opacity=".65"/>
+  <text x="72" y="563" fill="#94a3b8" font-family="Arial, sans-serif" font-size="24">재현성 · 비용 · 플레이크 · 보안 경계 · PoC 중단 조건</text>
+</svg>

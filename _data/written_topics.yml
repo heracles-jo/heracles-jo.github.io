@@ -496,3 +496,14 @@
     - "토큰 최적화"
   slug: "context-mode-agent-context-optimization"
   summary: "Context Mode의 실행 집계, FTS5 검색, hook 라우팅과 세션 복구를 분해해 정보 손실·권한·비용·ELv2 라이선스의 도입 기준을 정리."
+- date: 2026-10-12
+  title: "AI E2E 테스트: 자연어 에이전트와 재생 캐시 검증 기준"
+  github_repo: "https://github.com/tester-army/e2e"
+  main_keyword: "AI E2E 테스트"
+  related_keywords:
+    - "tester-army e2e"
+    - "자연어 테스트 자동화"
+    - "replay cache"
+    - "에이전트 테스트"
+  slug: "ai-e2e-agent-replay-testing"
+  summary: "tester-army/e2e의 자연어 행동, 결정론적 검증, replay cache를 분리해 플레이크·비용·보안 경계와 PoC 도입 기준을 정리."
