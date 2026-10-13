@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">xtool 도입 의사결정 지도</title>
+  <desc id="desc">SwiftPM 적합성과 Apple 플랫폼 기능 복잡도에 따라 실험, 하이브리드, 보류 영역을 구분</desc>
+  <style>.t{font-family:system-ui,sans-serif}.h{font-size:28px;font-weight:800}.m{font-size:22px;font-weight:750}.s{font-size:17px}.axis{stroke:#334b6b;stroke-width:3}.grid{stroke:#c9d3e0;stroke-width:1}</style>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="60" y="58" class="t h" fill="#172b4d">SwiftPM 적합성과 Apple 전용 기능 복잡도로 범위를 정한다</text>
+  <g transform="translate(150 115)">
+    <rect width="880" height="500" fill="#fff" stroke="#9eacbd" stroke-width="2"/>
+    <rect width="440" height="250" fill="#fbe8e8"/>
+    <rect x="440" width="440" height="250" fill="#fff2d8"/>
+    <rect y="250" width="440" height="250" fill="#edf0f4"/>
+    <rect x="440" y="250" width="440" height="250" fill="#e4f4e7"/>
+    <line x1="440" y1="0" x2="440" y2="500" class="grid"/><line x1="0" y1="250" x2="880" y2="250" class="grid"/>
+    <text x="220" y="65" text-anchor="middle" class="t m" fill="#8a3030">도입 보류</text>
+    <text x="220" y="105" text-anchor="middle" class="t s" fill="#6e4545">기존 Xcode project 중심</text>
+    <text x="220" y="136" text-anchor="middle" class="t s" fill="#6e4545">복잡한 extension·capability</text>
+    <text x="220" y="167" text-anchor="middle" class="t s" fill="#6e4545">정식 archive·배포가 핵심</text>
+    <text x="660" y="65" text-anchor="middle" class="t m" fill="#87601f">격리 PoC</text>
+    <text x="660" y="105" text-anchor="middle" class="t s" fill="#705b34">SwiftPM 비중은 높지만</text>
+    <text x="660" y="136" text-anchor="middle" class="t s" fill="#705b34">서명·리소스·extension 복잡</text>
+    <text x="660" y="167" text-anchor="middle" class="t s" fill="#705b34">작은 target만 동등성 검증</text>
+    <text x="220" y="320" text-anchor="middle" class="t m" fill="#53657b">효과 제한</text>
+    <text x="220" y="360" text-anchor="middle" class="t s" fill="#53657b">단순 기능이지만</text>
+    <text x="220" y="391" text-anchor="middle" class="t s" fill="#53657b">SwiftPM 전환 비용이 큼</text>
+    <text x="220" y="422" text-anchor="middle" class="t s" fill="#53657b">Mac 개발 루프 유지가 경제적</text>
+    <text x="660" y="320" text-anchor="middle" class="t m" fill="#2f6d3b">우선 실험</text>
+    <text x="660" y="360" text-anchor="middle" class="t s" fill="#416d49">새 SwiftUI·SwiftPM 앱</text>
+    <text x="660" y="391" text-anchor="middle" class="t s" fill="#416d49">비주력 실기기·별도 계정</text>
+    <text x="660" y="422" text-anchor="middle" class="t s" fill="#416d49">Linux build + Mac release</text>
+    <line x1="0" y1="520" x2="880" y2="520" class="axis"/>
+    <path d="M880 520l-16-9v18z" fill="#334b6b"/>
+    <text x="440" y="560" text-anchor="middle" class="t m" fill="#334b6b">SwiftPM·선언형 프로젝트 적합성 →</text>
+    <line x1="-20" y1="500" x2="-20" y2="0" class="axis"/>
+    <path d="M-20 0l-9 16h18z" fill="#334b6b"/>
+    <text transform="translate(-78 250) rotate(-90)" text-anchor="middle" class="t m" fill="#334b6b">Apple 전용 기능 복잡도 →</text>
+  </g>
+  <text x="150" y="680" class="t s" fill="#586b83">중단 신호: private API 인증 의존, SDK 재배포 불명확, 산출물 동등성 미확인, 공식 Xcode 탈출구 부재</text>
+</svg>

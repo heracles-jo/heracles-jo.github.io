@@ -507,3 +507,14 @@
     - "에이전트 테스트"
   slug: "ai-e2e-agent-replay-testing"
   summary: "tester-army/e2e의 자연어 행동, 결정론적 검증, replay cache를 분리해 플레이크·비용·보안 경계와 PoC 도입 기준을 정리."
+- date: 2026-10-14
+  title: "Linux·Windows iOS 앱 빌드: xtool 도입 기준"
+  github_repo: "https://github.com/xtool-org/xtool"
+  main_keyword: "Linux Windows iOS 앱 빌드"
+  related_keywords:
+    - "xtool"
+    - "SwiftPM iOS 빌드"
+    - "Xcode 대안"
+    - "크로스플랫폼 iOS 개발"
+  slug: "xtool-cross-platform-ios-build"
+  summary: "xtool의 SwiftPM·Xcode SDK·Apple 서명·실기기 설치 구조를 분석하고 비 macOS iOS 개발의 지원 경계, 실패 모드와 PoC 기준을 정리."

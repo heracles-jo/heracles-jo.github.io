@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Linux와 Windows의 iOS 빌드 경계</title>
+  <desc id="desc">SwiftPM 소스가 xtool을 거쳐 Apple SDK, 코드 서명, iPhone 실기기로 이어지는 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081426"/><stop offset="1" stop-color="#172b4d"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ff7a45"/><stop offset="1" stop-color="#ffcc66"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="210" fill="#2d63a8" opacity=".18"/>
+  <circle cx="1060" cy="570" r="250" fill="#ff7a45" opacity=".10"/>
+  <text x="80" y="108" fill="#8fb7e8" font-family="system-ui,sans-serif" font-size="28" font-weight="700">XTOOL · SWIFTPM · CODE SIGNING</text>
+  <text x="80" y="205" fill="#ffffff" font-family="system-ui,sans-serif" font-size="58" font-weight="800">Linux·Windows</text>
+  <text x="80" y="278" fill="#ffffff" font-family="system-ui,sans-serif" font-size="58" font-weight="800">iOS 앱 빌드</text>
+  <text x="80" y="338" fill="#b8c8df" font-family="system-ui,sans-serif" font-size="30">Xcode 제거가 아니라 빌드 경계를 다시 조립한다</text>
+  <g transform="translate(80 420)">
+    <rect width="210" height="92" rx="18" fill="#122848" stroke="#4f83c2" stroke-width="2"/>
+    <text x="105" y="40" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="24" font-weight="700">SwiftPM</text>
+    <text x="105" y="69" text-anchor="middle" fill="#94afd2" font-family="system-ui,sans-serif" font-size="18">Linux / WSL</text>
+    <path d="M225 46H305" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M294 32l18 14-18 14" fill="none" stroke="#ffbb61" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="330" width="210" height="92" rx="18" fill="#31223a" stroke="#ff8b55" stroke-width="2"/>
+    <text x="435" y="55" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="30" font-weight="800">xtool</text>
+    <path d="M555 46H635" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M624 32l18 14-18 14" fill="none" stroke="#ffbb61" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="660" width="210" height="92" rx="18" fill="#122848" stroke="#4f83c2" stroke-width="2"/>
+    <text x="765" y="40" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="24" font-weight="700">Signed App</text>
+    <text x="765" y="69" text-anchor="middle" fill="#94afd2" font-family="system-ui,sans-serif" font-size="18">iPhone Device</text>
+  </g>
+  <text x="1120" y="585" text-anchor="end" fill="#7893b8" font-family="system-ui,sans-serif" font-size="20">heracles.jo</text>
+</svg>

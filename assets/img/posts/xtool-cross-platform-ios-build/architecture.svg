@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">xtool 크로스플랫폼 iOS 빌드 아키텍처</title>
+  <desc id="desc">편집기와 SwiftPM 소스에서 Darwin SDK, 앱 패키징, Apple Developer Services, 서명, iPhone 설치로 이어지는 계층</desc>
+  <style>.t{font-family:system-ui,sans-serif}.h{font-size:28px;font-weight:800}.m{font-size:22px;font-weight:700}.s{font-size:17px}.box{rx:16;stroke-width:2}.arrow{fill:none;stroke:#ec7b42;stroke-width:5;marker-end:url(#a)}</style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#ec7b42"/></marker></defs>
+  <rect width="1200" height="720" fill="#f7f9fc"/>
+  <text x="60" y="62" class="t h" fill="#172b4d">xtool은 Xcode 기능을 다섯 계층으로 다시 연결한다</text>
+  <rect x="60" y="110" width="250" height="160" class="box" fill="#e8f1fc" stroke="#4d83bd"/>
+  <text x="185" y="155" text-anchor="middle" class="t m" fill="#17385f">개발 환경</text>
+  <text x="185" y="193" text-anchor="middle" class="t s" fill="#365d85">VS Code · SourceKit-LSP</text>
+  <text x="185" y="223" text-anchor="middle" class="t s" fill="#365d85">Package.swift · Swift 소스</text>
+  <text x="185" y="250" text-anchor="middle" class="t s" fill="#365d85">BSP: .bsp/xtool.json</text>
+  <rect x="365" y="110" width="250" height="160" class="box" fill="#fff0e8" stroke="#ec7b42"/>
+  <text x="490" y="155" text-anchor="middle" class="t m" fill="#713519">xtool 계획·패키징</text>
+  <text x="490" y="193" text-anchor="middle" class="t s" fill="#7d4b35">xtool.yml · build graph</text>
+  <text x="490" y="223" text-anchor="middle" class="t s" fill="#7d4b35">app bundle · resources</text>
+  <text x="490" y="250" text-anchor="middle" class="t s" fill="#7d4b35">Info.plist · entitlements</text>
+  <rect x="670" y="110" width="250" height="160" class="box" fill="#e8f1fc" stroke="#4d83bd"/>
+  <text x="795" y="155" text-anchor="middle" class="t m" fill="#17385f">Apple SDK 계층</text>
+  <text x="795" y="193" text-anchor="middle" class="t s" fill="#365d85">Xcode.xip 라이선스 동의</text>
+  <text x="795" y="223" text-anchor="middle" class="t s" fill="#365d85">Darwin Swift SDK bundle</text>
+  <text x="795" y="250" text-anchor="middle" class="t s" fill="#365d85">Swift 6.4 toolchain</text>
+  <rect x="975" y="110" width="165" height="160" class="box" fill="#eef7ed" stroke="#58a05c"/>
+  <text x="1057" y="155" text-anchor="middle" class="t m" fill="#28552b">빌드 결과</text>
+  <text x="1057" y="197" text-anchor="middle" class="t s" fill="#3e6d41">iOS app</text>
+  <text x="1057" y="228" text-anchor="middle" class="t s" fill="#3e6d41">unsigned</text>
+  <path d="M310 190H350" class="arrow"/><path d="M615 190H655" class="arrow"/><path d="M920 190H960" class="arrow"/>
+  <rect x="180" y="365" width="330" height="180" class="box" fill="#f3ecfb" stroke="#8b62b5"/>
+  <text x="345" y="410" text-anchor="middle" class="t m" fill="#4d2c70">Apple Developer Services</text>
+  <text x="345" y="450" text-anchor="middle" class="t s" fill="#654786">API key 또는 password+2FA</text>
+  <text x="345" y="481" text-anchor="middle" class="t s" fill="#654786">Device · App ID · Certificate</text>
+  <text x="345" y="512" text-anchor="middle" class="t s" fill="#654786">Provisioning Profile</text>
+  <rect x="590" y="365" width="250" height="180" class="box" fill="#fff0e8" stroke="#ec7b42"/>
+  <text x="715" y="420" text-anchor="middle" class="t m" fill="#713519">코드 서명</text>
+  <text x="715" y="462" text-anchor="middle" class="t s" fill="#7d4b35">bundle + identity</text>
+  <text x="715" y="493" text-anchor="middle" class="t s" fill="#7d4b35">profile 정합성</text>
+  <rect x="920" y="365" width="220" height="180" class="box" fill="#eef7ed" stroke="#58a05c"/>
+  <text x="1030" y="415" text-anchor="middle" class="t m" fill="#28552b">실기기 루프</text>
+  <text x="1030" y="457" text-anchor="middle" class="t s" fill="#3e6d41">usbmuxd · USB/WSL</text>
+  <text x="1030" y="488" text-anchor="middle" class="t s" fill="#3e6d41">pair · install · launch</text>
+  <text x="1030" y="519" text-anchor="middle" class="t s" fill="#3e6d41">Developer Mode</text>
+  <path d="M975 270C975 315 840 315 800 350" class="arrow"/>
+  <path d="M510 455H575" class="arrow"/><path d="M840 455H905" class="arrow"/>
+  <rect x="60" y="625" width="1080" height="54" rx="12" fill="#172b4d"/>
+  <text x="600" y="660" text-anchor="middle" class="t s" fill="#fff">관측해야 할 경계: SDK 출처 · 인증 수명 · 번들 동등성 · 서명 영향 반경 · USB 복구</text>
+</svg>
