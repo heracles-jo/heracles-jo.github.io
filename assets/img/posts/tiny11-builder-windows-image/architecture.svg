@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Tiny11 Builder 오프라인 이미지 아키텍처</title>
+  <desc id="desc">공식 ISO 입력부터 인벤토리, 오프라인 수정, WIM 커밋, ISO 검증과 보고서까지 이어지는 파이프라인</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f5f9fc"/><stop offset="1" stop-color="#e9f1f7"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#39759b"/></marker>
+    <filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1a3850" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="720" rx="30" fill="url(#bg)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif">
+    <text x="60" y="70" fill="#17334b" font-size="34" font-weight="800">Tiny11 Builder는 실행 중인 PC가 아니라 작업 복사본을 수정한다</text>
+    <text x="60" y="108" fill="#587286" font-size="20">원본·도구·recipe·산출물 해시가 연결돼야 재현 가능한 이미지 파이프라인이 된다.</text>
+
+    <g filter="url(#s)">
+      <rect x="55" y="170" width="190" height="150" rx="20" fill="#fff" stroke="#3e91c7" stroke-width="3"/>
+      <rect x="285" y="170" width="190" height="150" rx="20" fill="#fff" stroke="#3e91c7" stroke-width="3"/>
+      <rect x="515" y="170" width="190" height="150" rx="20" fill="#fff" stroke="#36a687" stroke-width="3"/>
+      <rect x="745" y="170" width="190" height="150" rx="20" fill="#fff" stroke="#36a687" stroke-width="3"/>
+      <rect x="975" y="170" width="170" height="150" rx="20" fill="#fff" stroke="#e09249" stroke-width="3"/>
+    </g>
+
+    <g fill="none" stroke="#39759b" stroke-width="4" marker-end="url(#arrow)">
+      <path d="M245 245H278"/><path d="M475 245H508"/><path d="M705 245H738"/><path d="M935 245H968"/>
+    </g>
+
+    <g text-anchor="middle">
+      <text x="150" y="208" fill="#17608f" font-size="18" font-weight="800">01 INPUT</text>
+      <text x="150" y="242" fill="#17334b" font-size="23" font-weight="800">공식 Windows ISO</text>
+      <text x="150" y="276" fill="#587286" font-size="17">Microsoft host · SHA-256</text>
+      <text x="150" y="300" fill="#587286" font-size="17">원본은 읽기 전용</text>
+
+      <text x="380" y="208" fill="#17608f" font-size="18" font-weight="800">02 INVENTORY</text>
+      <text x="380" y="242" fill="#17334b" font-size="23" font-weight="800">WIM / ESD 분석</text>
+      <text x="380" y="276" fill="#587286" font-size="17">빌드 · 에디션 · 패키지</text>
+      <text x="380" y="300" fill="#587286" font-size="17">DISM provider 호환성</text>
+
+      <text x="610" y="208" fill="#23866d" font-size="18" font-weight="800">03 MUTATE</text>
+      <text x="610" y="242" fill="#17334b" font-size="23" font-weight="800">오프라인 수정</text>
+      <text x="610" y="276" fill="#587286" font-size="17">앱 · 기능 · 서비스</text>
+      <text x="610" y="300" fill="#587286" font-size="17">registry write-back 검증</text>
+
+      <text x="840" y="208" fill="#23866d" font-size="18" font-weight="800">04 COMMIT</text>
+      <text x="840" y="242" fill="#17334b" font-size="23" font-weight="800">이미지 재조립</text>
+      <text x="840" y="276" fill="#587286" font-size="17">WIM 압축 · setup 구성</text>
+      <text x="840" y="300" fill="#587286" font-size="17">UEFI 부팅 ISO 생성</text>
+
+      <text x="1060" y="208" fill="#b46622" font-size="18" font-weight="800">05 VERIFY</text>
+      <text x="1060" y="242" fill="#17334b" font-size="23" font-weight="800">검증 산출물</text>
+      <text x="1060" y="276" fill="#587286" font-size="17">ISO hash · JSON report</text>
+      <text x="1060" y="300" fill="#587286" font-size="17">VM 설치 · 패치 시험</text>
+    </g>
+
+    <rect x="55" y="380" width="1090" height="250" rx="24" fill="#102c42"/>
+    <text x="88" y="428" fill="#8ed9ff" font-size="22" font-weight="800">재현성 원장</text>
+    <g fill="#dceefa" font-size="20">
+      <text x="92" y="474">● 원본 ISO SHA-256와 에디션</text>
+      <text x="92" y="512">● Builder tag · commit SHA</text>
+      <text x="92" y="550">● ADK · DISM provider 버전</text>
+      <text x="92" y="588">● recipe · 압축 방식 · 출력 hash</text>
+    </g>
+    <path d="M570 416V600" stroke="#31556c" stroke-width="2"/>
+    <text x="612" y="428" fill="#8ff0d4" font-size="22" font-weight="800">운영 승인 게이트</text>
+    <g fill="#dceefa" font-size="20">
+      <text x="616" y="474">✓ 설치 완료만이 아니라 첫 누적 업데이트 성공</text>
+      <text x="616" y="512">✓ Defender · WinRE · 업무 앱 회귀 확인</text>
+      <text x="616" y="550">✓ 실패 로그와 표준 이미지 복구 시간 측정</text>
+      <text x="616" y="588">✓ 서명되지 않은 Builder artifact 별도 승인</text>
+    </g>
+    <text x="600" y="682" text-anchor="middle" fill="#6c8292" font-size="17">원본을 보존해도 변환 조건을 기록하지 않으면 같은 이미지를 다시 만들 수 없다.</text>
+  </g>
+</svg>

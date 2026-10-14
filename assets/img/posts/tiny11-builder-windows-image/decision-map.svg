@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Tiny11 Builder 모드 선택 의사결정 지도</title>
+  <desc id="desc">업데이트, 복구, 수명, 업무 데이터에 따라 기본 Windows, Tiny11, Custom, Core 사용 범위를 결정하는 지도</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071827"/><stop offset="1" stop-color="#102f43"/></linearGradient>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#7bbbd8"/></marker>
+  </defs>
+  <rect width="1200" height="760" rx="30" fill="url(#bg)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif">
+    <text x="60" y="68" fill="#fff" font-size="34" font-weight="800">작은 ISO보다 먼저 정할 것: 패치·복구·폐기 가능성</text>
+    <text x="60" y="107" fill="#9bc3d8" font-size="20">오른쪽으로 갈수록 제거 범위와 검증 책임이 커진다.</text>
+
+    <path d="M90 182H1110" stroke="#7bbbd8" stroke-width="3" marker-end="url(#a)"/>
+    <text x="90" y="158" fill="#8ed9ff" font-size="18">보수적</text>
+    <text x="1032" y="158" fill="#ffbb78" font-size="18">공격적 제거</text>
+
+    <g>
+      <rect x="65" y="220" width="245" height="330" rx="24" fill="#f7fbff" stroke="#72b9dc" stroke-width="3"/>
+      <text x="188" y="268" text-anchor="middle" fill="#1b6388" font-size="26" font-weight="800">기본 Windows</text>
+      <text x="92" y="315" fill="#27485d" font-size="19">• Microsoft 지원 경계 우선</text>
+      <text x="92" y="350" fill="#27485d" font-size="19">• 업데이트·복구 필수</text>
+      <text x="92" y="385" fill="#27485d" font-size="19">• 범용 업무 장비</text>
+      <rect x="91" y="435" width="193" height="68" rx="14" fill="#dcedf6"/>
+      <text x="188" y="463" text-anchor="middle" fill="#1d5878" font-size="17" font-weight="700">기준 이미지</text>
+      <text x="188" y="488" text-anchor="middle" fill="#44687b" font-size="16">비교군으로 항상 유지</text>
+    </g>
+
+    <g>
+      <rect x="340" y="220" width="245" height="330" rx="24" fill="#f3fffb" stroke="#48c4a0" stroke-width="3"/>
+      <text x="463" y="268" text-anchor="middle" fill="#17775d" font-size="26" font-weight="800">Tiny11</text>
+      <text x="367" y="315" fill="#27485d" font-size="19">• Update·Defender 유지</text>
+      <text x="367" y="350" fill="#27485d" font-size="19">• WinRE·Store 유지</text>
+      <text x="367" y="385" fill="#27485d" font-size="19">• 역할 제한 파일럿</text>
+      <rect x="366" y="435" width="193" height="68" rx="14" fill="#d9f4ea"/>
+      <text x="463" y="463" text-anchor="middle" fill="#176a54" font-size="17" font-weight="700">조건부 채택</text>
+      <text x="463" y="488" text-anchor="middle" fill="#477064" font-size="16">패치·복구 회귀 필수</text>
+    </g>
+
+    <g>
+      <rect x="615" y="220" width="245" height="330" rx="24" fill="#fffaf1" stroke="#e0a24c" stroke-width="3"/>
+      <text x="738" y="268" text-anchor="middle" fill="#9a5d13" font-size="26" font-weight="800">Custom</text>
+      <text x="642" y="315" fill="#27485d" font-size="19">• 역할별 최소 recipe</text>
+      <text x="642" y="350" fill="#27485d" font-size="19">• dependency 책임 내부화</text>
+      <text x="642" y="385" fill="#27485d" font-size="19">• 업무 앱 회귀 자동화</text>
+      <rect x="641" y="435" width="193" height="68" rx="14" fill="#f7e7c9"/>
+      <text x="738" y="463" text-anchor="middle" fill="#875513" font-size="17" font-weight="700">전문가 영역</text>
+      <text x="738" y="488" text-anchor="middle" fill="#7c6748" font-size="16">보호 항목 제거 금지</text>
+    </g>
+
+    <g>
+      <rect x="890" y="220" width="245" height="330" rx="24" fill="#fff5f4" stroke="#ef746a" stroke-width="3"/>
+      <text x="1013" y="268" text-anchor="middle" fill="#b23932" font-size="26" font-weight="800">Tiny11 Core</text>
+      <text x="917" y="315" fill="#27485d" font-size="19">• Update·WinRE 없음</text>
+      <text x="917" y="350" fill="#27485d" font-size="19">• Defender 비활성화</text>
+      <text x="917" y="385" fill="#27485d" font-size="19">• 사후 servicing 불가</text>
+      <rect x="916" y="435" width="193" height="68" rx="14" fill="#f8d9d6"/>
+      <text x="1013" y="463" text-anchor="middle" fill="#a1302b" font-size="17" font-weight="700">폐기형 VM만</text>
+      <text x="1013" y="488" text-anchor="middle" fill="#78514e" font-size="16">업무·장기 장비 중단</text>
+    </g>
+
+    <rect x="65" y="594" width="1070" height="105" rx="20" fill="#0c2232" stroke="#31556c"/>
+    <text x="95" y="635" fill="#ffcf91" font-size="21" font-weight="800">즉시 중단 조건</text>
+    <text x="95" y="672" fill="#d7e8f1" font-size="19">원본·도구 hash 미기록 · 누적 업데이트 실패 · 복구 경로 부재 · 표준 이미지로 재설치 시간 미측정 · 라이선스 검토 없는 외부 재배포</text>
+    <text x="600" y="735" text-anchor="middle" fill="#8caabe" font-size="17">Core의 작은 크기는 운영 가능성을 대신하지 않는다.</text>
+  </g>
+</svg>

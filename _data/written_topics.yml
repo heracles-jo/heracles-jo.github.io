@@ -518,3 +518,14 @@
     - "크로스플랫폼 iOS 개발"
   slug: "xtool-cross-platform-ios-build"
   summary: "xtool의 SwiftPM·Xcode SDK·Apple 서명·실기기 설치 구조를 분석하고 비 macOS iOS 개발의 지원 경계, 실패 모드와 PoC 기준을 정리."
+- date: 2026-10-15
+  title: "Tiny11 Builder Windows 11 경량 ISO: 업데이트 가능한 이미지 기준"
+  github_repo: "https://github.com/ntdevlabs/tiny11builder"
+  main_keyword: "Tiny11 Builder Windows 11 경량 ISO"
+  related_keywords:
+    - "Windows 이미지 경량화"
+    - "DISM 오프라인 이미지"
+    - "Windows Update 서비스 가능성"
+    - "골든 이미지 검증"
+  slug: "tiny11-builder-windows-image"
+  summary: "Tiny11 Builder의 오프라인 WIM 처리와 Tiny11·Core 경계를 분석하고 업데이트, Defender, WinRE, 공급망, 복구와 PoC 기준을 정리."
