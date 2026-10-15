@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">XERJ 도입 위험과 결정 지도</title>
+  <desc id="desc">개인 개발 장비, 팀 검색 서비스, 에이전트 메모리, Elasticsearch 대체의 위험과 도입 조건을 비교</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081724"/><stop offset="1" stop-color="#17364a"/></linearGradient></defs>
+  <rect width="1200" height="760" rx="30" fill="url(#bg)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif">
+    <text x="60" y="68" fill="#fff" font-size="34" font-weight="800">XERJ 도입 범위는 토큰 절감률이 아니라 실패 반경으로 정한다</text>
+    <text x="60" y="107" fill="#9cc3d7" font-size="20">오른쪽으로 갈수록 권한·가용성·복구 책임이 검색 엔진 운영으로 확장된다.</text>
+    <g>
+      <rect x="55" y="165" width="255" height="375" rx="24" fill="#f3fffb" stroke="#4bc7a3" stroke-width="3"/>
+      <text x="183" y="213" text-anchor="middle" fill="#17745d" font-size="25" font-weight="800">개인 개발 장비</text><text x="82" y="262" fill="#284b5d" font-size="18">• loopback 단일 사용자</text><text x="82" y="299" fill="#284b5d" font-size="18">• 코드 검색 PoC</text><text x="82" y="336" fill="#284b5d" font-size="18">• 폐기 가능한 색인</text><rect x="80" y="400" width="205" height="82" rx="15" fill="#d8f3e9"/><text x="183" y="432" text-anchor="middle" fill="#176751" font-size="18" font-weight="800">시작하기 좋은 범위</text><text x="183" y="462" text-anchor="middle" fill="#517468" font-size="16">--insecure는 여기까지</text>
+      <rect x="335" y="165" width="255" height="375" rx="24" fill="#f4f9ff" stroke="#67a5db" stroke-width="3"/>
+      <text x="463" y="213" text-anchor="middle" fill="#286594" font-size="25" font-weight="800">팀 검색 서비스</text><text x="362" y="262" fill="#284b5d" font-size="18">• TLS · scoped key</text><text x="362" y="299" fill="#284b5d" font-size="18">• 색인 소유권 · SLO</text><text x="362" y="336" fill="#284b5d" font-size="18">• snapshot 복원 훈련</text><rect x="360" y="400" width="205" height="82" rx="15" fill="#dcecf8"/><text x="463" y="432" text-anchor="middle" fill="#235c84" font-size="18" font-weight="800">조건부 확대</text><text x="463" y="462" text-anchor="middle" fill="#526d7f" font-size="16">권한과 freshness 자동화</text>
+      <rect x="615" y="165" width="255" height="375" rx="24" fill="#fffaf0" stroke="#e2a44e" stroke-width="3"/>
+      <text x="743" y="213" text-anchor="middle" fill="#985d17" font-size="25" font-weight="800">에이전트 메모리</text><text x="642" y="262" fill="#284b5d" font-size="18">• 삭제·보존 정책</text><text x="642" y="299" fill="#284b5d" font-size="18">• namespace 격리</text><text x="642" y="336" fill="#284b5d" font-size="18">• 오염·회수 절차</text><rect x="640" y="400" width="205" height="82" rx="15" fill="#f7e8c9"/><text x="743" y="432" text-anchor="middle" fill="#855513" font-size="18" font-weight="800">별도 데이터 제품</text><text x="743" y="462" text-anchor="middle" fill="#76664b" font-size="16">검색 색인과 수명 분리</text>
+      <rect x="895" y="165" width="250" height="375" rx="24" fill="#fff4f3" stroke="#ed7268" stroke-width="3"/>
+      <text x="1020" y="213" text-anchor="middle" fill="#ad3831" font-size="25" font-weight="800">ES 대체</text><text x="922" y="262" fill="#284b5d" font-size="18">• RC 성숙도 검토</text><text x="922" y="299" fill="#284b5d" font-size="18">• 혼합 부하 p99</text><text x="922" y="336" fill="#284b5d" font-size="18">• API 의미 차이 검증</text><rect x="920" y="400" width="200" height="82" rx="15" fill="#f7d9d6"/><text x="1020" y="432" text-anchor="middle" fill="#9b302b" font-size="18" font-weight="800">기본값은 중단</text><text x="1020" y="462" text-anchor="middle" fill="#79534f" font-size="16">shadow traffic부터</text>
+    </g>
+    <rect x="55" y="585" width="1090" height="105" rx="20" fill="#0c2638" stroke="#385970"/>
+    <text x="88" y="627" fill="#ffd092" font-size="21" font-weight="800">즉시 중단 조건</text>
+    <text x="88" y="665" fill="#dcecf5" font-size="18">색인에 비밀·개인정보가 섞임 · 권한 없는 wildcard key · freshness 측정 부재 · 원본 없이 memory만 신뢰 · restore 미검증 · 외부 rerank 반출 미승인</text>
+    <text x="600" y="732" text-anchor="middle" fill="#90adbe" font-size="17">개발 도구로 성공한 구성을 곧바로 조직 검색 플랫폼으로 승격하지 않는다.</text>
+  </g>
+</svg>

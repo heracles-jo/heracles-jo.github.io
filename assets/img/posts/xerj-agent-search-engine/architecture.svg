@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+  <title id="title">XERJ 에이전트 검색 아키텍처</title>
+  <desc id="desc">코드와 문서를 autoindex가 구조화하고 검색 엔진과 MCP를 거쳐 에이전트에 필요한 구간만 반환하는 흐름</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f5f9fd"/><stop offset="1" stop-color="#e8f1f7"/></linearGradient><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#477b9e"/></marker><filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#203a50" flood-opacity=".15"/></filter></defs>
+  <rect width="1200" height="740" rx="30" fill="url(#bg)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif">
+    <text x="58" y="68" fill="#17354b" font-size="34" font-weight="800">에이전트가 파일 전체 대신 근거 구간을 읽게 만드는 검색 데이터 플레인</text>
+    <text x="58" y="106" fill="#597486" font-size="20">색인 성공, 검색 품질, 권한 경계, 색인 신선도는 서로 다른 검증 항목이다.</text>
+    <g filter="url(#s)">
+      <rect x="55" y="165" width="205" height="175" rx="22" fill="#fff" stroke="#4a93bd" stroke-width="3"/>
+      <rect x="305" y="165" width="205" height="175" rx="22" fill="#fff" stroke="#38a788" stroke-width="3"/>
+      <rect x="555" y="165" width="205" height="175" rx="22" fill="#fff" stroke="#6c79c8" stroke-width="3"/>
+      <rect x="805" y="165" width="205" height="175" rx="22" fill="#fff" stroke="#d58b45" stroke-width="3"/>
+    </g>
+    <g stroke="#477b9e" stroke-width="4" fill="none" marker-end="url(#a)"><path d="M260 252H297"/><path d="M510 252H547"/><path d="M760 252H797"/></g>
+    <g text-anchor="middle">
+      <text x="158" y="205" fill="#28739d" font-size="18" font-weight="800">01 CORPUS</text><text x="158" y="243" fill="#17354b" font-size="24" font-weight="800">코드 · 문서 · 로그</text><text x="158" y="279" fill="#607889" font-size="17">PDF · SQLite · CSV</text><text x="158" y="307" fill="#607889" font-size="17">프로젝트별 민감도 분리</text>
+      <text x="408" y="205" fill="#24846b" font-size="18" font-weight="800">02 AUTOINDEX</text><text x="408" y="243" fill="#17354b" font-size="24" font-weight="800">형식 추론 · 파싱</text><text x="408" y="279" fill="#607889" font-size="17">tree-sitter · line metadata</text><text x="408" y="307" fill="#607889" font-size="17">변경 파일 증분 갱신</text>
+      <text x="658" y="205" fill="#555fae" font-size="18" font-weight="800">03 RETRIEVAL</text><text x="658" y="243" fill="#17354b" font-size="24" font-weight="800">BM25 · vector · hybrid</text><text x="658" y="279" fill="#607889" font-size="17">Elasticsearch 호환 API</text><text x="658" y="307" fill="#607889" font-size="17">index · namespace 권한</text>
+      <text x="908" y="205" fill="#a66225" font-size="18" font-weight="800">04 AGENT</text><text x="908" y="243" fill="#17354b" font-size="24" font-weight="800">CLI · MCP · client</text><text x="908" y="279" fill="#607889" font-size="17">필요한 passage만 호출</text><text x="908" y="307" fill="#607889" font-size="17">file:line 근거 유지</text>
+    </g>
+    <rect x="55" y="397" width="1090" height="255" rx="25" fill="#102b3f"/>
+    <text x="88" y="442" fill="#86d9ff" font-size="23" font-weight="800">운영 제어면</text>
+    <g fill="#deedf6" font-size="20">
+      <text x="92" y="490">● 색인 세대와 source commit을 함께 기록</text><text x="92" y="530">● generated · secret · vendor 경로 제외 규칙</text><text x="92" y="570">● gold query로 recall · nDCG · 무응답률 측정</text><text x="92" y="610">● snapshot을 별도 볼륨에 복사하고 복원 훈련</text>
+    </g>
+    <path d="M590 430V620" stroke="#34556c" stroke-width="2"/>
+    <text x="630" y="442" fill="#8ff0d5" font-size="23" font-weight="800">신뢰 경계</text>
+    <g fill="#deedf6" font-size="20">
+      <text x="634" y="490">✓ 공유 호스트에서 --insecure 금지</text><text x="634" y="530">✓ scoped API key와 구체적 index pattern</text><text x="634" y="570">✓ 외부 rerank 사용 시 문서 반출 승인</text><text x="634" y="610">✓ MCP는 노드 권한을 강화하지 않음을 전제</text>
+    </g>
+    <text x="600" y="706" text-anchor="middle" fill="#667f90" font-size="17">검색 결과가 짧아져도 오래됐거나 권한 밖의 근거라면 에이전트 품질은 개선되지 않는다.</text>
+  </g>
+</svg>

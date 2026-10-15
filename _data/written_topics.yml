@@ -529,3 +529,14 @@
     - "골든 이미지 검증"
   slug: "tiny11-builder-windows-image"
   summary: "Tiny11 Builder의 오프라인 WIM 처리와 Tiny11·Core 경계를 분석하고 업데이트, Defender, WinRE, 공급망, 복구와 PoC 기준을 정리."
+- date: 2026-10-16
+  title: "XERJ 에이전트 검색 엔진: 로컬 색인·권한·복구 기준"
+  github_repo: "https://github.com/xerj-org/xerj"
+  main_keyword: "XERJ 에이전트 검색 엔진"
+  related_keywords:
+    - "AI 에이전트 코드 검색"
+    - "로컬 하이브리드 검색"
+    - "Elasticsearch 호환 검색"
+    - "MCP 검색 서버"
+  slug: "xerj-agent-search-engine"
+  summary: "XERJ의 autoindex·하이브리드 검색·MCP를 분석하고 색인 신선도, 권한, snapshot 복구, Elasticsearch 대체와 PoC 기준을 정리."
