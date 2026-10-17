@@ -551,3 +551,14 @@
     - "Gradle 에이전트 워크플로"
   slug: "android-skills-agent-workflow-validation"
   summary: "Google Android Skills의 공식 작업 지침을 분석하고 버전 고정, 빌드·테스트·보안·Play 정책 게이트로 에이전트 변경을 통제하는 기준을 정리."
+- date: 2026-10-18
+  title: "AI 취업 자동화: 로컬 에이전트의 개인정보·지원서 품질 기준"
+  github_repo: "https://github.com/MadsLorentzen/ai-job-search"
+  main_keyword: "AI 취업 자동화"
+  related_keywords:
+    - "ai-job-search"
+    - "로컬 취업 에이전트"
+    - "이력서 개인정보 보호"
+    - "ATS 이력서 검증"
+  slug: "ai-job-search-local-agent-privacy"
+  summary: "ai-job-search의 로컬 프로필·공고 수집·지원서 생성 흐름을 분석하고 개인정보 유출, prompt injection, 허위 경력과 ATS 실패를 막는 검증 기준을 정리."

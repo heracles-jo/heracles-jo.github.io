@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 취업 자동화의 개인정보와 품질 검증</title>
+  <desc id="desc">개인 프로필, 로컬 에이전트, 사실성과 ATS 검증 게이트를 연결한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#263b63"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#c4b5fd"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1080" cy="90" r="230" fill="#67e8f9" opacity="0.07"/>
+  <circle cx="70" cy="600" r="210" fill="#c4b5fd" opacity="0.07"/>
+  <text x="80" y="112" fill="#8be9f7" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="3">LOCAL AGENT · PRIVACY · ATS</text>
+  <text x="80" y="205" fill="#ffffff" font-family="Arial, sans-serif" font-size="55" font-weight="800">AI 취업 자동화</text>
+  <text x="80" y="276" fill="#e0e7ff" font-family="Arial, sans-serif" font-size="36" font-weight="600">개인정보와 지원서 품질을 함께 지키는 기준</text>
+  <g transform="translate(80 355)" font-family="Arial, sans-serif">
+    <rect width="245" height="112" rx="18" fill="#17233b" stroke="#67e8f9" stroke-width="2"/>
+    <text x="122" y="47" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">Career Data</text>
+    <text x="122" y="80" text-anchor="middle" fill="#a9bdd7" font-size="16">CV · 경력 · 연락처</text>
+    <path d="M265 56h70" stroke="#67e8f9" stroke-width="5"/><path d="M325 44l18 12-18 12" fill="none" stroke="#67e8f9" stroke-width="5"/>
+    <rect x="360" width="260" height="112" rx="18" fill="#27365b" stroke="#c4b5fd" stroke-width="2"/>
+    <text x="490" y="47" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">Local Agent</text>
+    <text x="490" y="80" text-anchor="middle" fill="#c8d4ea" font-size="16">검색 · 평가 · 문서 생성</text>
+    <path d="M640 56h70" stroke="#c4b5fd" stroke-width="5"/><path d="M700 44l18 12-18 12" fill="none" stroke="#c4b5fd" stroke-width="5"/>
+    <rect x="735" width="305" height="112" rx="18" fill="#17233b" stroke="#67e8f9" stroke-width="2"/>
+    <text x="887" y="43" text-anchor="middle" fill="#ffffff" font-size="21" font-weight="700">Grounding · PDF · ATS</text>
+    <text x="887" y="77" text-anchor="middle" fill="#a9bdd7" font-size="16">독립 검증 후 사람 승인</text>
+  </g>
+  <rect x="80" y="535" width="1040" height="5" rx="2" fill="url(#line)"/>
+  <text x="80" y="582" fill="#bcc9de" font-family="Arial, sans-serif" font-size="20">heracles.jo · Architecture &amp; Operations</text>
+</svg>

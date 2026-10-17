@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">AI 취업 자동화 PoC 의사결정 게이트</title>
+  <desc id="desc">개인정보, 비신뢰 입력, 사실성, PDF와 ATS 품질을 통과한 뒤 확대하는 의사결정 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#415f91"/></marker></defs>
+  <rect width="1200" height="700" rx="24" fill="#fbfcff"/>
+  <text x="60" y="65" fill="#17233b" font-family="Arial, sans-serif" font-size="34" font-weight="800">지원량보다 먼저 통과해야 할 네 개의 게이트</text>
+  <g font-family="Arial, sans-serif">
+    <g stroke-width="3">
+      <rect x="55" y="125" width="235" height="125" rx="18" fill="#e4ebf8" stroke="#5a78a8"/>
+      <rect x="340" y="125" width="235" height="125" rx="18" fill="#fff0e9" stroke="#cc7655"/>
+      <rect x="625" y="125" width="235" height="125" rx="18" fill="#eee9fb" stroke="#826ab2"/>
+      <rect x="910" y="125" width="235" height="125" rx="18" fill="#e5f5ef" stroke="#4b927a"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="172" y="164" fill="#253b60" font-size="21" font-weight="800">1. 개인정보</text>
+      <text x="172" y="196" fill="#596b85" font-size="15">remote · provider · backup</text>
+      <text x="172" y="222" fill="#596b85" font-size="15">승인 밖 누출 0건</text>
+      <text x="457" y="164" fill="#6d3e2d" font-size="21" font-weight="800">2. 입력 신뢰</text>
+      <text x="457" y="196" fill="#7d5b4e" font-size="15">injection · URL · host</text>
+      <text x="457" y="222" fill="#7d5b4e" font-size="15">외부 지시 행동화 0건</text>
+      <text x="742" y="164" fill="#4c3e70" font-size="21" font-weight="800">3. 사실성</text>
+      <text x="742" y="196" fill="#6e6385" font-size="15">경력 · 날짜 · metric</text>
+      <text x="742" y="222" fill="#6e6385" font-size="15">근거 없는 주장 0건</text>
+      <text x="1027" y="164" fill="#285a4a" font-size="21" font-weight="800">4. 문서·ATS</text>
+      <text x="1027" y="196" fill="#557369" font-size="15">layout · text layer · 순서</text>
+      <text x="1027" y="222" fill="#557369" font-size="15">조용한 parse 실패 0건</text>
+    </g>
+    <g stroke="#415f91" stroke-width="4" marker-end="url(#a)">
+      <path d="M290 188h40"/><path d="M575 188h40"/><path d="M860 188h40"/>
+    </g>
+    <path d="M1027 250v72" stroke="#415f91" stroke-width="4" marker-end="url(#a)"/>
+    <polygon points="1027,325 1135,385 1027,445 919,385" fill="#e4ebf8" stroke="#5a78a8" stroke-width="3"/>
+    <text x="1027" y="379" text-anchor="middle" fill="#253b60" font-size="20" font-weight="800">사람 검토 시간도</text>
+    <text x="1027" y="405" text-anchor="middle" fill="#596b85" font-size="16">실제로 감소했는가?</text>
+    <path d="M1027 445v75" stroke="#415f91" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="875" y="530" width="305" height="95" rx="18" fill="#dff3eb" stroke="#4b927a" stroke-width="3"/>
+    <text x="1027" y="570" text-anchor="middle" fill="#285a4a" font-size="22" font-weight="800">YES: 범위 확대</text>
+    <text x="1027" y="600" text-anchor="middle" fill="#557369" font-size="15">자동 제출은 별도 승인 단계</text>
+    <path d="M919 385H690V520H400" fill="none" stroke="#b45248" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="75" y="475" width="315" height="105" rx="18" fill="#fff0ee" stroke="#b45248" stroke-width="3"/>
+    <text x="232" y="518" text-anchor="middle" fill="#7b302b" font-size="21" font-weight="800">NO: 중단 또는 범위 축소</text>
+    <text x="232" y="548" text-anchor="middle" fill="#805751" font-size="15">권한·데이터·포털·템플릿 수정</text>
+    <text x="785" y="372" fill="#b45248" font-size="17" font-weight="700">NO</text>
+    <text x="1043" y="490" fill="#415f91" font-size="17" font-weight="700">YES</text>
+    <rect x="75" y="620" width="760" height="42" rx="12" fill="#17233b"/>
+    <text x="455" y="648" text-anchor="middle" fill="#dfe8f7" font-size="16">항상 수동 제출 · private repository · canary 기반 삭제/누출 검증</text>
+  </g>
+</svg>

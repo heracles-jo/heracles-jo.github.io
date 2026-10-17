@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI 취업 자동화의 데이터 경계</title>
+  <desc id="desc">개인 자료와 비신뢰 공고가 로컬 작업 공간에서 만나 생성과 독립 검증을 거치는 구조</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#365f9d"/></marker></defs>
+  <rect width="1200" height="760" rx="24" fill="#f7f9fd"/>
+  <text x="60" y="65" fill="#17233b" font-family="Arial, sans-serif" font-size="34" font-weight="800">개인 자료와 외부 공고는 같은 신뢰 등급이 아니다</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="115" width="300" height="165" rx="20" fill="#e2e9f7" stroke="#5476ac" stroke-width="3"/>
+    <text x="210" y="157" text-anchor="middle" fill="#1f3558" font-size="23" font-weight="800">개인 원본 자료</text>
+    <text x="210" y="194" text-anchor="middle" fill="#50627d" font-size="17">CV · 추천서 · 급여 · 연락처</text>
+    <text x="210" y="224" text-anchor="middle" fill="#50627d" font-size="17">높은 기밀성 · 사실의 원천</text>
+    <text x="210" y="253" text-anchor="middle" fill="#7b3f4b" font-size="16" font-weight="700">읽기 최소화 · private remote</text>
+
+    <rect x="840" y="115" width="300" height="165" rx="20" fill="#fff0e8" stroke="#d47a54" stroke-width="3"/>
+    <text x="990" y="157" text-anchor="middle" fill="#673c2b" font-size="23" font-weight="800">외부 채용공고</text>
+    <text x="990" y="194" text-anchor="middle" fill="#765548" font-size="17">portal · ATS · 회사 페이지</text>
+    <text x="990" y="224" text-anchor="middle" fill="#765548" font-size="17">비신뢰 입력 · injection 가능</text>
+    <text x="990" y="253" text-anchor="middle" fill="#9a402f" font-size="16" font-weight="700">본문 명령·URL 승격 금지</text>
+
+    <path d="M360 198h115" stroke="#365f9d" stroke-width="4" marker-end="url(#a)"/>
+    <path d="M840 198H725" stroke="#b56343" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="475" y="105" width="250" height="185" rx="22" fill="#17233b"/>
+    <text x="600" y="151" text-anchor="middle" fill="#9eeaf3" font-size="24" font-weight="800">격리된 작업 공간</text>
+    <text x="600" y="188" text-anchor="middle" fill="#d9e2f2" font-size="17">구조화 profile · portal CLI</text>
+    <text x="600" y="219" text-anchor="middle" fill="#d9e2f2" font-size="17">drafter · reviewer · tracker</text>
+    <text x="600" y="251" text-anchor="middle" fill="#c7bdf9" font-size="16">제한된 파일·명령·egress</text>
+
+    <path d="M600 290v64" stroke="#365f9d" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="90" y="375" width="1020" height="230" rx="22" fill="#263b63"/>
+    <text x="600" y="418" text-anchor="middle" fill="#c5f4fb" font-size="26" font-weight="800">생성과 판정을 분리한 품질 게이트</text>
+    <g>
+      <rect x="125" y="458" width="205" height="105" rx="15" fill="#ffffff"/>
+      <text x="227" y="495" text-anchor="middle" fill="#253b60" font-size="20" font-weight="700">사실 근거</text>
+      <text x="227" y="527" text-anchor="middle" fill="#5b6880" font-size="15">날짜 · 직함 · 수치</text>
+      <text x="227" y="551" text-anchor="middle" fill="#5b6880" font-size="15">source provenance</text>
+      <rect x="375" y="458" width="205" height="105" rx="15" fill="#ffffff"/>
+      <text x="477" y="495" text-anchor="middle" fill="#253b60" font-size="20" font-weight="700">적합도</text>
+      <text x="477" y="527" text-anchor="middle" fill="#5b6880" font-size="15">충족 · 인접 · gap</text>
+      <text x="477" y="551" text-anchor="middle" fill="#5b6880" font-size="15">deal-breaker</text>
+      <rect x="625" y="458" width="205" height="105" rx="15" fill="#ffffff"/>
+      <text x="727" y="495" text-anchor="middle" fill="#253b60" font-size="20" font-weight="700">PDF 품질</text>
+      <text x="727" y="527" text-anchor="middle" fill="#5b6880" font-size="15">페이지 · 공백 · footer</text>
+      <text x="727" y="551" text-anchor="middle" fill="#5b6880" font-size="15">compile artifact</text>
+      <rect x="875" y="458" width="200" height="105" rx="15" fill="#ffffff"/>
+      <text x="975" y="495" text-anchor="middle" fill="#253b60" font-size="20" font-weight="700">ATS 판독</text>
+      <text x="975" y="527" text-anchor="middle" fill="#5b6880" font-size="15">text layer · 순서</text>
+      <text x="975" y="551" text-anchor="middle" fill="#5b6880" font-size="15">연락처 · keyword</text>
+    </g>
+    <path d="M600 605v58" stroke="#365f9d" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="350" y="670" width="500" height="62" rx="16" fill="#dfeafa" stroke="#5476ac" stroke-width="3"/>
+    <text x="600" y="709" text-anchor="middle" fill="#1f3558" font-size="23" font-weight="800">사람 승인 후 제출 · 증거와 삭제 경로 보존</text>
+  </g>
+</svg>
