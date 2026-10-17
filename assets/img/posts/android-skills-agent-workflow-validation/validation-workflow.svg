@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Android Skills 변경 검증 워크플로</title>
+  <desc id="desc">버전 고정에서 범위 확인, 에이전트 변경, 네 단계 검증, 승인 또는 수정 루프로 이어지는 절차</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#256b52"/></marker></defs>
+  <rect width="1200" height="700" rx="24" fill="#fbfdfc"/>
+  <text x="60" y="65" fill="#12372b" font-family="Arial, sans-serif" font-size="34" font-weight="800">에이전트의 “완료”를 증거 기반 승인으로 바꾸는 흐름</text>
+  <g font-family="Arial, sans-serif">
+    <g fill="#e2f5ea" stroke="#3b9f72" stroke-width="3">
+      <rect x="60" y="120" width="230" height="92" rx="18"/>
+      <rect x="365" y="120" width="230" height="92" rx="18"/>
+      <rect x="670" y="120" width="230" height="92" rx="18"/>
+      <rect x="955" y="120" width="185" height="92" rx="18"/>
+    </g>
+    <g fill="#143d30" font-size="20" font-weight="700" text-anchor="middle">
+      <text x="175" y="158">1. 버전 고정</text><text x="175" y="187" font-size="15" font-weight="400">Skill · 모델 · 도구 체인</text>
+      <text x="480" y="158">2. 범위 확인</text><text x="480" y="187" font-size="15" font-weight="400">module · variant · limitation</text>
+      <text x="785" y="158">3. 변경 생성</text><text x="785" y="187" font-size="15" font-weight="400">diff · 명령 · 예상 영향</text>
+      <text x="1048" y="158">4. 검증 실행</text><text x="1048" y="187" font-size="15" font-weight="400">CI와 device</text>
+    </g>
+    <g stroke="#256b52" stroke-width="4" marker-end="url(#a)">
+      <path d="M290 166h65"/><path d="M595 166h65"/><path d="M900 166h45"/>
+    </g>
+    <rect x="140" y="285" width="920" height="180" rx="22" fill="#12372b"/>
+    <text x="600" y="325" text-anchor="middle" fill="#bff5d6" font-size="23" font-weight="800">필수 증거 세트</text>
+    <g fill="#ffffff" font-size="17" text-anchor="middle">
+      <text x="280" y="372">merged manifest · dependency diff</text>
+      <text x="600" y="372">compile · lint · unit · release</text>
+      <text x="920" y="372">emulator · screenshot · E2E</text>
+      <text x="280" y="418">정책 report · 보안 반증 test</text>
+      <text x="600" y="418">JUnit XML · report artifact</text>
+      <text x="920" y="418">APK/AAB hash · 실행 log</text>
+    </g>
+    <path d="M600 465v58" stroke="#256b52" stroke-width="4" marker-end="url(#a)"/>
+    <polygon points="600,525 760,595 600,665 440,595" fill="#e2f5ea" stroke="#3b9f72" stroke-width="3"/>
+    <text x="600" y="588" text-anchor="middle" fill="#143d30" font-size="21" font-weight="800">모든 gate 통과?</text>
+    <text x="600" y="616" text-anchor="middle" fill="#46685b" font-size="16">미실행 항목도 명시</text>
+    <path d="M760 595h165" stroke="#256b52" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="935" y="550" width="205" height="90" rx="18" fill="#d3f2e1" stroke="#3b9f72" stroke-width="3"/>
+    <text x="1038" y="588" text-anchor="middle" fill="#143d30" font-size="21" font-weight="800">승인·병합</text>
+    <text x="1038" y="615" text-anchor="middle" fill="#46685b" font-size="15">증거와 rollback 보존</text>
+    <text x="815" y="580" fill="#256b52" font-size="17" font-weight="700">YES</text>
+    <path d="M440 595H220V245H785V222" fill="none" stroke="#a34d3f" stroke-width="4" marker-end="url(#a)"/>
+    <text x="235" y="580" fill="#a34d3f" font-size="17" font-weight="700">NO: 범위 축소·수정·재실행</text>
+  </g>
+</svg>

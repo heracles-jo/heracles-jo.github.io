@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Android Skills 도입과 검증 게이트</title>
+  <desc id="desc">AI 에이전트, Android Skills, 빌드와 테스트 게이트를 연결한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a16"/><stop offset="1" stop-color="#123b32"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#3ddc84"/><stop offset="1" stop-color="#9fffc9"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="100" r="220" fill="#3ddc84" opacity="0.08"/>
+  <circle cx="110" cy="580" r="190" fill="#7cf3b0" opacity="0.06"/>
+  <text x="80" y="120" fill="#9fffc9" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="3">ANDROID · AGENT SKILLS · VALIDATION</text>
+  <text x="80" y="215" fill="#ffffff" font-family="Arial, sans-serif" font-size="56" font-weight="800">Android Skills 도입</text>
+  <text x="80" y="285" fill="#d8f8e7" font-family="Arial, sans-serif" font-size="37" font-weight="600">AI 코딩 지침을 빌드·테스트로 검증하는 법</text>
+  <g transform="translate(80 365)">
+    <rect width="250" height="110" rx="18" fill="#102d27" stroke="#3ddc84" stroke-width="2"/>
+    <text x="125" y="48" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="23" font-weight="700">Coding Agent</text>
+    <text x="125" y="79" text-anchor="middle" fill="#9fc7b6" font-family="Arial, sans-serif" font-size="17">계획 · 변경 · 보고</text>
+    <path d="M270 55h75" stroke="#3ddc84" stroke-width="5"/><path d="M335 43l18 12-18 12" fill="none" stroke="#3ddc84" stroke-width="5"/>
+    <rect x="370" width="250" height="110" rx="18" fill="#164c3c" stroke="#9fffc9" stroke-width="2"/>
+    <text x="495" y="48" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="23" font-weight="700">Android Skills</text>
+    <text x="495" y="79" text-anchor="middle" fill="#c9f8dc" font-family="Arial, sans-serif" font-size="17">최신 지식 · 작업 제약</text>
+    <path d="M640 55h75" stroke="#3ddc84" stroke-width="5"/><path d="M705 43l18 12-18 12" fill="none" stroke="#3ddc84" stroke-width="5"/>
+    <rect x="740" width="300" height="110" rx="18" fill="#102d27" stroke="#3ddc84" stroke-width="2"/>
+    <text x="890" y="43" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700">Build · Test · Security</text>
+    <text x="890" y="75" text-anchor="middle" fill="#9fc7b6" font-family="Arial, sans-serif" font-size="17">CI가 최종 계약을 판정</text>
+  </g>
+  <rect x="80" y="535" width="1040" height="5" rx="2" fill="url(#accent)"/>
+  <text x="80" y="582" fill="#b8ddcd" font-family="Arial, sans-serif" font-size="20">heracles.jo · Architecture &amp; Operations</text>
+</svg>

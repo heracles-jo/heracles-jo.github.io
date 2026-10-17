@@ -540,3 +540,14 @@
     - "MCP 검색 서버"
   slug: "xerj-agent-search-engine"
   summary: "XERJ의 autoindex·하이브리드 검색·MCP를 분석하고 색인 신선도, 권한, snapshot 복구, Elasticsearch 대체와 PoC 기준을 정리."
+- date: 2026-10-17
+  title: "Android Skills 도입: AI 코딩 지침을 빌드·테스트로 검증하는 법"
+  github_repo: "https://github.com/android/skills"
+  main_keyword: "Android Skills 도입"
+  related_keywords:
+    - "Android AI 코딩 에이전트"
+    - "Agent Skills 검증"
+    - "Android 빌드 테스트"
+    - "Gradle 에이전트 워크플로"
+  slug: "android-skills-agent-workflow-validation"
+  summary: "Google Android Skills의 공식 작업 지침을 분석하고 버전 고정, 빌드·테스트·보안·Play 정책 게이트로 에이전트 변경을 통제하는 기준을 정리."
