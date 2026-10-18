@@ -562,3 +562,14 @@
     - "ATS 이력서 검증"
   slug: "ai-job-search-local-agent-privacy"
   summary: "ai-job-search의 로컬 프로필·공고 수집·지원서 생성 흐름을 분석하고 개인정보 유출, prompt injection, 허위 경력과 ATS 실패를 막는 검증 기준을 정리."
+- date: 2026-10-19
+  title: "ComfyUI 커스텀 노드 보안: 워크플로 공급망 운영 기준"
+  github_repo: "https://github.com/Comfy-Org/ComfyUI"
+  main_keyword: "ComfyUI 커스텀 노드 보안"
+  related_keywords:
+    - "ComfyUI 워크플로"
+    - "커스텀 노드 공급망"
+    - "생성형 AI 재현성"
+    - "GPU 워크플로 운영"
+  slug: "comfyui-custom-node-supply-chain"
+  summary: "ComfyUI의 workflow JSON, custom node, 모델 artifact와 GPU runtime을 분리해 공급망 보안, 재현성, 공유 서비스 격리와 PoC 승격 기준을 정리."

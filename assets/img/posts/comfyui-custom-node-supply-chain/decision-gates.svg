@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">ComfyUI 공급망 승격 의사결정 게이트</title>
+  <desc id="desc">워크플로 출처, 노드와 모델 검증, 격리 실행, 품질 측정 후 운영으로 승격하는 절차</desc>
+  <rect width="1200" height="760" rx="28" fill="#0f172a"/>
+  <text x="60" y="72" font-family="Arial, sans-serif" font-size="36" font-weight="800" fill="#f8fafc">외부 워크플로를 production으로 올리는 여섯 게이트</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(70 125)"><rect width="300" height="145" rx="18" fill="#1e3a8a"/><text x="28" y="48" font-size="24" font-weight="700" fill="#bfdbfe">1. 출처 확인</text><text x="28" y="88" font-size="19" fill="#dbeafe">원본 URL · 작성자 · license</text><text x="28" y="118" font-size="19" fill="#dbeafe">workflow hash 보존</text></g>
+    <g transform="translate(450 125)"><rect width="300" height="145" rx="18" fill="#4c1d95"/><text x="28" y="48" font-size="24" font-weight="700" fill="#ddd6fe">2. 노드 승인</text><text x="28" y="88" font-size="19" fill="#ede9fe">commit · dependency · install.py</text><text x="28" y="118" font-size="19" fill="#ede9fe">내부 mirror와 allowlist</text></g>
+    <g transform="translate(830 125)"><rect width="300" height="145" rx="18" fill="#164e63"/><text x="28" y="48" font-size="24" font-weight="700" fill="#a5f3fc">3. 모델 검증</text><text x="28" y="88" font-size="19" fill="#cffafe">digest · provenance · license</text><text x="28" y="118" font-size="19" fill="#cffafe">상업 사용·데이터 조건</text></g>
+    <g transform="translate(70 390)"><rect width="300" height="145" rx="18" fill="#14532d"/><text x="28" y="48" font-size="24" font-weight="700" fill="#bbf7d0">4. 격리 실행</text><text x="28" y="88" font-size="19" fill="#dcfce7">비밀 없는 환경 · egress log</text><text x="28" y="118" font-size="19" fill="#dcfce7">파일·subprocess 관찰</text></g>
+    <g transform="translate(450 390)"><rect width="300" height="145" rx="18" fill="#7c2d12"/><text x="28" y="48" font-size="24" font-weight="700" fill="#fed7aa">5. 회귀 측정</text><text x="28" y="88" font-size="19" fill="#ffedd5">품질 · 시간 · peak VRAM</text><text x="28" y="118" font-size="19" fill="#ffedd5">실패 corpus · rollback</text></g>
+    <g transform="translate(830 390)"><rect width="300" height="145" rx="18" fill="#854d0e"/><text x="28" y="48" font-size="24" font-weight="700" fill="#fef08a">6. 승격</text><text x="28" y="88" font-size="19" fill="#fef9c3">immutable image · manifest</text><text x="28" y="118" font-size="19" fill="#fef9c3">quota · 인증 · 감사 로그</text></g>
+  </g>
+  <g fill="none" stroke="#94a3b8" stroke-width="5"><path d="M370 197h80"/><path d="M750 197h80"/><path d="M980 270v70H220v50"/><path d="M370 462h80"/><path d="M750 462h80"/></g>
+  <g fill="#94a3b8"><path d="M442 185l18 12-18 12z"/><path d="M822 185l18 12-18 12z"/><path d="M208 382l12 18 12-18z"/><path d="M442 450l18 12-18 12z"/><path d="M822 450l18 12-18 12z"/></g>
+  <rect x="165" y="625" width="870" height="72" rx="18" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+  <text x="600" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#fecaca">중단: 미검토 설치 코드 · 출처 없는 모델 · 승인되지 않은 외부 전송 · 설명 불가능한 품질/VRAM 회귀</text>
+  <text x="600" y="682" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#cbd5e1">한 게이트라도 실패하면 production 승격 대신 조사 환경에 보류한다.</text>
+</svg>

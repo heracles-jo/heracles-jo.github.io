@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">ComfyUI 커스텀 노드 보안</title>
+  <desc id="desc">워크플로, 커스텀 노드, 모델과 GPU 런타임을 검증 가능한 공급망으로 연결한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="210" fill="#4f46e5" opacity=".18"/>
+  <circle cx="1080" cy="560" r="260" fill="#0891b2" opacity=".12"/>
+  <g fill="none" stroke="url(#accent)" stroke-width="5" opacity=".9">
+    <path d="M690 170H825L905 255H1050"/>
+    <path d="M690 315H805L885 400H1050"/>
+    <path d="M825 255V315"/>
+  </g>
+  <g fill="#111827" stroke="#67e8f9" stroke-width="3">
+    <rect x="635" y="125" width="150" height="90" rx="18"/><rect x="860" y="210" width="150" height="90" rx="18"/>
+    <rect x="635" y="270" width="150" height="90" rx="18"/><rect x="860" y="355" width="150" height="90" rx="18"/>
+  </g>
+  <g fill="#e0f2fe" font-family="Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle">
+    <text x="710" y="180">WORKFLOW</text><text x="935" y="265">NODES</text><text x="710" y="325">MODELS</text><text x="935" y="410">RUNTIME</text>
+  </g>
+  <rect x="72" y="72" width="190" height="10" rx="5" fill="url(#accent)"/>
+  <text x="72" y="175" fill="#f8fafc" font-family="Arial, sans-serif" font-size="58" font-weight="800">ComfyUI</text>
+  <text x="72" y="245" fill="#f8fafc" font-family="Arial, sans-serif" font-size="48" font-weight="800">커스텀 노드 보안</text>
+  <text x="72" y="315" fill="#a5f3fc" font-family="Arial, sans-serif" font-size="30" font-weight="700">워크플로 공급망 운영 기준</text>
+  <text x="72" y="470" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">그래프 · 코드 · 모델 · GPU를</text>
+  <text x="72" y="510" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">하나의 검증 가능한 실행 계약으로</text>
+  <text x="72" y="575" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">heracles.jo</text>
+</svg>
