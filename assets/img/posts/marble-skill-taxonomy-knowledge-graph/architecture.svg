@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">교육 지식 그래프 데이터 아키텍처</title>
+  <desc id="desc">원천 교육과정에서 정규화 토픽과 선수학습 그래프를 거쳐 제품으로 전달되는 구조</desc>
+  <rect width="1200" height="720" rx="24" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#0f172a">교육 지식 그래프는 한 파일이 아니라 검증 가능한 계층이다</text>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(60 125)"><rect width="205" height="170" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><text x="24" y="38" font-size="24" font-weight="700" fill="#075985">원천 표준</text><text x="24" y="78" font-size="18" fill="#334155">국가 교육과정</text><text x="24" y="108" font-size="18" fill="#334155">표준 코드·원문</text><text x="24" y="138" font-size="18" fill="#334155">원 권리자 조건</text></g>
+    <g transform="translate(330 125)"><rect width="205" height="170" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="24" y="38" font-size="24" font-weight="700" fill="#166534">정규화 토픽</text><text x="24" y="78" font-size="18" fill="#334155">stable ID</text><text x="24" y="108" font-size="18" fill="#334155">evidence·연령</text><text x="24" y="138" font-size="18" fill="#334155">표준 참조</text></g>
+    <g transform="translate(600 125)"><rect width="205" height="170" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="24" y="38" font-size="24" font-weight="700" fill="#5b21b6">선수학습 DAG</text><text x="24" y="78" font-size="18" fill="#334155">hard / soft edge</text><text x="24" y="108" font-size="18" fill="#334155">관계 이유</text><text x="24" y="138" font-size="18" fill="#334155">인접 경로</text></g>
+    <g transform="translate(870 125)"><rect width="270" height="170" rx="18" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/><text x="24" y="38" font-size="24" font-weight="700" fill="#9a3412">소비 제품</text><text x="24" y="78" font-size="18" fill="#334155">진단·추천·RAG</text><text x="24" y="108" font-size="18" fill="#334155">교사 검토 UI</text><text x="24" y="138" font-size="18" fill="#334155">학습 기록</text></g>
+    <path d="M265 210 H320" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/><path d="M535 210 H590" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/><path d="M805 210 H860" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+    <g transform="translate(120 385)"><rect width="960" height="225" rx="20" fill="#0f172a"/><text x="34" y="47" font-size="25" font-weight="700" fill="#f8fafc">공통 검증면</text><line x1="34" y1="68" x2="926" y2="68" stroke="#334155"/>
+      <g font-size="19" fill="#cbd5e1"><text x="42" y="112">① 스키마·참조·cycle</text><text x="42" y="155">② checksum·commit pin</text><text x="42" y="198">③ 변경 diff·rollback</text><text x="330" y="112">④ 교육적 타당성 검토</text><text x="330" y="155">⑤ 출처 claim 재검증</text><text x="330" y="198">⑥ coverage·편향 표시</text><text x="650" y="112">⑦ 레코드별 license</text><text x="650" y="155">⑧ 추천 이유·수정권</text><text x="650" y="198">⑨ 제품 결과 모니터링</text></g>
+    </g>
+  </g>
+</svg>

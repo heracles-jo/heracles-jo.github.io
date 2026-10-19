@@ -573,3 +573,14 @@
     - "GPU 워크플로 운영"
   slug: "comfyui-custom-node-supply-chain"
   summary: "ComfyUI의 workflow JSON, custom node, 모델 artifact와 GPU runtime을 분리해 공급망 보안, 재현성, 공유 서비스 격리와 PoC 승격 기준을 정리."
+- date: 2026-10-20
+  title: "교육 지식 그래프 구축: Marble Skill Taxonomy 검증 기준"
+  github_repo: "https://github.com/withmarbleapp/os-taxonomy"
+  main_keyword: "교육 지식 그래프 구축"
+  related_keywords:
+    - "Marble Skill Taxonomy"
+    - "선수학습 DAG"
+    - "교육 데이터 거버넌스"
+    - "오픈 데이터 라이선스"
+  slug: "marble-skill-taxonomy-knowledge-graph"
+  summary: "Marble Skill Taxonomy의 micro-topic과 선수학습 DAG를 중심으로 무결성, AI 작성 연구, 출처·라이선스, 개인화 학습 PoC 기준을 정리."

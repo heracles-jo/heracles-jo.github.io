@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">교육 지식 그래프 구축</title>
+  <desc id="desc">토픽과 선수학습 관계, 데이터 검증 계층을 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1020"/><stop offset="1" stop-color="#17324d"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity=".32" stroke="#7dd3fc" stroke-width="3">
+    <path d="M760 145 L910 245 L790 350 L1010 455"/><path d="M760 145 L650 275 L790 350 L670 485"/><path d="M910 245 L1050 155"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="760" cy="145" r="28" fill="#38bdf8"/><circle cx="910" cy="245" r="34" fill="#22c55e"/><circle cx="650" cy="275" r="25" fill="#f59e0b"/><circle cx="790" cy="350" r="40" fill="#a78bfa"/><circle cx="1010" cy="455" r="29" fill="#fb7185"/><circle cx="670" cy="485" r="24" fill="#2dd4bf"/><circle cx="1050" cy="155" r="20" fill="#facc15"/>
+  </g>
+  <text x="72" y="165" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="25" font-weight="700">DATA CONTRACT · PREREQUISITE DAG</text>
+  <text x="72" y="250" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="800">교육 지식 그래프 구축</text>
+  <text x="72" y="315" fill="#dbeafe" font-family="Arial, sans-serif" font-size="34">Marble Skill Taxonomy 검증 기준</text>
+  <g transform="translate(72 405)" font-family="Arial, sans-serif" font-size="22" font-weight="700">
+    <rect width="152" height="48" rx="24" fill="#123e5a"/><text x="27" y="31" fill="#bae6fd">무결성</text>
+    <rect x="170" width="152" height="48" rx="24" fill="#23462f"/><text x="197" y="31" fill="#bbf7d0">근거 추적</text>
+    <rect x="340" width="152" height="48" rx="24" fill="#4b356e"/><text x="367" y="31" fill="#ddd6fe">라이선스</text>
+  </g>
+  <text x="72" y="545" fill="#94a3b8" font-family="Arial, sans-serif" font-size="21">heracles.jo · Data Engineering / AI Infrastructure</text>
+</svg>
