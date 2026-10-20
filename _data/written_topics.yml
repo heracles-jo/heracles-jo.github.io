@@ -584,3 +584,14 @@
     - "오픈 데이터 라이선스"
   slug: "marble-skill-taxonomy-knowledge-graph"
   summary: "Marble Skill Taxonomy의 micro-topic과 선수학습 DAG를 중심으로 무결성, AI 작성 연구, 출처·라이선스, 개인화 학습 PoC 기준을 정리."
+- date: 2026-10-21
+  title: "금융 시계열 파운데이션 모델: Kronos K선 예측 검증 기준"
+  github_repo: "https://github.com/shiyu-coder/Kronos"
+  main_keyword: "금융 시계열 파운데이션 모델"
+  related_keywords:
+    - "Kronos"
+    - "K선 예측"
+    - "금융 데이터 누수"
+    - "백테스트 검증"
+  slug: "kronos-financial-kline-foundation-model"
+  summary: "Kronos의 계층형 K선 토큰화와 자기회귀 예측을 바탕으로 데이터 누수, 체크포인트 계보, 거래비용, 권한 격리와 PoC 기준을 정리."
