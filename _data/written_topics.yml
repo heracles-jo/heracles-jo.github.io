@@ -595,3 +595,14 @@
     - "백테스트 검증"
   slug: "kronos-financial-kline-foundation-model"
   summary: "Kronos의 계층형 K선 토큰화와 자기회귀 예측을 바탕으로 데이터 누수, 체크포인트 계보, 거래비용, 권한 격리와 PoC 기준을 정리."
+- date: 2026-10-22
+  title: "Supabase 셀프호스팅: 관리형 전환 비용과 운영 기준"
+  github_repo: "https://github.com/supabase/supabase"
+  main_keyword: "Supabase 셀프호스팅"
+  related_keywords:
+    - "Supabase 운영"
+    - "Postgres BaaS"
+    - "Row Level Security"
+    - "셀프호스팅 백업 복구"
+  slug: "supabase-self-hosting-operations"
+  summary: "Supabase의 Postgres·Auth·Realtime·Storage 구성을 분해하고 RLS, 백업·복원, 키 회전, 업그레이드와 관리형 대비 도입 기준을 정리."

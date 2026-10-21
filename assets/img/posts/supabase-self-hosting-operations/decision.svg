@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Supabase 운영 모델 선택 흐름</title>
+  <desc id="desc">데이터 통제 요구, 플랫폼 운영 역량, 복원과 업그레이드 증거에 따라 관리형, 혼합형, 전체 셀프호스팅을 선택한다.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0 10 3 0 6Z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="720" rx="28" fill="#071a18"/>
+  <text x="60" y="65" fill="#ecfdf5" font-family="system-ui,sans-serif" font-size="30" font-weight="800">비용표보다 먼저 통제 요구와 운영 증거를 확인한다</text>
+  <g font-family="system-ui,sans-serif" text-anchor="middle">
+    <rect x="430" y="100" width="340" height="82" rx="20" fill="#123a32" stroke="#34d399" stroke-width="2"/><text x="600" y="134" fill="#d1fae5" font-size="20" font-weight="700">규제·데이터 위치·사설망 때문에</text><text x="600" y="161" fill="#d1fae5" font-size="20" font-weight="700">직접 통제가 필수인가?</text>
+    <rect x="105" y="245" width="315" height="88" rx="20" fill="#172554" stroke="#60a5fa" stroke-width="2"/><text x="262" y="281" fill="#dbeafe" font-size="20" font-weight="700">아니오</text><text x="262" y="309" fill="#bfdbfe" font-size="17">관리형의 위험 이전 가치를 계산</text>
+    <rect x="780" y="245" width="315" height="88" rx="20" fill="#3f2a10" stroke="#f59e0b" stroke-width="2"/><text x="937" y="281" fill="#fef3c7" font-size="20" font-weight="700">예</text><text x="937" y="309" fill="#fde68a" font-size="17">플랫폼 운영 역량을 검증</text>
+    <rect x="730" y="400" width="415" height="100" rx="20" fill="#32183a" stroke="#d946ef" stroke-width="2"/><text x="937" y="437" fill="#fae8ff" font-size="19" font-weight="700">RLS 테스트 · 독립 복원 · 키 회전</text><text x="937" y="466" fill="#fae8ff" font-size="19" font-weight="700">업그레이드·rollback을 반복했는가?</text>
+    <rect x="60" y="545" width="300" height="105" rx="20" fill="#102a56" stroke="#3b82f6" stroke-width="2"/><text x="210" y="585" fill="#dbeafe" font-size="24" font-weight="800">관리형</text><text x="210" y="618" fill="#bfdbfe" font-size="17">출시 속도와 운영 지원 우선</text>
+    <rect x="450" y="545" width="300" height="105" rx="20" fill="#3b2b0f" stroke="#f59e0b" stroke-width="2"/><text x="600" y="585" fill="#fef3c7" font-size="24" font-weight="800">혼합형</text><text x="600" y="618" fill="#fde68a" font-size="17">관리형 DB·기존 IAM과 분업</text>
+    <rect x="840" y="545" width="300" height="105" rx="20" fill="#123a32" stroke="#34d399" stroke-width="2"/><text x="990" y="585" fill="#d1fae5" font-size="24" font-weight="800">전체 셀프호스팅</text><text x="990" y="618" fill="#a7f3d0" font-size="17">24×7 운영 책임까지 인수</text>
+  </g>
+  <g stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#a)">
+    <path d="M500 182 330 245"/><path d="M700 182 870 245"/><path d="M937 333V400"/>
+    <path d="M780 450H600V545"/><path d="M1095 450H1110V520H990V545"/>
+    <path d="M262 333V510H210V545"/>
+  </g>
+  <g font-family="system-ui,sans-serif" font-size="16" font-weight="700">
+    <text x="402" y="215" fill="#93c5fd">NO</text><text x="786" y="215" fill="#fcd34d">YES</text>
+    <text x="674" y="440" fill="#fcd34d">일부만 가능</text><text x="1080" y="390" fill="#86efac">반복 성공</text>
+  </g>
+</svg>

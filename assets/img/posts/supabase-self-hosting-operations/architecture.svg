@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Supabase 셀프호스팅 참조 아키텍처</title>
+  <desc id="desc">클라이언트 요청이 프록시와 게이트웨이를 거쳐 Auth, PostgREST, Realtime, Storage, Edge Functions로 나뉘고 Postgres와 객체 저장소에 연결된다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0 10 3 0 6Z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="720" rx="28" fill="#f8fafc"/>
+  <text x="60" y="65" font-family="system-ui,sans-serif" font-size="30" font-weight="800" fill="#0f172a">요청 경로는 하나지만 운영해야 할 장애 도메인은 여러 개다</text>
+  <g font-family="system-ui,sans-serif" text-anchor="middle">
+    <rect x="55" y="290" width="150" height="92" rx="18" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/><text x="130" y="326" font-size="21" font-weight="700" fill="#1e3a8a">Web · Mobile</text><text x="130" y="355" font-size="16" fill="#1e40af">SDK / JWT</text>
+    <rect x="260" y="290" width="155" height="92" rx="18" fill="#ecfeff" stroke="#22d3ee" stroke-width="2"/><text x="337" y="326" font-size="21" font-weight="700" fill="#164e63">TLS Proxy</text><text x="337" y="355" font-size="16" fill="#155e75">Caddy / Nginx</text>
+    <rect x="470" y="290" width="155" height="92" rx="18" fill="#d1fae5" stroke="#34d399" stroke-width="2"/><text x="547" y="326" font-size="21" font-weight="700" fill="#064e3b">Envoy</text><text x="547" y="355" font-size="16" fill="#065f46">API Gateway</text>
+    <g font-size="18" font-weight="700">
+      <rect x="700" y="120" width="170" height="68" rx="14" fill="#fef3c7" stroke="#f59e0b"/><text x="785" y="162" fill="#78350f">Auth</text>
+      <rect x="700" y="215" width="170" height="68" rx="14" fill="#ede9fe" stroke="#8b5cf6"/><text x="785" y="257" fill="#4c1d95">PostgREST</text>
+      <rect x="700" y="310" width="170" height="68" rx="14" fill="#fee2e2" stroke="#f87171"/><text x="785" y="352" fill="#7f1d1d">Realtime</text>
+      <rect x="700" y="405" width="170" height="68" rx="14" fill="#e0f2fe" stroke="#38bdf8"/><text x="785" y="447" fill="#0c4a6e">Storage</text>
+      <rect x="700" y="500" width="170" height="68" rx="14" fill="#fae8ff" stroke="#d946ef"/><text x="785" y="542" fill="#701a75">Edge Runtime</text>
+    </g>
+    <rect x="965" y="215" width="180" height="150" rx="18" fill="#ccfbf1" stroke="#14b8a6" stroke-width="2"/><text x="1055" y="267" font-size="23" font-weight="800" fill="#134e4a">Postgres</text><text x="1055" y="300" font-size="16" fill="#115e59">RLS · metadata</text><text x="1055" y="327" font-size="16" fill="#115e59">WAL · extensions</text>
+    <rect x="965" y="410" width="180" height="104" rx="18" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/><text x="1055" y="453" font-size="21" font-weight="800" fill="#334155">Object Storage</text><text x="1055" y="481" font-size="16" fill="#475569">files · versions</text>
+  </g>
+  <g stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M205 336H260"/><path d="M415 336H470"/>
+    <path d="M625 336H670V154H700"/><path d="M625 336H670V249H700"/><path d="M625 336H700"/><path d="M625 336H670V439H700"/><path d="M625 336H670V534H700"/>
+    <path d="M870 154H925V245H965"/><path d="M870 249H965"/><path d="M870 344H965"/><path d="M870 439H925V330H965"/><path d="M870 439H925V462H965"/><path d="M870 534H925V350H965"/>
+  </g>
+  <g font-family="system-ui,sans-serif" font-size="16" fill="#475569">
+    <text x="55" y="660">운영 포인트: 인증 키 · RLS · connection pool · replication lag · 객체 정합성 · 프록시 WebSocket · 버전 호환성</text>
+  </g>
+</svg>
