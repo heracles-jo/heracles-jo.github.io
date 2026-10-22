@@ -606,3 +606,14 @@
     - "셀프호스팅 백업 복구"
   slug: "supabase-self-hosting-operations"
   summary: "Supabase의 Postgres·Auth·Realtime·Storage 구성을 분해하고 RLS, 백업·복원, 키 회전, 업그레이드와 관리형 대비 도입 기준을 정리."
+- date: 2026-10-23
+  title: "PHP 8.5 업그레이드: 비호환 변경·확장 모듈 검증 기준"
+  github_repo: "https://github.com/php/php-src"
+  main_keyword: "PHP 8.5 업그레이드"
+  related_keywords:
+    - "PHP 8.5.12"
+    - "PHP 비호환 변경"
+    - "PHP-FPM 업그레이드"
+    - "OPcache 마이그레이션"
+  slug: "php85-upgrade-validation"
+  summary: "PHP 8.5.12 보안 패치와 8.4→8.5 변경을 바탕으로 Composer, 확장 모듈, FPM·OPcache, 카나리와 롤백 검증 기준을 정리."
