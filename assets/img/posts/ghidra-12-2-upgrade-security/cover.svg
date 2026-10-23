@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Ghidra 12.2 안전한 업그레이드</title>
+  <desc id="desc">JDK 25, 프로젝트 데이터, 서버 TLS, 확장과 분석 격리를 단계별로 검증하는 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b2d"/><stop offset="1" stop-color="#173a4f"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#63e6be"/><stop offset="1" stop-color="#74c0fc"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1040" cy="110" r="190" fill="#2b8a3e" opacity=".16"/>
+  <circle cx="1100" cy="560" r="240" fill="#1971c2" opacity=".18"/>
+  <g transform="translate(80 84)">
+    <rect width="164" height="42" rx="21" fill="#ffffff" opacity=".1"/>
+    <text x="82" y="28" text-anchor="middle" fill="#b2f2bb" font-family="Arial, sans-serif" font-size="20" font-weight="700">SECURITY UPGRADE</text>
+    <text x="0" y="126" fill="#ffffff" font-family="Arial, sans-serif" font-size="66" font-weight="800">Ghidra 12.2</text>
+    <text x="0" y="198" fill="url(#accent)" font-family="Arial, sans-serif" font-size="48" font-weight="750">업그레이드 검증 기준</text>
+    <text x="0" y="257" fill="#d0ebff" font-family="Arial, sans-serif" font-size="27">JDK 25 · TLS · 프로젝트 · 확장 · 분석 격리</text>
+  </g>
+  <g transform="translate(95 420)" font-family="Arial, sans-serif">
+    <g><rect width="210" height="92" rx="18" fill="#0b7285"/><text x="105" y="39" text-anchor="middle" fill="white" font-size="23" font-weight="700">JDK 25</text><text x="105" y="68" text-anchor="middle" fill="#c5f6fa" font-size="17">runtime &amp; extensions</text></g>
+    <path d="M220 46h65" stroke="#74c0fc" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(295)"><rect width="210" height="92" rx="18" fill="#2b8a3e"/><text x="105" y="39" text-anchor="middle" fill="white" font-size="23" font-weight="700">PROJECT</text><text x="105" y="68" text-anchor="middle" fill="#d3f9d8" font-size="17">backup &amp; diff</text></g>
+    <path d="M515 46h65" stroke="#74c0fc" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(590)"><rect width="210" height="92" rx="18" fill="#1864ab"/><text x="105" y="39" text-anchor="middle" fill="white" font-size="23" font-weight="700">TLS / ALLOW LIST</text><text x="105" y="68" text-anchor="middle" fill="#d0ebff" font-size="17">server trust</text></g>
+    <path d="M810 46h65" stroke="#74c0fc" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(885)"><rect width="210" height="92" rx="18" fill="#5f3dc4"/><text x="105" y="39" text-anchor="middle" fill="white" font-size="23" font-weight="700">ISOLATION</text><text x="105" y="68" text-anchor="middle" fill="#e5dbff" font-size="17">untrusted binaries</text></g>
+  </g>
+</svg>

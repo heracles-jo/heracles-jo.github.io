@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Ghidra 12.2 업그레이드 의사결정 흐름</title>
+  <desc id="desc">무결성, 프로젝트 복구, 확장, TLS, 분석 정확성과 격리를 통과해 전체 전환 여부를 결정하는 흐름</desc>
+  <rect width="1200" height="720" rx="24" fill="#0b1320"/>
+  <text x="600" y="58" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="32" font-weight="800">Ghidra 12.2 전환 게이트</text>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#74c0fc"/></marker></defs>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(60 120)"><rect width="200" height="105" rx="18" fill="#0b7285"/><text x="100" y="39" text-anchor="middle" fill="white" font-size="21" font-weight="700">1. 배포 무결성</text><text x="100" y="72" text-anchor="middle" fill="#c5f6fa" font-size="16">digest · SBOM</text></g>
+    <path d="M270 172h50" stroke="#74c0fc" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(330 120)"><rect width="200" height="105" rx="18" fill="#1864ab"/><text x="100" y="39" text-anchor="middle" fill="white" font-size="21" font-weight="700">2. 복구 가능성</text><text x="100" y="72" text-anchor="middle" fill="#d0ebff" font-size="16">backup · restore</text></g>
+    <path d="M540 172h50" stroke="#74c0fc" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(600 120)"><rect width="200" height="105" rx="18" fill="#5f3dc4"/><text x="100" y="39" text-anchor="middle" fill="white" font-size="21" font-weight="700">3. 런타임·확장</text><text x="100" y="72" text-anchor="middle" fill="#e5dbff" font-size="16">JDK 25 · scripts</text></g>
+    <path d="M810 172h50" stroke="#74c0fc" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(870 120)"><rect width="270" height="105" rx="18" fill="#2b8a3e"/><text x="135" y="39" text-anchor="middle" fill="white" font-size="21" font-weight="700">4. TLS·Allow List</text><text x="135" y="72" text-anchor="middle" fill="#d3f9d8" font-size="16">우회 없는 연결</text></g>
+    <path d="M1005 235v75" stroke="#74c0fc" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(820 320)"><rect width="320" height="120" rx="20" fill="#364fc7"/><text x="160" y="43" text-anchor="middle" fill="white" font-size="22" font-weight="700">5. 분석 의미 비교</text><text x="160" y="78" text-anchor="middle" fill="#dbe4ff" font-size="17">upgrade ↔ fresh import ↔ 기준 버전</text></g>
+    <path d="M810 380H670" stroke="#74c0fc" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(350 320)"><rect width="310" height="120" rx="20" fill="#a61e4d"/><text x="155" y="43" text-anchor="middle" fill="white" font-size="22" font-weight="700">6. 격리 실패 주입</text><text x="155" y="78" text-anchor="middle" fill="#ffdeeb" font-size="17">egress · path · heap · timeout</text></g>
+    <path d="M505 450v70" stroke="#74c0fc" stroke-width="5" marker-end="url(#a)"/>
+    <g transform="translate(390 530)"><rect width="230" height="105" rx="20" fill="#2f9e44"/><text x="115" y="43" text-anchor="middle" fill="white" font-size="24" font-weight="800">전체 전환</text><text x="115" y="75" text-anchor="middle" fill="#d3f9d8" font-size="16">cohort rollout</text></g>
+    <path d="M350 380H220" stroke="#ffa8a8" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#a)"/>
+    <g transform="translate(60 320)"><rect width="150" height="120" rx="20" fill="#862e9c"/><text x="75" y="44" text-anchor="middle" fill="white" font-size="21" font-weight="700">제한 도입</text><text x="75" y="77" text-anchor="middle" fill="#f3d9fa" font-size="16">read-only</text><text x="75" y="100" text-anchor="middle" fill="#f3d9fa" font-size="16">보조 분석</text></g>
+    <path d="M1005 450v70" stroke="#ffa8a8" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#a)"/>
+    <g transform="translate(870 530)"><rect width="270" height="105" rx="20" fill="#c92a2a"/><text x="135" y="43" text-anchor="middle" fill="white" font-size="24" font-weight="800">보류·복구</text><text x="135" y="75" text-anchor="middle" fill="#ffe3e3" font-size="16">원인 분리 후 재검증</text></g>
+  </g>
+</svg>

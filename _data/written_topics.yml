@@ -617,3 +617,14 @@
     - "OPcache 마이그레이션"
   slug: "php85-upgrade-validation"
   summary: "PHP 8.5.12 보안 패치와 8.4→8.5 변경을 바탕으로 Composer, 확장 모듈, FPM·OPcache, 카나리와 롤백 검증 기준을 정리."
+- date: 2026-10-24
+  title: "Ghidra 12.2 업그레이드: JDK 25·TLS·확장 검증 기준"
+  github_repo: "https://github.com/NationalSecurityAgency/ghidra"
+  main_keyword: "Ghidra 12.2 업그레이드"
+  related_keywords:
+    - "Ghidra JDK 25"
+    - "Ghidra Server TLS"
+    - "Ghidra 확장 호환성"
+    - "역공학 도구 보안"
+  slug: "ghidra-12-2-upgrade-security"
+  summary: "Ghidra 12.2의 JDK 25, TLS 서버 인증, 프로젝트 데이터·확장 호환성과 비신뢰 바이너리 격리를 중심으로 안전한 전환 기준을 정리."
