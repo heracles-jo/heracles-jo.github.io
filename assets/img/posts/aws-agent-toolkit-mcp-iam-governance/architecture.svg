@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">AWS Agent Toolkit 통제 아키텍처</title>
+  <desc id="desc">에이전트가 스킬과 문서를 읽고 MCP 도구를 호출한 뒤 인증, IAM, AWS API와 감사 로그를 통과하는 구조</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="780" rx="24" fill="#f8fafc"/>
+  <text x="600" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="#172033">지침과 강제 경계를 분리한다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(60 115)"><rect width="250" height="135" rx="18" fill="#6d28d9"/><text x="125" y="40" text-anchor="middle" fill="white" font-size="24" font-weight="700">AI 에이전트</text><text x="125" y="77" text-anchor="middle" fill="#ede9fe" font-size="18">Claude Code · Codex</text><text x="125" y="106" text-anchor="middle" fill="#ede9fe" font-size="18">Cursor · Kiro · Devin</text></g>
+    <g transform="translate(360 115)"><rect width="250" height="135" rx="18" fill="#7c3aed"/><text x="125" y="40" text-anchor="middle" fill="white" font-size="24" font-weight="700">Skills / Rules</text><text x="125" y="77" text-anchor="middle" fill="#ede9fe" font-size="18">절차 · 서비스 선택</text><text x="125" y="106" text-anchor="middle" fill="#ede9fe" font-size="18">IaC · 보안 권고</text></g>
+    <g transform="translate(660 115)"><rect width="250" height="135" rx="18" fill="#2563eb"/><text x="125" y="40" text-anchor="middle" fill="white" font-size="24" font-weight="700">AWS MCP Server</text><text x="125" y="77" text-anchor="middle" fill="#dbeafe" font-size="18">문서 · API · script</text><text x="125" y="106" text-anchor="middle" fill="#dbeafe" font-size="18">tool inventory</text></g>
+    <g transform="translate(960 115)"><rect width="180" height="135" rx="18" fill="#0f766e"/><text x="90" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">인증</text><text x="90" y="77" text-anchor="middle" fill="#ccfbf1" font-size="18">OAuth</text><text x="90" y="106" text-anchor="middle" fill="#ccfbf1" font-size="18">SigV4</text></g>
+    <path d="M310 182h50M610 182h50M910 182h50" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+
+    <g transform="translate(165 350)"><rect width="390" height="160" rx="20" fill="#fff7ed" stroke="#d97706" stroke-width="4"/><text x="195" y="42" text-anchor="middle" fill="#9a3412" font-size="26" font-weight="800">IAM 강제 경계</text><text x="195" y="82" text-anchor="middle" fill="#7c2d12" font-size="18">account · role · region · resource · action</text><text x="195" y="114" text-anchor="middle" fill="#7c2d12" font-size="18">aws:ViaAWSMCPService</text><text x="195" y="142" text-anchor="middle" fill="#7c2d12" font-size="18">aws:CalledViaAWSMCP</text></g>
+    <g transform="translate(645 350)"><rect width="390" height="160" rx="20" fill="#ecfeff" stroke="#0f766e" stroke-width="4"/><text x="195" y="42" text-anchor="middle" fill="#115e59" font-size="26" font-weight="800">AWS 제어면</text><text x="195" y="82" text-anchor="middle" fill="#134e4a" font-size="18">CloudFormation · Lambda · S3</text><text x="195" y="114" text-anchor="middle" fill="#134e4a" font-size="18">조회 · 변경 · 배포 · 복구</text><text x="195" y="142" text-anchor="middle" fill="#134e4a" font-size="18">허용된 API만 실행</text></g>
+    <path d="M1050 250v55H360v45" stroke="#64748b" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M555 430h90" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+
+    <g transform="translate(105 610)"><rect width="990" height="112" rx="20" fill="#172033"/><text x="495" y="38" text-anchor="middle" fill="white" font-size="25" font-weight="700">Evidence chain</text><text x="495" y="72" text-anchor="middle" fill="#cbd5e1" font-size="18">작업 ID · IaC diff · 승인자 · CloudTrail event · 전후 상태 read-back · rollback 결과</text><text x="495" y="98" text-anchor="middle" fill="#fbbf24" font-size="17">에이전트의 성공 보고와 실제 AWS 상태를 별도로 대조</text></g>
+    <path d="M360 510v100M840 510v100" stroke="#0f766e" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+  </g>
+</svg>

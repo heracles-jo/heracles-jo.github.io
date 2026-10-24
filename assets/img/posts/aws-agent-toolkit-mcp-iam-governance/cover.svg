@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AWS Agent Toolkit 권한 설계</title>
+  <desc id="desc">에이전트 스킬, MCP 도구, IAM 정책과 CloudTrail 감사를 분리해 통제하는 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#3b1d0b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffb347"/><stop offset="1" stop-color="#ffd166"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1060" cy="80" r="190" fill="#ff9900" opacity=".14"/>
+  <circle cx="1070" cy="580" r="260" fill="#7c3aed" opacity=".16"/>
+  <g transform="translate(76 78)" font-family="Arial, sans-serif">
+    <rect width="212" height="42" rx="21" fill="#ffffff" opacity=".1"/>
+    <text x="106" y="28" text-anchor="middle" fill="#fed7aa" font-size="19" font-weight="700">CLOUD AGENT CONTROL</text>
+    <text x="0" y="126" fill="#ffffff" font-size="61" font-weight="800">AWS Agent Toolkit</text>
+    <text x="0" y="198" fill="url(#accent)" font-size="47" font-weight="750">권한·감사 설계 기준</text>
+    <text x="0" y="256" fill="#e5e7eb" font-size="26">Skills · MCP · IAM · CloudTrail</text>
+  </g>
+  <g transform="translate(75 416)" font-family="Arial, sans-serif">
+    <g><rect width="225" height="96" rx="18" fill="#7c3aed"/><text x="112" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">SKILLS</text><text x="112" y="69" text-anchor="middle" fill="#ede9fe" font-size="17">procedure</text></g>
+    <path d="M235 48h55" stroke="#ffd166" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(300)"><rect width="225" height="96" rx="18" fill="#2563eb"/><text x="112" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">MCP TOOLS</text><text x="112" y="69" text-anchor="middle" fill="#dbeafe" font-size="17">execution</text></g>
+    <path d="M535 48h55" stroke="#ffd166" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(600)"><rect width="225" height="96" rx="18" fill="#d97706"/><text x="112" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">IAM</text><text x="112" y="69" text-anchor="middle" fill="#ffedd5" font-size="17">enforcement</text></g>
+    <path d="M835 48h55" stroke="#ffd166" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(900)"><rect width="225" height="96" rx="18" fill="#0f766e"/><text x="112" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">AUDIT</text><text x="112" y="69" text-anchor="middle" fill="#ccfbf1" font-size="17">evidence</text></g>
+  </g>
+</svg>

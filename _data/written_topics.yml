@@ -628,3 +628,14 @@
     - "역공학 도구 보안"
   slug: "ghidra-12-2-upgrade-security"
   summary: "Ghidra 12.2의 JDK 25, TLS 서버 인증, 프로젝트 데이터·확장 호환성과 비신뢰 바이너리 격리를 중심으로 안전한 전환 기준을 정리."
+- date: 2026-10-25
+  title: "AWS Agent Toolkit 권한 설계: MCP·IAM·감사 기준"
+  github_repo: "https://github.com/aws/agent-toolkit-for-aws"
+  main_keyword: "AWS Agent Toolkit 권한 설계"
+  related_keywords:
+    - "AWS MCP Server"
+    - "AI 에이전트 IAM"
+    - "CloudTrail 에이전트 감사"
+    - "클라우드 에이전트 보안"
+  slug: "aws-agent-toolkit-mcp-iam-governance"
+  summary: "AWS Agent Toolkit의 skills·MCP·IAM·CloudTrail 계층을 분리하고 최소 권한, IaC 승인, 상태 재검증과 단계적 운영 기준을 정리."
