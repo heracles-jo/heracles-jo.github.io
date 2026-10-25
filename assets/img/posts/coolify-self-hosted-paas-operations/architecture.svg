@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
+  <title id="title">Coolify 제어면과 배포 서버 아키텍처</title>
+  <desc id="desc">Git 저장소와 레지스트리에서 이미지를 준비하고 Coolify가 SSH로 배포 서버의 Docker, Traefik과 볼륨을 관리하는 구조</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="790" rx="24" fill="#f8fafc"/>
+  <text x="600" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="#172033">제어면, 실행 서버, 데이터 복구를 분리한다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(55 105)"><rect width="245" height="130" rx="18" fill="#334155"/><text x="122" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">Git / Registry</text><text x="122" y="77" text-anchor="middle" fill="#e2e8f0" font-size="18">source SHA · image digest</text><text x="122" y="105" text-anchor="middle" fill="#e2e8f0" font-size="18">webhook · credentials</text></g>
+    <g transform="translate(420 95)"><rect width="360" height="155" rx="20" fill="#4f46e5"/><text x="180" y="42" text-anchor="middle" fill="white" font-size="26" font-weight="800">Coolify Control Plane</text><text x="180" y="80" text-anchor="middle" fill="#e0e7ff" font-size="18">config DB · APP_KEY · SSH keys</text><text x="180" y="110" text-anchor="middle" fill="#e0e7ff" font-size="18">deployment queue · API · audit</text><text x="180" y="137" text-anchor="middle" fill="#fef3c7" font-size="17">특권 관리 경계</text></g>
+    <g transform="translate(900 105)"><rect width="245" height="130" rx="18" fill="#7c3aed"/><text x="122" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">External Services</text><text x="122" y="77" text-anchor="middle" fill="#ede9fe" font-size="18">DNS · ACME · S3</text><text x="122" y="105" text-anchor="middle" fill="#ede9fe" font-size="18">OAuth · alerts</text></g>
+    <path d="M300 170h120M780 170h120" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+
+    <g transform="translate(70 355)"><rect width="470" height="270" rx="22" fill="#eff6ff" stroke="#2563eb" stroke-width="4"/><text x="235" y="42" text-anchor="middle" fill="#1e40af" font-size="26" font-weight="800">Deployment / Build Server</text><text x="235" y="78" text-anchor="middle" fill="#1e3a8a" font-size="18">SSH validation · Docker Engine · build cache</text>
+      <g transform="translate(30 112)"><rect width="185" height="110" rx="16" fill="#2563eb"/><text x="92" y="38" text-anchor="middle" fill="white" font-size="21" font-weight="700">Application</text><text x="92" y="70" text-anchor="middle" fill="#dbeafe" font-size="17">container · health</text><text x="92" y="96" text-anchor="middle" fill="#dbeafe" font-size="17">rolling / stop-start</text></g>
+      <g transform="translate(255 112)"><rect width="185" height="110" rx="16" fill="#0f766e"/><text x="92" y="38" text-anchor="middle" fill="white" font-size="21" font-weight="700">Traefik</text><text x="92" y="70" text-anchor="middle" fill="#ccfbf1" font-size="17">80 · 443 · TLS</text><text x="92" y="96" text-anchor="middle" fill="#ccfbf1" font-size="17">route · middleware</text></g>
+    </g>
+
+    <g transform="translate(660 355)"><rect width="470" height="270" rx="22" fill="#faf5ff" stroke="#7c3aed" stroke-width="4"/><text x="235" y="42" text-anchor="middle" fill="#6b21a8" font-size="26" font-weight="800">Persistent State</text><text x="235" y="78" text-anchor="middle" fill="#581c87" font-size="18">제어면과 워크로드 백업은 별개</text>
+      <g transform="translate(30 112)"><rect width="185" height="110" rx="16" fill="#7c3aed"/><text x="92" y="38" text-anchor="middle" fill="white" font-size="21" font-weight="700">Instance</text><text x="92" y="70" text-anchor="middle" fill="#ede9fe" font-size="17">DB dump · APP_KEY</text><text x="92" y="96" text-anchor="middle" fill="#ede9fe" font-size="17">SSH key backup</text></g>
+      <g transform="translate(255 112)"><rect width="185" height="110" rx="16" fill="#9333ea"/><text x="92" y="38" text-anchor="middle" fill="white" font-size="21" font-weight="700">Workload</text><text x="92" y="70" text-anchor="middle" fill="#f3e8ff" font-size="17">DB · volume · object</text><text x="92" y="96" text-anchor="middle" fill="#f3e8ff" font-size="17">schema · secrets</text></g>
+    </g>
+    <path d="M600 250v55H305v50M600 305H895v50" stroke="#64748b" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+    <g transform="translate(120 690)"><rect width="960" height="62" rx="18" fill="#172033"/><text x="480" y="39" text-anchor="middle" fill="white" font-size="20" font-weight="700">Coolify 중단 시 실행 컨테이너는 남을 수 있지만 배포·변경·복구 자동화는 제어면에 의존한다</text></g>
+  </g>
+</svg>

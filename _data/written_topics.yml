@@ -639,3 +639,14 @@
     - "클라우드 에이전트 보안"
   slug: "aws-agent-toolkit-mcp-iam-governance"
   summary: "AWS Agent Toolkit의 skills·MCP·IAM·CloudTrail 계층을 분리하고 최소 권한, IaC 승인, 상태 재검증과 단계적 운영 기준을 정리."
+- date: 2026-10-26
+  title: "Coolify 셀프호스팅 PaaS: 배포 편의와 운영 책임"
+  github_repo: "https://github.com/coollabsio/coolify"
+  main_keyword: "Coolify 셀프호스팅 PaaS"
+  related_keywords:
+    - "Coolify 운영"
+    - "셀프호스팅 배포 플랫폼"
+    - "Vercel Heroku 대안"
+    - "Docker PaaS"
+  slug: "coolify-self-hosted-paas-operations"
+  summary: "Coolify의 SSH·Docker 제어면, rolling update, Traefik, 특권 경계와 제어면·워크로드 복구를 분리해 도입 및 PoC 중단 기준을 정리."

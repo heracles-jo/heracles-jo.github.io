@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Coolify 셀프호스팅 PaaS 운영 기준</title>
+  <desc id="desc">Coolify 제어면과 Docker 배포 서버, 프록시, 백업 책임을 구분하는 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#818cf8"/><stop offset="1" stop-color="#c4b5fd"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1050" cy="80" r="200" fill="#6366f1" opacity=".22"/>
+  <circle cx="1080" cy="590" r="260" fill="#22d3ee" opacity=".12"/>
+  <g transform="translate(76 75)" font-family="Arial, sans-serif">
+    <rect width="238" height="42" rx="21" fill="#ffffff" opacity=".1"/>
+    <text x="119" y="28" text-anchor="middle" fill="#c7d2fe" font-size="19" font-weight="700">SELF-HOSTED PLATFORM</text>
+    <text x="0" y="128" fill="#ffffff" font-size="64" font-weight="800">Coolify</text>
+    <text x="0" y="201" fill="url(#accent)" font-size="46" font-weight="750">배포 편의와 운영 책임</text>
+    <text x="0" y="258" fill="#dbeafe" font-size="25">SSH · Docker · Proxy · Backup</text>
+  </g>
+  <g transform="translate(75 415)" font-family="Arial, sans-serif">
+    <g><rect width="235" height="98" rx="18" fill="#4f46e5"/><text x="117" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">CONTROL PLANE</text><text x="117" y="70" text-anchor="middle" fill="#e0e7ff" font-size="17">config · keys · queue</text></g>
+    <path d="M245 49h55" stroke="#a5b4fc" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(310)"><rect width="235" height="98" rx="18" fill="#2563eb"/><text x="117" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">DOCKER HOSTS</text><text x="117" y="70" text-anchor="middle" fill="#dbeafe" font-size="17">build · run · storage</text></g>
+    <path d="M555 49h55" stroke="#a5b4fc" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(620)"><rect width="235" height="98" rx="18" fill="#0f766e"/><text x="117" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">PROXY</text><text x="117" y="70" text-anchor="middle" fill="#ccfbf1" font-size="17">domain · TLS · route</text></g>
+    <path d="M865 49h55" stroke="#a5b4fc" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(930)"><rect width="195" height="98" rx="18" fill="#7c3aed"/><text x="97" y="40" text-anchor="middle" fill="white" font-size="23" font-weight="700">RECOVERY</text><text x="97" y="70" text-anchor="middle" fill="#ede9fe" font-size="17">keys · data</text></g>
+  </g>
+</svg>
