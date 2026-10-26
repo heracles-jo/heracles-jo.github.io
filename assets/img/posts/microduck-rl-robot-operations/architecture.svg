@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">MicroDuck 강화학습 로봇 운영 아키텍처</title>
+  <desc id="desc">입력 전송, robotd 안전 제어, ONNX 정책, 모터와 센서, 업데이트 복구 경로를 분리한 구조</desc>
+  <defs><style>.t{font-family:Arial,sans-serif;fill:#eaf5ff}.h{font-weight:700}.box{fill:#102d43;stroke:#58b8e8;stroke-width:2}.safe{fill:#163d36;stroke:#6ee7b7;stroke-width:3}.up{fill:#3a2d16;stroke:#fbbf24;stroke-width:2}.line{stroke:#8cc8e8;stroke-width:3;fill:none;marker-end:url(#a)}.dash{stroke:#fbbf24;stroke-width:3;fill:none;stroke-dasharray:9 8;marker-end:url(#a2)}</style><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#8cc8e8"/></marker><marker id="a2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#fbbf24"/></marker></defs>
+  <rect width="1200" height="720" fill="#071a2b"/>
+  <text x="60" y="60" class="t h" font-size="34">MicroDuck: 같은 API, 분리된 권한, 독립 복구 경로</text>
+  <g class="t" font-size="20" text-anchor="middle">
+    <rect class="box" x="55" y="120" width="210" height="90" rx="16"/><text x="160" y="155" class="h">입력·전송 계층</text><text x="160" y="184">gamepad · BLE · WebRTC</text>
+    <rect class="safe" x="365" y="100" width="310" height="140" rx="18"/><text x="520" y="140" class="h" font-size="25">robotd</text><text x="520" y="174">50 Hz 제어 루프 + Safety</text><text x="520" y="207">intent만 받아 실행 가능성 판정</text>
+    <rect class="box" x="790" y="110" width="330" height="110" rx="16"/><text x="955" y="150" class="h">물리 I/O</text><text x="955" y="180">15 servos · IMU · ToF · camera</text>
+    <path class="line" d="M265 165 H355"/><path class="line" d="M675 165 H780"/>
+
+    <rect class="box" x="365" y="305" width="310" height="125" rx="16"/><text x="520" y="342" class="h">ONNX 정책 계약</text><text x="520" y="374">61D observation → 14 actions</text><text x="520" y="404">shape·finite·model_api 검증</text>
+    <path class="line" d="M520 295 V248"/>
+
+    <rect class="box" x="55" y="315" width="210" height="105" rx="16"/><text x="160" y="350" class="h">MuJoCo Twin</text><text x="160" y="380">동일 daemon·API</text><text x="160" y="405">고장·손실 조건 주입</text>
+    <path class="line" d="M265 367 H355"/>
+
+    <rect class="up" x="130" y="535" width="280" height="115" rx="16"/><text x="270" y="570" class="h">서명된 릴리스·정책</text><text x="270" y="601">GitHub Releases · HF Hub</text><text x="270" y="628">manifest + minisign</text>
+    <rect class="up" x="475" y="515" width="260" height="145" rx="16"/><text x="605" y="552" class="h">updaterd</text><text x="605" y="583">검증 → 버전 디렉터리</text><text x="605" y="611">원자적 symlink 교체</text><text x="605" y="639">health gate</text>
+    <rect class="up" x="825" y="535" width="260" height="115" rx="16"/><text x="955" y="572" class="h">독립 복구 경로</text><text x="955" y="603">자동 rollback · boot counter</text><text x="955" y="630">robotd 실패 중에도 동작</text>
+    <path class="dash" d="M410 592 H465"/><path class="dash" d="M735 592 H815"/><path class="dash" d="M605 505 V445"/>
+  </g>
+  <text x="60" y="690" class="t" font-family="Arial,sans-serif" font-size="19" fill="#b9d7e8">핵심: 학습 정책은 행동 후보를 만들고, 물리 안전과 복구 권한은 별도 런타임이 소유한다.</text>
+</svg>

@@ -650,3 +650,14 @@
     - "Docker PaaS"
   slug: "coolify-self-hosted-paas-operations"
   summary: "Coolify의 SSH·Docker 제어면, rolling update, Traefik, 특권 경계와 제어면·워크로드 복구를 분리해 도입 및 PoC 중단 기준을 정리."
+- date: 2026-10-27
+  title: "강화학습 로봇 배포: MicroDuck 정책·안전·복구 기준"
+  github_repo: "https://github.com/pollen-robotics/microduck"
+  main_keyword: "강화학습 로봇 배포"
+  related_keywords:
+    - "MicroDuck"
+    - "sim-to-real"
+    - "ONNX 로봇 정책"
+    - "로봇 업데이트 롤백"
+  slug: "microduck-rl-robot-operations"
+  summary: "MicroDuck의 MuJoCo·ONNX 정책, 50Hz 안전 제어, 서명 업데이트와 자동 롤백을 연결해 강화학습 로봇의 실기기 승격 기준을 정리."

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">강화학습 로봇 배포와 MicroDuck 운영</title>
+  <desc id="desc">강화학습 정책, 50Hz 제어 루프, 서명 업데이트와 자동 복구 계층을 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a2b"/><stop offset="1" stop-color="#153a55"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1000" cy="110" r="180" fill="#1d4e68" opacity=".55"/>
+  <circle cx="1080" cy="520" r="230" fill="#0d263b" opacity=".8"/>
+  <g transform="translate(760 145)" stroke="#ffd166" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="165" cy="105" rx="95" ry="78" fill="#153a55"/>
+    <path d="M88 98 L32 78 L76 126 Z" fill="#f59e0b" stroke="#f59e0b"/>
+    <circle cx="195" cy="86" r="9" fill="#e8f4ff" stroke="none"/>
+    <path d="M135 182 L118 294 M197 180 L222 294"/>
+    <path d="M118 294 L70 326 M222 294 L272 326"/>
+    <path d="M127 222 Q165 250 210 220" stroke="#7dd3fc"/>
+    <path d="M105 155 Q165 195 225 155" stroke="#7dd3fc"/>
+  </g>
+  <text x="78" y="145" fill="#7dd3fc" font-family="Arial, sans-serif" font-size="28" font-weight="700">PHYSICAL AI OPERATIONS</text>
+  <text x="78" y="225" fill="#ffffff" font-family="Arial, sans-serif" font-size="58" font-weight="800">강화학습 로봇 배포</text>
+  <text x="78" y="300" fill="#ffffff" font-family="Arial, sans-serif" font-size="50" font-weight="800">MicroDuck 운영 기준</text>
+  <rect x="78" y="355" width="590" height="5" rx="2" fill="url(#accent)"/>
+  <text x="78" y="420" fill="#d6e8f5" font-family="Arial, sans-serif" font-size="29">정책 계약 · 50Hz 안전 루프 · 서명 업데이트</text>
+  <text x="78" y="465" fill="#d6e8f5" font-family="Arial, sans-serif" font-size="29">시뮬레이션 경계 · 자동 롤백 · 현장 검증</text>
+  <g transform="translate(78 520)" font-family="Arial, sans-serif" font-size="22" font-weight="700">
+    <rect width="168" height="48" rx="24" fill="#173f58"/><text x="30" y="31" fill="#7dd3fc">MuJoCo + ONNX</text>
+    <rect x="184" width="154" height="48" rx="24" fill="#173f58"/><text x="216" y="31" fill="#ffd166">50 Hz Control</text>
+    <rect x="354" width="160" height="48" rx="24" fill="#173f58"/><text x="389" y="31" fill="#a7f3d0">Safe Rollback</text>
+  </g>
+</svg>

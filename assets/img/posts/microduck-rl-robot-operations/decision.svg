@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">강화학습 로봇 정책 승격 결정 흐름</title>
+  <desc id="desc">정책 계약, 오프라인 리허설, 시뮬레이션, 제한된 실기기, 장애 복구 검증을 거쳐 승격 또는 중단하는 흐름</desc>
+  <defs><style>.t{font-family:Arial,sans-serif;fill:#edf7ff}.h{font-weight:700}.n{fill:#102f46;stroke:#67c7f1;stroke-width:2}.g{fill:#123b31;stroke:#6ee7b7;stroke-width:3}.r{fill:#451f27;stroke:#fb7185;stroke-width:2}.l{stroke:#9bd4ee;stroke-width:3;fill:none;marker-end:url(#a)}.lr{stroke:#fb7185;stroke-width:3;fill:none;stroke-dasharray:8 7;marker-end:url(#b)}</style><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#9bd4ee"/></marker><marker id="b" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#fb7185"/></marker></defs>
+  <rect width="1200" height="700" fill="#071a2b"/>
+  <text x="60" y="58" class="t h" font-size="34">강화학습 로봇 정책: 데모가 아니라 승격 증거로 판단</text>
+  <g class="t" font-size="19" text-anchor="middle">
+    <rect class="n" x="70" y="130" width="190" height="105" rx="16"/><text x="165" y="165" class="h">1. 계약 검증</text><text x="165" y="195">shape·API·digest</text><text x="165" y="220">NaN·상태 reset</text>
+    <rect class="n" x="310" y="130" width="190" height="105" rx="16"/><text x="405" y="165" class="h">2. 보드 리허설</text><text x="405" y="195">p95/p99 latency</text><text x="405" y="220">20ms 초과·jitter</text>
+    <rect class="n" x="550" y="130" width="190" height="105" rx="16"/><text x="645" y="165" class="h">3. 디지털 트윈</text><text x="645" y="195">센서·무선 손실</text><text x="645" y="220">fall·reconnect</text>
+    <rect class="n" x="790" y="130" width="190" height="105" rx="16"/><text x="885" y="165" class="h">4. 제한 실기기</text><text x="885" y="195">지지대·속도 제한</text><text x="885" y="220">온도·전류·충격</text>
+    <path class="l" d="M260 182 H300"/><path class="l" d="M500 182 H540"/><path class="l" d="M740 182 H780"/>
+
+    <rect class="g" x="785" y="330" width="300" height="130" rx="18"/><text x="935" y="370" class="h" font-size="23">5. 운영 승격</text><text x="935" y="402">서명 artifact · health gate</text><text x="935" y="430">rollback·RTO 검증 후 확대</text>
+    <path class="l" d="M885 245 V320"/>
+
+    <rect class="r" x="115" y="355" width="470" height="165" rx="18"/><text x="350" y="395" class="h" font-size="23">중단·재학습·런타임 수정</text><text x="350" y="430">계약 불일치 · deadline miss · 비정상 출력</text><text x="350" y="462">시뮬레이션-현실 편차 · 과열 · 낙상 · 복구 실패</text><text x="350" y="494">원인과 artifact를 고정한 뒤 이전 단계로 복귀</text>
+    <path class="lr" d="M165 245 V345"/><path class="lr" d="M405 245 V345"/><path class="lr" d="M645 245 C645 300 570 300 570 345"/>
+
+    <rect x="710" y="555" width="400" height="80" rx="14" fill="#173149" stroke="#fbbf24" stroke-width="2"/><text x="910" y="588" class="h" fill="#fde68a">승격의 최소 조건</text><text x="910" y="617">안전한 동작 + 실패 시 되돌아올 증거</text>
+  </g>
+</svg>
