@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Postiz 셀프호스팅 보안 운영 기준</title>
+  <desc id="desc">OAuth 토큰, Temporal 예약 실행, 미디어 저장소와 긴급 패치를 분리한 Postiz 보안 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#7c2d12"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fb7185"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1080" cy="75" r="210" fill="#e11d48" opacity=".2"/>
+  <circle cx="1030" cy="600" r="260" fill="#f59e0b" opacity=".13"/>
+  <g transform="translate(76 72)" font-family="Arial, sans-serif">
+    <rect width="260" height="42" rx="21" fill="#ffffff" opacity=".1"/>
+    <text x="130" y="28" text-anchor="middle" fill="#fecdd3" font-size="19" font-weight="700">SELF-HOSTED SECURITY</text>
+    <text x="0" y="130" fill="#ffffff" font-size="64" font-weight="800">Postiz</text>
+    <text x="0" y="203" fill="url(#accent)" font-size="45" font-weight="750">패치와 운영 경계</text>
+    <text x="0" y="260" fill="#ffedd5" font-size="25">OAuth · MCP · Temporal · Media</text>
+  </g>
+  <g transform="translate(74 414)" font-family="Arial, sans-serif">
+    <g><rect width="235" height="100" rx="18" fill="#be123c"/><text x="117" y="40" text-anchor="middle" fill="white" font-size="22" font-weight="700">IDENTITY</text><text x="117" y="72" text-anchor="middle" fill="#ffe4e6" font-size="17">token · invite · role</text></g>
+    <path d="M246 50h52" stroke="#fda4af" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(310)"><rect width="235" height="100" rx="18" fill="#c2410c"/><text x="117" y="40" text-anchor="middle" fill="white" font-size="22" font-weight="700">WORKFLOW</text><text x="117" y="72" text-anchor="middle" fill="#ffedd5" font-size="17">queue · retry · publish</text></g>
+    <path d="M556 50h52" stroke="#fdba74" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(620)"><rect width="235" height="100" rx="18" fill="#a16207"/><text x="117" y="40" text-anchor="middle" fill="white" font-size="22" font-weight="700">MEDIA</text><text x="117" y="72" text-anchor="middle" fill="#fef3c7" font-size="17">path · upload · egress</text></g>
+    <path d="M866 50h52" stroke="#fde68a" stroke-width="6" stroke-linecap="round"/>
+    <g transform="translate(930)"><rect width="195" height="100" rx="18" fill="#166534"/><text x="97" y="40" text-anchor="middle" fill="white" font-size="22" font-weight="700">RECOVERY</text><text x="97" y="72" text-anchor="middle" fill="#dcfce7" font-size="17">patch · rotate</text></g>
+  </g>
+</svg>

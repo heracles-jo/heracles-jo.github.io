@@ -661,3 +661,14 @@
     - "로봇 업데이트 롤백"
   slug: "microduck-rl-robot-operations"
   summary: "MicroDuck의 MuJoCo·ONNX 정책, 50Hz 안전 제어, 서명 업데이트와 자동 롤백을 연결해 강화학습 로봇의 실기기 승격 기준을 정리."
+- date: 2026-10-28
+  title: "Postiz 셀프호스팅 보안: v2.25.3 패치와 운영 기준"
+  github_repo: "https://github.com/gitroomhq/postiz-app"
+  main_keyword: "Postiz 셀프호스팅 보안"
+  related_keywords:
+    - "Postiz v2.25.3"
+    - "소셜 미디어 자동화 보안"
+    - "MCP 게시 권한"
+    - "Temporal 예약 발행"
+  slug: "postiz-self-hosted-security"
+  summary: "Postiz의 토큰 위조·파일 읽기 취약점과 OAuth·MCP·Temporal·미디어 경계를 연결해 패치, 권한 축소, 복구와 PoC 기준을 정리."
