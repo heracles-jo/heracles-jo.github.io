@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI 튜터 학습 기억 아키텍처</title>
+  <desc id="desc">관찰 증거가 요약과 합성을 거쳐 추천에 사용되고 정정이 다시 전파되는 구조</desc>
+  <rect width="1200" height="760" rx="24" fill="#f8fafc"/>
+  <text x="60" y="68" font-family="Arial, sans-serif" font-size="33" font-weight="800" fill="#0f172a">학습자 기억은 대화 저장소가 아니라 증거와 반증의 파이프라인이다</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(55 125)"><rect width="205" height="185" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><text x="23" y="40" font-size="24" font-weight="700" fill="#075985">L1 관찰 증거</text><text x="23" y="83" font-size="18" fill="#334155">문항·답·풀이 시간</text><text x="23" y="116" font-size="18" fill="#334155">힌트·교사 피드백</text><text x="23" y="149" font-size="18" fill="#334155">원문·발생 시각</text></g>
+    <g transform="translate(330 125)"><rect width="205" height="185" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="23" y="40" font-size="24" font-weight="700" fill="#166534">L2 표면 요약</text><text x="23" y="83" font-size="18" fill="#334155">좁은 사실·선호</text><text x="23" y="116" font-size="18" fill="#334155">source event 연결</text><text x="23" y="149" font-size="18" fill="#334155">confidence·만료</text></g>
+    <g transform="translate(605 125)"><rect width="205" height="185" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="23" y="40" font-size="24" font-weight="700" fill="#5b21b6">L3 장기 합성</text><text x="23" y="83" font-size="18" fill="#334155">숙련도 가설</text><text x="23" y="116" font-size="18" fill="#334155">학습 패턴·변화</text><text x="23" y="149" font-size="18" fill="#334155">contested 상태</text></g>
+    <g transform="translate(880 125)"><rect width="265" height="185" rx="18" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/><text x="23" y="40" font-size="24" font-weight="700" fill="#9a3412">학습 결정</text><text x="23" y="83" font-size="18" fill="#334155">설명·문제 난이도</text><text x="23" y="116" font-size="18" fill="#334155">복습 경로·힌트</text><text x="23" y="149" font-size="18" fill="#334155">교사 검토·승인</text></g>
+    <path d="M260 218 H320" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/><path d="M535 218 H595" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/><path d="M810 218 H870" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(105 405)"><rect width="990" height="250" rx="22" fill="#0f172a"/><text x="34" y="48" font-size="25" font-weight="700" fill="#f8fafc">교차 통제면: 기억을 만들 권한보다 고치고 폐기할 경로</text><line x1="34" y1="72" x2="956" y2="72" stroke="#334155"/>
+      <g font-size="19" fill="#cbd5e1"><text x="42" y="119">① source·model·schema 계보</text><text x="42" y="161">② stale 감쇠·supersede</text><text x="42" y="203">③ 사용자 정정·이의 제기</text><text x="365" y="119">④ 계정·workspace 격리</text><text x="365" y="161">⑤ provider 전송 최소화</text><text x="365" y="203">⑥ 역할별 최소 공개</text><text x="690" y="119">⑦ 파생 추천 재계산</text><text x="690" y="161">⑧ 삭제·backup 전파</text><text x="690" y="203">⑨ 학습 효과·공정성 평가</text></g>
+    </g>
+    <path d="M1010 320 C1000 365 930 380 850 380 H240 C155 380 130 350 150 320" fill="none" stroke="#fb7185" stroke-width="3" stroke-dasharray="9 8" marker-end="url(#arrow)"/>
+    <text x="450" y="374" font-size="18" font-weight="700" fill="#be123c">새 증거와 정정은 기존 합성을 반증하고 결정에 다시 전파</text>
+  </g>
+</svg>

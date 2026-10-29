@@ -683,3 +683,14 @@
     - "양방향 블록 그래프"
   slug: "macro-unified-workspace-permission-graph"
   summary: "Macro의 블록 그래프, 채널 기반 공유, 팀 AI 메모리와 MCP를 분해해 권한 수렴, 셀프호스팅 비용과 PoC 기준을 정리."
+- date: 2026-10-30
+  title: "AI 튜터 장기 기억 설계: DeepTutor 학습자 모델 검증"
+  github_repo: "https://github.com/HKUDS/DeepTutor"
+  main_keyword: "AI 튜터 장기 기억 설계"
+  related_keywords:
+    - "DeepTutor"
+    - "학습자 모델"
+    - "교육 AI 개인정보"
+    - "에이전트 메모리"
+  slug: "deeptutor-learning-memory-governance"
+  summary: "DeepTutor의 3계층 메모리와 학습 워크스페이스를 바탕으로 근거 추적, 정정, 격리, 삭제와 학습 효과 PoC 기준을 정리."
