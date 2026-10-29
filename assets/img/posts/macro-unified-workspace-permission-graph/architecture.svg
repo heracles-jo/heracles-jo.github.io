@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Macro 블록 그래프 아키텍처</title>
+  <desc id="desc">업무 블록, 양방향 참조와 권한, 저장과 검색, 팀 AI 메모리와 MCP 행동 계층의 관계</desc>
+  <defs><linearGradient id="h" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0284c7"/><stop offset="1" stop-color="#7c3aed"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="720" rx="28" fill="#f8fafc"/>
+  <text x="60" y="65" font-family="system-ui,sans-serif" font-size="32" font-weight="800" fill="#0f172a">Macro: 블록을 연결하면 권한과 기억도 함께 이동한다</text>
+  <text x="60" y="101" font-family="system-ui,sans-serif" font-size="19" fill="#475569">화면 통합보다 중요한 것은 참조·접근·검색·메모리의 수렴 시간이다</text>
+  <g font-family="system-ui,sans-serif" text-anchor="middle">
+    <g fill="#fff" stroke-width="2">
+      <rect x="55" y="155" width="205" height="68" rx="14" stroke="#0284c7"/><text x="157" y="197" font-size="20" font-weight="700" fill="#0f172a">이메일 · 통화</text>
+      <rect x="55" y="243" width="205" height="68" rx="14" stroke="#0284c7"/><text x="157" y="285" font-size="20" font-weight="700" fill="#0f172a">채널 · 메시지</text>
+      <rect x="55" y="331" width="205" height="68" rx="14" stroke="#0284c7"/><text x="157" y="373" font-size="20" font-weight="700" fill="#0f172a">문서 · 업무</text>
+      <rect x="55" y="419" width="205" height="68" rx="14" stroke="#0284c7"/><text x="157" y="461" font-size="20" font-weight="700" fill="#0f172a">고객 · 프로젝트</text>
+    </g>
+    <rect x="350" y="205" width="305" height="232" rx="24" fill="#eef2ff" stroke="#7c3aed" stroke-width="3"/>
+    <text x="502" y="254" font-size="25" font-weight="800" fill="#312e81">양방향 블록 그래프</text>
+    <text x="502" y="299" font-size="19" fill="#4338ca">@mention · backlink</text>
+    <text x="502" y="337" font-size="19" fill="#4338ca">채널 기반 공유 · 역할</text>
+    <text x="502" y="375" font-size="19" fill="#4338ca">원본 ID · 수정 시각</text>
+    <text x="502" y="413" font-size="19" fill="#4338ca">삭제 · 보존 상태</text>
+    <g fill="#fff" stroke="#0f766e" stroke-width="2">
+      <rect x="745" y="150" width="190" height="72" rx="14"/><text x="840" y="194" font-size="20" font-weight="700" fill="#134e4a">Postgres</text>
+      <rect x="955" y="150" width="190" height="72" rx="14"/><text x="1050" y="194" font-size="20" font-weight="700" fill="#134e4a">S3 · 파일</text>
+      <rect x="745" y="242" width="190" height="72" rx="14"/><text x="840" y="286" font-size="20" font-weight="700" fill="#134e4a">OpenSearch</text>
+      <rect x="955" y="242" width="190" height="72" rx="14"/><text x="1050" y="286" font-size="20" font-weight="700" fill="#134e4a">CRDT 동기화</text>
+    </g>
+    <rect x="745" y="370" width="400" height="82" rx="18" fill="#ecfdf5" stroke="#22c55e" stroke-width="3"/>
+    <text x="945" y="404" font-size="22" font-weight="800" fill="#166534">야간 개인·팀 AI 메모리</text><text x="945" y="434" font-size="17" fill="#15803d">요약은 원본 링크와 검증 시각을 보존</text>
+    <rect x="745" y="492" width="400" height="82" rx="18" fill="#fff7ed" stroke="#f59e0b" stroke-width="3"/>
+    <text x="945" y="526" font-size="22" font-weight="800" fill="#9a3412">MCP 검색 · 변경 행동</text><text x="945" y="556" font-size="17" fill="#c2410c">actor · before/after · 승인 · rollback</text>
+  </g>
+  <g stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M260 189 C310 189 315 252 350 270"/><path d="M260 277 C310 277 315 298 350 310"/><path d="M260 365 C310 365 315 350 350 345"/><path d="M260 453 C310 453 315 403 350 390"/>
+    <path d="M655 270 C700 245 710 198 745 188"/><path d="M655 300 C705 290 710 278 745 278"/><path d="M655 345 C700 350 705 410 745 410"/><path d="M945 452 L945 492"/>
+  </g>
+  <rect x="55" y="625" width="1090" height="55" rx="14" fill="url(#h)"/>
+  <text x="600" y="660" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="750" fill="#fff">권한 철회 후 검색·캐시·메모리·외부 connector까지 같은 결론으로 수렴하는지 검증</text>
+</svg>

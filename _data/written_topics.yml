@@ -672,3 +672,14 @@
     - "Temporal 예약 발행"
   slug: "postiz-self-hosted-security"
   summary: "Postiz의 토큰 위조·파일 읽기 취약점과 OAuth·MCP·Temporal·미디어 경계를 연결해 패치, 권한 축소, 복구와 PoC 기준을 정리."
+- date: 2026-10-29
+  title: "Macro 채널 기반 권한: 통합 워크스페이스·AI 메모리 기준"
+  github_repo: "https://github.com/macro-inc/macro"
+  main_keyword: "Macro 채널 기반 권한"
+  related_keywords:
+    - "Macro 협업 플랫폼"
+    - "채널 기반 권한"
+    - "팀 AI 메모리"
+    - "양방향 블록 그래프"
+  slug: "macro-unified-workspace-permission-graph"
+  summary: "Macro의 블록 그래프, 채널 기반 공유, 팀 AI 메모리와 MCP를 분해해 권한 수렴, 셀프호스팅 비용과 PoC 기준을 정리."

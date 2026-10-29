@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Macro 통합 협업 워크스페이스</title>
+  <desc id="desc">이메일, 메시지, 문서, 업무, CRM 블록이 권한 그래프와 팀 AI 메모리로 연결된 모습을 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1220"/><stop offset="1" stop-color="#172554"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1060" cy="90" r="230" fill="#2563eb" opacity=".12"/><circle cx="100" cy="590" r="250" fill="#7c3aed" opacity=".11"/>
+  <text x="76" y="95" fill="#7dd3fc" font-family="system-ui,sans-serif" font-size="25" font-weight="700" letter-spacing="2">PLATFORM ENGINEERING · AI INFRASTRUCTURE</text>
+  <text x="76" y="172" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="54" font-weight="800">통합 협업 워크스페이스</text>
+  <text x="76" y="230" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="34" font-weight="650">Macro 권한 그래프 · AI 메모리 기준</text>
+  <g stroke="#64748b" stroke-width="3" opacity=".8">
+    <path d="M212 392 L470 348"/><path d="M212 488 L470 420"/><path d="M758 348 L1010 392"/><path d="M758 420 L1010 488"/>
+  </g>
+  <g filter="url(#shadow)" font-family="system-ui,sans-serif" font-size="20" font-weight="700" text-anchor="middle">
+    <rect x="80" y="350" width="264" height="80" rx="18" fill="#172033" stroke="#38bdf8"/><text x="212" y="399" fill="#e0f2fe">이메일 · 메시지</text>
+    <rect x="80" y="446" width="264" height="80" rx="18" fill="#172033" stroke="#a78bfa"/><text x="212" y="495" fill="#ede9fe">문서 · 업무 · CRM</text>
+    <rect x="436" y="318" width="356" height="136" rx="26" fill="#111827" stroke="url(#accent)" stroke-width="4"/>
+    <text x="614" y="372" fill="#f8fafc" font-size="27">양방향 블록 그래프</text><text x="614" y="410" fill="#94a3b8" font-size="19">참조 · 검색 · 채널 기반 권한</text>
+    <rect x="856" y="350" width="280" height="80" rx="18" fill="#172033" stroke="#22c55e"/><text x="996" y="399" fill="#dcfce7">팀 AI 메모리</text>
+    <rect x="856" y="446" width="280" height="80" rx="18" fill="#172033" stroke="#f59e0b"/><text x="996" y="495" fill="#fef3c7">MCP 행동 · 감사</text>
+  </g>
+  <rect x="76" y="566" width="1048" height="3" fill="url(#accent)"/>
+  <text x="76" y="606" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="21">맥락 통합의 가치와 권한·복구 비용을 함께 검증한다</text>
+</svg>

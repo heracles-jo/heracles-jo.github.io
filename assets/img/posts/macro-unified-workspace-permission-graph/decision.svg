@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Macro 도입 의사결정 게이트</title>
+  <desc id="desc">맥락 연결, 권한 수렴, 메모리 근거, MCP 승인, 복구 훈련을 순서대로 검증하는 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient></defs>
+  <rect width="1200" height="720" rx="28" fill="url(#g)"/>
+  <text x="60" y="70" font-family="system-ui,sans-serif" font-size="34" font-weight="800" fill="#f8fafc">Macro 도입: 기능 통합보다 먼저 통과할 다섯 게이트</text>
+  <text x="60" y="108" font-family="system-ui,sans-serif" font-size="19" fill="#bfdbfe">각 단계는 정량 증거가 없으면 다음 권한을 열지 않는다</text>
+  <g font-family="system-ui,sans-serif">
+    <g>
+      <rect x="55" y="165" width="205" height="150" rx="20" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/>
+      <text x="80" y="205" font-size="20" font-weight="800" fill="#075985">1. 맥락 연결</text><text x="80" y="240" font-size="16" fill="#0c4a6e">원본→참조→업무</text><text x="80" y="269" font-size="16" fill="#0c4a6e">최신 결정 탐색 시간</text><text x="80" y="298" font-size="16" fill="#0c4a6e">중복 입력 감소</text>
+    </g>
+    <g>
+      <rect x="280" y="165" width="205" height="150" rx="20" fill="#ede9fe" stroke="#a78bfa" stroke-width="3"/>
+      <text x="305" y="205" font-size="20" font-weight="800" fill="#5b21b6">2. 권한 수렴</text><text x="305" y="240" font-size="16" fill="#4c1d95">합류·탈퇴 canary</text><text x="305" y="269" font-size="16" fill="#4c1d95">검색·cache 철회</text><text x="305" y="298" font-size="16" fill="#4c1d95">public link 감사</text>
+    </g>
+    <g>
+      <rect x="505" y="165" width="205" height="150" rx="20" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+      <text x="530" y="205" font-size="20" font-weight="800" fill="#166534">3. 메모리 근거</text><text x="530" y="240" font-size="16" fill="#14532d">source 링크</text><text x="530" y="269" font-size="16" fill="#14532d">충돌·취소 반영</text><text x="530" y="298" font-size="16" fill="#14532d">검증 시각 표시</text>
+    </g>
+    <g>
+      <rect x="730" y="165" width="205" height="150" rx="20" fill="#ffedd5" stroke="#f59e0b" stroke-width="3"/>
+      <text x="755" y="205" font-size="20" font-weight="800" fill="#9a3412">4. MCP 승인</text><text x="755" y="240" font-size="16" fill="#7c2d12">읽기·쓰기 분리</text><text x="755" y="269" font-size="16" fill="#7c2d12">before/after diff</text><text x="755" y="298" font-size="16" fill="#7c2d12">actor·rollback 기록</text>
+    </g>
+    <g>
+      <rect x="955" y="165" width="190" height="150" rx="20" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/>
+      <text x="980" y="205" font-size="20" font-weight="800" fill="#991b1b">5. 복구 훈련</text><text x="980" y="240" font-size="16" fill="#7f1d1d">DB·파일·색인</text><text x="980" y="269" font-size="16" fill="#7f1d1d">인증·CRDT 상태</text><text x="980" y="298" font-size="16" fill="#7f1d1d">RTO·RPO 검증</text>
+    </g>
+  </g>
+  <g stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#a)"><path d="M260 240 L280 240"/><path d="M485 240 L505 240"/><path d="M710 240 L730 240"/><path d="M935 240 L955 240"/></g>
+  <g font-family="system-ui,sans-serif">
+    <rect x="115" y="385" width="440" height="205" rx="24" fill="#0f2b4d" stroke="#38bdf8" stroke-width="2"/>
+    <text x="150" y="430" font-size="23" font-weight="800" fill="#7dd3fc">확대 조건</text>
+    <text x="150" y="472" font-size="18" fill="#e2e8f0">• 최신 상태 질문의 정답률과 응답 시간 개선</text>
+    <text x="150" y="508" font-size="18" fill="#e2e8f0">• 사용자 제거 후 파생 계층 접근 0건</text>
+    <text x="150" y="544" font-size="18" fill="#e2e8f0">• 쓰기 행동은 승인·감사·rollback 가능</text>
+    <rect x="645" y="385" width="440" height="205" rx="24" fill="#3b1720" stroke="#fb7185" stroke-width="2"/>
+    <text x="680" y="430" font-size="23" font-weight="800" fill="#fda4af">중단 조건</text>
+    <text x="680" y="472" font-size="18" fill="#ffe4e6">• 검색·메모리가 원본과 다르게 수렴</text>
+    <text x="680" y="508" font-size="18" fill="#ffe4e6">• 채널 초대만으로 민감 과거 전체 노출</text>
+    <text x="680" y="544" font-size="18" fill="#ffe4e6">• 복구 후 권한·참조·색인을 재현 못함</text>
+  </g>
+  <rect x="115" y="630" width="970" height="48" rx="12" fill="#f8fafc"/>
+  <text x="600" y="661" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" font-weight="750" fill="#0f172a">도구 수 감소가 아니라 의사결정 시간·오공유·정정 비용의 순효과로 판단한다</text>
+</svg>
