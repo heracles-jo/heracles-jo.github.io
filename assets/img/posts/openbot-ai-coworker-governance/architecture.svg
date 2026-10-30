@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">OpenBot AI 동료 운영 아키텍처</title>
+  <desc id="desc">사용자와 AG-UI Bot의 요청이 도구 제공, 정책 판정, 감사 기록을 거쳐 격리 컴퓨터와 외부 MCP로 전달되는 흐름</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071525"/><stop offset="1" stop-color="#102d45"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#66d9c5"/></marker></defs>
+  <rect width="1200" height="720" rx="26" fill="url(#bg)"/>
+  <text x="60" y="72" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="800">AI 동료의 실행은 게이트웨이를 우회하지 않는다</text>
+  <text x="60" y="108" fill="#9fb8ca" font-family="Arial, sans-serif" font-size="19">도구 노출은 선택 계층, grant·policy·audit는 권한 계층</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="55" y="180" width="210" height="128" rx="18" fill="#173b54" stroke="#5d8097"/>
+    <text x="160" y="225" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">사용자·채널</text>
+    <text x="160" y="261" text-anchor="middle" fill="#bed0dc" font-size="17">actor · initiator</text><text x="160" y="287" text-anchor="middle" fill="#bed0dc" font-size="17">interactive / routine</text>
+    <rect x="345" y="180" width="210" height="128" rx="18" fill="#173b54" stroke="#5d8097"/>
+    <text x="450" y="225" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">AG-UI Bot</text>
+    <text x="450" y="261" text-anchor="middle" fill="#bed0dc" font-size="17">모델·프레임워크</text><text x="450" y="287" text-anchor="middle" fill="#bed0dc" font-size="17">의도와 도구 호출</text>
+    <rect x="635" y="148" width="270" height="192" rx="22" fill="#16435a" stroke="#66d9c5" stroke-width="2"/>
+    <text x="770" y="192" text-anchor="middle" fill="#fff" font-size="24" font-weight="800">서버 게이트웨이</text>
+    <text x="770" y="228" text-anchor="middle" fill="#8ce6d4" font-size="18">1. target snapshot</text><text x="770" y="258" text-anchor="middle" fill="#8ce6d4" font-size="18">2. grant + CEL policy</text><text x="770" y="288" text-anchor="middle" fill="#8ce6d4" font-size="18">3. audit decision first</text><text x="770" y="318" text-anchor="middle" fill="#8ce6d4" font-size="18">4. allow or refuse</text>
+    <rect x="985" y="180" width="160" height="128" rx="18" fill="#173b54" stroke="#5d8097"/>
+    <text x="1065" y="225" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">PostgreSQL</text><text x="1065" y="260" text-anchor="middle" fill="#bed0dc" font-size="16">정책·감사·승인</text><text x="1065" y="286" text-anchor="middle" fill="#bed0dc" font-size="16">credential metadata</text>
+    <path d="M265 244H335" stroke="#66d9c5" stroke-width="5" marker-end="url(#arrow)"/><path d="M555 244H625" stroke="#66d9c5" stroke-width="5" marker-end="url(#arrow)"/><path d="M905 244H975" stroke="#66d9c5" stroke-width="5" marker-end="url(#arrow)"/>
+    <path d="M770 340V418" stroke="#66d9c5" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="205" y="440" width="330" height="165" rx="22" fill="#142f46" stroke="#6d8ca1"/>
+    <text x="370" y="485" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">Bot Computer</text>
+    <text x="370" y="522" text-anchor="middle" fill="#bed0dc" font-size="18">Chromium · workspace · shell</text><text x="370" y="554" text-anchor="middle" fill="#bed0dc" font-size="18">profile / container / gVisor</text><text x="370" y="586" text-anchor="middle" fill="#f1bf6b" font-size="16">raw socket은 하부 네트워크 정책 필요</text>
+    <rect x="665" y="440" width="330" height="165" rx="22" fill="#142f46" stroke="#6d8ca1"/>
+    <text x="830" y="485" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">외부 도구·계정</text>
+    <text x="830" y="522" text-anchor="middle" fill="#bed0dc" font-size="18">MCP · SaaS · shared account</text><text x="830" y="554" text-anchor="middle" fill="#bed0dc" font-size="18">OAuth scope · API authorization</text><text x="830" y="586" text-anchor="middle" fill="#f1bf6b" font-size="16">write는 승인·멱등성·조정 필요</text>
+    <path d="M770 418L535 454" stroke="#66d9c5" stroke-width="5" marker-end="url(#arrow)"/><path d="M770 418L665 454" stroke="#66d9c5" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="60" y="650" width="1080" height="38" rx="12" fill="#0d2235" stroke="#37546a"/>
+    <text x="600" y="676" text-anchor="middle" fill="#d6e4ed" font-size="17">거부할 수 없는 도구를 숨기는 것보다, 보이는 도구도 실행 경계에서 거부할 수 있어야 한다</text>
+  </g>
+</svg>
