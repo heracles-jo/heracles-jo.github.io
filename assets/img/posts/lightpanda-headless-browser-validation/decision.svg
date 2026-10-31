@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="950" viewBox="0 0 1400 950" role="img" aria-labelledby="title desc">
+  <title id="title">Lightpanda 도입 의사결정 게이트</title>
+  <desc id="desc">실제 자동화 corpus에서 정확성, 호환성, 보안, 비용을 검증한 뒤 Lightpanda, Chromium, HTTP 경로로 라우팅하는 절차</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0b1c2b"/><stop offset="1" stop-color="#102d3c"/></linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".25"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#6fc5dc"/></marker>
+  </defs>
+  <rect width="1400" height="950" fill="url(#bg)"/>
+  <text x="70" y="68" fill="#f2f8fb" font-size="40" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">전체 대체가 아니라 검증된 라우팅 기준을 만든다</text>
+  <text x="70" y="108" fill="#a9c3cf" font-size="22" font-family="Pretendard, sans-serif">정확성 동등성을 먼저 증명하고, 그 다음에 성능과 비용을 비교한다.</text>
+
+  <g font-family="Pretendard, Apple SD Gothic Neo, sans-serif" filter="url(#s)">
+    <rect x="80" y="165" width="270" height="125" rx="22" fill="#173b4a" stroke="#61b9d0" stroke-width="2"/>
+    <text x="215" y="205" text-anchor="middle" fill="#e9fbff" font-size="23" font-weight="800">대표 corpus</text>
+    <text x="215" y="238" text-anchor="middle" fill="#b8d5df" font-size="17">URL·로그인·iframe·다운로드</text>
+    <text x="215" y="266" text-anchor="middle" fill="#b8d5df" font-size="17">독립 assertion 100~300개</text>
+
+    <rect x="430" y="165" width="270" height="125" rx="22" fill="#193f43" stroke="#72e6b1" stroke-width="2"/>
+    <text x="565" y="205" text-anchor="middle" fill="#effff7" font-size="23" font-weight="800">이중 실행</text>
+    <text x="565" y="238" text-anchor="middle" fill="#bce1cf" font-size="17">Chromium 기준선</text>
+    <text x="565" y="266" text-anchor="middle" fill="#bce1cf" font-size="17">Lightpanda 후보</text>
+
+    <rect x="780" y="165" width="270" height="125" rx="22" fill="#27384f" stroke="#8ab3dd" stroke-width="2"/>
+    <text x="915" y="205" text-anchor="middle" fill="#f0f7ff" font-size="23" font-weight="800">동등성 판정</text>
+    <text x="915" y="238" text-anchor="middle" fill="#c4d3e2" font-size="17">최종 상태·필드·오류</text>
+    <text x="915" y="266" text-anchor="middle" fill="#c4d3e2" font-size="17">DOM·network·page status</text>
+
+    <rect x="1130" y="165" width="190" height="125" rx="22" fill="#423443" stroke="#d1a2d4" stroke-width="2"/>
+    <text x="1225" y="205" text-anchor="middle" fill="#fff1ff" font-size="23" font-weight="800">분류</text>
+    <text x="1225" y="238" text-anchor="middle" fill="#dfc6e0" font-size="17">통과 / fallback</text>
+    <text x="1225" y="266" text-anchor="middle" fill="#dfc6e0" font-size="17">중단 / 수정</text>
+  </g>
+  <g stroke="#6fc5dc" stroke-width="4" fill="none" marker-end="url(#arrow)"><path d="M350 227h72"/><path d="M700 227h72"/><path d="M1050 227h72"/></g>
+
+  <text x="80" y="365" fill="#8ee8bd" font-size="26" font-family="Pretendard, sans-serif" font-weight="800">승격 게이트</text>
+  <g font-family="Pretendard, Apple SD Gothic Neo, sans-serif">
+    <g transform="translate(80 400)"><rect width="385" height="150" rx="20" fill="#122f3d" stroke="#6db6c9"/><circle cx="48" cy="45" r="25" fill="#1d5970"/><text x="48" y="53" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">1</text><text x="88" y="51" fill="#eaf8fc" font-size="22" font-weight="800">정확성</text><text x="35" y="91" fill="#b6d0da" font-size="17">조용한 오답·누락·잘못된 성공이 없는가</text><text x="35" y="121" fill="#f1adad" font-size="16">하나라도 핵심 흐름에서 발생하면 중단</text></g>
+    <g transform="translate(505 400)"><rect width="385" height="150" rx="20" fill="#122f3d" stroke="#6db6c9"/><circle cx="48" cy="45" r="25" fill="#1d5970"/><text x="48" y="53" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">2</text><text x="88" y="51" fill="#eaf8fc" font-size="22" font-weight="800">호환성</text><text x="35" y="91" fill="#b6d0da" font-size="17">필요한 CDP·BiDi·Web API가 유지되는가</text><text x="35" y="121" fill="#f5cf8b" font-size="16">사내 patch가 누적되면 fallback 유지</text></g>
+    <g transform="translate(930 400)"><rect width="385" height="150" rx="20" fill="#122f3d" stroke="#6db6c9"/><circle cx="48" cy="45" r="25" fill="#1d5970"/><text x="48" y="53" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">3</text><text x="88" y="51" fill="#eaf8fc" font-size="22" font-weight="800">보안·격리</text><text x="35" y="91" fill="#b6d0da" font-size="17">세션 혼입·SSRF·secret·download를 통제하는가</text><text x="35" y="121" fill="#f1adad" font-size="16">고위험 tenant는 프로세스 경계 유지</text></g>
+    <g transform="translate(80 590)"><rect width="385" height="150" rx="20" fill="#122f3d" stroke="#6db6c9"/><circle cx="48" cy="45" r="25" fill="#1d5970"/><text x="48" y="53" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">4</text><text x="88" y="51" fill="#eaf8fc" font-size="22" font-weight="800">운영성</text><text x="35" y="91" fill="#b6d0da" font-size="17">15분 안에 엔진·페이지·환경 실패를 구분하는가</text><text x="35" y="121" fill="#f5cf8b" font-size="16">page status·로그·재현 artifact 필요</text></g>
+    <g transform="translate(505 590)"><rect width="385" height="150" rx="20" fill="#122f3d" stroke="#6db6c9"/><circle cx="48" cy="45" r="25" fill="#1d5970"/><text x="48" y="53" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">5</text><text x="88" y="51" fill="#eaf8fc" font-size="22" font-weight="800">성능·비용</text><text x="35" y="91" fill="#b6d0da" font-size="17">동등한 성공 조건에서 p95·RSS·CPU가 줄었는가</text><text x="35" y="121" fill="#8ee8bd" font-size="16">정확성 통과 뒤에만 절감 효과 인정</text></g>
+    <g transform="translate(930 590)"><rect width="385" height="150" rx="20" fill="#122f3d" stroke="#6db6c9"/><circle cx="48" cy="45" r="25" fill="#1d5970"/><text x="48" y="53" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">6</text><text x="88" y="51" fill="#eaf8fc" font-size="22" font-weight="800">라이선스</text><text x="35" y="91" fill="#b6d0da" font-size="17">AGPL·배포·수정·CLA 경계를 검토했는가</text><text x="35" y="121" fill="#f5cf8b" font-size="16">법무·upstream 전략 없으면 확대 금지</text></g>
+  </g>
+
+  <g font-family="Pretendard, Apple SD Gothic Neo, sans-serif" filter="url(#s)">
+    <rect x="80" y="800" width="380" height="92" rx="20" fill="#183d42" stroke="#72e6b1" stroke-width="2"/><text x="270" y="838" text-anchor="middle" fill="#effff7" font-size="23" font-weight="800">HTTP / parser 경로</text><text x="270" y="868" text-anchor="middle" fill="#bce1cf" font-size="17">정적·반정적 문서</text>
+    <rect x="510" y="800" width="380" height="92" rx="20" fill="#173b4a" stroke="#61b9d0" stroke-width="2"/><text x="700" y="838" text-anchor="middle" fill="#e9fbff" font-size="23" font-weight="800">Lightpanda 경로</text><text x="700" y="868" text-anchor="middle" fill="#b8d5df" font-size="17">검증된 JS 읽기·대량 자동화</text>
+    <rect x="940" y="800" width="380" height="92" rx="20" fill="#34344b" stroke="#a9a4e8" stroke-width="2"/><text x="1130" y="838" text-anchor="middle" fill="#f5f3ff" font-size="23" font-weight="800">Chromium 경로</text><text x="1130" y="868" text-anchor="middle" fill="#d2cfeb" font-size="17">복잡 인증·픽셀·확장·fallback</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Lightpanda 헤드리스 브라우저 검증 기준</title>
+  <desc id="desc">Lightpanda와 Chromium의 호환성, 격리, 성능을 비교하는 기술 블로그 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#102f45"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#72e6b1"/><stop offset="1" stop-color="#53a8ff"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="220" fill="#1b5870" opacity=".28"/>
+  <circle cx="110" cy="600" r="260" fill="#173c5b" opacity=".32"/>
+  <g opacity=".12" stroke="#a8d8ef"><path d="M0 125h1200M0 250h1200M0 375h1200M0 500h1200"/><path d="M200 0v630M400 0v630M600 0v630M800 0v630M1000 0v630"/></g>
+  <text x="78" y="92" fill="#72e6b1" font-size="25" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="700">AI INFRASTRUCTURE · BROWSER AUTOMATION</text>
+  <text x="78" y="185" fill="#f3f8fc" font-size="66" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">Lightpanda</text>
+  <text x="78" y="258" fill="#f3f8fc" font-size="50" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-weight="800">헤드리스 브라우저</text>
+  <rect x="78" y="292" width="555" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="78" y="355" fill="#bed2df" font-size="30" font-family="Pretendard, Apple SD Gothic Neo, sans-serif">Chromium 대체 전 검증 기준</text>
+  <g transform="translate(720 115)" filter="url(#shadow)">
+    <rect width="390" height="360" rx="30" fill="#0b1b2b" stroke="#4d8baa" stroke-width="2"/>
+    <rect x="30" y="34" width="330" height="56" rx="13" fill="#132c3e"/>
+    <circle cx="58" cy="62" r="8" fill="#ff6b6b"/><circle cx="83" cy="62" r="8" fill="#ffd166"/><circle cx="108" cy="62" r="8" fill="#72e6b1"/>
+    <path d="M58 132h274M58 173h210M58 214h248" stroke="#6b91a8" stroke-width="16" stroke-linecap="round" opacity=".55"/>
+    <g transform="translate(55 260)">
+      <rect width="125" height="58" rx="15" fill="#173d4c" stroke="#72e6b1"/>
+      <text x="62.5" y="37" text-anchor="middle" fill="#dff9ec" font-size="21" font-family="Pretendard, sans-serif" font-weight="700">Zig + V8</text>
+      <path d="M145 29h42" stroke="#53a8ff" stroke-width="4" marker-end="url(#none)"/>
+      <rect x="205" width="125" height="58" rx="15" fill="#17314c" stroke="#53a8ff"/>
+      <text x="267.5" y="37" text-anchor="middle" fill="#e0efff" font-size="21" font-family="Pretendard, sans-serif" font-weight="700">CDP · BiDi</text>
+    </g>
+  </g>
+  <g transform="translate(78 474)" font-family="Pretendard, Apple SD Gothic Neo, sans-serif">
+    <rect width="170" height="55" rx="27.5" fill="#123c3d" stroke="#72e6b1"/><text x="85" y="35" text-anchor="middle" fill="#dff9ec" font-size="21" font-weight="700">호환성</text>
+    <rect x="190" width="170" height="55" rx="27.5" fill="#12304a" stroke="#53a8ff"/><text x="275" y="35" text-anchor="middle" fill="#e0efff" font-size="21" font-weight="700">격리·보안</text>
+    <rect x="380" width="170" height="55" rx="27.5" fill="#332b49" stroke="#b896ff"/><text x="465" y="35" text-anchor="middle" fill="#eee6ff" font-size="21" font-weight="700">성능·비용</text>
+  </g>
+  <text x="1120" y="584" text-anchor="end" fill="#7896a8" font-size="20" font-family="Pretendard, sans-serif">heracles.jo</text>
+</svg>

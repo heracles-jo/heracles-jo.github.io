@@ -705,3 +705,14 @@
     - "에이전트 감사 로그"
   slug: "openbot-ai-coworker-governance"
   summary: "OpenBot의 정책 게이트웨이, 작업별 승인, Bot 컴퓨터 격리, unattended routine과 감사 로그를 연결해 지속형 AI 동료의 운영·PoC 기준을 정리."
+- date: 2026-11-01
+  title: "Lightpanda 헤드리스 브라우저: Chromium 대체 전 검증 기준"
+  github_repo: "https://github.com/lightpanda-io/browser"
+  main_keyword: "Lightpanda 헤드리스 브라우저"
+  related_keywords:
+    - "Chromium 대체"
+    - "브라우저 자동화"
+    - "CDP 호환성"
+    - "Web Platform Tests"
+  slug: "lightpanda-headless-browser-validation"
+  summary: "Lightpanda의 Zig·V8·CDP 구조와 benchmark를 Chromium과 비교해 웹 플랫폼 호환성, 격리, 성능, AGPL과 PoC 라우팅 기준을 정리."
