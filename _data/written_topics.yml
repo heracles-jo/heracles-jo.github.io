@@ -716,3 +716,14 @@
     - "Web Platform Tests"
   slug: "lightpanda-headless-browser-validation"
   summary: "Lightpanda의 Zig·V8·CDP 구조와 benchmark를 Chromium과 비교해 웹 플랫폼 호환성, 격리, 성능, AGPL과 PoC 라우팅 기준을 정리."
+- date: 2026-11-02
+  title: "AI SOC 자동화: AiSOC 트리아지·대응 승인 검증 기준"
+  github_repo: "https://github.com/beenuar/AiSOC"
+  main_keyword: "AI SOC 자동화"
+  related_keywords:
+    - "AiSOC"
+    - "보안 경보 트리아지"
+    - "SOAR 대응 승인"
+    - "Investigation Ledger"
+  slug: "aisoc-ai-soc-triage-governance"
+  summary: "AiSOC의 텔레메트리 정규화, 탐지·상관분석, AI 조사 원장, 프롬프트 인젝션과 사람 승인 대응을 분해해 운영·PoC 기준을 정리."
