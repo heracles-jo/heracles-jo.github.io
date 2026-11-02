@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 데스크톱 자동화와 접근성 트리 검증</title>
+  <desc id="desc">접근성 트리의 snapshot ref가 안전한 데스크톱 행동으로 이어지는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071526"/><stop offset="1" stop-color="#143e52"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17324b"/><stop offset="1" stop-color="#0c2235"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="180" fill="#35d0ba" opacity=".08"/><circle cx="90" cy="600" r="240" fill="#5b8cff" opacity=".09"/>
+  <g filter="url(#shadow)">
+    <rect x="710" y="105" width="390" height="410" rx="28" fill="url(#card)" stroke="#4f718a"/>
+    <rect x="750" y="150" width="310" height="58" rx="12" fill="#20435c"/><circle cx="780" cy="179" r="10" fill="#35d0ba"/><rect x="805" y="168" width="190" height="11" rx="5" fill="#a8c7d9"/><rect x="805" y="187" width="120" height="8" rx="4" fill="#668ca4"/>
+    <path d="M780 236v190M780 270h55M780 345h55M780 420h55" stroke="#5b8cff" stroke-width="4" fill="none"/>
+    <g fill="#173b52" stroke="#35d0ba"><rect x="835" y="240" width="190" height="58" rx="10"/><rect x="835" y="315" width="190" height="58" rx="10"/><rect x="835" y="390" width="190" height="58" rx="10"/></g>
+    <g fill="#d9f4f0" font-family="Arial, sans-serif" font-size="19" font-weight="700"><text x="860" y="276">@snapshot:e3</text><text x="860" y="351">@snapshot:e8</text><text x="860" y="426">STALE / SAFE</text></g>
+    <path d="M690 310h-74" stroke="#35d0ba" stroke-width="6" stroke-linecap="round"/><path d="m630 292-20 18 20 18" fill="none" stroke="#35d0ba" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="80" y="150" fill="#35d0ba" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="3">AGENT-DESKTOP</text>
+  <text x="80" y="226" fill="#f4fbff" font-family="Arial, sans-serif" font-size="54" font-weight="800">AI 데스크톱 자동화</text>
+  <text x="80" y="292" fill="#f4fbff" font-family="Arial, sans-serif" font-size="54" font-weight="800">접근성 트리 검증</text>
+  <text x="82" y="354" fill="#a8c7d9" font-family="Arial, sans-serif" font-size="25">좌표 추측 대신 snapshot ref와</text>
+  <text x="82" y="391" fill="#a8c7d9" font-family="Arial, sans-serif" font-size="25">전달·재시도 계약으로 행동을 제한한다</text>
+  <g transform="translate(82 455)"><rect width="210" height="48" rx="24" fill="#35d0ba"/><text x="105" y="31" text-anchor="middle" fill="#071526" font-family="Arial, sans-serif" font-size="19" font-weight="800">FAIL-CLOSED REF</text><rect x="225" width="210" height="48" rx="24" fill="#5b8cff"/><text x="330" y="31" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="19" font-weight="800">VERIFY EFFECT</text></g>
+</svg>

@@ -727,3 +727,14 @@
     - "Investigation Ledger"
   slug: "aisoc-ai-soc-triage-governance"
   summary: "AiSOC의 텔레메트리 정규화, 탐지·상관분석, AI 조사 원장, 프롬프트 인젝션과 사람 승인 대응을 분해해 운영·PoC 기준을 정리."
+- date: 2026-11-03
+  title: "AI 데스크톱 자동화: agent-desktop 접근성 트리 검증 기준"
+  github_repo: "https://github.com/vercel-labs/agent-desktop"
+  main_keyword: "AI 데스크톱 자동화"
+  related_keywords:
+    - "agent-desktop"
+    - "접근성 트리 자동화"
+    - "computer-use agent"
+    - "snapshot ref"
+  slug: "agent-desktop-accessibility-automation"
+  summary: "agent-desktop의 접근성 트리, snapshot ref, delivery·retry 계약을 중심으로 데스크톱 에이전트의 권한·오작동·개인정보·PoC 기준을 정리."
