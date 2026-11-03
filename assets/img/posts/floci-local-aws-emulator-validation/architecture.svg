@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Floci 혼합형 AWS 에뮬레이션 아키텍처</title>
+  <desc id="desc">SDK와 IaC 요청이 단일 gateway에서 프로세스 내 서비스와 Docker 기반 실제 엔진으로 분기되고 저장 계층에 연결되는 구조</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081522"/><stop offset="1" stop-color="#102f47"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#5ad7c0"/></marker></defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <text x="58" y="68" fill="#f5faff" font-family="Arial, sans-serif" font-size="34" font-weight="800">한 endpoint, 서로 다른 호환성 계층</text>
+  <text x="58" y="106" fill="#a6bdce" font-family="Arial, sans-serif" font-size="19">API shape, 실제 프로토콜, AWS 운영 의미는 같은 수준의 증거가 아니다.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="55" y="175" width="210" height="190" rx="22" fill="#173449" stroke="#4c7087"/>
+    <text x="160" y="220" text-anchor="middle" fill="#ffcb7a" font-size="20" font-weight="800">CLIENTS</text>
+    <text x="86" y="265" fill="#eef7fc" font-size="20">AWS SDK · CLI</text><text x="86" y="302" fill="#eef7fc" font-size="20">Terraform · CDK</text><text x="86" y="339" fill="#eef7fc" font-size="20">Testcontainers</text>
+    <rect x="330" y="175" width="250" height="190" rx="22" fill="#3c3225" stroke="#ffb347"/>
+    <text x="455" y="220" text-anchor="middle" fill="#ffcd82" font-size="20" font-weight="800">FLOCI GATEWAY</text>
+    <text x="365" y="266" fill="#f8f1e7" font-size="19">SigV4 · service</text><text x="365" y="302" fill="#f8f1e7" font-size="19">region · account</text><text x="365" y="338" fill="#d8c6a8" font-size="17">localhost:4566</text>
+    <rect x="650" y="145" width="480" height="125" rx="22" fill="#17433d" stroke="#55d6be"/>
+    <text x="890" y="186" text-anchor="middle" fill="#7cead6" font-size="20" font-weight="800">IN-PROCESS EMULATION</text>
+    <text x="690" y="224" fill="#e5faf6" font-size="19">S3 · SQS · DynamoDB · IAM · STS · EventBridge</text><text x="690" y="252" fill="#a8d6ce" font-size="16">빠른 상태 모델 · CI 격리 · 서비스별 의미 차이</text>
+    <rect x="650" y="300" width="480" height="175" rx="22" fill="#352c43" stroke="#c29cff"/>
+    <text x="890" y="342" text-anchor="middle" fill="#dec8ff" font-size="20" font-weight="800">DOCKER-BACKED SERVICES</text>
+    <text x="690" y="382" fill="#f1eafa" font-size="19">Lambda runtime · PostgreSQL · Valkey · Redpanda</text><text x="690" y="416" fill="#f1eafa" font-size="19">k3s · OpenSearch · user workload images</text><text x="690" y="452" fill="#c3b6d1" font-size="16">실제 프로토콜·프로세스 / Docker socket 특권</text>
+  </g>
+  <g fill="none" stroke="#5ad7c0" stroke-width="5" marker-end="url(#arrow)"><path d="M265 270h58"/><path d="M580 245h62"/><path d="M580 300h62"/></g>
+  <g font-family="Arial, sans-serif">
+    <rect x="130" y="535" width="940" height="115" rx="24" fill="#0d2232" stroke="#45657b"/>
+    <text x="170" y="578" fill="#f5faff" font-size="23" font-weight="800">분산된 상태와 복구 단위</text>
+    <rect x="170" y="600" width="250" height="34" rx="17" fill="#1b4a43"/><text x="295" y="623" text-anchor="middle" fill="#ccfff5" font-size="16" font-weight="700">memory · persistent · hybrid · WAL</text>
+    <rect x="450" y="600" width="235" height="34" rx="17" fill="#41354d"/><text x="567" y="623" text-anchor="middle" fill="#f0ddff" font-size="16" font-weight="700">child Docker volumes</text>
+    <rect x="715" y="600" width="315" height="34" rx="17" fill="#443926"/><text x="872" y="623" text-anchor="middle" fill="#ffe0a6" font-size="16" font-weight="700">version · config · init · resource labels</text>
+  </g>
+  <text x="600" y="688" text-anchor="middle" fill="#91adbe" font-family="Arial, sans-serif" font-size="17">“지원 서비스”는 동일한 충실도를 뜻하지 않으며, operation별 승격 기준이 필요하다.</text>
+</svg>

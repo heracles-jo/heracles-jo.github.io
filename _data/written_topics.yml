@@ -738,3 +738,14 @@
     - "snapshot ref"
   slug: "agent-desktop-accessibility-automation"
   summary: "agent-desktop의 접근성 트리, snapshot ref, delivery·retry 계약을 중심으로 데스크톱 에이전트의 권한·오작동·개인정보·PoC 기준을 정리."
+- date: 2026-11-04
+  title: "Floci AWS 로컬 에뮬레이터: LocalStack 대체 검증 기준"
+  github_repo: "https://github.com/floci-io/floci"
+  main_keyword: "Floci AWS 로컬 에뮬레이터"
+  related_keywords:
+    - "LocalStack 대체"
+    - "AWS 로컬 테스트"
+    - "클라우드 에뮬레이터"
+    - "Testcontainers"
+  slug: "floci-local-aws-emulator-validation"
+  summary: "Floci의 프로세스 내 AWS API 에뮬레이션과 Docker 기반 실제 엔진을 분해하고 LocalStack 마이그레이션, 보안, 상태 복구, 실제 AWS 승격 기준을 정리."
