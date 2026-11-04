@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Auto Ontology 아키텍처</title><desc id="desc">데이터 소스에서 메타데이터를 수집하고 의미 그래프를 인증한 뒤 자연어 질문을 SQL과 증거로 변환하는 흐름</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#2f6f55"/></marker><style>.h{font:700 25px Arial,'Noto Sans KR',sans-serif}.t{font:18px Arial,'Noto Sans KR',sans-serif}.s{font:15px Arial,'Noto Sans KR',sans-serif}</style></defs>
+  <rect width="1200" height="720" rx="28" fill="#f4f8f5"/>
+  <text x="60" y="62" class="h" fill="#153d2c">메타데이터에서 검증 가능한 NL-to-SQL 답변까지</text>
+  <g transform="translate(55 110)">
+    <rect width="220" height="180" rx="18" fill="#fff" stroke="#9bbcab" stroke-width="2"/><text x="25" y="40" class="h" fill="#24543e">데이터 소스</text><text x="25" y="78" class="t" fill="#365b49">Postgres · MySQL</text><text x="25" y="108" class="t" fill="#365b49">Snowflake · Trino</text><text x="25" y="138" class="t" fill="#365b49">ClickHouse 외</text>
+    <path d="M230 90h75" stroke="#2f6f55" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="320" width="250" height="180" rx="18" fill="#e8f5e9" stroke="#76a873" stroke-width="2"/><text x="345" y="40" class="h" fill="#24543e">수집·컴파일</text><text x="345" y="78" class="t" fill="#365b49">schema · profile · sample</text><text x="345" y="108" class="t" fill="#365b49">용어·관계·SQL 속성 제안</text><text x="345" y="138" class="s" fill="#5e7569">Postgres + pgvector</text>
+    <path d="M580 90h75" stroke="#2f6f55" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="670" width="250" height="180" rx="18" fill="#f3f8df" stroke="#91a94d" stroke-width="3"/><text x="695" y="40" class="h" fill="#3d5420">사람 인증 게이트</text><text x="695" y="78" class="t" fill="#536b32">정의·동의어·계산식</text><text x="695" y="108" class="t" fill="#536b32">관계·소유자·범위</text><text x="695" y="142" class="s" fill="#6f7c58">golden query로 회귀 확인</text>
+  </g>
+  <path d="M975 200c95 0 105 72 105 130" fill="none" stroke="#2f6f55" stroke-width="5" marker-end="url(#arrow)"/>
+  <g transform="translate(55 385)">
+    <rect width="240" height="190" rx="18" fill="#fff" stroke="#9bbcab" stroke-width="2"/><text x="25" y="42" class="h" fill="#24543e">질문·권한 문맥</text><text x="25" y="82" class="t" fill="#365b49">사용자 role · catalog</text><text x="25" y="114" class="t" fill="#365b49">답변 가능성 확인</text><text x="25" y="146" class="t" fill="#365b49">MCP · API · Web</text>
+    <path d="M250 95h70" stroke="#2f6f55" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="335" width="270" height="190" rx="18" fill="#e5f2ec" stroke="#5e9b7b" stroke-width="2"/><text x="360" y="42" class="h" fill="#24543e">검색·SQL 생성</text><text x="360" y="82" class="t" fill="#365b49">인증 용어와 관계 검색</text><text x="360" y="114" class="t" fill="#365b49">filter value·join 검사</text><text x="360" y="146" class="t" fill="#365b49">실패 시 repair 또는 거부</text>
+    <path d="M615 95h70" stroke="#2f6f55" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="700" width="335" height="190" rx="18" fill="#153d2c"/><text x="725" y="42" class="h" fill="#b8f34a">답변 + 증거</text><text x="725" y="82" class="t" fill="#fff">실행 SQL · 결과 · 처리 단계</text><text x="725" y="114" class="t" fill="#fff">ontology/source/model version</text><text x="725" y="146" class="t" fill="#fff">정책 필터 · 거부 사유</text>
+  </g>
+  <rect x="55" y="625" width="1080" height="55" rx="15" fill="#fff4d7" stroke="#d4a63d"/><text x="82" y="660" class="t" fill="#6a4b10">핵심 경계: 자동 생성 결과는 인증 전까지 초안이며, 내부 backend·ingestion 포트는 공개 gateway가 아니다.</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">NVIDIA Auto Ontology NL-to-SQL 검증</title>
+  <desc id="desc">데이터 스키마와 의미 그래프, 인증 게이트, SQL 검증이 연결된 표지 이미지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a12"/><stop offset="1" stop-color="#163b2b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#76b900"/><stop offset="1" stop-color="#b8f34a"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="95" r="180" fill="#76b900" opacity=".08"/><circle cx="110" cy="570" r="220" fill="#6be6b1" opacity=".06"/>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif">
+    <text x="72" y="92" fill="#b8f34a" font-size="24" font-weight="700">DATA &amp; AI INFRASTRUCTURE</text>
+    <text x="72" y="166" fill="#ffffff" font-size="54" font-weight="800">NVIDIA Auto Ontology</text>
+    <text x="72" y="222" fill="#d7e8df" font-size="32" font-weight="600">NL-to-SQL 정확도 검증 기준</text>
+  </g>
+  <g transform="translate(70 290)" filter="url(#shadow)" font-family="Arial, 'Noto Sans KR', sans-serif">
+    <rect x="0" y="0" width="245" height="170" rx="20" fill="#10271d" stroke="#4d7d64"/>
+    <text x="28" y="45" fill="#9dc6b0" font-size="18">SOURCE</text><text x="28" y="82" fill="#fff" font-size="25" font-weight="700">Schema · Data</text>
+    <rect x="28" y="108" width="155" height="10" rx="5" fill="#38644f"/><rect x="28" y="132" width="116" height="10" rx="5" fill="#38644f"/>
+    <path d="M255 85h78" stroke="url(#accent)" stroke-width="8"/><path d="m323 70 22 15-22 15" fill="none" stroke="#b8f34a" stroke-width="8"/>
+    <rect x="355" y="0" width="300" height="170" rx="20" fill="#173629" stroke="#76b900" stroke-width="2"/>
+    <text x="383" y="45" fill="#b8f34a" font-size="18">SEMANTIC GRAPH</text><text x="383" y="82" fill="#fff" font-size="25" font-weight="700">Terms · SQL · Relations</text>
+    <circle cx="415" cy="125" r="12" fill="#76b900"/><circle cx="505" cy="112" r="12" fill="#6be6b1"/><circle cx="590" cy="137" r="12" fill="#b8f34a"/><path d="M427 123 493 114M517 116l61 17" stroke="#77a990" stroke-width="4"/>
+    <path d="M665 85h78" stroke="url(#accent)" stroke-width="8"/><path d="m733 70 22 15-22 15" fill="none" stroke="#b8f34a" stroke-width="8"/>
+    <rect x="765" y="0" width="285" height="170" rx="20" fill="#10271d" stroke="#4d7d64"/>
+    <text x="793" y="45" fill="#9dc6b0" font-size="18">VERIFIED ANSWER</text><text x="793" y="82" fill="#fff" font-size="25" font-weight="700">SQL + Evidence</text>
+    <path d="m812 122 18 18 38-45" fill="none" stroke="#b8f34a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="890" y="108" width="124" height="10" rx="5" fill="#38644f"/><rect x="890" y="132" width="92" height="10" rx="5" fill="#38644f"/>
+  </g>
+  <g font-family="Arial, 'Noto Sans KR', sans-serif"><rect x="72" y="520" width="425" height="48" rx="24" fill="#76b900"/><text x="96" y="552" fill="#071a12" font-size="20" font-weight="800">생성보다 인증, 실행보다 결과 검증</text></g>
+</svg>

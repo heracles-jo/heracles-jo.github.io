@@ -749,3 +749,14 @@
     - "Testcontainers"
   slug: "floci-local-aws-emulator-validation"
   summary: "Floci의 프로세스 내 AWS API 에뮬레이션과 Docker 기반 실제 엔진을 분해하고 LocalStack 마이그레이션, 보안, 상태 복구, 실제 AWS 승격 기준을 정리."
+- date: 2026-11-05
+  title: "NVIDIA Auto Ontology: NL-to-SQL 정확도 검증 기준"
+  github_repo: "https://github.com/NVIDIA/auto-ontology"
+  main_keyword: "NVIDIA Auto Ontology NL-to-SQL"
+  related_keywords:
+    - "Text-to-SQL 정확도"
+    - "시맨틱 계층"
+    - "데이터 에이전트 거버넌스"
+    - "온톨로지 인증"
+  slug: "nvidia-auto-ontology-nl-to-sql-validation"
+  summary: "Auto Ontology의 의미 그래프 생성·사람 인증·대조군 평가를 분석하고 NL-to-SQL 정확도, 권한, 자격 증명, 재현성과 복구 기준을 정리."
