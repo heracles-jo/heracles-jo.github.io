@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">LZ4 블록과 프레임 아키텍처</title>
+  <desc id="desc">애플리케이션 메타데이터, LZ4 블록, 프레임 체크섬과 저장소 사이의 책임 경계를 설명한다</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071827"/><stop offset="1" stop-color="#112f46"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-opacity=".25"/></filter></defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <text x="60" y="66" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="800">LZ4 데이터 경로: 빠른 블록과 복구 가능한 프레임</text>
+  <text x="60" y="104" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">속도는 block에서, 상호운용성과 무결성은 frame·애플리케이션 계약에서 결정된다</text>
+  <g filter="url(#s)" font-family="Arial, sans-serif">
+    <rect x="62" y="154" width="250" height="190" rx="22" fill="#102a43" stroke="#64748b"/>
+    <text x="94" y="202" fill="#7dd3fc" font-size="24" font-weight="700">애플리케이션</text>
+    <text x="94" y="246" fill="#e2e8f0" font-size="19">원본 크기</text><text x="94" y="278" fill="#e2e8f0" font-size="19">schema / version</text><text x="94" y="310" fill="#e2e8f0" font-size="19">dictionary hash</text>
+    <rect x="378" y="154" width="302" height="190" rx="22" fill="#0d3a3a" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="410" y="202" fill="#5eead4" font-size="24" font-weight="700">LZ4 Raw Block</text>
+    <text x="410" y="246" fill="#e2e8f0" font-size="19">token · literals · offset</text><text x="410" y="278" fill="#e2e8f0" font-size="19">64KB match window</text><text x="410" y="310" fill="#fbbf24" font-size="19">자체 metadata 없음</text>
+    <rect x="746" y="154" width="392" height="190" rx="22" fill="#102a43" stroke="#38bdf8" stroke-width="2"/>
+    <text x="778" y="202" fill="#7dd3fc" font-size="24" font-weight="700">LZ4 Frame</text>
+    <text x="778" y="246" fill="#e2e8f0" font-size="19">magic + descriptor + blocks</text><text x="778" y="278" fill="#e2e8f0" font-size="19">independent / linked · Dict-ID</text><text x="778" y="310" fill="#e2e8f0" font-size="19">block / content checksum</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="4" fill="none"><path d="M312 248h66"/><path d="m366 236 16 12-16 12"/><path d="M680 248h66"/><path d="m734 236 16 12-16 12"/></g>
+  <g font-family="Arial, sans-serif" filter="url(#s)">
+    <rect x="62" y="408" width="328" height="216" rx="22" fill="#12263a" stroke="#475569"/>
+    <text x="94" y="456" fill="#f8fafc" font-size="23" font-weight="700">Independent blocks</text>
+    <text x="94" y="496" fill="#a7f3d0" font-size="18">+ 병렬 해제·부분 처리</text><text x="94" y="530" fill="#a7f3d0" font-size="18">+ 손상 범위 격리</text><text x="94" y="564" fill="#fecaca" font-size="18">− 반복 패턴 활용 감소</text><text x="94" y="598" fill="#fecaca" font-size="18">− 소블록 압축률 하락</text>
+    <rect x="436" y="408" width="328" height="216" rx="22" fill="#12263a" stroke="#475569"/>
+    <text x="468" y="456" fill="#f8fafc" font-size="23" font-weight="700">Linked blocks</text>
+    <text x="468" y="496" fill="#a7f3d0" font-size="18">+ 이전 64KB 참조</text><text x="468" y="530" fill="#a7f3d0" font-size="18">+ 작은 블록의 압축률</text><text x="468" y="564" fill="#fecaca" font-size="18">− 순차 해제 의존</text><text x="468" y="598" fill="#fecaca" font-size="18">− 임의 접근·병렬성 제약</text>
+    <rect x="810" y="408" width="328" height="216" rx="22" fill="#12263a" stroke="#475569"/>
+    <text x="842" y="456" fill="#f8fafc" font-size="23" font-weight="700">운영 계약</text>
+    <text x="842" y="496" fill="#e2e8f0" font-size="18">decoder version matrix</text><text x="842" y="530" fill="#e2e8f0" font-size="18">checksum 정책</text><text x="842" y="564" fill="#e2e8f0" font-size="18">dictionary 배포·rollback</text><text x="842" y="598" fill="#e2e8f0" font-size="18">손상·부분 파일 fixture</text>
+  </g>
+  <path d="M942 344v64" stroke="#38bdf8" stroke-width="4"/><path d="m930 396 12 16 12-16" fill="none" stroke="#38bdf8" stroke-width="4"/>
+  <text x="60" y="680" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">핵심: raw block의 속도를 택할수록 상위 포맷이 metadata·무결성·복구 책임을 더 명시적으로 가져야 한다.</text>
+</svg>

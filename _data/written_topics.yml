@@ -760,3 +760,14 @@
     - "온톨로지 인증"
   slug: "nvidia-auto-ontology-nl-to-sql-validation"
   summary: "Auto Ontology의 의미 그래프 생성·사람 인증·대조군 평가를 분석하고 NL-to-SQL 정확도, 권한, 자격 증명, 재현성과 복구 기준을 정리."
+- date: 2026-11-06
+  title: "LZ4 압축 선택: Zstd 대비 지연시간·호환성 기준"
+  github_repo: "https://github.com/lz4/lz4"
+  main_keyword: "LZ4 압축 선택"
+  related_keywords:
+    - "LZ4 Zstd 비교"
+    - "데이터 압축 지연시간"
+    - "LZ4 프레임 포맷"
+    - "압축 알고리즘 성능 테스트"
+  slug: "lz4-compression-selection"
+  summary: "LZ4 v1.11.0의 멀티스레드·소블록 개선을 검토하고 Zstd 대비 지연시간, CPU·메모리 비용, 프레임 무결성, 사전과 복구 기준을 정리."
