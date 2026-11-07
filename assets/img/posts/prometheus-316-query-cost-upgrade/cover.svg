@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Prometheus 3.16 업그레이드 검증</title>
+  <desc id="desc">Prometheus 쿼리 비용 제한과 TSDB 복구, 히스토그램 호환성을 나타내는 표지</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#260b0b"/><stop offset="1" stop-color="#532016"/></linearGradient><linearGradient id="hot" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f97316"/><stop offset="1" stop-color="#facc15"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-opacity=".3"/></filter></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/><circle cx="1080" cy="70" r="190" fill="#f97316" opacity=".09"/><circle cx="110" cy="590" r="220" fill="#facc15" opacity=".05"/>
+  <g transform="translate(72 82)" font-family="Arial, sans-serif"><text fill="#fdba74" font-size="24" font-weight="700">OBSERVABILITY UPGRADE GATE</text><text y="70" fill="#fff7ed" font-size="57" font-weight="800">Prometheus 3.16</text><text y="118" fill="#fed7aa" font-size="29">쿼리 비용 제한 · TSDB 복구 검증</text></g>
+  <g filter="url(#s)" font-family="Arial, sans-serif">
+    <rect x="72" y="270" width="250" height="190" rx="24" fill="#351818" stroke="#fb923c"/><text x="108" y="320" fill="#fdba74" font-size="23" font-weight="700">QUERY</text><path d="M108 355h150M108 390h112M108 425h138" stroke="#fb923c" stroke-width="14" stroke-linecap="round" opacity=".72"/>
+    <path d="M322 365h86" stroke="#fdba74" stroke-width="5"/><path d="m396 352 18 13-18 13" fill="none" stroke="#fdba74" stroke-width="5"/>
+    <rect x="432" y="240" width="330" height="250" rx="30" fill="#421b16" stroke="url(#hot)" stroke-width="3"/><text x="480" y="300" fill="#fb923c" font-size="30" font-weight="800">COST GATE</text><text x="480" y="350" fill="#fff7ed" font-size="22">series · samples</text><text x="480" y="386" fill="#fff7ed" font-size="22">rules · timeout</text><text x="480" y="422" fill="#fff7ed" font-size="22">estimate ≠ enforcement</text>
+    <path d="M762 365h82" stroke="#fdba74" stroke-width="5"/><path d="m832 352 18 13-18 13" fill="none" stroke="#fdba74" stroke-width="5"/>
+    <rect x="870" y="270" width="258" height="190" rx="24" fill="#351818" stroke="#facc15"/><text x="910" y="320" fill="#fde68a" font-size="23" font-weight="700">RECOVER</text><text x="910" y="368" fill="#fff7ed" font-size="22">WAL · TSDB</text><text x="910" y="404" fill="#fff7ed" font-size="22">histogram</text><text x="910" y="440" fill="#fff7ed" font-size="22">rollback</text>
+  </g>
+  <g transform="translate(74 548)" font-family="Arial, sans-serif" font-size="20" fill="#fed7aa"><text>QUERY BUDGET</text><circle cx="190" cy="-7" r="5" fill="#f97316"/><text x="215">DATA INTEGRITY</text><circle cx="400" cy="-7" r="5" fill="#facc15"/><text x="425">SAFE ROLLBACK</text></g>
+</svg>
