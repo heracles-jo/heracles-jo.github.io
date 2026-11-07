@@ -782,3 +782,14 @@
     - "native histogram 검증"
   slug: "prometheus-316-query-cost-upgrade"
   summary: "Prometheus 3.16의 query cost 추정·실행 한도와 TSDB·histogram 수정 사항을 바탕으로 룰 회귀, 복구, rollback과 단계적 업그레이드 기준을 정리."
+- date: 2026-11-08
+  title: "Ruff 전환: Flake8·Black 통합 시 회귀 검증 기준"
+  github_repo: "https://github.com/astral-sh/ruff"
+  main_keyword: "Ruff 전환"
+  related_keywords:
+    - "Flake8 Ruff 마이그레이션"
+    - "Black Ruff formatter"
+    - "Python lint 통합"
+    - "Ruff CI"
+  slug: "ruff-python-lint-format-migration"
+  summary: "Ruff로 Flake8·isort·Black을 통합할 때 rule coverage, fix 안전성, formatter 차이, 모노레포 설정과 CI 승격을 검증하는 기준을 정리."

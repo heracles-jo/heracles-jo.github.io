@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Ruff 단계적 전환 워크플로</title>
+  <desc id="desc">기준선 수집, shadow 실행, 변환, CI 승격과 각 중단 조건을 보여 주는 의사결정 흐름</desc>
+  <rect width="1200" height="720" rx="24" fill="#0f172a"/>
+  <text x="60" y="70" fill="white" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif" font-size="36" font-weight="800">Ruff 전환: 네 단계에서 증거를 남긴다</text>
+  <text x="60" y="108" fill="#94a3b8" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif" font-size="21">각 단계의 통과 기준이 없으면 빠른 도구가 더 빠른 정책 회귀를 만든다</text>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif">
+    <g>
+      <rect x="60" y="165" width="240" height="260" rx="20" fill="#1e293b" stroke="#818cf8" stroke-width="3"/>
+      <circle cx="108" cy="215" r="26" fill="#4f46e5"/><text x="108" y="224" text-anchor="middle" fill="white" font-size="24" font-weight="800">1</text>
+      <text x="150" y="223" fill="white" font-size="27" font-weight="800">기준선</text>
+      <text x="84" y="275" fill="#c7d2fe" font-size="20">도구·규칙·예외·시간</text><text x="84" y="310" fill="#c7d2fe" font-size="20">formatter corpus</text><text x="84" y="345" fill="#c7d2fe" font-size="20">Python target / src</text>
+      <rect x="82" y="370" width="196" height="38" rx="9" fill="#312e81"/><text x="180" y="396" text-anchor="middle" fill="#e0e7ff" font-size="17">정책 설명 불가 → 중단</text>
+    </g>
+    <path d="M310 295H345" stroke="#64748b" stroke-width="4" marker-end="url(#a)"/>
+    <g>
+      <rect x="355" y="165" width="240" height="260" rx="20" fill="#1e293b" stroke="#22d3ee" stroke-width="3"/>
+      <circle cx="403" cy="215" r="26" fill="#0891b2"/><text x="403" y="224" text-anchor="middle" fill="white" font-size="24" font-weight="800">2</text>
+      <text x="445" y="223" fill="white" font-size="27" font-weight="800">Shadow</text>
+      <text x="379" y="275" fill="#a5f3fc" font-size="20">기존 도구와 병렬 실행</text><text x="379" y="310" fill="#a5f3fc" font-size="20">누락·신규 진단 분류</text><text x="379" y="345" fill="#a5f3fc" font-size="20">package별 settings 확인</text>
+      <rect x="377" y="370" width="196" height="38" rx="9" fill="#164e63"/><text x="475" y="396" text-anchor="middle" fill="#cffafe" font-size="17">핵심 누락 → 중단</text>
+    </g>
+    <path d="M605 295H640" stroke="#64748b" stroke-width="4" marker-end="url(#a)"/>
+    <g>
+      <rect x="650" y="165" width="240" height="260" rx="20" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+      <circle cx="698" cy="215" r="26" fill="#d97706"/><text x="698" y="224" text-anchor="middle" fill="white" font-size="24" font-weight="800">3</text>
+      <text x="740" y="223" fill="white" font-size="27" font-weight="800">변환</text>
+      <text x="674" y="275" fill="#fde68a" font-size="20">format commit 분리</text><text x="674" y="310" fill="#fde68a" font-size="20">safe fix도 test 통과</text><text x="674" y="345" fill="#fde68a" font-size="20">2회 실행 idempotent</text>
+      <rect x="672" y="370" width="196" height="38" rx="9" fill="#78350f"/><text x="770" y="396" text-anchor="middle" fill="#fef3c7" font-size="17">의미 회귀 → rollback</text>
+    </g>
+    <path d="M900 295H935" stroke="#64748b" stroke-width="4" marker-end="url(#a)"/>
+    <g>
+      <rect x="945" y="165" width="195" height="260" rx="20" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+      <circle cx="987" cy="215" r="26" fill="#059669"/><text x="987" y="224" text-anchor="middle" fill="white" font-size="24" font-weight="800">4</text>
+      <text x="1028" y="223" fill="white" font-size="27" font-weight="800">승격</text>
+      <text x="968" y="275" fill="#a7f3d0" font-size="19">버전 고정</text><text x="968" y="310" fill="#a7f3d0" font-size="19">hook·IDE·CI 일치</text><text x="968" y="345" fill="#a7f3d0" font-size="19">attestation·rollback</text>
+      <rect x="966" y="370" width="153" height="38" rx="9" fill="#064e3b"/><text x="1042" y="396" text-anchor="middle" fill="#d1fae5" font-size="16">결과 변동 → 중단</text>
+    </g>
+    <rect x="140" y="495" width="920" height="150" rx="22" fill="#111827" stroke="#475569" stroke-width="2"/>
+    <text x="180" y="542" fill="#e2e8f0" font-size="24" font-weight="800">승격 조건</text>
+    <text x="180" y="583" fill="#94a3b8" font-size="21">① rule coverage가 설명된다</text><text x="500" y="583" fill="#94a3b8" font-size="21">② formatter·fix가 기능 변경과 분리된다</text>
+    <text x="180" y="619" fill="#94a3b8" font-size="21">③ 같은 commit이 모든 환경에서 같은 결과를 낸다</text>
+  </g>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#64748b"/></marker></defs>
+</svg>
