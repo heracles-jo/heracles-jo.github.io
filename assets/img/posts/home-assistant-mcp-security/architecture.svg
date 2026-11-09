@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Home Assistant MCP 두 경로의 보안 아키텍처</title>
+  <desc id="desc">AI 클라이언트가 내장 MCP와 ha-mcp를 통해 Home Assistant API와 물리 장치를 호출하는 경로를 비교한다</desc>
+  <rect width="1200" height="760" rx="24" fill="#071923"/>
+  <style>.h{font:700 30px Arial,sans-serif;fill:#fff}.t{font:700 21px Arial,sans-serif;fill:#e8f7fb}.s{font:16px Arial,sans-serif;fill:#a9c9d4}.box{fill:#0e2c3b;stroke:#34758a;stroke-width:2}.safe{fill:#103b38;stroke:#58dfb4;stroke-width:2}.risk{fill:#3b252c;stroke:#ff8093;stroke-width:2}.line{stroke:#70d8f2;stroke-width:4;fill:none;marker-end:url(#a)}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#70d8f2"/></marker></defs>
+  <text x="60" y="62" class="h">AI 클라이언트에서 물리 장치까지: 두 MCP 경로</text>
+  <rect x="60" y="110" width="250" height="120" rx="18" class="box"/><text x="90" y="160" class="t">AI 클라이언트</text><text x="90" y="193" class="s">Claude · ChatGPT · 로컬 모델</text>
+  <path d="M310 170h115" class="line"/>
+  <rect x="430" y="90" width="300" height="160" rx="18" class="safe"/><text x="460" y="138" class="t">Home Assistant 내장 MCP</text><text x="460" y="173" class="s">HA OAuth · 도구 집합 · read-only</text><text x="460" y="205" class="s">계정과 MCP 수명주기를 한곳에서 관리</text>
+  <path d="M730 170h120" class="line"/>
+  <rect x="855" y="110" width="285" height="120" rx="18" class="box"/><text x="885" y="160" class="t">Home Assistant Core</text><text x="885" y="193" class="s">상태 · 서비스 · 로그 · 구성</text>
+  <path d="M185 230v180h240" class="line"/>
+  <rect x="430" y="330" width="300" height="190" rx="18" class="box"/><text x="460" y="378" class="t">ha-mcp</text><text x="460" y="413" class="s">Secret URL · HA Auth · OIDC</text><text x="460" y="445" class="s">도구 정책 · 승인 대기열 · 백업</text><text x="460" y="477" class="s">파일/YAML·관리 기능은 별도 고위험 표면</text>
+  <path d="M730 425h120" class="line"/>
+  <path d="M997 230v95" class="line"/>
+  <rect x="855" y="350" width="285" height="150" rx="18" class="risk"/><text x="885" y="398" class="t">관리자 자격 증명</text><text x="885" y="433" class="s">인증된 클라이언트 = 신뢰 주체</text><text x="885" y="465" class="s">Prompt injection은 자동 차단되지 않음</text>
+  <path d="M997 500v95" class="line"/>
+  <rect x="750" y="600" width="390" height="105" rx="18" class="risk"/><text x="780" y="644" class="t">물리 장치와 운영 부작용</text><text x="780" y="677" class="s">잠금 · 경보 · 공조 · 카메라 · 복원 · 재시작</text>
+  <rect x="60" y="585" width="610" height="120" rx="18" class="safe"/><text x="90" y="630" class="t">설계 원칙</text><text x="90" y="665" class="s">주 경로 하나 · 읽기와 쓰기 분리 · 승인 정책 우회 검사</text><text x="90" y="692" class="s">서버가 둘이면 정책도 둘이라는 전제로 검증</text>
+</svg>

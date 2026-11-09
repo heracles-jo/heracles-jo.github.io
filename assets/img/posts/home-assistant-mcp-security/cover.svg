@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Home Assistant MCP 보안 선택 기준</title>
+  <desc id="desc">Home Assistant 내장 MCP와 ha-mcp 사이의 인증, 권한, 승인, 복구 경계를 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a2b"/><stop offset="1" stop-color="#123f55"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#42d3ff"/><stop offset="1" stop-color="#71f0b5"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#8fe8ff" fill="none"><path d="M70 110h1060M70 520h1060"/><circle cx="1040" cy="150" r="90"/><circle cx="1040" cy="150" r="55"/></g>
+  <g transform="translate(80 88)">
+    <rect width="1040" height="454" rx="28" fill="#0b2537" stroke="#2b6578" stroke-width="2"/>
+    <text x="50" y="72" fill="#9edcf0" font-family="Arial,sans-serif" font-size="25" font-weight="700">HOME ASSISTANT · MCP SECURITY</text>
+    <text x="50" y="142" fill="#ffffff" font-family="Arial,sans-serif" font-size="48" font-weight="800">내장 MCP와 ha-mcp</text>
+    <text x="50" y="202" fill="url(#accent)" font-family="Arial,sans-serif" font-size="48" font-weight="800">무엇을 어디까지 맡길 것인가</text>
+    <g transform="translate(50 258)" font-family="Arial,sans-serif">
+      <rect width="205" height="108" rx="18" fill="#11384c" stroke="#46cceb"/><text x="26" y="43" fill="#dff9ff" font-size="22" font-weight="700">인증</text><text x="26" y="76" fill="#91bdcb" font-size="17">OAuth · Secret URL</text>
+      <rect x="225" width="205" height="108" rx="18" fill="#11384c" stroke="#56dfba"/><text x="251" y="43" fill="#e5fff6" font-size="22" font-weight="700">권한</text><text x="251" y="76" fill="#91bdcb" font-size="17">도구 · 엔티티 범위</text>
+      <rect x="450" width="205" height="108" rx="18" fill="#11384c" stroke="#ffc85b"/><text x="476" y="43" fill="#fff5d6" font-size="22" font-weight="700">승인</text><text x="476" y="76" fill="#91bdcb" font-size="17">쓰기 · 삭제 · 복원</text>
+      <rect x="675" width="205" height="108" rx="18" fill="#11384c" stroke="#ff7d90"/><text x="701" y="43" fill="#ffe7eb" font-size="22" font-weight="700">복구</text><text x="701" y="76" fill="#91bdcb" font-size="17">백업 · 추적 · 롤백</text>
+    </g>
+    <text x="50" y="416" fill="#b8d6df" font-family="Arial,sans-serif" font-size="20">물리 장치 제어는 자연어 UX가 아니라 관리 평면 설계 문제다</text>
+  </g>
+</svg>

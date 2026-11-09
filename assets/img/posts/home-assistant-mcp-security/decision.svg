@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Home Assistant MCP 단계별 승격 의사결정</title>
+  <desc id="desc">읽기 전용에서 제한 제어, 구성 편집, 관리 작업으로 권한을 단계적으로 늘리는 검증 흐름</desc>
+  <rect width="1200" height="760" rx="24" fill="#081b27"/>
+  <style>.h{font:700 30px Arial,sans-serif;fill:#fff}.n{font:700 24px Arial,sans-serif;fill:#fff}.t{font:17px Arial,sans-serif;fill:#b9d6df}.gate{font:700 17px Arial,sans-serif;fill:#102630}.line{stroke:#71d9ef;stroke-width:4;fill:none;marker-end:url(#a)}.b{fill:#0f3142;stroke:#3a8197;stroke-width:2}.g{fill:#65e0b8}.y{fill:#ffd16b}.r{fill:#ff8295}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#71d9ef"/></marker></defs>
+  <text x="60" y="60" class="h">권한은 한 번에 주지 않고 증거를 통과할 때만 승격한다</text>
+  <rect x="60" y="110" width="250" height="175" rx="20" class="b"/><circle cx="105" cy="153" r="24" class="g"/><text x="97" y="162" class="gate">1</text><text x="140" y="160" class="n">관찰</text><text x="90" y="205" class="t">read-only · 비민감 엔티티</text><text x="90" y="238" class="t">외부 모델 전송과 숨김 검증</text>
+  <path d="M310 198h70" class="line"/><rect x="385" y="152" width="120" height="88" rx="16" class="g"/><text x="410" y="190" class="gate">누출 없음</text><text x="414" y="216" class="gate">오독 통제</text>
+  <path d="M505 198h70" class="line"/><rect x="580" y="110" width="250" height="175" rx="20" class="b"/><circle cx="625" cy="153" r="24" class="y"/><text x="617" y="162" class="gate">2</text><text x="660" y="160" class="n">제한 제어</text><text x="610" y="205" class="t">조명·비필수 공조 allowlist</text><text x="610" y="238" class="t">중복 호출·인자 범위 검증</text>
+  <path d="M830 198h70" class="line"/><rect x="905" y="152" width="220" height="88" rx="16" class="y"/><text x="942" y="190" class="gate">승인·재시도</text><text x="940" y="216" class="gate">범위 밖 호출 없음</text>
+  <path d="M1015 240v105H735" class="line"/>
+  <rect x="480" y="350" width="250" height="175" rx="20" class="b"/><circle cx="525" cy="393" r="24" class="y"/><text x="517" y="402" class="gate">3</text><text x="560" y="400" class="n">구성 편집</text><text x="510" y="445" class="t">자동화·스크립트·대시보드</text><text x="510" y="478" class="t">diff · schema · rollback</text>
+  <path d="M480 438h-85" class="line"/><rect x="225" y="394" width="165" height="88" rx="16" class="g"/><text x="252" y="432" class="gate">복원 성공</text><text x="248" y="458" class="gate">부분 적용 탐지</text>
+  <path d="M225 438h-85v145h235" class="line"/>
+  <rect x="380" y="555" width="310" height="145" rx="20" class="b"/><circle cx="425" cy="598" r="24" class="r"/><text x="417" y="607" class="gate">4</text><text x="460" y="605" class="n">관리 작업</text><text x="410" y="650" class="t">업데이트 · 재시작 · 복원 · YAML</text><text x="410" y="680" class="t">사람 승인과 유지보수 창 필수</text>
+  <rect x="760" y="555" width="365" height="145" rx="20" fill="#3b252d" stroke="#ff8295" stroke-width="2"/><text x="795" y="603" class="n">즉시 중단 조건</text><text x="795" y="643" class="t">승인 정책을 에이전트가 약화</text><text x="795" y="673" class="t">복구 수단과 감사 증거가 같은 경계에 존재</text>
+</svg>
