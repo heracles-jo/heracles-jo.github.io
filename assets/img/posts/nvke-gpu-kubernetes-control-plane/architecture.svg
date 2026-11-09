@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">NVKE 클러스터 생산 아키텍처</title>
+  <desc id="desc">API 요청이 PostgreSQL outbox, Temporal, Cluster API, NICo, node agent를 거쳐 workload cluster가 되는 흐름</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#22c55e"/></marker><filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity=".14"/></filter></defs>
+  <rect width="1200" height="760" fill="#f8fafc"/>
+  <g font-family="Pretendard, Apple SD Gothic Neo, sans-serif">
+    <text x="60" y="62" font-size="34" font-weight="800" fill="#0f172a">NVKE는 GPU 스케줄러가 아니라 클러스터 생산 관리 평면이다</text>
+    <text x="60" y="96" font-size="18" fill="#475569">요청 영속화 → 비동기 workflow → 물리 장비 할당 → 노드 신뢰 → 독립 Kubernetes</text>
+    <g filter="url(#s)">
+      <rect x="60" y="150" width="190" height="110" rx="16" fill="#fff" stroke="#0284c7" stroke-width="2"/>
+      <text x="155" y="190" text-anchor="middle" font-size="20" font-weight="700" fill="#0369a1">Platform Client</text>
+      <text x="155" y="224" text-anchor="middle" font-size="17" fill="#334155">nvkectl · REST API</text>
+      <rect x="310" y="132" width="260" height="146" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+      <text x="440" y="174" text-anchor="middle" font-size="22" font-weight="800" fill="#075985">NVKE Controller</text>
+      <text x="440" y="208" text-anchor="middle" font-size="17" fill="#334155">API · Reconcilers</text>
+      <text x="440" y="238" text-anchor="middle" font-size="17" fill="#334155">Outbox Processor</text>
+      <rect x="630" y="120" width="220" height="90" rx="15" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+      <text x="740" y="158" text-anchor="middle" font-size="20" font-weight="700" fill="#6d28d9">PostgreSQL</text>
+      <text x="740" y="185" text-anchor="middle" font-size="16" fill="#475569">cluster + workflow outbox</text>
+      <rect x="630" y="235" width="220" height="90" rx="15" fill="#fff" stroke="#f97316" stroke-width="2"/>
+      <text x="740" y="273" text-anchor="middle" font-size="20" font-weight="700" fill="#c2410c">Temporal</text>
+      <text x="740" y="300" text-anchor="middle" font-size="16" fill="#475569">provision · teardown · reboot</text>
+    </g>
+    <path d="M250 205H302" stroke="#22c55e" stroke-width="4" marker-end="url(#a)"/><path d="M570 175H622" stroke="#22c55e" stroke-width="4" marker-end="url(#a)"/><path d="M630 280H578" stroke="#22c55e" stroke-width="4" marker-end="url(#a)"/><path d="M740 212V228" stroke="#22c55e" stroke-width="4" marker-end="url(#a)"/>
+    <rect x="60" y="370" width="1090" height="300" rx="24" fill="#0f172a"/>
+    <text x="90" y="414" font-size="22" font-weight="800" fill="#86efac">PROVISIONING DATA PATH</text>
+    <g filter="url(#s)">
+      <rect x="90" y="455" width="210" height="135" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+      <text x="195" y="495" text-anchor="middle" font-size="20" font-weight="700" fill="#7dd3fc">Cluster API</text>
+      <text x="195" y="527" text-anchor="middle" font-size="16" fill="#e2e8f0">Machine · NodePool</text>
+      <text x="195" y="555" text-anchor="middle" font-size="16" fill="#94a3b8">desired state</text>
+      <rect x="360" y="455" width="210" height="135" rx="16" fill="#1e293b" stroke="#a3e635" stroke-width="2"/>
+      <text x="465" y="495" text-anchor="middle" font-size="20" font-weight="700" fill="#bef264">NICo</text>
+      <text x="465" y="527" text-anchor="middle" font-size="16" fill="#e2e8f0">GPU machine allocation</text>
+      <text x="465" y="555" text-anchor="middle" font-size="16" fill="#94a3b8">network · instance type</text>
+      <rect x="630" y="455" width="210" height="135" rx="16" fill="#1e293b" stroke="#c084fc" stroke-width="2"/>
+      <text x="735" y="495" text-anchor="middle" font-size="20" font-weight="700" fill="#d8b4fe">nvke-agent</text>
+      <text x="735" y="527" text-anchor="middle" font-size="16" fill="#e2e8f0">TPM · SPIFFE · kubeadm</text>
+      <text x="735" y="555" text-anchor="middle" font-size="16" fill="#94a3b8">gRPC node bootstrap</text>
+      <rect x="900" y="438" width="220" height="170" rx="18" fill="#163326" stroke="#4ade80" stroke-width="2"/>
+      <text x="1010" y="480" text-anchor="middle" font-size="20" font-weight="700" fill="#86efac">Workload Cluster</text>
+      <text x="1010" y="514" text-anchor="middle" font-size="16" fill="#fff">Control Plane · etcd</text>
+      <text x="1010" y="544" text-anchor="middle" font-size="16" fill="#fff">GPU Node Pools</text>
+      <text x="1010" y="574" text-anchor="middle" font-size="15" fill="#bbf7d0">customer Kubernetes API</text>
+    </g>
+    <path d="M300 522H352" stroke="#22c55e" stroke-width="4" marker-end="url(#a)"/><path d="M570 522H622" stroke="#22c55e" stroke-width="4" marker-end="url(#a)"/><path d="M840 522H892" stroke="#22c55e" stroke-width="4" marker-end="url(#a)"/>
+    <text x="60" y="720" font-size="18" fill="#64748b">운영자는 API·DB·workflow·CAPI·NICo·agent 상태를 하나의 사건으로 추적해야 한다.</text>
+  </g>
+</svg>

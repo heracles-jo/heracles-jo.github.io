@@ -793,3 +793,14 @@
     - "Ruff CI"
   slug: "ruff-python-lint-format-migration"
   summary: "Ruff로 Flake8·isort·Black을 통합할 때 rule coverage, fix 안전성, formatter 차이, 모노레포 설정과 CI 승격을 검증하는 기준을 정리."
+- date: 2026-11-09
+  title: "NVKE GPU Kubernetes 관리 평면: 베어메탈 도입 검증 기준"
+  github_repo: "https://github.com/dsx-ai-factory/nvke"
+  main_keyword: "NVKE GPU Kubernetes 관리 평면"
+  related_keywords:
+    - "GPU 베어메탈 Kubernetes"
+    - "NVIDIA Kubernetes Engine"
+    - "Cluster API GPU 인프라"
+    - "Kubernetes 관리 클러스터"
+  slug: "nvke-gpu-kubernetes-control-plane"
+  summary: "NVKE의 management cluster, NICo, Cluster API, TPM·SPIFFE 구조를 분석하고 GPU 베어메탈 Kubernetes의 보안·복구·노드 교체와 PoC 기준을 정리."
