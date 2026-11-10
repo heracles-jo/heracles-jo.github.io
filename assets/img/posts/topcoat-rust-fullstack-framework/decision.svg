@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Topcoat 2주 PoC 의사결정 게이트</title>
+  <desc id="desc">실제 업무 화면에서 의미 동등성, 보안, 자산, 운영과 접근성을 검증해 확대 또는 중단하는 흐름</desc>
+  <rect width="1200" height="760" rx="24" fill="#111a2a"/>
+  <style>.h{font:700 30px Arial,sans-serif;fill:#fff}.t{font:700 21px Arial,sans-serif;fill:#edf4ff}.s{font:16px Arial,sans-serif;fill:#b9c9dd}.box{fill:#1b2b43;stroke:#54739c;stroke-width:2}.gate{fill:#183833;stroke:#68dfcf;stroke-width:2}.warn{fill:#3a2d23;stroke:#efa651;stroke-width:2}.stop{fill:#3d2631;stroke:#f47e98;stroke-width:2}.line{stroke:#82ace6;stroke-width:4;fill:none;marker-end:url(#a)}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#82ace6"/></marker></defs>
+  <text x="55" y="60" class="h">Topcoat PoC: 기능 수가 아니라 실패 경계로 결정한다</text>
+  <rect x="55" y="105" width="250" height="125" rx="18" class="box"/><text x="85" y="153" class="t">실제 업무 1개</text><text x="85" y="187" class="s">권한 있는 검색·편집</text><text x="85" y="214" class="s">SSR + form + shard</text>
+  <path d="M305 167h75" class="line"/>
+  <rect x="385" y="90" width="350" height="155" rx="18" class="warn"/><text x="415" y="138" class="t">실패 주입</text><text x="415" y="172" class="s">느린 응답 · 연속 입력 · 중복 submit</text><text x="415" y="202" class="s">session 회전 · asset 불일치 · 재시작</text><text x="415" y="230" class="s">keyboard · screen reader · rollback</text>
+  <path d="M735 167h75" class="line"/>
+  <rect x="815" y="105" width="330" height="125" rx="18" class="gate"/><text x="845" y="153" class="t">자동 검증 가능?</text><text x="845" y="187" class="s">E2E · trace · 재현 빌드</text><text x="845" y="214" class="s">권한 negative test</text>
+  <path d="M980 230v85" class="line"/>
+  <rect x="815" y="320" width="330" height="145" rx="18" class="stop"/><text x="845" y="368" class="t">아니오 → 중단/경계 축소</text><text x="845" y="402" class="s">Axum API·명시적 프런트엔드 분리</text><text x="845" y="434" class="s">문제 재현과 rollback부터 확보</text>
+  <path d="M815 385H690" class="line"/>
+  <rect x="330" y="320" width="355" height="145" rx="18" class="gate"/><text x="360" y="368" class="t">예 → 제한 확대</text><text x="360" y="402" class="s">두 번째 workflow · 부하 · 업그레이드</text><text x="360" y="434" class="s">vendored UI patch와 운영 runbook</text>
+  <path d="M507 465v85" class="line"/>
+  <rect x="255" y="555" width="505" height="140" rx="18" class="box"/><text x="285" y="603" class="t">승격 기준</text><text x="285" y="637" class="s">Rust/JS 결과 일치 · stale response 없음 · 권한 우회 차단</text><text x="285" y="668" class="s">binary/asset 동일 SHA · 접근성 통과 · 1회 명령 rollback</text>
+  <rect x="805" y="555" width="340" height="140" rx="18" class="warn"/><text x="835" y="603" class="t">전면 표준화는 보류</text><text x="835" y="637" class="s">0.x breaking change와 배포 문서</text><text x="835" y="668" class="s">생태계·채용·장기 지원을 계속 관찰</text>
+</svg>

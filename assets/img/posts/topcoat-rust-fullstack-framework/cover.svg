@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Topcoat Rust 풀스택 웹 프레임워크 검증 기준</title>
+  <desc id="desc">Rust 서버 렌더링, 브라우저 반응성, shard 갱신과 운영 검증 축을 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101827"/><stop offset="1" stop-color="#27344b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f7a84b"/><stop offset="1" stop-color="#6ee7d8"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <g opacity=".17" stroke="#9bb7d9" fill="none"><path d="M65 105h1070M65 525h1070"/><path d="M970 80l145 145-145 145-145-145z"/></g>
+  <g transform="translate(80 84)">
+    <rect width="1040" height="462" rx="28" fill="#172238" stroke="#435976" stroke-width="2"/>
+    <text x="50" y="70" fill="#b9cbe4" font-family="Arial,sans-serif" font-size="25" font-weight="700">TOPCOAT · RUST FULL-STACK</text>
+    <text x="50" y="142" fill="#ffffff" font-family="Arial,sans-serif" font-size="48" font-weight="800">서버 렌더링과 브라우저 반응성</text>
+    <text x="50" y="204" fill="url(#accent)" font-family="Arial,sans-serif" font-size="48" font-weight="800">하나의 실행 모델로 묶어도 될까</text>
+    <g transform="translate(50 262)" font-family="Arial,sans-serif">
+      <rect width="205" height="108" rx="18" fill="#202f49" stroke="#f5a84d"/><text x="25" y="43" fill="#fff1dc" font-size="22" font-weight="700">SSR</text><text x="25" y="76" fill="#aebfd5" font-size="17">async Rust view</text>
+      <rect x="225" width="205" height="108" rx="18" fill="#202f49" stroke="#6ee7d8"/><text x="250" y="43" fill="#e2fffb" font-size="22" font-weight="700">Runtime</text><text x="250" y="76" fill="#aebfd5" font-size="17">Rust → JavaScript</text>
+      <rect x="450" width="205" height="108" rx="18" fill="#202f49" stroke="#76a9ff"/><text x="475" y="43" fill="#e7efff" font-size="22" font-weight="700">Shard</text><text x="475" y="76" fill="#aebfd5" font-size="17">partial HTML update</text>
+      <rect x="675" width="205" height="108" rx="18" fill="#202f49" stroke="#f47f91"/><text x="700" y="43" fill="#ffe8ec" font-size="22" font-weight="700">Ops</text><text x="700" y="76" fill="#aebfd5" font-size="17">auth · asset · deploy</text>
+    </g>
+    <text x="50" y="422" fill="#bdcbe0" font-family="Arial,sans-serif" font-size="20">통합성의 이익은 실행 의미와 운영 증거로 검증해야 한다</text>
+  </g>
+</svg>

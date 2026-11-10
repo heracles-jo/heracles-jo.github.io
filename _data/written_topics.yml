@@ -815,3 +815,14 @@
     - "MCP 승인 정책"
   slug: "home-assistant-mcp-security"
   summary: "Home Assistant 내장 MCP와 ha-mcp의 인증·도구 범위·승인·백업 경계를 비교하고 물리 장치 제어를 단계적으로 승격하는 기준을 정리."
+- date: 2026-11-11
+  title: "Topcoat Rust 풀스택 웹 프레임워크: SSR·반응성 검증 기준"
+  github_repo: "https://github.com/tokio-rs/topcoat"
+  main_keyword: "Topcoat Rust 풀스택 웹 프레임워크"
+  related_keywords:
+    - "Rust 서버 사이드 렌더링"
+    - "Topcoat shard"
+    - "Rust JavaScript 의미 동등성"
+    - "Rust 웹 프레임워크 비교"
+  slug: "topcoat-rust-fullstack-framework"
+  summary: "Topcoat의 SSR·Rust/JavaScript 이중 실행·shard·자산 번들을 분석하고 Axum·Leptos·Next.js 대비 운영 경계와 PoC 기준을 정리."

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Topcoat 풀스택 실행 아키텍처</title>
+  <desc id="desc">요청이 Rust 서버 렌더링, 이중 실행 표현식, 브라우저 runtime, shard 재렌더링과 자산 번들로 이어지는 구조</desc>
+  <rect width="1200" height="780" rx="24" fill="#101827"/>
+  <style>.h{font:700 30px Arial,sans-serif;fill:#fff}.t{font:700 21px Arial,sans-serif;fill:#edf4ff}.s{font:16px Arial,sans-serif;fill:#b6c7dd}.box{fill:#1a2941;stroke:#52719a;stroke-width:2}.server{fill:#312b27;stroke:#f2aa55;stroke-width:2}.client{fill:#173632;stroke:#65dfd0;stroke-width:2}.risk{fill:#3b2631;stroke:#f47f98;stroke-width:2}.line{stroke:#84aee8;stroke-width:4;fill:none;marker-end:url(#a)}.dash{stroke:#f1aa55;stroke-width:3;stroke-dasharray:9 8;fill:none;marker-end:url(#b)}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#84aee8"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#f1aa55"/></marker></defs>
+  <text x="55" y="58" class="h">Topcoat: 한 코드베이스 안의 세 실행 경계</text>
+  <rect x="55" y="100" width="250" height="120" rx="18" class="box"/><text x="85" y="148" class="t">HTTP 요청</text><text x="85" y="181" class="s">route · page · module tree</text>
+  <path d="M305 160h100" class="line"/>
+  <rect x="410" y="85" width="330" height="150" rx="18" class="server"/><text x="440" y="132" class="t">Rust 서버 렌더링</text><text x="440" y="167" class="s">async component · DB · session</text><text x="440" y="198" class="s">view! → initial HTML</text>
+  <path d="M740 160h110" class="line"/>
+  <rect x="855" y="100" width="290" height="120" rx="18" class="client"/><text x="885" y="148" class="t">브라우저 문서</text><text x="885" y="181" class="s">HTML · CSS · runtime</text>
+  <rect x="55" y="315" width="335" height="170" rx="18" class="server"/><text x="85" y="363" class="t">이중 실행 `$(...)`</text><text x="85" y="398" class="s">초기값은 Rust에서 평가</text><text x="85" y="430" class="s">제한된 표현을 JavaScript로 변환</text><text x="85" y="462" class="s">coherence test로 결과 비교</text>
+  <path d="M390 400h105" class="line"/>
+  <rect x="500" y="315" width="300" height="170" rx="18" class="client"/><text x="530" y="363" class="t">Client runtime</text><text x="530" y="398" class="s">signal · event · bind</text><text x="530" y="430" class="s">서버 왕복 없는 즉시 반응</text><text x="530" y="462" class="s">DOM·navigation은 별도 검증</text>
+  <path d="M800 400h75" class="line"/>
+  <rect x="880" y="315" width="265" height="170" rx="18" class="server"/><text x="910" y="363" class="t">Shard / Procedure</text><text x="910" y="398" class="s">서버 재진입</text><text x="910" y="430" class="s">HTML 교체 · 상태 변경</text><text x="910" y="462" class="s">권한·순서·재시도 경계</text>
+  <path d="M1012 315V240" class="dash"/>
+  <rect x="55" y="585" width="335" height="130" rx="18" class="box"/><text x="85" y="632" class="t">Asset bundle</text><text x="85" y="666" class="s">asset! · Tailwind · font · icon</text><text x="85" y="696" class="s">content hash와 binary release 연결</text>
+  <rect x="430" y="585" width="335" height="130" rx="18" class="risk"/><text x="460" y="632" class="t">핵심 실패 모드</text><text x="460" y="666" class="s">Rust/JS 의미 차이 · stale shard</text><text x="460" y="696" class="s">직접 endpoint 권한 우회</text>
+  <rect x="805" y="585" width="340" height="130" rx="18" class="client"/><text x="835" y="632" class="t">운영 증거</text><text x="835" y="666" class="s">브라우저 E2E · trace · 재현 빌드</text><text x="835" y="696" class="s">rollback · 접근성 · 부하 시험</text>
+  <path d="M220 485v95" class="dash"/><path d="M1012 485v95" class="dash"/>
+</svg>
