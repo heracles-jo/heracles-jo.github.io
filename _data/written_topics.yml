@@ -826,3 +826,14 @@
     - "Rust 웹 프레임워크 비교"
   slug: "topcoat-rust-fullstack-framework"
   summary: "Topcoat의 SSR·Rust/JavaScript 이중 실행·shard·자산 번들을 분석하고 Axum·Leptos·Next.js 대비 운영 경계와 PoC 기준을 정리."
+- date: 2026-11-12
+  title: "Codex Security CI 도입: AI 취약점 스캔을 게이트로 쓰는 기준"
+  github_repo: "https://github.com/openai/codex-security"
+  main_keyword: "Codex Security CI 도입"
+  related_keywords:
+    - "AI 취약점 스캔"
+    - "GitHub Actions 보안 게이트"
+    - "SARIF"
+    - "AI 보안 패치 검증"
+  slug: "codex-security-ci-gate"
+  summary: "Codex Security의 diff·Deep Scan, 후보 검증, 패치 확인, 비용 한도와 PR 신선도를 연결해 AI 보안 스캔을 CI 게이트로 승격하는 기준을 정리."

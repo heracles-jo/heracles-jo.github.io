@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Security CI 승격 의사결정</title>
+  <desc id="desc">보고 모드에서 범위와 신선도, 실패 처리, 검증된 심각도를 거쳐 merge 게이트로 승격하는 흐름</desc>
+  <rect width="1200" height="760" rx="24" fill="#091b24"/>
+  <style>.h{font:700 30px Arial,sans-serif;fill:#fff}.t{font:700 21px Arial,sans-serif;fill:#edf8ff}.s{font:16px Arial,sans-serif;fill:#b2c8d3}.box{fill:#122d3b;stroke:#4d7789;stroke-width:2}.gate{fill:#123b34;stroke:#58dfbd;stroke-width:2}.warn{fill:#3d3022;stroke:#f1b35e;stroke-width:2}.stop{fill:#3d2530;stroke:#f17d98;stroke-width:2}.line{stroke:#79a9ca;stroke-width:4;fill:none;marker-end:url(#a)}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#79a9ca"/></marker></defs>
+  <text x="55" y="60" class="h">Codex Security: report-only에서 merge gate까지</text>
+  <rect x="55" y="105" width="255" height="130" rx="18" class="box"/><text x="85" y="153" class="t">예약 스캔</text><text x="85" y="187" class="s">비용 · 오탐 · 제외 경로</text><text x="85" y="216" class="s">merge 차단 없음</text>
+  <path d="M310 170h70" class="line"/>
+  <rect x="385" y="90" width="350" height="160" rx="18" class="warn"/><text x="415" y="138" class="t">결정론적 영수증 확보</text><text x="415" y="172" class="s">completed · current head/base</text><text x="415" y="203" class="s">scope · exclusions · artifacts</text><text x="415" y="232" class="s">runtime/refusal hard fail</text>
+  <path d="M735 170h75" class="line"/>
+  <rect x="815" y="105" width="330" height="130" rx="18" class="gate"/><text x="845" y="153" class="t">현재 merge diff인가?</text><text x="845" y="187" class="s">live base와 scan receipt 일치</text><text x="845" y="216" class="s">stale check 재사용 금지</text>
+  <path d="M980 235v75" class="line"/>
+  <rect x="815" y="315" width="330" height="140" rx="18" class="stop"/><text x="845" y="363" class="t">아니오 → 재스캔</text><text x="845" y="397" class="s">base 변경 · retarget · 새 push</text><text x="845" y="428" class="s">과거 success를 승인에 쓰지 않음</text>
+  <path d="M815 385H690" class="line"/>
+  <rect x="330" y="315" width="355" height="140" rx="18" class="gate"/><text x="360" y="363" class="t">예 → shadow severity gate</text><text x="360" y="397" class="s">과거 결함 corpus · 사람 재현</text><text x="360" y="428" class="s">high/critical 오탐·누락 측정</text>
+  <path d="M507 455v85" class="line"/>
+  <rect x="240" y="545" width="535" height="145" rx="18" class="gate"/><text x="270" y="593" class="t">제한적 merge 게이트</text><text x="270" y="627" class="s">검증된 threshold + fresh receipt + 필수 artifact</text><text x="270" y="658" class="s">patch는 별도 승인과 verify-fix를 통과</text>
+  <rect x="815" y="545" width="330" height="145" rx="18" class="warn"/><text x="845" y="593" class="t">계속 관찰</text><text x="845" y="627" class="s">비용 초과 · resume · provider 변경</text><text x="845" y="658" class="s">merge queue와 fork PR 경계</text>
+</svg>
