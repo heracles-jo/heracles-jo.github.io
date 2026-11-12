@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Modern Web Guidance 도입 의사결정</title>
+  <desc id="desc">버전 고정, 지원 범위, 브라우저 증거를 확인해 참고 도구에서 팀 정책으로 승격하는 흐름</desc>
+  <rect width="1200" height="760" rx="24" fill="#091e2c"/>
+  <style>.h{font:700 30px Arial,sans-serif;fill:#fff}.t{font:700 21px Arial,sans-serif;fill:#eff9ff}.s{font:16px Arial,sans-serif;fill:#b4ccd6}.box{fill:#133442;stroke:#4f8191;stroke-width:2}.gate{fill:#133d35;stroke:#5fe0ba;stroke-width:2}.warn{fill:#413423;stroke:#efba65;stroke-width:2}.stop{fill:#412733;stroke:#ef8098;stroke-width:2}.line{stroke:#7db3d0;stroke-width:4;fill:none;marker-end:url(#a)}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#7db3d0"/></marker></defs>
+  <text x="55" y="60" class="h">Modern Web Guidance: 참고 도구에서 팀 정책까지</text>
+  <rect x="55" y="105" width="270" height="130" rx="18" class="box"/><text x="85" y="153" class="t">개인 실험</text><text x="85" y="187" class="s">search · retrieve · 작은 UI</text><text x="85" y="216" class="s">배포 권한 없음</text>
+  <path d="M325 170h70" class="line"/>
+  <rect x="400" y="90" width="345" height="160" rx="18" class="warn"/><text x="430" y="138" class="t">재현 가능한 지식인가?</text><text x="430" y="172" class="s">npm/commit · guide ID 고정</text><text x="430" y="203" class="s">.mwgrc · telemetry 정책</text><text x="430" y="232" class="s">라이선스 · update diff</text>
+  <path d="M745 170h70" class="line"/>
+  <rect x="820" y="105" width="325" height="130" rx="18" class="gate"/><text x="850" y="153" class="t">지원 계약과 맞는가?</text><text x="850" y="187" class="s">browser · WebView · CSP</text><text x="850" y="216" class="s">fallback · performance budget</text>
+  <path d="M982 235v75" class="line"/>
+  <rect x="820" y="315" width="325" height="140" rx="18" class="stop"/><text x="850" y="363" class="t">아니오 → 참고로 제한</text><text x="850" y="397" class="s">volatile API · 무거운 polyfill</text><text x="850" y="428" class="s">고객 환경과 Baseline 불일치</text>
+  <path d="M820 385H695" class="line"/>
+  <rect x="335" y="315" width="355" height="140" rx="18" class="gate"/><text x="365" y="363" class="t">예 → 로컬 corpus 평가</text><text x="365" y="397" class="s">guided vs unguided</text><text x="365" y="428" class="s">a11y · JS bytes · 리뷰 시간</text>
+  <path d="M512 455v85" class="line"/>
+  <rect x="225" y="545" width="575" height="145" rx="18" class="gate"/><text x="255" y="593" class="t">제한적 팀 승격</text><text x="255" y="627" class="s">고정 버전 + 브라우저 테스트 + evidence artifact</text><text x="255" y="658" class="s">업데이트는 별도 PR, CI가 최종 판정</text>
+  <rect x="835" y="545" width="310" height="145" rx="18" class="warn"/><text x="865" y="593" class="t">계속 관찰</text><text x="865" y="627" class="s">가이드 신선도 · 검색 재현성</text><text x="865" y="658" class="s">접근성·성능 회귀 · 운영 비용</text>
+</svg>

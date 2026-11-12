@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 웹 코드 검증과 Modern Web Guidance</title>
+  <desc id="desc">가이드 검색, Baseline 호환성, 브라우저 검증을 연결한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b2b"/><stop offset="1" stop-color="#153d45"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#62e6bd"/><stop offset="1" stop-color="#78b8ff"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <g opacity=".16" stroke="#91c8d8" fill="none"><path d="M55 105h1090M55 525h1090"/><path d="M995 65v500M945 115h100M945 515h100"/></g>
+  <g transform="translate(78 78)">
+    <rect width="1044" height="474" rx="28" fill="#102c3a" stroke="#397083" stroke-width="2"/>
+    <text x="50" y="66" fill="#afd2de" font-family="Arial,sans-serif" font-size="24" font-weight="700">MODERN WEB GUIDANCE · AGENT VALIDATION</text>
+    <text x="50" y="142" fill="#ffffff" font-family="Arial,sans-serif" font-size="49" font-weight="800">AI가 만든 최신 웹 코드,</text>
+    <text x="50" y="206" fill="url(#accent)" font-family="Arial,sans-serif" font-size="49" font-weight="800">브라우저에서 어떻게 증명할까</text>
+    <g transform="translate(50 270)" font-family="Arial,sans-serif">
+      <rect width="205" height="110" rx="18" fill="#163746" stroke="#62e6bd"/><text x="24" y="43" fill="#e5fff7" font-size="22" font-weight="700">Search</text><text x="24" y="77" fill="#b3ccd6" font-size="17">local · BM25</text>
+      <rect x="225" width="205" height="110" rx="18" fill="#163746" stroke="#78b8ff"/><text x="249" y="43" fill="#eaf2ff" font-size="22" font-weight="700">Baseline</text><text x="249" y="77" fill="#b3ccd6" font-size="17">support · fallback</text>
+      <rect x="450" width="205" height="110" rx="18" fill="#163746" stroke="#f1bd68"/><text x="474" y="43" fill="#fff3dd" font-size="22" font-weight="700">Browser</text><text x="474" y="77" fill="#b3ccd6" font-size="17">DOM · a11y · perf</text>
+      <rect x="675" width="205" height="110" rx="18" fill="#163746" stroke="#ef829b"/><text x="699" y="43" fill="#ffe9ee" font-size="22" font-weight="700">Policy</text><text x="699" y="77" fill="#b3ccd6" font-size="17">version · evidence</text>
+    </g>
+    <text x="50" y="432" fill="#bad2dc" font-family="Arial,sans-serif" font-size="20">최신 API 사용량보다 호환성·접근성·재현 가능한 증거를 고정한다</text>
+  </g>
+</svg>

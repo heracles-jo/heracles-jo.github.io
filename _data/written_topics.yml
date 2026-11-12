@@ -837,3 +837,14 @@
     - "AI 보안 패치 검증"
   slug: "codex-security-ci-gate"
   summary: "Codex Security의 diff·Deep Scan, 후보 검증, 패치 확인, 비용 한도와 PR 신선도를 연결해 AI 보안 스캔을 CI 게이트로 승격하는 기준을 정리."
+- date: 2026-11-13
+  title: "AI 웹 코드 검증: Modern Web Guidance 도입 기준"
+  github_repo: "https://github.com/GoogleChrome/modern-web-guidance-src"
+  main_keyword: "AI 웹 코드 검증"
+  related_keywords:
+    - "Modern Web Guidance"
+    - "브라우저 호환성"
+    - "웹 접근성 테스트"
+    - "AI 코딩 에이전트"
+  slug: "modern-web-guidance-agent-web-validation"
+  summary: "Modern Web Guidance의 로컬 검색, Baseline 호환성, Playwright 평가를 분석하고 AI 웹 코드를 팀 정책으로 승격하는 검증 기준을 정리."

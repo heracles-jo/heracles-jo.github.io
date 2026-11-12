@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
+  <title id="title">Modern Web Guidance 검증 아키텍처</title>
+  <desc id="desc">작업 질의에서 로컬 검색, 가이드 조회, 코드 변경, 브라우저 검증으로 이어지는 구조</desc>
+  <rect width="1200" height="790" rx="24" fill="#081d2c"/>
+  <style>.h{font:700 30px Arial,sans-serif;fill:#fff}.t{font:700 21px Arial,sans-serif;fill:#eff9ff}.s{font:16px Arial,sans-serif;fill:#b2cbd6}.box{fill:#123342;stroke:#4f8192;stroke-width:2}.good{fill:#123c35;stroke:#60dfba;stroke-width:2}.work{fill:#263b56;stroke:#78b5ff;stroke-width:2}.warn{fill:#403323;stroke:#efba64;stroke-width:2}.risk{fill:#402733;stroke:#ef8099;stroke-width:2}.line{stroke:#7eb3d0;stroke-width:4;fill:none;marker-end:url(#a)}.dash{stroke:#efba64;stroke-width:3;stroke-dasharray:9 8;fill:none;marker-end:url(#b)}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#7eb3d0"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#efba64"/></marker></defs>
+  <text x="55" y="58" class="h">지침 검색과 배포 판정을 분리한다</text>
+  <rect x="55" y="105" width="260" height="130" rx="18" class="box"/><text x="85" y="153" class="t">1. 개발 작업</text><text x="85" y="187" class="s">modal · form · performance</text><text x="85" y="216" class="s">저장소 문맥과 지원 계약</text>
+  <path d="M315 170h75" class="line"/>
+  <rect x="395" y="90" width="340" height="160" rx="18" class="work"/><text x="425" y="138" class="t">2. 로컬 Search</text><text x="425" y="172" class="s">offline embedding + BM25</text><text x="425" y="203" class="s">작업에 가까운 guide ID</text><text x="425" y="232" class="s">전체 문서 대신 좁은 후보</text>
+  <path d="M735 170h75" class="line"/>
+  <rect x="815" y="105" width="330" height="130" rx="18" class="good"/><text x="845" y="153" class="t">3. Retrieve</text><text x="845" y="187" class="s">patterns · gotchas · fallback</text><text x="845" y="216" class="s">Baseline · volatile gate</text>
+  <path d="M980 235v80" class="line"/>
+  <rect x="815" y="320" width="330" height="145" rx="18" class="warn"/><text x="845" y="368" class="t">4. 에이전트 Diff</text><text x="845" y="402" class="s">HTML · CSS · JavaScript</text><text x="845" y="433" class="s">의존성 · polyfill · 설정 변경</text>
+  <path d="M815 392H690" class="line"/>
+  <rect x="355" y="320" width="330" height="145" rx="18" class="good"/><text x="385" y="368" class="t">5. 저장소 검증</text><text x="385" y="402" class="s">lint · type · unit · bundle</text><text x="385" y="433" class="s">CSP · SSR · design system</text>
+  <path d="M520 465v85" class="line"/>
+  <rect x="235" y="555" width="570" height="155" rx="18" class="box"/><text x="265" y="603" class="t">6. 브라우저 판정</text><text x="265" y="637" class="s">Playwright · keyboard · accessibility · visual regression</text><text x="265" y="668" class="s">지원 브라우저 · WebView · 성능 예산 · 실제 사용자 분포</text><text x="265" y="699" class="s">통과한 증거만 배포 후보로 승격</text>
+  <rect x="840" y="555" width="305" height="155" rx="18" class="risk"/><text x="870" y="603" class="t">남는 위험</text><text x="870" y="637" class="s">@latest 비재현성</text><text x="870" y="668" class="s">telemetry · 검색어 노출</text><text x="870" y="699" class="s">Baseline과 고객 환경의 차이</text>
+  <path d="M815 170C690 278 705 570 835 625" class="dash"/>
+</svg>
