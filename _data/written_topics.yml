@@ -848,3 +848,14 @@
     - "AI 코딩 에이전트"
   slug: "modern-web-guidance-agent-web-validation"
   summary: "Modern Web Guidance의 로컬 검색, Baseline 호환성, Playwright 평가를 분석하고 AI 웹 코드를 팀 정책으로 승격하는 검증 기준을 정리."
+- date: 2026-11-14
+  title: "AI 설계 문서 리뷰: Elephant-Goldfish Model 격리 기준"
+  github_repo: "https://github.com/google/elephant-goldfish-model"
+  main_keyword: "AI 설계 문서 리뷰"
+  related_keywords:
+    - "Elephant-Goldfish Model"
+    - "컨텍스트 격리"
+    - "스펙 주도 개발"
+    - "설계 문서 드리프트"
+  slug: "elephant-goldfish-ai-design-review"
+  summary: "EGM의 깊은 설계 문맥과 독립 리뷰어 분리를 분석하고 격리 증거, finding 품질, 운영 비용과 PoC 도입 기준을 정리."
