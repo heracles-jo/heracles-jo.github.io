@@ -859,3 +859,14 @@
     - "설계 문서 드리프트"
   slug: "elephant-goldfish-ai-design-review"
   summary: "EGM의 깊은 설계 문맥과 독립 리뷰어 분리를 분석하고 격리 증거, finding 품질, 운영 비용과 PoC 도입 기준을 정리."
+- date: 2026-11-15
+  title: "Uptime Kuma 셀프호스팅 모니터링: 외부 감시·복구 설계 기준"
+  github_repo: "https://github.com/louislam/uptime-kuma"
+  main_keyword: "Uptime Kuma 셀프호스팅 모니터링"
+  related_keywords:
+    - "외부 가용성 감시"
+    - "synthetic monitoring"
+    - "셀프호스팅 상태 페이지"
+    - "모니터링 백업 복구"
+  slug: "uptime-kuma-self-hosted-monitoring"
+  summary: "Uptime Kuma의 감시 위치, 사용자 경로 probe, 알림 실패, 보안 패치와 빈 서버 복원을 연결해 운영 승격 기준을 정리."

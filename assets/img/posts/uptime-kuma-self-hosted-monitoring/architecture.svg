@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Uptime Kuma 감시 아키텍처</title>
+  <desc id="desc">외부와 내부 checker가 서비스를 점검하고 Uptime Kuma가 상태와 알림을 제공하는 데이터 흐름</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L10 3 0 6z" fill="#3ccf91"/></marker><filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity=".18"/></filter></defs>
+  <rect width="1200" height="720" fill="#f4f8f7"/>
+  <text x="60" y="66" font-family="system-ui,sans-serif" font-size="34" font-weight="800" fill="#123b3a">Uptime Kuma는 어디서 무엇을 보는가</text>
+  <text x="60" y="101" font-family="system-ui,sans-serif" font-size="18" fill="#52706d">외부 사용자 경로와 내부 의존성을 분리하고, 감시 시스템 자체는 별도 dead-man 경로로 확인한다.</text>
+  <g filter="url(#s)" font-family="system-ui,sans-serif">
+    <rect x="55" y="155" width="250" height="130" rx="20" fill="#fff" stroke="#60b98f" stroke-width="2"/>
+    <text x="180" y="198" text-anchor="middle" font-size="24" font-weight="750" fill="#184d42">외부 Checker</text>
+    <text x="180" y="231" text-anchor="middle" font-size="17" fill="#55726e">다른 region · provider</text><text x="180" y="258" text-anchor="middle" font-size="17" fill="#55726e">공개 DNS · CDN · TLS</text>
+    <rect x="55" y="425" width="250" height="130" rx="20" fill="#fff" stroke="#5b91c9" stroke-width="2"/>
+    <text x="180" y="468" text-anchor="middle" font-size="24" font-weight="750" fill="#244b72">내부 Checker</text>
+    <text x="180" y="501" text-anchor="middle" font-size="17" fill="#55726e">사설 DB · queue · admin</text><text x="180" y="528" text-anchor="middle" font-size="17" fill="#55726e">내부 DNS · readiness</text>
+    <rect x="435" y="220" width="320" height="270" rx="24" fill="#0f3435" stroke="#3ccf91" stroke-width="3"/>
+    <text x="595" y="270" text-anchor="middle" font-size="30" font-weight="800" fill="#fff">Uptime Kuma</text>
+    <rect x="475" y="300" width="240" height="52" rx="12" fill="#19494a"/><text x="595" y="333" text-anchor="middle" font-size="18" fill="#d7fff0">Probe · Retry · 판정</text>
+    <rect x="475" y="370" width="240" height="52" rx="12" fill="#19494a"/><text x="595" y="403" text-anchor="middle" font-size="18" fill="#d7fff0">Heartbeat · 설정 · 사건</text>
+    <text x="595" y="459" text-anchor="middle" font-size="16" fill="#9bd4c2">local volume /app/data</text>
+    <rect x="875" y="140" width="260" height="115" rx="20" fill="#fff" stroke="#e2a23a" stroke-width="2"/>
+    <text x="1005" y="183" text-anchor="middle" font-size="23" font-weight="750" fill="#744c16">운영 서비스</text><text x="1005" y="218" text-anchor="middle" font-size="17" fill="#66716f">웹 · API · DNS · TLS</text>
+    <rect x="875" y="305" width="260" height="115" rx="20" fill="#fff" stroke="#aa72d5" stroke-width="2"/>
+    <text x="1005" y="348" text-anchor="middle" font-size="23" font-weight="750" fill="#5d347a">알림 채널</text><text x="1005" y="383" text-anchor="middle" font-size="17" fill="#66716f">SMTP · Slack · SMS</text>
+    <rect x="875" y="470" width="260" height="115" rx="20" fill="#fff" stroke="#5b91c9" stroke-width="2"/>
+    <text x="1005" y="513" text-anchor="middle" font-size="23" font-weight="750" fill="#244b72">공개 상태 페이지</text><text x="1005" y="548" text-anchor="middle" font-size="17" fill="#66716f">incident · maintenance</text>
+  </g>
+  <g fill="none" stroke="#3ccf91" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M305 215C365 215 375 285 435 300"/><path d="M305 490C365 490 375 425 435 410"/><path d="M755 280C805 250 825 210 875 200"/><path d="M755 355H875"/><path d="M755 430C810 450 825 515 875 525"/>
+  </g>
+  <path d="M180 285V360H595V490" fill="none" stroke="#e05d5d" stroke-width="3" stroke-dasharray="9 8" marker-end="url(#arrow)"/>
+  <text x="72" y="602" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#b34747">별도 dead-man monitor</text>
+  <text x="72" y="632" font-family="system-ui,sans-serif" font-size="16" fill="#66716f">Uptime Kuma가 침묵할 때도 외부 신호가 남아야 한다.</text>
+  <rect x="55" y="662" width="1090" height="2" fill="#dce8e5"/>
+  <text x="60" y="696" font-family="system-ui,sans-serif" font-size="15" fill="#78908c">핵심: 감시 대상과 checker가 host, region, DNS, 알림 provider를 모두 공유하면 전체 장애를 놓친다.</text>
+</svg>
