@@ -870,3 +870,14 @@
     - "모니터링 백업 복구"
   slug: "uptime-kuma-self-hosted-monitoring"
   summary: "Uptime Kuma의 감시 위치, 사용자 경로 probe, 알림 실패, 보안 패치와 빈 서버 복원을 연결해 운영 승격 기준을 정리."
+- date: 2026-11-16
+  title: "Sure 셀프호스팅 가계부: 금융 데이터 보안·복구 기준"
+  github_repo: "https://github.com/we-promise/sure"
+  main_keyword: "Sure 셀프호스팅 가계부"
+  related_keywords:
+    - "개인 금융 데이터 보안"
+    - "금융 데이터 동기화 정합성"
+    - "MCP 금융 권한"
+    - "가계부 백업 복구"
+  slug: "sure-self-hosted-personal-finance-security"
+  summary: "Sure의 provider 동기화, 암호화 키, AI·MCP write 권한, full backup과 빈 서버 복구를 Actual Budget·Firefly III와 비교해 도입 기준을 정리."
