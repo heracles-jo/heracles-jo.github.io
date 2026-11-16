@@ -881,3 +881,14 @@
     - "가계부 백업 복구"
   slug: "sure-self-hosted-personal-finance-security"
   summary: "Sure의 provider 동기화, 암호화 키, AI·MCP write 권한, full backup과 빈 서버 복구를 Actual Budget·Firefly III와 비교해 도입 기준을 정리."
+- date: 2026-11-17
+  title: "AI 논문 작성 자동화: PaperOrchestra 검증 기준"
+  github_repo: "https://github.com/google-research/paper-orchestra"
+  main_keyword: "AI 논문 작성 자동화"
+  related_keywords:
+    - "PaperOrchestra"
+    - "연구 에이전트"
+    - "인용 검증"
+    - "재현 가능한 연구"
+  slug: "paperorchestra-ai-paper-writing-validation"
+  summary: "PaperOrchestra의 문헌 검색·인용 맵·그림·LaTeX 생성 구조를 분석하고 주장 근거, 시각 자료 환각, 데이터 보안과 사람 승인 기준을 정리."

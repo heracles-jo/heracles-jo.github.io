@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI 논문 작성 자동화와 근거 검증</title>
+  <desc id="desc">아이디어와 실험 로그가 문헌, LaTeX 원고, 사람 승인으로 이어지는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1020"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <circle cx="1050" cy="100" r="180" fill="#38bdf8" opacity=".08"/><circle cx="150" cy="570" r="220" fill="#a78bfa" opacity=".08"/>
+  <g filter="url(#shadow)">
+    <rect x="700" y="105" width="350" height="420" rx="24" fill="#f8fafc"/>
+    <rect x="745" y="150" width="210" height="18" rx="9" fill="#1e293b"/>
+    <rect x="745" y="188" width="260" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="745" y="212" width="230" height="10" rx="5" fill="#cbd5e1"/>
+    <rect x="745" y="255" width="260" height="125" rx="14" fill="#e0e7ff"/>
+    <path d="M780 345l55-48 45 28 74-56" fill="none" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="780" cy="345" r="7" fill="#38bdf8"/><circle cx="835" cy="297" r="7" fill="#38bdf8"/><circle cx="880" cy="325" r="7" fill="#38bdf8"/><circle cx="954" cy="269" r="7" fill="#38bdf8"/>
+    <rect x="745" y="414" width="245" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="745" y="438" width="220" height="10" rx="5" fill="#cbd5e1"/>
+    <rect x="745" y="462" width="255" height="10" rx="5" fill="#cbd5e1"/>
+  </g>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <text x="100" y="155" fill="#7dd3fc" font-size="28" font-weight="700">PAPERORCHESTRA</text>
+    <text x="100" y="235" fill="#fff" font-size="54" font-weight="800">AI 논문 작성 자동화</text>
+    <text x="100" y="302" fill="#fff" font-size="54" font-weight="800">검증 기준</text>
+    <rect x="100" y="347" width="500" height="6" rx="3" fill="url(#accent)"/>
+    <text x="100" y="410" fill="#cbd5e1" font-size="25">문헌 검색 · 인용 · 실험 근거 · 그림 · 사람 승인</text>
+    <text x="100" y="455" fill="#94a3b8" font-size="21">완성 PDF보다 재현 가능한 evidence chain</text>
+  </g>
+</svg>
