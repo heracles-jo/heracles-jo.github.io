@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Univer 도입 의사결정 게이트</title>
+  <desc id="desc">수식, 구조 변경, 권한, 호환성, 운영비를 순서대로 검증하는 흐름</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L10 3L0 6z" fill="#475569"/></marker></defs>
+  <rect width="1200" height="760" rx="28" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="800" fill="#0f172a">Univer PoC: 기능 수보다 실패를 설명할 수 있는가</text>
+  <g font-family="sans-serif">
+    <g transform="translate(70 125)"><rect width="200" height="180" rx="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/><circle cx="100" cy="48" r="25" fill="#2563eb"/><text x="100" y="57" text-anchor="middle" font-size="24" font-weight="800" fill="#fff">1</text><text x="100" y="98" text-anchor="middle" font-size="22" font-weight="800" fill="#1e3a8a">수식 의미</text><text x="100" y="135" text-anchor="middle" font-size="17" fill="#1e40af">golden corpus</text><text x="100" y="160" text-anchor="middle" font-size="17" fill="#1e40af">버전 diff</text></g>
+    <g transform="translate(285 125)"><rect width="200" height="180" rx="20" fill="#ede9fe" stroke="#8b5cf6" stroke-width="3"/><circle cx="100" cy="48" r="25" fill="#7c3aed"/><text x="100" y="57" text-anchor="middle" font-size="24" font-weight="800" fill="#fff">2</text><text x="100" y="98" text-anchor="middle" font-size="22" font-weight="800" fill="#4c1d95">구조 변경</text><text x="100" y="135" text-anchor="middle" font-size="17" fill="#5b21b6">insert · sort</text><text x="100" y="160" text-anchor="middle" font-size="17" fill="#5b21b6">undo 무결성</text></g>
+    <g transform="translate(500 125)"><rect width="200" height="180" rx="20" fill="#d1fae5" stroke="#10b981" stroke-width="3"/><circle cx="100" cy="48" r="25" fill="#059669"/><text x="100" y="57" text-anchor="middle" font-size="24" font-weight="800" fill="#fff">3</text><text x="100" y="98" text-anchor="middle" font-size="22" font-weight="800" fill="#064e3b">저장·권한</text><text x="100" y="135" text-anchor="middle" font-size="17" fill="#065f46">server 재검증</text><text x="100" y="160" text-anchor="middle" font-size="17" fill="#065f46">range · operation</text></g>
+    <g transform="translate(715 125)"><rect width="200" height="180" rx="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/><circle cx="100" cy="48" r="25" fill="#d97706"/><text x="100" y="57" text-anchor="middle" font-size="24" font-weight="800" fill="#fff">4</text><text x="100" y="98" text-anchor="middle" font-size="22" font-weight="800" fill="#78350f">파일·협업</text><text x="100" y="135" text-anchor="middle" font-size="17" fill="#92400e">XLSX round-trip</text><text x="100" y="160" text-anchor="middle" font-size="17" fill="#92400e">conflict · history</text></g>
+    <g transform="translate(930 125)"><rect width="200" height="180" rx="20" fill="#fee2e2" stroke="#ef4444" stroke-width="3"/><circle cx="100" cy="48" r="25" fill="#dc2626"/><text x="100" y="57" text-anchor="middle" font-size="24" font-weight="800" fill="#fff">5</text><text x="100" y="98" text-anchor="middle" font-size="22" font-weight="800" fill="#7f1d1d">운영·비용</text><text x="100" y="135" text-anchor="middle" font-size="17" fill="#991b1b">p95 · memory</text><text x="100" y="160" text-anchor="middle" font-size="17" fill="#991b1b">license map</text></g>
+  </g>
+  <g fill="none" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"><path d="M270 215H285"/><path d="M485 215H500"/><path d="M700 215H715"/><path d="M915 215H930"/></g>
+  <g font-family="sans-serif">
+    <rect x="70" y="370" width="510" height="270" rx="22" fill="#ecfdf5" stroke="#34d399" stroke-width="3"/>
+    <text x="105" y="420" font-size="25" font-weight="800" fill="#065f46">승격 조건</text>
+    <g font-size="19" fill="#065f46"><text x="105" y="468">• 계산 차이를 함수·타입·버전으로 설명</text><text x="105" y="507">• UI와 Headless 결과가 고정 fixture에서 동등</text><text x="105" y="546">• 도메인 권한이 모든 저장 경로에서 재검증</text><text x="105" y="585">• 공개·상용·직접 구현 범위와 비용이 확정</text></g>
+    <rect x="620" y="370" width="510" height="270" rx="22" fill="#fef2f2" stroke="#f87171" stroke-width="3"/>
+    <text x="655" y="420" font-size="25" font-weight="800" fill="#991b1b">중단 조건</text>
+    <g font-size="19" fill="#991b1b"><text x="655" y="468">• 계산 회귀가 조용히 핵심 업무 값에 반영</text><text x="655" y="507">• cell address와 snapshot이 업무 DB 역할을 함</text><text x="655" y="546">• hidden API·agent가 UI 권한을 우회</text><text x="655" y="585">• 핵심 기능의 라이선스 경계를 배포 후 발견</text></g>
+    <rect x="70" y="675" width="1060" height="45" rx="12" fill="#0f172a"/><text x="600" y="705" text-anchor="middle" font-size="21" font-weight="700" fill="#f8fafc">완료 기준: 예쁜 데모가 아니라 계산·권한·복구 계약을 반복 검증하는 상태</text>
+  </g>
+</svg>

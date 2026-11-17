@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Univer 임베디드 스프레드시트 아키텍처</title>
+  <desc id="desc">표현, 편집, 계산, 제품 데이터 계층의 책임 분리</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L10 3L0 6z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="760" rx="28" fill="#0f172a"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="800" fill="#f8fafc">스프레드시트 UI와 제품의 권위 있는 데이터를 분리하라</text>
+  <g font-family="sans-serif">
+    <g transform="translate(80 130)"><rect width="230" height="210" rx="22" fill="#164e63" stroke="#22d3ee" stroke-width="3"/><text x="115" y="52" text-anchor="middle" font-size="24" font-weight="800" fill="#cffafe">표현 계층</text><text x="115" y="100" text-anchor="middle" font-size="19" fill="#a5f3fc">canvas · selection</text><text x="115" y="134" text-anchor="middle" font-size="19" fill="#a5f3fc">keyboard · IME</text><text x="115" y="168" text-anchor="middle" font-size="19" fill="#a5f3fc">접근성 · 모바일</text></g>
+    <g transform="translate(350 130)"><rect width="230" height="210" rx="22" fill="#3b0764" stroke="#c084fc" stroke-width="3"/><text x="115" y="52" text-anchor="middle" font-size="24" font-weight="800" fill="#f3e8ff">편집 계층</text><text x="115" y="100" text-anchor="middle" font-size="19" fill="#e9d5ff">command · mutation</text><text x="115" y="134" text-anchor="middle" font-size="19" fill="#e9d5ff">undo / redo</text><text x="115" y="168" text-anchor="middle" font-size="19" fill="#e9d5ff">plugin 변경 조합</text></g>
+    <g transform="translate(620 130)"><rect width="230" height="210" rx="22" fill="#14532d" stroke="#4ade80" stroke-width="3"/><text x="115" y="52" text-anchor="middle" font-size="24" font-weight="800" fill="#dcfce7">계산 계층</text><text x="115" y="100" text-anchor="middle" font-size="19" fill="#bbf7d0">formula parser</text><text x="115" y="134" text-anchor="middle" font-size="19" fill="#bbf7d0">dependency graph</text><text x="115" y="168" text-anchor="middle" font-size="19" fill="#bbf7d0">recalc · error value</text></g>
+    <g transform="translate(890 130)"><rect width="230" height="210" rx="22" fill="#713f12" stroke="#fbbf24" stroke-width="3"/><text x="115" y="52" text-anchor="middle" font-size="24" font-weight="800" fill="#fef3c7">제품 계층</text><text x="115" y="100" text-anchor="middle" font-size="19" fill="#fde68a">업무 ID · 권한</text><text x="115" y="134" text-anchor="middle" font-size="19" fill="#fde68a">저장 · 승인 · 감사</text><text x="115" y="168" text-anchor="middle" font-size="19" fill="#fde68a">도메인 규칙</text></g>
+  </g>
+  <g fill="none" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"><path d="M310 235H350"/><path d="M580 235H620"/><path d="M850 235H890"/></g>
+  <g font-family="sans-serif">
+    <rect x="80" y="405" width="1040" height="245" rx="24" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <text x="120" y="455" font-size="25" font-weight="800" fill="#f8fafc">경계를 넘을 때 반드시 재검증할 것</text>
+    <g font-size="20" fill="#cbd5e1"><text x="125" y="505">• 셀 편집 권한 ≠ 업무 객체 변경 권한</text><text x="125" y="548">• workbook snapshot ≠ 업무 데이터베이스</text><text x="125" y="591">• editor undo ≠ 승인·결제의 보상 트랜잭션</text><text x="640" y="505">• browser 계산 ≠ 서버의 권위 계산</text><text x="640" y="548">• cell address ≠ 안정적인 업무 식별자</text><text x="640" y="591">• 공개 demo ≠ 공개 코어의 라이선스 범위</text></g>
+    <rect x="80" y="675" width="1040" height="45" rx="12" fill="#065f46"/><text x="600" y="705" text-anchor="middle" font-size="21" font-weight="700" fill="#d1fae5">Univer는 편집 엔진이고, 제품의 데이터·권한 계약은 애플리케이션이 소유한다</text>
+  </g>
+</svg>

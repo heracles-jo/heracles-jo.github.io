@@ -892,3 +892,14 @@
     - "재현 가능한 연구"
   slug: "paperorchestra-ai-paper-writing-validation"
   summary: "PaperOrchestra의 문헌 검색·인용 맵·그림·LaTeX 생성 구조를 분석하고 주장 근거, 시각 자료 환각, 데이터 보안과 사람 승인 기준을 정리."
+- date: 2026-11-18
+  title: "임베디드 스프레드시트 엔진: Univer 도입·검증 기준"
+  github_repo: "https://github.com/dream-num/univer"
+  main_keyword: "임베디드 스프레드시트 엔진"
+  related_keywords:
+    - "Univer"
+    - "스프레드시트 수식 엔진"
+    - "Headless 스프레드시트"
+    - "SaaS 스프레드시트 내장"
+  slug: "univer-embedded-spreadsheet-engine"
+  summary: "Univer의 수식·명령·Headless 계층을 분석하고 계산 정확도, 구조 변경, 권한, 협업, XLSX 호환성과 라이선스 경계를 검증하는 도입 기준을 정리."
