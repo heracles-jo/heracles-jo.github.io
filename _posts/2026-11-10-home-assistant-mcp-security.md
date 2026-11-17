@@ -4,7 +4,7 @@ description: "Home Assistant 내장 MCP와 ha-mcp의 권한·인증·승인·복
 author: heracles-jo
 date: 2026-11-10 08:15:00 +0900
 categories: [Security, AI Infrastructure]
-tags: [home-assistant, ha-mcp, mcp-security, smart-home, access-control, ai-agent]
+tags: [home-assistant, ai-agent, mcp-security, access-control]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/home-assistant-mcp-security/cover.svg
   alt: "Home Assistant 내장 MCP와 ha-mcp의 인증·권한·승인 경계를 비교하는 보안 설계"

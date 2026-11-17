@@ -3,8 +3,8 @@ title: "LLM 양자화 배포: NVIDIA Model Optimizer 검증 기준"
 description: "NVIDIA Model Optimizer의 PTQ·QAT·증류·내보내기 흐름을 따라 정확도 회귀, 런타임 호환성, 체크포인트 재현성과 PoC 중단 기준을 정리한다."
 author: heracles-jo
 date: 2026-09-25 08:20:00 +0900
-categories: [AI Infrastructure, LLMOps]
-tags: [nvidia-model-optimizer, llm-quantization, ptq, qat, model-compression, llmops]
+categories: [AI Infrastructure]
+tags: [nvidia-model-optimizer, llmops, llm-quantization, ptq]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/nvidia-modelopt-llm-quantization-pipeline/cover.svg
   alt: "원본 LLM을 교정·양자화하고 품질 게이트를 거쳐 여러 추론 런타임에 배포하는 Model Optimizer 파이프라인"

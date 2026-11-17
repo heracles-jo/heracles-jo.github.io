@@ -3,8 +3,8 @@ title: "Floci AWS 로컬 에뮬레이터: LocalStack 대체 검증 기준"
 description: "Floci의 AWS API 에뮬레이션과 Docker 기반 실서비스 대체 구조를 분석하고, LocalStack에서 옮길 때 호환성·보안·상태 복구를 검증하는 기준을 제시한다."
 author: heracles-jo
 date: 2026-11-04 08:20:00 +0900
-categories: [Platform Engineering, Cloud]
-tags: [floci, aws-local-emulator, localstack, cloud-testing, testcontainers, platform-engineering]
+categories: [Platform Engineering, Cloud Infrastructure]
+tags: [floci, platform-engineering, aws-local-emulator, localstack]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/floci-local-aws-emulator-validation/cover.svg
   alt: "Floci AWS 로컬 에뮬레이터의 호환성과 운영 경계를 검증하는 표지"

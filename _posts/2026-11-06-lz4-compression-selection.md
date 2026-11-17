@@ -4,7 +4,7 @@ description: "LZ4 v1.11.0의 멀티스레드·소블록 개선을 바탕으로 Z
 author: heracles-jo
 date: 2026-11-06 08:07:00 +0900
 categories: [Data Engineering, Developer Tools]
-tags: [lz4, data-compression, zstandard, latency, frame-format, performance-testing]
+tags: [lz4, data-compression, zstandard, latency]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/lz4-compression-selection/cover.svg
   alt: "LZ4와 Zstd를 지연시간, 압축률, 프레임 호환성으로 비교하는 압축 선택 구조"

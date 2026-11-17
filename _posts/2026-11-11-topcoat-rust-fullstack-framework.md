@@ -4,7 +4,7 @@ description: "Topcoat의 서버 렌더링, Rust·JavaScript 이중 실행, shard
 author: heracles-jo
 date: 2026-11-11 08:28:00 +0900
 categories: [Developer Tools, Web Platform]
-tags: [topcoat, rust, web-framework, server-side-rendering, full-stack, web-platform]
+tags: [topcoat, rust, web-platform, web-framework]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/topcoat-rust-fullstack-framework/cover.svg
   alt: "Topcoat가 Rust 서버 렌더링과 브라우저 반응성을 연결하는 풀스택 웹 프레임워크 구조"

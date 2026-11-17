@@ -4,7 +4,7 @@ description: "Context Mode의 MCP 샌드박스·FTS5 검색·hook 라우팅을 �
 author: heracles-jo
 date: 2026-10-11 08:25:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [context-mode, context-engineering, mcp, ai-coding-agent, token-optimization, sandbox]
+tags: [context-mode, mcp, ai-coding-agent, sandbox, context-engineering, token-optimization]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/context-mode-agent-context-optimization/cover.svg
   alt: "대용량 도구 출력을 컨텍스트 밖에서 처리하고 필요한 결과만 AI 코딩 에이전트에 전달하는 구조"

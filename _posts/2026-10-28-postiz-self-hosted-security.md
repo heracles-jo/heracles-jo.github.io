@@ -4,7 +4,7 @@ description: "Postiz v2.25.3의 토큰 위조·파일 읽기 취약점을 출발
 author: heracles-jo
 date: 2026-10-28 08:50:00 +0900
 categories: [Security, Platform Engineering]
-tags: [postiz, self-hosting, social-media-automation, oauth, mcp-security, temporal]
+tags: [postiz, self-hosting, mcp-security, social-media-automation]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/postiz-self-hosted-security/cover.svg
   alt: "Postiz 셀프호스팅의 OAuth 토큰, Temporal 워크플로, 미디어 저장소와 패치 경계를 표현한 표지"

@@ -28,9 +28,6 @@ url: "https://heracles-jo.github.io"
 github:
   username: heracles-jo # GitHub 사용자명으로 변경
 
-twitter:
-  username: # Twitter 사용자명으로 변경
-
 social:
   # 전체 이름으로 변경한다.
   # Footer에서 기본 작성자 및 저작권자로 표시된다.
@@ -97,11 +94,11 @@ theme_mode: # [light | dark]
 cdn: "https://chirpy-img.netlify.app"
 
 # 사이드바에 표시되는 아바타. 로컬 또는 CORS 리소스를 지원한다.
-avatar: "https://heracles-jo.github.io/assets/img/profile/avatar.png"
+avatar: /assets/img/profile/avatar.jpg
 
 # SEO `og:image` 메타 태그에 사용되는 사이트 전체 소셜 미리보기 이미지 URL
 # front matter의 `page.image`로 개별 페이지에서 덮어쓸 수 있다.
-social_preview_image: # 문자열, 로컬 또는 CORS 리소스
+social_preview_image: /assets/img/social-preview.jpg
 
 # boolean 타입. 게시물의 TOC 표시 여부를 제어하는 전역 스위치
 toc: true
@@ -147,6 +144,8 @@ pwa:
       # - "/example"  # `<SITE_URL>/example/*`와 일치하는 URL은 PWA에 캐시되지 않는다.
 
 paginate: 10
+paginate_path: /page:num/
+seo_paginator_message: "페이지 %<current>s / %<total>s — "
 
 # 사이트의 기본 URL 경로
 baseurl: ""

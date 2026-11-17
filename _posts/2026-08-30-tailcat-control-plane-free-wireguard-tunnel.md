@@ -4,7 +4,7 @@ description: "Tailcat이 연결 토큰과 DERP로 NAT를 넘어 임시 WireGuard
 author: heracles-jo
 date: 2026-08-30 07:10:00 +0900
 categories: [Networking, Security]
-tags: [tailcat, tailscale, wireguard, nat-traversal, derp, network-security]
+tags: [tailcat, nat-traversal, tailscale, wireguard]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/tailcat-control-plane-free-wireguard-tunnel/cover.svg
   alt: "Tailcat 연결 토큰이 DERP 부트스트랩과 WireGuard 직접 경로를 만드는 구조"

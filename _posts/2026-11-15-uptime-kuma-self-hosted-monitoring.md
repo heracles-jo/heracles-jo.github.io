@@ -3,8 +3,8 @@ title: "Uptime Kuma 셀프호스팅 모니터링: 외부 감시·복구 설계 �
 description: "Uptime Kuma의 HTTP·TCP·DNS 감시와 상태 페이지를 운영할 때 감시 위치, 알림 실패, 보안 패치, 백업·복구를 검증하는 실무 기준을 정리한다."
 author: heracles-jo
 date: 2026-11-15 08:30:00 +0900
-categories: [Cloud, Observability]
-tags: [uptime-kuma, self-hosted-monitoring, synthetic-monitoring, status-page, incident-response, docker]
+categories: [Cloud Infrastructure, Observability]
+tags: [uptime-kuma, incident-response, docker, self-hosted-monitoring]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/uptime-kuma-self-hosted-monitoring/cover.svg
   alt: "Uptime Kuma 셀프호스팅 모니터링의 감시 위치, 알림, 상태 페이지, 복구 경계"

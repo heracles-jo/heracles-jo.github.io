@@ -3,8 +3,8 @@ title: "celld와 셀프호스팅 Durable Objects: 상태ful 서버리스가 다�
 description: "GitHub Trending에 오른 denoland/celld를 중심으로 Cloudflare Durable Objects 모델을 자체 인프라와 S3 호환 스토리지 위에서 운영하려는 흐름, 아키텍처, 도입 판단, 보안·운영 리스크를 분석한다."
 author: heracles-jo
 date: 2026-08-09 07:12:00 +0900
-categories: [Cloud Infrastructure, Serverless]
-tags: [github-trending, celld, durable-objects, serverless, cloudflare-workers, deno, rust, sqlite, s3, self-hosted]
+categories: [Cloud Infrastructure]
+tags: [celld, rust, self-hosted, sqlite]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-celld-self-hosted-durable-objects/cover.svg
   alt: "celld가 S3 호환 버킷과 셀 단위 SQLite를 이용해 셀프호스팅 Durable Objects를 구성하는 상태ful 서버리스 흐름"
@@ -42,7 +42,7 @@ celld를 선택한 이유는 “상태를 어디에 둘 것인가”라는 오�
 
 서버리스의 첫 번째 약속은 인프라 추상화였다. 함수 단위 배포, 이벤트 기반 실행, 사용량 기반 과금, 자동 확장. 하지만 실무에서는 곧 상태 관리가 병목이 됐다. 사용자 세션, WebSocket 연결, 문서 동시 편집, 채팅방, 워크플로 상태, 장시간 에이전트 작업, 게임 룸, IoT 디바이스 상태처럼 “작지만 오래 사는 상태”가 필요한 워크로드는 많다. 이를 순수 무상태 함수로만 구현하면 Redis, Postgres, DynamoDB, Queue, Pub/Sub, cache invalidation, optimistic locking이 빠르게 얽힌다.
 
-Cloudflare Durable Objects가 흥미로웠던 이유도 여기에 있다. 객체 하나에 요청을 직렬화하고, 객체 내부 저장소를 가까이에 두고, 이름 기반 라우팅으로 특정 상태 단위를 찾아간다. 개발자는 “이 문서의 동시 편집 상태는 이 객체가 관리한다”처럼 사고할 수 있다. celld는 이 모델을 자체 머신에서 실행하게 해준다. 클라우드 사업자의 글로벌 엣지 네트워크와 관리형 운영을 그대로 가져오는 것은 아니지만, 프로그래밍 모델과 상태 단위의 장점을 온프레미스, private cloud, 특정 리전, 비용 통제 환경에서 실험할 수 있게 한다.
+Cloudflare Durable Objects가 흥미로웠던 이유도 여기에 있다. 객체 하나에 요청을 직렬화하고, 객체 내부 저장소를 가까이에 두고, 이름 기반 라우팅으로 특정 상태 단위를 찾아간다. 개발자는 “이 문서의 동시 편집 상태는 이 객체가 관리한다”처럼 사고할 수 있다. celld는 이 모델을 자체 머신에서 실행하게 해준다. [Apple container가 경량 VM 격리를 선택한 배경](/posts/github-trending-apple-container-mac-linux-containers/)과 비교하면, celld는 실행 격리 자체보다 상태 소유권과 이동을 런타임 추상화의 중심에 둔다는 차이가 선명하다. 클라우드 사업자의 글로벌 엣지 네트워크와 관리형 운영을 그대로 가져오는 것은 아니지만, 프로그래밍 모델과 상태 단위의 장점을 온프레미스, private cloud, 특정 리전, 비용 통제 환경에서 실험할 수 있게 한다.
 
 이는 AI 시대의 애플리케이션 구조와도 맞닿아 있다. 장시간 동작하는 에이전트, 사용자별 메모리, 세션별 도구 상태, 스트리밍 UI, 협업형 캔버스는 모두 “한 번 요청하고 끝나는 함수”보다 “상태를 가진 작은 actor”에 가깝다. 다만 오늘 글의 초점은 AI 도구가 아니라 그 밑의 런타임 선택지다. 에이전트든 협업 앱이든, 결국 운영자는 상태의 소유권, 복제, 장애 복구, 비용 모델을 결정해야 한다.
 
@@ -64,7 +64,7 @@ celld에서 버킷은 단순 백업 저장소가 아니다. 배포물, cell stat
 
 ### 4. 네트워크 계층: peer HTTP와 ingress의 책임 분리
 
-[security 문서](https://github.com/denoland/celld/blob/main/docs/security.md)는 peer 요청에 HMAC, body signature, clock limit, replay protection이 있지만 peer protocol 자체가 TLS를 종료하지 않는다고 설명한다. 따라서 advertised address는 신뢰할 수 있는 private network나 WireGuard, Tailscale 같은 encrypted overlay 위에 둬야 한다. public TLS와 사용자 인증은 celld가 아니라 ingress, reverse proxy, 애플리케이션 계층의 책임이다. 이 지점은 PoC에서는 쉽게 넘어가지만 운영 도입에서는 가장 먼저 설계해야 하는 경계다.
+[security 문서](https://github.com/denoland/celld/blob/main/docs/security.md)는 peer 요청에 HMAC, body signature, clock limit, replay protection이 있지만 peer protocol 자체가 TLS를 종료하지 않는다고 설명한다. 따라서 advertised address는 신뢰할 수 있는 private network나 WireGuard, Tailscale 같은 encrypted overlay 위에 둬야 한다. Kubernetes 환경이라면 [Cilium eBPF 네트워킹 전환에서 다룬 정책·관측성·업그레이드 기준](/posts/cilium-ebpf-networking-migration/)까지 포함해 peer 트래픽의 허용 범위와 가시성을 검증해야 한다. public TLS와 사용자 인증은 celld가 아니라 ingress, reverse proxy, 애플리케이션 계층의 책임이다. 이 지점은 PoC에서는 쉽게 넘어가지만 운영 도입에서는 가장 먼저 설계해야 하는 경계다.
 
 ## 기존 방식과 비교: Cloudflare, Fly Machines, Lambda, Actor 프레임워크
 
@@ -100,7 +100,7 @@ celld의 [limitations 문서](https://github.com/denoland/celld/blob/main/docs/l
 4. **호환성 착각**: Cloudflare 전체 플랫폼을 기대하면 실패한다. KV, cron, managed TLS, custom domain 같은 기능은 별도 설계가 필요하다.
 5. **성숙도와 장애 사례 부족**: v0.1.0 단계의 alpha 프로젝트다. 보안 수정은 최신 릴리스 중심이며, 장기 운영 사례와 tooling은 아직 제한적이다.
 
-이 때문에 celld는 지금 당장 핵심 결제 시스템이나 규제 대상 고객 데이터를 올릴 대상이라기보다, 상태ful edge/serverless 모델을 검증하는 PoC와 내부 도구, 제한된 트래픽의 협업 기능부터 접근하는 것이 합리적이다.
+이 때문에 celld는 지금 당장 핵심 결제 시스템이나 규제 대상 고객 데이터를 올릴 대상이라기보다, 상태ful edge/serverless 모델을 검증하는 PoC와 내부 도구, 제한된 트래픽의 협업 기능부터 접근하는 것이 합리적이다. 신뢰하지 않는 사용자 코드를 함께 실행해야 한다면 [CubeSandbox의 microVM 기반 AI 코드 실행 격리](/posts/github-trending-cubesandbox-microvm-ai-sandbox/)처럼 cell 상태 모델과 별도의 실행 샌드박스를 두는 편이 안전하다.
 
 ## PoC 체크리스트: “실행된다”보다 “운영할 수 있다”를 확인하라
 

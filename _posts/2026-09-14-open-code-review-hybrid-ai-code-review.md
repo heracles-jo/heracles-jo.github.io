@@ -4,7 +4,7 @@ description: "Open Code Review의 결정론적 파일 선택과 LLM 리뷰를 �
 author: heracles-jo
 date: 2026-09-14 07:55:00 +0900
 categories: [Developer Tools, AI Infrastructure]
-tags: [open-code-review, ai-code-review, static-analysis, llm-agent, software-quality, devsecops]
+tags: [open-code-review, devsecops, software-quality, ai-code-review]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/open-code-review-hybrid-ai-code-review/cover.svg
   alt: "결정론적 파이프라인과 LLM 에이전트를 결합한 AI 코드 리뷰 품질 게이트"

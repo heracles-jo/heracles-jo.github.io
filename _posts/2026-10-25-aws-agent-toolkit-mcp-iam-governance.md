@@ -3,8 +3,8 @@ title: "AWS Agent Toolkit 권한 설계: MCP·IAM·감사 기준"
 description: "AWS Agent Toolkit의 스킬·MCP·IAM 계층을 분리해 에이전트의 클라우드 변경 권한, 자격 증명, CloudTrail 감사와 단계적 도입 기준을 정리한다."
 author: heracles-jo
 date: 2026-10-25 08:32:00 +0900
-categories: [Cloud, Security]
-tags: [aws-agent-toolkit, aws-mcp-server, iam, cloudtrail, ai-agent, cloud-security]
+categories: [Cloud Infrastructure, Security]
+tags: [aws-agent-toolkit, ai-agent, iam, aws-mcp-server]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/aws-agent-toolkit-mcp-iam-governance/cover.svg
   alt: "AWS Agent Toolkit에서 에이전트 스킬, MCP 도구, IAM 정책과 감사 로그를 분리해 통제하는 구조"

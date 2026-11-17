@@ -4,7 +4,7 @@ description: "Vaultwarden로 Bitwarden 호환 비밀번호 저장소를 직접 �
 author: heracles-jo
 date: 2026-08-24 07:45:00 +0900
 categories: [Security, Self Hosting]
-tags: [vaultwarden, password-manager, self-hosting, credential-security, backup, zero-knowledge]
+tags: [vaultwarden, self-hosting, backup, password-manager]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/vaultwarden-self-hosted-password-manager/cover.svg
   alt: "Vaultwarden 셀프호스팅 비밀번호 관리의 암호화 경계와 운영 책임을 보여주는 다이어그램"

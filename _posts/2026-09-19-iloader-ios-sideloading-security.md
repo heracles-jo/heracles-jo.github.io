@@ -4,7 +4,7 @@ description: "iLoader가 SideStore 설치와 IPA 서명을 단순화하는 구�
 author: heracles-jo
 date: 2026-09-19 08:25:00 +0900
 categories: [Mobile, Security]
-tags: [iloader, ios-sideloading, sidestore, apple-certificate, device-pairing, mobile-security]
+tags: [iloader, mobile-security, ios-sideloading, sidestore]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/iloader-ios-sideloading-security/cover.svg
   alt: "iLoader를 이용한 iOS 사이드로딩에서 Apple 계정과 인증서 및 기기 페어링 경계를 설명하는 표지"

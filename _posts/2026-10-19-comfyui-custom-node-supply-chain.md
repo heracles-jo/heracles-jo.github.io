@@ -4,7 +4,7 @@ description: "ComfyUI 워크플로를 팀 제작 파이프라인으로 운영할
 author: heracles-jo
 date: 2026-10-19 08:38:00 +0900
 categories: [AI Infrastructure, Security]
-tags: [comfyui, custom-nodes, workflow, ai-infrastructure, supply-chain, gpu-operations]
+tags: [comfyui, ai-infrastructure, workflow, custom-nodes]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/comfyui-custom-node-supply-chain/cover.svg
   alt: "ComfyUI 워크플로와 커스텀 노드, 모델을 검증 가능한 공급망으로 운영하는 구조"

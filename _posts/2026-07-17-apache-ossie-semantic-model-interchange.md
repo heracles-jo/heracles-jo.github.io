@@ -4,7 +4,7 @@ description: "Apache Ossie의 벤더 중립 시맨틱 모델 규격을 바탕으
 author: heracles-jo
 date: 2026-07-17 07:35:00 +0900
 categories: [Data Engineering, AI Infrastructure]
-tags: [apache-ossie, semantic-layer, business-intelligence, data-governance, ai-agent, metrics]
+tags: [apache-ossie, ai-agent, data-governance, semantic-layer]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/apache-ossie-semantic-model-interchange/cover.svg
   alt: "BI 도구와 AI 에이전트가 Apache Ossie 시맨틱 모델을 공통 계약으로 사용하는 구조"
@@ -71,6 +71,22 @@ Ossie의 [core specification](https://github.com/apache/ossie/blob/main/core-spe
 그래서 [시스템 프롬프트 거버넌스](/posts/github-trending-system-prompts-leaks-ai-governance/)에서 다룬 비밀 관리와 별도로, semantic metadata에 대한 접근 통제가 필요하다. 사용자가 원천 행을 읽을 수 없는데 지표 정의와 가능한 차원 목록은 볼 수 있는지, 행 수준 보안이 지표 실행 시점에 다시 적용되는지, 에이전트가 생성한 쿼리에 tenant filter가 강제되는지를 분리해서 설계해야 한다.
 
 또 하나의 위험은 표준이 신뢰를 자동으로 만들어 준다는 착각이다. 잘못 승인된 지표를 표준 형식으로 빠르게 배포하면 오류의 전파 속도만 빨라진다. 스키마 validator는 타입과 필수 필드를 확인할 수 있지만 “순매출 정의가 회사 정책과 맞는가”는 판단하지 못한다. 코드 리뷰와 마찬가지로 지표 변경에는 domain owner 승인, 영향 분석, 이전·신규 결과 diff, rollback 가능한 버전이 필요하다.
+
+## 운영 아키텍처는 레지스트리·변환·실행을 분리해야 한다
+
+Ossie를 도입한다고 해서 하나의 중앙 서비스가 모든 책임을 가져야 하는 것은 아니다. 오히려 운영 경계를 세 층으로 나누는 편이 안전하다. **레지스트리 계층**은 승인된 시맨틱 모델과 버전, 소유자, 호환성 상태를 저장한다. **변환 계층**은 각 BI·dbt·metric store 형식과 Ossie 사이를 오가며 손실과 경고를 기록한다. **실행 계층**은 Snowflake, BigQuery, Databricks, BI 엔진처럼 실제 권한과 비용 정책을 적용해 질의를 수행한다.
+
+이 구분이 없으면 converter가 곧 배포 도구가 되고, 파일 검증 성공이 운영 승인으로 오해되기 쉽다. 예를 들어 개발자가 로컬에서 변환한 YAML은 pull request에서 schema validation과 golden query를 통과한 뒤 레지스트리에 병합되어야 한다. 그 다음 각 실행 엔진이 승인된 버전을 가져가되, 지원하지 않는 표현식이나 관계가 있으면 배포를 중단하고 명시적 예외를 요구해야 한다. 실행 엔진의 row-level security와 warehouse 권한은 시맨틱 모델 바깥에서 계속 강제해야 한다.
+
+버전 전략도 필요하다. 필드 설명 수정과 계산식 변경은 같은 종류의 변경이 아니다. 설명·태그 보완은 호환 변경으로 처리할 수 있지만, 분모·기간·조인 조건이 바뀌면 지표 소비자에게 사실상 API breaking change다. `revenue_v2`처럼 이름을 계속 늘리기보다 모델 버전, 유효 시작일, 폐기 예정일, 영향받는 대시보드와 에이전트를 함께 기록해야 한다. 이전 버전 결과를 일정 기간 재현할 수 있어야 감사와 회계 조정도 가능하다.
+
+## 조직 운영에서는 소유권과 예외 처리 방식이 성패를 가른다
+
+시맨틱 표준화는 데이터 플랫폼팀만의 프로젝트로 시작하면 쉽게 막힌다. 플랫폼팀은 형식과 검증기를 운영할 수 있지만 “활성 고객”, “순매출”, “위험 거래”의 정의를 최종 승인할 수는 없다. 지표마다 domain owner, technical owner, data steward를 구분하고, 변경 요청에는 정의의 목적·예상 영향·비교 결과를 포함해야 한다. 소유자가 없는 지표는 공통 계약으로 승격하지 않는 것이 낫다.
+
+모든 벤더 기능을 공통 규격에 억지로 맞추는 것도 피해야 한다. 조직 공통으로 이동해야 하는 핵심 의미는 portable core로 두고, 특정 BI의 시각화 설정이나 엔진 고유 최적화는 namespaced extension으로 분리할 수 있다. 다만 확장 속성이 다른 도구에서 사라질 때는 조용히 버리지 말고, 호환성 보고서에 손실로 표시해야 한다. 표준의 가치는 차이를 숨기는 데 있지 않고 예외를 승인 가능한 형태로 드러내는 데 있다.
+
+운영 지표는 모델 개수보다 실패 양상을 봐야 한다. 변환 경고 수, 미지원 표현식 비율, golden query 불일치, owner 승인 대기 시간, 폐기 버전 사용량, AI 질의의 권한 거부율을 추적하면 표준화가 실제로 불일치를 줄이는지 알 수 있다. 반대로 파일 수와 참여 도구 수만 늘고 수동 보정이 계속 증가한다면, 공통 규격이 아니라 새로운 번역 계층을 하나 더 만든 것이다.
 
 ## 기존 도구를 대체하지 않고 얇게 도입하는 순서
 

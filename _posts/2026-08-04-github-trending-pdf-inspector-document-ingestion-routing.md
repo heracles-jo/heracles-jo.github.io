@@ -3,8 +3,8 @@ title: "PDF Inspector와 문서 수집 라우팅: OCR 비용을 줄이는 Rust �
 description: "GitHub Trending에 오른 firecrawl/pdf-inspector를 중심으로 PDF 분류, 구조 기반 텍스트 추출, OCR 라우팅, RAG 문서 수집 파이프라인의 비용·성능·보안 리스크를 실무 관점에서 분석한다."
 author: heracles-jo
 date: 2026-08-04 07:29:10 +0900
-categories: [Data Engineering, Document AI]
-tags: [github-trending, pdf-inspector, pdf-parsing, document-ai, ocr, rag, rust, wasm, python, nodejs, firecrawl, pymupdf, markitdown, unstructured]
+categories: [Data Engineering, AI Infrastructure]
+tags: [pdf-inspector, rust, rag, python, document-ai, ocr]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-pdf-inspector-document-ingestion-routing/cover.svg
   alt: "PDF Inspector가 텍스트 기반 PDF와 스캔 PDF를 먼저 분류해 OCR과 문서 AI 파이프라인의 비용과 지연을 줄이는 문서 수집 전략"
@@ -58,7 +58,9 @@ PDF 처리 도구는 기능 이름만 보면 모두 비슷해 보인다. 그러�
 | OCR 엔진(Tesseract, cloud OCR 등) | 이미지 문서와 스캔본 처리에 필수 | 텍스트 PDF에 쓰면 비용·지연 낭비, 개인정보 전송 리스크 | pdf-inspector는 OCR을 대체하기보다 OCR 호출 대상을 줄인다 |
 | LLM 기반 문서 파서 | 의미 해석, 복잡한 표·양식 이해에 강할 수 있음 | 비용, 지연, 환각, 감사 가능성, 데이터 경계 문제가 큼 | pdf-inspector는 LLM 이전에 결정론적 품질 신호를 만든다 |
 
-README의 벤치마크 표도 이 위치를 뒷받침한다. 프로젝트 문서는 opendataloader-bench 200개 PDF 코퍼스 기준으로 pdf-inspector가 overall 0.875, reading order 0.915, tables(TEDS) 0.814, speed 0.470s를 기록했다고 제시한다. 같은 표에서 liteparse는 overall 0.873과 speed 0.750s, opendataloader는 0.831과 2.569s, pymupdf4llm은 0.735와 17.117s, markitdown은 0.589와 16.165s로 표시되어 있다. 이 벤치마크는 2026년 7월 31일 Apple M4 Pro에서 갱신됐고 OCR과 모델 기반 파싱은 제외했다고 문서에 명시되어 있다. 벤치마크는 특정 코퍼스와 설정의 스냅샷이므로 구매·도입 결정을 대신할 수는 없지만, “가벼운 구조 기반 전처리 계층”이라는 방향성은 충분히 읽을 수 있다.
+범용 포맷 통합이 우선인 조직이라면 [MarkItDown을 RAG 인입 거버넌스로 보는 접근](/posts/github-trending-markitdown-document-ingestion-governance/)이 더 자연스럽다. 반대로 PDF별 OCR 필요성, 깨진 인코딩, 페이지 단위 품질을 라우팅 근거로 써야 한다면 pdf-inspector를 앞단 분류기로 두는 편이 역할이 명확하다.
+
+README의 벤치마크 표도 이 위치를 뒷받침한다. 프로젝트 문서는 opendataloader-bench 200개 PDF 코퍼스 기준으로 pdf-inspector가 overall 0.875, reading order 0.915, tables(TEDS) 0.814, speed 0.470s를 기록했다고 제시한다. 같은 표에서 liteparse는 overall 0.873과 speed 0.750s, opendataloader는 0.831과 2.569s, pymupdf4llm은 0.735와 17.117s, markitdown은 0.589와 16.165s로 표시되어 있다. [LiteParse를 RAG 데이터 파이프라인에 배치할 때의 운영 기준](/posts/github-trending-document-parser-liteparse/)과 비교하면, 단일 점수보다 언어권·표·읽기 순서별 실패 분포를 보는 것이 중요하다. 이 벤치마크는 2026년 7월 31일 Apple M4 Pro에서 갱신됐고 OCR과 모델 기반 파싱은 제외했다고 문서에 명시되어 있다. 벤치마크는 특정 코퍼스와 설정의 스냅샷이므로 구매·도입 결정을 대신할 수는 없지만, “가벼운 구조 기반 전처리 계층”이라는 방향성은 충분히 읽을 수 있다.
 
 ![문서 처리 방식별 비용, 정확도, 운영 리스크를 비교한 선택 매트릭스](https://heracles-jo.github.io/assets/img/posts/github-trending-pdf-inspector-document-ingestion-routing/decision-matrix.svg)
 
@@ -82,7 +84,7 @@ README의 벤치마크 표도 이 위치를 뒷받침한다. 프로젝트 문서
 
 pdf-inspector를 가장 안전하게 쓰는 방식은 단일 만능 파서가 아니라 **문서 라우터**로 배치하는 것이다. 입력 단계에서 파일의 메타데이터와 해시를 기록하고, pdf-inspector로 빠른 구조 분석을 수행한 뒤, 결과에 따라 여러 처리 경로로 분기한다. 텍스트 기반 문서는 구조 기반 Markdown 추출로 보낸다. 스캔 문서는 OCR로 보낸다. 혼합 문서는 페이지 단위로 분리하고, 텍스트 페이지와 이미지 페이지를 다르게 처리한다. 품질이 낮은 문서는 고급 파서 또는 사람 검수 큐로 보낸다. 이후 모든 경로는 공통 normalized document schema로 합류해 청킹, 임베딩, 검색 인덱싱으로 넘어간다.
 
-이때 반드시 남겨야 할 로그는 원본 파일 해시, 페이지 수, 분류 결과, confidence, 추출 엔진 버전, OCR 사용 여부, 처리 시간, fallback 이유, 오류 코드, 최종 텍스트 길이, 표 추출 여부다. 이 정보가 있어야 나중에 “왜 이 계약서 검색 결과가 이상한가”, “왜 이번 달 OCR 비용이 늘었는가”, “어떤 문서 유형에서 품질이 낮은가”를 추적할 수 있다. 문서 AI 운영은 모델 프롬프트만의 문제가 아니라 수집 단계의 관측성 문제다.
+이때 반드시 남겨야 할 로그는 원본 파일 해시, 페이지 수, 분류 결과, confidence, 추출 엔진 버전, OCR 사용 여부, 처리 시간, fallback 이유, 오류 코드, 최종 텍스트 길이, 표 추출 여부다. 이 정보가 있어야 나중에 “왜 이 계약서 검색 결과가 이상한가”, “왜 이번 달 OCR 비용이 늘었는가”, “어떤 문서 유형에서 품질이 낮은가”를 추적할 수 있다. 정규화된 청크를 로컬 색인으로 넘긴다면 [TurboVec의 로컬 벡터 인덱스 운영 기준](/posts/github-trending-turbovec-local-vector-index/)처럼 재색인 비용과 원문-벡터 버전 연결도 함께 관리해야 한다. 문서 AI 운영은 모델 프롬프트만의 문제가 아니라 수집 단계의 관측성 문제다.
 
 ## PoC 체크리스트
 

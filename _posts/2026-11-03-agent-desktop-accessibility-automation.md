@@ -4,7 +4,7 @@ description: "agent-desktop의 접근성 트리·snapshot ref·재시도 계약�
 author: heracles-jo
 date: 2026-11-03 08:35:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [agent-desktop, desktop-automation, computer-use-agent, accessibility-api, gui-automation, ai-agent]
+tags: [agent-desktop, ai-agent, computer-use-agent, gui-automation]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/agent-desktop-accessibility-automation/cover.svg
   alt: "agent-desktop 접근성 트리 기반 AI 데스크톱 자동화의 검증 기준 표지"

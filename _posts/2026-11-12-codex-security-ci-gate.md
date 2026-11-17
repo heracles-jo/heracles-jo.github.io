@@ -4,7 +4,7 @@ description: "Codex Security의 diff·Deep Scan, 패치 검증, SARIF와 GitHub 
 author: heracles-jo
 date: 2026-11-12 07:52:00 +0900
 categories: [Security, Developer Tools]
-tags: [codex-security, ai-security-scan, devsecops, github-actions, sarif, vulnerability-management]
+tags: [codex-security, devsecops, vulnerability-management, ai-security-scan]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/codex-security-ci-gate/cover.svg
   alt: "Codex Security 스캔을 보고 모드에서 검증 가능한 CI 게이트로 승격하는 구조"

@@ -3,8 +3,8 @@ title: "SkillSpector와 AI Agent Skill 보안의 현실화"
 description: "GitHub Trending에 오른 NVIDIA SkillSpector를 중심으로 AI 에이전트 스킬, MCP 도구, 프롬프트 기반 자동화가 새로운 공급망 보안 영역으로 떠오르는 이유와 실무 통제 방안을 분석합니다."
 author: heracles-jo
 date: 2026-06-11 07:25:00 +0900
-categories: [Security, AI]
-tags: [github-trending, skillspector, ai-agent-security, agent-skills, mcp-security, prompt-injection, supply-chain-security, devsecops]
+categories: [Security, AI Infrastructure]
+tags: [skillspector, devsecops, agent-skills, mcp-security, supply-chain-security, ai-agent-security]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-skillspector-agent-skill-security/cover.svg
   alt: "AI 에이전트 스킬을 설치하기 전에 정적 분석, 취약점 패턴, LLM 의미 분석, SARIF 리포트로 위험을 점검하는 SkillSpector 보안 흐름"
@@ -42,11 +42,19 @@ SAST, SCA, secret scanning, container scanning은 여전히 필요하다. 그러
 
 ## SkillSpector의 실무적 의미
 
-SkillSpector의 가치는 “완벽한 탐지”가 아니라 “설치 전 멈춤 지점”을 만든다는 데 있다. 지금 많은 팀은 에이전트 스킬을 브라우저에서 보고 괜찮아 보이면 설치한다. 또는 유명 개발자/기업의 저장소라는 이유로 신뢰한다. 그러나 오픈소스 공급망에서 이름값만으로 안전을 보장할 수 없다는 사실은 이미 충분히 배웠다. 에이전트 스킬도 마찬가지다. 최소한 설치 전 스캔, 변경 시 재스캔, CI 리포트 저장, 고위험 항목 수동 리뷰 같은 절차가 필요하다.
+SkillSpector의 가치는 “완벽한 탐지”가 아니라 “설치 전 멈춤 지점”을 만든다는 데 있다. 지금 많은 팀은 에이전트 스킬을 브라우저에서 보고 괜찮아 보이면 설치한다. 또는 유명 개발자/기업의 저장소라는 이유로 신뢰한다. 그러나 [Trivy가 컨테이너와 IaC 공급망에서 표준화한 지속 스캔 방식](/posts/github-trending-trivy-supply-chain-security/)이 보여주듯, 이름값보다 아티팩트 버전과 검사 증거가 중요하다. 에이전트 스킬도 마찬가지다. 최소한 설치 전 스캔, 변경 시 재스캔, CI 리포트 저장, 고위험 항목 수동 리뷰 같은 절차가 필요하다.
 
 README에 따르면 SkillSpector는 Git repo, URL, zip, 디렉터리, 단일 SKILL.md 파일을 스캔할 수 있고, terminal, JSON, Markdown, SARIF 결과를 낼 수 있다. SARIF는 특히 중요하다. GitHub code scanning이나 보안 대시보드에 붙일 수 있기 때문이다. 스킬 보안을 개발자의 수동 판단이 아니라 DevSecOps 파이프라인의 일부로 가져갈 수 있다는 뜻이다.
 
-또 하나의 의미는 보안팀과 플랫폼팀의 협업 지점이다. 보안팀이 모든 스킬 내용을 직접 리뷰하기는 어렵다. 플랫폼팀도 개발 생산성을 이유로 무조건 막을 수는 없다. 대신 공통 스캐너와 정책을 만들 수 있다. 예를 들어 사내 허용 스킬 registry를 두고, 외부 스킬은 SkillSpector 스캔 결과와 코드 오너 승인을 통과해야 설치되도록 한다. MCP 도구를 호출하는 스킬은 별도 등급으로 분류하고, 데이터 유출 가능성이 있는 패턴은 배포 전 차단한다.
+또 하나의 의미는 보안팀과 플랫폼팀의 협업 지점이다. 보안팀이 모든 스킬 내용을 직접 리뷰하기는 어렵다. 플랫폼팀도 개발 생산성을 이유로 무조건 막을 수는 없다. 대신 공통 스캐너와 정책을 만들 수 있다. 예를 들어 사내 허용 스킬 registry를 두고, 외부 스킬은 SkillSpector 스캔 결과와 코드 오너 승인을 통과해야 설치되도록 한다. MCP 도구를 호출하는 스킬은 별도 등급으로 분류하고, 데이터 유출 가능성이 있는 패턴은 배포 전 차단한다. 이때 [Cloudflare Security Audit Skill 검증 구조](/posts/cloudflare-security-audit-skill-validation-pipeline/)처럼 탐지 규칙, 실행 증거, 승인 결과를 분리해 저장하면 스캐너 업데이트 후에도 과거 판단을 재검토하기 쉽다.
+
+## 스캔 결과를 운영 정책으로 바꾸는 구조
+
+도입에서 가장 흔한 실패는 스캔을 한 번 실행하고 PDF나 SARIF 파일만 보관하는 것이다. 실제 정책에는 **입력 아티팩트의 고정**, **위험도별 처리**, **런타임 권한**, **예외의 만료**가 함께 있어야 한다. 외부 스킬을 가져올 때는 저장소 URL만 기록하지 말고 commit hash 또는 서명된 릴리스, 포함 파일 목록, 의존하는 MCP 서버와 스크립트까지 하나의 검토 단위로 묶어야 한다. 그렇지 않으면 승인 이후 upstream 변경이 들어와도 같은 이름의 스킬이라는 이유로 계속 신뢰하게 된다.
+
+위험도는 탐지 개수보다 행동 가능성으로 나누는 편이 낫다. 예를 들어 외부 전송과 secret 읽기가 함께 있는 스킬, 셸 명령을 조립해 즉시 실행하는 스킬, 사용자 확인 없이 배포·삭제를 수행하는 스킬은 차단 또는 격리 실행 대상으로 둔다. 반면 문서 표현이 모호하거나 검증 단계가 빠진 항목은 코드 오너 리뷰와 수정 요청으로 처리할 수 있다. 이 분류가 없으면 경고가 많은 정상 스킬과 짧지만 위험한 스킬이 같은 대기열에 섞여 보안팀의 시간을 소모한다.
+
+예외 승인에도 종료 조건이 필요하다. 특정 프로젝트에서만 허용하는지, 어떤 도구 권한으로 실행하는지, 다음 업데이트 때 재검토할지, 승인 유효기간이 언제 끝나는지를 기록해야 한다. 스캔 통과는 실행 권한 부여와 같지 않다. 정적 검사를 통과한 스킬도 실제 실행에서는 네트워크 차단, 읽기 전용 파일 범위, 배포 전 승인, 명령 기록 같은 통제를 받아야 한다. 그래야 SkillSpector는 단순 탐지 도구가 아니라 스킬 registry와 에이전트 런타임 사이의 정책 게이트가 된다.
 
 ## 한계와 오탐 문제
 
@@ -62,7 +70,7 @@ LLM 기반 의미 분석도 장단점이 있다. 정적 패턴보다 은근한 �
 
 두 번째 단계는 신규 스킬 도입 절차를 만드는 것이다. 외부 저장소를 직접 설치하지 않고, 내부 mirror나 registry를 거치게 한다. mirror 시점에 스캔 결과와 commit hash를 기록하고, 업데이트가 들어오면 diff와 함께 재검토한다. 이 방식은 npm lockfile이나 container digest를 관리하는 방식과 유사하다. “어떤 버전의 스킬을 언제 승인했는가”를 남기는 것이 핵심이다.
 
-세 번째 단계는 런타임 권한을 줄이는 것이다. 스킬 스캔이 통과했더라도 에이전트에게 모든 도구 권한을 주면 방어선이 얇다. 파일 읽기 범위, 네트워크 접근, 배포 명령, secret 접근, MCP tool 호출 범위를 작업별로 나누고, 위험 단계에서는 사람 승인을 요구해야 한다. 스킬 보안은 설치 전 검사와 실행 시 권한 제어가 함께 가야 한다.
+세 번째 단계는 런타임 권한을 줄이는 것이다. 스킬 스캔이 통과했더라도 에이전트에게 모든 도구 권한을 주면 방어선이 얇다. 파일 읽기 범위, 네트워크 접근, 배포 명령, secret 접근, MCP tool 호출 범위를 작업별로 나누고, 위험 단계에서는 사람 승인을 요구해야 한다. 특히 셸을 사용하는 스킬은 [위험 명령을 실행 직전에 차단하는 dcg의 접근](/posts/ai-agent-destructive-command-guard/)처럼 정적 검사와 별도의 런타임 방어선을 두는 편이 안전하다. 스킬 보안은 설치 전 검사와 실행 시 권한 제어가 함께 가야 한다.
 
 ![SkillSpector 도입 체크리스트](https://heracles-jo.github.io/assets/img/posts/github-trending-skillspector-agent-skill-security/checklist.svg)
 

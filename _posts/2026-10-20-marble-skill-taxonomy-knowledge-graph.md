@@ -4,7 +4,7 @@ description: "Marble Skill Taxonomy의 선수학습 DAG와 교육과정 정렬 �
 author: heracles-jo
 date: 2026-10-20 08:20:00 +0900
 categories: [Data Engineering, AI Infrastructure]
-tags: [marble-skill-taxonomy, knowledge-graph, education-data, data-governance, open-data, curriculum]
+tags: [marble-skill-taxonomy, data-governance, knowledge-graph, education-data]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/marble-skill-taxonomy-knowledge-graph/cover.svg
   alt: "교육 지식 그래프의 토픽과 선수학습 관계를 검증하는 데이터 파이프라인"

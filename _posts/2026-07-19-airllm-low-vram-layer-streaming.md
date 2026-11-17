@@ -3,8 +3,8 @@ title: "저VRAM LLM 추론: AirLLM의 레이어 스트리밍이 맞는 경우"
 description: "AirLLM이 거대 모델을 한 레이어씩 GPU에 올리는 원리와 디스크 I/O 병목, 처리량·보안 한계를 짚고 저사양 환경에서의 현실적인 도입 기준을 제시한다."
 author: heracles-jo
 date: 2026-07-19 02:40:00 +0900
-categories: [AI Infrastructure, LLMOps]
-tags: [airllm, llm-inference, gpu-memory, model-streaming, quantization, local-ai]
+categories: [AI Infrastructure]
+tags: [airllm, local-ai, llm-inference, gpu-memory]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/airllm-low-vram-layer-streaming/cover.svg
   alt: "AirLLM이 모델 레이어를 디스크에서 GPU로 순차 전송해 적은 VRAM으로 추론하는 구조"

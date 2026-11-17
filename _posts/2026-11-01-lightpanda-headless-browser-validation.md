@@ -4,7 +4,7 @@ description: "Lightpanda의 Zig·V8·CDP 구조를 Chromium과 비교해 호환�
 author: heracles-jo
 date: 2026-11-01 08:05:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [lightpanda, headless-browser, browser-automation, cdp, web-platform-tests, ai-agent]
+tags: [lightpanda, ai-agent, headless-browser, browser-automation]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/lightpanda-headless-browser-validation/cover.svg
   alt: "Lightpanda를 Chromium 기반 헤드리스 브라우저와 호환성·격리·성능 기준으로 비교하는 표지"

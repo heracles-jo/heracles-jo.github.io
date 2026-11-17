@@ -3,8 +3,8 @@ title: "AI 설계 문서 리뷰: Elephant-Goldfish Model 격리 기준"
 description: "Elephant-Goldfish Model의 깊은 설계 문맥과 독립 리뷰어 분리를 분석하고, AI 설계 검토의 편향·문서 드리프트·운영 비용을 통제하는 기준을 제시한다."
 author: heracles-jo
 date: 2026-11-14 08:05:00 +0900
-categories: [AI, Developer Tools]
-tags: [elephant-goldfish-model, ai-design-review, spec-driven-development, coding-agent, context-isolation, design-doc]
+categories: [AI Infrastructure, Developer Tools]
+tags: [elephant-goldfish-model, coding-agent, ai-design-review, spec-driven-development]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/elephant-goldfish-ai-design-review/cover.svg
   alt: "깊은 문맥의 설계 에이전트와 독립된 리뷰 에이전트를 분리하는 Elephant-Goldfish Model"

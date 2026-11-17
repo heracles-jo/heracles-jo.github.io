@@ -4,7 +4,7 @@ description: "GitHub Trending에 오른 Microsoft MarkItDown을 중심으로 Off
 author: heracles-jo
 date: 2026-09-09 07:43:00 +0900
 categories: [AI Infrastructure, Data Engineering]
-tags: [github-trending, markitdown, document-ingestion, rag, markdown, llmops, data-pipeline, docling, unstructured, pandoc, security]
+tags: [markitdown, rag, llmops, data-pipeline, security, unstructured]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-markitdown-document-ingestion-governance/cover.svg
   alt: "MarkItDown이 PDF와 Office 문서를 Markdown 중간표현으로 바꿔 RAG와 LLM 파이프라인에 공급하는 문서 인입 거버넌스 흐름"
@@ -48,7 +48,7 @@ MarkItDown을 아키텍처 관점에서 보면 네 층으로 나눌 수 있다. 
 
 세 번째는 **Markdown 출력 층**이다. 여기서 제목, 목록, 표, 링크, 이미지 설명, 메타데이터가 텍스트 분석에 적합한 형태로 정리된다. 실무에서는 이 출력물을 그대로 벡터 DB에 넣기보다 후처리 계층을 둬야 한다. 예를 들어 문서 ID, 원본 경로, 원본 해시, 변환기 버전, 변환 시각, 권한 그룹, 페이지 번호, 슬라이드 번호, 시트명, 언어, 민감도 레이블을 메타데이터로 붙여야 한다. RAG에서 “답변은 맞지만 출처가 틀림”이라는 문제는 대개 이 메타데이터 설계가 약할 때 발생한다.
 
-네 번째는 **소비 계층**이다. Markdown은 청킹, 임베딩, 키워드 색인, 요약, 정책 검사, 지식 그래프 추출, 에이전트 컨텍스트 구성으로 이어진다. 이때 청킹 전략은 변환 품질과 함께 설계해야 한다. 제목 계층을 기준으로 chunk를 나눌지, 표는 별도 chunk로 분리할지, PowerPoint 한 장을 하나의 chunk로 볼지, 긴 Excel 시트는 행 단위로 나눌지에 따라 검색 결과가 크게 달라진다. MarkItDown을 도입한다는 것은 `pip install`이 아니라, 이 소비 계층까지 포함한 문서 공급망을 설계한다는 뜻이다.
+네 번째는 **소비 계층**이다. Markdown은 청킹, 임베딩, 키워드 색인, 요약, 정책 검사, 지식 그래프 추출, 에이전트 컨텍스트 구성으로 이어진다. 이때 청킹 전략은 변환 품질과 함께 설계해야 한다. 제목 계층을 기준으로 chunk를 나눌지, 표는 별도 chunk로 분리할지, PowerPoint 한 장을 하나의 chunk로 볼지, 긴 Excel 시트는 행 단위로 나눌지에 따라 검색 결과가 크게 달라진다. 추출된 개념을 분류 체계로 연결하려면 [Marble 기반 스킬 택소노미 지식 그래프 검증](/posts/marble-skill-taxonomy-knowledge-graph/)처럼 엔터티 병합과 평가 데이터도 별도 계층으로 둬야 한다. MarkItDown을 도입한다는 것은 `pip install`이 아니라, 이 소비 계층까지 포함한 문서 공급망을 설계한다는 뜻이다.
 
 ![MarkItDown, Docling, Unstructured, Pandoc 비교](https://heracles-jo.github.io/assets/img/posts/github-trending-markitdown-document-ingestion-governance/comparison.svg)
 
@@ -60,7 +60,7 @@ MarkItDown을 아키텍처 관점에서 보면 네 층으로 나눌 수 있다. 
 
 [Pandoc](https://github.com/jgm/pandoc)은 범용 마크업 변환의 표준에 가까운 도구다. Markdown, LaTeX, HTML, EPUB, docx 등 문서 빌드와 출판 파이프라인에는 여전히 강력하다. 그러나 LLM 인입 관점에서 이미지 OCR, 오디오 전사, ZIP 순회, YouTube URL 처리, Office/PDF의 실용적 텍스트 추출을 하나의 Python 유틸리티로 다루는 흐름과는 목적이 다르다. Pandoc은 “문서 형식 간 변환”의 강자이고, MarkItDown은 “LLM이 읽을 수 있는 텍스트 입력 만들기”에 더 초점을 맞춘다.
 
-결론적으로 선택 기준은 단순하다. 빠른 PoC와 경량 Markdown 정규화가 필요하면 MarkItDown, 복잡 PDF의 레이아웃 품질이 중요하면 Docling, 엔터프라이즈 문서 ETL 워크플로가 필요하면 Unstructured, 출판·마크업 변환이 핵심이면 Pandoc을 우선 검토하는 편이 합리적이다. 하나만 고집할 필요도 없다. 실제 대규모 환경에서는 파일 형식과 민감도에 따라 여러 변환기를 라우팅하고, 공통 메타데이터와 품질 평가 계층에서 결과를 통합하는 구성이 더 현실적이다.
+결론적으로 선택 기준은 단순하다. 빠른 PoC와 경량 Markdown 정규화가 필요하면 MarkItDown, 복잡 PDF의 레이아웃 품질이 중요하면 Docling, 엔터프라이즈 문서 ETL 워크플로가 필요하면 Unstructured, 출판·마크업 변환이 핵심이면 Pandoc을 우선 검토하는 편이 합리적이다. 하나만 고집할 필요도 없다. 실제 대규모 환경에서는 [PDF Inspector 기반 문서 수집 라우팅](/posts/github-trending-pdf-inspector-document-ingestion-routing/)처럼 먼저 파일 특성과 OCR 필요성을 분류한 뒤 형식과 민감도에 따라 변환기를 선택하고, 공통 메타데이터와 품질 평가 계층에서 결과를 통합하는 구성이 더 현실적이다.
 
 ## 실무 도입 장점: 빠른 연결보다 표준화 비용 절감
 
@@ -99,7 +99,7 @@ MarkItDown PoC는 “몇 개 파일이 변환되는지”만 보는 방식으로
 
 ## 어떤 팀에 적합하고, 언제 피해야 하나
 
-MarkItDown은 사내 지식 검색, 고객지원 문서 검색, 제품 매뉴얼 요약, 연구 문서 정리, 세일즈 자료 검색, 교육 콘텐츠 인입처럼 다양한 파일을 빠르게 LLM 파이프라인에 넣어야 하는 팀에 적합하다. 특히 아직 문서 인입 표준이 없고, 벡터 DB와 LLM을 먼저 붙여 보려는 조직에는 좋은 출발점이 될 수 있다. Python 기반 데이터 파이프라인을 이미 운영하는 팀이라면 배치 작업이나 API 워커에 통합하기도 비교적 쉽다.
+MarkItDown은 사내 지식 검색, 고객지원 문서 검색, 제품 매뉴얼 요약, 연구 문서 정리, 세일즈 자료 검색, 교육 콘텐츠 인입처럼 다양한 파일을 빠르게 LLM 파이프라인에 넣어야 하는 팀에 적합하다. 특히 아직 문서 인입 표준이 없고, 벡터 DB와 LLM을 먼저 붙여 보려는 조직에는 좋은 출발점이 될 수 있다. 더 좁은 범위의 파서 품질과 RAG 연결 방식을 먼저 비교하려면 [LiteParse 기반 문서 파서 파이프라인](/posts/github-trending-document-parser-liteparse/)도 유용한 기준점이다. Python 기반 데이터 파이프라인을 이미 운영하는 팀이라면 배치 작업이나 API 워커에 통합하기도 비교적 쉽다.
 
 반대로 법무·의료·금융처럼 문서 의미의 작은 손실이 큰 책임으로 이어지는 영역에서는 단독 도입을 피해야 한다. 이런 영역에서는 원본 보존, 페이지 단위 인용, 사람 검수, 감사 로그, 접근 권한 필터링, 변환 결과 품질 점수, 예외 처리 절차가 먼저 필요하다. 스캔 문서나 복잡한 도면, 다중 표, 수식 중심 문서가 많다면 MarkItDown만으로는 부족할 수 있으며 Docling, 전문 OCR, 도메인 파서와 조합해야 한다.
 

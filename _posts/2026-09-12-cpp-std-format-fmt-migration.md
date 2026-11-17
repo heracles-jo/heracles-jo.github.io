@@ -4,7 +4,7 @@ description: "printf·iostream·{fmt}가 섞인 C++ 코드에서 std::format으�
 author: heracles-jo
 date: 2026-09-12 08:45:00 +0900
 categories: [Software Engineering, Developer Tools]
-tags: [fmt, std-format, cpp, code-modernization, formatting, developer-tools]
+tags: [fmt, developer-tools, cpp, code-modernization]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/cpp-std-format-fmt-migration/cover.svg
   alt: "printf와 iostream에서 fmt를 거쳐 std::format으로 전환하는 C++ 포맷팅 마이그레이션"

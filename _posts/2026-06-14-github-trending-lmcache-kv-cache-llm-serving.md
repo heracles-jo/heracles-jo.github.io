@@ -3,8 +3,8 @@ title: "LMCache와 LLM 서빙 KV Cache 계층의 부상"
 description: "GitHub Trending에 오른 LMCache를 중심으로 LLM 추론 비용의 핵심 병목인 prefill, KV cache 재사용, vLLM 기반 서빙 최적화, 운영 리스크와 PoC 기준을 실무 관점에서 분석한다."
 author: heracles-jo
 date: 2026-06-14 07:05:00 +0900
-categories: [AI Infrastructure, LLMOps]
-tags: [github-trending, lmcache, kv-cache, llm-serving, vllm, rag, ttft, inference-optimization, gpu-optimization]
+categories: [AI Infrastructure]
+tags: [lmcache, rag, vllm, kv-cache, llm-serving, gpu-optimization]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/lmcache-kv-cache-llm-serving/cover.svg
   alt: "LMCache가 GPU, CPU, 로컬 저장소, 원격 저장소를 연결해 LLM 추론의 KV Cache를 재사용하는 계층형 아키텍처를 설명하는 이미지"
@@ -22,7 +22,7 @@ LLM 추론 비용을 이야기할 때 많은 팀이 먼저 토큰 단가, GPU �
 
 예를 들어 고객지원 에이전트는 매 요청마다 제품 매뉴얼, 정책 문서, 최근 티켓 요약을 붙인다. 개발 보조 에이전트는 저장소 구조, 코딩 규칙, 테스트 로그, 이전 대화 맥락을 다시 포함한다. 사내 검색 기반 RAG 시스템은 동일한 문서 청크가 여러 사용자와 세션에서 반복적으로 호출된다. 이때 매 요청마다 같은 컨텍스트를 처음부터 prefill하면 GPU는 사용자가 기대하는 “새로운 추론”보다 “이미 봤던 텍스트 재계산”에 많은 시간을 쓴다. LMCache가 겨냥하는 지점은 바로 이 낭비다.
 
-LMCache 문서는 LLM이 각 텍스트를 한 번만 prefill하도록 하고, 재사용 가능한 텍스트의 KV cache를 저장해 이후 같은 또는 유사한 세그먼트가 등장할 때 다시 가져오는 접근을 설명한다. GitHub README는 LMCache가 임시 상태로만 취급되던 KV cache를 저장, 재사용, 관측, 변환 가능한 “AI-native knowledge”처럼 다룬다고 표현한다. 다소 마케팅적인 문장처럼 보일 수 있지만, 기술적으로는 추론 엔진 내부 상태를 외부 관리 계층으로 끌어내는 변화다. 이는 CDN이 정적 콘텐츠 전송 비용을 바꿨던 것처럼, 장문 LLM 추론에서도 “계산 결과의 지역성”을 활용하려는 흐름으로 볼 수 있다.
+LMCache 문서는 LLM이 각 텍스트를 한 번만 prefill하도록 하고, 재사용 가능한 텍스트의 KV cache를 저장해 이후 같은 또는 유사한 세그먼트가 등장할 때 다시 가져오는 접근을 설명한다. 이 글과 함께 [LMCache의 KV 캐시 인프라 관점 분석](/posts/github-trending-lmcache-kv-cache-inference/)을 보면 단일 엔진 최적화와 노드·저장소를 넘는 재사용 계층의 경계를 더 분명히 볼 수 있다. GitHub README는 LMCache가 임시 상태로만 취급되던 KV cache를 저장, 재사용, 관측, 변환 가능한 “AI-native knowledge”처럼 다룬다고 표현한다. 다소 마케팅적인 문장처럼 보일 수 있지만, 기술적으로는 추론 엔진 내부 상태를 외부 관리 계층으로 끌어내는 변화다. 이는 CDN이 정적 콘텐츠 전송 비용을 바꿨던 것처럼, 장문 LLM 추론에서도 “계산 결과의 지역성”을 활용하려는 흐름으로 볼 수 있다.
 
 ## 핵심 아키텍처: GPU 메모리 밖으로 나온 KV Cache
 
@@ -46,7 +46,7 @@ LMCache를 이해할 때 자주 혼동되는 비교 대상은 vLLM 자체의 pag
 
 Semantic cache는 질문과 답변 또는 embedding 유사도를 기준으로 이전 결과를 재사용한다. 사용자가 비슷한 질문을 하면 LLM 호출 자체를 생략하고 이전 답변을 반환하는 방식이 많다. 이 접근은 비용 절감 효과가 크지만, 답변 신선도와 정확성, 개인화, 권한 필터링 문제가 까다롭다. 반면 KV cache 재사용은 모델의 중간 상태를 재사용하므로 최종 답변을 그대로 복사하지 않는다. 같은 컨텍스트를 더 빠르게 처리하면서도 이후 decode는 현재 요청에 맞게 이어갈 수 있다. 물론 이 역시 데이터 격리와 모델 버전 호환성이라는 다른 리스크를 갖는다.
 
-Vector DB는 RAG에서 관련 문서 청크를 찾는 검색 계층이다. Qdrant, Milvus, Weaviate, LanceDB, FAISS 같은 도구는 “어떤 컨텍스트를 모델에 넣을지”를 결정한다. LMCache는 “그 컨텍스트를 모델이 처리한 결과를 재사용할 수 있는지”를 다룬다. 따라서 둘은 경쟁이라기보다 서로 다른 병목을 해결한다. RAG 시스템에서 vector DB가 검색 품질과 retrieval latency를 담당한다면, LMCache는 반복적으로 선택되는 문서 청크의 prefill 비용을 줄이는 보조 계층이 될 수 있다.
+Vector DB는 RAG에서 관련 문서 청크를 찾는 검색 계층이다. Qdrant, Milvus, Weaviate, LanceDB, FAISS 같은 도구는 “어떤 컨텍스트를 모델에 넣을지”를 결정한다. [TurboVec 같은 로컬 벡터 인덱스](/posts/github-trending-turbovec-local-vector-index/)가 검색 경로의 배포·지연 문제를 다룬다면, LMCache는 “그 컨텍스트를 모델이 처리한 결과를 재사용할 수 있는지”를 다룬다. 따라서 둘은 경쟁이라기보다 서로 다른 병목을 해결한다. RAG 시스템에서 vector DB가 검색 품질과 retrieval latency를 담당한다면, LMCache는 반복적으로 선택되는 문서 청크의 prefill 비용을 줄이는 보조 계층이 될 수 있다.
 
 | 구분 | 주된 관심사 | 장점 | 주의점 |
 | --- | --- | --- | --- |
@@ -108,7 +108,7 @@ LMCache를 검토할 만한 팀은 LLM serving을 직접 운영하거나, vLLM �
 
 ## 경쟁·대체 흐름과 함께 보는 시장 방향
 
-LLM 추론 최적화는 여러 층에서 동시에 진행되고 있다. vLLM은 serving engine 효율의 사실상 표준 중 하나로 자리 잡았고, TensorRT-LLM, SGLang, TGI 같은 대안도 각자의 최적화 전략을 갖는다. Redis나 Momento 같은 캐시/데이터 계층은 semantic cache와 prompt response cache를 강조한다. Vector DB 진영은 retrieval 품질과 latency를 개선하며 RAG 비용을 줄이려 한다. LMCache의 차별점은 이들 사이에서 “최종 응답”이나 “검색 결과”가 아니라 **모델 내부 KV 상태**를 재사용 대상으로 삼는다는 점이다.
+LLM 추론 최적화는 여러 층에서 동시에 진행되고 있다. vLLM은 serving engine 효율의 사실상 표준 중 하나로 자리 잡았고, TensorRT-LLM, SGLang, TGI 같은 대안도 각자의 최적화 전략을 갖는다. CPU·GPU 메모리를 함께 쓰는 [KTransformers의 이기종 추론 운영](/posts/github-trending-ktransformers-heterogeneous-llm-inference/)은 계산 배치 자체를 바꾸는 접근이라 LMCache의 상태 재사용과 결합 가능성은 있지만 병목 측정은 따로 해야 한다. Redis나 Momento 같은 캐시/데이터 계층은 semantic cache와 prompt response cache를 강조한다. Vector DB 진영은 retrieval 품질과 latency를 개선하며 RAG 비용을 줄이려 한다. LMCache의 차별점은 이들 사이에서 “최종 응답”이나 “검색 결과”가 아니라 **모델 내부 KV 상태**를 재사용 대상으로 삼는다는 점이다.
 
 이 흐름이 중요한 이유는 LLM 애플리케이션이 점점 stateful해지고 있기 때문이다. 초기 챗봇은 stateless API 호출처럼 설계할 수 있었다. 하지만 에이전트, 장기 메모리, workflow automation, codebase assistant, enterprise RAG는 이전 단계의 상태와 긴 문맥을 계속 가져간다. 그러면 inference infrastructure는 단순 요청 처리기가 아니라 상태 관리 시스템이 된다. KV cache 계층은 이 상태 관리의 가장 낮은 레벨 중 하나다.
 

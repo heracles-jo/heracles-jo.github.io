@@ -3,8 +3,8 @@ title: "NVKE GPU Kubernetes 관리 평면: 베어메탈 도입 검증 기준"
 description: "NVKE의 관리 클러스터·NICo·Cluster API·TPM 신뢰 구조를 해부하고, GPU 베어메탈 Kubernetes를 운영하기 전 보안·복구·업그레이드 기준을 정리한다."
 author: heracles-jo
 date: 2026-11-09 08:45:00 +0900
-categories: [Platform Engineering, Cloud]
-tags: [nvke, kubernetes, gpu-infrastructure, bare-metal, cluster-api, platform-engineering]
+categories: [Platform Engineering, Cloud Infrastructure]
+tags: [nvke, platform-engineering, kubernetes, gpu-infrastructure]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/nvke-gpu-kubernetes-control-plane/cover.svg
   alt: "NVKE로 GPU 베어메탈 Kubernetes 관리 평면을 설계할 때 확인할 제어면과 운영 경계"

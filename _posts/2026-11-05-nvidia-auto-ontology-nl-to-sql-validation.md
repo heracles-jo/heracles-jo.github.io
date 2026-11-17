@@ -4,7 +4,7 @@ description: "NVIDIA Auto Ontology의 시맨틱 그래프·인증·Text-to-SQL �
 author: heracles-jo
 date: 2026-11-05 08:35:00 +0900
 categories: [Data Engineering, AI Infrastructure]
-tags: [nvidia-auto-ontology, nl-to-sql, semantic-layer, data-governance, mcp, ai-agent]
+tags: [nvidia-auto-ontology, mcp, ai-agent, data-governance, semantic-layer]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/nvidia-auto-ontology-nl-to-sql-validation/cover.svg
   alt: "NVIDIA Auto Ontology로 자연어 SQL의 의미와 정확성을 검증하는 구조"

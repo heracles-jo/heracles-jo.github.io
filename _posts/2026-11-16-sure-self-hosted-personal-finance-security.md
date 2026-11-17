@@ -4,7 +4,7 @@ description: "Sure로 계좌·거래·투자 데이터를 직접 운영할 때 �
 author: heracles-jo
 date: 2026-11-16 08:30:00 +0900
 categories: [FinTech, Security]
-tags: [sure, self-hosted-finance, personal-finance, financial-data-security, backup-restore, mcp-security]
+tags: [sure, mcp-security, self-hosted-finance, personal-finance]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/sure-self-hosted-personal-finance-security/cover.svg
   alt: "Sure 셀프호스팅 개인 금융 시스템의 데이터 동기화, 보안, AI 권한, 백업 복구 경계"

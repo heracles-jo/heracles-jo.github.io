@@ -4,7 +4,7 @@ description: "GitHub Trending에 오른 LMCache를 중심으로 LLM 추론 비�
 author: heracles-jo
 date: 2026-06-14 07:10:00 +0900
 categories: [AI Infrastructure, Open Source]
-tags: [github-trending, lmcache, kv-cache, llm-inference, vllm, sglang, gpu-optimization, rag, ai-infrastructure]
+tags: [lmcache, ai-infrastructure, rag, llm-inference, vllm, kv-cache]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/lmcache-kv-cache-inference/cover.svg
   alt: LLM 추론 서버 앞단에서 LMCache가 KV 캐시 계층으로 반복 프리필 비용을 줄이는 구조를 설명하는 다이어그램
@@ -12,7 +12,7 @@ image:
 
 GitHub Trending에서 [LMCache](https://github.com/LMCache/LMCache)가 다시 눈에 띄는 이유는 단순히 “LLM 추론을 빠르게 한다”는 문구 때문만은 아니다. 최근 AI 서비스의 병목은 모델을 한 번 호출하는 비용을 넘어, 긴 컨텍스트를 반복적으로 읽히고 멀티턴 에이전트가 같은 지식을 계속 프리필하는 구조적 비용으로 이동하고 있다. 2026년 6월 14일 오전 KST 기준 공개 GitHub API와 Trending 페이지를 확인한 스냅샷에서 LMCache는 약 8.8k 스타, 1.3k 포크, 300개 이상의 오픈 이슈를 가진 Python 중심 프로젝트이며, 바로 전날 `v0.4.7` 릴리스와 CUDA 12.9 wheel, nightly wheel이 올라와 있었다. 이 수치는 확인 시점의 공개 스냅샷이며 GitHub Trending 순위와 스타 수는 시간에 따라 바뀐다.
 
-오늘의 핵심 논지는 분명하다. **LLM 인프라 경쟁은 모델 서빙 엔진만의 문제가 아니라, 반복되는 KV 캐시를 어떻게 저장하고 공유하고 관측할 것인가의 문제로 확장되고 있다.** vLLM, SGLang, NVIDIA Dynamo 같은 추론 엔진·스케줄러가 토큰 생성 처리량을 끌어올리는 동안, RAG와 에이전트 워크로드는 “같은 문서와 같은 대화 맥락을 얼마나 덜 다시 계산할 것인가”라는 별도의 계층을 요구한다. LMCache는 바로 이 지점에서 KV cache management layer를 표방한다.
+오늘의 핵심 논지는 분명하다. **LLM 인프라 경쟁은 모델 서빙 엔진만의 문제가 아니라, 반복되는 KV 캐시를 어떻게 저장하고 공유하고 관측할 것인가의 문제로 확장되고 있다.** vLLM, SGLang, NVIDIA Dynamo 같은 추론 엔진·스케줄러가 토큰 생성 처리량을 끌어올리는 동안, RAG와 에이전트 워크로드는 “같은 문서와 같은 대화 맥락을 얼마나 덜 다시 계산할 것인가”라는 별도의 계층을 요구한다. [LLM 서빙의 독립 KV 캐시 계층](/posts/github-trending-lmcache-kv-cache-llm-serving/)이라는 관점에서 보면 LMCache는 단순 가속 옵션보다 공유 인프라에 가깝다.
 
 ![LLM 추론 경로와 KV 캐시 재사용](https://heracles-jo.github.io/assets/img/posts/lmcache-kv-cache-inference/kv-cache-flow.svg)
 
@@ -28,7 +28,7 @@ GitHub Trending에서 [LMCache](https://github.com/LMCache/LMCache)가 다시 �
 
 Transformer 기반 LLM은 입력 토큰을 처리하며 attention 계산을 위한 key/value 상태를 만든다. 일반적으로 긴 프롬프트나 RAG 문서를 모델에 넣으면 모델은 먼저 입력 전체를 처리하는 prefill 단계를 거친 뒤, 이후 응답 토큰을 하나씩 생성하는 decode 단계로 넘어간다. 사용자가 체감하는 첫 토큰 지연, 즉 TTFT는 긴 컨텍스트와 prefill 비용에 크게 영향을 받는다.
 
-문제는 실무 워크로드에서 같은 컨텍스트가 반복된다는 점이다. 고객 지원 봇은 동일한 제품 매뉴얼과 정책 문서를 계속 참고한다. 사내 코딩 에이전트는 같은 저장소의 README, API 스펙, 아키텍처 문서를 반복해서 읽는다. 법무·재무·보안 챗봇은 같은 규정과 템플릿을 여러 질문에서 다시 사용한다. 멀티턴 에이전트는 앞선 대화와 도구 실행 결과를 계속 누적한다. 이때 매 요청마다 같은 토큰을 처음부터 다시 prefill하면 GPU는 “새로운 지능”을 만드는 대신 이미 읽은 문맥을 다시 읽는 데 상당한 시간을 쓴다.
+문제는 실무 워크로드에서 같은 컨텍스트가 반복된다는 점이다. 고객 지원 봇은 동일한 제품 매뉴얼과 정책 문서를 계속 참고한다. 사내 코딩 에이전트는 같은 저장소의 README, API 스펙, 아키텍처 문서를 반복해서 읽으며, [로컬 벡터 인덱스](/posts/github-trending-turbovec-local-vector-index/)가 같은 코드 조각을 여러 요청에 반환할수록 중복 프리필도 커진다. 법무·재무·보안 챗봇은 같은 규정과 템플릿을 여러 질문에서 다시 사용하고, 멀티턴 에이전트는 앞선 대화와 도구 실행 결과를 계속 누적한다. 매 요청마다 같은 토큰을 처음부터 처리하면 GPU는 새로운 생성보다 이미 읽은 문맥을 다시 읽는 데 상당한 시간을 쓴다.
 
 전통적인 웹 인프라에서는 CDN, HTTP cache, database cache, object cache가 이 문제를 풀었다. 그러나 LLM의 KV 캐시는 일반 파일이나 JSON 응답과 다르다. 모델 버전, 토크나이저, 레이어 수, dtype, 병렬화 방식, chunking 전략, 엔진 구현에 묶여 있다. 캐시를 잘못 재사용하면 품질 저하나 잘못된 응답으로 이어질 수 있고, 캐시를 너무 보수적으로 다루면 히트율이 낮아져 효과가 사라진다. LMCache가 흥미로운 이유는 KV 캐시를 일시적인 런타임 부산물이 아니라 별도의 인프라 객체로 다루려 하기 때문이다.
 
@@ -42,7 +42,7 @@ LMCache 문서는 vLLM과 결합하는 두 가지 방식을 설명한다. 하나
 
 ## vLLM, SGLang, NVIDIA Dynamo와의 관계
 
-LMCache는 vLLM을 대체하려는 프로젝트가 아니다. 오히려 vLLM 같은 고성능 추론 엔진 위에서 반복 컨텍스트 비용을 줄이는 보조 계층에 가깝다. vLLM은 PagedAttention, 배치 스케줄링, 메모리 관리로 높은 처리량을 제공한다. SGLang은 복잡한 LLM 프로그램과 structured generation, runtime 최적화에 강점을 둔다. NVIDIA Dynamo는 분산 추론과 GPU 자원 활용을 위한 인프라 스택으로 볼 수 있다. LMCache는 이들과 경쟁하기보다, KV cache transfer와 재사용을 통해 프리필 비용을 줄이는 역할을 맡는다.
+LMCache는 vLLM을 대체하려는 프로젝트가 아니다. 오히려 vLLM 같은 고성능 추론 엔진 위에서 반복 컨텍스트 비용을 줄이는 보조 계층에 가깝다. vLLM은 PagedAttention, 배치 스케줄링, 메모리 관리로 높은 처리량을 제공한다. SGLang은 복잡한 LLM 프로그램과 structured generation, runtime 최적화에 강점을 둔다. [KTransformers의 이기종 추론 운영](/posts/github-trending-ktransformers-heterogeneous-llm-inference/)처럼 CPU·GPU·메모리 계층을 함께 쓰는 구성에서는 캐시 전송 비용과 배치 전략이 더 중요해진다. NVIDIA Dynamo가 분산 추론과 GPU 자원 활용을 다룬다면, LMCache는 이들과 경쟁하기보다 KV cache transfer와 재사용으로 프리필 비용을 줄이는 역할을 맡는다.
 
 물론 경계는 완전히 고정되어 있지 않다. vLLM에도 prefix caching과 KV 관련 기능이 있고, 서빙 프레임워크들은 자체 최적화를 계속 추가한다. 따라서 LMCache 도입은 “우리 엔진에 없는 기능을 무조건 붙인다”가 아니라 “우리 워크로드에서 엔진 내장 캐시만으로 부족한 재사용성과 운영 관측성이 있는가”를 기준으로 판단해야 한다. 단일 모델, 짧은 프롬프트, 낮은 QPS 환경에서는 LMCache 계층이 오히려 복잡도를 늘릴 수 있다. 반대로 긴 문서 기반 RAG, 반복되는 시스템 프롬프트, 다중 에이전트 세션, 여러 vLLM 인스턴스가 같은 지식 컨텍스트를 공유하는 환경에서는 별도 캐시 계층이 비용 절감의 레버가 된다.
 

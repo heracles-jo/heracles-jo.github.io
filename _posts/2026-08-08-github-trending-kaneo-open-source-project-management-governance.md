@@ -3,8 +3,8 @@ title: "Kaneo vs Plane: 셀프호스팅 Jira 대안 선택 기준"
 description: "Kaneo와 Plane을 기능 폭, 라이선스, 배포 복잡도, 데이터 통제, 보안 운영 책임으로 비교해 우리 팀에 맞는 셀프호스팅 Jira 대안을 고르는 기준을 제시한다."
 author: heracles-jo
 date: 2026-08-08 07:37:00 +0900
-categories: [Collaboration, Engineering Management]
-tags: [kaneo, plane, project-management, self-hosting, jira-alternative, collaboration]
+categories: [Collaboration, Software Engineering]
+tags: [kaneo, self-hosting, collaboration, plane]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-kaneo-open-source-project-management-governance/cover.svg
   alt: "Kaneo가 오픈소스 프로젝트 관리에서 간결한 업무 흐름과 데이터 소유권, 운영 거버넌스를 연결하는 흐름"

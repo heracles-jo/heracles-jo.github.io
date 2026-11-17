@@ -4,7 +4,7 @@ description: "Spirula Studio의 영상·사진 입력부터 SfM, 3DGS 학습, �
 author: heracles-jo
 date: 2026-09-24 08:40:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [spirula-studio, gaussian-splatting, 3d-reconstruction, vulkan, gpu-portability, 3d-pipeline]
+tags: [spirula-studio, 3d-pipeline, 3d-reconstruction, gaussian-splatting]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/spirula-studio-gaussian-splatting-pipeline/cover.svg
   alt: "사진과 영상이 Spirula Studio의 SfM과 Gaussian Splatting 학습을 거쳐 메시로 변환되는 파이프라인"

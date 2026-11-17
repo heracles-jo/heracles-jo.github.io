@@ -4,7 +4,7 @@ description: "RAD Debugger의 RDI 변환·멀티프로세스 제어·Linux 지�
 author: heracles-jo
 date: 2026-10-08 08:10:00 +0900
 categories: [Developer Tools, Software Engineering]
-tags: [rad-debugger, native-debugging, pdb, dwarf, crash-dump, cpp-toolchain]
+tags: [rad-debugger, native-debugging, pdb, dwarf]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/rad-debugger-native-debugging/cover.svg
   alt: "PDB와 DWARF 디버그 정보가 RDI 변환을 거쳐 멀티프로세스 네이티브 디버깅으로 이어지는 구조"

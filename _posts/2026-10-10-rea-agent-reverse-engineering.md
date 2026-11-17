@@ -4,7 +4,7 @@ description: "REA의 MCP 기반 바이너리·웹·앱 분석 구조를 살펴�
 author: heracles-jo
 date: 2026-10-10 08:35:00 +0900
 categories: [Security, Developer Tools]
-tags: [rea, reverse-engineering, mcp, binary-analysis, security-governance, ai-agent]
+tags: [rea, mcp, ai-agent, reverse-engineering, binary-analysis, security-governance]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/rea-agent-reverse-engineering/cover.svg
   alt: "AI 역공학 에이전트가 승인된 분석 대상과 로컬 도구를 거쳐 근거가 연결된 결과를 만드는 흐름"

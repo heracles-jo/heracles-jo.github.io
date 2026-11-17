@@ -3,8 +3,8 @@ title: "C++ 기반 라이브러리 스택의 재부상"
 description: "Abseil, Catch2, yaml-cpp, Asio가 GitHub Trending에 함께 오른 흐름을 바탕으로 프로덕션 C++ 기반 라이브러리의 아키텍처, 도입 판단, 운영 리스크를 분석한다."
 author: heracles-jo
 date: 2026-07-11 07:12:00 +0900
-categories: [Software Engineering, Infrastructure]
-tags: [github-trending, cpp, abseil, catch2, yaml-cpp, asio, cmake, conan, vcpkg, testing, reliability, systems-programming]
+categories: [Software Engineering, Platform Engineering]
+tags: [cpp, abseil, catch2, yaml-cpp]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-cpp-foundation-libraries/cover.svg
   alt: "Abseil, Catch2, yaml-cpp, Asio를 중심으로 C++ 프로덕션 기반 라이브러리 스택의 운영 구조를 보여주는 다이어그램"
@@ -50,7 +50,7 @@ C++는 새롭지 않다. 그래서 오히려 실무에서 위험하다. 새 기�
 
 C++에서 테스트 프레임워크 선택은 문법 취향 문제가 아니다. 빌드 시간, 테스트 디스커버리, 병렬 실행, CMake 통합, sanitizer와의 조합, Windows/Linux/macOS 매트릭스, 예외 비활성화 빌드 지원 여부까지 운영 조건이 달라진다. Catch2는 단일 헤더 시대의 간편함으로 유명했지만, v3 계열에서는 패키징과 빌드 통합 방식을 더 신중하게 봐야 한다.
 
-대체 도구로는 [GoogleTest](https://github.com/google/googletest)와 [doctest](https://github.com/doctest/doctest)가 자주 비교된다. GoogleTest는 대기업·장기 프로젝트에서 표준처럼 쓰이며 생태계가 넓다. doctest는 컴파일 시간과 경량성을 중시하는 프로젝트에 매력적이다. Catch2는 표현력과 사용성, CMake 연동 사이에서 균형을 제공한다. 따라서 이미 GoogleTest 기반의 대규모 테스트 자산이 있다면 전환보다 공존 전략이 현실적이고, 새 모듈이나 라이브러리 단위 테스트부터 Catch2를 적용하는 방식이 더 안전하다.
+대체 도구로는 [GoogleTest](https://github.com/google/googletest)와 [doctest](https://github.com/doctest/doctest)가 자주 비교된다. GoogleTest는 대기업·장기 프로젝트에서 표준처럼 쓰이며 생태계가 넓다. doctest는 컴파일 시간과 경량성을 중시하는 프로젝트에 매력적이다. Catch2는 표현력과 사용성, CMake 연동 사이에서 균형을 제공한다. 따라서 이미 GoogleTest 기반의 대규모 테스트 자산이 있다면 전환보다 공존 전략이 현실적이고, 새 모듈이나 라이브러리 단위 테스트부터 Catch2를 적용하는 방식이 더 안전하다. 이런 점진적 전환은 [C++ `std::format`과 {fmt} 호환성을 검증하는 마이그레이션 기준](/posts/cpp-std-format-fmt-migration/)처럼 기존 호출부와 컴파일러 매트릭스를 먼저 고정하는 방식과 같다.
 
 ### 3. yaml-cpp: 설정 파일은 작은 기능이 아니라 운영 인터페이스다
 
@@ -91,7 +91,7 @@ C++에서 테스트 프레임워크 선택은 문법 취향 문제가 아니다.
 
 ## 보안, 운영, 성능 리스크
 
-가장 먼저 볼 리스크는 공급망이다. C++ 라이브러리는 빌드 단계에서 소스, 컴파일러, 링커, 플랫폼 SDK와 강하게 결합한다. 단순히 GitHub stars가 많다고 안전한 것이 아니다. 릴리스 태그 서명 여부, 패키지 매니저 레시피의 출처, 의존성 잠금, 내부 아티팩트 저장소, SBOM 생성, 취약점 스캔 대상 포함 여부를 확인해야 한다.
+가장 먼저 볼 리스크는 공급망이다. C++ 라이브러리는 빌드 단계에서 소스, 컴파일러, 링커, 플랫폼 SDK와 강하게 결합한다. 단순히 GitHub stars가 많다고 안전한 것이 아니다. 릴리스 태그 서명 여부, 패키지 매니저 레시피의 출처, 의존성 잠금, 내부 아티팩트 저장소, SBOM 생성, 취약점 스캔 대상 포함 여부를 확인해야 한다. 빌드 호스트와 패키지 미러 자체의 기준선은 [Linux 서버 하드닝 체크리스트](/posts/github-trending-linux-server-hardening-baseline/)처럼 별도 운영 통제로 관리해야 라이브러리 검증이 재현 가능해진다.
 
 두 번째는 ABI와 링크 정책이다. 정적 링크는 배포 단순성을 높이지만 보안 패치 반영과 바이너리 크기에 영향을 준다. 동적 링크는 패치 교체가 쉬울 수 있지만 런타임 환경 차이와 ABI 충돌을 부른다. 특히 C++ 표준 라이브러리, 컴파일러 버전, `_GLIBCXX_USE_CXX11_ABI` 같은 옵션은 장애 원인이 되기 쉽다.
 

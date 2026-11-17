@@ -4,7 +4,7 @@ description: "Coolify의 SSH·Docker 제어면과 배포·프록시·백업 구�
 author: heracles-jo
 date: 2026-10-26 08:10:00 +0900
 categories: [Platform Engineering, DevOps]
-tags: [coolify, self-hosted-paas, docker, deployment-platform, platform-engineering, devops]
+tags: [coolify, platform-engineering, devops, docker]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/coolify-self-hosted-paas-operations/cover.svg
   alt: "Coolify 셀프호스팅 PaaS에서 제어면, 배포 서버, 프록시와 백업 책임을 구분하는 표지"

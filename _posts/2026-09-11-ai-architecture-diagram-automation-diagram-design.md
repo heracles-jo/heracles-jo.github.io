@@ -3,8 +3,8 @@ title: "AI 아키텍처 다이어그램 자동화: Diagram Design 검증 기준"
 description: "Diagram Design의 에이전트 스킬·HTML/SVG 생성 구조를 살펴보고, 예쁜 그림을 신뢰할 수 있는 아키텍처 문서로 운영하기 위한 리뷰·보안·PoC 기준을 제시한다."
 author: heracles-jo
 date: 2026-09-11 08:05:00 +0900
-categories: [AI Engineering, Developer Tools]
-tags: [diagram-design, architecture-diagram, agent-skills, documentation, diagram-as-code, developer-tools]
+categories: [AI Infrastructure, Developer Tools]
+tags: [diagram-design, developer-tools, agent-skills, documentation]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/ai-architecture-diagram-automation-diagram-design/cover.svg
   alt: "AI가 만든 아키텍처 다이어그램을 사실성, 가독성, 보안 기준으로 검증하는 흐름"

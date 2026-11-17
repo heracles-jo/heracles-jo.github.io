@@ -4,7 +4,7 @@ description: "Cloudflare Security Audit Skill의 정찰·커버리지·독립 �
 author: heracles-jo
 date: 2026-09-17 08:15:00 +0900
 categories: [Security, AI Infrastructure]
-tags: [cloudflare-security-audit, ai-security-audit, vulnerability-research, agent-skills, devsecops, sandbox]
+tags: [cloudflare-security-audit, devsecops, agent-skills, sandbox]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/cloudflare-security-audit-skill-validation-pipeline/cover.svg
   alt: "AI 보안 감사에서 탐색 결과를 독립 검증과 구조화된 증거로 좁혀 가는 파이프라인"

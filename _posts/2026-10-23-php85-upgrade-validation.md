@@ -4,7 +4,7 @@ description: "PHP 8.5.12 보안 패치와 8.4→8.5 비호환 변경을 바탕�
 author: heracles-jo
 date: 2026-10-23 08:20:00 +0900
 categories: [Platform Engineering, Developer Tools]
-tags: [php-8-5, php-upgrade, composer, php-fpm, opcache, runtime-migration]
+tags: [php-8-5, php-upgrade, composer, php-fpm]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/php85-upgrade-validation/cover.svg
   alt: "PHP 8.5 업그레이드에서 애플리케이션, 확장 모듈, FPM과 OPcache를 단계별로 검증하는 구조"

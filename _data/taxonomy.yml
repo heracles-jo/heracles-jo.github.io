@@ -1,0 +1,27 @@
+categories:
+  - AI Infrastructure
+  - Cloud Infrastructure
+  - Collaboration
+  - Data Engineering
+  - Database
+  - Developer Tools
+  - DevOps
+  - FinTech
+  - Hardware
+  - Media Engineering
+  - Mobile
+  - Networking
+  - Observability
+  - Open Source
+  - Platform Engineering
+  - Productivity
+  - Security
+  - Self Hosting
+  - Software Engineering
+  - Web Platform
+
+rules:
+  categories_per_post: 1-2
+  tags_per_post: 4-6
+  tag_format: lowercase-kebab-case
+  preserve_project_entity_tag: true

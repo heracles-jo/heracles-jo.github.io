@@ -4,7 +4,7 @@ description: "Marin의 데이터·학습·평가 DAG와 공개 회고를 바탕�
 author: heracles-jo
 date: 2026-08-26 07:30:00 +0900
 categories: [AI Infrastructure, Open Source]
-tags: [marin, foundation-model, model-training, reproducibility, mlops, open-source]
+tags: [marin, open-source, foundation-model, mlops, reproducibility]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/marin-open-model-training-reproducibility/cover.svg
   alt: "Marin이 데이터, 학습, 평가, 실패 기록을 연결해 오픈 모델 학습 재현성을 만드는 흐름"

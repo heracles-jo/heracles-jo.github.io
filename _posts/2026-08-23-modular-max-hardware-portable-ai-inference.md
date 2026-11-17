@@ -4,7 +4,7 @@ description: "Modular MAX와 Mojo의 통합 추론 스택을 분석해 NVIDIA·A
 author: heracles-jo
 date: 2026-08-23 07:40:00 +0900
 categories: [AI Infrastructure, Platform Engineering]
-tags: [modular-max, mojo, llm-inference, gpu-programming, hardware-portability, platform-engineering]
+tags: [modular-max, platform-engineering, llm-inference, mojo]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/modular-max-hardware-portable-ai-inference/cover.svg
   alt: "Modular MAX가 하나의 모델 서빙 경로를 NVIDIA, AMD, Apple 하드웨어로 연결하는 모습"

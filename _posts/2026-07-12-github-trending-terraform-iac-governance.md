@@ -3,8 +3,8 @@ title: "Terraform과 IaC 거버넌스의 재평가"
 description: "GitHub Trending에 다시 오른 Terraform을 OpenTofu, Pulumi, Terragrunt와 비교하며 선언형 인프라 코드, 상태 관리, 라이선스, 운영 리스크 관점에서 실무 도입 기준을 정리한다."
 author: heracles-jo
 date: 2026-07-12 07:39:00 +0900
-categories: [Infrastructure, DevOps]
-tags: [github-trending, terraform, opentofu, pulumi, terragrunt, infrastructure-as-code, iac, devops, platform-engineering]
+categories: [Platform Engineering, DevOps]
+tags: [terraform, platform-engineering, devops, opentofu]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-terraform-iac-governance/cover.svg
   alt: "Terraform이 GitHub Trending에 다시 오른 흐름을 계기로 IaC 거버넌스와 대체 도구 선택 기준을 분석하는 이미지"
@@ -36,7 +36,7 @@ Terraform 저장소의 README는 Terraform을 “building, changing, and version
 
 초기 IaC의 가치는 명확했다. 콘솔에서 클릭하던 작업을 코드로 바꾸고, 변경 이력을 Git에 남기며, 재현 가능한 환경을 만드는 것이다. 하지만 많은 조직이 Terraform을 몇 년 이상 운영하면서 다른 문제가 드러났다. 모듈이 많아질수록 입력 변수와 출력 값의 의미가 불명확해지고, 상태 파일은 점점 민감 정보와 운영 권한이 결합된 핵심 자산이 된다. 클라우드 계정은 늘어나고, 팀별 워크스페이스와 환경별 백엔드는 증가하며, 변경 승인을 누가 책임지는지 애매해진다.
 
-이런 상황에서 Terraform이 Trending에 다시 등장하는 것은 “Terraform이 갑자기 새로워졌다”는 뜻이 아니라, 조직이 다시 기본기를 확인하고 있다는 신호에 가깝다. 특히 최근 몇 년간 Terraform 라이선스 변화 이후 OpenTofu가 분기했고, 플랫폼 엔지니어링 팀은 Pulumi처럼 일반 프로그래밍 언어 기반의 IaC도 검토하기 시작했다. 대규모 운영에서는 Terragrunt 같은 계층을 얹어 모듈 재사용, 계정 분리, 스택 실행 순서를 관리하려 한다. 즉, 오늘의 핵심은 **Terraform 대 OpenTofu 대 Pulumi 중 무엇이 더 멋진가**가 아니라, **조직의 변경 통제 모델에 맞는 IaC 실행 평면을 어떻게 설계할 것인가**다.
+이런 상황에서 Terraform이 Trending에 다시 등장하는 것은 “Terraform이 갑자기 새로워졌다”는 뜻이 아니라, 조직이 다시 기본기를 확인하고 있다는 신호에 가깝다. 특히 최근 몇 년간 Terraform 라이선스 변화 이후 OpenTofu가 분기했고, 플랫폼 엔지니어링 팀은 Pulumi처럼 일반 프로그래밍 언어 기반의 IaC도 검토하기 시작했다. 대규모 운영에서는 Terragrunt 같은 계층을 얹어 모듈 재사용, 계정 분리, 스택 실행 순서를 관리하려 한다. [Meshery가 클라우드 네이티브 관리 평면을 재구성하는 흐름](/posts/github-trending-meshery-cloud-native-management/)도 같은 질문을 런타임 운영 쪽에서 보여준다. 즉, 오늘의 핵심은 **Terraform 대 OpenTofu 대 Pulumi 중 무엇이 더 멋진가**가 아니라, **조직의 변경 통제 모델에 맞는 IaC 실행 평면을 어떻게 설계할 것인가**다.
 
 ![Terraform 실행 구조](https://heracles-jo.github.io/assets/img/posts/github-trending-terraform-iac-governance/architecture.svg)
 
@@ -86,7 +86,7 @@ Terragrunt는 Terraform이나 OpenTofu 자체를 대체하지 않는다. 운영 
 
 ## 실무 도입 장점: 표준화, 감사 가능성, 변경 예측성
 
-잘 설계된 Terraform 기반 IaC는 세 가지 장점을 제공한다.
+잘 설계된 Terraform 기반 IaC는 세 가지 장점을 제공한다. 다만 [Coolify 같은 셀프호스팅 PaaS가 배포 편의를 제공하는 경우](/posts/coolify-self-hosted-paas-operations/)에도 네트워크, 데이터베이스, DNS, 백업 같은 하부 자원의 소유권은 사라지지 않으므로 IaC와 애플리케이션 플랫폼의 책임 경계를 먼저 나눠야 한다.
 
 첫째, **변경의 표준화**다. 인프라 리소스 생성 방식이 모듈과 코드 리뷰로 통제되면 팀마다 다른 네이밍, 태그, 보안 그룹, IAM 정책을 만드는 일이 줄어든다. 특히 FinOps와 보안팀이 요구하는 비용 태그, 데이터 분류 태그, 소유자 태그를 모듈에 강제할 수 있다.
 
@@ -118,7 +118,7 @@ Terraform provider는 클라우드 API와 직접 통신한다. provider 버전�
 
 ### 5. 성능과 실행 시간
 
-대규모 state는 plan 시간을 늘리고, provider API rate limit에 걸릴 수 있다. 모든 리소스를 하나의 거대한 root module로 관리하면 작은 변경에도 전체 그래프를 확인해야 한다. 계정·도메인·수명주기 단위로 state를 분리하고, 의존성은 명시적으로 관리해야 한다.
+대규모 state는 plan 시간을 늘리고, provider API rate limit에 걸릴 수 있다. 모든 리소스를 하나의 거대한 root module로 관리하면 작은 변경에도 전체 그래프를 확인해야 한다. 계정·도메인·수명주기 단위로 state를 분리하고, 의존성은 명시적으로 관리해야 한다. AI 코드 실행 환경처럼 수명이 짧고 격리 요구가 높은 자원은 [CubeSandbox의 microVM 샌드박스 운영 모델](/posts/github-trending-cubesandbox-microvm-ai-sandbox/)처럼 장기 기반 인프라와 다른 state·승인·폐기 정책을 적용하는 편이 낫다.
 
 ## PoC 체크리스트: 도구 평가보다 운영 시나리오를 검증하라
 

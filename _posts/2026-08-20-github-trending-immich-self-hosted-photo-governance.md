@@ -1,10 +1,10 @@
 ---
 title: "Immich가 보여주는 셀프호스팅 사진 플랫폼의 현실: Google Photos 대체가 아니라 사진 데이터 거버넌스다"
 description: "GitHub Trending에 오른 Immich를 중심으로 셀프호스팅 사진·동영상 관리 플랫폼의 아키텍처, Google Photos·PhotoPrism·Nextcloud Photos와의 차이, 백업·보안·운영 리스크, PoC 체크리스트를 IT 의사결정자 관점에서 분석한다."
-author: heracles
+author: heracles-jo
 date: 2026-08-20 07:55:00 +0900
-categories: [Infrastructure, Self Hosting]
-tags: [github-trending, immich, self-hosted-photos, google-photos-alternative, photo-management, homelab, data-governance, postgres, machine-learning, backup]
+categories: [Platform Engineering, Self Hosting]
+tags: [immich, data-governance, postgres, homelab, backup]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-immich-self-hosted-photo-governance/cover.svg
   alt: "Immich 기반 셀프호스팅 사진 플랫폼을 모바일 백업, 메타데이터, 머신러닝 검색, 3-2-1 백업 거버넌스로 해석한 분석 이미지"
@@ -40,7 +40,7 @@ Immich의 README는 프로젝트를 “High performance self-hosted photo and vi
 
 공식 Docker Compose 구성을 보면 이 성격이 더 명확하다. Immich는 `immich-server`, `immich-machine-learning`, Redis/Valkey, PostgreSQL, 원본 파일 볼륨을 조합한다. 서버는 API와 웹 UI, 업로드 처리, 메타데이터 관리를 담당하고, 별도 machine learning 컨테이너는 얼굴 인식·스마트 검색·임베딩 같은 무거운 작업을 분리한다. 데이터베이스는 자산 메타데이터와 인덱스를 보관하며, 원본 미디어 파일은 별도 볼륨에 놓인다. 이것은 SaaS 사진 앱의 축소판이 아니라, 소규모 데이터 레이크와 애플리케이션 서버가 결합된 구조에 가깝다.
 
-이 구조의 장점은 명확하다. 사용자는 원본 파일의 물리적 위치, 백업 정책, 인증 방식, 네트워크 노출 범위를 직접 통제할 수 있다. 반대로 책임도 사용자에게 온다. Google Photos나 Apple iCloud Photos가 내부적으로 처리하던 중복 제거, 인덱싱, 장애 복구, 저장소 확장, 백그라운드 업로드 실패 처리를 운영자가 신경 써야 한다. “클라우드 비용을 아끼려고 집에 서버를 둔다” 정도의 동기로 시작하면, 몇 달 뒤에는 백업과 업그레이드가 더 큰 비용이 될 수 있다.
+이 구조의 장점은 명확하다. 사용자는 원본 파일의 물리적 위치, 백업 정책, 인증 방식, 네트워크 노출 범위를 직접 통제할 수 있다. 반대로 책임도 사용자에게 온다. Google Photos나 Apple iCloud Photos가 내부적으로 처리하던 중복 제거, 인덱싱, 장애 복구, 저장소 확장, 백그라운드 업로드 실패 처리를 운영자가 신경 써야 한다. [Jellyfin 미디어 서버를 직접 운영할 때의 책임 경계](/posts/github-trending-self-hosted-media-jellyfin/)와 비슷해 보이지만, Immich는 대체 불가능한 개인 원본을 기본값으로 다룬다는 점에서 복구 기준이 더 엄격해야 한다. “클라우드 비용을 아끼려고 집에 서버를 둔다” 정도의 동기로 시작하면, 몇 달 뒤에는 백업과 업그레이드가 더 큰 비용이 될 수 있다.
 
 ## 왜 지금 셀프호스팅 사진 플랫폼이 다시 주목받는가
 
@@ -68,9 +68,9 @@ Immich를 검토할 때 가장 자주 등장하는 비교 대상은 [Google Phot
 
 Immich 도입의 첫 번째 장점은 원본 통제권이다. 원본 미디어가 어느 디스크, 어느 NAS, 어느 객체 스토리지에 있는지 운영자가 알고 있다. 이는 단순한 심리적 만족이 아니라 감사와 보존 정책의 출발점이다. 특정 고객 프로젝트 사진을 일정 기간 후 폐기해야 하는지, 가족 사진을 장기 보존해야 하는지, 촬영 위치 정보를 제거해야 하는지 같은 정책을 서비스 약관이 아니라 내부 규칙으로 정할 수 있다.
 
-두 번째 장점은 복구 가능성의 설계다. 클라우드 SaaS에서도 데이터 내보내기는 가능하지만, 내보낸 데이터가 앨범·사람·위치·즐겨찾기·공유 상태까지 완전하게 보존된다고 보장하기 어렵다. Immich에서는 PostgreSQL 백업과 원본 파일 백업을 조합해 원하는 복구 전략을 설계할 수 있다. 물론 이는 장점인 동시에 책임이다. DB만 백업하고 원본 파일을 잃으면 사진 서비스는 복구되지 않는다. 원본 파일만 있고 DB가 사라지면 타임라인과 인덱스는 재구성 비용이 커진다.
+두 번째 장점은 복구 가능성의 설계다. 클라우드 SaaS에서도 데이터 내보내기는 가능하지만, 내보낸 데이터가 앨범·사람·위치·즐겨찾기·공유 상태까지 완전하게 보존된다고 보장하기 어렵다. Immich에서는 PostgreSQL 백업과 원본 파일 백업을 조합해 원하는 복구 전략을 설계할 수 있다. 물론 이는 장점인 동시에 책임이다. DB만 백업하고 원본 파일을 잃으면 사진 서비스는 복구되지 않는다. 원본 파일만 있고 DB가 사라지면 타임라인과 인덱스는 재구성 비용이 커진다. [Supabase 셀프호스팅에서 관리형 운영 비용을 다시 계산하는 기준](/posts/supabase-self-hosting-operations/)처럼 데이터베이스가 익숙하다는 이유만으로 백업·마이그레이션·관측성 비용을 과소평가하면 안 된다.
 
-세 번째 장점은 인증과 공유 모델의 통제다. v3.1.0 릴리스에서 OIDC role claim 동기화 개선과 비밀번호 재설정 시 세션 무효화 옵션이 언급된 것은 의미가 있다. 사진 플랫폼은 생각보다 공유 표면이 넓다. 공개 링크, 파트너 공유, 앨범 초대, 모바일 앱 세션, 관리자 계정, 역방향 프록시 인증이 모두 보안 경계다. OIDC를 통해 조직 계정과 연동할 수 있다면 계정 수명주기 관리와 퇴사자 접근 차단을 더 체계화할 수 있다.
+세 번째 장점은 인증과 공유 모델의 통제다. v3.1.0 릴리스에서 OIDC role claim 동기화 개선과 비밀번호 재설정 시 세션 무효화 옵션이 언급된 것은 의미가 있다. 사진 플랫폼은 생각보다 공유 표면이 넓다. 공개 링크, 파트너 공유, 앨범 초대, 모바일 앱 세션, 관리자 계정, 역방향 프록시 인증이 모두 보안 경계다. OIDC를 통해 조직 계정과 연동할 수 있다면 계정 수명주기 관리와 퇴사자 접근 차단을 더 체계화할 수 있다. 관리자·OIDC 클라이언트·백업 암호화 비밀값은 [Vaultwarden을 셀프호스팅할 때의 운영 책임](/posts/vaultwarden-self-hosted-password-manager/)과 같은 기준으로 저장 위치, 복구 권한, 비상 접근 절차를 분리해야 한다.
 
 ## 한계와 리스크: 백업 없는 셀프호스팅은 데이터 주권이 아니다
 

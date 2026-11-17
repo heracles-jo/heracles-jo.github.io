@@ -3,8 +3,8 @@ title: "Needle 2 온디바이스 AI: 14MB 도구 호출 모델 도입 기준"
 description: "14MB Needle 2가 로컬 도구 호출을 처리하는 구조와 제약 디코딩, 신뢰도 게이트, 보안 경계, 서버 모델 대비 PoC 판단 기준을 정리한다."
 author: heracles-jo
 date: 2026-08-18 07:42:00 +0900
-categories: [AI Infrastructure, Edge AI]
-tags: [needle, on-device-ai, edge-ai, tool-calling, structured-extraction, ai-governance]
+categories: [AI Infrastructure]
+tags: [needle, edge-ai, ai-governance, on-device-ai]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-needle-tiny-on-device-tool-calling/cover.svg
   alt: "Needle 2처럼 14MB급 초소형 온디바이스 AI 모델이 로컬 장치에서 도구 호출과 구조화 추출을 수행하고 신뢰도에 따라 에스컬레이션하는 흐름"

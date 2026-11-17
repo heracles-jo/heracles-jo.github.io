@@ -3,8 +3,8 @@ title: "DESIGN.md와 AI 코딩 시대의 디자인 시스템 운영"
 description: "google-labs-code/design.md가 GitHub Trending에 오른 배경을 바탕으로, AI 코딩 도구가 일관된 UI를 만들기 위해 필요한 디자인 토큰, 문서화, lint/diff 기반 운영 모델을 분석한다."
 author: heracles-jo
 date: 2026-07-03 07:34:00 +0900
-categories: [Engineering, Frontend]
-tags: [github-trending, design-md, design-system, design-tokens, frontend, ai-coding, ux-engineering, ci]
+categories: [Software Engineering, Web Platform]
+tags: [design-md, ci, frontend, design-system, ai-coding]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-design-md-design-system-ai-agents/cover.svg
   alt: "DESIGN.md가 디자인 토큰과 설명 문서를 결합해 AI 코딩 도구에 일관된 시각 컨텍스트를 제공하는 흐름"
@@ -52,7 +52,7 @@ README에 따르면 DESIGN.md CLI는 `npx @google/design.md lint DESIGN.md`처�
 
 실무에서 lint와 diff는 단순 편의 기능이 아니다. 디자인 시스템이 AI 코딩 도구의 입력으로 쓰이면 작은 토큰 변경이 대량의 UI 변경으로 증폭될 수 있다. 예를 들어 `primary` 색상 하나가 바뀌면 버튼, 링크, 배지, 차트 강조색, 빈 상태 일러스트레이션까지 영향을 받을 수 있다. 사람이 직접 변경하는 경우에는 리뷰어가 의도를 물어볼 수 있지만, 에이전트가 여러 파일을 동시에 수정하면 변경 범위를 파악하기 어렵다. 이때 DESIGN.md diff가 “어떤 토큰이 바뀌었는지”를 보여주고, lint가 “대비 기준이나 참조 무결성이 깨졌는지”를 알려주면, 팀은 AI 생성 결과를 일반 코드 리뷰 흐름 안에 넣을 수 있다.
 
-특히 구조화된 JSON 출력은 에이전트 루프와 잘 맞는다. CI가 lint 결과를 남기고, 코딩 에이전트가 그 JSON을 읽고, 다시 DESIGN.md나 컴포넌트 구현을 수정하는 식의 닫힌 루프를 만들 수 있다. 이때 중요한 것은 에이전트에게 “예쁘게 만들어줘”라고 말하는 것이 아니라, “이 토큰과 이 접근성 규칙을 만족하도록 수정해”라고 말할 수 있는 상태를 만드는 것이다. DESIGN.md가 제안하는 파일 포맷은 바로 그 지시의 기준점을 제공한다.
+특히 구조화된 JSON 출력은 에이전트 루프와 잘 맞는다. CI가 lint 결과를 남기고, 코딩 에이전트가 그 JSON을 읽고, 다시 DESIGN.md나 컴포넌트 구현을 수정하는 식의 닫힌 루프를 만들 수 있다. 이때 중요한 것은 에이전트에게 “예쁘게 만들어줘”라고 말하는 것이 아니라, “이 토큰과 이 접근성 규칙을 만족하도록 수정해”라고 말할 수 있는 상태를 만드는 것이다. 이 정적 계약을 실제 브라우저 동작까지 확장하려면 [Modern Web Guidance 기반 AI 웹 코드 검증](/posts/modern-web-guidance-agent-web-validation/)처럼 생성 코드의 플랫폼 호환성과 접근성 규칙을 별도 게이트로 확인해야 한다. DESIGN.md가 제안하는 파일 포맷은 바로 그 지시의 기준점을 제공한다.
 
 ![시각 컨텍스트 전달 방식 비교](https://heracles-jo.github.io/assets/img/posts/github-trending-design-md-design-system-ai-agents/comparison.svg)
 
@@ -88,7 +88,7 @@ DESIGN.md를 도입할 때 가장 큰 리스크는 파일을 “마법의 디자
 
 네 번째 리스크는 접근성 검증의 과신이다. CLI가 WCAG 대비를 점검한다고 해도 접근성은 색상 대비만으로 끝나지 않는다. 키보드 탐색, focus management, ARIA 사용, motion reduction, screen reader 흐름, 터치 타깃 크기 같은 문제는 구현과 테스트가 필요하다. DESIGN.md lint는 좋은 보조 장치지만, axe, Playwright, Storybook accessibility addon, 수동 스크린리더 테스트를 대체하지 않는다.
 
-다섯 번째 리스크는 에이전트 준수율이다. 어떤 코딩 에이전트는 DESIGN.md를 충실히 읽고 반영할 수 있지만, 어떤 도구는 컨텍스트 창 한계나 파일 선택 정책 때문에 무시할 수 있다. 따라서 “DESIGN.md를 추가했으니 UI가 일관된다”가 아니라, “에이전트가 이를 읽도록 워크플로를 설계하고, 결과를 lint와 시각 회귀 테스트로 확인한다”가 올바른 접근이다.
+다섯 번째 리스크는 에이전트 준수율이다. 어떤 코딩 에이전트는 DESIGN.md를 충실히 읽고 반영할 수 있지만, 어떤 도구는 컨텍스트 창 한계나 파일 선택 정책 때문에 무시할 수 있다. 따라서 “DESIGN.md를 추가했으니 UI가 일관된다”가 아니라, “에이전트가 이를 읽도록 워크플로를 설계하고, 결과를 lint와 시각 회귀 테스트로 확인한다”가 올바른 접근이다. 사용자 흐름 수준의 회귀는 [Cypress 기반 브라우저 E2E 테스트 거버넌스](/posts/github-trending-cypress-browser-e2e-testing-governance/)처럼 실패 아티팩트와 플레이크 책임까지 운영해야 디자인 계약이 실제 제품 품질로 이어진다.
 
 ## PoC 체크리스트: 작은 범위에서 통제면을 검증하라
 
@@ -121,7 +121,7 @@ DESIGN.md는 디자인 시스템이 어느 정도 존재하지만, AI 코딩 도
 
 CI에서는 세 단계가 현실적이다. 첫째, lint를 실행해 문법, 참조, 대비 오류를 잡는다. 둘째, diff 결과를 PR 코멘트로 남겨 변경된 토큰을 리뷰어가 쉽게 볼 수 있게 한다. 셋째, export된 CSS variables나 Tailwind theme가 실제 빌드 산출물과 일치하는지 확인한다. 이때 초기에는 warning으로 시작하고, 팀이 규칙에 익숙해진 뒤 blocking gate로 전환하는 편이 좋다.
 
-AI 코딩 도구와의 연결은 도구별로 다르다. 어떤 도구는 저장소 루트의 문서를 자동으로 읽고, 어떤 도구는 별도 instruction 파일에 참조를 명시해야 한다. 중요한 것은 “UI 관련 작업을 시작할 때 반드시 DESIGN.md를 읽어라”, “새로운 색상이나 spacing 값을 임의로 만들지 말고 토큰을 우선 사용하라”, “토큰이 없으면 DESIGN.md 변경을 별도 제안으로 분리하라” 같은 운영 규칙을 에이전트 지침에 넣는 것이다. DESIGN.md 자체만 추가하고 에이전트 instruction을 바꾸지 않으면 효과가 제한된다.
+AI 코딩 도구와의 연결은 도구별로 다르다. 어떤 도구는 저장소 루트의 문서를 자동으로 읽고, 어떤 도구는 별도 instruction 파일에 참조를 명시해야 한다. 중요한 것은 “UI 관련 작업을 시작할 때 반드시 DESIGN.md를 읽어라”, “새로운 색상이나 spacing 값을 임의로 만들지 말고 토큰을 우선 사용하라”, “토큰이 없으면 DESIGN.md 변경을 별도 제안으로 분리하라” 같은 운영 규칙을 에이전트 지침에 넣는 것이다. 자연어로 생성된 테스트까지 품질 게이트에 포함한다면 [AI E2E 테스트의 재생 캐시와 검증 기준](/posts/ai-e2e-agent-replay-testing/)을 참고해 동일 입력 재현성과 승인 가능한 증거를 남겨야 한다. DESIGN.md 자체만 추가하고 에이전트 instruction을 바꾸지 않으면 효과가 제한된다.
 
 ## 향후 관찰해야 할 지표와 전망
 

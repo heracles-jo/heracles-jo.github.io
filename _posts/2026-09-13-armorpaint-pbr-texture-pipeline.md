@@ -4,7 +4,7 @@ description: "ArmorPaint 1.0을 모델 임포트부터 베이킹·채널 패킹�
 author: heracles-jo
 date: 2026-09-13 08:27:00 +0900
 categories: [Software Engineering, Developer Tools]
-tags: [armorpaint, pbr, texture-painting, 3d-pipeline, game-development, open-source]
+tags: [armorpaint, open-source, 3d-pipeline, game-development]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/armorpaint-pbr-texture-pipeline/cover.svg
   alt: "3D 메시가 ArmorPaint를 거쳐 PBR 텍스처 세트로 변환되는 제작 파이프라인"
@@ -98,6 +98,12 @@ PoC는 쉬운 sphere 대신 hard-surface, 유기체, mirrored UV, 여러 UV set,
 합격선은 도구를 설치하기 전에 정한다. 예를 들어 기준 fixture의 channel 오류 0건, 모든 production preset의 엔진 round-trip 통과, 프로젝트 손상 시 마지막 autosave로 복구, 승인되지 않은 plugin·model 0개처럼 정의할 수 있다. 숫자는 ArmorPaint의 보장값이 아니라 각 팀이 정할 계약이다.
 
 전면 전환만이 답은 아니다. 신규 project나 특정 asset class부터 시작하고 기존 Substance project는 원래 도구에서 유지하면 migration 위험을 낮출 수 있다. custom pipeline과 Linux workstation, source patch가 중요한 팀이라면 공개 소스의 가치가 더 커진다.
+
+## 운영 소유권과 철수 조건을 먼저 정한다
+
+ArmorPaint를 팀 표준으로 채택하면 도구 owner가 필요하다. owner는 승인된 binary와 plugin·model allowlist, export preset, fixture 결과, workstation별 GPU 호환성을 관리하고 upstream release를 바로 배포하지 않고 canary 자산으로 검증한다. 아티스트 개인이 각자 build와 preset을 고르면 같은 `.arm` 파일도 서로 다른 결과를 만들 수 있으므로 제작 자유도와 배포 계약을 분리해야 한다.
+
+철수 조건도 명확해야 한다. 핵심 자산 유형에서 round-trip 오류가 반복되거나, crash recovery가 합격선을 넘지 못하거나, 엔진 업그레이드마다 preset을 수동 복구해야 하거나, 유지보수 owner가 사라지면 전환을 확대하지 않는다. 이 경우 `.arm`만 보관하지 말고 source mesh, texture 원본, export preset, bake manifest와 표준 포맷 산출물을 함께 남겨 다른 도구로 옮길 수 있게 해야 한다. 오픈소스라는 사실보다 **프로젝트 파일 밖에 재현 가능한 탈출 경로가 있는가**가 장기 채택의 기준이다.
 
 ## 도입 결정은 `.arm` 파일 밖에서 완성된다
 

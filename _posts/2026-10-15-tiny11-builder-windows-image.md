@@ -3,8 +3,8 @@ title: "Tiny11 Builder Windows 11 경량 ISO: 업데이트 가능한 이미지 �
 description: "Tiny11 Builder의 오프라인 이미지 처리 구조를 분석하고, Windows Update·Defender·복구를 유지할 경계와 Core 이미지의 운영 위험, 검증 가능한 PoC 기준을 정리한다."
 author: heracles-jo
 date: 2026-10-15 08:10:00 +0900
-categories: [Endpoint Management, Security]
-tags: [tiny11-builder, windows-11, windows-image, dism, endpoint-management, supply-chain-security]
+categories: [Platform Engineering, Security]
+tags: [tiny11-builder, endpoint-management, supply-chain-security, windows-11]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/tiny11-builder-windows-image/cover.svg
   alt: "Tiny11 Builder로 Windows 11 설치 이미지를 경량화하면서 업데이트와 복구 가능성을 판단하는 구조"

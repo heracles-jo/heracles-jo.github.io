@@ -6,12 +6,14 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta
     name="viewport"
-    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
   >
 
   {%- capture seo_tags -%}
     {% seo title=false %}
   {%- endcapture -%}
+
+  {% assign seo_tags = seo_tags | replace: '"alt":', '"caption":' %}
 
   <!-- Setup Open Graph image -->
 
@@ -60,7 +62,10 @@
   {% endif %}
 
   <title>
-    {%- unless page.layout == 'home' -%}
+    {%- if page.layout == 'home' and paginator.page > 1 -%}
+      기술 블로그 글 목록 — 페이지 {{ paginator.page }} | {{ site.title }}
+    {%- else -%}
+      {%- unless page.layout == 'home' -%}
       {%- capture title -%}
         {%- if page.collection == 'tabs' -%}
           {%- assign tab_key = page.title | downcase -%}
@@ -70,8 +75,9 @@
         {%- endif -%}
       {%- endcapture -%}
       {{- title | append: ' | ' -}}
-    {%- endunless -%}
-    {{- site.title -}}
+      {%- endunless -%}
+      {{- site.title -}}
+    {%- endif -%}
   </title>
 
   {% include_cached favicons.html %}

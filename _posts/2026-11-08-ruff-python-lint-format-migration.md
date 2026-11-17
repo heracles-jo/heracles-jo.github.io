@@ -3,8 +3,8 @@ title: "Ruff 전환: Flake8·Black 통합 시 회귀 검증 기준"
 description: "Ruff로 Flake8·isort·Black을 통합할 때 규칙 동등성, 자동 수정 안전성, 포맷 차이, 모노레포 설정과 CI 전환을 검증하는 실무 기준을 정리한다."
 author: heracles-jo
 date: 2026-11-08 08:05:00 +0900
-categories: [Developer Tools, Python]
-tags: [ruff, python, lint, formatter, pyproject, ci]
+categories: [Developer Tools]
+tags: [ruff, python, ci, lint]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/ruff-python-lint-format-migration/cover.svg
   alt: "Ruff 전환에서 린트 규칙, 포맷, 자동 수정, CI 회귀를 검증하는 구조"

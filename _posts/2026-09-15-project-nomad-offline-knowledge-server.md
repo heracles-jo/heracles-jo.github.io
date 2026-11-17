@@ -3,8 +3,8 @@ title: "오프라인 지식 서버 설계: Project NOMAD의 운영 경계"
 description: "Project NOMAD의 Kiwix·Kolibri·로컬 RAG 구성을 바탕으로 인터넷 단절에도 쓸 수 있는 지식 서버의 보안, 갱신, 복구와 도입 기준을 정리한다."
 author: heracles-jo
 date: 2026-09-15 08:05:00 +0900
-categories: [Infrastructure, AI]
-tags: [project-nomad, offline-first, self-hosting, knowledge-management, local-ai, disaster-recovery]
+categories: [Platform Engineering, AI Infrastructure]
+tags: [project-nomad, self-hosting, local-ai, offline-first, knowledge-management]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/project-nomad-offline-knowledge-server/cover.svg
   alt: "인터넷 단절 상황에 대비한 Project NOMAD 오프라인 지식 서버"

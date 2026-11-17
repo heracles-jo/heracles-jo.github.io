@@ -3,8 +3,8 @@ title: "Prometheus 3.16 업그레이드: 쿼리 비용 제한·TSDB 복구 검�
 description: "Prometheus 3.16의 query cost 제한과 TSDB·native histogram 수정 사항을 바탕으로 대시보드·룰 회귀, 데이터 복구, 단계적 업그레이드 기준을 정리한다."
 author: heracles-jo
 date: 2026-11-07 08:45:00 +0900
-categories: [Cloud, Observability]
-tags: [prometheus, promql, observability, tsdb, query-cost, upgrade]
+categories: [Cloud Infrastructure, Observability]
+tags: [prometheus, observability, promql, tsdb]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/prometheus-316-query-cost-upgrade/cover.svg
   alt: "Prometheus 3.16 업그레이드에서 쿼리 비용, TSDB 복구, 히스토그램 호환성을 검증하는 구조"

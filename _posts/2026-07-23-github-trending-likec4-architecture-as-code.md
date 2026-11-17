@@ -3,8 +3,8 @@ title: "LikeC4와 Architecture as Code: 살아 있는 아키텍처 문서의 도
 description: "GitHub Trending에 오른 LikeC4를 중심으로 Architecture as Code, C4 모델, Mermaid·PlantUML·Structurizr 대안을 비교하고 실무 도입 체크리스트와 운영 리스크를 분석한다."
 author: heracles-jo
 date: 2026-07-23 07:43:00 +0900
-categories: [Architecture, Developer Tools]
-tags: [github-trending, likec4, architecture-as-code, c4-model, software-architecture, diagrams, structurizr, plantuml, mermaid, documentation, platform-engineering]
+categories: [Software Engineering, Developer Tools]
+tags: [likec4, platform-engineering, documentation, architecture-as-code]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-likec4-architecture-as-code/cover.svg
   alt: "LikeC4가 코드와 아키텍처 모델을 연결해 항상 최신 상태의 C4 다이어그램을 생성하는 Architecture as Code 흐름"
@@ -34,7 +34,7 @@ GitHub Trending daily에서 [LikeC4](https://github.com/likec4/likec4)가 눈에
 
 LikeC4의 README는 자신을 “software architecture를 설명하는 모델링 언어와 그 모델로부터 다이어그램을 생성하는 도구”라고 설명한다. 이름에서 드러나듯 [C4 Model](https://c4model.com/)과 [Structurizr](https://structurizr.com/) DSL에서 영감을 받았지만, 자체 표기법과 유연한 중첩 수준, 커스텀 요소 타입, 스타일링을 제공한다. 사용자는 `npx likec4 start` 같은 CLI로 미리보기 서버를 띄우고, VS Code 확장이나 정적 내보내기를 통해 문서 포털에 통합할 수 있다. 공식 문서는 [likec4.dev](https://likec4.dev/)와 [playground](https://playground.likec4.dev/)에서 확인할 수 있다.
 
-핵심은 PNG나 SVG 파일을 수동으로 그리는 것이 아니다. 서비스, 시스템, 외부 의존성, 관계, 관점을 텍스트 모델로 작성하고, 이를 기반으로 여러 뷰를 만든다. 예를 들어 결제 도메인 전체를 보여주는 context view, API gateway와 내부 서비스 관계를 보여주는 container view, 특정 서비스 내부 컴포넌트를 보여주는 component view를 한 모델에서 파생할 수 있다. 모델이 변경되면 다이어그램도 함께 바뀌므로, 리뷰 대상은 “그림 파일”이 아니라 “관계 선언”이 된다.
+핵심은 PNG나 SVG 파일을 수동으로 그리는 것이 아니다. 서비스, 시스템, 외부 의존성, 관계, 관점을 텍스트 모델로 작성하고, 이를 기반으로 여러 뷰를 만든다. 예를 들어 결제 도메인 전체를 보여주는 context view, API gateway와 내부 서비스 관계를 보여주는 container view, 특정 서비스 내부 컴포넌트를 보여주는 component view를 한 모델에서 파생할 수 있다. [AI 아키텍처 다이어그램 자동화](/posts/ai-architecture-diagram-automation-diagram-design/)도 결국 입력 근거와 구조 검증이 없으면 그럴듯한 그림에 머문다. LikeC4에서는 모델이 변경되면 다이어그램도 함께 바뀌므로 리뷰 대상이 “그림 파일”이 아니라 “관계 선언”이 된다.
 
 이 차이는 실무에서 크다. 기존 문서화는 대개 Confluence, Notion, draw.io, Figma, Miro, Markdown 이미지가 뒤섞인 형태로 남는다. 처음에는 보기 좋지만, 릴리스가 몇 번 지나면 실제 코드와 다이어그램이 벌어진다. 반면 Architecture as Code 접근은 아키텍처 정보를 코드 저장소 안에 두고 pull request로 검토하게 만든다. 변경 이력, 소유자, 리뷰, CI 검증, 정적 사이트 배포라는 개발 조직의 기존 운영 장치를 그대로 사용할 수 있다.
 
@@ -42,7 +42,7 @@ LikeC4의 README는 자신을 “software architecture를 설명하는 모델링
 
 첫 번째 배경은 시스템 복잡도의 증가다. 마이크로서비스, 이벤트 스트리밍, SaaS 통합, 데이터 파이프라인, AI API 호출이 섞인 구조에서는 “서비스 목록”만으로는 전체 리스크를 설명할 수 없다. 어떤 서비스가 어떤 데이터를 받아 어디로 전달하는지, 어떤 외부 API가 장애 격리 경계인지, 어떤 큐가 backpressure를 흡수하는지를 시각적으로 설명해야 한다. 보안 심사와 장애 대응에서는 이 정보가 문서 장식이 아니라 운영 자산이다.
 
-두 번째 배경은 AI 코딩 도구의 확산이다. AI가 테스트를 고치고 모듈을 추가하는 속도는 빨라졌지만, 시스템 설계 의도까지 자동으로 유지해 주지는 않는다. 오히려 더 많은 코드 변경이 더 작은 단위로 발생하면서, 아키텍처 결정의 추적 가능성이 약해질 수 있다. 이때 LikeC4 같은 모델 기반 문서는 AI 도구에도 유용한 컨텍스트가 된다. 사람이 읽는 다이어그램일 뿐 아니라, 저장소 내부의 구조화된 시스템 지식으로 활용될 수 있기 때문이다.
+두 번째 배경은 AI 코딩 도구의 확산이다. AI가 테스트를 고치고 모듈을 추가하는 속도는 빨라졌지만, 시스템 설계 의도까지 자동으로 유지해 주지는 않는다. 오히려 더 많은 코드 변경이 더 작은 단위로 발생하면서, 아키텍처 결정의 추적 가능성이 약해질 수 있다. [Agent Skills로 개발 절차를 명시하는 접근](/posts/github-trending-agent-skills-engineering-workflow/)과 마찬가지로 LikeC4 모델은 에이전트가 따라야 할 시스템 경계와 관계를 저장소 안의 구조화된 컨텍스트로 제공할 수 있다.
 
 세 번째 배경은 플랫폼 엔지니어링과 내부 개발자 포털의 확산이다. Backstage 같은 포털, 서비스 카탈로그, 소유권 메타데이터, runbook, SLO 문서가 조직 내 표준으로 자리 잡을수록 아키텍처 다이어그램도 “문서 페이지의 그림”이 아니라 카탈로그와 연결된 산출물이 되어야 한다. LikeC4의 정적 내보내기와 IDE 중심 경험은 이런 내부 포털 흐름과 잘 맞는다.
 
@@ -91,7 +91,7 @@ LikeC4 도입의 가장 흔한 실패 패턴은 “처음 한 번 예쁘게 그�
 
 두 번째 리스크는 모델링 과잉이다. 모든 함수, 모든 클래스, 모든 테이블을 아키텍처 모델에 넣으려 하면 유지보수 비용이 폭증한다. C4 접근의 장점은 추상화 수준을 조절하는 데 있다. 실무에서는 서비스 경계, 외부 시스템, 데이터 저장소, 핵심 이벤트, 보안 경계처럼 의사결정에 필요한 요소부터 모델링해야 한다. 코드 구조를 완전히 반영하려는 욕심은 피해야 한다.
 
-세 번째 리스크는 진실의 원천(source of truth) 충돌이다. 이미 서비스 카탈로그, Terraform, Kubernetes manifests, OpenAPI, AsyncAPI, DB schema, observability metadata가 존재한다면 LikeC4 모델은 이들과 어떻게 관계를 맺을지 정해야 한다. 모든 정보를 LikeC4에 복사하면 중복이 생긴다. 반대로 너무 적게 쓰면 의미가 없다. 권장되는 방식은 LikeC4를 “아키텍처 관점의 설명 모델”로 두고, 상세 설정은 기존 도구에 링크하는 것이다.
+세 번째 리스크는 진실의 원천(source of truth) 충돌이다. 이미 서비스 카탈로그, Terraform, Kubernetes manifests, OpenAPI, AsyncAPI, DB schema, observability metadata가 존재한다면 LikeC4 모델은 이들과 어떻게 관계를 맺을지 정해야 한다. 특히 [Terraform과 IaC 거버넌스](/posts/github-trending-terraform-iac-governance/)가 실제 리소스 상태와 변경 통제를 담당한다면, LikeC4가 같은 속성을 다시 선언해서는 안 된다. 권장되는 방식은 LikeC4를 “아키텍처 관점의 설명 모델”로 두고 상세 설정과 증거는 기존 도구에 링크하는 것이다.
 
 네 번째 리스크는 렌더링과 배포 파이프라인의 안정성이다. 문서 사이트 빌드가 개발 빌드와 같은 CI에서 돌면, 다이어그램 렌더링 실패가 릴리스를 막을 수 있다. 이는 장점이자 위험이다. 초기에는 warning 수준으로 시작하고, 핵심 시스템에 한해 점진적으로 gate를 강화하는 편이 현실적이다.
 

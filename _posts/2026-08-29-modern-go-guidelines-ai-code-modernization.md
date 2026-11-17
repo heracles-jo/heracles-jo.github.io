@@ -4,7 +4,7 @@ description: "JetBrains Modern Go Guidelines가 Go 버전에 맞는 규칙을 �
 author: heracles-jo
 date: 2026-08-29 07:15:00 +0900
 categories: [Developer Tools, AI Infrastructure]
-tags: [go-modern-guidelines, golang, ai-coding-agent, code-modernization, go-fix, developer-tools]
+tags: [go-modern-guidelines, developer-tools, ai-coding-agent, code-modernization]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/modern-go-guidelines-ai-code-modernization/cover.svg
   alt: "Go 버전 탐지와 Modern Go 규칙, 컴파일·테스트 검증을 연결한 AI 코딩 워크플로"

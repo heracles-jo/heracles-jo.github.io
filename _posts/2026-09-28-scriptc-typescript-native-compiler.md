@@ -4,7 +4,7 @@ description: "scriptc의 tsc·typed IR·LLVM 파이프라인을 따라 Node 없�
 author: heracles-jo
 date: 2026-09-28 07:58:00 +0900
 categories: [Developer Tools, Software Engineering]
-tags: [scriptc, typescript, native-compiler, llvm, standalone-executable, developer-tools]
+tags: [scriptc, developer-tools, typescript, native-compiler]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/scriptc-typescript-native-compiler/cover.svg
   alt: "TypeScript 소스가 typed IR과 LLVM을 거쳐 네이티브 실행 파일이 되는 scriptc 컴파일 파이프라인 표지"

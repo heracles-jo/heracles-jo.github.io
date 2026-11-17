@@ -4,7 +4,7 @@ description: "OpenBot의 AG-UI 게이트웨이, 작업별 승인, 컴퓨터 격�
 author: heracles-jo
 date: 2026-10-31 08:25:00 +0900
 categories: [AI Infrastructure, Security]
-tags: [openbot, ai-coworker, ag-ui, agent-governance, approval-workflow, audit-log]
+tags: [openbot, ag-ui, audit-log, ai-coworker]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/openbot-ai-coworker-governance/cover.svg
   alt: "AI 동료의 브라우저·파일·MCP 작업이 승인 게이트와 감사 로그를 거치는 운영 구조"

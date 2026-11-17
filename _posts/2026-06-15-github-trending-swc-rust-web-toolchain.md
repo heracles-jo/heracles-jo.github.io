@@ -4,7 +4,7 @@ description: "GitHub Trending에 오른 swc-project/swc를 중심으로 Rust 기
 author: heracles-jo
 date: 2026-06-15 07:20:00 +0900
 categories: [Developer Tools, Web Platform]
-tags: [github-trending, swc, rust, typescript, javascript, frontend-build, web-toolchain, esbuild, oxc, vite, ci-optimization]
+tags: [swc, rust, typescript, javascript]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/swc-rust-web-toolchain/cover.svg
   alt: "SWC가 TypeScript와 JavaScript 소스를 Rust 기반 컴파일러 코어로 처리해 프런트엔드 빌드 파이프라인을 가속하는 구조를 설명하는 이미지"
@@ -45,7 +45,7 @@ esbuild는 Go로 작성된 매우 빠른 bundler와 minifier로, 개발 서버�
 | Oxc | Rust 기반 차세대 JS 도구 모음 | parser/linter/formatter/transformer 통합 방향 | 빠르게 진화하는 만큼 API 안정성·생태계 성숙도 확인 필요 |
 | Vite | 개발 서버와 앱 빌드 경험 | 빠른 dev server, Rollup 플러그인 생태계, 프레임워크 지원 | 내부 도구 조합을 이해하지 못하면 병목 분석이 어려움 |
 
-따라서 “SWC냐 esbuild냐”라는 이분법은 실무적으로 부정확하다. 한 프로젝트는 Vite를 개발 서버로 쓰면서 dependency pre-bundling에 esbuild를 쓰고, 테스트 변환에 SWC를 쓰며, 일부 lint 영역에서 Oxc 계열 도구를 검토할 수 있다. 의사결정자는 도구 이름보다 각 단계의 병목을 먼저 분리해야 한다. TypeScript type checking이 느린지, JSX transform이 느린지, minification이 느린지, Rollup plugin hook이 느린지, 테스트 파일 transform cache가 비효율적인지에 따라 답은 달라진다.
+따라서 “SWC냐 esbuild냐”라는 이분법은 실무적으로 부정확하다. 한 프로젝트는 Vite를 개발 서버로 쓰면서 dependency pre-bundling에 esbuild를 쓰고, 테스트 변환에 SWC를 쓰며, 일부 lint 영역에서 Oxc 계열 도구를 검토할 수 있다. 더 나아가 [TypeScript 네이티브 컴파일을 지향하는 scriptc](/posts/scriptc-typescript-native-compiler/)처럼 런타임과 배포 산출물까지 바꾸는 선택지는 단순 transpiler 교체와 다른 검증 기준이 필요하다. 의사결정자는 도구 이름보다 각 단계의 병목을 먼저 분리해야 한다. TypeScript type checking이 느린지, JSX transform이 느린지, minification이 느린지, Rollup plugin hook이 느린지, 테스트 파일 transform cache가 비효율적인지에 따라 답은 달라진다.
 
 ## 실무 도입 장점: 속도보다 피드백 루프가 핵심이다
 
@@ -61,7 +61,7 @@ SWC의 가장 현실적인 리스크는 Babel 생태계와의 호환성이다. �
 
 두 번째 리스크는 디버깅 경험이다. 빠른 minifier나 transform은 소스맵 품질이 낮으면 운영 장애 시 오히려 비용을 키운다. Sentry, Datadog, New Relic 같은 모니터링 도구에 업로드되는 소스맵이 정확한지, production stack trace가 원본 TypeScript 위치로 안정적으로 매핑되는지, dynamic import와 chunk split 상황에서도 문제없는지 확인해야 한다. 빌드 속도 20% 개선보다 장애 분석 시간이 2시간 늘어나는 것이 더 비쌀 수 있다.
 
-세 번째 리스크는 보안 경계다. CI는 외부 contributor의 pull request를 빌드할 수 있고, 빌드 도구는 설정 파일과 플러그인을 읽는다. SWC 저장소에서 untrusted input security scope를 문서화하는 최근 커밋이 보였다는 사실은 이 영역이 중요하다는 신호다. 네이티브 컴파일러를 빌드 파이프라인에 넣을 때는 실행 권한, dependency pinning, npm package integrity, lockfile 관리, sandboxed CI, PR 권한 정책을 함께 봐야 한다. 성능 도구도 결국 공급망의 일부다.
+세 번째 리스크는 보안 경계다. CI는 외부 contributor의 pull request를 빌드할 수 있고, 빌드 도구는 설정 파일과 플러그인을 읽는다. SWC 저장소에서 untrusted input security scope를 문서화하는 최근 커밋이 보였다는 사실은 이 영역이 중요하다는 신호다. 네이티브 컴파일러를 빌드 파이프라인에 넣을 때는 실행 권한, dependency pinning, npm package integrity, lockfile 관리, sandboxed CI, PR 권한 정책을 함께 봐야 한다. 생성 코드와 브라우저 호환성까지 자동 검증하려면 [Modern Web Guidance의 에이전트 웹 코드 검증 기준](/posts/modern-web-guidance-agent-web-validation/)처럼 빌드 성공 이후의 품질 게이트도 필요하다. 성능 도구도 결국 공급망의 일부다.
 
 ## PoC 체크리스트: “빠르다”를 조직 지표로 검증하는 법
 
@@ -78,7 +78,7 @@ SWC 도입을 검토하는 팀이라면 다음 순서로 PoC를 설계하는 것
 
 ## 어떤 팀에 적합하고, 어떤 경우 피해야 하나
 
-SWC가 특히 적합한 팀은 첫째, TypeScript/React 기반 코드베이스가 크고 빌드와 테스트 변환 시간이 명확한 병목인 팀이다. 둘째, Next.js나 SWC 친화적 프레임워크를 이미 쓰고 있어 migration 표면이 작은 팀이다. 셋째, CI 비용과 PR 대기 시간이 실제 제품 개발 속도를 늦추는 조직이다. 넷째, 빌드 파이프라인을 관측하고 회귀를 잡을 수 있는 엔지니어링 역량이 있는 팀이다.
+SWC가 특히 적합한 팀은 첫째, TypeScript/React 기반 코드베이스가 크고 빌드와 테스트 변환 시간이 명확한 병목인 팀이다. 둘째, Next.js나 SWC 친화적 프레임워크를 이미 쓰고 있어 migration 표면이 작은 팀이다. 셋째, CI 비용과 PR 대기 시간이 실제 제품 개발 속도를 늦추는 조직이다. 넷째, 빌드 파이프라인을 관측하고 회귀를 잡을 수 있는 엔지니어링 역량이 있는 팀이다. Rust 기반 컴파일러가 프레임워크 전체로 확장될 때의 채택 경계는 [Topcoat Rust 풀스택 프레임워크 검증 기준](/posts/topcoat-rust-fullstack-framework/)과 함께 보면 더 구체적으로 비교할 수 있다.
 
 반대로 피하거나 신중해야 할 경우도 있다. Babel 플러그인에 깊게 의존하고 대체 경로가 없는 레거시 프로젝트, 매우 특수한 문법 변환을 사용하는 라이브러리, 소스맵 정확성이 규제나 장애 대응에 절대적으로 중요한 서비스, 빌드 파이프라인을 관리할 담당자가 없는 팀은 무리한 전환보다 단계적 실험이 낫다. 또한 단순한 소형 프로젝트에서 현재 빌드 시간이 이미 충분히 짧다면 SWC 전환의 운영 복잡성이 이익보다 클 수 있다.
 

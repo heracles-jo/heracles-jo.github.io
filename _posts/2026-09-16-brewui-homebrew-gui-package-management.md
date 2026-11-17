@@ -4,7 +4,7 @@ description: "Homebrew 공식 GUI BrewUI가 명령 실행을 숨기지 않는 �
 author: heracles-jo
 date: 2026-09-16 07:55:00 +0900
 categories: [Developer Tools, Software Engineering]
-tags: [brewui, homebrew, macos, package-management, developer-tools, software-supply-chain]
+tags: [brewui, developer-tools, macos, homebrew]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/brewui-homebrew-gui-package-management/cover.svg
   alt: "BrewUI에서 Homebrew 패키지 작업과 실행 명령을 함께 검토하는 화면"

@@ -3,8 +3,8 @@ title: "AI CAD 자동화: text-to-cad 형상 검증과 제조 경계"
 description: "text-to-cad의 에이전트·CAD 커널·DFM 흐름을 분해하고, 생성된 STEP·메시를 제조에 넘기기 전 형상 정확성·보안·재현성을 검증하는 기준을 제시한다."
 author: heracles-jo
 date: 2026-10-07 08:35:00 +0900
-categories: [AI Engineering, Developer Tools]
-tags: [text-to-cad, cad-automation, ai-agents, design-for-manufacturing, 3d-printing, geometry-validation]
+categories: [AI Infrastructure, Developer Tools]
+tags: [text-to-cad, ai-agents, cad-automation, design-for-manufacturing]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/text-to-cad-ai-cad-validation/cover.svg
   alt: "자연어 요구사항이 AI 에이전트와 CAD 커널을 거쳐 검증된 제조 산출물로 변환되는 과정"

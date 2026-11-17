@@ -4,7 +4,7 @@ description: "Kronos의 계층형 K선 토큰화와 자기회귀 예측을 해�
 author: heracles-jo
 date: 2026-10-21 08:05:00 +0900
 categories: [AI Infrastructure, Data Engineering]
-tags: [kronos, financial-time-series, foundation-model, backtesting, data-leakage, quantitative-finance]
+tags: [kronos, foundation-model, backtesting, financial-time-series]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/kronos-financial-kline-foundation-model/cover.svg
   alt: "Kronos 금융 K선 파운데이션 모델의 토큰화와 검증 경계를 표현한 개념도"

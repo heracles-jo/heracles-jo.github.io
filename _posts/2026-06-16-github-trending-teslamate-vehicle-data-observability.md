@@ -3,8 +3,8 @@ title: "TeslaMate와 차량 데이터 옵저버빌리티의 현실화"
 description: "GitHub Trending에 오른 TeslaMate를 중심으로 셀프호스팅 차량 데이터 로거, Postgres·Grafana·MQTT 기반 모빌리티 옵저버빌리티, 보안·운영 리스크와 PoC 기준을 실무 관점에서 분석한다."
 author: heracles-jo
 date: 2026-06-16 07:41:00 +0900
-categories: [Mobility, Open Source]
-tags: [github-trending, teslamate, vehicle-data, observability, iot, postgres, grafana, mqtt, self-hosting, privacy]
+categories: [Mobile, Open Source]
+tags: [teslamate, self-hosting, privacy, observability, postgres, iot]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-teslamate-vehicle-data-observability/cover.svg
   alt: "TeslaMate가 차량 텔레메트리를 Postgres, MQTT, Grafana로 연결해 셀프호스팅 차량 데이터 옵저버빌리티를 구성하는 흐름"
@@ -43,7 +43,7 @@ TeslaMate가 GitHub Trending에 오른 배경에는 크게 네 가지 압력이 
 3. **홈 자동화와 로컬 통합**: TeslaMate는 MQTT를 통해 차량 상태를 로컬 브로커에 발행할 수 있다. Home Assistant 같은 시스템과 결합하면 차량 도착, 충전 상태, 배터리 잔량을 자동화 트리거로 쓸 수 있다.
 4. **데이터 주권과 프라이버시 관심**: 제조사 클라우드와 SaaS 앱에 민감한 이동 데이터를 모두 맡기기보다, 집이나 조직 내부 인프라에서 직접 보관하려는 수요가 커지고 있다.
 
-중요한 것은 이 흐름이 “클라우드 반대”가 아니라는 점이다. 차량은 어차피 제조사 API와 통신해야 하고, TeslaMate도 외부 인터넷 접근이 필요하다. 다만 최종 분석 데이터와 운영 대시보드를 사용자가 통제하는 저장소에 남길 수 있다는 점이 차별점이다. 실무적으로는 클라우드와 로컬의 이분법이 아니라, 어떤 데이터가 어디에 저장되고 누가 접근하며 언제 삭제되는지를 설계하는 문제다.
+중요한 것은 이 흐름이 “클라우드 반대”가 아니라는 점이다. 차량은 어차피 제조사 API와 통신해야 하고, TeslaMate도 외부 인터넷 접근이 필요하다. 다만 최종 분석 데이터와 운영 대시보드를 사용자가 통제하는 저장소에 남길 수 있다는 점이 차별점이다. 실무적으로는 클라우드와 로컬의 이분법이 아니라, 어떤 데이터가 어디에 저장되고 누가 접근하며 언제 삭제되는지를 설계하는 문제다. 이는 [WiFi 신호를 공간 데이터로 해석할 때의 프라이버시 경계](/posts/github-trending-wifi-sensing-spatial-intelligence/)와 마찬가지로 물리 세계의 관측 데이터가 생활 패턴을 드러낸다는 점을 전제로 해야 한다.
 
 ## TeslaMate의 핵심 아키텍처: Elixir, Postgres, Grafana, MQTT
 
@@ -57,7 +57,7 @@ TeslaMate README는 프로젝트를 “A powerful, self-hosted data logger for y
 - **시각화 계층**: Grafana 대시보드가 주행 거리, 충전량, 효율, 위치, 배터리 추이를 보여준다. 운영팀에게 익숙한 대시보드 경험을 그대로 활용할 수 있다.
 - **통합 계층**: MQTT는 Home Assistant, Node-RED, 에너지 관리 시스템과 연결되는 가벼운 이벤트 버스다.
 
-이 조합은 화려하지 않지만 강하다. 이벤트 소싱이나 스트리밍 플랫폼을 과하게 도입하지 않아도, 한 대 또는 몇 대의 차량 데이터를 안정적으로 축적하고 해석하기에 충분하다. 반대로 수백 대 이상의 상업용 플릿을 대상으로 SLA, 권한, 멀티테넌시, 감사 로그, 데이터 보존 정책을 엄격히 요구한다면 TeslaMate만으로는 부족할 수 있다. 그 경우에는 플릿 관리 SaaS, 별도 데이터 웨어하우스, 정책 엔진, 보안 관제 연동이 필요하다.
+이 조합은 화려하지 않지만 강하다. 이벤트 소싱이나 스트리밍 플랫폼을 과하게 도입하지 않아도, 한 대 또는 몇 대의 차량 데이터를 안정적으로 축적하고 해석하기에 충분하다. 다만 충전 완료나 비용 정산처럼 한 번만 처리되어야 하는 후속 작업을 붙인다면 [Postgres 안에서 durable execution을 설계하는 방식](/posts/github-trending-postgres-durable-execution/)처럼 재시도와 멱등성 경계를 별도로 검토해야 한다. 반대로 수백 대 이상의 상업용 플릿을 대상으로 SLA, 권한, 멀티테넌시, 감사 로그, 데이터 보존 정책을 엄격히 요구한다면 TeslaMate만으로는 부족할 수 있다. 그 경우에는 플릿 관리 SaaS, 별도 데이터 웨어하우스, 정책 엔진, 보안 관제 연동이 필요하다.
 
 ## 기존 방식과의 비교: 제조사 앱, SaaS, 홈 자동화 통합
 
@@ -145,7 +145,7 @@ TeslaMate는 개인 차량 또는 소규모 운영에 매우 잘 맞는 구조�
 - 상업용 플릿의 권한, 감사, 계약상 책임을 오픈소스 프로젝트 하나에 전가하려 한다.
 - 제조사 API 변경에 따른 장애를 감내할 수 없는 미션 크리티컬 업무에 바로 연결하려 한다.
 
-셀프호스팅은 비용을 없애는 선택이 아니라 책임의 위치를 바꾸는 선택이다. 서버, 네트워크, 데이터베이스, 인증, 업데이트, 백업, 보안 사고 대응의 책임이 사용자에게 온다. 개인 사용자는 이 책임을 취미와 학습으로 받아들일 수 있지만, 조직은 이를 운영 비용으로 산정해야 한다.
+셀프호스팅은 비용을 없애는 선택이 아니라 책임의 위치를 바꾸는 선택이다. 서버, 네트워크, 데이터베이스, 인증, 업데이트, 백업, 보안 사고 대응의 책임이 사용자에게 온다. 개인 사용자는 이 책임을 취미와 학습으로 받아들일 수 있지만, 조직은 이를 운영 비용으로 산정해야 한다. 장기 보존 데이터의 통제권을 가져오려면 [Immich가 사진 원본과 메타데이터의 복구 정합성을 다루는 방식](/posts/github-trending-immich-self-hosted-photo-governance/)처럼 DB와 원본, 설정, 암호화 키를 하나의 복구 단위로 봐야 한다.
 
 ![TeslaMate PoC 체크리스트](https://heracles-jo.github.io/assets/img/posts/github-trending-teslamate-vehicle-data-observability/checklist.svg)
 

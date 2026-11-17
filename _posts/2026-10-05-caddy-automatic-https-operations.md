@@ -3,8 +3,8 @@ title: "Caddy 자동 HTTPS 운영: 인증서·무중단 리로드 검증"
 description: "Caddy의 ACME 인증서 자동화와 원자적 설정 리로드를 분해하고, 저장소·관리 API·스트리밍 회귀·다중 인스턴스 운영의 검증 기준을 정리한다."
 author: heracles-jo
 date: 2026-10-05 08:25:00 +0900
-categories: [Web Infrastructure, Platform Engineering]
-tags: [caddy, automatic-https, acme, reverse-proxy, zero-downtime, tls]
+categories: [Web Platform, Platform Engineering]
+tags: [caddy, reverse-proxy, automatic-https, acme]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/caddy-automatic-https-operations/cover.svg
   alt: "Caddy가 ACME 인증서와 원자적 설정 리로드를 결합해 HTTPS 트래픽을 운영하는 구조"

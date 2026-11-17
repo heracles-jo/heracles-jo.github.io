@@ -4,7 +4,7 @@ description: "claude-mem의 세션 캡처·요약·검색·컨텍스트 주입 �
 author: heracles-jo
 date: 2026-10-09 08:12:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [claude-mem, claude-code, agent-memory, context-engineering, mcp, local-first]
+tags: [claude-mem, mcp, local-first, claude-code, agent-memory, context-engineering]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/claude-mem-agent-session-memory/cover.svg
   alt: "AI 코딩 에이전트의 세션 활동이 캡처·요약·검색을 거쳐 다음 세션 컨텍스트로 돌아오는 구조"

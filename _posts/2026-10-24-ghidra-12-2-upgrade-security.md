@@ -4,7 +4,7 @@ description: "Ghidra 12.2의 JDK 25 전환, 서버 TLS 인증, 프로젝트 데�
 author: heracles-jo
 date: 2026-10-24 08:15:00 +0900
 categories: [Security, Developer Tools]
-tags: [ghidra-12-2, reverse-engineering, jdk-25, ghidra-server, binary-analysis, security-upgrade]
+tags: [ghidra-12-2, reverse-engineering, binary-analysis, jdk-25]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/ghidra-12-2-upgrade-security/cover.svg
   alt: "Ghidra 12.2 업그레이드에서 JDK, 프로젝트, 서버 TLS와 확장을 단계별로 검증하는 구조"

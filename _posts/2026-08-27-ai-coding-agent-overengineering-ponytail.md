@@ -4,7 +4,7 @@ description: "Ponytail의 YAGNI·표준 라이브러리 우선 규칙과 공개 
 author: heracles-jo
 date: 2026-08-27 07:35:00 +0900
 categories: [Developer Tools, AI Infrastructure]
-tags: [ponytail, ai-coding-agent, yagni, code-review, developer-tools, software-quality]
+tags: [ponytail, developer-tools, ai-coding-agent, code-review, software-quality]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/ai-coding-agent-overengineering-ponytail/cover.svg
   alt: "AI 코딩 에이전트가 요구사항 이해부터 기존 코드 재사용, 표준 기능 선택, 최소 변경과 안전 검증으로 과잉 구현을 줄이는 흐름"

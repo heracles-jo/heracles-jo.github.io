@@ -4,7 +4,7 @@ description: "Apache Maka의 append-only 런타임 이벤트 로그를 해부해
 author: heracles-jo
 date: 2026-08-22 07:10:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [apache-maka, ai-agent, event-sourcing, audit-log, agent-runtime, local-first]
+tags: [apache-maka, ai-agent, local-first, audit-log]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/apache-maka-agent-runtime-event-log/cover.svg
   alt: "Apache Maka의 런타임 이벤트 로그에서 세션 화면, 모델 컨텍스트, 복구 상태가 투영되는 구조"

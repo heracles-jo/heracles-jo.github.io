@@ -4,7 +4,7 @@ description: "Modern Web Guidance의 로컬 검색·Baseline 호환성·Playwrig
 author: heracles-jo
 date: 2026-11-13 08:10:00 +0900
 categories: [Developer Tools, Web Platform]
-tags: [modern-web-guidance, ai-coding-agent, web-platform, browser-compatibility, playwright, developer-tools]
+tags: [modern-web-guidance, developer-tools, ai-coding-agent, playwright, web-platform]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/modern-web-guidance-agent-web-validation/cover.svg
   alt: "Modern Web Guidance를 AI 웹 코드 생성과 브라우저 검증 사이에 배치하는 도입 구조"

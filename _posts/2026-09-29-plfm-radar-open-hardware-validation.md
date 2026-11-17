@@ -4,7 +4,7 @@ description: "AERIS-10의 LFM·빔포밍·FPGA 처리 구조를 따라 시뮬레
 author: heracles-jo
 date: 2026-09-29 08:03:00 +0900
 categories: [Hardware, Security]
-tags: [plfm-radar, phased-array, fpga, rf-engineering, open-hardware, hardware-validation]
+tags: [plfm-radar, phased-array, fpga, rf-engineering]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/plfm-radar-open-hardware-validation/cover.svg
   alt: "오픈소스 위상배열 레이더의 RF 프런트엔드와 FPGA 신호 처리, 실측 검증 게이트를 표현한 표지"

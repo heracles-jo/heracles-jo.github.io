@@ -3,8 +3,8 @@ title: "Apple Silicon LLM 서버: OMLX 연속 배칭·SSD 캐시 도입 기준"
 description: "OMLX가 Mac의 통합 메모리와 SSD를 활용해 로컬 LLM을 동시 서빙하는 구조를 살펴보고, MLX·llama.cpp 대비 운영 경계와 PoC 측정 기준을 제시한다."
 author: heracles-jo
 date: 2026-08-19 07:03:00 +0900
-categories: [AI Infrastructure, LLMOps]
-tags: [omlx, apple-silicon, llm-serving, mlx, kv-cache, local-ai]
+categories: [AI Infrastructure]
+tags: [omlx, local-ai, apple-silicon, llm-serving, kv-cache]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-omlx-apple-silicon-llm-server/cover.svg
   alt: "Apple Silicon Mac에서 OMLX가 연속 배칭과 RAM·SSD 계층형 KV 캐시로 여러 로컬 LLM 요청을 처리하는 구조"

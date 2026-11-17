@@ -3,8 +3,8 @@ title: "WeatherNext와 운영형 AI 기상 예측: GitHub Trending이 보여준 
 description: "GitHub Trending에 오른 google-deepmind/weathernext를 중심으로 AI 기상 예측 모델이 연구 코드를 넘어 데이터 피드와 업무 의사결정 플랫폼으로 이동하는 흐름, 아키텍처, 도입 판단, 운영 리스크를 분석한다."
 author: heracles-jo
 date: 2026-08-10 07:28:00 +0900
-categories: [AI Infrastructure, Data Platform]
-tags: [github-trending, weathernext, google-deepmind, weather-forecast, graphcast, gencast, geospatial-data, bigquery, earth-engine, mlops]
+categories: [AI Infrastructure, Data Engineering]
+tags: [weathernext, mlops, google-deepmind, weather-forecast]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-weathernext-operational-ai-weather/cover.svg
   alt: "WeatherNext가 전 지구 격자 예보와 데이터 피드를 통해 운영형 AI 기상 예측 플랫폼으로 확장되는 흐름"
@@ -74,9 +74,9 @@ WeatherNext를 도입한다고 해서 모든 팀이 JAX 기반 모델을 직접 
 
 첫째, 데이터 과학팀이 전 지구 기상장을 별도 HPC 없이 분석 파이프라인으로 끌어올 수 있다. BigQuery나 GCS Zarr 형태의 접근은 기존 데이터 플랫폼 팀에게 익숙하다. 변수·시간·공간 축을 기준으로 필요한 영역을 잘라 내부 거래, 물류, 센서, 고객 데이터와 결합할 수 있다.
 
-둘째, 확률적 예보를 의사결정 비용 함수에 연결할 수 있다. 단일 값 예보는 “비가 온다/안 온다”처럼 보이지만, 운영에서는 불확실성이 더 중요하다. 배송 지연 비용, 재고 부족 비용, 발전량 오차 비용, 안전 사고 비용은 비대칭적이다. WeatherNext Gen과 WeatherNext 2가 강조하는 probabilistic forecast 흐름은 이런 비대칭 비용을 모델링하는 데 더 적합하다.
+둘째, 확률적 예보를 의사결정 비용 함수에 연결할 수 있다. 단일 값 예보는 “비가 온다/안 온다”처럼 보이지만, 운영에서는 불확실성이 더 중요하다. 배송 지연 비용, 재고 부족 비용, 발전량 오차 비용, 안전 사고 비용은 비대칭적이다. [TimesFM 같은 시계열 파운데이션 모델](/posts/github-trending-timesfm-time-series-foundation-model/)로 내부 수요를 예측하더라도 기상 예보의 확률 분포를 별도 feature로 유지해야 이런 비대칭 비용을 계산할 수 있다. WeatherNext Gen과 WeatherNext 2가 강조하는 probabilistic forecast 흐름은 이 결합에 더 적합하다.
 
-셋째, 기상 리스크를 중앙 플랫폼으로 표준화할 수 있다. 각 사업부가 서로 다른 날씨 API를 직접 붙이면 변수 정의, 단위, 좌표계, 시간대, 보정 로직이 흩어진다. WeatherNext 같은 격자 데이터 피드를 중앙에서 수집·검증·정규화하면, 조직 전체가 동일한 risk feature store를 사용할 수 있다.
+셋째, 기상 리스크를 중앙 플랫폼으로 표준화할 수 있다. 각 사업부가 서로 다른 날씨 API를 직접 붙이면 변수 정의, 단위, 좌표계, 시간대, 보정 로직이 흩어진다. 이때 [Apache Ossie가 다루는 시맨틱 계층 표준화](/posts/apache-ossie-semantic-model-interchange/)처럼 변수 정의와 업무 지표의 의미를 데이터 피드와 분리해 관리해야 한다. WeatherNext 격자 데이터를 중앙에서 수집·검증·정규화하면 조직 전체가 같은 risk feature store와 지표 정의를 사용할 수 있다.
 
 ## 한계와 리스크: 공식 경보를 대체하면 안 된다
 
@@ -100,7 +100,7 @@ WeatherNext를 검토하는 팀이라면 다음 순서로 PoC를 진행하는 �
 1. **업무 의사결정 정의**: 예보가 바꾸려는 결정을 하나로 좁힌다. 예: 배송 SLA 위험 점수, 냉난방 수요 보정, 태양광 출력 예측, 항만 작업 중단 알림.
 2. **비용 함수 설정**: false positive와 false negative의 비용을 구분한다. 비가 온다고 잘못 예측한 비용과 비를 놓친 비용은 같지 않다.
 3. **비교 기준 확보**: 현재 사용 중인 기상 API, 공식 예보, ECMWF/NOAA 산출물, 단순 climatology baseline과 병렬 비교한다.
-4. **과거 기간 검증**: 최소 한 계절 이상, 가능하면 극한 이벤트가 포함된 기간으로 backtest한다. 평균 MAE보다 업무 KPI 개선과 tail risk를 함께 본다.
+4. **과거 기간 검증**: 최소 한 계절 이상, 가능하면 극한 이벤트가 포함된 기간으로 backtest한다. 평균 MAE보다 업무 KPI 개선과 tail risk를 함께 본다. [Kronos 금융 시계열 모델의 검증 기준](/posts/kronos-financial-kline-foundation-model/)처럼 시간 순서를 보존한 비교와 데이터 누수 방지가 필수다.
 5. **데이터 계약 검토**: 접근 권한, 이용 약관, 재배포 가능성, 저장 기간, 개인정보와 결합될 때의 정책을 확인한다.
 6. **운영 fallback 설계**: 피드 지연, 누락, 값 이상치, 모델 버전 변경 시 어떤 경로로 degrade할지 정한다.
 7. **감사 로그 구현**: 사용한 예보 버전, timestamp, 공간 영역, 후처리 코드 버전, 최종 의사결정자를 기록한다.

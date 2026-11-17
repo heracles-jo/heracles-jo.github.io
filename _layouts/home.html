@@ -47,6 +47,14 @@ layout: default
 {% endif %}
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
+  <h1 class="visually-hidden">
+    {% if paginator.page > 1 %}
+      Heracles.jo 기술 블로그 글 목록 — 페이지 {{ paginator.page }}
+    {% else %}
+      Heracles.jo 기술 블로그
+    {% endif %}
+  </h1>
+
   {% for post in posts %}
     <article class="card-wrapper card">
       <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
@@ -94,7 +102,7 @@ layout: default
 
         <div class="col-md-{{ card_body_col }}">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">{{ post.title }}</h1>
+            <h2 class="card-title my-2 mt-md-0">{{ post.title }}</h2>
 
             <div class="card-text content mt-0 mb-3">
               <p>{% include post-summary.html %}</p>

@@ -4,7 +4,7 @@ description: "ai-job-search의 로컬 프로필·채용공고 수집·지원서 
 author: heracles-jo
 date: 2026-10-18 08:15:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [ai-job-search, claude-code, job-automation, privacy, prompt-injection, ats]
+tags: [ai-job-search, privacy, claude-code, prompt-injection]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/ai-job-search-local-agent-privacy/cover.svg
   alt: "로컬 AI 취업 자동화에서 개인정보 경계와 지원서 품질 검증을 분리하는 구조"

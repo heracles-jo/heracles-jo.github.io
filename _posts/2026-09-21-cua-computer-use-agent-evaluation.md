@@ -3,8 +3,8 @@ title: "컴퓨터 사용 에이전트 평가: Cua Bench 운영 기준"
 description: "Cua의 격리 데스크톱·크로스 OS 드라이버·검증 가능한 태스크 구조를 바탕으로 GUI 에이전트의 성공률, 재현성, 보안 경계와 PoC 측정 기준을 정리한다."
 author: heracles-jo
 date: 2026-09-21 08:45:00 +0900
-categories: [AI Infrastructure, Testing]
-tags: [cua, computer-use-agent, agent-evaluation, gui-automation, benchmark, ai-infrastructure]
+categories: [AI Infrastructure, Software Engineering]
+tags: [cua, ai-infrastructure, computer-use-agent, gui-automation]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/cua-computer-use-agent-evaluation/cover.svg
   alt: "컴퓨터 사용 에이전트를 격리된 데스크톱과 검증 가능한 평가 루프로 운영하는 구조"

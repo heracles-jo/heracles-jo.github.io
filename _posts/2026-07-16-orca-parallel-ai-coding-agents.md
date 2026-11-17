@@ -4,7 +4,7 @@ description: "Orca의 Git worktree 기반 병렬 에이전트를 살펴보고, �
 author: heracles-jo
 date: 2026-07-16 07:40:00 +0900
 categories: [Developer Tools, AI Infrastructure]
-tags: [orca, ai-coding-agent, git-worktree, multi-agent, developer-tools, code-review]
+tags: [orca, developer-tools, ai-coding-agent, multi-agent, code-review]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/orca-parallel-ai-coding-agents/cover.svg
   alt: "여러 AI 코딩 에이전트가 독립된 Git worktree에서 작업하고 검증 게이트를 거쳐 병합되는 구조"

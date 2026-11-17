@@ -4,7 +4,7 @@ description: "XERJ의 autoindex·하이브리드 검색·MCP 구조를 분석하
 author: heracles-jo
 date: 2026-10-16 08:10:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [xerj, agent-search, code-search, hybrid-search, elasticsearch, mcp]
+tags: [xerj, mcp, code-search, agent-search]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/xerj-agent-search-engine/cover.svg
   alt: "XERJ로 AI 에이전트용 로컬 검색 계층을 구축할 때 색인, 권한, 복구 경계를 판단하는 구조"

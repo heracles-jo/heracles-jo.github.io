@@ -4,7 +4,7 @@ description: "Supermemory와 OpenViking의 메모리 모델, 검색 경로, 권�
 author: heracles-jo
 date: 2026-06-02 07:38:00 +0900
 categories: [AI Infrastructure, Open Source]
-tags: [supermemory, openviking, agent-memory, context-engine, rag, data-governance]
+tags: [supermemory, data-governance, rag, agent-memory]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-ai-memory-supermemory/cover.svg
   alt: Supermemory와 OpenViking을 비교해 AI 에이전트 메모리 계층의 저장·검색·정책 흐름을 설명하는 이미지

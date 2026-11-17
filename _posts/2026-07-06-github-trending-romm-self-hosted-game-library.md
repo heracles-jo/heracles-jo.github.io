@@ -3,8 +3,8 @@ title: "RomM과 셀프호스팅 게임 라이브러리 운영의 부상"
 description: "GitHub Trending에 오른 rommapp/romm을 중심으로 ROM 관리, 브라우저 에뮬레이션, 메타데이터 통합, 권한 공유가 결합된 셀프호스팅 게임 라이브러리 스택의 아키텍처와 운영 리스크를 분석한다."
 author: heracles-jo
 date: 2026-07-06 07:55:00 +0900
-categories: [Self Hosting, Media Infrastructure]
-tags: [github-trending, romm, self-hosting, game-library, emulation, rom-manager, emulatorjs, retroachievements, metadata, digital-preservation, homelab]
+categories: [Self Hosting, Media Engineering]
+tags: [romm, self-hosting, homelab, game-library]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-romm-self-hosted-game-library/cover.svg
   alt: "RomM을 중심으로 ROM 스캔, 메타데이터 보강, 브라우저 실행, 권한 공유가 하나의 셀프호스팅 게임 라이브러리 운영 흐름으로 연결되는 구조"
@@ -34,7 +34,7 @@ RomM을 선택한 이유는 세 가지다. 첫째, 최근 블로그에서 이미
 
 [RomM README](https://github.com/rommapp/romm/blob/master/README.md)는 프로젝트를 “self-hosted ROM manager and player”로 설명한다. 핵심 기능은 게임 파일을 스캔하고, [IGDB](https://api-docs.igdb.com/), [Screenscraper](https://www.screenscraper.fr/), [MobyGames](https://www.mobygames.com/), [SteamGridDB](https://www.steamgriddb.com/) 같은 외부 소스에서 메타데이터와 아트워크를 가져오며, [EmulatorJS](https://emulatorjs.org/)와 Ruffle 기반 브라우저 실행을 제공하는 것이다. 또한 RetroAchievements 표시, 400개 이상 플랫폼 메타데이터, 제한 권한 공유, Playnite·Android·커스텀 펌웨어 앱 연동, 멀티디스크·DLC·모드·패치·매뉴얼 지원을 내세운다.
 
-이 조합은 단순한 취미 앱처럼 보이지만, 운영 구조는 꽤 진지하다. 파일 저장소가 있고, 인덱서가 있고, 외부 메타데이터 API가 있고, 사용자 계정과 권한 모델이 있으며, 웹 UI와 원격 접근 요구가 있다. 미디어 서버 Jellyfin이 영상 파일을 라이브러리로 바꾸듯, RomM은 ROM과 관련 자료를 검색·탐색·실행 가능한 디지털 컬렉션으로 바꾼다. 차이는 게임 파일은 “재생”만 하는 것이 아니라 실행 환경, 세이브 데이터, 컨트롤 입력, 플랫폼별 에뮬레이터 호환성, 저작권 검토가 함께 따라온다는 점이다.
+이 조합은 단순한 취미 앱처럼 보이지만, 운영 구조는 꽤 진지하다. 파일 저장소가 있고, 인덱서가 있고, 외부 메타데이터 API가 있고, 사용자 계정과 권한 모델이 있으며, 웹 UI와 원격 접근 요구가 있다. [Jellyfin 기반 셀프호스팅 미디어 서버](/posts/github-trending-self-hosted-media-jellyfin/)가 영상 파일을 라이브러리로 바꾸듯, RomM은 ROM과 관련 자료를 검색·탐색·실행 가능한 디지털 컬렉션으로 바꾼다. 차이는 게임 파일은 “재생”만 하는 것이 아니라 실행 환경, 세이브 데이터, 컨트롤 입력, 플랫폼별 에뮬레이터 호환성, 저작권 검토가 함께 따라온다는 점이다.
 
 ## 아키텍처 관점: 파일 공유가 아니라 자산 운영 파이프라인이다
 
@@ -66,7 +66,7 @@ RomM류 시스템을 제대로 이해하려면 NAS 폴더에 웹 UI를 씌운 �
 
 ## 왜 지금 GitHub Trending에 올랐나
 
-RomM의 트렌딩은 몇 가지 배경이 겹친 결과로 해석된다. 첫째, 홈랩과 셀프호스팅 문화가 “대체 SaaS”를 넘어 개인 디지털 자산의 장기 보존으로 확장되고 있다. 사진은 Immich, 영상은 Jellyfin, 문서는 Paperless-ngx, 음악은 Navidrome 같은 식으로 범주별 서버가 자리 잡았고, 게임 라이브러리도 같은 기준을 요구받는다.
+RomM의 트렌딩은 몇 가지 배경이 겹친 결과로 해석된다. 첫째, 홈랩과 셀프호스팅 문화가 “대체 SaaS”를 넘어 개인 디지털 자산의 장기 보존으로 확장되고 있다. 사진은 Immich, 영상은 Jellyfin, 문서는 Paperless-ngx, 음악은 Navidrome 같은 식으로 범주별 서버가 자리 잡았고, 게임 라이브러리도 같은 기준을 요구받는다. 특히 [Immich의 사진 데이터 거버넌스](/posts/github-trending-immich-self-hosted-photo-governance/)에서 다룬 것처럼, 셀프호스팅의 가치는 UI 복제가 아니라 원본·메타데이터·계정·백업 정책의 소유권에 있다.
 
 둘째, 브라우저 런타임이 좋아지면서 사용자는 별도 데스크톱 클라이언트 없이 카탈로그 탐색과 실행을 기대한다. 모든 게임을 완벽하게 웹에서 실행할 수는 없지만, 브라우저 플레이가 가능한 범위만으로도 원격 접근과 체험 비용이 크게 줄어든다. 셋째, 메타데이터 품질이 제품 경험의 핵심이 됐다. 파일명 목록만 있으면 백업 폴더지만, 커버·설명·플랫폼·태그·업적·스크린샷이 붙으면 라이브러리가 된다.
 
@@ -87,7 +87,7 @@ RomM의 트렌딩은 몇 가지 배경이 겹친 결과로 해석된다. 첫째,
 
 가장 큰 위험은 “개인용 서버라서 괜찮다”는 착각이다. 게임 라이브러리 서버에는 대용량 파일, 계정 정보, 외부 API 토큰, 업로드 기능, 브라우저 실행 런타임이 함께 존재한다. Gaseous Server README가 인터넷 노출에 대해 강한 주의를 적은 것도 같은 맥락이다.
 
-1. **원격 접근 경계**: 공개 인터넷에 직접 노출하기보다 Tailscale, WireGuard, Cloudflare Tunnel, VPN, 리버스 프록시 인증을 검토해야 한다.
+1. **원격 접근 경계**: 공개 인터넷에 직접 노출하기보다 Tailscale, WireGuard, Cloudflare Tunnel, VPN, 리버스 프록시 인증을 검토해야 한다. 관리자·공유 계정의 자격 증명 운영은 [Vaultwarden 셀프호스팅의 책임 모델](/posts/vaultwarden-self-hosted-password-manager/)처럼 MFA, 백업, 복구 코드, 비밀정보 노출 범위까지 포함해 설계해야 한다.
 2. **업로드·삭제 권한**: 친구 공유 기능이 있더라도 쓰기 권한은 최소화해야 한다. 업로드 경로와 파일 확장자 검증은 필수다.
 3. **외부 API 키 관리**: IGDB, Screenscraper, MobyGames, SteamGridDB 같은 서비스 키를 컨테이너 환경변수나 시크릿 저장소로 분리하고 백업에 섞이지 않게 해야 한다.
 4. **저작권·라이선스**: 보유하지 않은 ROM, BIOS, 아트워크, 매뉴얼을 공유하거나 배포하면 법적 문제가 생길 수 있다. 내부 네트워크라도 정책 문서가 필요하다.

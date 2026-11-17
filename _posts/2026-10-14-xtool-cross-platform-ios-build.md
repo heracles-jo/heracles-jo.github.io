@@ -4,7 +4,7 @@ description: "xtool이 SwiftPM·Xcode SDK·Apple 서명·실기기 설치를 연
 author: heracles-jo
 date: 2026-10-14 08:15:00 +0900
 categories: [Mobile, DevOps]
-tags: [xtool, ios-build, swiftpm, xcode-alternative, code-signing, cross-platform-development]
+tags: [xtool, ios-build, swiftpm, xcode-alternative]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/xtool-cross-platform-ios-build/cover.svg
   alt: "Linux와 Windows에서 xtool로 SwiftPM 기반 iOS 앱을 빌드하고 서명해 실기기에 설치하는 흐름"

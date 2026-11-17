@@ -4,7 +4,7 @@ description: "GitHub Trending에 오른 Microsoft pg_durable을 중심으로 워
 author: heracles-jo
 date: 2026-06-08 09:45:00 +0900
 categories: [Database, Open Source]
-tags: [github-trending, postgres, pg-durable, durable-execution, workflow-engine, background-jobs, rust, database-architecture]
+tags: [postgres, rust, pg-durable, durable-execution]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-postgres-durable-execution/cover.svg
   alt: "PostgreSQL 내부에서 상태 저장 워크플로와 백그라운드 작업을 실행하는 pg_durable 아키텍처 흐름"
@@ -46,7 +46,7 @@ pg_durable은 이 도구들을 정면으로 대체하기보다, “PostgreSQL에
 | Airflow/Dagster | 데이터 파이프라인 스케줄링과 관측성 | 애플리케이션 트랜잭션 처리에는 과할 수 있음 | 배치 데이터 플랫폼, 분석 파이프라인 |
 | Celery/Sidekiq/BullMQ | 웹 앱 비동기 작업 생태계 | 상태 일관성과 재시도 설계는 별도 구현 | 이메일, 알림, 짧은 비동기 작업 |
 
-이 비교에서 중요한 기준은 “워크플로 엔진의 기능 목록”이 아니라 운영 경계다. 이미 Redis, Kafka, Kubernetes, Temporal, 데이터 오케스트레이터를 안정적으로 운영하는 조직이라면 pg_durable이 필수는 아니다. 반대로 작은 플랫폼 팀이나 B2B SaaS 팀이 백그라운드 작업 때문에 큐와 워커를 계속 덧붙이고 있다면, Postgres 내부에서 처리할 수 있는 작업과 외부 워커로 남겨야 할 작업을 다시 나누어 볼 가치가 있다.
+이 비교에서 중요한 기준은 “워크플로 엔진의 기능 목록”이 아니라 운영 경계다. 이미 Redis, Kafka, Kubernetes, Temporal, 데이터 오케스트레이터를 안정적으로 운영하는 조직이라면 pg_durable이 필수는 아니다. 반대로 작은 플랫폼 팀이나 B2B SaaS 팀이 백그라운드 작업 때문에 큐와 워커를 계속 덧붙이고 있다면, Postgres 내부에서 처리할 수 있는 작업과 외부 워커로 남겨야 할 작업을 다시 나누어 볼 가치가 있다. 비슷한 판단은 [셀프호스팅 Durable Objects의 상태 실행 모델](/posts/github-trending-celld-self-hosted-durable-objects/)에서도 반복된다. 핵심은 상태를 가까이 두는 이점보다 장애 격리와 재배치 가능성을 함께 보는 것이다.
 
 ## 실무 도입 장점: 단순화, 감사 가능성, 장애 복구의 세 가지 가치
 
@@ -62,7 +62,7 @@ pg_durable은 이 도구들을 정면으로 대체하기보다, “PostgreSQL에
 
 pg_durable을 긍정적으로 보더라도 가장 먼저 경계해야 할 오해는 “이제 모든 백그라운드 작업을 Postgres에 넣으면 된다”는 결론이다. PostgreSQL은 강력한 데이터베이스지만, 무제한 범용 작업 실행 플랫폼은 아니다. CPU 집약 작업, 대용량 파일 처리, 긴 외부 API 호출, GPU 추론, 네트워크 I/O가 많은 크롤링 작업을 DB 백그라운드 워커에 과도하게 넣으면 핵심 트랜잭션 성능과 장애 격리성이 흔들릴 수 있다. 데이터베이스는 서비스의 마지막 방어선인 경우가 많다. 실행 로직을 DB 내부로 가져오는 순간, 애플리케이션 장애와 데이터 계층 장애의 경계가 흐려질 수 있다.
 
-두 번째 리스크는 확장성과 격리다. 별도 워커 풀은 수평 확장, 리소스 제한, 배포 롤백, 언어 런타임 분리를 비교적 독립적으로 관리할 수 있다. 반면 DB 내부 실행은 PostgreSQL 버전, 확장 호환성, 백그라운드 워커 수, 트랜잭션 잠금, vacuum, connection pool, 메모리 설정의 영향을 받는다. pg_durable README는 PostgreSQL 17과 18을 대상으로 한다는 배지를 보여주며, 저장소 자체도 Rust 기반 pgrx 확장으로 보인다. 이는 성능과 안전성을 얻는 대신, 확장 설치·업그레이드·운영 권한을 신중히 다뤄야 한다는 뜻이다.
+두 번째 리스크는 확장성과 격리다. 별도 워커 풀은 수평 확장, 리소스 제한, 배포 롤백, 언어 런타임 분리를 비교적 독립적으로 관리할 수 있다. 반면 DB 내부 실행은 PostgreSQL 버전, 확장 호환성, 백그라운드 워커 수, 트랜잭션 잠금, vacuum, connection pool, 메모리 설정의 영향을 받는다. pg_durable README는 PostgreSQL 17과 18을 대상으로 한다는 배지를 보여주며, 저장소 자체도 Rust 기반 pgrx 확장으로 보인다. 이는 성능과 안전성을 얻는 대신, 확장 설치·업그레이드·운영 권한을 신중히 다뤄야 한다는 뜻이다. 관리형과 자체 운영 사이의 책임 차이는 [Supabase 셀프호스팅의 운영 기준](/posts/supabase-self-hosting-operations/)처럼 백업, 업그레이드, 관측성, 확장 호환성을 실제 인력 비용으로 환산해야 선명해진다.
 
 세 번째 리스크는 동시성 버그와 미성숙 영역이다. 공개 이슈와 문서를 보면 프로젝트는 빠르게 움직이고 있으며, 예를 들어 `df.http()` allowlist의 의미를 명확히 하자는 이슈, rollback된 `df.start()`가 metrics에 영향을 주는 문제, pgrx 업그레이드 이슈 등이 열려 있었다. 또한 저장소에는 병렬 오케스트레이션에서 `duroxide-pg` deadlock을 분석한 문서도 존재한다. 해당 문서는 PostgreSQL이 deadlock 자체는 감지해 트랜잭션 하나를 abort하지만, 병렬 sub-orchestration 완료 알림이 손실되어 parent orchestration이 영원히 기다릴 수 있는 문제를 설명한다. 이것은 비난 지점이라기보다 durable workflow 엔진이 다루는 문제가 본질적으로 어렵다는 신호다. 특히 병렬 실행, 재시도, 중복 처리, 알림 손실, 잠금 순서 문제는 작은 데모에서는 드러나지 않지만 프로덕션에서는 결정적이다.
 
@@ -92,7 +92,7 @@ pg_durable은 다음 조건을 가진 팀에 특히 잘 맞을 수 있다. 첫�
 
 ## 오늘의 기술 흐름: 데이터베이스는 다시 애플리케이션 플랫폼의 일부가 되고 있다
 
-pg_durable의 부상은 PostgreSQL 생태계의 더 큰 흐름과도 맞닿아 있다. 최근 몇 년간 Postgres는 단순 RDBMS를 넘어 검색, 벡터, 큐, 캐시, 이벤트, 파일 메타데이터, 분석 보조 계층까지 흡수해 왔다. pgvector는 AI 검색 인프라 논의의 중심에 섰고, logical replication과 CDC는 이벤트 기반 아키텍처의 기반이 되었으며, Supabase와 Neon 같은 플랫폼은 Postgres를 애플리케이션 백엔드의 중심 경험으로 포장했다. pg_durable은 여기에 “실행 상태와 워크플로”라는 영역을 더한다.
+pg_durable의 부상은 PostgreSQL 생태계의 더 큰 흐름과도 맞닿아 있다. 최근 몇 년간 Postgres는 단순 RDBMS를 넘어 검색, 벡터, 큐, 캐시, 이벤트, 파일 메타데이터, 분석 보조 계층까지 흡수해 왔다. pgvector는 AI 검색 인프라 논의의 중심에 섰고, logical replication과 CDC는 이벤트 기반 아키텍처의 기반이 되었으며, Supabase와 Neon 같은 플랫폼은 Postgres를 애플리케이션 백엔드의 중심 경험으로 포장했다. 다만 벡터 검색까지 무조건 Postgres에 합칠 필요는 없으며, [TurboVec 같은 로컬 벡터 인덱스](/posts/github-trending-turbovec-local-vector-index/)와 비교하면 통합 편의와 자원 격리의 교환관계가 더 분명해진다. pg_durable은 여기에 “실행 상태와 워크플로”라는 영역을 더한다.
 
 물론 이 흐름에는 양면성이 있다. Postgres가 더 많은 역할을 맡으면 초기 아키텍처는 단순해진다. 개발자는 적은 컴포넌트로 더 많은 기능을 만들 수 있고, 운영자는 한 곳에서 상태를 본다. 그러나 성공하면 데이터베이스가 너무 많은 책임을 떠안게 된다. 성능 병목, 장애 영향 반경, 업그레이드 리스크, 권한 설계가 모두 중요해진다. 따라서 pg_durable 같은 도구를 평가할 때는 “큐를 없앨 수 있다”보다 “어떤 책임을 Postgres로 가져오고, 어떤 책임은 여전히 밖에 둘 것인가”를 먼저 정해야 한다.
 

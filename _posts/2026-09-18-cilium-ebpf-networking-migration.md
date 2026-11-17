@@ -3,8 +3,8 @@ title: "Cilium eBPF 네트워킹 전환: kube-proxy 대체와 업그레이드 �
 description: "Cilium의 eBPF 데이터패스와 ID 기반 정책을 해부하고, kube-proxy 대체 범위·관측성·장애 위험·단계별 전환 기준을 운영 관점에서 정리한다."
 author: heracles-jo
 date: 2026-09-18 08:40:00 +0900
-categories: [Cloud, Security]
-tags: [cilium, ebpf, kubernetes-networking, network-policy, kube-proxy, platform-engineering]
+categories: [Cloud Infrastructure, Security]
+tags: [cilium, platform-engineering, ebpf, kubernetes-networking]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/cilium-ebpf-networking-migration/cover.svg
   alt: "Cilium eBPF 데이터패스로 Kubernetes 네트워킹과 보안 정책을 전환하는 운영 기준"

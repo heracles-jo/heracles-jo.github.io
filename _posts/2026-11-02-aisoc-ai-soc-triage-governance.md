@@ -4,7 +4,7 @@ description: "AiSOC의 탐지·상관분석·AI 조사·승인 대응 구조를 
 author: heracles-jo
 date: 2026-11-02 08:05:00 +0900
 categories: [Security, AI Infrastructure]
-tags: [aisoc, ai-soc, security-operations, incident-triage, soar, mitre-attack]
+tags: [aisoc, security-operations, ai-soc, incident-triage]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/aisoc-ai-soc-triage-governance/cover.svg
   alt: "AI SOC의 탐지부터 사람 승인 대응까지 검증하는 운영 구조 표지"

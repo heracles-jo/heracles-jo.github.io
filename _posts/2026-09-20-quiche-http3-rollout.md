@@ -3,8 +3,8 @@ title: "HTTP/3 전환: quiche로 검증하는 UDP·폴백·관측성"
 description: "Cloudflare quiche의 QUIC·HTTP/3 구현을 바탕으로 UDP 차단, HTTP/2 폴백, 0-RTT 보안, qlog 관측성을 함께 검증하는 단계별 전환 기준을 제시한다."
 author: heracles-jo
 date: 2026-09-20 08:05:00 +0900
-categories: [Web Infrastructure, Networking]
-tags: [quiche, http3, quic, edge-networking, network-observability, rust]
+categories: [Web Platform, Networking]
+tags: [quiche, rust, quic, http3]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/quiche-http3-rollout/cover.svg
   alt: "HTTP/3 요청이 QUIC 경로와 HTTP/2 폴백 경로를 오가는 전환 구조"

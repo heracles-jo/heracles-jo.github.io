@@ -3,8 +3,8 @@ title: "AI 튜터 장기 기억 설계: DeepTutor 학습자 모델 검증"
 description: "DeepTutor의 3계층 메모리와 학습 워크스페이스를 바탕으로, AI 튜터가 학습자를 기억할 때 필요한 근거 추적·정정권·격리·삭제·PoC 기준을 정리한다."
 author: heracles-jo
 date: 2026-10-30 08:05:00 +0900
-categories: [AI Infrastructure, Education Technology]
-tags: [deeptutor, ai-tutor, learner-model, agent-memory, education-ai, privacy]
+categories: [AI Infrastructure, Productivity]
+tags: [deeptutor, privacy, agent-memory, education-ai]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/deeptutor-learning-memory-governance/cover.svg
   alt: "AI 튜터가 학습 근거를 수집하고 장기 기억으로 승격한 뒤 정정과 삭제를 거치는 구조"

@@ -4,7 +4,7 @@ description: "PostHog의 제품 분석·세션 리플레이·기능 플래그·L
 author: heracles-jo
 date: 2026-07-18 07:30:00 +0900
 categories: [Observability, Platform Engineering]
-tags: [posthog, product-analytics, session-replay, feature-flags, llm-observability, data-governance]
+tags: [posthog, data-governance, product-analytics, session-replay]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/posthog-unified-product-observability/cover.svg
   alt: "제품 이벤트와 세션 리플레이, 기능 플래그, 오류, LLM trace를 PostHog 문맥으로 연결하는 구조"
@@ -105,6 +105,16 @@ PostHog, 여러 전문 SaaS, 자체 오픈소스 스택 중 무엇이 맞는지�
 - flag 장애 시 기본 동작과 rollback이 검증됐는가
 - 한 달 보존 비용을 제품·팀·환경별로 설명할 수 있는가
 - export 후에도 분석 정의와 삭제 정책을 재현할 수 있는가
+
+## 통합 플랫폼도 수집면·조회면·제어면을 분리해야 한다
+
+PostHog를 하나의 제품으로 설치하더라도 내부 책임까지 하나로 합치면 안 된다. 수집면은 SDK와 ingestion endpoint가 이벤트를 받아들이는 경로이고, 조회면은 분석·replay·trace를 사람이 탐색하는 경로이며, 제어면은 feature flag, experiment, workflow가 실제 사용자 경험을 바꾸는 경로다. 세 경로는 장애 영향과 권한 수준이 다르다. 조회 쿼리가 느려져도 이벤트 수집은 계속되어야 하고, 분석 UI 장애가 flag 평가 실패로 이어져서는 안 된다.
+
+특히 기능 플래그는 관측 데이터가 아니라 제품 동작을 바꾸는 제어 장치다. server-side local evaluation을 쓴다면 설정 캐시의 갱신 주기와 만료 시 기본값을 정하고, remote evaluation을 쓴다면 네트워크 timeout이 사용자 요청의 지연 예산을 소비하지 않게 해야 한다. LLM 모델 라우팅까지 flag로 제어할 경우에는 [Switchyard의 LLM 라우팅 거버넌스](/posts/github-trending-switchyard-llm-routing-governance/)처럼 공급자 허용 목록, 강한 모델로의 보수적 fallback, route별 비용·품질 SLO를 별도 정책으로 관리해야 한다.
+
+권한도 제품 단위의 관리자·멤버 구분만으로 부족하다. 고객지원은 특정 사용자의 replay를 볼 수 있어도 원문 prompt나 전체 warehouse export에는 접근하지 못하게 하고, AI 평가 담당자는 익명화된 generation과 score를 보되 결제 속성과 직접 식별자는 보지 못하게 하는 식의 목적 기반 분리가 필요하다. 긴급 장애 대응을 위한 임시 권한은 만료 시간과 사유, 조회 기록을 남겨야 한다. 통합의 가치는 더 많은 사람이 모든 데이터를 보는 데 있지 않고, 필요한 사람이 필요한 문맥에 더 빨리 접근하는 데 있다.
+
+운영 채택은 단계적으로 진행하는 편이 안전하다. 1단계에서는 식별자가 없는 서버 이벤트와 제한된 funnel만 수집하고, 2단계에서 마스킹 검증을 거친 replay를 추가하며, 3단계에서 flag와 LLM trace를 연결한다. 각 단계마다 삭제 요청, export, 비용 상한, 장애 시 fallback을 실제로 시험한 뒤 다음 데이터 종류를 열어야 한다. 이렇게 해야 통합 플랫폼이 조사 시간을 줄이면서도 데이터 집중과 제어면 장애의 영향 반경을 통제할 수 있다.
 
 ## 통합은 목적이 아니라 운영 선택이다
 

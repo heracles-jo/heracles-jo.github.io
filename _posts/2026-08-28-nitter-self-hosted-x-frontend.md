@@ -4,7 +4,7 @@ description: "Nitter의 프라이버시 프록시 구조와 계정 세션·Cloud
 author: heracles-jo
 date: 2026-08-28 07:25:00 +0900
 categories: [Security, Self Hosting]
-tags: [nitter, self-hosting, privacy, x-frontend, reverse-proxy, web-archiving]
+tags: [nitter, self-hosting, privacy, reverse-proxy, web-archiving]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/nitter-self-hosted-x-frontend/cover.svg
   alt: "Nitter 셀프호스팅의 프라이버시 이점과 업스트림 차단, 계정 세션, 법적 압력 사이의 운영 경계를 보여주는 그림"

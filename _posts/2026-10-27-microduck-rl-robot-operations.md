@@ -4,7 +4,7 @@ description: "MicroDuck의 MuJoCo·ONNX 정책과 50Hz 안전 제어, 서명 업
 author: heracles-jo
 date: 2026-10-27 08:40:00 +0900
 categories: [AI Infrastructure, Hardware]
-tags: [microduck, reinforcement-learning, robotics, sim2real, onnx, edge-ai]
+tags: [microduck, robotics, edge-ai, reinforcement-learning]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/microduck-rl-robot-operations/cover.svg
   alt: "MicroDuck 강화학습 로봇의 정책, 50Hz 제어 루프, 서명 업데이트와 자동 복구 계층"

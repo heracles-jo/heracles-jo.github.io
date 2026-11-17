@@ -51,3 +51,6 @@ jobs:
 
       - name: Test Site
         run: bash tools/test.sh
+
+      - name: Validate SEO
+        run: ruby tools/seo-validate.rb --all --site _site

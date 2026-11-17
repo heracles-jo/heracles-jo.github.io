@@ -4,7 +4,7 @@ description: "AI 코딩 에이전트가 실행하는 rm, Git 강제 변경, 클�
 author: heracles-jo
 date: 2026-07-15 06:50:00 +0900
 categories: [Security, Developer Tools]
-tags: [destructive-command-guard, ai-agent-security, command-guard, devsecops, shell-safety, human-in-the-loop]
+tags: [destructive-command-guard, devsecops, ai-agent-security, human-in-the-loop]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/ai-agent-destructive-command-guard/cover.svg
   alt: "AI 코딩 에이전트와 셸 사이에서 위험 명령을 판별하고 차단하는 destructive command guard"

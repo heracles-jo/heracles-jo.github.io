@@ -4,7 +4,7 @@ description: "OpenBao의 동적 시크릿·PKI·Raft HA 구조를 바탕으로 V
 author: heracles-jo
 date: 2026-09-27 07:55:00 +0900
 categories: [Security, Platform Engineering]
-tags: [openbao, secret-management, dynamic-secrets, pki, high-availability, platform-engineering]
+tags: [openbao, platform-engineering, secret-management, dynamic-secrets]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/openbao-secrets-management-migration/cover.svg
   alt: "OpenBao 시크릿 관리 전환에서 신뢰 경계와 운영 검증 항목을 보여주는 표지"

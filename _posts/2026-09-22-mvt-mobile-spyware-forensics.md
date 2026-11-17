@@ -4,7 +4,7 @@ description: "MVT의 iOS 백업·AndroidQF·STIX IOC 분석 구조를 바탕으�
 author: heracles-jo
 date: 2026-09-22 08:35:00 +0900
 categories: [Security, Mobile]
-tags: [mvt, mobile-forensics, mobile-spyware, incident-response, stix, digital-forensics]
+tags: [mvt, incident-response, mobile-forensics, mobile-spyware]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/mvt-mobile-spyware-forensics/cover.svg
   alt: "MVT로 모바일 기기 증거를 수집하고 IOC와 행위 흔적을 교차 검증하는 포렌식 흐름"

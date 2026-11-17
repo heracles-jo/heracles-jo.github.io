@@ -3,8 +3,8 @@ title: "AI E2E 테스트: 자연어 에이전트와 재생 캐시 검증 기준"
 description: "tester-army/e2e의 자연어 행동·결정론적 검증·재생 캐시를 분해해 AI E2E 테스트의 플레이크, 비용, 보안 경계와 도입 기준을 정리한다."
 author: heracles-jo
 date: 2026-10-12 08:05:00 +0900
-categories: [Software Engineering, Testing]
-tags: [tester-army-e2e, ai-testing, e2e-testing, test-automation, replay-cache, playwright]
+categories: [Software Engineering]
+tags: [tester-army-e2e, playwright, e2e-testing, test-automation]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/ai-e2e-agent-replay-testing/cover.svg
   alt: "자연어 에이전트 행동을 결정론적 검증과 재생 캐시로 통제하는 AI E2E 테스트 구조"

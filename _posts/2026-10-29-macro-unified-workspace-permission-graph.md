@@ -4,7 +4,7 @@ description: "Macro의 양방향 블록 그래프, 채널 기반 권한, 팀 AI 
 author: heracles-jo
 date: 2026-10-29 08:40:00 +0900
 categories: [Platform Engineering, AI Infrastructure]
-tags: [macro, collaboration-platform, ai-memory, access-control, mcp, self-hosting]
+tags: [macro, self-hosting, mcp, collaboration-platform, access-control]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/macro-unified-workspace-permission-graph/cover.svg
   alt: "이메일·메시지·문서·업무·CRM 블록이 권한 그래프와 팀 AI 메모리로 연결되는 Macro 아키텍처"

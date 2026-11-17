@@ -4,7 +4,7 @@ description: "Google AX의 Task·Workspace·Gateway와 Agent Substrate 계층을
 author: heracles-jo
 date: 2026-09-23 07:55:00 +0900
 categories: [AI Infrastructure, Platform Engineering]
-tags: [google-ax, agent-orchestration, kubernetes, agent-substrate, sandbox, platform-engineering]
+tags: [google-ax, platform-engineering, kubernetes, sandbox]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/google-ax-agent-orchestration/cover.svg
   alt: "Google AX가 에이전트 작업, 워크스페이스, 네트워크 게이트웨이와 샌드박스를 조정하는 구조"

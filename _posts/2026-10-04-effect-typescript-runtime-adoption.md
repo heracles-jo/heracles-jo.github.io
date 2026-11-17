@@ -4,7 +4,7 @@ description: "Effect 4의 타입 오류 채널·Fiber·Scope·Layer를 Promise �
 author: heracles-jo
 date: 2026-10-04 08:28:00 +0900
 categories: [Developer Tools, Software Engineering]
-tags: [effect-ts, typescript, error-handling, structured-concurrency, dependency-injection, observability]
+tags: [effect-ts, typescript, observability, error-handling]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/effect-typescript-runtime-adoption/cover.svg
   alt: "Effect가 TypeScript 애플리케이션의 오류, 동시성, 자원과 의존성을 하나의 실행 모델로 묶는 구조"

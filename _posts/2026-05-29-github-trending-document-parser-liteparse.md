@@ -4,7 +4,7 @@ description: "2026년 5월 29일 GitHub Trending에서 LiteParse가 보여준 PD
 author: heracles-jo
 date: 2026-05-29 08:34:00 +0900
 categories: [Data Engineering, Open Source]
-tags: [github-trending, liteparse, document-parser, pdf-parser, rag, llamaindex, rust, document-ai]
+tags: [liteparse, rust, rag, document-ai]
 slug: "github-trending-document-parser-liteparse"
 draft: false
 image:
@@ -47,7 +47,7 @@ LiteParse를 검토할 때 가장 먼저 봐야 할 것은 잘 되는 예제가 
 
 운영 환경에서 가장 위험한 실패는 파싱 에러가 크게 나는 경우가 아니다. 오히려 일부 내용이 조용히 빠지는 경우가 더 위험하다. RAG 시스템은 누락된 내용을 모른 채 답을 만든다. 사용자는 “모델이 멍청하다”고 느끼지만, 원인은 12페이지의 표가 파싱되지 않은 것일 수 있다.
 
-그래서 문서 파서는 반드시 관측 가능해야 한다. 문서별 페이지 수, 파싱 시간, 추출된 텍스트 길이, 빈 페이지 비율, 표 보존율, 청크 수, 인덱싱 실패 여부를 남겨야 한다. 나중에 답변 품질 문제가 생겼을 때 “LLM이 틀렸다”에서 멈추지 않고 “원문 어느 영역이 빠졌다”까지 내려갈 수 있어야 한다.
+그래서 문서 파서는 반드시 관측 가능해야 한다. 문서별 페이지 수, 파싱 시간, 추출된 텍스트 길이, 빈 페이지 비율, 표 보존율, 청크 수, 인덱싱 실패 여부를 남겨야 한다. 나중에 답변 품질 문제가 생겼을 때 “LLM이 틀렸다”에서 멈추지 않고 “원문 어느 영역이 빠졌다”까지 내려갈 수 있어야 한다. 이때 모든 PDF를 같은 경로로 보내기보다 [PDF Inspector 기반 문서 수집 라우팅](/posts/github-trending-pdf-inspector-document-ingestion-routing/)처럼 입력 특성을 먼저 분류하면 OCR 비용과 조용한 실패를 함께 줄일 수 있다.
 
 ## 기존 도구들과 비교하면 LiteParse의 성격이 보인다
 
@@ -55,7 +55,7 @@ LiteParse를 검토할 때 가장 먼저 봐야 할 것은 잘 되는 예제가 
 
 PyMuPDF와 pdfplumber는 Python 생태계에서 문서 처리와 데이터 분석을 붙이기 좋다. Apache Tika는 PDF뿐 아니라 여러 파일 포맷을 범용적으로 다룰 때 강점이 있다. unstructured와 Docling은 문서 AI 전처리 관점에서 더 넓은 기능을 제공한다. 클라우드 문서 AI 서비스는 복잡한 레이아웃, OCR, 표, 이미지 기반 문서에서 더 나은 결과를 줄 수 있지만 데이터 반출과 비용을 검토해야 한다.
 
-LiteParse를 고를 이유는 비교적 분명하다. 텍스트 중심 PDF를 빠르게 로컬에서 처리하고 싶고, Markdown과 좌표 정보를 활용하고 싶으며, Node/WASM/Python/Rust 같은 여러 실행 환경을 고려한다면 좋은 후보가 된다. 반대로 스캔 문서와 복잡한 양식이 핵심이라면 LiteParse 단독으로 끝내겠다는 접근은 위험하다. OCR fallback이나 LlamaParse 같은 대안을 같이 놓고 봐야 한다.
+LiteParse를 고를 이유는 비교적 분명하다. 텍스트 중심 PDF를 빠르게 로컬에서 처리하고 싶고, Markdown과 좌표 정보를 활용하고 싶으며, Node/WASM/Python/Rust 같은 여러 실행 환경을 고려한다면 좋은 후보가 된다. 반대로 스캔 문서와 복잡한 양식이 핵심이라면 LiteParse 단독으로 끝내겠다는 접근은 위험하다. OCR fallback이나 LlamaParse 같은 대안을 같이 놓고 봐야 한다. 변환 포맷만 비교하지 않고 [문서 변환을 RAG 인입 거버넌스로 보는 기준](/posts/github-trending-markitdown-document-ingestion-governance/)까지 적용해야 원본 추적, 버전, 권한을 파서 교체와 무관하게 유지할 수 있다.
 
 ![LiteParse 대안 비교 매트릭스](https://heracles-jo.github.io/assets/img/posts/github-trending-document-parser-liteparse/comparison.svg)
 
@@ -101,7 +101,7 @@ RAG 시스템을 설계할 때 많은 팀이 벡터 DB, 임베딩 모델, 리랭
 
 ## RAG 운영에서 LiteParse를 넣을 때의 데이터 계약
 
-LiteParse 결과를 바로 벡터 DB에 넣는 것은 빠르지만, 운영 시스템으로는 부족하다. 중간에 정규화 계층이 있어야 한다. 이 계층은 문서 ID, 버전, 페이지 번호, 좌표, 섹션 제목, 원문 파일 해시, 접근 권한, 파싱 도구 버전, 처리 시각을 메타데이터로 붙인다. 나중에 같은 문서가 업데이트되었을 때 어떤 청크를 폐기하고 어떤 청크를 유지할지 판단하려면 이 정보가 필요하다.
+LiteParse 결과를 바로 벡터 DB에 넣는 것은 빠르지만, 운영 시스템으로는 부족하다. 중간에 정규화 계층이 있어야 한다. 이 계층은 문서 ID, 버전, 페이지 번호, 좌표, 섹션 제목, 원문 파일 해시, 접근 권한, 파싱 도구 버전, 처리 시각을 메타데이터로 붙인다. 나중에 같은 문서가 업데이트되었을 때 어떤 청크를 폐기하고 어떤 청크를 유지할지 판단하려면 이 정보가 필요하다. 인덱스까지 로컬에 둘 계획이라면 [TurboVec와 로컬 벡터 인덱스의 운영 기준](/posts/github-trending-turbovec-local-vector-index/)처럼 재색인 비용, 필터링, 백업과 복구 경계도 함께 검증해야 한다.
 
 접근 권한 전파도 놓치기 쉽다. 원본 문서가 특정 부서만 볼 수 있는 자료라면, 파싱된 텍스트와 임베딩도 같은 제한을 가져야 한다. 벡터 DB에 들어간 순간 권한 모델이 사라지면 RAG는 내부 정보 유출 경로가 된다. LiteParse는 파서이지 권한 시스템이 아니다. 따라서 문서 수집 파이프라인이 원본 저장소의 ACL을 읽고, 검색 시점에도 사용자 권한을 필터로 적용해야 한다.
 

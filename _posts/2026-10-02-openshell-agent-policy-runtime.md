@@ -4,7 +4,7 @@ description: "OpenShell의 커널 강제 격리, 네트워크 요청 검사, 자
 author: heracles-jo
 date: 2026-10-02 08:25:00 +0900
 categories: [AI Infrastructure, Security]
-tags: [openshell, ai-agent-security, sandbox, policy-as-code, credential-broker, network-egress]
+tags: [openshell, sandbox, ai-agent-security, policy-as-code]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/openshell-agent-policy-runtime/cover.svg
   alt: "OpenShell이 AI 에이전트의 파일·프로세스·네트워크·자격증명 접근을 정책으로 통제하는 구조"

@@ -4,7 +4,7 @@ description: "GitHub Trending에 오른 drawdb-io/drawdb를 중심으로 브라�
 author: heracles-jo
 date: 2026-08-13 07:24:00 +0900
 categories: [Data Engineering, Database]
-tags: [github-trending, drawdb, erd, database-design, schema-design, sql, migration, data-governance, chartdb, azimutt, schemaspy]
+tags: [drawdb, data-governance, erd, database-design]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/github-trending-drawdb-database-schema-design-governance/cover.svg
   alt: "drawDB가 브라우저 ERD 편집과 SQL 생성으로 데이터베이스 스키마 설계 거버넌스를 앞당기는 흐름"
@@ -28,7 +28,7 @@ GitHub Trending daily와 weekly를 확인하다 보면 AI 에이전트, 로컬 �
 | [chartdb/chartdb](https://github.com/chartdb/chartdb) | 약 22.7k stars, AGPL-3.0, v1.20.1 릴리스 | 단일 쿼리 기반 DB 다이어그램 생성 | drawDB와 함께 비교 대상으로 활용 |
 | [azimuttapp/azimutt](https://github.com/azimuttapp/azimutt) | 약 2.1k stars, MIT | DB 탐색·문서화·최적화 지향 | 복잡한 기존 DB 탐색 비교 대상으로 활용 |
 
-선택 기준은 단순 인기보다 “지금 조직에서 실제로 부딪히는 의사결정 문제를 설명할 수 있는가”였다. 많은 팀이 마이크로서비스, SaaS 연동, 이벤트 기반 아키텍처, 분석 파이프라인을 운영하면서 스키마 변경의 영향 범위를 빠르게 파악하지 못한다. ORM 모델은 애플리케이션 관점이고, migration 파일은 변경 이력 관점이며, 데이터 카탈로그는 소비 관점이다. 그 사이에서 “현재 도메인 모델이 어떻게 연결되어 있는가”를 공유하는 가벼운 시각 계층이 필요해졌다. drawDB의 Trending은 이 공백을 보여준다.
+선택 기준은 단순 인기보다 “지금 조직에서 실제로 부딪히는 의사결정 문제를 설명할 수 있는가”였다. 많은 팀이 마이크로서비스, SaaS 연동, 이벤트 기반 아키텍처, 분석 파이프라인을 운영하면서 스키마 변경의 영향 범위를 빠르게 파악하지 못한다. ORM 모델은 애플리케이션 관점이고, migration 파일은 변경 이력 관점이며, 데이터 카탈로그는 소비 관점이다. 분석 지표까지 이어지는 조직이라면 [Apache Ossie의 시맨틱 계층 표준화](/posts/apache-ossie-semantic-model-interchange/)처럼 물리 스키마와 비즈니스 의미 모델의 책임도 분리해야 한다. 그 사이에서 “현재 도메인 모델이 어떻게 연결되어 있는가”를 공유하는 가벼운 시각 계층이 필요해졌다. drawDB의 Trending은 이 공백을 보여준다.
 
 ## 왜 지금 데이터베이스 스키마 설계 도구인가
 
@@ -36,7 +36,7 @@ GitHub Trending daily와 weekly를 확인하다 보면 AI 에이전트, 로컬 �
 
 둘째, 스키마를 이해해야 하는 사람이 늘었다. 백엔드 개발자만 DB를 보는 시대가 아니다. 데이터 엔지니어는 CDC와 warehouse 모델을 봐야 하고, 보안 담당자는 개인정보 컬럼과 보존 정책을 확인해야 하며, 제품 담당자는 주문·구독·권한 상태 전이를 이해해야 한다. 텍스트 migration만으로는 이들이 같은 맥락을 공유하기 어렵다. 브라우저 기반 ERD 도구가 중요한 이유는 설치 장벽을 낮추고, 리뷰 회의나 PR 설명에서 같은 그림을 빠르게 볼 수 있게 하기 때문이다.
 
-셋째, AI 코딩과 자동 생성 SQL이 늘면서 오히려 검토 가능한 모델의 중요성이 커졌다. 모델이 migration 초안을 만들 수는 있지만, 도메인 의미와 운영 리스크까지 자동으로 보장하지는 않는다. generated SQL이 외래키를 잘못 해석하거나, nullable 컬럼을 무심코 추가하거나, 대용량 테이블에 위험한 DDL을 만들 수 있다. 이때 시각화된 모델은 “AI가 만든 변경이 도메인 구조에 맞는가”를 사람이 검토하는 보조 장치가 된다.
+셋째, AI 코딩과 자동 생성 SQL이 늘면서 오히려 검토 가능한 모델의 중요성이 커졌다. 모델이 migration 초안을 만들 수는 있지만, 도메인 의미와 운영 리스크까지 자동으로 보장하지는 않는다. [NVIDIA Auto Ontology 기반 NL-to-SQL 검증](/posts/nvidia-auto-ontology-nl-to-sql-validation/)에서도 질문을 SQL로 바꾸기 전에 용어·관계·권한의 의미 계층이 필요했듯, generated SQL이 외래키를 잘못 해석하거나 nullable 컬럼을 무심코 추가하거나 대용량 테이블에 위험한 DDL을 만들 수 있다. 이때 시각화된 모델은 “AI가 만든 변경이 도메인 구조에 맞는가”를 사람이 검토하는 보조 장치가 된다.
 
 ## drawDB의 핵심 구조: 그림 편집기가 아니라 SQL 왕복 계층
 
@@ -67,7 +67,7 @@ drawDB 같은 도구의 첫 번째 장점은 커뮤니케이션 비용 절감이
 
 두 번째 장점은 설계 결함을 배포 전에 드러낸다는 점이다. 예를 들어 `orders`, `payments`, `refunds`, `subscriptions`가 서로 어떤 기준키를 공유하는지 명확하지 않으면 나중에 분석 쿼리와 정산 로직이 계속 흔들린다. 그림으로 관계를 보면 잘못된 cardinality, 누락된 unique constraint, 애매한 ownership이 드러난다. 이것은 성능 튜닝보다 앞선 도메인 모델링 문제다.
 
-세 번째 장점은 온보딩이다. 신규 개발자나 데이터 분석가는 “어떤 테이블부터 봐야 하는가”에서 막힌다. 스키마 다이어그램이 최신 상태로 유지된다면 첫 주의 이해 비용을 크게 줄일 수 있다. 특히 작은 팀에서는 별도의 데이터 카탈로그를 도입하기 부담스러울 수 있다. drawDB로 핵심 도메인만 가볍게 문서화하는 방식은 비용 대비 효과가 있다.
+세 번째 장점은 온보딩이다. 신규 개발자나 데이터 분석가는 “어떤 테이블부터 봐야 하는가”에서 막힌다. 스키마 다이어그램이 최신 상태로 유지된다면 첫 주의 이해 비용을 크게 줄일 수 있다. 다만 테이블 이름만 나열하는 것보다 [지식 그래프용 스킬 분류 체계 검증](/posts/marble-skill-taxonomy-knowledge-graph/)처럼 용어의 정의, 상하위 관계, 소유자를 함께 기록해야 다른 팀이 같은 개념을 다르게 해석하는 문제를 줄일 수 있다. 특히 작은 팀에서는 별도의 데이터 카탈로그를 도입하기 부담스러울 수 있다. drawDB로 핵심 도메인만 가볍게 문서화하는 방식은 비용 대비 효과가 있다.
 
 ## 한계와 리스크: 그림이 진실이 되는 순간 위험해진다
 

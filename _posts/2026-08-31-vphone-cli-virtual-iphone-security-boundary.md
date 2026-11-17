@@ -3,8 +3,8 @@ title: "vphone-cli 가상 iPhone: 모바일 테스트 격리의 보안 경계"
 description: "Apple Silicon에서 가상 iPhone을 구동하는 vphone-cli의 구조를 분석하고, 모바일 E2E 테스트 활용 조건과 SIP·AMFI 완화 위험, 대안 선택 기준을 정리합니다."
 author: heracles-jo
 date: 2026-08-31 07:32:00 +0900
-categories: [Developer Infrastructure, Security]
-tags: [vphone-cli, ios-virtualization, mobile-testing, apple-silicon, security-research, developer-tools]
+categories: [Platform Engineering, Security]
+tags: [vphone-cli, developer-tools, apple-silicon, ios-virtualization]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/vphone-cli-virtual-iphone-security-boundary/cover.svg
   alt: "Apple Silicon Mac과 가상 iPhone 사이의 테스트 자동화 및 보안 경계를 보여주는 개념도"

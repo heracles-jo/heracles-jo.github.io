@@ -4,7 +4,7 @@ description: "Google Android Skills의 30개 공식 지침을 분석하고, 에�
 author: heracles-jo
 date: 2026-10-17 08:45:00 +0900
 categories: [Developer Tools, Mobile]
-tags: [android-skills, android, coding-agent, agent-skills, gradle, software-testing]
+tags: [android-skills, agent-skills, coding-agent, android]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/android-skills-agent-workflow-validation/cover.svg
   alt: "Android Skills를 AI 코딩 에이전트와 빌드·테스트 검증 게이트 사이에 배치하는 도입 구조"

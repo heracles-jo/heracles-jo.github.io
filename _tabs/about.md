@@ -1,8 +1,28 @@
 ---
-# the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+description: "Heracles.jo 기술 블로그의 분석 분야, 글 작성 원칙, 검증 기준과 연락 방법을 소개합니다."
+seo:
+  type: ProfilePage
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+Heracles.jo는 오픈소스 프로젝트와 AI·클라우드 인프라, 보안, 플랫폼 엔지니어링을 실제 도입 관점에서 분석하는 기술 블로그입니다. 기능 소개보다 아키텍처의 경계, 운영 비용, 보안 위험, 대안과 도입 조건을 구체적으로 설명하는 것을 목표로 합니다.
+
+## 글을 작성하는 기준
+
+- 저장소의 코드, 공식 문서, 릴리스, 보안 정책과 라이선스를 우선 확인합니다.
+- 인기 지표만으로 프로젝트를 평가하지 않고 운영 복잡도와 실패 조건을 함께 검토합니다.
+- 사실과 해석을 구분하고, 확인할 수 없는 내용은 추정으로 표시합니다.
+- AI 도구를 활용한 경우에도 출처, 링크, 이미지, 빌드 결과를 사람이 다시 검증합니다.
+- 중요한 변경이 생기면 기존 글을 수정하고 수정 시점을 검색엔진 메타데이터에 반영합니다.
+
+## 다루는 분야
+
+주요 주제는 오픈소스, AI 인프라, 개발자 도구, 보안, 데이터 엔지니어링, 클라우드와 플랫폼 운영입니다. 특정 제품을 홍보하기보다는 어떤 조직과 워크로드에 맞는지, 도입하지 않는 편이 나은 조건은 무엇인지까지 다룹니다.
+
+## 문의와 프로필
+
+- GitHub: [heracles-jo](https://github.com/heracles-jo)
+- Email: [heracles.jo@gmail.com](mailto:heracles.jo@gmail.com)
+
+글에서 사실 오류나 끊어진 출처를 발견했다면 GitHub 또는 이메일로 알려주세요.

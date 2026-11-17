@@ -4,7 +4,7 @@ description: "PaperOrchestra의 문헌 검색·인용 검증·LaTeX 생성 구�
 author: heracles-jo
 date: 2026-11-17 08:10:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [paperorchestra, ai-paper-writing, research-agent, citation-validation, reproducible-research, human-in-the-loop]
+tags: [paperorchestra, human-in-the-loop, research-agent, ai-paper-writing]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/paperorchestra-ai-paper-writing-validation/cover.svg
   alt: "PaperOrchestra AI 논문 작성 파이프라인의 근거 추적과 사람 승인 경계"

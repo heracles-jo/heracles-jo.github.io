@@ -4,7 +4,7 @@ description: "TileLang의 Python DSL·TVM 컴파일러·멀티 백엔드 구조�
 author: heracles-jo
 date: 2026-10-03 08:30:00 +0900
 categories: [AI Infrastructure, Developer Tools]
-tags: [tilelang, gpu-kernel, triton, tvm, compiler, ai-infrastructure]
+tags: [tilelang, ai-infrastructure, gpu-kernel, triton]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/tilelang-gpu-kernel-dsl-validation/cover.svg
   alt: "TileLang으로 하나의 GPU 커널을 여러 가속기 백엔드에 컴파일하고 검증하는 흐름"

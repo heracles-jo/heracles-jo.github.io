@@ -4,7 +4,7 @@ description: "Supabase의 Postgres·Auth·Realtime·Storage 구성을 분해하�
 author: heracles-jo
 date: 2026-10-22 07:50:00 +0900
 categories: [Platform Engineering, Database]
-tags: [supabase, self-hosting, postgres, backend-as-a-service, row-level-security, platform-engineering]
+tags: [supabase, platform-engineering, self-hosting, postgres]
 image:
   path: https://heracles-jo.github.io/assets/img/posts/supabase-self-hosting-operations/cover.svg
   alt: "Supabase 셀프호스팅에서 관리형 편의와 운영 책임을 비교하는 개념도"
