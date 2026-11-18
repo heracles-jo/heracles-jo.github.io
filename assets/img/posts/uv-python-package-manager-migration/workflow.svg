@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">uv 전환 검증 워크플로</title>
+  <desc id="desc">기준선부터 shadow 실행, 프로젝트 변환, CI 승격, 공급망 검증까지의 단계별 의사결정</desc>
+  <rect width="1200" height="720" rx="24" fill="#0b1220"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#f8fafc">uv 전환은 다섯 번의 통과 판정으로 진행한다</text>
+  <g font-family="Arial, sans-serif">
+    <path d="M135 210 H1060" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+    <g>
+      <circle cx="145" cy="210" r="62" fill="#164e63" stroke="#22d3ee" stroke-width="4"/><text x="145" y="202" text-anchor="middle" fill="#cffafe" font-size="21" font-weight="700">01</text><text x="145" y="230" text-anchor="middle" fill="#cffafe" font-size="17">기준선</text>
+      <circle cx="370" cy="210" r="62" fill="#1e3a8a" stroke="#60a5fa" stroke-width="4"/><text x="370" y="202" text-anchor="middle" fill="#dbeafe" font-size="21" font-weight="700">02</text><text x="370" y="230" text-anchor="middle" fill="#dbeafe" font-size="17">shadow</text>
+      <circle cx="595" cy="210" r="62" fill="#312e81" stroke="#818cf8" stroke-width="4"/><text x="595" y="202" text-anchor="middle" fill="#e0e7ff" font-size="21" font-weight="700">03</text><text x="595" y="230" text-anchor="middle" fill="#e0e7ff" font-size="17">lock 변환</text>
+      <circle cx="820" cy="210" r="62" fill="#4c1d95" stroke="#c084fc" stroke-width="4"/><text x="820" y="202" text-anchor="middle" fill="#f3e8ff" font-size="21" font-weight="700">04</text><text x="820" y="230" text-anchor="middle" fill="#f3e8ff" font-size="17">CI 승격</text>
+      <circle cx="1045" cy="210" r="62" fill="#701a75" stroke="#e879f9" stroke-width="4"/><text x="1045" y="202" text-anchor="middle" fill="#fae8ff" font-size="21" font-weight="700">05</text><text x="1045" y="230" text-anchor="middle" fill="#fae8ff" font-size="17">공급망</text>
+    </g>
+    <g font-size="18" fill="#cbd5e1">
+      <rect x="60" y="320" width="210" height="230" rx="18" fill="#111827" stroke="#22d3ee"/><text x="82" y="360" fill="#67e8f9" font-weight="700">기존 결과 고정</text><text x="82" y="402">package · version</text><text x="82" y="436">source · marker</text><text x="82" y="470">플랫폼별 설치 결과</text><text x="82" y="518" fill="#fca5a5">설명 불가 drift면 중단</text>
+      <rect x="285" y="320" width="210" height="230" rx="18" fill="#111827" stroke="#60a5fa"/><text x="307" y="360" fill="#93c5fd" font-weight="700">uv pip 병렬 실행</text><text x="307" y="402">compile · sync diff</text><text x="307" y="436">resolver 차이 분류</text><text x="307" y="470">기존 테스트 재사용</text><text x="307" y="518" fill="#fca5a5">source 변경이면 중단</text>
+      <rect x="510" y="320" width="210" height="230" rx="18" fill="#111827" stroke="#818cf8"/><text x="532" y="360" fill="#a5b4fc" font-weight="700">uv.lock 생성</text><text x="532" y="402">기존 pin 보존</text><text x="532" y="436">지원 환경 제한</text><text x="532" y="470">locked sync test</text><text x="532" y="518" fill="#fca5a5">플랫폼 누락 시 중단</text>
+      <rect x="735" y="320" width="210" height="230" rx="18" fill="#111827" stroke="#c084fc"/><text x="757" y="360" fill="#d8b4fe" font-weight="700">명시적 CI gate</text><text x="757" y="402">lock --check</text><text x="757" y="436">exact environment</text><text x="757" y="470">cache 재현성</text><text x="757" y="518" fill="#fca5a5">잔존 의존성 시 중단</text>
+      <rect x="960" y="320" width="180" height="230" rx="18" fill="#111827" stroke="#e879f9"/><text x="980" y="360" fill="#f0abfc" font-weight="700">신뢰 경계</text><text x="980" y="402">index 인증</text><text x="980" y="436">attestation</text><text x="980" y="470">SBOM · rollback</text><text x="980" y="518" fill="#fca5a5">출처 불명 시 중단</text>
+    </g>
+  </g>
+  <text x="600" y="642" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#67e8f9">통과 기준: 빠른 설치가 아니라 같은 입력이 같은 환경과 artifact를 만든다는 증거</text>
+</svg>

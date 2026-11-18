@@ -903,3 +903,14 @@
     - "SaaS 스프레드시트 내장"
   slug: "univer-embedded-spreadsheet-engine"
   summary: "Univer의 수식·명령·Headless 계층을 분석하고 계산 정확도, 구조 변경, 권한, 협업, XLSX 호환성과 라이선스 경계를 검증하는 도입 기준을 정리."
+- date: 2026-11-19
+  title: "uv Python 패키지 관리 전환: lockfile·CI 검증 기준"
+  github_repo: "https://github.com/astral-sh/uv"
+  main_keyword: "uv Python 패키지 관리 전환"
+  related_keywords:
+    - "pip uv 마이그레이션"
+    - "Python lockfile"
+    - "Python 의존성 관리"
+    - "uv CI"
+  slug: "uv-python-package-manager-migration"
+  summary: "pip·pip-tools·Poetry에서 uv로 전환할 때 범용 lockfile, 환경 동기화, 캐시, 사설 인덱스와 공급망을 검증하는 단계별 기준을 정리."

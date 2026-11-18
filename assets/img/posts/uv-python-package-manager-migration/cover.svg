@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">uv Python 패키지 관리 전환</title>
+  <desc id="desc">pyproject 선언에서 범용 lockfile, 동기화된 환경, 검증된 CI artifact로 이어지는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1030" cy="105" r="180" fill="#22d3ee" opacity=".08"/>
+  <circle cx="1090" cy="560" r="230" fill="#a78bfa" opacity=".08"/>
+  <text x="72" y="118" fill="#67e8f9" font-family="Arial, sans-serif" font-size="28" font-weight="700">PYTHON ENVIRONMENT CONTRACT</text>
+  <text x="72" y="205" fill="#f8fafc" font-family="Arial, sans-serif" font-size="62" font-weight="800">uv 패키지 관리 전환</text>
+  <text x="72" y="268" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="31">lockfile · CI · 공급망 검증 기준</text>
+  <g transform="translate(72 350)" font-family="Arial, sans-serif">
+    <rect width="245" height="118" rx="18" fill="#172554" stroke="#38bdf8" stroke-width="2"/>
+    <text x="122" y="48" text-anchor="middle" fill="#7dd3fc" font-size="23" font-weight="700">pyproject.toml</text>
+    <text x="122" y="82" text-anchor="middle" fill="#cbd5e1" font-size="18">선언·그룹·인덱스</text>
+    <path d="M265 59 H335" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M325 47 L340 59 L325 71" fill="none" stroke="#a5b4fc" stroke-width="6"/>
+    <rect x="360" width="245" height="118" rx="18" fill="#1e1b4b" stroke="#818cf8" stroke-width="2"/>
+    <text x="482" y="48" text-anchor="middle" fill="#c4b5fd" font-size="23" font-weight="700">uv.lock</text>
+    <text x="482" y="82" text-anchor="middle" fill="#cbd5e1" font-size="18">범용 해석·출처 고정</text>
+    <path d="M625 59 H695" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M685 47 L700 59 L685 71" fill="none" stroke="#a5b4fc" stroke-width="6"/>
+    <rect x="720" width="320" height="118" rx="18" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="880" y="48" text-anchor="middle" fill="#67e8f9" font-size="23" font-weight="700">CI · Runtime · SBOM</text>
+    <text x="880" y="82" text-anchor="middle" fill="#cbd5e1" font-size="18">동일 환경과 artifact 증명</text>
+  </g>
+  <rect x="72" y="530" width="1056" height="4" rx="2" fill="url(#accent)"/>
+  <text x="72" y="582" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">속도보다 재현성, 플랫폼 지원, 인덱스 신뢰 경계를 먼저 검증한다</text>
+</svg>
