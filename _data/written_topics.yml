@@ -914,3 +914,14 @@
     - "uv CI"
   slug: "uv-python-package-manager-migration"
   summary: "pip·pip-tools·Poetry에서 uv로 전환할 때 범용 lockfile, 환경 동기화, 캐시, 사설 인덱스와 공급망을 검증하는 단계별 기준을 정리."
+- date: 2026-11-20
+  title: "OpenVINO 엣지 AI 추론: CPU·GPU·NPU 검증 기준"
+  github_repo: "https://github.com/openvinotoolkit/openvino"
+  main_keyword: "OpenVINO 엣지 AI 추론"
+  related_keywords:
+    - "CPU GPU NPU 추론"
+    - "Intel NPU 배포"
+    - "엣지 AI 성능 검증"
+    - "OpenVINO AUTO fallback"
+  slug: "openvino-edge-ai-inference-validation"
+  summary: "OpenVINO의 모델 변환과 CPU·GPU·NPU plugin을 분석하고 정확도, 지연시간, 전력, fallback, driver와 compiled artifact의 검증 기준을 정리."

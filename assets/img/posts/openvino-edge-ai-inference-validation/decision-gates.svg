@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">OpenVINO 도입 및 업그레이드 의사결정 게이트</title>
+  <desc id="desc">기준 고정부터 실험실 장치 행렬, canary, 확대, rollback까지의 승인 흐름</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#42687a"/></marker></defs>
+  <rect width="1200" height="720" rx="24" fill="#fbfcfd"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17394a">엣지 fleet 승격은 장치 cohort별로 진행한다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(60 125)"><rect width="190" height="130" rx="18" fill="#edf5ff" stroke="#4c82bd" stroke-width="3"/><text x="95" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#17394a">1. 기준 고정</text><text x="95" y="82" text-anchor="middle" font-size="17" fill="#536f7c">모델·입력·driver</text><text x="95" y="108" text-anchor="middle" font-size="17" fill="#536f7c">품질·성능 baseline</text></g>
+    <g transform="translate(285 125)"><rect width="190" height="130" rx="18" fill="#eefaf8" stroke="#2fae9d" stroke-width="3"/><text x="95" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#17394a">2. 장치 행렬</text><text x="95" y="82" text-anchor="middle" font-size="17" fill="#536f7c">CPU·GPU·NPU</text><text x="95" y="108" text-anchor="middle" font-size="17" fill="#536f7c">shape·precision</text></g>
+    <g transform="translate(510 125)"><rect width="190" height="130" rx="18" fill="#fff8ea" stroke="#d79c32" stroke-width="3"/><text x="95" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#17394a">3. Canary</text><text x="95" y="82" text-anchor="middle" font-size="17" fill="#536f7c">fallback·전력·열</text><text x="95" y="108" text-anchor="middle" font-size="17" fill="#536f7c">실제 p95 관찰</text></g>
+    <g transform="translate(735 125)"><rect width="190" height="130" rx="18" fill="#f0f8ee" stroke="#65a95c" stroke-width="3"/><text x="95" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#17394a">4. 단계 확대</text><text x="95" y="82" text-anchor="middle" font-size="17" fill="#536f7c">SKU·OS cohort</text><text x="95" y="108" text-anchor="middle" font-size="17" fill="#536f7c">crash-free rate</text></g>
+    <g transform="translate(960 125)"><rect width="190" height="130" rx="18" fill="#f7f0fb" stroke="#8e64ad" stroke-width="3"/><text x="95" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#17394a">5. 복구 검증</text><text x="95" y="82" text-anchor="middle" font-size="17" fill="#536f7c">runtime·driver</text><text x="95" y="108" text-anchor="middle" font-size="17" fill="#536f7c">cache까지 rollback</text></g>
+    <path d="M250 190h25M475 190h25M700 190h25M925 190h25" stroke="#42687a" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="80" y="340" width="500" height="260" rx="20" fill="#eef9f3" stroke="#4d9b70" stroke-width="3"/>
+    <text x="330" y="390" text-anchor="middle" font-size="28" font-weight="700" fill="#24583d">승격 조건</text>
+    <text x="120" y="435" font-size="20" fill="#355d4a">✓ 장치별 품질 gate 통과</text>
+    <text x="120" y="475" font-size="20" fill="#355d4a">✓ 제품 trace의 p95·전력 개선</text>
+    <text x="120" y="515" font-size="20" fill="#355d4a">✓ fallback과 execution device 관측</text>
+    <text x="120" y="555" font-size="20" fill="#355d4a">✓ cohort rollback 재현</text>
+
+    <rect x="620" y="340" width="500" height="260" rx="20" fill="#fff1f1" stroke="#c76464" stroke-width="3"/>
+    <text x="870" y="390" text-anchor="middle" font-size="28" font-weight="700" fill="#7a3434">중단 조건</text>
+    <text x="660" y="435" font-size="20" fill="#754949">× 특정 shape·정밀도에서 출력 오류</text>
+    <text x="660" y="475" font-size="20" fill="#754949">× CPU fallback이 정상처럼 숨겨짐</text>
+    <text x="660" y="515" font-size="20" fill="#754949">× driver cohort별 crash·throttling</text>
+    <text x="660" y="555" font-size="20" fill="#754949">× blob·cache 출처와 복구 불가</text>
+  </g>
+</svg>
