@@ -925,3 +925,14 @@
     - "OpenVINO AUTO fallback"
   slug: "openvino-edge-ai-inference-validation"
   summary: "OpenVINO의 모델 변환과 CPU·GPU·NPU plugin을 분석하고 정확도, 지연시간, 전력, fallback, driver와 compiled artifact의 검증 기준을 정리."
+- date: 2026-11-21
+  title: "NGINX 1.31.9 업그레이드: HTTP/2·QUIC 메모리 안전 검증"
+  github_repo: "https://github.com/nginx/nginx"
+  main_keyword: "NGINX 1.31.9 업그레이드"
+  related_keywords:
+    - "NGINX 보안 업데이트"
+    - "HTTP/2 메모리 안전"
+    - "HTTP/3 QUIC 보안"
+    - "NGINX CVE 검증"
+  slug: "nginx-1319-security-upgrade"
+  summary: "NGINX 1.31.9의 10개 CVE를 파일 라우팅, HTTP/2·HTTP/3, resolver, SNI 경로로 분해하고 회귀·카나리·롤백 기준을 정리."

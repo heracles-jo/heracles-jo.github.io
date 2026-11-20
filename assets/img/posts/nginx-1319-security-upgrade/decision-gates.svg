@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">NGINX 1.31.9 업그레이드 의사결정 게이트</title>
+  <desc id="desc">노출 조건 조사, 기준선, 회귀 시험, 카나리, 확대 또는 중단과 완화로 이어지는 결정 흐름</desc>
+  <rect width="1200" height="700" fill="#0b1f19"/>
+  <text x="60" y="70" fill="#effff8" font-family="Arial, sans-serif" font-size="34" font-weight="800">1.31.9 승격은 “업데이트 성공”이 아니라 증거 게이트다</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(55 130)">
+      <rect width="195" height="135" rx="20" fill="#153d31" stroke="#41cf91" stroke-width="3"/>
+      <text x="98" y="43" text-anchor="middle" fill="#8ff0c2" font-size="18" font-weight="700">1 · INVENTORY</text>
+      <text x="98" y="78" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">노출 조건</text>
+      <text x="98" y="108" text-anchor="middle" fill="#bdd8ce" font-size="16">directive · module</text>
+    </g>
+    <path d="M250 198h40" stroke="#41cf91" stroke-width="5" marker-end="url(#m)"/>
+    <defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#41cf91"/></marker></defs>
+    <g transform="translate(290 130)">
+      <rect width="195" height="135" rx="20" fill="#153d31" stroke="#41cf91" stroke-width="3"/>
+      <text x="98" y="43" text-anchor="middle" fill="#8ff0c2" font-size="18" font-weight="700">2 · BASELINE</text>
+      <text x="98" y="78" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">현재 동작</text>
+      <text x="98" y="108" text-anchor="middle" fill="#bdd8ce" font-size="16">정상 · 오류 · reload</text>
+    </g>
+    <path d="M485 198h40" stroke="#41cf91" stroke-width="5" marker-end="url(#m)"/>
+    <g transform="translate(525 130)">
+      <rect width="195" height="135" rx="20" fill="#153d31" stroke="#41cf91" stroke-width="3"/>
+      <text x="98" y="43" text-anchor="middle" fill="#8ff0c2" font-size="18" font-weight="700">3 · STAGING</text>
+      <text x="98" y="78" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">실패 주입</text>
+      <text x="98" y="108" text-anchor="middle" fill="#bdd8ce" font-size="16">h2 · h3 · DNS · SNI</text>
+    </g>
+    <path d="M720 198h40" stroke="#41cf91" stroke-width="5" marker-end="url(#m)"/>
+    <g transform="translate(760 130)">
+      <rect width="195" height="135" rx="20" fill="#153d31" stroke="#41cf91" stroke-width="3"/>
+      <text x="98" y="43" text-anchor="middle" fill="#8ff0c2" font-size="18" font-weight="700">4 · CANARY</text>
+      <text x="98" y="78" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">소수 트래픽</text>
+      <text x="98" y="108" text-anchor="middle" fill="#bdd8ce" font-size="16">crash · 4xx · policy</text>
+    </g>
+    <path d="M955 198h40" stroke="#41cf91" stroke-width="5" marker-end="url(#m)"/>
+    <g transform="translate(995 130)">
+      <rect width="150" height="135" rx="20" fill="#0f6b49" stroke="#8ff0c2" stroke-width="3"/>
+      <text x="75" y="48" text-anchor="middle" fill="#d9fff0" font-size="18" font-weight="700">5 · EXPAND</text>
+      <text x="75" y="84" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">확대</text>
+      <text x="75" y="112" text-anchor="middle" fill="#bff4db" font-size="15">cohort별 승인</text>
+    </g>
+    <path d="M858 265v95" stroke="#ffb4a8" stroke-width="4" marker-end="url(#r)"/>
+    <defs><marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#ff8d7a"/></marker></defs>
+    <rect x="650" y="360" width="415" height="145" rx="22" fill="#3b1f1c" stroke="#ff8d7a" stroke-width="3"/>
+    <text x="858" y="403" text-anchor="middle" fill="#ffb4a8" font-size="20" font-weight="700">STOP / CONTAIN</text>
+    <text x="858" y="442" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">worker crash · 인증 정책 위반</text>
+    <text x="858" y="478" text-anchor="middle" fill="#e8c4bd" font-size="17">확대 중단 → WAF·route disable·자원 완화 → 수정</text>
+    <rect x="80" y="360" width="485" height="220" rx="24" fill="#122d25" stroke="#547e6e" stroke-width="2"/>
+    <text x="115" y="407" fill="#8ff0c2" font-size="22" font-weight="700">판정 원칙</text>
+    <text x="115" y="449" fill="#effff8" font-size="19">• 비표준 client의 4xx는 즉시 rollback과 다르다</text>
+    <text x="115" y="486" fill="#effff8" font-size="19">• rollback은 10개 CVE 위험도 함께 복원한다</text>
+    <text x="115" y="523" fill="#effff8" font-size="19">• 같은 binary·module·config digest로 재검증한다</text>
+    <text x="115" y="560" fill="#effff8" font-size="19">• 정상 응답보다 실패 상태의 증거를 우선한다</text>
+    <text x="60" y="652" fill="#7fa99a" font-size="18">Evidence: config inventory · protocol fixtures · resource pressure · policy parity · rollback rehearsal</text>
+  </g>
+</svg>

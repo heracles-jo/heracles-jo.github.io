@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">NGINX 1.31.9 보안 아키텍처</title>
+  <desc id="desc">외부 요청이 파일 라우팅, HTTP/2와 HTTP/3, DNS resolver, TLS SNI 경로를 거쳐 upstream으로 전달되는 구조</desc>
+  <rect width="1200" height="720" fill="#f5faf8"/>
+  <text x="60" y="64" fill="#12372b" font-family="Arial, sans-serif" font-size="34" font-weight="800">NGINX 1.31.9: 취약 경로는 서로 다른 상태 기계에 있다</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="55" y="130" width="210" height="105" rx="18" fill="#143d31"/>
+    <text x="160" y="176" text-anchor="middle" fill="#fff" font-size="25" font-weight="700">비신뢰 입력</text>
+    <text x="160" y="208" text-anchor="middle" fill="#bce9d8" font-size="18">header · frame · TLS · URI</text>
+    <path d="M265 182h70" stroke="#2aa876" stroke-width="5" marker-end="url(#a)"/>
+    <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#2aa876"/></marker></defs>
+    <rect x="335" y="105" width="810" height="500" rx="24" fill="#fff" stroke="#9bcdb9" stroke-width="3"/>
+    <text x="370" y="150" fill="#0b6b49" font-size="28" font-weight="800">NGINX worker</text>
+    <g>
+      <rect x="385" y="190" width="330" height="120" rx="16" fill="#e8f8f1" stroke="#2aa876" stroke-width="2"/>
+      <text x="410" y="226" fill="#12372b" font-size="23" font-weight="700">파일·URI 경로</text>
+      <text x="410" y="260" fill="#365f51" font-size="18">try_files + alias + script length</text>
+      <text x="410" y="288" fill="#b42318" font-size="17">buffer overflow / path regression</text>
+      <rect x="765" y="190" width="330" height="120" rx="16" fill="#e9f3ff" stroke="#3b82f6" stroke-width="2"/>
+      <text x="790" y="226" fill="#15365d" font-size="23" font-weight="700">HTTP/2·HTTP/3</text>
+      <text x="790" y="260" fill="#42658c" font-size="18">flow control · stream · connection</text>
+      <text x="790" y="288" fill="#b42318" font-size="17">memory corruption / use-after-free</text>
+      <rect x="385" y="355" width="330" height="120" rx="16" fill="#fff7e6" stroke="#e59a18" stroke-width="2"/>
+      <text x="410" y="391" fill="#5e4213" font-size="23" font-weight="700">동적 DNS resolver</text>
+      <text x="410" y="425" fill="#755d35" font-size="18">subrequest · CNAME · cancel</text>
+      <text x="410" y="453" fill="#b42318" font-size="17">context lifetime / use-after-free</text>
+      <rect x="765" y="355" width="330" height="120" rx="16" fill="#f5ecff" stroke="#8b5cf6" stroke-width="2"/>
+      <text x="790" y="391" fill="#43236d" font-size="23" font-weight="700">TLS·SNI·PROXY v2</text>
+      <text x="790" y="425" fill="#684c8d" font-size="18">virtual server · client cert · preread</text>
+      <text x="790" y="453" fill="#b42318" font-size="17">policy bypass / segmentation fault</text>
+    </g>
+    <path d="M550 310v45M930 310v45M715 415h50" stroke="#7aa997" stroke-width="4" stroke-dasharray="8 8"/>
+    <rect x="565" y="520" width="400" height="58" rx="15" fill="#143d31"/>
+    <text x="765" y="557" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">upstream · cache · file system · 인증 정책</text>
+    <path d="M765 475v45" stroke="#2aa876" stroke-width="5" marker-end="url(#a)"/>
+    <rect x="55" y="540" width="250" height="92" rx="16" fill="#fff" stroke="#9bcdb9" stroke-width="2"/>
+    <text x="180" y="576" text-anchor="middle" fill="#12372b" font-size="21" font-weight="700">검증 증거</text>
+    <text x="180" y="607" text-anchor="middle" fill="#4d7365" font-size="17">fixture · crash · policy · latency</text>
+  </g>
+</svg>
