@@ -936,3 +936,14 @@
     - "NGINX CVE 검증"
   slug: "nginx-1319-security-upgrade"
   summary: "NGINX 1.31.9의 10개 CVE를 파일 라우팅, HTTP/2·HTTP/3, resolver, SNI 경로로 분해하고 회귀·카나리·롤백 기준을 정리."
+- date: 2026-11-22
+  title: "App Store 심사 거절 예방: 사전 제출 컴플라이언스 게이트"
+  github_repo: "https://github.com/mjmirza/app-store-compliance"
+  main_keyword: "App Store 심사 거절 예방"
+  related_keywords:
+    - "App Store Compliance Playbook"
+    - "Google Play 사전 제출 검사"
+    - "모바일 앱 컴플라이언스"
+    - "릴리스 게이트"
+  slug: "app-store-compliance-pre-submission-gate"
+  summary: "App Store Compliance Playbook의 코드·스토어 선언·운영 증거 계층을 분해하고 정책 신선도, 오탐 예외, 비표준 라이선스와 단계적 차단 기준을 정리."

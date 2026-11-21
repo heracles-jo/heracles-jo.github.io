@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">App Store 사전 제출 컴플라이언스 게이트</title>
+  <desc id="desc">모바일 앱 코드와 스토어 선언, 운영 증거가 릴리스 게이트를 통과하는 표지</desc>
+  <rect width="1200" height="630" fill="#0b1220"/>
+  <path d="M0 500 C240 400 370 610 610 485 S970 355 1200 455 V630 H0Z" fill="#172554"/>
+  <rect x="82" y="72" width="1036" height="486" rx="30" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="128" y="170" fill="#93c5fd" font-family="Arial, sans-serif" font-size="28" font-weight="700">MOBILE RELEASE CONTROL</text>
+  <text x="128" y="245" fill="#f8fafc" font-family="Arial, sans-serif" font-size="52" font-weight="700">App Store 심사 거절 예방</text>
+  <text x="128" y="310" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="34">사전 제출 컴플라이언스 게이트</text>
+  <g transform="translate(128 370)">
+    <rect width="220" height="72" rx="16" fill="#1e3a8a"/><text x="110" y="45" text-anchor="middle" fill="#dbeafe" font-family="Arial" font-size="23">CODE</text>
+    <path d="M235 36h48" stroke="#60a5fa" stroke-width="5" marker-end="url(#a)"/>
+    <rect x="296" width="220" height="72" rx="16" fill="#0f766e"/><text x="406" y="45" text-anchor="middle" fill="#ccfbf1" font-family="Arial" font-size="23">DECLARATION</text>
+    <path d="M531 36h48" stroke="#5eead4" stroke-width="5" marker-end="url(#a)"/>
+    <rect x="592" width="220" height="72" rx="16" fill="#7c2d12"/><text x="702" y="45" text-anchor="middle" fill="#ffedd5" font-family="Arial" font-size="23">EVIDENCE</text>
+    <path d="M827 36h48" stroke="#fdba74" stroke-width="5" marker-end="url(#a)"/>
+    <circle cx="934" cy="36" r="35" fill="#16a34a"/><path d="M916 36l13 13 24-28" fill="none" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#94a3b8"/></marker></defs>
+</svg>

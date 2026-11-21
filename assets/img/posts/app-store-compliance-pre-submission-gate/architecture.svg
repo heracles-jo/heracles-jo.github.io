@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">모바일 앱 제출 컴플라이언스 아키텍처</title>
+  <desc id="desc">코드 스캔, 스토어 선언, 운영 준비, 증거 승인이 보호된 제출 작업으로 합류하는 구조</desc>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="600" y="55" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#0f172a">사전 제출 판정은 네 개의 증거 계층으로 분리한다</text>
+  <g font-family="Arial" font-size="22">
+    <rect x="55" y="110" width="245" height="180" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="177" y="150" text-anchor="middle" font-weight="700" fill="#1e3a8a">1. 소스·빌드</text>
+    <text x="80" y="190" fill="#334155">manifest · 권한</text><text x="80" y="225" fill="#334155">SDK · release 설정</text><text x="80" y="260" fill="#334155">artifact digest</text>
+    <rect x="330" y="110" width="245" height="180" rx="20" fill="#ccfbf1" stroke="#0f766e" stroke-width="3"/>
+    <text x="452" y="150" text-anchor="middle" font-weight="700" fill="#115e59">2. 스토어 선언</text>
+    <text x="355" y="190" fill="#334155">App Privacy</text><text x="355" y="225" fill="#334155">Data safety · metadata</text><text x="355" y="260" fill="#334155">지원·개인정보 URL</text>
+    <rect x="605" y="110" width="245" height="180" rx="20" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+    <text x="727" y="150" text-anchor="middle" font-weight="700" fill="#9a3412">3. 운영 준비</text>
+    <text x="630" y="190" fill="#334155">리뷰 계정 · backend</text><text x="630" y="225" fill="#334155">삭제 · 구매 복원</text><text x="630" y="260" fill="#334155">지역·기능 flag</text>
+    <rect x="880" y="110" width="245" height="180" rx="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="1002" y="150" text-anchor="middle" font-weight="700" fill="#5b21b6">4. 증거·승인</text>
+    <text x="905" y="190" fill="#334155">승인자 · 확인 시각</text><text x="905" y="225" fill="#334155">waiver · 만료일</text><text x="905" y="260" fill="#334155">정책 snapshot</text>
+  </g>
+  <g stroke="#64748b" stroke-width="4" fill="none"><path d="M177 290v95h423"/><path d="M452 290v95h148"/><path d="M727 290v95H600"/><path d="M1002 290v95H600"/></g>
+  <path d="M600 385v65" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+  <rect x="365" y="465" width="470" height="105" rx="24" fill="#0f172a"/>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial" font-size="27" font-weight="700" fill="white">Protected Release Gate</text>
+  <text x="600" y="545" text-anchor="middle" font-family="Arial" font-size="20" fill="#cbd5e1">모든 계층의 판정과 증거가 있어야 제출 자격증명 사용</text>
+  <path d="M600 570v54" stroke="#16a34a" stroke-width="6" marker-end="url(#green)"/>
+  <rect x="455" y="630" width="290" height="60" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="600" y="668" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#166534">STORE SUBMISSION</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#64748b"/></marker><marker id="green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3L0 6Z" fill="#16a34a"/></marker></defs>
+</svg>
