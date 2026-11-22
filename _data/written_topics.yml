@@ -947,3 +947,14 @@
     - "릴리스 게이트"
   slug: "app-store-compliance-pre-submission-gate"
   summary: "App Store Compliance Playbook의 코드·스토어 선언·운영 증거 계층을 분해하고 정책 신선도, 오탐 예외, 비표준 라이선스와 단계적 차단 기준을 정리."
+- date: 2026-11-23
+  title: "AFFiNE 로컬 퍼스트 지식 베이스: CRDT 동기화·복구 기준"
+  github_repo: "https://github.com/toeverything/AFFiNE"
+  main_keyword: "AFFiNE 로컬 퍼스트 지식 베이스"
+  related_keywords:
+    - "CRDT 동기화"
+    - "로컬 퍼스트 협업"
+    - "AFFiNE 셀프호스팅"
+    - "지식 베이스 백업 복구"
+  slug: "affine-local-first-knowledge-base"
+  summary: "AFFiNE의 로컬 저장·CRDT·실시간 협업·셀프호스팅 계층을 분해하고 의미 충돌, 권한 전파, 라이선스와 빈 서버 복구 검증 기준을 정리."

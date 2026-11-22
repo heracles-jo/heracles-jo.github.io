@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AFFiNE 로컬 퍼스트 지식 베이스</title>
+  <desc id="desc">로컬 장치, CRDT 동기화, 협업 서버와 복구 계층을 표현한 표지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#312e81"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1030" cy="110" r="180" fill="#7c3aed" opacity=".16"/>
+  <circle cx="160" cy="540" r="220" fill="#0891b2" opacity=".13"/>
+  <text x="80" y="105" fill="#67e8f9" font-family="Arial, sans-serif" font-size="28" font-weight="700">LOCAL-FIRST KNOWLEDGE BASE</text>
+  <text x="80" y="180" fill="#f8fafc" font-family="Arial, sans-serif" font-size="58" font-weight="800">AFFiNE</text>
+  <text x="80" y="244" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">CRDT 동기화·복구 기준</text>
+  <text x="82" y="300" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">오프라인 편집부터 셀프호스팅 복원까지</text>
+  <g transform="translate(82 365)" font-family="Arial, sans-serif">
+    <rect x="0" y="0" width="220" height="120" rx="18" fill="#172554" stroke="#67e8f9" stroke-width="3"/>
+    <text x="110" y="53" text-anchor="middle" fill="#e0f2fe" font-size="25" font-weight="700">로컬 장치</text><text x="110" y="84" text-anchor="middle" fill="#94a3b8" font-size="19">offline edit</text>
+    <rect x="390" y="0" width="220" height="120" rx="18" fill="#2e1065" stroke="#a78bfa" stroke-width="3"/>
+    <text x="500" y="53" text-anchor="middle" fill="#f3e8ff" font-size="25" font-weight="700">CRDT</text><text x="500" y="84" text-anchor="middle" fill="#c4b5fd" font-size="19">merge &amp; converge</text>
+    <rect x="780" y="0" width="220" height="120" rx="18" fill="#172554" stroke="#67e8f9" stroke-width="3"/>
+    <text x="890" y="53" text-anchor="middle" fill="#e0f2fe" font-size="25" font-weight="700">복구 증거</text><text x="890" y="84" text-anchor="middle" fill="#94a3b8" font-size="19">DB + blob + config</text>
+    <path d="M225 60H375" stroke="url(#accent)" stroke-width="7"/><path d="M365 47l22 13-22 13" fill="none" stroke="#a78bfa" stroke-width="6"/>
+    <path d="M615 60H765" stroke="url(#accent)" stroke-width="7"/><path d="M755 47l22 13-22 13" fill="none" stroke="#67e8f9" stroke-width="6"/>
+  </g>
+  <text x="82" y="575" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">heracles.jo · Platform Engineering</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">AFFiNE 도입 의사결정 흐름</title>
+  <desc id="desc">로컬 편집, 동기화 충돌, 권한 삭제, 빈 서버 복구를 순서대로 통과하는 PoC 게이트</desc>
+  <style>text{font-family:Arial,sans-serif}.h{font-size:32px;font-weight:700;fill:#0f172a}.n{font-size:20px;font-weight:700;fill:#fff}.t{font-size:21px;font-weight:700;fill:#0f172a}.s{font-size:17px;fill:#475569}.card{fill:#f8fafc;stroke:#334155;stroke-width:2}.pass{fill:#ecfdf5;stroke:#059669;stroke-width:3}.stop{fill:#fef2f2;stroke:#dc2626;stroke-width:3}</style>
+  <rect width="1200" height="680" fill="#fff"/><text x="60" y="62" class="h">기능 데모가 아니라 실패 후 다시 믿을 수 있는지를 검증한다</text>
+  <g transform="translate(55 125)">
+    <g transform="translate(0 0)"><circle cx="55" cy="55" r="38" fill="#0891b2"/><text x="55" y="63" text-anchor="middle" class="n">1</text><rect x="105" y="0" width="370" height="110" rx="16" class="card"/><text x="130" y="39" class="t">로컬 편집</text><text x="130" y="70" class="s">네트워크 단절 중 문서·blob 수정</text><text x="130" y="94" class="s">pending update와 사용자 작업 보존</text></g>
+    <g transform="translate(550 0)"><circle cx="55" cy="55" r="38" fill="#7c3aed"/><text x="55" y="63" text-anchor="middle" class="n">2</text><rect x="105" y="0" width="370" height="110" rx="16" class="card"/><text x="130" y="39" class="t">충돌·재접속</text><text x="130" y="70" class="s">같은 문단·행·캔버스 동시 수정</text><text x="130" y="94" class="s">수렴 결과와 사람 수정 시간 측정</text></g>
+    <path d="M475 55H545" stroke="#64748b" stroke-width="5"/>
+    <g transform="translate(0 190)"><circle cx="55" cy="55" r="38" fill="#ea580c"/><text x="55" y="63" text-anchor="middle" class="n">3</text><rect x="105" y="0" width="370" height="110" rx="16" class="card"/><text x="130" y="39" class="t">삭제·권한 전파</text><text x="130" y="70" class="s">탈퇴·공유 해제·오래된 장치 복귀</text><text x="130" y="94" class="s">검색·링크·캐시 잔존 여부 확인</text></g>
+    <g transform="translate(550 190)"><circle cx="55" cy="55" r="38" fill="#059669"/><text x="55" y="63" text-anchor="middle" class="n">4</text><rect x="105" y="0" width="370" height="110" rx="16" class="card"/><text x="130" y="39" class="t">빈 서버 복구</text><text x="130" y="70" class="s">DB·storage·config·image 복원</text><text x="130" y="94" class="s">문서 수·revision·blob 일치 검증</text></g>
+    <path d="M475 245H545" stroke="#64748b" stroke-width="5"/>
+    <rect x="105" y="385" width="370" height="90" rx="16" class="stop"/><text x="290" y="423" text-anchor="middle" class="t">중단</text><text x="290" y="454" text-anchor="middle" class="s">조용한 유실·권한 잔존·복구 불일치</text>
+    <rect x="655" y="385" width="370" height="90" rx="16" class="pass"/><text x="840" y="423" text-anchor="middle" class="t">제한적 승격</text><text x="840" y="454" text-anchor="middle" class="s">비핵심 workspace부터 단계적으로 이관</text>
+    <path d="M290 300V380" stroke="#dc2626" stroke-width="4"/><path d="M840 300V380" stroke="#059669" stroke-width="4"/>
+  </g>
+</svg>
