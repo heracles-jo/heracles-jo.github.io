@@ -958,3 +958,14 @@
     - "지식 베이스 백업 복구"
   slug: "affine-local-first-knowledge-base"
   summary: "AFFiNE의 로컬 저장·CRDT·실시간 협업·셀프호스팅 계층을 분해하고 의미 충돌, 권한 전파, 라이선스와 빈 서버 복구 검증 기준을 정리."
+- date: 2026-11-24
+  title: "FFmpeg 에이전트 검증: 코덱·음량·타임라인 계약 설계"
+  github_repo: "https://github.com/kajisho5/ffmpeg-skill"
+  main_keyword: "FFmpeg 에이전트 검증"
+  related_keywords:
+    - "ffmpeg-skill"
+    - "미디어 파이프라인 품질 게이트"
+    - "AI 영상 자동화"
+    - "코덱 음량 동기화 검증"
+  slug: "ffmpeg-agent-media-verification"
+  summary: "ffmpeg-skill의 기계 판독 계약, 종료 코드와 검증 결과를 바탕으로 코덱·음량·타임라인·원본 보호를 운영 가능한 미디어 품질 게이트로 설계하는 기준을 정리."

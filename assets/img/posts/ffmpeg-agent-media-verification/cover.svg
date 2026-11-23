@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">FFmpeg 에이전트 미디어 검증</title><desc id="desc">코덱, 음량, 타임라인 계약을 검증하는 미디어 파이프라인</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#142b3f"/></linearGradient><linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22c55e"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#bg)"/><circle cx="1030" cy="90" r="180" fill="#22c55e" opacity=".08"/><circle cx="1050" cy="570" r="250" fill="#38bdf8" opacity=".08"/>
+  <rect x="72" y="70" width="1056" height="490" rx="28" fill="#0b1728" stroke="#29445c"/>
+  <text x="120" y="150" fill="#7dd3fc" font-family="system-ui,sans-serif" font-size="28" font-weight="700">FFMPEG AGENT VERIFICATION</text>
+  <text x="120" y="230" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="54" font-weight="800">코덱·음량·타임라인</text><text x="120" y="300" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="54" font-weight="800">계약으로 증명하는 결과</text>
+  <rect x="120" y="358" width="235" height="62" rx="14" fill="#10283a" stroke="#38bdf8"/><text x="151" y="398" fill="#bae6fd" font-family="monospace" font-size="25">status: completed</text>
+  <rect x="377" y="358" width="220" height="62" rx="14" fill="#123125" stroke="#22c55e"/><text x="412" y="398" fill="#bbf7d0" font-family="monospace" font-size="25">verified: true</text>
+  <path d="M720 170h260l80 80v210H720z" fill="#0f2235" stroke="#45647d" stroke-width="3"/><path d="M980 170v80h80" fill="none" stroke="#45647d" stroke-width="3"/>
+  <path d="M780 300h220M780 350h160M780 400h190" stroke="url(#accent)" stroke-width="15" stroke-linecap="round"/><circle cx="750" cy="300" r="9" fill="#22c55e"/><circle cx="750" cy="350" r="9" fill="#22c55e"/><circle cx="750" cy="400" r="9" fill="#22c55e"/>
+  <text x="120" y="500" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="25">기계 판독 계약 · 로컬 실행 · 산출물 검증 · 사람 승인</text>
+</svg>
