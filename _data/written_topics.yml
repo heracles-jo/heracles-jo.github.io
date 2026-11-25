@@ -980,3 +980,14 @@
     - "CI/CD 신뢰성"
   slug: "opensre-ci-failure-analysis"
   summary: "OpenSRE의 Actions 이력 분석과 제한된 repair loop를 바탕으로 flaky CI·코드 결함 분류, branch 권한, 로그 보안, 원격 check 재검증과 PoC 중단 기준을 정리."
+- date: 2026-11-26
+  title: "OLake Iceberg CDC: 데이터 복제 정확도·복구 검증 기준"
+  github_repo: "https://github.com/datazip-inc/olake-go"
+  main_keyword: "OLake Iceberg CDC"
+  related_keywords:
+    - "Apache Iceberg 데이터 복제"
+    - "Postgres CDC"
+    - "CDC 체크포인트 복구"
+    - "lakehouse ingestion"
+  slug: "olake-iceberg-cdc-replication"
+  summary: "OLake Go의 Postgres CDC, durable state, Java Iceberg writer와 catalog commit을 연결해 정합성·복구·스키마 진화·보안·업그레이드 검증 기준을 정리."
