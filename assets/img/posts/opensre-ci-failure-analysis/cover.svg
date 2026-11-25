@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OpenSRE CI 실패 분석과 자동 복구</title>
+  <desc id="desc">빨간 CI 신호가 증거 수집, 원인 분류, 격리 수정, 검증된 복구로 이어지는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="90" r="190" fill="#38bdf8" opacity=".08"/>
+  <circle cx="80" cy="590" r="240" fill="#22c55e" opacity=".07"/>
+  <text x="72" y="112" fill="#93c5fd" font-size="25" font-family="Arial, sans-serif" font-weight="700">CI/CD RELIABILITY AGENT</text>
+  <text x="72" y="184" fill="#f8fafc" font-size="54" font-family="Arial, sans-serif" font-weight="800">OpenSRE CI 실패 분석</text>
+  <text x="72" y="238" fill="#cbd5e1" font-size="29" font-family="Arial, sans-serif">자동 수정 전에 원인·권한·증거를 분리한다</text>
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="72" y="326" width="220" height="150" rx="20" fill="#301724" stroke="#fb7185" stroke-width="3"/>
+    <text x="182" y="376" text-anchor="middle" fill="#fecdd3" font-size="23" font-weight="700">FAILED CI</text>
+    <path d="M132 423h100" stroke="#fb7185" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="182" cy="423" r="38" fill="none" stroke="#fb7185" stroke-width="8"/>
+    <path d="M317 401h92" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="420" y="326" width="280" height="150" rx="20" fill="#13233d" stroke="#60a5fa" stroke-width="3"/>
+    <text x="560" y="375" text-anchor="middle" fill="#dbeafe" font-size="22" font-weight="700">EVIDENCE + CLASSIFY</text>
+    <text x="560" y="414" text-anchor="middle" fill="#93c5fd" font-size="19">same SHA · logs · base drift</text>
+    <text x="560" y="447" text-anchor="middle" fill="#93c5fd" font-size="19">CI fault ≠ code fault</text>
+    <path d="M725 401h92" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="828" y="326" width="300" height="150" rx="20" fill="#123226" stroke="#4ade80" stroke-width="3"/>
+    <text x="978" y="375" text-anchor="middle" fill="#dcfce7" font-size="22" font-weight="700">BOUNDED REPAIR</text>
+    <text x="978" y="414" text-anchor="middle" fill="#86efac" font-size="19">isolated branch · no force</text>
+    <text x="978" y="447" text-anchor="middle" fill="#86efac" font-size="19">exact commit checks</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <text x="72" y="556" fill="#94a3b8" font-size="22" font-family="Arial, sans-serif">flaky CI 분류 · 최소 권한 · 원격 재검증 · 중단 예산</text>
+</svg>
